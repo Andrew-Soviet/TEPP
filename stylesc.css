@@ -1,0 +1,855 @@
+/* ========================================
+   МУЗЕЙ ТРАНСПОРТА МОСКВЫ — СТИЛЬ
+   Шрифт заголовков: Allerta Stencil
+   ======================================== */
+
+/* Подключение шрифта уже в HTML:
+   <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
+*/
+
+/* ----- БАЗОВЫЕ ПЕРЕМЕННЫЕ ----- */
+:root {
+    --bg-gradient-start: #667eea;
+    --bg-gradient-end: #764ba2;
+    --text-primary: #333;
+    --text-secondary: #666;
+    --text-muted: #999;
+    --bg-card: rgba(255, 255, 255, 0.95);
+    --bg-card-solid: #ffffff;
+    --bg-header: rgba(255, 255, 255, 0.95);
+    --bg-input: #f5f5f5;
+    --border-color: #e0e0e0;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --shadow-hover: rgba(102, 126, 234, 0.3);
+    --highlight-bg: rgba(102, 126, 234, 0.1);
+    --footer-border: rgba(0, 0, 0, 0.1);
+    --modal-bg: #ffffff;
+    --modal-text: #333;
+    --btn-secondary-border: #667eea;
+    --btn-secondary-text: #667eea;
+    --accent-color: #667eea;
+    --accent-secondary: #764ba2;
+    --gradient-start: #667eea;
+    --gradient-end: #764ba2;
+    --radius: 20px;
+    --radius-sm: 10px;
+    --radius-xs: 8px;
+    --transition: 0.3s ease;
+}
+
+[data-theme="dark"] {
+    --bg-gradient-start: #0f172a;
+    --bg-gradient-end: #1e293b;
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --text-muted: #777;
+    --bg-card: rgba(30, 41, 59, 0.95);
+    --bg-card-solid: #1e293b;
+    --bg-header: rgba(30, 41, 59, 0.95);
+    --bg-input: #2d3748;
+    --border-color: #334155;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --shadow-hover: rgba(52, 211, 153, 0.4);
+    --highlight-bg: rgba(52, 211, 153, 0.15);
+    --footer-border: rgba(255, 255, 255, 0.1);
+    --modal-bg: #1e293b;
+    --modal-text: #e0e0e0;
+    --btn-secondary-border: #34d399;
+    --btn-secondary-text: #e0e0e0;
+    --gradient-start: #34d399;
+    --gradient-end: #38bdf8;
+    --accent-color: #34d399;
+    --accent-secondary: #38bdf8;
+}
+
+[data-theme="industrial"] {
+    --bg-gradient-start: #2c3e50;
+    --bg-gradient-end: #34495e;
+    --text-primary: #ecf0f1;
+    --text-secondary: #bdc3c7;
+    --text-muted: #7f8c8d;
+    --bg-card: rgba(44, 62, 80, 0.95);
+    --bg-card-solid: #2c3e50;
+    --bg-header: rgba(44, 62, 80, 0.95);
+    --bg-input: #3d5166;
+    --border-color: #4a5d72;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --shadow-hover: rgba(231, 126, 34, 0.4);
+    --highlight-bg: rgba(231, 126, 34, 0.2);
+    --footer-border: rgba(255, 255, 255, 0.1);
+    --modal-bg: #2c3e50;
+    --modal-text: #ecf0f1;
+    --btn-secondary-border: #e67e22;
+    --btn-secondary-text: #ecf0f1;
+    --gradient-start: #e67e22;
+    --gradient-end: #f39c12;
+    --accent-color: #e67e22;
+    --accent-secondary: #f39c12;
+}
+
+[data-theme="retro"] {
+    --bg-gradient-start: #8b7355;
+    --bg-gradient-end: #6b5340;
+    --text-primary: #f5e6d3;
+    --text-secondary: #d4c5b0;
+    --text-muted: #b8a48c;
+    --bg-card: rgba(139, 115, 85, 0.95);
+    --bg-card-solid: #8b7355;
+    --bg-header: rgba(139, 115, 85, 0.95);
+    --bg-input: #a0886a;
+    --border-color: #b8a48c;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --shadow-hover: rgba(192, 57, 43, 0.4);
+    --highlight-bg: rgba(192, 57, 43, 0.2);
+    --footer-border: rgba(255, 255, 255, 0.1);
+    --modal-bg: #8b7355;
+    --modal-text: #f5e6d3;
+    --btn-secondary-border: #c0392b;
+    --btn-secondary-text: #f5e6d3;
+    --gradient-start: #c0392b;
+    --gradient-end: #d4a574;
+    --accent-color: #c0392b;
+    --accent-secondary: #d4a574;
+}
+
+/* ----- СБРОС ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ----- ФОН И ЧАСТИЦЫ ----- */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.gradient-bg {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, var(--bg-gradient-start), var(--bg-gradient-end), var(--bg-gradient-start), var(--bg-gradient-end));
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    top: -50%;
+    left: -50%;
+    transition: background 0.3s ease;
+}
+
+@keyframes gradient {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.1); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+/* ----- ШАПКА ----- */
+header {
+    background: var(--bg-header);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px var(--shadow-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid var(--accent-color);
+    transition: background 0.3s ease;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+/* ----- ЗАГОЛОВКИ С ALLERTA STENCIL ----- */
+.museum-title {
+    font-family: 'Allerta Stencil', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 2.8rem;
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+    transition: background 0.3s ease;
+}
+
+h1 {
+    font-family: 'Allerta Stencil', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+    transition: background 0.3s ease;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ----- НАВИГАЦИЯ ----- */
+.main-nav {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Allerta Stencil', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.main-nav a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.main-nav a:hover::before {
+    left: 100%;
+}
+
+.main-nav a:hover {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px var(--shadow-hover);
+}
+
+/* ----- ОСНОВНОЙ КОНТЕНТ ----- */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+section {
+    background: var(--bg-card);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 20px 40px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 48px var(--shadow-color);
+}
+
+@keyframes fadeInUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    font-family: 'Allerta Stencil', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 3px solid var(--gradient-start);
+    padding-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+h3 {
+    font-family: 'Allerta Stencil', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    margin-bottom: 0.8rem;
+}
+
+h4 {
+    font-family: 'Allerta Stencil', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+/* ----- ТАБЛИЦЫ ----- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+th {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    color: white;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+    font-family: 'Allerta Stencil', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+td {
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+tr:hover td {
+    background: var(--highlight-bg);
+    transition: background 0.3s ease;
+}
+
+/* ----- КАРТОЧКИ ПОЕЗДОВ ----- */
+.trains-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.train-card {
+    background: var(--bg-card-solid);
+    padding: 1.5rem;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 8px 16px var(--shadow-color);
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    color: var(--text-primary);
+}
+
+.train-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px var(--shadow-hover);
+    border-color: var(--gradient-start);
+}
+
+.train-card h3 {
+    font-family: 'Allerta Stencil', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.train-card p {
+    color: var(--text-secondary);
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+}
+
+/* ----- СЧЁТЧИКИ ----- */
+.counter-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.counter-item {
+    text-align: center;
+}
+
+.counter-number {
+    font-family: 'Allerta Stencil', sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+    margin-bottom: 0.3rem;
+    transition: background 0.3s ease;
+}
+
+.counter-label {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ----- ВЫДЕЛЕННЫЙ БЛОК ----- */
+.highlight-box {
+    background: var(--highlight-bg);
+    border-left: 4px solid var(--accent-color);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    color: var(--text-primary);
+}
+
+/* ----- СПИСКИ ----- */
+ul, ol {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+li {
+    margin-bottom: 0.4rem;
+    color: var(--text-secondary);
+}
+
+strong {
+    color: var(--accent-color);
+}
+
+/* ----- ГАЛЕРЕЯ ----- */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    box-shadow: 0 8px 16px var(--shadow-color);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    padding: 0.8rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.gallery-item:hover .gallery-caption {
+    transform: translateY(0);
+}
+
+/* ----- КНОПКИ ----- */
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.8rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-family: 'Allerta Stencil', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px var(--shadow-hover);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--btn-secondary-text);
+    border: 2px solid var(--btn-secondary-border);
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    color: white;
+    border-color: transparent;
+}
+
+/* ----- ЦИТАТА ----- */
+.quote-section {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin: 2rem 0;
+    border-left: 4px solid var(--accent-color);
+    box-shadow: 0 8px 16px var(--shadow-color);
+}
+
+.quote-text {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--text-primary);
+    margin-bottom: 0.8rem;
+}
+
+.quote-author {
+    text-align: right;
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* ----- HERO-СЕКЦИЯ ----- */
+.hero {
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.hero-text {
+    font-size: 1.15rem;
+    max-width: 800px;
+    margin: 0 auto 1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* ----- ПОДВАЛ ----- */
+footer {
+    background: var(--bg-card);
+    backdrop-filter: blur(10px);
+    margin-top: 3rem;
+    padding: 2.5rem 0 1rem;
+    border-top: 3px solid var(--accent-color);
+    transition: background 0.3s ease;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-info h4,
+.footer-links h4,
+.footer-contact h4 {
+    font-family: 'Allerta Stencil', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.footer-info p,
+.footer-contact p {
+    color: var(--text-secondary);
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.4rem;
+}
+
+.footer-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent-secondary);
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--footer-border);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.footer-note {
+    margin-top: 0.3rem;
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* ----- КНОПКА ПРОКРУТКИ ВВЕРХ ----- */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 46px;
+    height: 46px;
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    border: 2px solid var(--accent-color);
+    z-index: 999;
+}
+
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    transform: scale(1.08);
+}
+
+/* ----- МОДАЛЬНОЕ ОКНО ----- */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--modal-bg);
+    padding: 2rem;
+    border-radius: var(--radius);
+    max-width: 600px;
+    width: 90%;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    animation: modalSlideIn 0.4s ease;
+    color: var(--modal-text);
+}
+
+@keyframes modalSlideIn {
+    from { transform: translateY(-60px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+    z-index: 1;
+}
+
+.modal-close:hover {
+    color: var(--accent-color);
+}
+
+/* ----- FEATURES GRID ----- */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.feature-item {
+    background: var(--bg-card-solid);
+    padding: 1.2rem;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 4px 12px var(--shadow-color);
+    color: var(--text-primary);
+}
+
+.feature-item p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* ----- CARD HEADER / CONTENT ----- */
+.card-header {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    padding: 1.2rem 1.5rem;
+    margin: -2rem -2rem 1.5rem -2rem;
+    border-radius: var(--radius) var(--radius) 0 0;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.card-icon {
+    font-size: 2rem;
+}
+
+.card-header h2 {
+    color: white;
+    border-bottom: none;
+    padding-bottom: 0;
+    background: none;
+    -webkit-text-fill-color: white;
+    font-size: 1.6rem;
+    margin-bottom: 0;
+    font-family: 'Allerta Stencil', sans-serif;
+    letter-spacing: 2px;
+}
+
+.card-description {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+/* ----- АДАПТИВ ----- */
+@media (max-width: 1024px) {
+    .museum-title {
+        font-size: 2.2rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .museum-title {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+    }
+    h1 {
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+    .main-nav {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    .counter-container {
+        gap: 1.5rem;
+    }
+    .counter-number {
+        font-size: 2.2rem;
+    }
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    .card-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .image-gallery {
+        grid-template-columns: 1fr;
+    }
+    .trains-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .museum-title {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+    }
+    .main-nav a {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+    }
+}

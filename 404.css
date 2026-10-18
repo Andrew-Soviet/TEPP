@@ -1,0 +1,184 @@
+/* ============================================================
+   404 — ПОЕЗД УШЁЛ
+   ============================================================ */
+
+.page-404 {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.error-main {
+    width: 100%;
+    max-width: 640px;
+    position: relative;
+    z-index: 1;
+}
+
+.error-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    border-radius: var(--radius);
+    padding: 3rem 2rem 2.5rem;
+    box-shadow: 0 20px 60px var(--shadow-color);
+    text-align: center;
+    border-top: 4px solid var(--accent-color);
+    animation: fadeInUp 0.6s ease;
+}
+
+/* ---------- Цифры 404 ---------- */
+.error-code {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1;
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.error-zero {
+    font-size: 5rem;
+    display: inline-block;
+    animation: trainBounce 2.5s ease-in-out infinite;
+    transform-origin: center bottom;
+}
+
+@keyframes trainBounce {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25%      { transform: translateY(-6px) rotate(-4deg); }
+    75%      { transform: translateY(-3px) rotate(4deg); }
+}
+
+/* ---------- Тексты ---------- */
+.error-title {
+    font-size: 2rem;
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0 0 1rem;
+}
+
+.error-text {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 480px;
+    margin: 0 auto 2rem;
+}
+
+/* ---------- Уезжающий поезд ---------- */
+.error-train {
+    position: relative;
+    height: 70px;
+    margin: 2rem 0 2.5rem;
+    overflow: hidden;
+}
+
+.train-track {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background:
+        repeating-linear-gradient(
+            90deg,
+            var(--border-color) 0 12px,
+            transparent 12px 20px
+        );
+    border-radius: 2px;
+}
+
+.train-body {
+    position: absolute;
+    bottom: 15px;
+    left: 100%;
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    animation: trainAway 4s ease-in-out infinite;
+}
+
+.train-wheel {
+    position: absolute;
+    bottom: -4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    animation: wheelSpin 0.6s linear infinite;
+}
+
+.train-wheel:nth-child(1) { left: 20%; }
+.train-wheel:nth-child(2) { left: 50%; }
+.train-wheel:nth-child(3) { left: 80%; }
+
+@keyframes trainAway {
+    0%   { left: 100%; }
+    60%  { left: 20%; }
+    100% { left: -40%; }
+}
+
+@keyframes wheelSpin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+/* ---------- Кнопки ---------- */
+.error-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.error-actions .btn {
+    min-width: 180px;
+}
+
+/* ---------- Подсказка ---------- */
+.error-hint {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+}
+
+.error-hint a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.error-hint a:hover {
+    color: var(--accent-secondary);
+    text-decoration: underline;
+}
+
+/* ---------- Адаптив ---------- */
+@media (max-width: 480px) {
+    .error-card { padding: 2rem 1.2rem 1.8rem; }
+    .error-code { font-size: 4rem; }
+    .error-zero { font-size: 3.4rem; }
+    .error-title { font-size: 1.5rem; }
+    .error-text { font-size: 0.95rem; }
+    .error-actions { flex-direction: column; }
+    .error-actions .btn { width: 100%; }
+    .train-body::before,
+    .train-body::after { font-size: 1.8rem; }
+}
