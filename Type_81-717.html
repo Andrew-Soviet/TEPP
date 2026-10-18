@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>81-717/714 (ММЗ и ЛВЗ) — базовые вагоны метро — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>81-717/714</h1>
+            <p class="subtitle">Базовые вагоны метро производства ММЗ и ЛВЗ (1976–1988)</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="ps_mosmetro.html">🚆 Подвижной состав</a></li>
+                    <li><a href="#about">О вагоне</a></li>
+                    <li><a href="#mmz">ММЗ</a></li>
+                    <li><a href="#lvz">ЛВЗ</a></li>
+                    <li><a href="#specs">Характеристики</a></li>
+                    <li><a href="#design">Конструкция</a></li>
+                    <li><a href="#differences">Отличия</a></li>
+                    <li><a href="#operation">Эксплуатация</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>81-717/714 — «Номерной»</h2>
+                <p class="hero-text">81-717/714 — базовый тип электровагонов метрополитена, разработанный Мытищинским машиностроительным заводом (ММЗ, позже «Метровагонмаш») под руководством главного конструктора А. Г. Акимова. Головные вагоны получили обозначение <strong>81-717</strong>, промежуточные — <strong>81-714</strong>. Все вагоны — моторные, с реостатно-контакторной системой управления.</p>
+                <p class="hero-text">Серийное производство базовой модели было развёрнуто в 1976–1978 годах на ММЗ, а с 1980 года — на Ленинградском вагоностроительном заводе им. И. Е. Егорова (ЛВЗ, позже «Вагонмаш»). Именно эти две площадки выпустили основную массу вагонов исходной модели до перехода к модификациям .5 и .5М. Неофициальное название «Номерной» связано с отсутствием буквенного обозначения типа — только цифровой индекс.</p>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="nBuilt">0</div>
+                        <div class="stat-label">вагонов базовой модели</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="nPlants">0</div>
+                        <div class="stat-label">завода-изготовителя</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="nYears">0</div>
+                        <div class="stat-label">лет серийного выпуска</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Общее -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #4A148C 0%, #6A1B9A 100%);">
+                <span class="card-icon">🚇</span>
+                <h2>Общие сведения</h2>
+            </div>
+            <div class="card-content">
+                <p>Вагоны 81-717/714 создавались как временный, переходный тип между вагонами серии «Е» и перспективными вагонами типа «И» (81-715/716). Предполагалось отработать на них часть электрооборудования, однако задержка с освоением алюминиевых кузовов и тиристорно-импульсной системы управления привела к запуску именно этой модели в массовое серийное производство.</p>
+                <p>Конструктивно базовые 81-717/714 — это модернизированный кузов вагонов типа Е с убранными кабинами машиниста в промежуточных вагонах, более мощными тяговыми двигателями ДК-117 и люминесцентным освещением салонов. Головной вагон 81-717 имеет кабину управления, промежуточный 81-714 — без кабины.</p>
+
+                <div class="highlight-box">
+                    <p><strong>Важно:</strong> Базовая модель выпускалась параллельно на двух заводах — ММЗ (Мытищи) и ЛВЗ (Ленинград). Вагоны отличаются нумерацией, конструкцией кузова и рядом деталей. Ниже — раздельно по каждому заводу.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ММЗ -->
+        <section id="mmz" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);">
+                <span class="card-icon">🏭</span>
+                <h2>81-717/714 производства ММЗ</h2>
+            </div>
+            <div class="card-content">
+                <p>Мытищинский машиностроительный завод — головное предприятие и разработчик модели. Именно здесь в первой половине 1976 года были выпущены 6 опытных вагонов: 3 головных (№ 5846, 5854, 5855) и 3 промежуточных (№ 5837, 5867, 5868). Серийное производство началось в середине 1978 года.</p>
+
+                <table>
+                    <caption>Производство базовых 81-717/714 на ММЗ</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Завод</td><td>Мытищинский машиностроительный (ММЗ / «Метровагонмаш»)</td></tr>
+                        <tr><td>Главный конструктор</td><td>А. Г. Акимов</td></tr>
+                        <tr><td>Опытные вагоны</td><td>1976: 81-717 № 5846, 5854, 5855; 81-714 № 5837, 5867, 5868</td></tr>
+                        <tr><td>Серийный выпуск</td><td>с середины 1978 года</td></tr>
+                        <tr><td>Нумерация 81-717</td><td>от № 9050</td></tr>
+                        <tr><td>Нумерация 81-714</td><td>от № 9350</td></tr>
+                        <tr><td>Особенности</td><td>Оригинальный кузов ММЗ, «подстекольное» расположение фар, логотип завода между фарами</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Опытные вагоны ММЗ:</strong> именно на них отрабатывалась конструкция. Вагон 81-717 № 9050 — первый серийный вагон ММЗ; в 2017 году после капитально-восстановительного ремонта в Петербургском метрополитене ему вернули первозданный облик с «подстекольными» фарами и логотипом «Метровагонмаш» между ними.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ЛВЗ -->
+        <section id="lvz" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+                <span class="card-icon">🏭</span>
+                <h2>81-717/714 производства ЛВЗ</h2>
+            </div>
+            <div class="card-content">
+                <p>Ленинградский вагоностроительный завод им. И. Е. Егорова (ЛВЗ, позже ЗАО «Вагонмаш») подключился к выпуску модели из-за нехватки мощностей ММЗ. С января 1980 года здесь начался выпуск головных вагонов 81-717 (с № 8400), а с августа 1980 года — промежуточных 81-714 (с № 7202).</p>
+
+                <table>
+                    <caption>Производство базовых 81-717/714 на ЛВЗ</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Завод</td><td>Ленинградский вагоностроительный завод им. И. Е. Егорова (ЛВЗ / «Вагонмаш»)</td></tr>
+                        <tr><td>Начало выпуска</td><td>январь 1980 (81-717), август 1980 (81-714)</td></tr>
+                        <tr><td>Нумерация 81-717</td><td>от № 8400</td></tr>
+                        <tr><td>Нумерация 81-714</td><td>от № 7202</td></tr>
+                        <tr><td>Особенности</td><td>Использованы элементы кузова вагонов Ем-508Т, Ема-502, Ем-501; изменённые чертежи</td></tr>
+                        <tr><td>Тележки</td><td>С середины 1980 года — производство Калининского вагоностроительного завода</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Важно:</strong> Ленинградский завод внёс ряд изменений в чертежи, что позволило использовать для производства элементы модернизированного кузова вагонов Ем-508Т, Ема-502 и Ем-501. Внешне вагоны ЛВЗ отличаются от мытищинских рядом деталей кузова и окраской.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Технические характеристики -->
+        <section id="specs" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">⚙️</span>
+                <h2>Технические характеристики</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Основные технические данные базовых 81-717/714</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Род тока и напряжение</td><td>750 В постоянного тока</td></tr>
+                        <tr><td>Типы вагонов</td><td>Мг (81-717) / Мп (81-714)</td></tr>
+                        <tr><td>Число вагонов в составе</td><td>3—8</td></tr>
+                        <tr><td>Количество дверей</td><td>2×4</td></tr>
+                        <tr><td>Полная вместимость</td><td>309 (81-717) / 330 (81-714)</td></tr>
+                        <tr><td>Сидячих мест</td><td>42 (81-717) / 48 (81-714)</td></tr>
+                        <tr><td>Длина вагона</td><td>19 206 мм</td></tr>
+                        <tr><td>Ширина</td><td>2670 мм</td></tr>
+                        <tr><td>Высота</td><td>3650 мм</td></tr>
+                        <tr><td>Диаметр колёс</td><td>780 мм</td></tr>
+                        <tr><td>Ширина колеи</td><td>1520 мм (базовая); 1435 мм (экспортные модификации)</td></tr>
+                        <tr><td>Масса тары</td><td>81-717: 34 т; 81-714: 33,5 т</td></tr>
+                        <tr><td>Материал вагона</td><td>сталь</td></tr>
+                        <tr><td>Тип ТЭД</td><td>ДК-117Б (опытные), ДК-117В, ДК-117Д</td></tr>
+                        <tr><td>Мощность ТЭД</td><td>4×110 кВт</td></tr>
+                        <tr><td>Макс. скорость</td><td>90 км/ч</td></tr>
+                        <tr><td>Макс. служебная скорость</td><td>80 км/ч</td></tr>
+                        <tr><td>Ускорение при пуске</td><td>1,2 м/с²</td></tr>
+                        <tr><td>Ускорение при торможении</td><td>1,1 м/с²</td></tr>
+                        <tr><td>Электрическое торможение</td><td>реостатное</td></tr>
+                        <tr><td>Система тяги</td><td>реостатно-контакторная</td></tr>
+                        <tr><td>Тормозная система</td><td>пневматическая системы Вестингауза, электрическая</td></tr>
+                        <tr><td>Системы безопасности</td><td>АЛС-АРС</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Конструкция -->
+        <section id="design" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+                <span class="card-icon">🔧</span>
+                <h2>Конструкция</h2>
+            </div>
+            <div class="card-content">
+                <p>Кузов вагонов 81-717/714 — цельнометаллический несущий, по конструкции схож с кузовами вагонов типа Еж3 и Ем. Основные части: рама, боковые стенки, лобовые и концевые части, крыша и металлический пол. Материал — углеродистые высококачественные стали.</p>
+
+                <h3 style="margin: 1.5rem 0 1rem;">Ключевые особенности</h3>
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="feature-item">
+                        <h3>🚪 Нет кабин в промежуточных</h3>
+                        <p>Впервые в отечественном метровагоностроении промежуточные вагоны 81-714 выпускались без кабин машиниста. Это увеличило площадь салона и пассажировместимость.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🪟 Лобовая часть головного</h3>
+                        <p>У 81-717 убрана торцевая переходная дверь. Вместо неё — большое ветровое стекло, по бокам — пара окон поменьше. Сиденье машиниста перемещено в середину кабины.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>⚡ Тяговые двигатели</h3>
+                        <p>Установлены ДК-117Б часовой мощностью 110 кВт (у вагонов Е — 72 кВт). Применён электронный блок питания собственных нужд (БПСН).</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>💡 Люминесцентное освещение</h3>
+                        <p>В салонах впервые применены люминесцентные лампы вместо ламп накаливания, что стало стандартом для последующих моделей.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🛞 Усиленные тележки</h3>
+                        <p>Из-за более мощных двигателей и возросшей массы применены усиленные тележки с безмоментной системой подвески ТЭД и увеличенным диаметром осей колёсных пар.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🔗 Автосцепка Шарфенберга</h3>
+                        <p>Жёсткая автосцепка одновременно соединяет поездные цепи управления и воздушные магистрали, что сокращает время формирования поезда.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>БПСН:</strong> блок питания собственных нужд преобразует 750 В контактного рельса в 80 В для заряда аккумуляторов и питания цепей управления, а также в 220 В для освещения. Именно дроссель БПСН издаёт характерный высокочастотный гул, слышимый на остановках.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Отличия ММЗ и ЛВЗ -->
+        <section id="differences" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">🔍</span>
+                <h2>Отличия вагонов ММЗ и ЛВЗ</h2>
+            </div>
+            <div class="card-content">
+                <p>Вагоны базовой модели, выпущенные двумя заводами, имеют ряд конструктивных и внешних отличий.</p>
+
+                <table>
+                    <caption>Сравнение базовых 81-717/714 производства ММЗ и ЛВЗ</caption>
+                    <thead><tr><th>Параметр</th><th>ММЗ</th><th>ЛВЗ</th></tr></thead>
+                    <tbody>
+                        <tr><td>Начало серийного выпуска</td><td>1978</td><td>1980</td></tr>
+                        <tr><td>Нумерация 81-717</td><td>от № 9050</td><td>от № 8400</td></tr>
+                        <tr><td>Нумерация 81-714</td><td>от № 9350</td><td>от № 7202</td></tr>
+                        <tr><td>Кузов</td><td>Оригинальный кузов ММЗ</td><td>Использованы элементы кузова Ем-508Т, Ема-502, Ем-501</td></tr>
+                        <tr><td>Лобовая часть</td><td>«Подстекольные» фары, логотип завода между ними</td><td>Собственное исполнение лобовой части</td></tr>
+                        <tr><td>Тележки</td><td>Собственное производство</td><td>С 1980 года — тележки Калининского вагоностроительного завода</td></tr>
+                        <tr><td>Окраска</td><td>Традиционная для ММЗ</td><td>Отличалась рядом деталей</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Примечание:</strong> В процессе выпуска в конструкцию вагонов обоих заводов постоянно вносились изменения. Часть вагонов ранних выпусков впоследствии при модернизации получала четырёхфарную лобовую часть, аналогичную вагонам 81-717.5М/714.5М.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Эксплуатация -->
+        <section id="operation" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+                <span class="card-icon">🌍</span>
+                <h2>Эксплуатация</h2>
+            </div>
+            <div class="card-content">
+                <p>Базовые вагоны 81-717/714 и их модификации стали самыми массовыми вагонами метрополитенов на постсоветском пространстве и в странах бывшего соцлагеря. Они эксплуатировались в Московском, Ленинградском (Петербургском), Киевском, Харьковском, Минском, Бакинском, Тбилисском, Ереванском, Ташкентском, Новосибирском, Екатеринбургском, Самарском, Нижегородском, Днепровском метрополитенах, а также в Праге, Будапеште, Варшаве и Софии.</p>
+
+                <h3 style="margin: 1.5rem 0 1rem;">Хронология ключевых событий</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">1976</div>
+                        <div class="timeline-content">
+                            <h3>Опытные вагоны</h3>
+                            <p>ММЗ выпустил 6 опытных вагонов: 3 головных (№ 5846, 5854, 5855) и 3 промежуточных (№ 5837, 5867, 5868).</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1976—1977</div>
+                        <div class="timeline-content">
+                            <h3>Испытания</h3>
+                            <p>Опытные вагоны проходили испытания, по результатам которых было решено наладить серийное производство.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1977—1978</div>
+                        <div class="timeline-content">
+                            <h3>Первые поставки в Прагу</h3>
+                            <p>Для Пражского метрополитена выпущены вагоны 81-717.1/714.1. К середине 1978 года выполнен заказ на 68 вагонов.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Середина 1978</div>
+                        <div class="timeline-content">
+                            <h3>Серийное производство на ММЗ</h3>
+                            <p>ММЗ приступил к выпуску 81-717/714 для Москвы. Нумерация: 81-717 от № 9050, 81-714 от № 9350.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Январь 1980</div>
+                        <div class="timeline-content">
+                            <h3>Подключение ЛВЗ</h3>
+                            <p>Ленинградский вагоностроительный завод начал выпуск головных вагонов 81-717 с № 8400.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Август 1980</div>
+                        <div class="timeline-content">
+                            <h3>Промежуточные вагоны ЛВЗ</h3>
+                            <p>ЛВЗ начал выпуск промежуточных вагонов 81-714 с № 7202.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1987—1988</div>
+                        <div class="timeline-content">
+                            <h3>Переход к модификации .5</h3>
+                            <p>С № 0154 вагоны ММЗ начали выпускаться с усовершенствованным оборудованием и получили обозначение 81-717.5/714.5.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2017</div>
+                        <div class="timeline-content">
+                            <h3>Возвращение первозданного облика</h3>
+                            <p>В Петербургском метрополитене после КВР первому серийному вагону 81-717 № 9050 вернули облик с «подстекольными» фарами и логотипом «Метровагонмаш».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2020-е</div>
+                        <div class="timeline-content">
+                            <h3>Постепенное вытеснение</h3>
+                            <p>С 2010-х годов, начиная с Московского метрополитена, ведётся поэтапная замена вагонов 81-717/714 и модификаций на подвижной состав нового поколения.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Уникальные и тематические номерные вагоны -->
+<section id="unique" class="section-card">
+    <div class="card-header" style="background: linear-gradient(135deg, #E74C3C 0%, #FF6B4A 100%);">
+        <span class="card-icon">🎨</span>
+        <h2>Уникальные и тематические номерные вагоны</h2>
+    </div>
+    <div class="card-content">
+        <p class="card-description">
+            Среди базовых 81-717/714 и их модификаций встречаются вагоны с уникальным оформлением,
+            нестандартным салоном или особой историей. Ниже — наиболее известные экземпляры.
+        </p>
+
+        <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+
+            <!-- 9818 -->
+            <div class="train-card" style="border-left: 4px solid #E74C3C;">
+                <h3>81-717 № 9818</h3>
+                <p><strong>Синий и рыжий пластик</strong></p>
+                <p>Вагон с нестандартным сочетанием синего и рыжего пластика в отделке салона.
+                   Заметно выделяется на фоне типовых «номерных».</p>
+                <a href="vagon_9818.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">
+                    Подробнее →
+                </a>
+            </div>
+
+            <!-- 8423 -->
+            <div class="train-card" style="border-left: 4px solid #E67E22;">
+                <h3>81-717 № 8423</h3>
+                <p><strong>Антивандальные сиденья с перегородками</strong></p>
+                <p>Салон с антивандальными сиденьями, разделёнными небольшими перегородками.
+                   Один из вариантов модернизации пассажирского салона.</p>
+                <a href="vagon_8423.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">
+                    Подробнее →
+                </a>
+            </div>
+
+            <!-- 9279 -->
+            <div class="train-card" style="border-left: 4px solid #F1C40F;">
+                <h3>81-717 № 9279</h3>
+                <p><strong>Последний «подстекольник»</strong></p>
+                <p>Вагон с оригинальным «подстекольным» расположением фар — одним из последних
+                   сохранявших исторический облик лобовой части.</p>
+                <a href="vagon_9279.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">
+                    Подробнее →
+                </a>
+            </div>
+
+            <!-- 9050 -->
+            <div class="train-card" style="border-left: 4px solid #3498DB;">
+                <h3>81-717 № 9050</h3>
+                <p><strong>Первый серийный, реплика оригинала</strong></p>
+                <ul style="margin: 0.75rem 0 0; padding-left: 1.25rem; color: var(--text-secondary);">
+                    <li>КВР ТЧ-2 «Дачное», январь 2017 г.</li>
+                    <li>Воссоздан в реплике оригинального исполнения</li>
+                    <li>Передан в Санкт-Петербург</li>
+                </ul>
+                <a href="vagon_9050.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">
+                    Подробнее →
+                </a>
+            </div>
+
+            <!-- 0065-7919-8712 -->
+            <div class="train-card" style="border-left: 4px solid #9B59B6;">
+                <h3>0065 — 7919 — 8712</h3>
+                <p><strong>Тренажёр ТЧ-5</strong></p>
+                <p>Состав-тренажёр из вагонов 81-717/714, используемый для обучения машинистов
+                   в электродепо ТЧ-5.</p>
+                <a href="ТЧ-5_8712-7919-0065.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">
+                    Подробнее →
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+        <!-- Галерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/81-717_MMZ.jpg" alt="81-717 производства ММЗ" onerror="this.src='https://via.placeholder.com/800x500?text=81-717+ММЗ'">
+                        <div class="gallery-caption">Головной вагон 81-717 производства ММЗ</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 архив Измайловского</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/8535_museum.jpg" alt="81-714 производства ЛВЗ" onerror="this.src='https://via.placeholder.com/800x500?text=81-714+ЛВЗ'">
+                        <div class="gallery-caption">Вагон 81-717(ЛВЗ) №8535 в музее транспорта Москвы</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/81-717_cab.jpg" alt="Кабина 81-717" onerror="this.src='https://via.placeholder.com/800x500?text=Кабина+81-717'">
+                        <div class="gallery-caption">Кабина машиниста 81-717</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Павел Егереев</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/81-717_int_ixz.png" alt="Салон 81-714" onerror="this.src='https://via.placeholder.com/800x500?text=Салон+81-714'">
+                        <div class="gallery-caption">Варианты салона вагона 81-717</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 фото взяты с <a href="https://transphoto.org/search.php?type=3&mid=3094&view=10">transphoto</a></p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«81-717/714 создавались как временный тип — переходное звено между вагонами серии Е и перспективным типом И. Но именно они стали самыми массовыми вагонами метро в мире, определив облик подземки на десятилетия вперёд».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Подвижной состав метро»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="ps_mosmetro.html">Подвижной состав</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="Живая_история_Мск_метро.html">Живая история</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">81-717/714 — базовые вагоны метро производства ММЗ и ЛВЗ</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
+            function animateCounters() {
+                const targets = { nBuilt: 3000, nPlants: 2, nYears: 12 };
+                let current = { nBuilt: 0, nPlants: 0, nYears: 0 };
+                const builtEl = document.getElementById('nBuilt');
+                const plantsEl = document.getElementById('nPlants');
+                const yearsEl = document.getElementById('nYears');
+                if (!builtEl || !plantsEl || !yearsEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.nBuilt < targets.nBuilt) {
+                        current.nBuilt += Math.ceil(targets.nBuilt / 50);
+                        if (current.nBuilt > targets.nBuilt) current.nBuilt = targets.nBuilt;
+                        builtEl.textContent = current.nBuilt;
+                        allFinished = false;
+                    }
+                    if (current.nPlants < targets.nPlants) {
+                        current.nPlants += 1;
+                        if (current.nPlants > targets.nPlants) current.nPlants = targets.nPlants;
+                        plantsEl.textContent = current.nPlants;
+                        allFinished = false;
+                    }
+                    if (current.nYears < targets.nYears) {
+                        current.nYears += 1;
+                        if (current.nYears > targets.nYears) current.nYears = targets.nYears;
+                        yearsEl.textContent = current.nYears;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+
+            // Галерея
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
+                    if (content && img) {
+                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>

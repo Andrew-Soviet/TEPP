@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бутовская линия — история и уникальные поезда — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Бутовская линия (БутЛ)</h1>
+            <p class="subtitle">Двенадцатая линия Московского метрополитена — первая линия лёгкого метро в России</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="Главная_Страница_Мосметро.html">🏙️ Мосметро</a></li>
+                    <li><a href="#about">О линии</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#unique">Уникальные поезда</a></li>
+                    <li><a href="#stations">Станции</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Бутовская линия</h2>
+                <p class="hero-text">Бутовская линия (БутЛ) — двенадцатая линия Московского метрополитена, открытая <strong>27 декабря 2003 года</strong>. Это первая линия лёгкого метро в России и странах СНГ. Большая часть линии проходит по поверхности, что делает её уникальной в системе Московского метро.</p>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="butlYear">0</div>
+                        <div class="stat-label">год открытия</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="butlStations">0</div>
+                        <div class="stat-label">станций</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="butlUnique">0</div>
+                        <div class="stat-label">уникальных составов</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Общая информация -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #A0D6B4 0%, #7FB17F 100%);">
+                <span class="card-icon">🚇</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Основные параметры Бутовской линии</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Дата открытия</td><td>27 декабря 2003 года</td></tr>
+                        <tr><td>Длина</td><td>10,6 км</td></tr>
+                        <tr><td>Количество станций</td><td>7</td></tr>
+                        <tr><td>Цвет на схеме</td><td>⬜ Серо-голубой</td></tr>
+                        <tr><td>Тип линии</td><td>Лёгкое метро (большая часть — наземная)</td></tr>
+                        <tr><td>Пересадки</td><td>«Улица Старокачаловская» (на СТЛ), «Битцевский парк» (на КРЛ)</td></tr>
+                        <tr><td>Особенность</td><td>Первая линия лёгкого метро в России</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p>⭐ <strong>Интересный факт:</strong> Бутовская линия — единственная линия Московского метро с открытыми наземными станциями и береговыми платформами. Она стала пионером технологии «лёгкого метро» в России.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- История линии -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История линии</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Начало 2000-х</div>
+                        <div class="timeline-content">
+                            <h3>Проектирование лёгкого метро</h3>
+                            <p>В начале 2000-х годов в Москве началась разработка проекта лёгкого метро для улучшения транспортной доступности районов Южного Бутово. Технология предполагала наземные станции и облегчённую конструкцию путей.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">27.12.2003</div>
+                        <div class="timeline-content">
+                            <h3>Торжественное открытие</h3>
+                            <p>Открыт первый участок Бутовской линии от «Улицы Старокачаловской» до «Бунинской аллеи» (5 станций). Это была первая линия лёгкого метро в России.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2004–2008</div>
+                        <div class="timeline-content">
+                            <h3>Развитие линии</h3>
+                            <p>Линия начала активно использоваться жителями Южного Бутово. Станции с береговыми платформами стали визитной карточкой линии.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2014</div>
+                        <div class="timeline-content">
+                            <h3>Продление и интеграция</h3>
+                            <p>Открыты станции «Лесопарковая» и «Битцевский парк». Линия получила пересадку на Калужско-Рижскую линию, стала частью единой сети метро.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Современность</div>
+                        <div class="timeline-content">
+                            <h3>Уникальная линия</h3>
+                            <p>Сегодня Бутовская линия остаётся единственной линией лёгкого метро в России с открытыми станциями и уникальным подвижным составом.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Итог:</strong> Бутовская линия — экспериментальный проект, который доказал, что лёгкое метро может эффективно работать в условиях плотной городской застройки.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Уникальные составы -->
+        <section id="unique" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Уникальные экземпляры на линии</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">На Бутовской линии можно встретить следующие уникальные экземпляры подвижного состава:</p>
+
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="train-card">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem;">🌑</span>
+                            <h3 style="margin: 0;">0022-0029 «Тёмный Скиф»</h3>
+                        </div>
+                        <p>Уникальный состав «Скиф» (81-740/741) в тёмной окраске. Отличается от стандартных «Русичей» цветовой гаммой и элементами оформления.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Тёмная окраска кузова</li>
+                            <li>Работает на Бутовской линии</li>
+                            <li>Относится к семейству «Скиф»/«Русич»</li>
+                        </ul>
+                        <a href="#" class="btn btn-secondary" style="width: 100%;" onclick="showComingSoon('darkSkif'); return false;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem;">🚃</span>
+                            <h3 style="margin: 0;">0005-0006 «3-й Скиф»</h3>
+                        </div>
+                        <p>Третий состав семейства «Скиф» (81-740/741). Уникальный экземпляр с особенностями конструкции и оформления.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Номера: 0005-0006</li>
+                            <li>Ранняя модификация «Скиф»</li>
+                            <li>Работает на Бутовской линии</li>
+                        </ul>
+                        <a href="#" class="btn btn-secondary" style="width: 100%;" onclick="showComingSoon('thirdSkif'); return false;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem;">🔷</span>
+                            <h3 style="margin: 0;">0027-0028 81-740А</h3>
+                        </div>
+                        <p>Модификация вагонов 81-740А семейства «Русич». Отличаются техническими характеристиками и дизайном.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Модель: 81-740А</li>
+                            <li>Номера: 0027-0028</li>
+                            <li>Специализированная версия для лёгкого метро</li>
+                        </ul>
+                        <a href="#" class="btn btn-secondary" style="width: 100%;" onclick="showComingSoon('740A'); return false;">Подробнее →</a>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 2rem;">
+                    <p>Если вы знаете о других уникальных составах на Бутовской линии, сообщите нам!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Подвижной состав -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+                <span class="card-icon">🚋</span>
+                <h2>Подвижной состав Бутовской линии</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Бутовская линия обслуживается преимущественно поездами семейства «Русич» (81-740/741), специально адаптированными для условий лёгкого метро с открытыми участками.</p>
+
+                <div class="features-grid" style="grid-template-columns: repeat(3, 1fr); margin-top: 1.5rem;">
+                    <div class="feature-item">
+                        <h3>81-740/741 «Русич»</h3>
+                        <p>Основной тип поездов на линии. Сочленённые вагоны, адаптированные для наземной эксплуатации.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>81-740А</h3>
+                        <p>Модификация с улучшенными характеристиками. Представлена составами 0027-0028.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>«Скиф»</h3>
+                        <p>Экспериментальные и первые серийные составы, включая «Тёмный Скиф» и третий состав.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Станции -->
+        <section id="stations" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+                <span class="card-icon">🗺️</span>
+                <h2>Станции Бутовской линии</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <div class="feature-item">
+                        <h3>Станции линии</h3>
+                        <ul style="margin: 0.5rem 0 0 1.2rem;">
+                            <li>«Битцевский парк»</li>
+                            <li>«Лесопарковая»</li>
+                            <li>«Улица Старокачаловская»</li>
+                            <li>«Улица Скобелевская»</li>
+                            <li>«Бульвар Адмирала Ушакова»</li>
+                            <li>«Улица Горчакова»</li>
+                            <li>«Бунинская аллея»</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Особенности</h3>
+                        <ul style="margin: 0.5rem 0 0 1.2rem;">
+                            <li>Все станции наземные</li>
+                            <li>Береговые платформы</li>
+                            <li>Пересадка на Курское направление МЖД</li>
+                            <li>Соединена с Серпуховско-Тимирязевской линией</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Бутовская линия стала пионером лёгкого метро в России. Её открытые станции и уникальный подвижной состав создают особую атмосферу, непохожую на классические подземные линии. Здесь можно встретить редкие экземпляры „Скифов“ и „Русичей“».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Бутовская линия»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="Главная_Страница_Мосметро.html">Московский метрополитен</a></li>
+                        <li><a href="Живая_история_Мск_метро.html">Живая история</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Бутовская линия — первая линия лёгкого метро в России</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="comingSoonModal">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <div class="modal-body">
+                <h2>🚧 Страница в разработке</h2>
+                <p id="modalMessage">Подробная информация появится позже.</p>
+                <button class="btn btn-primary" id="modalOkBtn">Понятно</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function animateButlCounters() {
+                const targets = { butlYear: 2003, butlStations: 7, butlUnique: 3 };
+                let current = { butlYear: 0, butlStations: 0, butlUnique: 0 };
+                const yearEl = document.getElementById('butlYear');
+                const stationsEl = document.getElementById('butlStations');
+                const uniqueEl = document.getElementById('butlUnique');
+                if (!yearEl || !stationsEl || !uniqueEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.butlYear < targets.butlYear) {
+                        current.butlYear += Math.ceil(targets.butlYear / 50);
+                        if (current.butlYear > targets.butlYear) current.butlYear = targets.butlYear;
+                        yearEl.textContent = current.butlYear;
+                        allFinished = false;
+                    }
+                    if (current.butlStations < targets.butlStations) {
+                        current.butlStations += 1;
+                        if (current.butlStations > targets.butlStations) current.butlStations = targets.butlStations;
+                        stationsEl.textContent = current.butlStations;
+                        allFinished = false;
+                    }
+                    if (current.butlUnique < targets.butlUnique) {
+                        current.butlUnique += 1;
+                        if (current.butlUnique > targets.butlUnique) current.butlUnique = targets.butlUnique;
+                        uniqueEl.textContent = current.butlUnique;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateButlCounters();
+        });
+
+        const modal = document.getElementById('comingSoonModal');
+        const modalMessage = document.getElementById('modalMessage');
+        const closeBtn = document.getElementById('modalClose');
+        const okBtn = document.getElementById('modalOkBtn');
+
+        window.showComingSoon = function(item) {
+            if (modal && modalMessage) {
+                if (item === 'darkSkif') {
+                    modalMessage.textContent = 'Подробная информация о составе «Тёмный Скиф» (0022-0029) появится позже.';
+                } else if (item === 'thirdSkif') {
+                    modalMessage.textContent = 'Подробная информация о третьем составе «Скиф» (0005-0006) появится позже.';
+                } else if (item === '740A') {
+                    modalMessage.textContent = 'Подробная информация о составе 81-740А (0027-0028) появится позже.';
+                } else {
+                    modalMessage.textContent = 'Подробная информация появится позже.';
+                }
+                modal.classList.add('active');
+            }
+        }
+
+        function closeModal() {
+            if (modal) modal.classList.remove('active');
+        }
+
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (okBtn) okBtn.addEventListener('click', closeModal);
+
+        window.addEventListener('click', function(e) {
+            if (e.target === modal) closeModal();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Арбатско-Покровская линия — история и уникальные поезда — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Арбатско-Покровская линия (АПЛ)</h1>
+            <p class="subtitle">Третья линия Московского метрополитена — история и уникальные поезда</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="Главная_Страница_Мосметро.html">🏙️ Мосметро</a></li>
+                    <li><a href="#about">О линии</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#unique">Уникальные поезда</a></li>
+                    <li><a href="#stations">Станции</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Арбатско-Покровская линия</h2>
+                <p class="hero-text">Арбатско-Покровская линия (АПЛ) — третья линия Московского метрополитена, открытая <strong>13 марта 1938 года</strong>. Она соединила центр города с восточными и западными районами, проходя через исторический Арбат. Сегодня это одна из самых длинных линий столичной подземки.</p>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="aplYear">0</div>
+                        <div class="stat-label">год открытия</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="aplStations">0</div>
+                        <div class="stat-label">станций</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="aplUnique">0</div>
+                        <div class="stat-label">уникальных составов</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Общая информация -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #0054A6 0%, #003B73 100%);">
+                <span class="card-icon">🚇</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Основные параметры Арбатско-Покровской линии</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Дата открытия</td><td>13 марта 1938 года</td></tr>
+                        <tr><td>Длина</td><td>45,1 км</td></tr>
+                        <tr><td>Количество станций</td><td>22</td></tr>
+                        <tr><td>Цвет на схеме</td><td>🔵 Синий</td></tr>
+                        <tr><td>Первые станции</td><td>«Киевская» — «Курская» (9 станций)</td></tr>
+                        <tr><td>Название до 1990</td><td>Арбатско-Покровская (не менялось)</td></tr>
+                        <tr><td>Самая длинная линия</td><td>Да, 45,1 км — первая по длине в Москве</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p>⭐ <strong>Интересный факт:</strong> Арбатско-Покровская линия — самая длинная в Московском метрополитене. Она включает уникальный участок через Москву-реку по метромосту у «Смоленской» и наземный участок в Измайлово.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- История линии -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История линии</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">1935–1938</div>
+                        <div class="timeline-content">
+                            <h3>Строительство третьей очереди</h3>
+                            <p>В 1935 году началось строительство третьей очереди метро — от «Киевской» до «Курской». Линия должна была соединить центр города с восточными и западными районами.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">13.03.1938</div>
+                        <div class="timeline-content">
+                            <h3>Торжественное открытие</h3>
+                            <p>Открыта третья линия от станции «Киевская» до станции «Курская» (9 станций). В день открытия по линии проехали более 200 тысяч пассажиров.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1940–1950-е</div>
+                        <div class="timeline-content">
+                            <h3>Продление на восток</h3>
+                            <p>Линия продлена до «Измайловской» (1944), «Первомайской» (1954), «Щёлковской» (1963). Появился уникальный наземный участок в Измайлово.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1953–1958</div>
+                        <div class="timeline-content">
+                            <h3>Строительство Арбатского радиуса</h3>
+                            <p>Построен новый Арбатский радиус с уникальными станциями глубокого заложения: «Арбатская», «Смоленская», «Киевская». Старый участок стал частью Филёвской линии.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1960–1980-е</div>
+                        <div class="timeline-content">
+                            <h3>Развитие линии</h3>
+                            <p>Линия продлена на запад: «Молодёжная» (1965), «Крылатское» (1989). Открыты станции «Парк Победы» (2003), «Строгино» (2008).</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2000-е — 2010-е</div>
+                        <div class="timeline-content">
+                            <h3>Продление в Митино</h3>
+                            <p>Линия продлена до «Митино» (2009), «Пятницкого шоссе» (2012). Открыты станции «Славянский бульвар» (2008), «Мякинино» (2009).</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Современность</div>
+                        <div class="timeline-content">
+                            <h3>Самая длинная линия</h3>
+                            <p>Сегодня АПЛ — самая длинная линия Московского метро (45,1 км). На линии работают современные поезда «Русич», «Ока», «Москва».</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Итог:</strong> За 88 лет Арбатско-Покровская линия прошла путь от 9 станций до 22 станций и стала самой длинной в Московском метрополитене.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Уникальные составы -->
+        <section id="unique" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Уникальные экземпляры на линии</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">На Арбатско-Покровской линии можно встретить следующие уникальные экземпляры подвижного состава:</p>
+
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="train-card">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem;">🎨</span>
+                            <h3 style="margin: 0;">Акварель</h3>
+                        </div>
+                        <p>Именной поезд-картинная галерея. Внутри вагонов размещены репродукции картин известных художников. Проект создан совместно с Московской школой акварели.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Курсирует по Арбатско-Покровской линии</li>
+                            <li>В каждом вагоне своя экспозиция</li>
+                            <li>Регулярно обновляется</li>
+                        </ul>
+                        <a href="Акварель.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+                    <div class="train-card">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem;">🚃</span>
+                            <h3 style="margin: 0;">«Черноглазый» Русич 0152</h3>
+                        </div>
+                        <p>Вагон модели <strong>81-740.1 «Русич»</strong> с уникальным оформлением — чёрными накладками на фарах, за что получил прозвище «Черноглазый».</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Модель 81-740.1</li>
+                            <li>Чёрные накладки на фарах</li>
+                            <li>Приписан к ТЧ-16 «Митино»</li>
+                        </ul>
+                        <a href="Скиф_0152.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 2rem;">
+                    <p>Пока что всё, больше уникальных составов на Арбатско-Покровской линии не обнаружено. Если вы знаете о других уникальных поездах, сообщите нам!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Станции -->
+        <section id="stations" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+                <span class="card-icon">🗺️</span>
+                <h2>Станции Арбатско-Покровской линии</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <div class="feature-item">
+                        <h3>Западный участок</h3>
+                        <ul style="margin: 0.5rem 0 0 1.2rem;">
+                            <li>«Пятницкое шоссе»</li>
+                            <li>«Митино»</li>
+                            <li>«Волоколамская»</li>
+                            <li>«Мякинино»</li>
+                            <li>«Строгино»</li>
+                            <li>«Крылатское»</li>
+                            <li>«Молодёжная»</li>
+                            <li>«Кунцевская»</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Центральный участок</h3>
+                        <ul style="margin: 0.5rem 0 0 1.2rem;">
+                            <li>«Славянский бульвар»</li>
+                            <li>«Парк Победы»</li>
+                            <li>«Киевская»</li>
+                            <li>«Смоленская» (АПЛ)</li>
+                            <li>«Арбатская» (АПЛ)</li>
+                            <li>«Площадь Революции»</li>
+                            <li>«Курская»</li>
+                            <li>«Бауманская»</li>
+                            <li>«Электрозаводская»</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Восточный участок</h3>
+                        <ul style="margin: 0.5rem 0 0 1.2rem;">
+                            <li>«Семёновская»</li>
+                            <li>«Партизанская»</li>
+                            <li>«Измайловская»</li>
+                            <li>«Первомайская»</li>
+                            <li>«Щёлковская»</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Арбатско-Покровская линия — одна из самых протяжённых в Московском метро. Здесь можно встретить уникальные составы, такие как „Акварель“ с репродукциями картин и необычный „Черноглазый“ Русич».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Арбатско-Покровская линия»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="Главная_Страница_Мосметро.html">Московский метрополитен</a></li>
+                        <li><a href="Живая_история_Мск_метро.html">Живая история</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Арбатско-Покровская линия — синяя ветка Московского метро</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function animateAplCounters() {
+                const targets = { aplYear: 1938, aplStations: 22, aplUnique: 2 };
+                let current = { aplYear: 0, aplStations: 0, aplUnique: 0 };
+                const yearEl = document.getElementById('aplYear');
+                const stationsEl = document.getElementById('aplStations');
+                const uniqueEl = document.getElementById('aplUnique');
+                if (!yearEl || !stationsEl || !uniqueEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.aplYear < targets.aplYear) {
+                        current.aplYear += Math.ceil(targets.aplYear / 50);
+                        if (current.aplYear > targets.aplYear) current.aplYear = targets.aplYear;
+                        yearEl.textContent = current.aplYear;
+                        allFinished = false;
+                    }
+                    if (current.aplStations < targets.aplStations) {
+                        current.aplStations += 1;
+                        if (current.aplStations > targets.aplStations) current.aplStations = targets.aplStations;
+                        stationsEl.textContent = current.aplStations;
+                        allFinished = false;
+                    }
+                    if (current.aplUnique < targets.aplUnique) {
+                        current.aplUnique += 1;
+                        if (current.aplUnique > targets.aplUnique) current.aplUnique = targets.aplUnique;
+                        uniqueEl.textContent = current.aplUnique;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateAplCounters();
+        });
+    </script>
+</body>
+</html>

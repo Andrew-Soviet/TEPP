@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вагоны типа Е (81-703) — массовая серия советского метро — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Вагоны типа Е (81-703)</h1>
+            <p class="subtitle">Массовая серия советского метро (1963–1969)</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="ps_mosmetro.html">🚆 Подвижной состав</a></li>
+                    <li><a href="#about">О вагоне</a></li>
+                    <li><a href="#specs">Характеристики</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#mods">Модификации</a></li>
+                    <li><a href="#cities">Города</a></li>
+                    <li><a href="#surviving">Сохранившиеся</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Вагоны типа Е</h2>
+                <p class="hero-text">Вагоны типа «Е» (заводское обозначение — <strong>81-703</strong>) — массовая серия советских метровагонов, выпускавшаяся Мытищинским машиностроительным заводом с 1963 по 1969 год. Опытные образцы появились ещё в 1959 году. Именно эти вагоны стали основой парка метрополитенов Москвы, Ленинграда, Киева, Тбилиси и Баку на целых два десятилетия.</p>
+                <p class="hero-text">Всего было построено <strong>824 вагона</strong>, которые проработали с пассажирами до 2015 года. Последний линейный вагон — № 3605 — оставался в пассажирской эксплуатации Московского метро до 2008 года.</p>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="eBuilt">0</div>
+                        <div class="stat-label">вагонов построено</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="eYears">0</div>
+                        <div class="stat-label">лет в эксплуатации</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="eCities">0</div>
+                        <div class="stat-label">городов эксплуатации</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Производство -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);">
+                <span class="card-icon">🏭</span>
+                <h2>Производство</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Основные данные о производстве вагонов типа Е</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Годы постройки</td><td>1959—1960 (опытные), 1963—1969 (серийные)</td></tr>
+                        <tr><td>Страна постройки</td><td>СССР 🇷🇺</td></tr>
+                        <tr><td>Завод</td><td>Мытищинский машиностроительный (ныне «Метровагонмаш»)</td></tr>
+                        <tr><td>Вагонов построено</td><td>824</td></tr>
+                        <tr><td>Нумерация</td><td>№ 3001—3699, 4700—4824</td></tr>
+                        <tr><td>Тип вагонов</td><td>Мг (моторный головной)</td></tr>
+                        <tr><td>Число вагонов в составе</td><td>2—8</td></tr>
+                    </tbody>
+                </table>
+
+                <h3 style="margin: 1.5rem 0 1rem;">Выпуск по годам</h3>
+                <table>
+                    <thead><tr><th>Год</th><th>Кол-во</th><th>Примечание</th></tr></thead>
+                    <tbody>
+                        <tr><td>1959</td><td>2</td><td>Опытные № 3001—3002</td></tr>
+                        <tr><td>1960</td><td>5</td><td>Вторая опытная партия № 3003—3007</td></tr>
+                        <tr><td>1963</td><td>70</td><td>Первые серийные № 3008—3077</td></tr>
+                        <tr><td>1964</td><td>~145 (план)</td><td>Поставки в Ленинград и Киев</td></tr>
+                        <tr><td>1966</td><td>—</td><td>Начало параллельного выпуска Ем</td></tr>
+                        <tr><td>1968</td><td>—</td><td>Исчерпан диапазон 36хх, переход на 47хх</td></tr>
+                        <tr><td>1969</td><td>—</td><td>Завершение выпуска серии</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Важно:</strong> Разрыв в нумерации (3699 → 4700) связан с тем, что в 1966 году завод начал параллельно выпускать вагоны «Ем» для Ленинграда, которым отвели номера с 3701. Когда диапазон 36хх был исчерпан, вагонам «Е» стали присваивать номера с 4700.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Технические характеристики -->
+        <section id="specs" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">⚙️</span>
+                <h2>Технические характеристики</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Основные технические данные вагонов типа Е</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Род тока и напряжение</td><td>750 В постоянного тока</td></tr>
+                        <tr><td>Типы вагонов</td><td>Мг</td></tr>
+                        <tr><td>Количество дверей</td><td>2×4</td></tr>
+                        <tr><td>Полная вместимость</td><td>264 чел.</td></tr>
+                        <tr><td>Сидячих мест</td><td>40</td></tr>
+                        <tr><td>Длина вагона</td><td>19 166 мм</td></tr>
+                        <tr><td>Ширина</td><td>2 712 мм</td></tr>
+                        <tr><td>Высота</td><td>3 695 мм</td></tr>
+                        <tr><td>Диаметр колёс</td><td>725—785 мм</td></tr>
+                        <tr><td>Ширина колеи</td><td>1 524 мм</td></tr>
+                        <tr><td>Масса тары</td><td>Е, Ер: 31,5 т; Еи: 31,7 т</td></tr>
+                        <tr><td>Материал вагона</td><td>Сталь</td></tr>
+                        <tr><td>Тип ТЭД</td><td>ДК-108А (1959–1966), ДК-108Г (1966–1969)</td></tr>
+                        <tr><td>Мощность ТЭД</td><td>4 × 68 кВт</td></tr>
+                        <tr><td>Макс. скорость</td><td>90 км/ч</td></tr>
+                        <tr><td>Макс. служебная скорость</td><td>80 км/ч</td></tr>
+                        <tr><td>Ускорение при пуске</td><td>1,2 м/с²</td></tr>
+                        <tr><td>Ускорение при торможении</td><td>1,1 м/с²</td></tr>
+                        <tr><td>Электрическое торможение</td><td>Реостатное</td></tr>
+                        <tr><td>Тормозная система</td><td>Системы Вестингауза</td></tr>
+                    </tbody>
+                </table>
+
+                <h3 style="margin: 1.5rem 0 1rem;">Особенности конструкции</h3>
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="feature-item">
+                        <h3>🛞 Тележки</h3>
+                        <p>Каждый вагон имеет две двухосные тележки. После модернизации 1965 года увеличены диаметр шеек осей, толщина стенок рам, изменена геометрия поводков.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🚪 Двери</h3>
+                        <p>Восемь двустворчатых раздвижных дверей, одна боковая дверь из кабины на платформу, две торцовые двери и дверь из кабины в салон.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>⚡ Тяговый привод</h3>
+                        <p>Каждая ось приводится отдельным двигателем ДК-108А через карданную передачу. Пуск реостатный, с перегруппировкой двигателей.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🎛️ Контроллер ЭКГ-17И</h3>
+                        <p>Установленный под вагоном реостатный контроллер выполняет переключения в силовой цепи.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- История -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История</h2>
+            </div>
+            <div class="card-content">
+                <p>В 1956 году Мытищинский машиностроительный завод приступил к разработке нового типа вагона, получившего обозначение <strong>Е</strong>. К концу 1959 года были изготовлены два первых опытных вагона № 3001—3002, которые в декабре отправили в московское депо «Сокол».</p>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Февраль 1960</div>
+                        <div class="timeline-content">
+                            <h3>Начало испытаний</h3>
+                            <p>Опытные вагоны проходили испытания на участке «Белорусская» — «Сокол» Горьковско-Замоскворецкой линии.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Конец 1960</div>
+                        <div class="timeline-content">
+                            <h3>Вторая опытная партия</h3>
+                            <p>Изготовлены ещё пять вагонов № 3003—3007. Сформирован семивагонный состав с головными № 3001 и № 3007.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">22 февраля 1961</div>
+                        <div class="timeline-content">
+                            <h3>Первая поездка с пассажирами</h3>
+                            <p>Опытный состав типа «Е» совершил первую поездку с пассажирами по Горьковско-Замоскворецкой линии.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Май 1963</div>
+                        <div class="timeline-content">
+                            <h3>Решение о серийном производстве</h3>
+                            <p>Несмотря на выявленные недостатки, вагоны типа «Е» пущены в серию. В июне завод приступил к сборке первых серийных вагонов.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Май 1965</div>
+                        <div class="timeline-content">
+                            <h3>Кризис и модернизация</h3>
+                            <p>Все московские вагоны серии «Е» сняты с эксплуатации и направлены в депо «Красная Пресня» на ремонт с заменой тележек.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Конец 1965</div>
+                        <div class="timeline-content">
+                            <h3>Полное обслуживание линии</h3>
+                            <p>Горьковско-Замоскворецкая линия стала полностью обслуживаться вагонами серии «Е».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Октябрь 1967</div>
+                        <div class="timeline-content">
+                            <h3>Бакинский метрополитен</h3>
+                            <p>Вступил в строй пятый метрополитен СССР — Бакинский. Мытищинцы дали бакинцам первые 29 вагонов.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1969</div>
+                        <div class="timeline-content">
+                            <h3>Завершение выпуска</h3>
+                            <p>Прекращён выпуск вагонов типа «Е». Всего построено 824 вагона.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2008</div>
+                        <div class="timeline-content">
+                            <h3>Конец пассажирской эксплуатации в Москве</h3>
+                            <p>Последний линейный вагон № 3605 снят с пассажирской эксплуатации.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">27 июля 2015</div>
+                        <div class="timeline-content">
+                            <h3>Полное прекращение эксплуатации</h3>
+                            <p>Последний регулярный пассажирский вагон № 4805 заехал в депо «Дарница» (Киев) и был отправлен на модернизацию.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Модификации -->
+        <section id="mods" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #6A0DAD 0%, #8E44AD 100%);">
+                <span class="card-icon">🔄</span>
+                <h2>Модификации</h2>
+            </div>
+            <div class="card-content">
+                <p>Серийных модификаций не существовало, но были опытные:</p>
+
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="feature-item">
+                        <h3>⚡ Еи — тиристорно-импульсная система</h3>
+                        <p>Опытный вариант с тиристорно-импульсной системой управления. Номера № 3078, 3080, 3105, 3499, 5360, 5546. Все списаны.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🛞 Ер — новая тележка</h3>
+                        <p>Модификация с изменённой конструкцией тележки.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Ем — не модификация, а отдельный тип.</strong> На базе вагона «Е» была создана модель «Ем» специально для станций закрытого типа Ленинградского метрополитена. У вагонов «Е» было изменено расстояние между боковыми дверями, что не позволяло им работать на таких станциях.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Города эксплуатации -->
+        <section id="cities" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+                <span class="card-icon">🌍</span>
+                <h2>Эксплуатирующие города</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <thead><tr><th>Город</th><th>Годы эксплуатации</th><th>Примечание</th></tr></thead>
+                    <tbody>
+                        <tr><td>Москва</td><td>1963—2008</td><td>Последний линейный вагон № 3605</td></tr>
+                        <tr><td>Санкт-Петербург</td><td>1963—2015</td><td>Последний вагон № 3369</td></tr>
+                        <tr><td>Киев</td><td>1969—2015</td><td>Последний вагон № 4805</td></tr>
+                        <tr><td>Тбилиси</td><td>1966—2010</td><td>—</td></tr>
+                        <tr><td>Баку</td><td>1967—2001</td><td>Все списаны к 2001 году</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Интересный факт:</strong> Все вагоны типа «Е», работавшие после 2015 года, использовались только как промежуточные. Последний раз головными вагоны типа «Е» были в 2006 году на Филёвской линии в Москве.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Сохранившиеся вагоны -->
+        <section id="surviving" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+                <span class="card-icon">🏛️</span>
+                <h2>Сохранившиеся вагоны</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">На 2024 год в полноценном состоянии осталось небольшое количество вагонов типа «Е», находящихся на своих тележках.</p>
+
+                <h3 style="margin: 1.5rem 0 1rem;">Москва — 3 вагона</h3>
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                        <h3>№ 3007</h3>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li><strong>Тип:</strong> Опытный</li>
+                            <li><strong>Место:</strong> ТЧ-15</li>
+                        </ul>
+                    </div>
+                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                        <h3>№ 3605</h3>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li><strong>Состояние:</strong> Восстановлен в 2015</li>
+                            <li><strong>Отделка:</strong> Линкруст</li>
+                            <li><strong>Место:</strong> ТЧ-3</li>
+                            <li><strong>Статус:</strong> Музейный</li>
+                        </ul>
+                    </div>
+                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                        <h3>№ 4812</h3>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li><strong>Место:</strong> ТЧ-3</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 style="margin: 1.5rem 0 1rem;">Санкт-Петербург — 3 вагона</h3>
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div class="train-card" style="border-left: 4px solid #2ECC71;">
+                        <h3>№ 3427, № 3369</h3>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li><strong>Тип:</strong> Промежуточные</li>
+                            <li><strong>Состав:</strong> Ретро-состав</li>
+                            <li><strong>Место:</strong> ТЧ-1</li>
+                        </ul>
+                    </div>
+                    <div class="train-card" style="border-left: 4px solid #2ECC71;">
+                        <h3>№ 3082</h3>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li><strong>Статус:</strong> Музейный</li>
+                            <li><strong>Место:</strong> ТЧ-7</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 style="margin: 1.5rem 0 1rem;">Кузова за пределами метрополитенов</h3>
+                <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                    <li>№ 3496 — Электросталь</li>
+                    <li>№ 3257 — Ногинск</li>
+                    <li>№ 4771 — Домодедово</li>
+                    <li>№ 3311 — Натахтари (Грузия), используется как гостиница</li>
+                </ul>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Судьба остальных:</strong> Большинство вагонов типа «Е» переоборудованы в габаритные рамы и грузовые вагоны. Все линейные вагоны Киевского метро прошли модернизацию в тип Е-КМ.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Галерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/Type_E_3605.jpg" alt="Вагон типа Е № 3605" onerror="this.src='https://via.placeholder.com/800x500?text=Вагон+Е+3605'">
+                        <div class="gallery-caption">Вагон типа Е № 3605, 2005 год</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Alexey Blokhin(transphoto)</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/Type_E_3605_int.jpg" alt="Интерьер вагона Е № 3605" onerror="this.src='https://via.placeholder.com/800x500?text=Интерьер+Е+3605'">
+                        <div class="gallery-caption">Интерьер музейного вагона Е № 3605</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Subkinov(transphoto)</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Вагоны типа Е — это не просто массовая серия. Это эпоха, в которую метрополитены СССР превратились из отдельных линий в единые транспортные системы крупнейших городов страны».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Подвижной состав метро»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="ps_mosmetro.html">Подвижной состав</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="Живая_история_Мск_метро.html">Живая история</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Вагоны типа Е (81-703) — массовая серия советского метро</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
+            function animateCounters() {
+                const targets = { eBuilt: 824, eYears: 52, eCities: 5 };
+                let current = { eBuilt: 0, eYears: 0, eCities: 0 };
+                const builtEl = document.getElementById('eBuilt');
+                const yearsEl = document.getElementById('eYears');
+                const citiesEl = document.getElementById('eCities');
+                if (!builtEl || !yearsEl || !citiesEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.eBuilt < targets.eBuilt) {
+                        current.eBuilt += Math.ceil(targets.eBuilt / 60);
+                        if (current.eBuilt > targets.eBuilt) current.eBuilt = targets.eBuilt;
+                        builtEl.textContent = current.eBuilt.toLocaleString();
+                        allFinished = false;
+                    }
+                    if (current.eYears < targets.eYears) {
+                        current.eYears += 1;
+                        if (current.eYears > targets.eYears) current.eYears = targets.eYears;
+                        yearsEl.textContent = current.eYears;
+                        allFinished = false;
+                    }
+                    if (current.eCities < targets.eCities) {
+                        current.eCities += 1;
+                        if (current.eCities > targets.eCities) current.eCities = targets.eCities;
+                        citiesEl.textContent = current.eCities;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+
+            // Галерея
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
+                    if (content && img) {
+                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>

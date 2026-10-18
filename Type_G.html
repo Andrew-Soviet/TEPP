@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вагон типа Г — первый серийный моторный вагон метро — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Вагон типа Г</h1>
+            <p class="subtitle">Первый серийный моторный вагон метро (1939–1955)</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="ps_mosmetro.html">🚆 Подвижной состав</a></li>
+                    <li><a href="#about">О вагоне</a></li>
+                    <li><a href="#specs">Характеристики</a></li>
+                    <li><a href="#design">Проектирование</a></li>
+                    <li><a href="#interior">Интерьер</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#surviving">Сохранившиеся</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Вагон типа Г (81-701)</h2>
+                <p class="hero-text">Вагон типа Г — первый серийный моторный вагон Московского метрополитена, выпускавшийся Мытищинским машиностроительным заводом в 1939–1940 и 1947–1955 годах. Название «Г» дано в честь Горьковского радиуса Московского метрополитена. Это был качественно новый шаг в развитии отечественного метровагоностроения: впервые применено реостатное электрическое торможение, групповые контакторы и повышенная скорость движения.</p>
+                <p class="hero-text">Всего было построено <strong>425 вагонов</strong> этого типа. Принципиальное отличие от предшественников — <strong>все вагоны были моторными</strong>, прицепные вагоны для этого типа не строились. Вагоны эксплуатировались в Московском и Ленинградском метрополитенах до 1983 года, а также передавались в Баку.</p>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="gBuilt">0</div>
+                        <div class="stat-label">вагонов построено</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="gYears">0</div>
+                        <div class="stat-label">лет в эксплуатации</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="gSurviving">0</div>
+                        <div class="stat-label">сохранилось вагонов</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Производство -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);">
+                <span class="card-icon">🏭</span>
+                <h2>Производство</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Основные данные о производстве вагонов типа Г</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Обозначение</td><td>81-701</td></tr>
+                        <tr><td>Годы постройки</td><td>1939–1940, 1947–1955</td></tr>
+                        <tr><td>Страна постройки</td><td>СССР 🇷🇺</td></tr>
+                        <tr><td>Заводы</td><td>Мытищинский машиностроительный, «Динамо» им. С. М. Кирова</td></tr>
+                        <tr><td>Составов построено</td><td>60–70</td></tr>
+                        <tr><td>Вагонов построено</td><td>425</td></tr>
+                        <tr><td>Нумерация</td><td>201—206 (с 1945: 301—306), 307—725</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Важно:</strong> Вагоны типа Г — первые в отечественном метро, которые имели ставшую впоследствии традиционной <strong>сине-голубую окраску</strong>, и первые, в которых появились традиционные для метрополитенов СССР до конца 1970-х годов круглые светильники с плафонами и лампами накаливания.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Технические характеристики -->
+        <section id="specs" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">⚙️</span>
+                <h2>Технические характеристики</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Основные технические данные вагонов типа Г</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Род тока и напряжение</td><td>750 В постоянного тока</td></tr>
+                        <tr><td>Типы вагонов</td><td>Мг (моторный головной)</td></tr>
+                        <tr><td>Полная вместимость</td><td>264 человека</td></tr>
+                        <tr><td>Сидячих мест</td><td>52</td></tr>
+                        <tr><td>Длина вагона</td><td>19 110 мм</td></tr>
+                        <tr><td>Ширина</td><td>2 700 мм</td></tr>
+                        <tr><td>Высота</td><td>3 700 мм</td></tr>
+                        <tr><td>Диаметр колёс</td><td>900 мм</td></tr>
+                        <tr><td>Ширина колеи</td><td>1 524 мм</td></tr>
+                        <tr><td>Масса тары</td><td>42 т (опытные) / 43,7 т (серийные)</td></tr>
+                        <tr><td>Материал вагона</td><td>Сталь ДС</td></tr>
+                        <tr><td>Выходная мощность</td><td>4 × 83 кВт</td></tr>
+                        <tr><td>Тип ТЭД</td><td>ДК-102В (1939, опытные), ДК-102Г (1939—1940), ДК-102Д (1947—1955)</td></tr>
+                        <tr><td>Макс. скорость</td><td>75 км/ч</td></tr>
+                        <tr><td>Макс. служебная скорость</td><td>70 км/ч</td></tr>
+                        <tr><td>Ускорение при пуске</td><td>1,0 м/с²</td></tr>
+                        <tr><td>Ускорение при торможении</td><td>1,0 м/с²</td></tr>
+                        <tr><td>Электрическое торможение</td><td>Реостатное</td></tr>
+                        <tr><td>Тормозная система</td><td>Тормоз Вестингауза</td></tr>
+                        <tr><td>Системы безопасности</td><td>САУМ, САММ, АЛС-АРС (оборудованы в 60-е и 70-е годы)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Проектирование -->
+        <section id="design" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+                <span class="card-icon">📐</span>
+                <h2>Проектирование</h2>
+            </div>
+            <div class="card-content">
+                <p>В 1936 году, ещё до пуска в эксплуатацию участка «Площадь Свердлова» — «Сокол», Управление Московского метрополитена приступило к составлению задания на проектирование моторных вагонов более совершенной конструкции, чем вагоны типа «А».</p>
+
+                <h3 style="margin: 1.5rem 0 1rem;">Основные требования к новому типу</h3>
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="feature-item">
+                        <h3>⚡ Групповые контакторы</h3>
+                        <p>Замена индивидуальных контакторов в силовой цепи тяговых электродвигателей на групповые — меньше электромагнитных вентилей, блокировочных контактов и объёма ремонта.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🚀 Повышение скорости</h3>
+                        <p>Конструкционная скорость увеличена до 75 км/ч (у типов А и Б — 65 км/ч), ускорение и замедление — до 1 м/с² (у А и Б — 0,7 м/с²).</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🛑 Электрическое торможение</h3>
+                        <p>Применение реостатного торможения для снижения износа колодок и бандажей, а также уменьшения выделяющейся пыли, неблагоприятно влияющей на электрооборудование.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🌊 Плавный пуск</h3>
+                        <p>Осуществление более плавного пуска поезда.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>⚖️ Снижение массы</h3>
+                        <p>Уменьшение массы тары за счёт применения легированной стали и более совершенных тележек.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🚫 Отказ от прицепных</h3>
+                        <p>Введение электрического торможения и повышение ускорения обусловили решение не строить прицепные вагоны — поезда составлялись только из моторных вагонов.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Конструктивные особенности:</strong> Электровагоны типа Г имели более округлённые очертания, чем вагоны типов А и Б. Длина кузова увеличена на 370 мм (до 18 770 мм), при этом длина кабины машиниста уменьшена на 100 мм, что позволило увеличить длину пассажирского салона на 470 мм. Длина по центрам автосцепок и база увеличены на 200 мм. Масса опытного моторного вагона с электрооборудованием — 42 т.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Опытные вагоны -->
+        <section id="experimental" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">🔬</span>
+                <h2>Опытные вагоны типа Г</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Первые шесть вагонов типа Г (№ 201—206, позже № 301—306), выпущенные в 1939—1940 годах, были опытными. Именно на них отрабатывались конструктивные решения, ставшие впоследствии серийными.</p>
+
+                <div class="highlight-box" style="border-left: 4px solid #8E44AD;">
+                    <p><strong>Уникальная особенность:</strong> Опытные вагоны имели <strong>смешанную продольно-поперечную схему размещения диванов</strong> — уникальную для отечественного метро. Это решение не получило дальнейшего распространения.</p>
+                </div>
+
+                <a href="Opit_G.html" class="btn btn-primary" style="margin-top: 1.5rem; display: inline-block; width: 100%; text-align: center;">Подробнее об опытных вагонах →</a>
+            </div>
+        </section>
+
+        <!-- История -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История эксплуатации</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">1937—1939</div>
+                        <div class="timeline-content">
+                            <h3>Проектирование</h3>
+                            <p>Моторные вагоны типа Г проектировались в 1937—1939 годах.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1939—1940</div>
+                        <div class="timeline-content">
+                            <h3>Первая партия</h3>
+                            <p>Мытищинским вагоностроительным заводом и заводом «Динамо» выпущено 6 моторных вагонов типа Г, получивших номера 201—206 (в 1945 году перенумерованы в № 301—306).</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">20 июня 1940</div>
+                        <div class="timeline-content">
+                            <h3>Первый пробный рейс</h3>
+                            <p>С Мытищинского вагоностроительного завода на Московский метрополитен прибыл первый моторный вагон типа Г и совершил пробный рейс на участке «Сокольники» — «Центральный парк культуры и отдыха им. Горького».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Август—сентябрь 1940</div>
+                        <div class="timeline-content">
+                            <h3>Испытания поезда</h3>
+                            <p>Из пяти моторных вагонов составлен поезд, который испытывался в августе-сентябре 1940 года.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Октябрь 1940</div>
+                        <div class="timeline-content">
+                            <h3>Начало опытной эксплуатации</h3>
+                            <p>Началась опытная эксплуатация поезда на Горьковской линии.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1947—1955</div>
+                        <div class="timeline-content">
+                            <h3>Серийный выпуск</h3>
+                            <p>Возобновлён серийный выпуск вагонов типа Г. Всего выпущено 425 вагонов.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1955—1978</div>
+                        <div class="timeline-content">
+                            <h3>Ленинградский метрополитен</h3>
+                            <p>Вагоны типа Г эксплуатировались в Ленинградском метрополитене.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1980</div>
+                        <div class="timeline-content">
+                            <h3>Передача в Баку</h3>
+                            <p>Три вагона (№ 353, № 355 и № 479) отправлены из Москвы в Баку, где использовались как сопровождение путеизмерителя.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1983</div>
+                        <div class="timeline-content">
+                            <h3>Конец регулярной эксплуатации</h3>
+                            <p>Вагоны типа Г эксплуатировались в Московском и Ленинградском метрополитенах до 1983 года.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">до 1985</div>
+                        <div class="timeline-content">
+                            <h3>Служебная эксплуатация</h3>
+                            <p>Последние 4 вагона типа Г (№ 375, № 380, № 419 и № 448) использовались как вагоны сопровождения дефектоскопа депо «Красная Пресня».</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Сохранившиеся экземпляры -->
+        <section id="surviving" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+                <span class="card-icon">🏛️</span>
+                <h2>Сохранившиеся экземпляры</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">До наших дней сохранилось несколько вагонов типа Г в России, Азербайджане и Армении.</p>
+
+                <h3 style="margin: 1.5rem 0 1rem;">Москва и Московская область</h3>
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                        <h3>Г № 530</h3>
+                        <p>Восстановлен к 80-летию Московского метрополитена. Базируется в ТЧ-3 «Измайлово».</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>11 мая 2025 года к 90-летию метрополитена временно установлен на рельсах в сквере у станции «Сокольники»</li>
+                        </ul>
+                    </div>
+
+                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                        <h3>Г № 649</h3>
+                        <p>Проходил восстановление в 2022–2025 годах.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>В 2025 году установлен перед проходной АО «Метровагонмаш» (город Мытищи)</li>
+                        </ul>
+                    </div>
+
+                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                        <h3>Г № 661</h3>
+                        <p>С 2021 года проходит восстановление.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Передан в Музей транспорта Москвы</li>
+                        </ul>
+                    </div>
+
+                    <div class="train-card" style="border-left: 4px solid #95A5A6;">
+                        <h3>Г № 623</h3>
+                        <p>Находится в электродепо «Выхино».</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Используется в роли сарая</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">Санкт-Петербург</h3>
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                        <h3>Г № 713</h3>
+                        <p>Прошёл реставрацию в 2020 году.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Находится в депо ТЧ-1 «Автово» Петербургского метрополитена</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">Баку</h3>
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                        <h3>Г № 479</h3>
+                        <p>Восстановлен к 50-летию Бакинского метрополитена.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Единственный сохранившийся вагон из трёх, отправленных в Баку в 1980 году</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Галерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/Type_G_713_int.jpg" alt="Вагон типа Г № 530" onerror="this.src='https://via.placeholder.com/800x500?text=Вагон+Г+530'">
+                        <div class="gallery-caption">Салон вагона типа Г № 713</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 WOM(transphoto)</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/Type_G_530.jpg" alt="Вагон типа Г № 530" onerror="this.src='https://via.placeholder.com/800x500?text=Вагон+Г+530'">
+                        <div class="gallery-caption">Вагон типа Г № 530 — восстановлен к 80-летию метрополитена</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/Type_G_713.jpg" alt="Вагон типа Г № 713 в Санкт-Петербурге" onerror="this.src='https://via.placeholder.com/800x500?text=Вагон+Г+713'">
+                        <div class="gallery-caption">Вагон типа Г № 713 в депо ТЧ-1 «Автово» (Санкт-Петербург)</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Andrey Atom(transphoto)</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/Type_G_479.jpg" alt="Вагон типа Г № 479 в Баку" onerror="this.src='https://via.placeholder.com/800x500?text=Вагон+Г+479'">
+                        <div class="gallery-caption">Вагон типа Г № 479 в Бакинском метрополитене</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 andzis(transphoto)</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Вагоны типа Г стали первым серийным типом моторных вагонов Московского метро. Именно они заложили традиции сине-голубой окраски, круглых светильников и электрического торможения, которые определили облик отечественного метрополитена на десятилетия вперёд».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Подвижной состав метро»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="ps_mosmetro.html">Подвижной состав</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="Живая_история_Мск_метро.html">Живая история</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Вагон типа Г — первый серийный моторный вагон метро</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
+            function animateCounters() {
+                const targets = { gBuilt: 425, gYears: 43, gSurviving: 7 };
+                let current = { gBuilt: 0, gYears: 0, gSurviving: 0 };
+                const builtEl = document.getElementById('gBuilt');
+                const yearsEl = document.getElementById('gYears');
+                const survivingEl = document.getElementById('gSurviving');
+                if (!builtEl || !yearsEl || !survivingEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.gBuilt < targets.gBuilt) {
+                        current.gBuilt += Math.ceil(targets.gBuilt / 50);
+                        if (current.gBuilt > targets.gBuilt) current.gBuilt = targets.gBuilt;
+                        builtEl.textContent = current.gBuilt;
+                        allFinished = false;
+                    }
+                    if (current.gYears < targets.gYears) {
+                        current.gYears += 1;
+                        if (current.gYears > targets.gYears) current.gYears = targets.gYears;
+                        yearsEl.textContent = current.gYears;
+                        allFinished = false;
+                    }
+                    if (current.gSurviving < targets.gSurviving) {
+                        current.gSurviving += 1;
+                        if (current.gSurviving > targets.gSurviving) current.gSurviving = targets.gSurviving;
+                        survivingEl.textContent = current.gSurviving;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+
+            // Галерея
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
+                    if (content && img) {
+                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>

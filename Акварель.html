@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Акварель — поезд-картинная галерея Московского метро — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Акварель</h1>
+            <p class="subtitle">Поезд-картинная галерея Московского метрополитена</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="АПЛ_уники.html">📋 Арбатско-Покровская линия</a></li>
+                    <li><a href="#about">О поезде</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#expositions">Экспозиции</a></li>
+                    <li><a href="#fate">Судьба</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Акварель</h2>
+                <p class="hero-text">«Акварель» — один из самых красивых поездов Московского метро. Это уникальный состав-картинная галерея, созданный совместно с Московской школой акварели. История этого поезда началась с обычного «Русича», который превратился в произведение искусства на рельсах.</p>
+                <p class="hero-text"><strong>Актуально на 2026 год:</strong> состав эксплуатируется, но до сих пор носит рекламный бренд «Состав будущего» вместо оригинальной «Акварели». Возвращение легендарного облика задерживается уже более чем на полгода.</p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="trainYear">0</div>
+                        <div class="stat-label">год запуска</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="trainCars">0</div>
+                        <div class="stat-label">вагонов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="trainStatus" style="font-size: 1.8rem;">—</div>
+                        <div class="stat-label">состояние</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Общая информация -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Основные параметры поезда «Акварель»</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Город</td><td>Москва 🇷🇺</td></tr>
+                        <tr><td>Депо/Парк</td><td>ТЧ-3 «Измайлово»</td></tr>
+                        <tr><td>Модель</td><td>81-740.1 «Акварель»</td></tr>
+                        <tr><td>Построен</td><td>03.2007</td></tr>
+                        <tr><td>Текущее состояние</td><td>Эксплуатируется</td></tr>
+                        <tr><td>Назначение</td><td>Пассажирский</td></tr>
+                        <tr><td>Примечание</td><td>«Состав будущего»</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <h3>Составность</h3>
+                    <p style="font-size: 1.4rem; text-align: center; font-weight: bold; margin-top: 0.5rem;">
+                        5078 — 5575 — 5576 — 5577 — 5079
+                    </p>
+                    <p style="text-align: center; color: var(--text-secondary); margin-top: 0.3rem;">5 вагонов</p>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1rem; border-left-color: #8E44AD;">
+                    <h3>Тематическое брендирование</h3>
+                    <p><strong>С 08.08.2025:</strong> «Состав будущего» (актуально на 2026 год)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- История -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">05.04.2007</div>
+                        <div class="timeline-content">
+                            <h3>Отправлен с завода</h3>
+                            <p>Состав отправлен с завода в метрополитен.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">09.04.2007</div>
+                        <div class="timeline-content">
+                            <h3>Поступление в метрополитен</h3>
+                            <p>Поступил в метрополитен через гейт ТЧ-2 «Сокол».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">14.04.2007</div>
+                        <div class="timeline-content">
+                            <h3>ТЧ-8 «Варшавское»</h3>
+                            <p>Поступил в ТЧ-8 «Варшавское» для наладки, позже поступил в депо приписки ТЧ-3 «Измайлово».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">01.06.2007</div>
+                        <div class="timeline-content">
+                            <h3>Торжественный запуск</h3>
+                            <p>Торжественный запуск на станции «Партизанская».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">16.05.2010</div>
+                        <div class="timeline-content">
+                            <h3>Ночной концерт</h3>
+                            <p>Участвовал в ночном концерте «Музыка 30-х годов, времени открытия Московского метрополитена» оркестра Kremlin на станции «Кропоткинская».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">15.05.2011</div>
+                        <div class="timeline-content">
+                            <h3>Ночной концерт</h3>
+                            <p>Участвовал в ночном концерте «Музыкальное путешествие» оркестра Kremlin на станции «Кропоткинская».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">22.01.2013</div>
+                        <div class="timeline-content">
+                            <h3>Смена внешнего оформления</h3>
+                            <p>Обновлено внешнее оформление состава.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">30.09.2017</div>
+                        <div class="timeline-content">
+                            <h3>Ночной концерт</h3>
+                            <p>Участвовал в ночном концерте на станции «Деловой центр» (СолЛ).</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">18.05.2019</div>
+                        <div class="timeline-content">
+                            <h3>Парад поездов</h3>
+                            <p>Участвовал в Параде поездов на Кольцевой линии.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">15.05.2021</div>
+                        <div class="timeline-content">
+                            <h3>Ночная экскурсия</h3>
+                            <p>Участвовал в ночной экскурсии по первой очереди метрополитена.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">08.08.2025</div>
+                        <div class="timeline-content">
+                            <h3>Переклейка под «Состав будущего»</h3>
+                            <p>После капитального ремонта состав переклеили под рекламный бренд «Состав будущего» от ДепТранса.</p>
+                            <div class="highlight-box" style="margin-top: 0.5rem; background: rgba(192, 57, 43, 0.1);">
+                                <p>😔 Картинная галерея была заменена рекламой.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Декабрь 2026 (ожидалось)</div>
+                        <div class="timeline-content">
+                            <h3>Возвращение оригинального облика</h3>
+                            <p>Изначально обещали вернуть оригинальный облик «Акварели» в декабре 2026 года.</p>
+                            <div class="highlight-box" style="margin-top: 0.5rem; background: rgba(231, 76, 60, 0.15); border-left-color: #E74C3C;">
+                                <p>⚠️ <strong>Просрочка:</strong> На текущий момент (2026 год) состав всё ещё носит бренд «Состав будущего». Возвращение оригинального облика задерживается уже более чем на полгода.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Особенности -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">🎨</span>
+                <h2>Особенности поезда</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>🚆 Конструкция</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>Первый состав серии 81-740.1/741.1 с наружной световой сигнализацией закрытия дверей</li>
+                            <li>Отсутствует часть окон и сидений по бортам (на их месте размещены картины)</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🎨 Оформление</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>Цветы на кузове</li>
+                            <li>Яркая тематическая плёнка</li>
+                            <li>У каждого вагона свой рисунок</li>
+                            <li>Картины в салоне</li>
+                            <li>Экспозиция менялась</li>
+                            <li>Проект с Московской школой акварели</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p>⭐ <strong>Главная особенность:</strong> «Акварель» — это не просто поезд, а передвижная картинная галерея, которая радовала пассажиров более 15 лет.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Экспозиции -->
+        <section id="expositions" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #9B59B6 0%, #8E44AD 100%);">
+                <span class="card-icon">🖼️</span>
+                <h2>Экспозиции поезда</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">За время работы в салоне «Акварели» сменилось множество экспозиций:</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Период</th>
+                            <th>Экспозиция</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>01.06.2007 — 12.05.2009</td><td>Работы Сергея Андрияки и учеников его школы</td></tr>
+                        <tr><td>13.05.2009 — 11.05.2010</td><td>Работы из коллекции Русского музея</td></tr>
+                        <tr><td>12.05.2010 — 14.05.2011</td><td>Репродукции картин из собрания ГМИИ имени А. С. Пушкина</td></tr>
+                        <tr><td>15.05.2011 — 10.05.2012</td><td>Репродукции картин собрания Вятского художественного музея имени Васнецовых</td></tr>
+                        <tr><td>11.05.2012 — 05.09.2012</td><td>Собрание картин Третьяковской галереи</td></tr>
+                        <tr><td>06.09.2012 — 13.05.2013</td><td>Репродукции экспонатов Музея-панорамы «Бородинская битва»</td></tr>
+                        <tr><td>14.05.2013 — 23.04.2014</td><td>Репродукции картин Рязанского художественного музея имени Пожалостина</td></tr>
+                        <tr><td>24.04.2014 — 28.04.2015</td><td>«Летописи ратной славы» студии военных художников имени М. Б. Грекова</td></tr>
+                        <tr><td>29.04.2015 — 26.10.2015</td><td>«Избранное из коллекции Московского музея современного искусства»</td></tr>
+                        <tr><td>27.10.2015 — 29.05.2016</td><td>Экспозиция к 170-летию Русского географического общества</td></tr>
+                        <tr><td>30.05.2016 — 26.09.2016</td><td>«Мастера Строгановской школы»</td></tr>
+                        <tr><td>27.09.2016 — 26.03.2017</td><td>«Город в живописи» Музея Москвы</td></tr>
+                        <tr><td>27.03.2017 — 29.08.2018</td><td>50 работ Академии акварели и изящных искусств Сергея Андрияки</td></tr>
+                        <tr><td>30.08.2018 — 19.08.2020</td><td>«Растения Красной книги Москвы»</td></tr>
+                        <tr><td>20.08.2020 — 29.12.2020</td><td>«Союз мечты»</td></tr>
+                        <tr><td>30.12.2020 — 17.01.2024</td><td>Работы из коллекции Дарвиновского музея</td></tr>
+                        <tr><td>18.01.2024 — конец июля 2025</td><td>Картины Сергея Андрияки. Студенческие и дипломные работы выпускников Академии акварели и изящных искусств</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Судьба -->
+        <section id="fate" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E74C3C 0%, #C0392B 100%);">
+                <span class="card-icon">🔄</span>
+                <h2>Судьба «Акварели»</h2>
+            </div>
+            <div class="card-content">
+                <p>Все уже ожидали легендарного возвращения состава после капитального ремонта. Однако состав переклеили под рекламный бренд <strong>«Состав будущего»</strong> от ДепТранса.</p>
+                
+                <div class="highlight-box" style="margin-top: 1.5rem; background: rgba(231, 76, 60, 0.15); border-left-color: #E74C3C;">
+                    <p>⚠️ <strong>Просрочка возврата:</strong> Оригинальный облик «Акварели» обещали вернуть в декабре 2026 года. На текущий момент (2026 год) состав всё ещё носит бренд «Состав будущего». Возвращение задерживается уже более чем на полгода.</p>
+                </div>
+                
+                <div class="features-grid" style="grid-template-columns: repeat(3, 1fr); margin-top: 1.5rem;">
+                    <div class="feature-item">
+                        <h3>2007 — 2024</h3>
+                        <p>Период как «Акварель»</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>С 08.08.2025</h3>
+                        <p>Бренд «Состав будущего» (эксплуатируется)</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Декабрь 2026</h3>
+                        <p>Ожидаемое возвращение (просрочено)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Фотогалерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/Акварель_1.jpg" alt="Акварель первый облик" onerror="this.src='https://via.placeholder.com/600x400?text=Акварель+1'">
+                        <div class="gallery-caption">Первый облик «Акварели» (2007–2013).</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Александр Марьянович</p>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="img/Акварель_2.jpg" alt="Акварель второй облик" onerror="this.src='https://via.placeholder.com/750x500?text=Акварель+2'">
+                        <div class="gallery-caption">Второй облик «Акварели» (с 2013) — разные цветы на каждом вагоне.</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Владислаv 5689</p>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="img/Сибэр.jpg" alt="Акварель на данный момент" onerror="this.src='https://via.placeholder.com/750x500?text=Акварель+сейчас'">
+                        <div class="gallery-caption">«Акварель» на данный момент — рекламный «Состав будущего».</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Артём Алмазов</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Акварель» — это поезд, который делал пассажиров счастливее. Картины вместо рекламы, цветы вместо серости. Увы, возвращение оригинального облика задерживается уже более чем на полгода. Но мы всё ещё надеемся увидеть «Акварель» на линии в её легендарном виде».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Уникальные поезда»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="АПЛ_уники.html">Арбатско-Покровская линия</a></li>
+                        <li><a href="Главная_Страница_Мосметро.html">Московский метрополитен</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">«Акварель» — поезд-картинная галерея. Возвращение оригинального облика задерживается</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function animateCounters() {
+                const targets = { trainYear: 2007, trainCars: 5, trainStatus: 1 };
+                let current = { trainYear: 0, trainCars: 0, trainStatus: 0 };
+                const yearEl = document.getElementById('trainYear');
+                const carsEl = document.getElementById('trainCars');
+                const statusEl = document.getElementById('trainStatus');
+                if (!yearEl || !carsEl || !statusEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.trainYear < targets.trainYear) {
+                        current.trainYear += Math.ceil(targets.trainYear / 50);
+                        if (current.trainYear > targets.trainYear) current.trainYear = targets.trainYear;
+                        yearEl.textContent = current.trainYear;
+                        allFinished = false;
+                    }
+                    if (current.trainCars < targets.trainCars) {
+                        current.trainCars += 1;
+                        if (current.trainCars > targets.trainCars) current.trainCars = targets.trainCars;
+                        carsEl.textContent = current.trainCars;
+                        allFinished = false;
+                    }
+                    if (current.trainStatus < targets.trainStatus) {
+                        current.trainStatus += 1;
+                        if (current.trainStatus > targets.trainStatus) current.trainStatus = targets.trainStatus;
+                        statusEl.textContent = '✅ Экспл.';
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
+                    if (content && img) {
+                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>

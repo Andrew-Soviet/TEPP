@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вагон типа В — трофейные вагоны Берлинского метро — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Вагон типа В</h1>
+            <p class="subtitle">Трофейные вагоны Берлинского метро (1946–1966)</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="ps_mosmetro.html">🚆 Подвижной состав</a></li>
+                    <li><a href="#about">О вагоне</a></li>
+                    <li><a href="#specs">Характеристики</a></li>
+                    <li><a href="#export">Вывоз из Берлина</a></li>
+                    <li><a href="#subseries">Подсерии</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#surviving">Сохранившиеся</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Вагон типа В (Baureihe C)</h2>
+                <p class="hero-text">Вагон типа В — советское обозначение вагонов метрополитена, произведённых в Германии и полученных в качестве репарации после Второй мировой войны. Эти вагоны эксплуатировались в Московском метрополитене с 1946 по 1966 год. В Берлинском метро они были самыми современными на момент создания и послужили образцом для вагонов типа А Московского метрополитена.</p>
+                <p class="hero-text">Всего из Берлина было вывезено <strong>120 вагонов</strong> трёх типов: С-1, С-2 и С-3. В Москве они получили обозначение <strong>В-1, В-2, В-3</strong>, а позже часть была переоборудована в <strong>В-4</strong>. Вагоны типа В эксплуатировались в СССР до 1965 года, а в Берлине (вагоны C-II, не вывезенные в СССР) — до 1975 года.</p>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="vBuilt">0</div>
+                        <div class="stat-label">вагонов вывезено</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="vYears">0</div>
+                        <div class="stat-label">лет в эксплуатации</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="vSurviving">0</div>
+                        <div class="stat-label">сохранилось вагонов</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Производство -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);">
+                <span class="card-icon">🏭</span>
+                <h2>Производство</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Основные данные о производстве вагонов типа С (Берлин)</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Обозначение</td><td>Baureihe C (нем.), тип В (советское)</td></tr>
+                        <tr><td>Годы постройки</td><td>1926—1930</td></tr>
+                        <tr><td>Страна постройки</td><td>Веймарская республика 🇩🇪</td></tr>
+                        <tr><td>Заводы</td><td>Orenstein &amp; Koppel (Берлин), Wegmann &amp; Co (Кассель)</td></tr>
+                        <tr><td>Вагонов построено</td><td>171 (27 С-1, 114 С-2, 30 С-3)</td></tr>
+                        <tr><td>Вывезено в СССР</td><td>120 (24 С-1, 69 С-2, 27 С-3)</td></tr>
+                        <tr><td>Осталось в Берлине</td><td>51 (3 С-1, 45 С-2, 3 С-3) — в основном C-II, работали до 1975 г.</td></tr>
+                        <tr><td>Нумерация в СССР</td><td>В-1: 151—162, 1151—1162; В-2: 170—238; В-3: 250—276; В-4: 146—169</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Технические характеристики -->
+        <section id="specs" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">⚙️</span>
+                <h2>Технические характеристики</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Основные технические данные вагонов типа В</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Типы вагонов</td><td>Мг / Мп (моторный головной / моторный промежуточный)</td></tr>
+                        <tr><td>Длина вагона</td><td>18 400 мм</td></tr>
+                        <tr><td>Ширина</td><td>2 650 мм</td></tr>
+                        <tr><td>Высота</td><td>3 600 мм</td></tr>
+                        <tr><td>Диаметр колёс</td><td>900 мм</td></tr>
+                        <tr><td>Масса тары</td><td>29,5 т (С-1) / 30 т (С-2) / 35,5 т (С-3)</td></tr>
+                        <tr><td>Выходная мощность</td><td>4 × 110 кВт (С-1) / 2 × 100 кВт (С-2) / 4 × 70 кВт (С-3)</td></tr>
+                        <tr><td>Макс. скорость</td><td>60 км/ч</td></tr>
+                        <tr><td>Электрическое торможение</td><td>Электродинамический</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Особенность:</strong> Вагоны оборудовались автосцепками жёсткого типа Шарфенберга, позволявшими одновременно с механическим сцеплением производить соединение воздухопроводов и электрических цепей. Электрическое и механическое оборудование поставлялось заводами «АЕГ», «Сименс», «Кнорр» и др.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Вывоз из Берлина -->
+        <section id="export" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+                <span class="card-icon">🚂</span>
+                <h2>Операция по вывозу из Берлина</h2>
+            </div>
+            <div class="card-content">
+                <p>В связи с увеличением протяжённости сети в 1943—1944 годах на 13,3 км и отсутствием поставок нового подвижного состава с Мытищинского машиностроительного завода на Московском метрополитене к 1945 году стала остро ощущаться нехватка вагонов. Было принято решение вывезти из Берлина часть вагонов метро, наиболее удовлетворявших по своим техническим характеристикам.</p>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">10 июня 1945</div>
+                        <div class="timeline-content">
+                            <h3>Начало операции</h3>
+                            <p>В Германию направлена группа специалистов по подвижному составу для решения репарационных вопросов и оценки возможности эксплуатации вагонов типа «С» в условиях Московского метро.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">30 октября 1945</div>
+                        <div class="timeline-content">
+                            <h3>Начало вывоза</h3>
+                            <p>Вывоз трофейных вагонов начался. Прямо по уличному асфальту проложили временный путь от метро до железной дороги. Вагоны буксировали паровозами на своих колёсах по европейской колее.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1945—1946</div>
+                        <div class="timeline-content">
+                            <h3>Перевалочная база в Литве</h3>
+                            <p>На литовской станции Радвилишкис организована накопительно-перевалочная база. Здесь вагоны грузили на платформы и везли по советской колее до Москвы.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Май 1946</div>
+                        <div class="timeline-content">
+                            <h3>Завершение операции</h3>
+                            <p>Операция завершена, база в Литве ликвидирована. Вагоны поступали в Москву на железнодорожных платформах и разгружались на площадке депо «Сокол».</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Итог вывоза:</strong> Среди вывезенных оказались 24 из 27 вагонов опытной партии «С-1», 69 из 114 типа «С-2» и 27 из 30 типа «С-3». Всего — 120 вагонов. Практически все вагоны С-3 были вывезены в СССР; в Берлине остались лишь единичные экземпляры.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Переоборудование -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #6A0DAD 0%, #8E44AD 100%);">
+                <span class="card-icon">🔧</span>
+                <h2>Переоборудование в Москве</h2>
+            </div>
+            <div class="card-content">
+                <p>В вагоноремонтных мастерских (ныне ЗРЭПС) в 1946–47 гг. была произведена модификация вагонов с большим объёмом работ по переоборудованию на широкую колею:</p>
+
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="feature-item">
+                        <h3>📏 Перешивка на широкую колею</h3>
+                        <p>Повышение кузовов на 20 сантиметров, чтобы доставать до московских платформ. Переклёпка рам тележек: оси заменили, колёсные центры оставили «родные» немецкие, бандажи напрессовывались советские.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>⚡ Электрооборудование</h3>
+                        <p>Перемонтаж электрических схем, тяговых двигателей и мотор-компрессоров. Отсутствие технической документации на электрооборудование — всё приходилось составлять заново.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🚪 Двери</h3>
+                        <p>В берлинском метро двери закрывались по сигналу машиниста, а открывали их пассажиры. После модернизации двери стали и закрываться, и открываться из кабины машиниста. Установлена сигнализация закрытия дверей.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🪑 Салон</h3>
+                        <p>Дубовую и буковую отделку салонов сняли, стены оклеили линкрустом. Убрали откидные сиденья в торце салона, гибкие стенки кабин. В советском метро машинист был надёжно ограждён от пассажиров.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Обозначение:</strong> Вагоны получили новые номера по московской системе нумерации и обозначение тип «В» («военный»).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Подсерии -->
+        <section id="subseries" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #B9770E 0%, #D4AC0D 100%);">
+                <span class="card-icon">🔢</span>
+                <h2>Подсерии вагонов типа В</h2>
+            </div>
+            <div class="card-content">
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="train-card" style="border-left: 4px solid #B9770E;">
+                        <h3>В-1 (бывшие С-1)</h3>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>24 вагона (12 моторных № 151—162, 12 прицепных № 1151—1162)</li>
+                            <li>Три разновидности формы крыши: фонарная, арочная, полуарочная</li>
+                            <li>Электрооборудование повреждено водой (затопленные тоннели при штурме Берлина)</li>
+                            <li>Первоначально использовались только как прицепные</li>
+                            <li>Позже переоборудованы в В-4</li>
+                        </ul>
+                    </div>
+
+                    <div class="train-card" style="border-left: 4px solid #B9770E;">
+                        <h3>В-2 (бывшие С-2)</h3>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>69 вагонов (№ 170—238)</li>
+                            <li>Все моторные с кабиной управления</li>
+                            <li>Одна обмоторенная тележка с двумя двигателями SL-104n по 100 кВт</li>
+                            <li>Автоматическое управление по системе многих единиц с 24 сквозными проводами</li>
+                            <li>Рабочий тормоз — пневматический, дисковый</li>
+                        </ul>
+                    </div>
+
+                    <div class="train-card" style="border-left: 4px solid #B9770E;">
+                        <h3>В-3 (бывшие С-3)</h3>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>27 вагонов (№ 250—276)</li>
+                            <li>Все моторные с кабиной управления</li>
+                            <li>Четыре двигателя USL-421 по 70 кВт</li>
+                            <li>Автоматическое управление с 31 сквозным проводом</li>
+                            <li>Тормоза аналогичны В-2</li>
+                        </ul>
+                    </div>
+
+                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                        <h3>В-4 (модернизированные В-1)</h3>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Номера с 146 по 169</li>
+                            <li>Оборудованы троллейбусными двигателями ДК-140А (~80 кВт)</li>
+                            <li>На промежуточных вагонах установлены кабины машиниста</li>
+                            <li>Масса тары — 36,5 т</li>
+                            <li>Электрооборудование — как у вагонов типа Г</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Совместимость:</strong> Совместная работа вагонов типов «В-2» и «В-3» в одном составе была невозможна из-за разного числа проводов цепей управления (24 и 31). Составы формировались по схеме: пять «В-2» и один «В-1» в середине или четыре «В-3» и два «В-1» в середине.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- История эксплуатации -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История эксплуатации</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Февраль 1946</div>
+                        <div class="timeline-content">
+                            <h3>Восстановление первого вагона</h3>
+                            <p>Вагоноремонтные мастерские восстановили первый вагон В-3. 11 марта он был обкатан.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Август 1946</div>
+                        <div class="timeline-content">
+                            <h3>Восстановление 35 вагонов</h3>
+                            <p>Мастерские восстановили 35 вагонов «В-1» и «В-3».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">23 июня 1947</div>
+                        <div class="timeline-content">
+                            <h3>Начало пассажирской эксплуатации</h3>
+                            <p>Первый шестивагонный состав из вагонов типа «В-2» начал работу на Кировско-Фрунзенской (Сокольнической) линии, на участке «Сокольники» — «ЦПКиО».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1948—1949</div>
+                        <div class="timeline-content">
+                            <h3>Модернизация в В-4</h3>
+                            <p>Вагоны типа «В-1» оборудованы троллейбусными двигателями ДК-140А. На промежуточных вагонах установлены кабины машиниста. Вагоны получили обозначение «В-4» и номера с 146 по 169.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1956—1958</div>
+                        <div class="timeline-content">
+                            <h3>Подготовка к Филёвской линии</h3>
+                            <p>На ЗРЭПСе и в электродепо «Измайлово» вагоны «В-2» и «В-4» перекрашены в «советские» тона (тёмно-голубой низ и серо-зелёный верх) для работы на открывшейся в 1958 году Филёвской линии.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Май 1958</div>
+                        <div class="timeline-content">
+                            <h3>Списание серии В-3</h3>
+                            <p>Вся серия «В-3» (27 вагонов) и часть «В-2» (8 вагонов) списаны и переданы для хозяйственных нужд Минтрансстрою.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1961</div>
+                        <div class="timeline-content">
+                            <h3>Передача в депо «Фили»</h3>
+                            <p>Все вагоны «В» переданы из депо «Измайлово» в новое электродепо «Фили», где они работали на линии «Калининская» — «Киевская» — «Фили».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1966</div>
+                        <div class="timeline-content">
+                            <h3>Конец эксплуатации в Москве</h3>
+                            <p>Вагоны типа В завершили пассажирскую эксплуатацию в Московском метрополитене.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Вторая жизнь -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">🔄</span>
+                <h2>Вторая жизнь в Ленинграде</h2>
+            </div>
+            <div class="card-content">
+                <p>В Ленинград в общей сложности было передано <strong>6 вагонов типа «В-4»</strong>, где они получили новое назначение:</p>
+
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="train-card" style="border-left: 4px solid #16A085;">
+                        <h3>№ 153 — вагон-дефектоскоп</h3>
+                        <p>Передан 12 августа 1960 года. Переоборудован в электровоз-дефектоскоп № 002. Рабочая скорость — 25—30 км/ч. Ныне в разукомплектованном состоянии в депо «Московское».</p>
+                    </div>
+                    <div class="train-card" style="border-left: 4px solid #16A085;">
+                        <h3>№ 156 — вагон-пылесос</h3>
+                        <p>Передан 12 августа 1960 года. Опытный образец вагона-пылесоса для сухой очистки тоннелей. Работы прекращены в 1975 году. Сохранён в Петербурге, подлежит восстановлению.</p>
+                    </div>
+                    <div class="train-card" style="border-left: 4px solid #16A085;">
+                        <h3>№ 159 и № 162 — электровозы ЭД-01 и ЭД-02</h3>
+                        <p>Переданы 28 декабря 1963 года. Изготовлены два контактно-аккумуляторных электровоза. Проработали до 1972 года. ЭД-01 восстановлен в 2010 году, с 2020 года — в музейной экспозиции ТЧ-7 «Южное».</p>
+                    </div>
+                    <div class="train-card" style="border-left: 4px solid #95A5A6;">
+                        <h3>№ 150 и № 160</h3>
+                        <p>Переданы 21 марта 1966 года.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Тбилиси:</strong> Вагон № 163 передан в Тбилиси в 1966 году и используется там до сих пор в качестве путеизмерителя, приписан к депо «Глдани».</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Сохранившиеся экземпляры -->
+        <section id="surviving" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+                <span class="card-icon">🏛️</span>
+                <h2>Сохранившиеся экземпляры</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">До наших дней сохранилось <strong>не менее 5 вагонов</strong> типа В (в России, Грузии и Германии).</p>
+
+                <h3 style="margin: 1.5rem 0 1rem;">Москва — В-4 № 158</h3>
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                        <h3>В-4 № 158</h3>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li><strong>Построен:</strong> 1927 (Orenstein &amp; Koppel)</li>
+                            <li><strong>Модель:</strong> В-4 (ранее BVG CI Tw)</li>
+                            <li><strong>Текущее состояние:</strong> Не эксплуатируется, музейный</li>
+                            <li><strong>Местонахождение:</strong> Музей транспорта Москвы</li>
+                            <li><strong>Особенность:</strong> Четырёхосный моторный вагон с кабиной управления, уникальный удлинённый — 4 пары дверей</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">Санкт-Петербург — В-4 № 156</h3>
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                        <h3>В-4 № 156 (он же ЭД-01)</h3>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li><strong>Построен:</strong> 1927 (Orenstein &amp; Koppel)</li>
+                            <li><strong>Модель:</strong> В-4 (ранее BVG CI Tw)</li>
+                            <li><strong>Текущее состояние:</strong> Не эксплуатируется, музейный</li>
+                            <li><strong>Местонахождение:</strong> Центр исторического подвижного состава, СПб ГУП «Петербургский метрополитен»</li>
+                            <li><strong>Особенности:</strong> Четырёхосный трёхдверный моторный вагон с кабиной управления. Длина 18,4 м, ширина 2,65 м. Напряжение 750 В DC. Осевая формула Bo'Bo', двигатели 4×110 кВт. 44 сидячих места</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">Тбилиси — В-4 № 163</h3>
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                        <h3>В-4 № 163</h3>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li><strong>Построен:</strong> 1927 (Orenstein &amp; Koppel)</li>
+                            <li><strong>Модель:</strong> В-4 (ранее BVG CI Tw)</li>
+                            <li><strong>Текущее состояние:</strong> Эксплуатируется, служебный</li>
+                            <li><strong>Местонахождение:</strong> ТЧ-2 «Глдани», Тбилисский метрополитен</li>
+                            <li><strong>Назначение:</strong> Вагон-путеизмеритель</li>
+                            <li><strong>Построен:</strong> 1927, четырёхосный прицепной вагон без кабины управления для линий широкого профиля. Длина 18,4 м, ширина 2,65 м. Форма кузова 2'2', двигатели отсутствуют. 52 места для сидения</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">Берлин — вагоны C-II № 1316 и № 1338</h3>
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                        <h3>C-II № 1316 и № 1338</h3>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li><strong>Тип:</strong> C-II (немецкое обозначение)</li>
+                            <li><strong>Текущее состояние:</strong> Не эксплуатируются, музейные</li>
+                            <li><strong>Местонахождение:</strong> Музей истории метрополитена в депо «Грюневальд», Берлин</li>
+                            <li><strong>Примечание:</strong> Отреставрированы к 100-летию Берлинского метро (2002)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 2rem;">
+                    <p><strong>Судьба вагонов в Германии:</strong> Часть вагонов типа «С», не конфискованная в СССР, работала в Берлине до весны 1975 года (в основном это были вагоны C-II). К 100-летию Берлинского метро в 2002 году создан Музей истории метрополитена в депо «Грюневальд», где представлены отреставрированные вагоны типа «С-II» № 1316 и № 1338.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Влияние на метростроение -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                <span class="card-icon">💡</span>
+                <h2>Влияние на развитие советского метрополитена</h2>
+            </div>
+            <div class="card-content">
+                <p>Вагоны типа В дали мощный толчок развитию метровагоностроения в СССР. Многие технические решения и разработки, применённые на них, были использованы при постройке советских вагонов метро.</p>
+
+                <div class="highlight-box" style="border-left: 4px solid #2C3E50;">
+                    <p><strong>Из воспоминаний машиниста:</strong> «Несмотря на то, что хоть и немецкие вагоны были в основном старыми, по комфорту во время езды их нельзя было сравнить даже с современными, уже не говоря об управлении. Сидишь в кабине машиниста, ведёшь поезд и отдыхаешь».</p>
+                    <p style="margin-top: 0.5rem;"><strong>О внутренней отделке:</strong> «Такое впечатление, что ты вошёл во дворец или личный вагон самого вождя».</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Галерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/Type_V_158.jpg" alt="Общий вид вагона В № 158" onerror="this.src='img/no-photo.png'">
+                        <div class="gallery-caption">Общий вид вагона В № 158</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary); font-size: 0.85rem;">📸 pfandrom</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/Type_V_158_int.jpg" alt="Интерьер вагона В № 158" onerror="this.src='img/no-photo.png'">
+                        <div class="gallery-caption">Интерьер салона вагона В № 158</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary); font-size: 0.85rem;">📸 Официальный сайт Мэра Москвы</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Вагоны типа В — уникальный пример того, как трофейная техника не только помогла Московскому метро пережить тяжёлые послевоенные годы, но и дала мощный толчок развитию отечественного метровагоностроения. Многие технические решения, применённые на них, были использованы при постройке советских вагонов метро».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Подвижной состав метро»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="ps_mosmetro.html">Подвижной состав</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="Живая_история_Мск_метро.html">Живая история</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Вагон типа В — трофейные вагоны Берлинского метро</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" aria-label="Наверх">↑</button>
+
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true" aria-label="Просмотр фотографии">
+        <div class="modal-content">
+            <button class="modal-close" id="galleryModalClose" aria-label="Закрыть">&times;</button>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
+            function animateCounters() {
+                const targets = { vBuilt: 120, vYears: 20, vSurviving: 5 };
+                let current = { vBuilt: 0, vYears: 0, vSurviving: 0 };
+                const builtEl = document.getElementById('vBuilt');
+                const yearsEl = document.getElementById('vYears');
+                const survivingEl = document.getElementById('vSurviving');
+                if (!builtEl || !yearsEl || !survivingEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.vBuilt < targets.vBuilt) {
+                        current.vBuilt += Math.ceil(targets.vBuilt / 50);
+                        if (current.vBuilt > targets.vBuilt) current.vBuilt = targets.vBuilt;
+                        builtEl.textContent = current.vBuilt;
+                        allFinished = false;
+                    }
+                    if (current.vYears < targets.vYears) {
+                        current.vYears += 1;
+                        if (current.vYears > targets.vYears) current.vYears = targets.vYears;
+                        yearsEl.textContent = current.vYears;
+                        allFinished = false;
+                    }
+                    if (current.vSurviving < targets.vSurviving) {
+                        current.vSurviving += 1;
+                        if (current.vSurviving > targets.vSurviving) current.vSurviving = targets.vSurviving;
+                        survivingEl.textContent = current.vSurviving;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+
+            // Галерея
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+            if (!modal || !content) return;
+
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
+                    if (content && img) {
+                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
+                        modal.classList.add('active');
+                    }
+                });
+                item.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.click();
+                    }
+                });
+            });
+
+            if (close) {
+                close.addEventListener('click', () => modal.classList.remove('active'));
+            }
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+            window.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('active')) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>

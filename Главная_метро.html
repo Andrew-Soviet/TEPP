@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Метрополитены - Транспортная энциклопедия постсоветского пространства</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Анимированные частицы -->
+    <div id="particles-js"></div>
+    
+    <!-- Анимированный градиентный фон -->
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Метрополитены постсоветского пространства</h1>
+            <p class="subtitle">Подземные дворцы, инженерные шедевры и отражение эпох</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="#about">О метро</a></li>
+                    <li><a href="#cities">Города</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#legends">Легенды</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Метрополитен — музей под землей</h2>
+                <p class="hero-text">Метрополитен на постсоветском пространстве — это не просто транспортная система. Это музей под землей, памятник инженерной мысли и отражение эпох.</p>
+                <p class="hero-text">От сталинских ампирных «дворцов для народа» до лаконичных станций-функционалистов и современных хай-тек хабов — каждая подземка рассказывает свою уникальную историю.</p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="metroCities">0</div>
+                        <div class="stat-label">городов с метро</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="metroStations">0</div>
+                        <div class="stat-label">станций</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="metroLength">0</div>
+                        <div class="stat-label">км линий</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Города с метрополитеном -->
+        <section id="cities" class="section-card">
+            <div class="card-header">
+                <span class="card-icon">🏙️</span>
+                <h2>Метрополитены городов</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Выберите город для изучения его подземной транспортной системы:</p>
+                
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>Москва</h3>
+                        <p>Крупнейшее метро постсоветского пространства. Более 300 станций, кольцевые линии, МЦК.</p>
+                        <a href="Главная_Страница_Мосметро.html" class="btn btn-primary" style="margin-top: 1rem;">Перейти →</a>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Санкт-Петербург</h3>
+                        <p>Глубочайшее метро в мире. Уникальные станции-затворы, эскалаторы-гиганты.</p>
+                        <a href="404_file_dont_found.html" class="btn btn-primary" style="margin-top: 1rem;">Перейти →</a>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Киев</h3>
+                        <p>Красивейшие станции советской эпохи, самая глубокая станция "Арсенальная".</p>
+                        <a href="404_file_dont_found.html" class="btn btn-primary" style="margin-top: 1rem;">Перейти →</a>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Минск</h3>
+                        <p>Современное метро с уникальным дизайном станций и новейшими поездами "Минск 2024".</p>
+                        <a href="Minsk_metro.html" class="btn btn-primary" style="margin-top: 1rem;">Перейти →</a>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Ташкент</h3>
+                        <p>Метро, как музей под открытым небом. Уникальный дизайн в национальном стиле.</p>
+                        <a href="404_file_dont_found.html" class="btn btn-primary" style="margin-top: 1rem;">Перейти →</a>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Тбилиси</h3>
+                        <p>Один из старейших метрополитенов СССР с уникальными станциями-вокзалами.</p>
+                        <a href="404_file_dont_found.html" class="btn btn-primary" style="margin-top: 1rem;">Перейти →</a>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Баку</h3>
+                        <p>Метро с уникальными станциями, украшенными национальными орнаментами.</p>
+                        <a href="404_file_dont_found.html" class="btn btn-primary" style="margin-top: 1rem;">Перейти →</a>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Харьков</h3>
+                        <p>Третье метро в СССР, уникальные станции-терминалы.</p>
+                        <a href="404_file_dont_found.html" class="btn btn-primary" style="margin-top: 1rem;">Перейти →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- История подвижного состава -->
+        <section id="history" class="section-card">
+            <div class="card-header">
+                <span class="card-icon">🚇</span>
+                <h2>История подвижного состава</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Эволюция поездов метро от первых вагонов до современных разработок:</p>
+                
+                <div class="trains-grid">
+                    <div class="train-card">
+                        <h3>Тип А</h3>
+                        <p>Первые вагоны Московского метро (1935-1975). Деревянные сиденья, кожаные ремни, уникальный дизайн.</p>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3>Тип Г</h3>
+                        <p>Послевоенные вагоны с улучшенной отделкой, металлическими поручнями.</p>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3>Тип Д</h3>
+                        <p>Вагоны 1950-х годов с характерной округлой формой кузова.</p>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3>Тип Е</h3>
+                        <p>Массовая серия вагонов (1960-1980), основа для многих модификаций.</p>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3>81-717/714</h3>
+                        <p>Самый массовый тип вагонов метро в мире, выпускался с 1976 года.</p>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3>Русич</h3>
+                        <p>Первые сочлененные вагоны для Московского метро с широкими проходами.</p>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3>Москва 2020/2024/2026</h3>
+                        <p>Современные поезда с сквозным проходом, USB-зарядками, информационными табло.</p>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3>Минск 2024</h3>
+                        <p>Новейшие поезда для Минского метрополитена с улучшенным дизайном.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Легенды и мифы -->
+        <section id="legends" class="section-card">
+            <div class="card-header">
+                <span class="card-icon">👻</span>
+                <h2>Легенды и мифы метро</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>Метро-2</h3>
+                        <p>Секретные линии правительственной связи, легендарное подземелье под Москвой.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Станции-призраки</h3>
+                        <p>Заброшенные или недостроенные станции, о которых ходят легенды.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Призраки метро</h3>
+                        <p>Истории о привидениях на станциях и в тоннелях.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Секретные бункеры</h3>
+                        <p>Подземные убежища, связанные с линиями метро.</p>
+                    </div>
+                </div>
+                <p style="margin-top: 1rem; color: #666; font-style: italic;">Разделы истории подвижного состава, легенд и мифов находятся в соответствующих вкладках с транспортными системами городов!</p>
+            </div>
+        </section>
+
+        <!-- Заброшенные проекты -->
+        <section class="section-card">
+            <div class="card-header">
+                <span class="card-icon">🏚️</span>
+                <h2>Заброшенные проекты метро</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>Одесса</h3>
+                        <p>Проект метротрама, так и не реализованный из-за сложного рельефа.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Ростов-на-Дону</h3>
+                        <p>Проект метро, замороженный в 1990-х годах.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Красноярск</h3>
+                        <p>Долгострой, начатый в 1990-х и до сих пор не завершенный.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Омск</h3>
+                        <p>Уникальный проект метро с одним построенным мостом и станцией.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Пермь</h3>
+                        <p>Проект метро, отмененный в пользу наземного транспорта.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Челябинск</h3>
+                        <p>Метротрам, так и не достроенный до конца.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">"Московское метро должно быть самым красивым в мире. Мы строим его для народа, и народ должен гордиться этой красотой."</p>
+                <p class="quote-author">— Л.М. Каганович, 1935 год</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел "Метрополитены"</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="#cities">Города</a></li>
+                        <li><a href="#history">История ПС</a></li>
+                        <li><a href="#legends">Легенды</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Погружайтесь в карты, схемы и легенды подземных дворцов!</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка прокрутки вверх -->
+    <div class="scroll-top">↑</div>
+
+    <!-- Подключаем библиотеку частиц -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Подключаем общий JS файл -->
+    <script src="script.js"></script>
+    
+    <!-- Дополнительный скрипт для счетчиков этой страницы -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Анимация счетчиков для страницы Метро
+            function animateMetroCounters() {
+                const targets = {
+                    metroCities: 13,
+                    metroStations: 845,
+                    metroLength: 1250
+                };
+                
+                let current = {
+                    metroCities: 0,
+                    metroStations: 0,
+                    metroLength: 0
+                };
+                
+                const citiesElement = document.getElementById('metroCities');
+                const stationsElement = document.getElementById('metroStations');
+                const lengthElement = document.getElementById('metroLength');
+                
+                if (!citiesElement || !stationsElement || !lengthElement) return;
+                
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    
+                    if (current.metroCities < targets.metroCities) {
+                        current.metroCities += 1;
+                        if (current.metroCities > targets.metroCities) {
+                            current.metroCities = targets.metroCities;
+                        }
+                        citiesElement.textContent = current.metroCities;
+                        allFinished = false;
+                    }
+                    
+                    if (current.metroStations < targets.metroStations) {
+                        current.metroStations += Math.ceil(targets.metroStations / 50);
+                        if (current.metroStations > targets.metroStations) {
+                            current.metroStations = targets.metroStations;
+                        }
+                        stationsElement.textContent = current.metroStations.toLocaleString();
+                        allFinished = false;
+                    }
+                    
+                    if (current.metroLength < targets.metroLength) {
+                        current.metroLength += Math.ceil(targets.metroLength / 50);
+                        if (current.metroLength > targets.metroLength) {
+                            current.metroLength = targets.metroLength;
+                        }
+                        lengthElement.textContent = current.metroLength.toLocaleString();
+                        allFinished = false;
+                    }
+                    
+                    if (allFinished) {
+                        clearInterval(interval);
+                    }
+                }, 30);
+            }
+            
+            animateMetroCounters();
+        });
+    </script>
+</body>
+</html>

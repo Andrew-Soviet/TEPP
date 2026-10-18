@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вагон типа А — первый подвижной состав Московского метро — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Вагон типа А</h1>
+            <p class="subtitle">Первый подвижной состав Московского метрополитена (1934–1937)</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="ps_mosmetro.html">🚆 Подвижной состав</a></li>
+                    <li><a href="#about">О вагоне</a></li>
+                    <li><a href="#specs">Характеристики</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#surviving">Сохранившиеся</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Вагон типа А</h2>
+                <p class="hero-text">Вагон типа А — первый подвижной состав Московского метрополитена. Именно эти вагоны открыли движение 15 мая 1935 года на первой линии от «Сокольников» до «Парка культуры». Проектирование велось под руководством инженера П. И. Травина в Центральном вагоностроительном бюро.</p>
+                <p class="hero-text">Вагоны типа А выпускались с 1934 по 1937 год на Мытищинском вагоностроительном заводе. Всего построено <strong>112 вагонов</strong>: 56 моторных и 56 прицепных. Каждый вагон имел кабину машиниста, из двух вагонов формировалась секция.</p>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="aBuilt">0</div>
+                        <div class="stat-label">вагонов построено</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="aYears">0</div>
+                        <div class="stat-label">лет в эксплуатации</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="aSurviving">0</div>
+                        <div class="stat-label">сохранилось вагонов</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Производство -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);">
+                <span class="card-icon">🏭</span>
+                <h2>Производство</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Основные данные о производстве вагонов типа А</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Главный конструктор</td><td>Травин П. И.</td></tr>
+                        <tr><td>Годы постройки</td><td>1934—1937</td></tr>
+                        <tr><td>Страна постройки</td><td>СССР 🇷🇺</td></tr>
+                        <tr><td>Завод</td><td>Мытищинский вагоностроительный</td></tr>
+                        <tr><td>Вагонов построено</td><td>112 (56 моторных и 56 прицепных)</td></tr>
+                        <tr><td>Нумерация</td><td>1—56 (моторные), 1001—1056 (прицепные)</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Важно:</strong> Проектирование было поручено Центральному вагоностроительному бюро Всесоюзного объединения вагоностроительных и тормозных заводов. Электрическое оборудование проектировал и изготавливал завод «Динамо», кузова и тележки — Мытищинский вагоностроительный завод.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Технические характеристики -->
+        <section id="specs" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">⚙️</span>
+                <h2>Технические характеристики</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Основные технические данные вагонов типа А</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Род тока и напряжение</td><td>750 В постоянного тока</td></tr>
+                        <tr><td>Типы вагонов</td><td>Мг / Пг (моторный головной / прицепной головной)</td></tr>
+                        <tr><td>Число вагонов в составе</td><td>6</td></tr>
+                        <tr><td>Полная вместимость</td><td>262 человека</td></tr>
+                        <tr><td>Сидячих мест</td><td>52</td></tr>
+                        <tr><td>Длина вагона</td><td>18 916 мм</td></tr>
+                        <tr><td>Ширина</td><td>2 700 мм</td></tr>
+                        <tr><td>Высота</td><td>3 700 мм</td></tr>
+                        <tr><td>Диаметр колёс</td><td>900 мм</td></tr>
+                        <tr><td>Ширина колеи</td><td>1 524 мм</td></tr>
+                        <tr><td>Масса тары</td><td>51,7 т (моторный) / 36 т (прицепной)</td></tr>
+                        <tr><td>Материал вагона</td><td>Сталь</td></tr>
+                        <tr><td>Выходная мощность</td><td>4 × 153 кВт (моторный) / — (прицепной)</td></tr>
+                        <tr><td>Тип ТЭД</td><td>ДМП-151</td></tr>
+                        <tr><td>Макс. скорость</td><td>65 км/ч</td></tr>
+                        <tr><td>Ускорение при пуске</td><td>0,65—0,7 м/с²</td></tr>
+                        <tr><td>Ускорение при торможении</td><td>0,65—0,7 м/с²</td></tr>
+                        <tr><td>Тормозная система</td><td>Тормоз Вестингауза</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Особенность:</strong> Токоприёмники ТР-1А с нижним токосъёмом устанавливались на тележках моторных и прицепных вагонов по одному с каждой стороны. Все четыре токоприёмника были электрически соединены между собой — в зависимости от расположения контактного рельса работали токоприёмники с одной или другой стороны вагона.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- История -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История эксплуатации</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Конец 1934</div>
+                        <div class="timeline-content">
+                            <h3>Постройка первой секции</h3>
+                            <p>Изготовлена первая двухвагонная секция: моторный вагон № 1 и прицепной № 1001.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">15.05.1935</div>
+                        <div class="timeline-content">
+                            <h3>Открытие Московского метрополитена</h3>
+                            <p>Вагоны типа А начали регулярную пассажирскую эксплуатацию на первой линии от «Сокольников» до «Парка культуры». Поступили в депо «Северное».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1938</div>
+                        <div class="timeline-content">
+                            <h3>Расширение эксплуатации</h3>
+                            <p>Вагоны поступили в депо «Сокол» и «Измайлово» для обслуживания Горьковско-Замоскворецкой и Арбатско-Покровской линий. Секции сцеплялись в четырёхвагонные, позже — в шестивагонные поезда.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1951</div>
+                        <div class="timeline-content">
+                            <h3>Передача в Измайлово</h3>
+                            <p>С Кировско-Фрунзенской и Горьковско-Замоскворецкой линий вагоны переданы в депо «Измайлово».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Январь 1975</div>
+                        <div class="timeline-content">
+                            <h3>Конец пассажирской эксплуатации</h3>
+                            <p>На Арбатско-Покровской линии поезда типа А эксплуатировались с пассажирами до конца января 1975 года.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1999</div>
+                        <div class="timeline-content">
+                            <h3>Служебная эксплуатация</h3>
+                            <p>Два вагона (№ 21 и № 1031) использовались как дефектоскопы до 1999 года. Вагон № 1031 был дефектоскопом, вагон № 21 — его проявочной лабораторией.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2013</div>
+                        <div class="timeline-content">
+                            <h3>Вагон № 21 — памятник</h3>
+                            <p>Вагон № 21 продан московскому байкерскому бару «Ночной поезд» около станции Угрешская, установлен как памятник.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2015</div>
+                        <div class="timeline-content">
+                            <h3>Капитально-восстановительный ремонт</h3>
+                            <p>Вагоны № 1 и № 1031 прошли КВР в электродепо «Выхино». Выставлены на станции «Партизанская» в рамках выставки ретровагонов, посвящённой 80-летию метрополитена.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2016</div>
+                        <div class="timeline-content">
+                            <h3>Возврат вагона № 21</h3>
+                            <p>Московский метрополитен выкупил вагон № 21 у байкерского клуба «Ночной поезд». Доставлен в депо «Выхино» для КВР.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Май 2017</div>
+                        <div class="timeline-content">
+                            <h3>Музейный состав 1-1031-21</h3>
+                            <p>Вагон № 21 восстановлен до ходового состояния, передан в депо «Измайлово» и вцеплен в музейный состав 1-1031-21.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022, 2025</div>
+                        <div class="timeline-content">
+                            <h3>Праздничные рейсы</h3>
+                            <p>Поезд совершал одиночные пассажирские рейсы по Сокольнической линии 15 мая в честь дня открытия метрополитена.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Расцветки -->
+        <section id="colors" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">🎨</span>
+                <h2>Исторические расцветки</h2>
+            </div>
+            <div class="card-content">
+                <p>За свою долгую историю состав имел три различные расцветки:</p>
+                
+                <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="feature-item" style="text-align: center;">
+                        <div style="width: 100%; height: 60px; background: linear-gradient(135deg, #3498DB, #2980B9); border-radius: 10px; margin-bottom: 1rem;"></div>
+                        <h3>Голубо-синяя</h3>
+                        <p>Одна из первых окрасок вагонов типа А.</p>
+                    </div>
+                    
+                    <div class="feature-item" style="text-align: center;">
+                        <div style="width: 100%; height: 60px; background: linear-gradient(135deg, #F39C12, #E67E22); border-radius: 10px; margin-bottom: 1rem;"></div>
+                        <h3>Жёлтый и охра</h3>
+                        <p>Тёплая цветовая гамма, использовавшаяся в послевоенный период.</p>
+                    </div>
+                    
+                    <div class="feature-item" style="text-align: center;">
+                        <div style="width: 100%; height: 60px; background: linear-gradient(135deg, #F1C40F, #27AE60); border-radius: 10px; margin-bottom: 1rem;"></div>
+                        <h3>Желто-зеленый</h3>
+                        <p>Оригинальная расцветка некоторых вагонов типа А.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Сохранившиеся вагоны -->
+        <section id="surviving" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+                <span class="card-icon">🏛️</span>
+                <h2>Сохранившиеся вагоны</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">До наших дней сохранилось несколько вагонов типа А. Один из них — в Москве, другой — в Баку.</p>
+
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                        <h3>Опытный состав</h3>
+                        <p>Самый первый состав Московского метро, построенный в 1934 году. Состав был расформирован.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Первый поезд метро СССР</li>
+                            <li>Вагоны сохранены</li>
+                            <li>Два вагона в двух странах</li>
+                        </ul>
+                        <a href="Опытная_Ашка.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                        <h3>Вагон № 1001 (Баку)</h3>
+                        <p>Прицепной вагон из первой секции. В 1954 году отправлен в Баку. В ноябре 2017 года Бакинский метрополитен восстановил его изначальный облик.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Местонахождение: Бакинский метрополитен</li>
+                            <li>Был дефектоскопом</li>
+                            <li>Включён в ретросостав</li>
+                        </ul>
+                        <a href="Type_A_1001.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                        <h3>Ретросостав в Москве</h3>
+                        <p>Ретросостав включает в себя вагоны 1-1031-21</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Сохранен для истории</li>
+                            <li>Приписан к ТЧ-3 "Измайлово"</li>
+                            <li>Принимает участие на ночных экскурсиях</li>
+                        </ul>
+                        <a href="Ашка.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 2rem;">
+                    <p><strong>Судьба остальных вагонов:</strong> Остальные вагоны типа А в полноценном виде не сохранились — были порезаны или проданы в качестве сараев. Точное местонахождение большинства из них неизвестно.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Галерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/Type_A_1.jpeg" alt="Музейный состав 1-1031-21" onerror="this.src='https://via.placeholder.com/800x500?text=Музейный+состав'">
+                        <div class="gallery-caption">Музейный состав 1-1031-21 на экскурсии</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/Type_A_int.jpg" alt="Салон вагона типа А" onerror="this.src='https://via.placeholder.com/800x500?text=Салон+вагона+А'">
+                        <div class="gallery-caption">Салон вагона типа А №1</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Анатолий Тягун(transphoto)     </p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/Type_A_film.jpg" alt="Салон вагона типа А" onerror="this.src='https://via.placeholder.com/800x500?text=Салон+вагона+А'">
+                        <div class="gallery-caption">Кадр из киноэпопеи "Битва за Москву".</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Игорь Черных.(transphoto)</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/Type_A_int2.jpg" alt="Салон вагона типа А" onerror="this.src='https://via.placeholder.com/800x500?text=Салон+вагона+А'">
+                        <div class="gallery-caption">Салон вагона типа А №1 в 2006 году</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Климова Валентина Ивановна</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/Type_A_1_yellow.jpeg" alt="Салон вагона типа А" onerror="this.src='https://via.placeholder.com/800x500?text=Салон+вагона+А'">
+                        <div class="gallery-caption">Вагон типа А №1 в 1995 году</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Александр Шанин(transphoto)</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/Type_A_1001.jpg" alt="Салон вагона типа А" onerror="this.src='https://via.placeholder.com/800x500?text=Салон+вагона+А'">
+                        <div class="gallery-caption">Музейный вагон А прицепной №1001</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 andzis(transphoto)</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Вагоны типа А — это не просто первый подвижной состав Московского метро. Это символ начала целой эпохи, живая история, которая начиналась с двух вагонов — моторного № 1 и прицепного № 1001».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Подвижной состав метро»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="ps_mosmetro.html">Подвижной состав</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="Живая_история_Мск_метро.html">Живая история</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Вагон типа А — первый подвижной состав Московского метро</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
+            function animateCounters() {
+                const targets = { aBuilt: 112, aYears: 40, aSurviving: 3 };
+                let current = { aBuilt: 0, aYears: 0, aSurviving: 0 };
+                const builtEl = document.getElementById('aBuilt');
+                const yearsEl = document.getElementById('aYears');
+                const survivingEl = document.getElementById('aSurviving');
+                if (!builtEl || !yearsEl || !survivingEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.aBuilt < targets.aBuilt) {
+                        current.aBuilt += Math.ceil(targets.aBuilt / 50);
+                        if (current.aBuilt > targets.aBuilt) current.aBuilt = targets.aBuilt;
+                        builtEl.textContent = current.aBuilt;
+                        allFinished = false;
+                    }
+                    if (current.aYears < targets.aYears) {
+                        current.aYears += 1;
+                        if (current.aYears > targets.aYears) current.aYears = targets.aYears;
+                        yearsEl.textContent = current.aYears;
+                        allFinished = false;
+                    }
+                    if (current.aSurviving < targets.aSurviving) {
+                        current.aSurviving += 1;
+                        if (current.aSurviving > targets.aSurviving) current.aSurviving = targets.aSurviving;
+                        survivingEl.textContent = current.aSurviving;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+
+            // Галерея
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
+                    if (content && img) {
+                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>
