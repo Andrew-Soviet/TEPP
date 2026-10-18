@@ -1784,6 +1784,42 @@ footer {
     .feature-item p, .train-card p {
         font-size: 0.8rem;
     }
+
+        /* ============================================================
+       ИСПРАВЛЕНИЕ ГАЛЕРЕИ НА ТЕЛЕФОНЕ (убираем раздутые блоки)
+       ============================================================ */
+    .gallery-item {
+        display: flex !important;
+        flex-direction: column !important;
+        /* Убираем лишний фон, если он где-то остался */
+        background: transparent !important; 
+        height: 100%;
+    }
+
+    .gallery-item img {
+        /* Фиксируем высоту фото, чтобы блоки были одинаковыми */
+        height: 140px !important; 
+        width: 100% !important;
+        object-fit: cover !important;
+        border-radius: 4px;
+        margin-bottom: 0.2rem;
+    }
+
+    /* Делаем контейнер для подписи компактным */
+    .gallery-caption {
+        font-size: 0.75rem !important;
+        line-height: 1.2 !important;
+        padding: 0.1rem 0 !important;
+        margin-bottom: 0.1rem !important;
+    }
+
+    /* Уменьшаем размер текста автора и убираем лишние отступы */
+    .gallery-item p {
+        font-size: 0.65rem !important;
+        margin-top: 0 !important;
+        padding: 0 !important;
+        line-height: 1 !important;
+    }
 }
 
 /* ============================================================
