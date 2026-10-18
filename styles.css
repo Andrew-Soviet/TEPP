@@ -1908,6 +1908,43 @@ footer {
         height: 20px;
         margin: 0 0.4rem;
     }
+
+        /* ============================================================
+       ГЛОБАЛЬНАЯ СЕТКА КАРТОЧЕК НА ТЕЛЕФОНЕ (2 КОЛОНКИ)
+       ============================================================ */
+    .features-grid, 
+    .trains-grid,
+    .equipment-grid,
+    [data-theme="poster"] .features-grid,
+    [data-theme="poster"] .trains-grid {
+        /* Жестко ставим 2 колонки для всех тем */
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 0.6rem !important; /* Делаем отступы между карточками поменьше */
+    }
+
+    .feature-item, 
+    .train-card,
+    [data-theme="poster"] .feature-item,
+    [data-theme="poster"] .train-card {
+        padding: 0.8rem !important; /* Уменьшаем внутренние отступы */
+        font-size: 0.85rem !important;
+        word-wrap: break-word; /* Чтобы длинные слова не вылезали */
+        min-width: 0; /* Важно для Grid, чтобы карточки не распирало */
+    }
+
+    .feature-item h3, 
+    .train-card h3,
+    [data-theme="poster"] .feature-item h3,
+    [data-theme="poster"] .train-card h3 {
+        font-size: 0.95rem !important;
+        margin-bottom: 0.4rem;
+    }
+
+    .feature-item p, 
+    .train-card p {
+        font-size: 0.8rem !important;
+        margin-bottom: 0.5rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2051,3 +2088,4 @@ header {
 header.header-hidden {
     transform: translateY(-100%);
 }
+
