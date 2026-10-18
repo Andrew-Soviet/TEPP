@@ -754,7 +754,7 @@ function setupRandomRecommendations() {
                 <div class="random-photo-item">
                     <img src="img/${photo.src}"
                          alt="${photo.caption}"
-                         onerror="this.src='img/no-photo.png'"
+                         onerror="this.src='img/no-photo.png'">
                     <div class="random-photo-caption">📷 ${photo.caption}${authorPart}</div>
                 </div>
             `;
