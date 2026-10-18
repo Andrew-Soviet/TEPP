@@ -1753,75 +1753,47 @@ footer {
     }
 
     /* ============================================================
-       ГЛАВНОЕ: СЕТКА ДЛЯ ГАЛЕРЕИ (как на TransPhoto)
+       КОМПАКТНЫЕ ШАПКИ КАРТОЧЕК
        ============================================================ */
-    .image-gallery {
-        /* Делаем 2 колонки на телефоне */
-        grid-template-columns: repeat(2, 1fr) !important; 
-        gap: 0.5rem !important; /* Маленький отступ между фото */
+    .card-header {
+        flex-direction: row !important; /* Иконка и текст в строку */
+        text-align: left !important;
+        padding: 0.6rem 1rem !important; 
+        margin: -1rem -1rem 1rem -1rem !important;
+        border-radius: var(--radius) var(--radius) 0 0 !important;
+        gap: 0.5rem !important; 
+        justify-content: flex-start !important;
     }
 
-    .gallery-item {
-        border-radius: 4px; /* Чуть скругляем углы */
+    .card-header h2 {
+        font-size: 1.1rem !important; 
+        margin: 0 !important;
+        line-height: 1.2 !important;
+        text-align: left !important;
     }
 
-    /* Фотографии делаем квадратными или чуть вытянутыми, чтобы не было "прыжков" высоты */
-    .gallery-item img {
-        width: 100%;
-        height: 150px !important; /* Фиксированная высота для всех фото */
-        object-fit: cover; /* Обрезает края, но сохраняет пропорции */
-    }
-
-    /* Подписи к фото делаем маленькими, убираем огромные отступы */
-    .gallery-caption {
-        font-size: 0.7rem;
-        padding: 0.2rem;
-        position: static; /* Убираем выезжающий эффект */
-        background: none;
-        color: var(--text-primary);
-        text-align: center;
-    }
-
-    /* Прячем автора фото в галерее на телефоне, чтобы не было каши (если нужно — оставь) */
-    .gallery-item p {
-        font-size: 0.65rem !important;
-        margin-top: 0.1rem !important;
+    .card-header .card-icon {
+        font-size: 1.3rem !important; 
+        margin: 0 !important;
     }
 
     /* ============================================================
-       СЕТКИ КАРТОЧЕК (для текстовых блоков)
+       ГАЛЕРЕЯ НА ТЕЛЕФОНЕ (2 КОЛОНКИ, КОМПАКТНО)
        ============================================================ */
-    .features-grid, .trains-grid {
-        grid-template-columns: repeat(2, 1fr) !important; /* 2 колонки */
-        gap: 0.8rem !important;
+    .image-gallery {
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 0.5rem !important; 
     }
 
-    .feature-item, .train-card {
-        padding: 0.8rem !important;
-    }
-
-    .feature-item h3, .train-card h3 {
-        font-size: 0.9rem;
-        margin-bottom: 0.3rem;
-    }
-
-    .feature-item p, .train-card p {
-        font-size: 0.8rem;
-    }
-
-        /* ============================================================
-       ИСПРАВЛЕНИЕ ГАЛЕРЕИ НА ТЕЛЕФОНЕ (убираем раздутые блоки)
-       ============================================================ */
     .gallery-item {
         display: flex !important;
         flex-direction: column !important;
-        /* Убираем лишний фон, если он где-то остался */
         background: transparent !important; 
         height: 100%;
+        border-radius: 4px;
     }
 
     .gallery-item img {
-        /* Фиксируем высоту фото, чтобы блоки были одинаковыми */
         height: 140px !important; 
         width: 100% !important;
         object-fit: cover !important;
@@ -1829,15 +1801,17 @@ footer {
         margin-bottom: 0.2rem;
     }
 
-    /* Делаем контейнер для подписи компактным */
     .gallery-caption {
-        font-size: 0.75rem !important;
+        font-size: 0.7rem !important;
         line-height: 1.2 !important;
         padding: 0.1rem 0 !important;
         margin-bottom: 0.1rem !important;
+        position: static !important; 
+        background: none !important;
+        color: var(--text-primary) !important;
+        text-align: center !important;
     }
 
-    /* Уменьшаем размер текста автора и убираем лишние отступы */
     .gallery-item p {
         font-size: 0.65rem !important;
         margin-top: 0 !important;
@@ -1845,174 +1819,7 @@ footer {
         line-height: 1 !important;
     }
 
-        /* ============================================================
-       УМЕНЬШЕНИЕ ЗАГОЛОВКОВ КАРТОЧЕК НА ТЕЛЕФОНЕ
-       (Чтобы они не занимали пол-экрана)
-       ============================================================ */
-    
-    /* Убираем огромные отступы у шапки карточки */
     /* ============================================================
-       ЖЁСТКОЕ ИСПРАВЛЕНИЕ ШАПОК КАРТОЧЕК НА ТЕЛЕФОНЕ
-       ============================================================ */
-    .card-header {
-        flex-direction: row !important; /* Возвращаем в строку, чтобы не было огромной высоты */
-        text-align: left !important;
-        padding: 0.6rem 1rem !important; /* Уменьшаем отступы */
-        margin: -1rem -1rem 1rem -1rem !important;
-        border-radius: var(--radius) var(--radius) 0 0 !important;
-        gap: 0.5rem !important; /* Расстояние между иконкой и текстом */
-        justify-content: flex-start !important;
-    }
-
-    .card-header h2 {
-        font-size: 1.1rem !important; /* Уменьшаем шрифт заголовка */
-        margin: 0 !important;
-        line-height: 1.2 !important;
-        text-align: left !important;
-    }
-
-    .card-header .card-icon {
-        font-size: 1.3rem !important; /* Уменьшаем иконку (лупа, книга и т.д.) */
-        margin: 0 !important;
-    }
-
-    /* Исправление для плакатной темы (если она ломается) */
-    [data-theme="poster"] .card-header {
-        padding: 0.6rem 1rem !important;
-    }
-    
-    [data-theme="poster"] .card-header h2 {
-        font-size: 1.1rem !important;
-    }
-    .search-section .search-btn {
-        width: 100% !important; /* Кнопка на всю ширину для удобства */
-    }
-}
-
-/* ============================================================
-   СЛУЧАЙНЫЕ ФОТО
-   ============================================================ */
-.random-section {
-    margin: 2rem 0;
-    animation: fadeInUp 0.6s ease;
-}
-
-#randomPhoto {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.2rem;
-    margin-bottom: 1.5rem;
-}
-
-.random-photo-item {
-    position: relative;
-    border-radius: var(--radius-sm);
-    overflow: hidden;
-    box-shadow: 0 8px 20px var(--shadow-color);
-    background: var(--bg-card-solid);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-
-.random-photo-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 28px var(--shadow-hover);
-}
-
-.random-photo-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
-}
-
-.random-photo-item:hover img {
-    transform: scale(1.05);
-}
-
-.random-photo-caption {
-    padding: 0.6rem 0.9rem;
-    background: var(--bg-card-solid);
-    text-align: center;
-    color: var(--text-secondary);
-    font-size: 0.85rem;
-    line-height: 1.4;
-    border-top: 1px solid var(--border-color);
-}
-
-.random-pages {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1rem;
-    margin: 1rem 0;
-}
-
-.random-page-card {
-    padding: 1rem;
-    background: var(--bg-card-solid);
-    border-radius: var(--radius-sm);
-    text-align: center;
-    transition: all 0.3s ease;
-    border: 1px solid transparent;
-    text-decoration: none;
-    color: var(--text-primary);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.3rem;
-}
-
-.random-page-card:hover {
-    border-color: var(--accent-color);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 16px var(--shadow-color);
-}
-
-.random-page-card .icon {
-    font-size: 2.5rem;
-    line-height: 1;
-}
-
-.random-page-card .title {
-    font-weight: 500;
-    font-size: 0.95rem;
-}
-
-/* ============================================================
-   АДАПТИВ
-   ============================================================ */
-@media (max-width: 1024px) {
-    .timeline::before { left: 0; }
-    .timeline-item { flex-direction: column; }
-    .timeline-date { width: 100px; margin-bottom: 0.8rem; }
-    .timeline-content { width: 100%; }
-}
-
-@media (max-width: 768px) {
-    h1 { font-size: 1.8rem; }
-    h2 { font-size: 1.5rem; }
-    .main-nav { flex-direction: column; gap: 0.3rem; }
-    .counter-container { gap: 1.5rem; }
-    .counter-number { font-size: 2.2rem; }
-    .settings-dropdown { min-width: 240px; right: -10px; }
-    .hero h2 { font-size: 1.8rem; }
-    .hero-text { font-size: 1rem; }
-    .features-grid { grid-template-columns: 1fr; }
-    .card-header { flex-direction: column; text-align: center; }
-    .image-gallery { grid-template-columns: 1fr; }
-    .trains-grid { grid-template-columns: 1fr; }
-    .equipment-grid { grid-template-columns: 1fr; }
-    .random-pages { grid-template-columns: 1fr 1fr; }
-
-    [data-theme="poster"] .hero h2::before,
-    [data-theme="poster"] .hero h2::after {
-        width: 20px;
-        height: 20px;
-        margin: 0 0.4rem;
-    }
-
-        /* ============================================================
        ГЛОБАЛЬНАЯ СЕТКА КАРТОЧЕК НА ТЕЛЕФОНЕ (2 КОЛОНКИ)
        ============================================================ */
     .features-grid, 
@@ -2020,19 +1827,18 @@ footer {
     .equipment-grid,
     [data-theme="poster"] .features-grid,
     [data-theme="poster"] .trains-grid {
-        /* Жестко ставим 2 колонки для всех тем */
         grid-template-columns: repeat(2, 1fr) !important; 
-        gap: 0.6rem !important; /* Делаем отступы между карточками поменьше */
+        gap: 0.6rem !important; 
     }
 
     .feature-item, 
     .train-card,
     [data-theme="poster"] .feature-item,
     [data-theme="poster"] .train-card {
-        padding: 0.8rem !important; /* Уменьшаем внутренние отступы */
+        padding: 0.8rem !important; 
         font-size: 0.85rem !important;
-        word-wrap: break-word; /* Чтобы длинные слова не вылезали */
-        min-width: 0; /* Важно для Grid, чтобы карточки не распирало */
+        word-wrap: break-word; 
+        min-width: 0; 
     }
 
     .feature-item h3, 
@@ -2048,15 +1854,53 @@ footer {
         font-size: 0.8rem !important;
         margin-bottom: 0.5rem;
     }
-}
 
-@media (max-width: 480px) {
-    .header-container { padding: 0.8rem 1rem; }
-    .settings-dropdown { min-width: 200px; right: -5px; }
-    .settings-options { gap: 0.3rem; }
-    .settings-btn { font-size: 0.75rem; padding: 0.3rem 0.6rem; }
-    .random-pages { grid-template-columns: 1fr; }
-    .search-container { flex-direction: column; }
+    /* ============================================================
+       ПОИСК И НАВИГАЦИЯ
+       ============================================================ */
+    .search-section .search-btn {
+        width: 100% !important; 
+    }
+
+    .main-nav { 
+        flex-direction: column; 
+        gap: 0.3rem; 
+    }
+    
+    .counter-container { gap: 1.5rem; }
+    .counter-number { font-size: 2.2rem; }
+    
+    .hero h2 { font-size: 1.8rem; }
+    .hero-text { font-size: 1rem; }
+    
+    .settings-dropdown { min-width: 240px; right: -10px; }
+
+        /* ============================================================
+       ФИНАЛЬНОЕ УМЕНЬШЕНИЕ ЗАГОЛОВКОВ (ПЕРЕБИВАЕМ ВСЁ)
+       ============================================================ */
+    .card-header {
+        padding: 0.5rem 0.8rem !important;
+        margin: -1rem -1rem 1rem -1rem !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
+    }
+    
+    .card-header h2 {
+        font-size: 1rem !important; /* Ещё меньше шрифт */
+        line-height: 1.2 !important;
+        margin: 0 !important;
+    }
+    
+    .card-header .card-icon {
+        font-size: 1.2rem !important;
+        margin: 0 !important;
+    }
+
+    /* Убираем лишние отступы у контента карточек */
+    .card-content {
+        padding-top: 0 !important;
+    }
 }
 
 /* ============================================================
