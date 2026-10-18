@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калининско-Солнцевская линия — история и уникальные поезда — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Калининско-Солнцевская линия (КСЛ)</h1>
+            <p class="subtitle">Восьмая линия Московского метрополитена — история и уникальные поезда</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="Главная_Страница_Мосметро.html">🏙️ Мосметро</a></li>
+                    <li><a href="#about">О линии</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#unique">Уникальные поезда</a></li>
+                    <li><a href="#stations">Станции</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Калининско-Солнцевская линия</h2>
+                <p class="hero-text">Калининско-Солнцевская линия (КСЛ) — восьмая линия Московского метрополитена, открытая <strong>30 декабря 1979 года</strong>. Состоит из двух <strong>не соединённых</strong> участков: Калининского (от «Новокосино» до «Третьяковской») и Солнцевского (от «Делового центра» до «Аэропорта Внуково»).</p>
+                <p class="hero-text"><strong>Важно:</strong> Центральный участок, который должен соединить оба радиуса, до сих пор не построен. Строительство не начнётся ранее 2035 года.</p>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="kslYear">0</div>
+                        <div class="stat-label">год открытия</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="kslStations">0</div>
+                        <div class="stat-label">станций</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="kslUnique">0</div>
+                        <div class="stat-label">уникальных составов</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Общая информация -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #F7D117 0%, #D4AC0D 100%);">
+                <span class="card-icon">🚇</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Основные параметры Калининско-Солнцевской линии</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Дата открытия</td><td>30 декабря 1979 года</td></tr>
+                        <tr><td>Длина</td><td>30,6 км (Калининский) + 24,8 км (Солнцевский)</td></tr>
+                        <tr><td>Количество станций</td><td>8 + 8 = 16</td></tr>
+                        <tr><td>Цвет на схеме</td><td>🟡 Жёлтый</td></tr>
+                        <tr><td>Первые станции</td><td>«Марксистская» — «Новогиреево»</td></tr>
+                        <tr><td>Солнцевский радиус</td><td>Открыт в 2014 году</td></tr>
+                        <tr><td>Продление до Внуково</td><td>2023 год</td></tr>
+                        <tr><td><strong>Соединение радиусов</strong></td><td><strong>❌ Не соединены (строительство не ранее 2035)</strong></td></tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box" style="margin-top: 1.5rem; background: rgba(231, 76, 60, 0.1); border-left-color: #E74C3C;">
+                    <p>⚠️ <strong>Важно:</strong> Калининский и Солнцевский радиусы <strong>сейчас не соединены</strong>. Центральный участок «Третьяковская» — «Деловой центр» находится только в стадии проектирования. Строительство <strong>не начнётся ранее 2035 года</strong> (по экспертной оценке — около 2038 года). На 2025–2028 годы заложено только <strong>перепроектирование</strong> участка.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- История линии -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История линии</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">1975–1979</div>
+                        <div class="timeline-content">
+                            <h3>Строительство Калининского радиуса</h3>
+                            <p>В середине 1970-х годов началось строительство Калининского радиуса — от «Марксистской» до «Новогиреево». Линия должна была разгрузить восточные направления.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">30.12.1979</div>
+                        <div class="timeline-content">
+                            <h3>Торжественное открытие</h3>
+                            <p>Открыт первый участок Калининской линии — от «Марксистской» до «Новогиреево» (6 станций).</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1986–2012</div>
+                        <div class="timeline-content">
+                            <h3>Продление на восток</h3>
+                            <p>Линия продлена до «Новогиреево» (1986), «Новокосино» (2012). Открыты станции «Перово», «Шоссе Энтузиастов».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2014</div>
+                        <div class="timeline-content">
+                            <h3>Солнцевский радиус</h3>
+                            <p>Открыт Солнцевский радиус: «Деловой центр» — «Парк Победы» — «Раменки». Началось формирование объединённой Калининско-Солнцевской линии.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2017–2018</div>
+                        <div class="timeline-content">
+                            <h3>Развитие Солнцевского радиуса</h3>
+                            <p>Открыты станции «Мичуринский проспект», «Озёрная», «Говорово», «Солнцево», «Боровское шоссе», «Новопеределкино», «Рассказовка».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023</div>
+                        <div class="timeline-content">
+                            <h3>Продление до Внуково</h3>
+                            <p>Открыты станции «Пыхтино» и «Аэропорт Внуково». Линия достигла аэропорта.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2025–2035</div>
+                        <div class="timeline-content">
+                            <h3>Центральный участок — только проектирование</h3>
+                            <p>На 2025–2028 годы заложено <strong>8,6 млрд рублей</strong> на <strong>перепроектирование</strong> центрального участка «Третьяковская» — «Деловой центр». Это <strong>не строительство</strong>, а только проектные работы. По экспертным оценкам, реальное строительство начнётся <strong>не ранее 2035 года</strong>, а открытие — около <strong>2038 года</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Итог:</strong> Калининский и Солнцевский радиусы существуют как два отдельных участка. Их соединение в единую линию — проект, который обсуждается с 2011 года, но до сих пор не реализован.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Уникальные составы -->
+        <section id="unique" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Уникальные экземпляры на линии</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">На Калининско-Солнцевской линии можно встретить следующие уникальные экземпляры подвижного состава:</p>
+
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="train-card">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem;">🍆</span>
+                            <h3 style="margin: 0;">Баклажан</h3>
+                        </div>
+                        <p>Уникальный состав, получивший прозвище «Баклажан» за характерную фиолетовую окраску. Редкий экземпляр, привлекающий внимание пассажиров.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Нестандартная окраска</li>
+                            <li>Уникальные элементы оформления</li>
+                            <li>Работает на Калининско-Солнцевской линии</li>
+                        </ul>
+                        <a href="Баклан.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem;">🚃</span>
+                            <h3 style="margin: 0;">Первая серийная «Ока»</h3>
+                        </div>
+                        <p>Первый серийный экземпляр вагонов семейства «Ока» (81-760/761), положивший начало массовому выпуску этих поездов для Московского метро.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Историческая ценность</li>
+                            <li>Отличается от опытных образцов</li>
+                            <li>Работает на линии с пассажирами</li>
+                        </ul>
+                        <a href="#" class="btn btn-secondary" style="width: 100%;" onclick="showComingSoon('firstOka'); return false;">Подробнее →</a>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 2rem;">
+                    <p>Если вы знаете о других уникальных составах на Калининско-Солнцевской линии, сообщите нам!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Станции -->
+        <section id="stations" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+                <span class="card-icon">🗺️</span>
+                <h2>Станции Калининско-Солнцевской линии</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <div class="feature-item">
+                        <h3>Калининский участок</h3>
+                        <ul style="margin: 0.5rem 0 0 1.2rem;">
+                            <li>«Новокосино»</li>
+                            <li>«Новогиреево»</li>
+                            <li>«Перово»</li>
+                            <li>«Шоссе Энтузиастов»</li>
+                            <li>«Авиамоторная»</li>
+                            <li>«Площадь Ильича»</li>
+                            <li>«Марксистская»</li>
+                            <li>«Третьяковская»</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Солнцевский участок</h3>
+                        <ul style="margin: 0.5rem 0 0 1.2rem;">
+                            <li>«Деловой центр»</li>
+                            <li>«Парк Победы»</li>
+                            <li>«Минская»</li>
+                            <li>«Ломоносовский проспект»</li>
+                            <li>«Раменки»</li>
+                            <li>«Мичуринский проспект»</li>
+                            <li>«Озёрная»</li>
+                            <li>«Говорово»</li>
+                            <li>«Солнцево»</li>
+                            <li>«Боровское шоссе»</li>
+                            <li>«Новопеределкино»</li>
+                            <li>«Рассказовка»</li>
+                            <li>«Пыхтино»</li>
+                            <li>«Аэропорт Внуково»</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Калининско-Солнцевская линия должна была соединить два удалённых района Москвы — восточный и юго-западный. Однако центральный участок, который свяжет два радиуса, до сих пор не построен и вряд ли появится раньше 2038 года».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Калининско-Солнцевская линия»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="Главная_Страница_Мосметро.html">Московский метрополитен</a></li>
+                        <li><a href="Живая_история_Мск_метро.html">Живая история</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Калининско-Солнцевская линия — жёлтая ветка Московского метро</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="comingSoonModal">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <div class="modal-body">
+                <h2>🚧 Страница в разработке</h2>
+                <p id="modalMessage">Подробная информация о первой серийной «Оке» появится позже.</p>
+                <p>Этот состав имеет историческую ценность как первый серийный экземпляр семейства вагонов «Ока» (81-760/761).</p>
+                <button class="btn btn-primary" id="modalOkBtn">Понятно</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function animateKslCounters() {
+                const targets = { kslYear: 1979, kslStations: 16, kslUnique: 2 };
+                let current = { kslYear: 0, kslStations: 0, kslUnique: 0 };
+                const yearEl = document.getElementById('kslYear');
+                const stationsEl = document.getElementById('kslStations');
+                const uniqueEl = document.getElementById('kslUnique');
+                if (!yearEl || !stationsEl || !uniqueEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.kslYear < targets.kslYear) {
+                        current.kslYear += Math.ceil(targets.kslYear / 50);
+                        if (current.kslYear > targets.kslYear) current.kslYear = targets.kslYear;
+                        yearEl.textContent = current.kslYear;
+                        allFinished = false;
+                    }
+                    if (current.kslStations < targets.kslStations) {
+                        current.kslStations += 1;
+                        if (current.kslStations > targets.kslStations) current.kslStations = targets.kslStations;
+                        stationsEl.textContent = current.kslStations;
+                        allFinished = false;
+                    }
+                    if (current.kslUnique < targets.kslUnique) {
+                        current.kslUnique += 1;
+                        if (current.kslUnique > targets.kslUnique) current.kslUnique = targets.kslUnique;
+                        uniqueEl.textContent = current.kslUnique;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateKslCounters();
+        });
+
+        const modal = document.getElementById('comingSoonModal');
+        const modalMessage = document.getElementById('modalMessage');
+        const closeBtn = document.getElementById('modalClose');
+        const okBtn = document.getElementById('modalOkBtn');
+
+        window.showComingSoon = function(item) {
+            if (modal && modalMessage) {
+                if (item === 'firstOka') {
+                    modalMessage.textContent = 'Подробная информация о первой серийной «Оке» появится позже.';
+                } else {
+                    modalMessage.textContent = 'Подробная информация появится позже.';
+                }
+                modal.classList.add('active');
+            }
+        }
+
+        function closeModal() {
+            if (modal) modal.classList.remove('active');
+        }
+
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (okBtn) okBtn.addEventListener('click', closeModal);
+
+        window.addEventListener('click', function(e) {
+            if (e.target === modal) closeModal();
+        });
+    </script>
+</body>
+</html>     

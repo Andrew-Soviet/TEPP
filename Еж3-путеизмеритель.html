@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Еж3-путеизмеритель — служебный поезд Московского метрополитена</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Еж3-путеизмеритель</h1>
+            <p class="subtitle">Служебный поезд Московского метрополитена для контроля пути и систем СЦБ</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="Служебные_поезда_метро.html">🔧 Служебные поезда</a></li>
+                    <li><a href="#about">О поезде</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#composition">Состав</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Еж3-путеизмеритель</h2>
+                <p class="hero-text">Еж3-путеизмеритель — уникальный служебный состав Московского метрополитена. В его составе сохранён последний оригинальный вагон Еж3 в России — №5824, а также вагон-лаборатория СЦБ и связи №5564, который служит с 1975 года.</p>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="carsCount">0</div>
+                        <div class="stat-label">вагонов в составе</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="yearsService">0</div>
+                        <div class="stat-label">лет службы путеизмерителем</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>📍 Депо приписки</h3>
+                        <p style="font-size: 1.2rem; font-weight: bold;">ТЧ-4 «Красная Пресня»</p>
+                        <p>С 01.10.2020. Ранее: ТЧ-6 «Планерное» (до 10.2020), ТЧ-11 «Выхино»</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🎯 Назначение</h3>
+                        <p>Контроль состояния рельсового пути и контактного рельса, а также систем СЦБ.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🚇 Тип состава</h3>
+                        <p>Еж3/Ем-508Т с вагоном-путеизмерителем 81-714 (ЛВЗ).</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>📊 Особенность</h3>
+                        <p>В составе путеизмерителя имеется последний оригинальный Еж3 в РФ — №5824.</p>
+                    </div>
+                </div>
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p>⭐ Вагон №5564 служит с 1975 года как лаборатория СЦБ и связи. Вагон №5824 — последний оригинальный Еж3 в России, не проходивший КВР.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="composition" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">🚇</span>
+                <h2>Составность поезда</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Бывшая составность составность (до 2019 года):</p>
+                <div class="highlight-box" style="margin-bottom: 1.5rem;">
+                    <p style="font-size: 1.8rem; text-align: center; font-weight: bold;">5564 — 5672 — 7374 — 5667 — 5824</p>
+                </div>
+                <p class="card-description">Текущая составность (с 2019 года):</p>
+                <div class="highlight-box" style="margin-bottom: 1.5rem;">
+                    <p style="font-size: 1.8rem; text-align: center; font-weight: bold;">5564 — 6552 — 7374 — 6719 — 5824</p>
+                </div>
+                <p class="card-description">Текущая составность с резервными вагонами(с 2019 года):</p>
+                <div class="highlight-box" style="margin-bottom: 1.5rem;">
+                    <p style="font-size: 1.8rem; text-align: center; font-weight: bold;">5564 — 6552 — 7374 — 6749 — 6406 — 6435 — 6719 — 5824</p>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>№ вагона</th>
+                            <th>Модель</th>
+                            <th>Роль</th>
+                            <th>Особенности</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>5564</strong></td><td>Еж3</td><td>Лаборатория СЦБ и связи</td><td>Переоборудован в 1975, салон изменён (сохранились плафоны и пластик), КВР не проходил. Служит с 1975 года.</td></tr>
+                        <tr><td><strong>6552</strong></td><td>Ем-508Т</td><td>Сопровождение</td><td>КВР ЗРЭПС, демонтирована кабина.</td></tr>
+                        <tr><td><strong>7374</strong></td><td>81-714 (ЛВЗ)</td><td>Путеизмеритель</td><td>Переоборудован в 2006.</td></tr>
+                        <tr><td><strong>6719</strong></td><td>Ем-508Т</td><td>Сопровождение</td><td>КВР ЗРЭПС (2010), демонтирована кабина.</td></tr>
+                        <tr><td><strong>5824</strong></td><td>Еж3</td><td>Сопровождение</td><td>КВР не проходил, последний оригинальный Еж3 в РФ.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline" style="padding: 1rem 0;">
+                    <div class="timeline-item">
+                        <div class="timeline-date">08.1973</div>
+                        <div class="timeline-content">
+                            <h3>Постройка вагона 5564</h3>
+                            <p>Вагон №5564 построен на Мытищинском машиностроительном заводе.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">12.1975</div>
+                        <div class="timeline-content">
+                            <h3>Постройка вагона 5824</h3>
+                            <p>Вагон №5824 построен. КВР не проходил, сохранил оригинальный салон.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1975</div>
+                        <div class="timeline-content">
+                            <h3>Переоборудование 5564</h3>
+                            <p>Вагон №5564 переоборудован в вагон-лабораторию автоматики и радиосвязи службы СЦБ. Салон перестроен из пассажирского в техническое купе с оборудованием. Кабина изменениям не подвергалась.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2006</div>
+                        <div class="timeline-content">
+                            <h3>Переоборудование 7374</h3>
+                            <p>Вагон №7374 (81-714 ЛВЗ) переоборудован в путеизмеритель.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2007</div>
+                        <div class="timeline-content">
+                            <h3>Модернизация лаборатории</h3>
+                            <p>Вагон №5564 переоборудован для работы с АРС 2/6.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">27.08.2007</div>
+                        <div class="timeline-content">
+                            <h3>Табличка «ПЕРВЫЙ!»</h3>
+                            <p>Первый и последний раз на составе была установлена табличка «ПЕРВЫЙ!» (фото andzis).</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">14.01.2008</div>
+                        <div class="timeline-content">
+                            <h3>Последний выезд УМ5 №806</h3>
+                            <p>Первый и последний выезд старого путеизмерителя УМ5 №806 в дни пассажирской эксплуатации нового участка до станции «Строгино».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2019</div>
+                        <div class="timeline-content">
+                            <h3>Смена составности</h3>
+                            <p>Вагоны 5672 и 5667 отставлены. В состав включены 6552 и 6719.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">01.10.2020</div>
+                        <div class="timeline-content">
+                            <h3>Передача в ТЧ-4</h3>
+                            <p>Состав передан из ТЧ-6 «Планерное» в ТЧ-4 «Красная Пресня».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Декабрь 2024</div>
+                        <div class="timeline-content">
+                            <h3>Продление срока эксплуатации</h3>
+                            <p>Срок эксплуатации вагона №5564 продлён до конца 2027 года.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+                <span class="card-icon">🔧</span>
+                <h2>Особенности вагонов</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>Вагон №5564 (Еж3)</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>Лаборатория СЦБ и связи</li>
+                            <li>Переоборудован в 1975 году</li>
+                            <li>Салон изменён (сохранились плафоны и пластик)</li>
+                            <li>КВР не проходил</li>
+                            <li>Служит с 1975 года</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Вагон №5824 (Еж3)</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>Последний оригинальный Еж3 в РФ</li>
+                            <li>Сопровождение лаборатории и путеизмерителя</li>
+                            <li>КВР не проходил</li>
+                            <li>Оригинальные круглые плафоны освещения</li>
+                            <li>Диваны и старые боковины</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Вагон №7374 (81-714 ЛВЗ)</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>Путеизмеритель</li>
+                            <li>Переоборудован в 2006 году</li>
+                            <li>Жёлто-оранжевая окраска</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Вагоны сопровождения (6552, 6719)</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>Модель: Ем-508Т</li>
+                            <li>КВР ЗРЭПС, демонтирована кабина</li>
+                            <li>Используются для надёжности и тяги</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/Ezh3_full.jpg" alt="Еж3-путеизмеритель общий вид" onerror="this.src='https://via.placeholder.com/800x500?text=Еж3+общий+вид'">
+                        <div class="gallery-caption">Еж3-путеизмеритель (общий вид)</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 mosnikita</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/5564.jpg" alt="Вагон 5564" onerror="this.src='https://via.placeholder.com/800x500?text=5564'">
+                        <div class="gallery-caption">Вагон №5564 — лаборатория СЦБ и связи</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Озермос</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/5564_int.jpg" alt="Салон 5564" onerror="this.src='https://via.placeholder.com/800x500?text=Салон+5564'">
+                        <div class="gallery-caption">Салон вагона №5564 (лаборатория)</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Welder</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/5824_int.jpg" alt="Салон 5824" onerror="this.src='https://via.placeholder.com/800x500?text=Салон+5824'">
+                        <div class="gallery-caption">Оригинальный салон вагона №5824</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/5824ramenki1.jpg" alt="5824 на Раменках" onerror="this.src='https://via.placeholder.com/800x500?text=5824+Раменки'">
+                        <div class="gallery-caption">Вагон №5824 на станции «Раменки»</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/5824ramenki8vagonov.jpg" alt="5824 на Раменках (8 вагонов)" onerror="this.src='https://via.placeholder.com/800x500?text=5824+8+вагонов'">
+                        <div class="gallery-caption">Вагон №5824 на станции «Раменки» (8 вагонов)</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/5824ng1.jpg" alt="5824 новогодний" onerror="this.src='https://via.placeholder.com/800x500?text=5824+НГ'">
+                        <div class="gallery-caption">Вагон №5824 (новогоднее оформление)</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/5824ng_int.jpg" alt="Салон 5824 новогодний" onerror="this.src='https://via.placeholder.com/800x500?text=Салон+5824+НГ'">
+                        <div class="gallery-caption">Салон вагона №5824 (новогоднее оформление)</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/6719_int.jpg" alt="Салон 6719" onerror="this.src='https://via.placeholder.com/800x500?text=Салон+6719'">
+                        <div class="gallery-caption">Салон вагона №6719</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/7374.jpg" alt="Вагон 7374" onerror="this.src='https://via.placeholder.com/800x500?text=7374'">
+                        <div class="gallery-caption">Вагон №7374 — путеизмеритель</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Nikita_Transportnik</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/ym5_ezh3.jpg" alt="УМ5 и Еж3" onerror="this.src='https://via.placeholder.com/800x500?text=УМ5+и+Еж3'">
+                        <div class="gallery-caption">УМ5 №806 и Еж3-путеизмеритель вместе</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 gam</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/Ezh3_full_ym5.jpg" alt="Еж3 и УМ5" onerror="this.src='https://via.placeholder.com/800x500?text=Еж3+и+УМ5'">
+                        <div class="gallery-caption">Еж3-путеизмеритель и УМ5 №806</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 gam</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/Ezh3_pervii.jpg" alt="Табличка ПЕРВЫЙ" onerror="this.src='https://via.placeholder.com/800x500?text=Табличка+ПЕРВЫЙ'">
+                        <div class="gallery-caption">27.08.2007 — табличка «ПЕРВЫЙ!» (первый и последний раз)</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 andzis</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«В составе путеизмерителя сохранён последний оригинальный Еж3 в России. Вагон-лаборатория СЦБ и связи №5564 служит с 1975 года. Это делает состав уникальным памятником истории Московского метрополитена».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Служебные поезда»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Служебные_поезда_метро.html">Служебные поезда</a></li>
+                        <li><a href="УМ5_Д-806.html">УМ5 №Д-806</a></li>
+                        <li><a href="9818.html">Вагон 9818</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Еж3-путеизмеритель — последний оригинальный Еж3 в РФ</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function animateCounters() {
+                const targets = { carsCount: 5, yearsService: 26 };
+                let current = { carsCount: 0, yearsService: 0 };
+                const carsEl = document.getElementById('carsCount');
+                const yearsEl = document.getElementById('yearsService');
+                if (!carsEl || !yearsEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.carsCount < targets.carsCount) {
+                        current.carsCount += 1;
+                        if (current.carsCount > targets.carsCount) current.carsCount = targets.carsCount;
+                        carsEl.textContent = current.carsCount;
+                        allFinished = false;
+                    }
+                    if (current.yearsService < targets.yearsService) {
+                        current.yearsService += Math.ceil(targets.yearsService / 50);
+                        if (current.yearsService > targets.yearsService) current.yearsService = targets.yearsService;
+                        yearsEl.textContent = current.yearsService;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
+                    if (content && img) {
+                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>

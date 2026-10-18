@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Московские железные дороги - уникальные электропоезда</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Дополнительные стили для цветных карточек диаметров */
+        .d1-card .card-header { background: linear-gradient(135deg, #FFD700 0%, #FFC800 100%); }
+        .d2-card .card-header { background: linear-gradient(135deg, #FF69B4 0%, #FF85C0 100%); }
+        .d3-card .card-header { background: linear-gradient(135deg, #FF8C00 0%, #FFA500 100%); }
+        .d4-card .card-header { background: linear-gradient(135deg, #32CD32 0%, #3CB371 100%); }
+        .d5-card .card-header { background: linear-gradient(135deg, #90EE90 0%, #98FB98 100%); }
+        .mck-card .card-header { background: linear-gradient(135deg, #DC143C 0%, #FF0000 100%); }
+        .bk-card .card-header { background: linear-gradient(135deg, #FFB6C1 0%, #FFC0CB 100%); }
+    </style>
+</head>
+<body>
+    <!-- Анимированные частицы -->
+    <div id="particles-js"></div>
+    
+    <!-- Анимированный градиентный фон -->
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Московские железные дороги</h1>
+            <p class="subtitle">Уникальные электропоезда на диаметрах и направлениях</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Железная_дорога.html">🚂 ЖД</a></li>
+                    <li><a href="#d1" style="background: #FFD70020;">D1</a></li>
+                    <li><a href="#d2" style="background: #FF69B420;">D2</a></li>
+                    <li><a href="#d3" style="background: #FF8C0020;">D3</a></li>
+                    <li><a href="#d4" style="background: #32CD3220;">D4</a></li>
+                    <li><a href="#d5" style="background: #90EE9020;">D5</a></li>
+                    <li><a href="#mck" style="background: #DC143C20;">МЦК</a></li>
+                    <li><a href="#bk" style="background: #FFB6C120;">БК</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Московский железнодорожный узел</h2>
+                <p class="hero-text">В Москве есть разные направления железных дорог: Калужское, Ярославское, Курское и другие. На них можно встретить необычные и уникальные электропоезда. Здесь вы узнаете, какие уникальные составы можно встретить на разных диаметрах и направлениях.</p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="mskDirections">0</div>
+                        <div class="stat-label">направлений</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="mskUnique">0</div>
+                        <div class="stat-label">уникальных составов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="mskDiameter">0</div>
+                        <div class="stat-label">диаметров МЦД</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- D1 - Желтый -->
+        <section id="d1" class="section-card d1-card">
+            <div class="card-header">
+                <span class="card-icon">🚈</span>
+                <h2>МЦД-1 (D1)</h2>
+                <span style="margin-left: auto; background: white; color: #B8860B; padding: 0.3rem 1rem; border-radius: 20px; font-weight: bold;">Одинцово — Лобня</span>
+            </div>
+            <div class="card-content">
+                    <div class="train-card">
+                        <h3><a href="" style="text-decoration: none; color: inherit;">Опытная Иволга</a></h3>
+                        <p>Первые две Иволги с номерами 001 и 002 <a href="https://railgallery.ru/railcar/91017/#n111333">Подробнее →</a></p>
+                    </div>
+            </div>
+        </section>
+
+        <!-- D2 - Розовый -->
+        <section id="d2" class="section-card d2-card">
+            <div class="card-header">
+                <span class="card-icon">🚈</span>
+                <h2>МЦД-2 (D2)</h2>
+                <span style="margin-left: auto; background: white; color: #C71585; padding: 0.3rem 1rem; border-radius: 20px; font-weight: bold;">Нахабино — Подольск</span>
+            </div>
+            <div class="card-content">
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <div class="train-card">
+                        <h3>ЭП2Д "Московские курсанты"</h3>
+                        <p>Именной состав, посвященный московским курсантам. Особое оформление и памятные таблички.</p>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3>ЭП2Д "Подольские курсанты"</h3>
+                        <p>Именной электропоезд в честь подольских курсантов, защищавших Москву в 1941 году.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- D3 - Оранжевый -->
+        <section id="d3" class="section-card d3-card">
+            <div class="card-header">
+                <span class="card-icon">🚈</span>
+                <h2>МЦД-3 (D3)</h2>
+                <span style="margin-left: auto; background: white; color: #FF8C00; padding: 0.3rem 1rem; border-radius: 20px; font-weight: bold;">Зеленоград — Раменское</span>
+            </div>
+            <div class="card-content">
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div class="train-card">
+                        <h3>ЭТ2М-118</h3>
+                        <p>ЭТ2М посвященная 25-летию депо Крюково</p>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3>ЭГЭ2Тв-051 "Иволга 4.0"</h3>
+                        <p>Иволга 4.0 с 1000-ым вагоном — юбилейный состав.</p>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3>ЭГЭ2Тв-020 "Иволга 4.0"</h3>
+                        <p>Первая Иволга 4.0 — первый состав новой модификации.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- D4 - Зеленый -->
+        <section id="d4" class="section-card d4-card">
+            <div class="card-header">
+                <span class="card-icon">🚈</span>
+                <h2>МЦД-4 (D4)</h2>
+                <span style="margin-left: auto; background: white; color: #006400; padding: 0.3rem 1rem; border-radius: 20px; font-weight: bold;">Апрелевка — Железнодорожный</span>
+            </div>
+            <div class="card-content">
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div class="train-card">
+                        <h3>ЭП2Д №0004</h3>
+                        <p>С сидениями от поздних ЭД4М — уникальная комплектация салона.</p>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3>ЭД4М №04?? "Физтех.Электричка"</h3>
+                        <p>Именной состав, посвященный Физтеху (МФТИ).</p>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3>ЭД4М-0091</h3>
+                        <p>Ранний представитель семейства ЭД4М.</p>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3>ЭП2Д-0002</h3>
+                        <p><strong>Первая ЭП2Д</strong> — самый первый серийный электропоезд этой модели.</p>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3>ЭП2ДМ-0300</h3>
+                        <p><strong>Первая ЭП2ДМ</strong> - модифицированная версия ЭП2Д</p>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3>Иволга №045 (модель 4.1)</h3>
+                        <p>Электропоезд Иволга версии 4.1 с улучшенными характеристиками.</p>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3>Иволга №059</h3>
+                        <p><strong>Сотая Иволга</strong> — юбилейный состав, сотый выпущенный поезд семейства "Иволга".</p>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3><a href="эд4мку.html" style="text-decoration: none; color: inherit;">ЭД4МКУ 0151 и 0153</a></h3>
+                        <p>Модифицированные электропоезда с улучшенными характеристиками. <a href="эд4мку.html">Подробнее →</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- D5 - Салатовый -->
+        <section id="d5" class="section-card d5-card">
+            <div class="card-header">x
+                <span class="card-icon">🚈</span>
+                <h2>МЦД-5 (D5)</h2>
+                <span style="margin-left: auto; background: white; color: #2E8B57; padding: 0.3rem 1rem; border-radius: 20px; font-weight: bold;">Пушкино — Домодедово</span>
+            </div>
+            <div class="card-content">
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div class="train-card">
+                        <h3>ЭД4 0010</h3>
+                        <p>ЭД4 вагон 001001 стоит в депо Домодедово, ожидает утилизации<a href="ED4.html">Подробнее →</a></p>
+                    </div>
+                        
+                    <div class="train-card">
+                        <h3>ЭД4МКМ АЭРО 003</h3>
+                        <p>Аэроэкспресс, следующий в аэропорт. Особая компоновка салона.</p>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3>ЭД4М-0386</h3>
+                        <p><strong>"120 лет МЛРЗ"</strong> — юбилейный состав, посвященный Московскому локомотиворемонтному заводу.</p>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3>ЭД4М-0316, 0363</h3>
+                        <p>Старый РЭКС — электропоезда повышенной комфортности ранних выпусков.</p>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3>ЭД4М-0469, 0456, 0436</h3>
+                        <p>С косой фарой за решеткой — характерная особенность оформления передней маски.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- МЦК - Красный -->
+        <section id="mck" class="section-card mck-card">
+            <div class="card-header">
+                <span class="card-icon">🚉</span>
+                <h2>Московское центральное кольцо (МЦК)</h2>
+            </div>
+            <div class="card-content">
+                <div class="trains-grid">
+                    <div class="train-card">
+                        <h3>ЭС2Г-113 и 136</h3>
+                        <p><strong>Беспилотные Ласточки</strong> — первые электропоезда с системой автоматического (беспилотного) управления, проходящие испытания на МЦК.</p>
+                        <div class="highlight-box" style="margin-top: 1rem; background: rgba(220, 20, 60, 0.1); border-left-color: #DC143C;">
+                            <p>🚀 Инновационные составы, двигающиеся в режиме автопилота!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- БК - Розовый (светлый) -->
+        <section id="bk" class="section-card bk-card">
+            <div class="card-header">
+                <span class="card-icon">🔄</span>
+                <h2>Большое кольцо (БК)</h2>
+            </div>
+            <div class="card-content">
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <div class="train-card">
+                        <h3>ЭД4МК-0075</h3>
+                        <p>Модернизированная версия ЭД4М с сиденьями от ЭП3Д</p>
+                    </div>
+            </div>
+        </section>
+
+        <!-- Информация -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">"Московский железнодорожный узел — один из крупнейших в мире. Здесь можно встретить уникальные электропоезда, именные составы и экспериментальные модели, которые не ходят больше нигде."</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел "Московские железные дороги"</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Железная_дорога.html">Железные дороги</a></li>
+                        <li><a href="#d3">МЦД-3</a></li>
+                        <li><a href="#d4">МЦД-4</a></li>
+                        <li><a href="#mck">МЦК</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Собрание уникальных электропоездов Московского узла</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка прокрутки вверх -->
+    <div class="scroll-top">↑</div>
+
+    <!-- Подключаем библиотеку частиц -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Подключаем общий JS файл -->
+    <script src="script.js"></script>
+    
+    <!-- Дополнительный скрипт для счетчиков -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Анимация счетчиков
+            function animateMskCounters() {
+                const targets = {
+                    mskDirections: 11,
+                    mskUnique: 27,
+                    mskDiameter: 5
+                };
+                
+                let current = {
+                    mskDirections: 0,
+                    mskUnique: 0,
+                    mskDiameter: 0
+                };
+                
+                const directionsElement = document.getElementById('mskDirections');
+                const uniqueElement = document.getElementById('mskUnique');
+                const diameterElement = document.getElementById('mskDiameter');
+                
+                if (!directionsElement || !uniqueElement || !diameterElement) return;
+                
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    
+                    if (current.mskDirections < targets.mskDirections) {
+                        current.mskDirections += 1;
+                        if (current.mskDirections > targets.mskDirections) {
+                            current.mskDirections = targets.mskDirections;
+                        }
+                        directionsElement.textContent = current.mskDirections;
+                        allFinished = false;
+                    }
+                    
+                    if (current.mskUnique < targets.mskUnique) {
+                        current.mskUnique += Math.ceil(targets.mskUnique / 50);
+                        if (current.mskUnique > targets.mskUnique) {
+                            current.mskUnique = targets.mskUnique;
+                        }
+                        uniqueElement.textContent = current.mskUnique;
+                        allFinished = false;
+                    }
+                    
+                    if (current.mskDiameter < targets.mskDiameter) {
+                        current.mskDiameter += 1;
+                        if (current.mskDiameter > targets.mskDiameter) {
+                            current.mskDiameter = targets.mskDiameter;
+                        }
+                        diameterElement.textContent = current.mskDiameter;
+                        allFinished = false;
+                    }
+                    
+                    if (allFinished) {
+                        clearInterval(interval);
+                    }
+                }, 30);
+            }
+            
+            animateMskCounters();
+        });
+    </script>
+</body>
+</html>

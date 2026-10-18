@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Красная стрела - легендарный фирменный поезд РЖД</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Красная стрела</h1>
+            <p class="subtitle">Легендарный фирменный поезд №1/2 Москва — Санкт-Петербург</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Железная_дорога.html">🚂 ЖД</a></li>
+                    <li><a href="#about">О поезде</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#route">Маршрут</a></li>
+                    <li><a href="#locomotive">Локомотив</a></li>
+                    <li><a href="#gallery">Галерея</a></li>
+                    <li><a href="#features">Особенности</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Легенда российских железных дорог</h2>
+                <p class="hero-text">Фирменный скорый поезд № 1/2 сообщением Москва — Санкт-Петербург. Первый фирменный поезд в истории России, символ железнодорожного сообщения между двумя столицами.</p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="redArrowYear">0</div>
+                        <div class="stat-label">год первого рейса</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="redArrowTime">0</div>
+                        <div class="stat-label">часов в пути</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="redArrowYears">0</div>
+                        <div class="stat-label">лет в пути</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Историческая справка -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #DC143C 0%, #B22222 100%);">
+                <span class="card-icon">📜</span>
+                <h2>Историческая справка</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline" style="padding: 1rem 0;">
+                    <div class="timeline-item">
+                        <div class="timeline-date">1931</div>
+                        <div class="timeline-content">
+                            <h3>Первый рейс</h3>
+                            <p>10 июня 1931 года "Красная стрела" отправилась в свой первый рейс из Ленинграда в Москву.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1965</div>
+                        <div class="timeline-content">
+                            <h3>Статус фирменного</h3>
+                            <p>Поезду официально присвоен статус фирменного — первого в СССР.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1991</div>
+                        <div class="timeline-content">
+                            <h3>Обновление состава</h3>
+                            <p>Кардинальное обновление подвижного состава, новые вагоны повышенной комфортности.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2005</div>
+                        <div class="timeline-content">
+                            <h3>Вагоны нового поколения</h3>
+                            <p>Переход на вагоны нового поколения с улучшенным сервисом и дизайном.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024</div>
+                        <div class="timeline-content">
+                            <h3>Современный облик</h3>
+                            <p>Поезд продолжает курсировать, сохраняя традиции и внедряя современные технологии.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">12.12.2025</div>
+                        <div class="timeline-content">
+                            <h3>Новые локомотивы ЭП2К-510/511</h3>
+                            <p>За поездом закреплены новейшие электровозы ЭП2К-510 и ЭП2К-511, поступившие в депо Санкт-Петербург-Пассажирский-Московский.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="highlight-box" style="margin-top: 1.5rem; background: rgba(220, 20, 60, 0.1); border-left-color: #DC143C;">
+                    <p><strong>Интересный факт:</strong> "Красная стрела" — единственный поезд, который продолжал ходить в годы Великой Отечественной войны, связывая блокадный Ленинград с Москвой.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Маршрут и график -->
+        <section id="route" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #1E90FF 0%, #0066CC 100%);">
+                <span class="card-icon">🗺️</span>
+                <h2>Маршрут и график</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Москва (Ленинградский вокзал) — Санкт-Петербург (Московский вокзал)</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Отправление</th>
+                            <th>Прибытие</th>
+                            <th>Время в пути</th>
+                            <th>Направление</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>23:55</strong></td>
+                            <td><strong>08:00</strong></td>
+                            <td>8 часов 5 минут</td>
+                            <td>Москва → Санкт-Петербург</td>
+                        </tr>
+                        <tr>
+                            <td><strong>23:55</strong></td>
+                            <td><strong>08:00</strong></td>
+                            <td>8 часов 5 минут</td>
+                            <td>Санкт-Петербург → Москва</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="features-grid" style="grid-template-columns: repeat(2, 1fr); margin-top: 2rem;">
+                    <div class="feature-item">
+                        <h3>Нумерация поездов</h3>
+                        <p><strong>№ 1</strong> — Москва → Санкт-Петербург<br>
+                        <strong>№ 2</strong> — Санкт-Петербург → Москва</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Вокзалы</h3>
+                        <p><strong>Москва:</strong> Ленинградский вокзал<br>
+                        <strong>Санкт-Петербург:</strong> Московский вокзал</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- НОВАЯ СЕКЦИЯ: Фирменный локомотив -->
+        <section id="locomotive" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #C0392B 0%, #E74C3C 100%);">
+                <span class="card-icon">🚂</span>
+                <h2>Фирменный локомотив</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">С декабря 2025 года за фирменным поездом «Красная стрела» (поезд № 2, Москва — Санкт-Петербург) закреплены новейшие пассажирские электровозы <strong>ЭП2К-510</strong> и <strong>ЭП2К-511</strong>.</p>
+
+                <div class="features-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="feature-item">
+                        <h3>⚡ ЭП2К-510</h3>
+                        <ul style="margin: 0.5rem 0 0 1.5rem;">
+                            <li><strong>Сетевой №:</strong> 11022142</li>
+                            <li><strong>Построен:</strong> 09.12.2025</li>
+                            <li><strong>Поступил с завода:</strong> 12.12.2025</li>
+                            <li><strong>Депо:</strong> ТЧЭ-8 Санкт-Петербург-Пассажирский-Московский</li>
+                            <li><strong>Завод:</strong> Коломенский завод</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h3>⚡ ЭП2К-511</h3>
+                        <ul style="margin: 0.5rem 0 0 1.5rem;">
+                            <li><strong>Сетевой №:</strong> 11022159</li>
+                            <li><strong>Построен:</strong> 09.12.2025</li>
+                            <li><strong>Поступил с завода:</strong> 12.12.2025</li>
+                            <li><strong>Депо:</strong> ТЧЭ-8 Санкт-Петербург-Пассажирский-Московский</li>
+                            <li><strong>Завод:</strong> Коломенский завод</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem; border-left-color: #E74C3C;">
+                    <p><strong>Особенность:</strong> В составе поезда № 2 «Красная стрела» — один старый вагон «Красной стрелы», сохранивший исторический облик. Сочетание новейших локомотивов ЭП2К и исторического вагона делает этот поезд уникальным.</p>
+                </div>
+
+                <div style="text-align: center; margin-top: 1.5rem;">
+                    <a href="ЭП2К-510_511.html" class="btn btn-primary">Подробнее об ЭП2К-510/511 →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Галерея изображений -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Эволюция облика Красной стрелы</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/старая_КС.jpg" alt="Старый облик Красной стрелы" onerror="this.src='https://via.placeholder.com/600x400?text=Старая+Красная+стрела'">
+                        <div class="gallery-caption">Старый облик (советская эпоха).</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 ???</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/недавняя_КС.png" alt="Недавний облик Красной стрелы" onerror="this.src='https://via.placeholder.com/600x400?text=Недавний+облик'">
+                        <div class="gallery-caption">Недавний облик (2000-е годы).</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 ???</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/новая_КС.png" alt="Новый облик Красной стрелы" onerror="this.src='https://via.placeholder.com/600x400?text=Новый+облик'">
+                        <div class="gallery-caption">Новый облик (современный дизайн).</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 ???</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/ЭП2К-511.jpg" alt="ЭП2К-511 с поездом Красная стрела" onerror="this.src='https://via.placeholder.com/600x400?text=ЭП2К-511'">
+                        <div class="gallery-caption">Поезд № 2 «Красная стрела» Москва — Санкт-Петербург.</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 SaVvUsHkA</p>
+
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Особенности сервиса -->
+        <section id="features" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #32CD32 0%, #228B22 100%);">
+                <span class="card-icon">✨</span>
+                <h2>Особенности сервиса</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="feature-item">
+                        <h3>🚆 Вагоны</h3>
+                        <p>СВ, купе, плацкарт нового поколения. Все вагоны оборудованы современными системами климат-контроля.</p>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
+                            <li>СВ — двухместные купе</li>
+                            <li>Купе — четырехместные</li>
+                            <li>Плацкарт — открытого типа</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🍽️ Питание</h3>
+                        <p>Ресторан-вагон с разнообразным меню, возможность заказа питания в купе.</p>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
+                            <li>Завтраки в стоимость билета</li>
+                            <li>Горячее питание</li>
+                            <li>Напитки и десерты</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h3>📶 Услуги</h3>
+                        <p>Современный сервис для комфортного путешествия.</p>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
+                            <li>Wi-Fi в вагонах</li>
+                            <li>Розетки и USB</li>
+                            <li>Индивидуальное ТВ</li>
+                            <li>Гигиенические наборы</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="highlight-box" style="margin-top: 1.5rem; background: rgba(50, 205, 50, 0.1); border-left-color: #32CD32;">
+                    <p><strong>Традиция:</strong> Перед отправлением из Москвы на перроне Ленинградского вокзала звучит гимн Москвы, а при отправлении из Санкт-Петербурга — гимн города на Неве.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">"Красная стрела" — это не просто поезд, это символ связи двух столиц, легенда, которая продолжает свою историю уже почти век. Каждый рейс — это сохранение традиций и внедрение новых стандартов комфорта."</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел "Фирменные поезда"</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Железная_дорога.html">Железные дороги</a></li>
+                        <li><a href="ЭП2К-510_511.html">ЭП2К-510/511</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Официальный сайт: <a href="https://www.rzd.ru/ru/9319/page/51772?id=4" target="_blank" style="color: #667eea;">rzd.ru</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
+            function animateRedArrowCounters() {
+                const targets = { redArrowYear: 1931, redArrowTime: 8, redArrowYears: 95 };
+                let current = { redArrowYear: 0, redArrowTime: 0, redArrowYears: 0 };
+                const yearEl = document.getElementById('redArrowYear');
+                const timeEl = document.getElementById('redArrowTime');
+                const yearsEl = document.getElementById('redArrowYears');
+                if (!yearEl || !timeEl || !yearsEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.redArrowYear < targets.redArrowYear) {
+                        current.redArrowYear += Math.ceil(targets.redArrowYear / 50);
+                        if (current.redArrowYear > targets.redArrowYear) current.redArrowYear = targets.redArrowYear;
+                        yearEl.textContent = current.redArrowYear;
+                        allFinished = false;
+                    }
+                    if (current.redArrowTime < targets.redArrowTime) {
+                        current.redArrowTime += 1;
+                        if (current.redArrowTime > targets.redArrowTime) current.redArrowTime = targets.redArrowTime;
+                        timeEl.textContent = current.redArrowTime;
+                        allFinished = false;
+                    }
+                    if (current.redArrowYears < targets.redArrowYears) {
+                        current.redArrowYears += Math.ceil(targets.redArrowYears / 50);
+                        if (current.redArrowYears > targets.redArrowYears) current.redArrowYears = targets.redArrowYears;
+                        yearsEl.textContent = current.redArrowYears;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateRedArrowCounters();
+
+            // Галерея
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
+                    if (content && img) {
+                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>

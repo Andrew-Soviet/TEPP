@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МТВ-82 — легендарный московский трамвай</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>МТВ-82 № 1075</h1>
+            <p class="subtitle">Московский ТрамВай — легенда послевоенного трамваестроения</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Городской_транспорт.html">🚍 Городской транспорт</a></li>
+                    <li><a href="#about">О трамвае</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>МТВ-82</h2>
+                <p class="hero-text">МТВ-82 — советский односторонний моторный четырёхосный высокопольный трамвайный вагон, выпускавшийся с 1947 по 1961 год. Первый послевоенный трамвай Москвы, ставший настоящим прорывом в комфорте и дизайне.</p>
+                <p class="hero-text">Название расшифровывается как «Московский ТрамВай», число 82 — номер Тушинского завода, где был построен первый вагон. Всего выпущено около 2160 вагонов.</p>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="buildYear">0</div>
+                        <div class="stat-label">год начала выпуска</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="maxSpeed">0</div>
+                        <div class="stat-label">км/ч макс.</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="power">0</div>
+                        <div class="stat-label">кВт мощность</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                <span class="card-icon">🚋</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>🏭 Производство</h3>
+                        <p><strong>Заводы-изготовители:</strong> Тушинский завод № 82, Рижский вагоностроительный завод (РВЗ)</p>
+                        <p><strong>Годы выпуска:</strong> 1947–1961</p>
+                        <p><strong>Единиц построено:</strong> ~2160</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>📍 Эксплуатация</h3>
+                        <p><strong>Основной регион:</strong> Москва, затем другие города СССР</p>
+                        <p><strong>В Москве:</strong> 158 вагонов, эксплуатировались до начала 1980-х</p>
+                        <p><strong>Последний рейс:</strong> 1982 год</p>
+                    </div>
+                </div>
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p>⭐ <strong>Первый послевоенный:</strong> МТВ-82 стал первым новым трамваем, спроектированным и построенным в СССР после Великой Отечественной войны. Его разработка велась на Тушинском заводе, где ранее создавали троллейбусы МТБ-82М — часть технических решений была унифицирована.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline" style="padding: 1rem 0;">
+                    <div class="timeline-item">
+                        <div class="timeline-date">1945–1947</div>
+                        <div class="timeline-content">
+                            <h3>Разработка</h3>
+                            <p>После войны возникла острая потребность в обновлении трамвайного парка. Проектирование нового четырёхосного вагона с цельнометаллическим кузовом велось на Тушинском заводе № 82. Первый прототип построен в 1946–1947 году к 800-летию Москвы.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1948–1949</div>
+                        <div class="timeline-content">
+                            <h3>Передача производства</h3>
+                            <p>В 1949 году Тушинский завод вернулся к оборонной продукции, и выпуск МТВ-82 был передан на Рижский вагоностроительный завод (РВЗ), где выпускалась более практичная модификация, ставшая основной.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1947–1961</div>
+                        <div class="timeline-content">
+                            <h3>Серийное производство</h3>
+                            <p>Всего было построено около 2160 вагонов. В Москве эксплуатировалось 158 машин, которые перевозили пассажиров до начала 1980-х годов.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1960-е — 1982</div>
+                        <div class="timeline-content">
+                            <h3>Закат эпохи</h3>
+                            <p>С конца 1950-х годов на смену МТВ-82 стали приходить чехословацкие «Татры». Последний МТВ-82 прошёл по Москве с пассажирами в 1982 году, прослужив городу более 30 лет.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Судьба:</strong> Два вагона позже были переоборудованы для служебных нужд. До наших дней не сохранилось ни одного оригинального вагона первой «широколобой» модификации — единственный воссозданный экземпляр находится в Музее транспорта Москвы.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+                <span class="card-icon">🎨</span>
+                <h2>Особенности конструкции</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>«Широколобый» дизайн</h3>
+                        <p>Первая модификация получила прозвище «широколобый» из-за своих габаритов. Кузов имел обтекаемую форму, лобовая панель — ступенчатую окраску. Вагон был двухдверным, с пневматическим приводом дверей.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Комфорт для пассажиров</h3>
+                        <p>Вместо деревянных скамеек — мягкие диваны с кожаной обивкой. Салон отапливался 12 электропечами, освещался 15 плафонами. Впервые появилась полностью отделённая отапливаемая кабина водителя.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Технические решения</h3>
+                        <p>Частичная унификация с троллейбусом МТБ-82М и автобусом ЗИС-154. Четыре тяговых двигателя общей мощностью 220 кВт, конструкционная скорость 55 км/ч. Масса — 17,5 т.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Недостатки первой модели</h3>
+                        <p>Широкий кузов и узкие двери оказались неоптимальны для быстрого пассажирооборота. Створчатые двери с центральной переборкой мешали проносу багажа. Поэтому с 1948 года выпускалась «зауженная» модификация.</p>
+                    </div>
+                </div>
+                <div class="highlight-box" style="margin-top: 1rem;">
+                    <p>🎉 <strong>Уникальный факт:</strong> При создании МТВ-82 впервые в истории машиностроения была предпринята попытка частичной унификации четырёх разных видов транспорта: трамвая, троллейбуса, автобуса и теплохода.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/MTV-82.jpg" alt="МТВ-82" onerror="this.src='img/no-photo.png'">
+                        <div class="gallery-caption">МТВ-82 №1075 в экспозиции Музея транспорта Москвы</div>
+                        <p style="text-align: center; margin-top: 0.3rem; color: var(--text-secondary); font-size: 0.85rem;">📸 pfandrom</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/MTV-82_int.jpg" alt="МТВ-82 в Москве" onerror="this.src='img/no-photo.png'">
+                        <div class="gallery-caption">МТВ-82 №1075 салон, вид вперед</div>
+                        <p style="text-align: center; margin-top: 0.3rem; color: var(--text-secondary); font-size: 0.85rem;">📸 pfandrom</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/MTV-82_tabl.jpg" alt="МТВ-82 в Москве" onerror="this.src='img/no-photo.png'">
+                        <div class="gallery-caption">Табличка об экспонате</div>
+                        <p style="text-align: center; margin-top: 0.3rem; color: var(--text-secondary); font-size: 0.85rem;">📸 pfandrom</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«МТВ-82 был гораздо комфортабельнее уже архаичных „деревянных“ вагонов и стал настоящим прорывом для своего времени. Пассажиры ценили его за удобство, вагоновожатые — за комфорт и простоту, а ремонтники — за надёжность».</p>
+                <p class="quote-author">— Оксана Бондаренко, директор Музея транспорта Москвы</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Трамваи»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Городской_транспорт.html">Городской транспорт</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram-канал</a></p>
+                    <p>✉️ <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Предложка</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">МТВ-82 — «Московский ТрамВай»</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function animateCounters() {
+                const targets = { buildYear: 1947, maxSpeed: 55, power: 220 };
+                let current = { buildYear: 0, maxSpeed: 0, power: 0 };
+                const yearEl = document.getElementById('buildYear');
+                const speedEl = document.getElementById('maxSpeed');
+                const powerEl = document.getElementById('power');
+                
+                // ИСПРАВЛЕНО: добавил операторы ||
+                if (!yearEl || !speedEl || !powerEl) return;
+                
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.buildYear < targets.buildYear) {
+                        current.buildYear += Math.ceil(targets.buildYear / 50);
+                        if (current.buildYear > targets.buildYear) current.buildYear = targets.buildYear;
+                        yearEl.textContent = current.buildYear;
+                        allFinished = false;
+                    }
+                    if (current.maxSpeed < targets.maxSpeed) {
+                        current.maxSpeed += Math.ceil(targets.maxSpeed / 50);
+                        if (current.maxSpeed > targets.maxSpeed) current.maxSpeed = targets.maxSpeed;
+                        speedEl.textContent = current.maxSpeed;
+                        allFinished = false;
+                    }
+                    if (current.power < targets.power) {
+                        current.power += Math.ceil(targets.power / 50);
+                        if (current.power > targets.power) current.power = targets.power;
+                        powerEl.textContent = current.power;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
+                    if (content && img) {
+                        // ИСПРАВЛЕНО: добавил обратные кавычки и закрыл тег <p>
+                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>

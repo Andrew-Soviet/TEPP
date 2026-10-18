@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Грузовые вагоны метро - Служебный подвижной состав</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Анимированные частицы -->
+    <div id="particles-js"></div>
+    
+    <!-- Анимированный градиентный фон -->
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Грузовые вагоны метро</h1>
+            <p class="subtitle">Служебный подвижной состав для перевозки грузов в метрополитене</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="Ушедшие_в_историю_метро.html">📜 Ушедшие в историю</a></li>
+                    <li><a href="#about">О грузовых поездах</a></li>
+                    <li><a href="#types">Типы вагонов</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#gallery">Фотогалерея</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Грузовые поезда метрополитена</h2>
+                <p class="hero-text">Грузовые поезда – это поезда, которые предназначены для перевозки различных грузов по территории метрополитена. Пример задачи для этого состава – перевезти колёсные пары из одного депо в другое. Данные поезда курсируют вне часа-пик.</p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="freightTypes">0</div>
+                        <div class="stat-label">типов вагонов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="freightYears">0</div>
+                        <div class="stat-label">лет эксплуатации</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="freightPhotos">0</div>
+                        <div class="stat-label">фото в галерее</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Конструкция -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                <span class="card-icon">🔧</span>
+                <h2>Конструкция грузовых вагонов</h2>
+            </div>
+            <div class="card-content">
+                <p>Такие составы создавались самим метрополитеном. Для этого у вагонов отпиливалась часть крыши. В Москве, например, удаляли примерно треть всей крыши вагона, а в Санкт-Петербурге крышу срезали почти полностью.</p>
+                
+                <div class="features-grid" style="grid-template-columns: repeat(2, 1fr); margin-top: 1.5rem;">
+                    <div class="feature-item">
+                        <h3>📍 Москва</h3>
+                        <p>Удаляли примерно треть всей крыши вагона</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>📍 Санкт-Петербург</h3>
+                        <p>Крышу срезали почти полностью</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p>Грузовые вагоны создавались путём переоборудования пассажирских вагонов для хозяйственных нужд метрополитена.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Типы вагонов -->
+        <section id="types" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Типы вагонов, переоборудованных в грузовые</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Грузовые вагоны делались на базе различных пассажирских поездов:</p>
+                
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+                    <div class="train-card" style="text-align: center;">
+                        <h3>Е</h3>
+                        <p>Вагоны типа Е</p>
+                    </div>
+                    
+                    <div class="train-card" style="text-align: center;">
+                        <h3>Еж3</h3>
+                        <p>Модификация Еж3</p>
+                    </div>
+                    
+                    <div class="train-card" style="text-align: center;">
+                        <h3>Ем-509</h3>
+                        <p>Вагоны Ем-509</p>
+                    </div>
+                    
+                    <div class="train-card" style="text-align: center;">
+                        <h3>М5 (УМ5)</h3>
+                        <p>Учебно-моторные вагоны</p>
+                    </div>
+                    
+                    <div class="train-card" style="text-align: center;">
+                        <h3>81-717</h3>
+                        <p>Номерные вагоны</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- История и инцидент -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E74C3C 0%, #C0392B 100%);">
+                <span class="card-icon">⚠️</span>
+                <h2>Конец эпохи грузовых поездов</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline" style="padding: 1rem 0;">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Декабрь 2009</div>
+                        <div class="timeline-content">
+                            <h3>Инцидент на станции «Сходненская»</h3>
+                            <p>Колёсная пара, перевозимая в вагоне № 3361, продавила дверь и выпала из вагона.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">После 2009</div>
+                        <div class="timeline-content">
+                            <h3>Прекращение эксплуатации</h3>
+                            <p>Эксплуатация грузовых поездов в Москве прекратилась после этого инцидента. Часть вагонов использовалась для перегонок.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="highlight-box" style="margin-top: 1.5rem; background: rgba(231, 76, 60, 0.1); border-left-color: #E74C3C;">
+                    <p><strong>Важно:</strong> После инцидента 2009 года эксплуатация грузовых поездов в Московском метро была прекращена из соображений безопасности.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Фотогалерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+                    <!-- УМ5 804 -->
+                    <div class="gallery-item">
+                        <img src="img/УМ5 804.jpg" alt="УМ5 804" onerror="this.src='https://via.placeholder.com/600x400?text=УМ5+804'">
+                        <div class="gallery-caption">УМ5 №804</div>
+                        <p style="text-align: center; margin-top: 0.3rem; color: var(--text-secondary);">📸: П.В. Егерев</p>
+                    </div>
+                    
+                    <!-- УМ5 805 -->
+                    <div class="gallery-item">
+                        <img src="img/УМ5 805.jpg" alt="УМ5 805" onerror="this.src='https://via.placeholder.com/600x400?text=УМ5+805'">
+                        <div class="gallery-caption">УМ5 №805</div>
+                        <p style="text-align: center; margin-top: 0.3rem; color: var(--text-secondary);">📸: М. Ю. Касаткин</p>
+                    </div>
+                    
+                    <!-- Е-образные (YouTube 1) -->
+                    <div class="gallery-item">
+                        <img src="img/Е нруз Изм.jpg" alt="Е-образные грузовые" onerror="this.src='https://via.placeholder.com/600x400?text=Е-образные+вагоны'">
+                        <div class="gallery-caption">Е-образные грузовые вагоны</div>
+                        <p style="text-align: center; margin-top: 0.3rem; color: var(--text-secondary);">📸: YouTube (Автор ?)</p>
+                    </div>
+                    
+                    <!-- Е-образные (Свиб) -->
+                    <div class="gallery-item">
+                        <img src="img/Е груз Свиб.jpg" alt="Е-образные грузовые Свиблово" onerror="this.src='https://via.placeholder.com/600x400?text=Е-образные+вагоны'">
+                        <div class="gallery-caption">Е-образные грузовые вагоны</div>
+                        <p style="text-align: center; margin-top: 0.3rem; color: var(--text-secondary);">📸: YouTube (Автор ?)</p>
+                    </div>
+                    
+                    <!-- Е-образные (Черкизово) -->
+                    <div class="gallery-item">
+                        <img src="img/gruz_cherkizovo_04.jpg" alt="Е-образные в Черкизово" onerror="this.src='https://via.placeholder.com/600x400?text=Е-образные+Черкизово'">
+                        <div class="gallery-caption">Е-образные грузовые вагоны</div>
+                        <p style="text-align: center; margin-top: 0.3rem; color: var(--text-secondary);">📸: Трехгранка</p>
+                    </div>
+                    
+                    <!-- Номерной 9053 -->
+                    <div class="gallery-item">
+                        <img src="img/9053.jpg" alt="Номерной вагон 9053" onerror="this.src='https://via.placeholder.com/600x400?text=9053'">
+                        <div class="gallery-caption">Номерной грузовой вагон</div>
+                        <p style="text-align: center; margin-top: 0.3rem; color: var(--text-secondary);">📸: Подземный житель</p>
+                    </div>
+                    
+                    <!-- Номерной 0129 -->
+                    <div class="gallery-item">
+                        <img src="img/0129.jpg" alt="Номерной вагон 0129" onerror="this.src='https://via.placeholder.com/600x400?text=0129'">
+                        <div class="gallery-caption">Номерной грузовой вагон</div>
+                        <p style="text-align: center; margin-top: 0.3rem; color: var(--text-secondary);">📸: Andrey_1989</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Технические характеристики -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+                <span class="card-icon">⚙️</span>
+                <h2>Особенности грузовых вагонов</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="feature-item">
+                        <h3>📦 Назначение</h3>
+                        <p>Перевозка колёсных пар, рельсов, запчастей, оборудования между депо</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>⏰ Время работы</h3>
+                        <p>Курсировали вне часа-пик, в ночное время</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>🔧 Переоборудование</h3>
+                        <p>Срез части крыши для погрузки крупногабаритных грузов</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">"Грузовые поезда метро — незаметные труженики, которые обеспечивали бесперебойную работу депо и служб. Их история закончилась в 2009 году, но память о них осталась в фотографиях и воспоминаниях."</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел "Грузовые вагоны"</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="Ушедшие_в_историю_метро.html">Ушедшие в историю</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Сохраняем историю служебного подвижного состава</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка прокрутки вверх -->
+    <div class="scroll-top">↑</div>
+
+    <!-- Модальное окно для галереи -->
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <!-- Подключаем библиотеку частиц -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Подключаем общий JS файл -->
+    <script src="script.js"></script>
+    
+    <!-- Дополнительный скрипт для счетчиков и галереи -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Анимация счетчиков
+            function animateFreightCounters() {
+                const targets = {
+                    freightTypes: 5,
+                    freightYears: 30,
+                    freightPhotos: 7
+                };
+                
+                let current = {
+                    freightTypes: 0,
+                    freightYears: 0,
+                    freightPhotos: 0
+                };
+                
+                const typesElement = document.getElementById('freightTypes');
+                const yearsElement = document.getElementById('freightYears');
+                const photosElement = document.getElementById('freightPhotos');
+                
+                if (!typesElement || !yearsElement || !photosElement) return;
+                
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    
+                    if (current.freightTypes < targets.freightTypes) {
+                        current.freightTypes += 1;
+                        if (current.freightTypes > targets.freightTypes) {
+                            current.freightTypes = targets.freightTypes;
+                        }
+                        typesElement.textContent = current.freightTypes;
+                        allFinished = false;
+                    }
+                    
+                    if (current.freightYears < targets.freightYears) {
+                        current.freightYears += Math.ceil(targets.freightYears / 50);
+                        if (current.freightYears > targets.freightYears) {
+                            current.freightYears = targets.freightYears;
+                        }
+                        yearsElement.textContent = current.freightYears;
+                        allFinished = false;
+                    }
+                    
+                    if (current.freightPhotos < targets.freightPhotos) {
+                        current.freightPhotos += Math.ceil(targets.freightPhotos / 50);
+                        if (current.freightPhotos > targets.freightPhotos) {
+                            current.freightPhotos = targets.freightPhotos;
+                        }
+                        photosElement.textContent = current.freightPhotos;
+                        allFinished = false;
+                    }
+                    
+                    if (allFinished) {
+                        clearInterval(interval);
+                    }
+                }, 30);
+            }
+            
+            animateFreightCounters();
+            
+            // Настройка галереи
+            const galleryModal = document.getElementById('galleryModal');
+            const galleryModalContent = document.getElementById('galleryModalContent');
+            const galleryCloseBtn = document.getElementById('galleryModalClose');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            if (galleryModal && galleryItems.length > 0) {
+                galleryItems.forEach(item => {
+                    item.addEventListener('click', function() {
+                        const img = this.querySelector('img');
+                        const caption = this.querySelector('.gallery-caption').textContent;
+                        const author = this.querySelector('p')?.textContent || '';
+                        
+                        if (galleryModalContent) {
+                            galleryModalContent.innerHTML = `
+                                <img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}">
+                                <p style="text-align:center; margin-top:1rem; color:#333;">${caption}</p>
+                                <p style="text-align:center; color:#666;">${author}</p>
+                            `;
+                        }
+                        
+                        galleryModal.classList.add('active');
+                    });
+                });
+                
+                if (galleryCloseBtn) {
+                    galleryCloseBtn.addEventListener('click', function() {
+                        galleryModal.classList.remove('active');
+                    });
+                }
+                
+                window.addEventListener('click', function(e) {
+                    if (e.target === galleryModal) {
+                        galleryModal.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

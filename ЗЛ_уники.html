@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Замоскворецкая линия — история и уникальные поезда — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Замоскворецкая линия (ЗЛ)</h1>
+            <p class="subtitle">Вторая линия Московского метрополитена — история и уникальные поезда</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="Главная_Страница_Мосметро.html">🏙️ Мосметро</a></li>
+                    <li><a href="#about">О линии</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#unique">Уникальные поезда</a></li>
+                    <li><a href="#stations">Станции</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Замоскворецкая линия</h2>
+                <p class="hero-text">Замоскворецкая линия (ЗЛ) — вторая линия Московского метрополитена, открытая <strong>11 сентября 1938 года</strong>. Она соединила центр города с Замоскворечьем, откуда и получила своё название. Сегодня это одна из самых загруженных линий столичной подземки.</p>
+                <p class="hero-text">Список уникальных составов актуален на 21 ноября 2025 года.</p>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="zlYear">0</div>
+                        <div class="stat-label">год открытия</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="zlStations">0</div>
+                        <div class="stat-label">станций</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="zlUnique">0</div>
+                        <div class="stat-label">уникальных составов</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Общая информация -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+                <span class="card-icon">🚇</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Основные параметры Замоскворецкой линии</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Дата открытия</td><td>11 сентября 1938 года</td></tr>
+                        <tr><td>Длина</td><td>42,8 км</td></tr>
+                        <tr><td>Количество станций</td><td>24</td></tr>
+                        <tr><td>Цвет на схеме</td><td>🟢 Зелёный</td></tr>
+                        <tr><td>Первые станции</td><td>«Сокол» — «Площадь Свердлова» (ныне «Театральная»)</td></tr>
+                        <tr><td>Название до 1990</td><td>Горьковско-Замоскворецкая линия</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p>⭐ <strong>Интересный факт:</strong> Замоскворецкая линия — вторая по дате открытия в Московском метрополитене и одна из самых загруженных. В 2025 году она перевезла более 500 миллионов пассажиров.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- История линии -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История линии</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">1936–1938</div>
+                        <div class="timeline-content">
+                            <h3>Строительство второй очереди</h3>
+                            <p>В 1936 году началось строительство второй очереди метро — от «Сокола» до «Площади Свердлова». Работы велись в сложных условиях, включая участок под Москвой-рекой.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">11.09.1938</div>
+                        <div class="timeline-content">
+                            <h3>Торжественное открытие</h3>
+                            <p>Открыта вторая линия от станции «Сокол» до станции «Площадь Свердлова» (ныне «Театральная»). В день открытия по линии проехали более 250 тысяч пассажиров.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1943–1945</div>
+                        <div class="timeline-content">
+                            <h3>Строительство в военные годы</h3>
+                            <p>В годы Великой Отечественной войны продолжалось строительство. В 1943 году открыты станции «Новокузнецкая» и «Павелецкая». Метро использовалось как бомбоубежище.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1950–1960-е</div>
+                        <div class="timeline-content">
+                            <h3>Продление на юг</h3>
+                            <p>Линия продлена до «Автозаводской» (1943), «Коломенской» (1969). Строительство новых станций в спальных районах.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1970–1980-е</div>
+                        <div class="timeline-content">
+                            <h3>Развитие линии</h3>
+                            <p>Открыты станции «Каширская» (1969), «Кантемировская» (1984), «Царицыно» (1984), «Орехово» (1985), «Домодедовская» (1985), «Красногвардейская» (1985).</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1990</div>
+                        <div class="timeline-content">
+                            <h3>Переименование</h3>
+                            <p>Горьковско-Замоскворецкая линия переименована в Замоскворецкую.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2010-е — 2020-е</div>
+                        <div class="timeline-content">
+                            <h3>Современный этап</h3>
+                            <p>Открыты станции «Алма-Атинская» (2012), «Технопарк» (2015), «Беломорская» (2018). Линия продолжает развиваться.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Итог:</strong> За 87 лет Замоскворецкая линия прошла путь от 9 станций до современной магистрали длиной более 42 км с 24 станциями.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Уникальные составы -->
+        <section id="unique" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Уникальные экземпляры на линии</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">На ЗЛ (линия 2) есть следующие уникальные вагоны и составы (актуально на 21.11.2025):</p>
+
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="train-card">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem;">🎨</span>
+                            <h3 style="margin: 0;">0373-0379 трёхцветная маска</h3>
+                        </div>
+                        <p>Состав с уникальной трёхцветной окраской передней маски, отличающейся от стандартной.</p>
+                        <a href="0373-0379.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem;">🚃</span>
+                            <h3 style="margin: 0;">0320 длинный флаг</h3>
+                        </div>
+                        <p>Вагон №0320 с нестандартным оформлением — «длинный флаг».</p>
+                        <a href="#" class="btn btn-secondary" style="width: 100%;" onclick="showComingSoon('0320'); return false;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem;">⚙️</span>
+                            <h3 style="margin: 0;">81-570 (11346, 11347)</h3>
+                        </div>
+                        <p>Вагоны модели 81-570 — редкая 81-570_571.html модификация номерных вагонов.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li><strong>11346</strong></li>
+                            <li><strong>11347</strong></li>
+                        </ul>
+                        <a href="81-570_571.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem;">🦠</span>
+                            <h3 style="margin: 0;">Ковидные номерные</h3>
+                        </div>
+                        <p>Вагоны, получившие специальное оформление в период пандемии COVID-19.</p>
+                        <a href="Ковидные_номерные.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem;">🎨</span>
+                            <h3 style="margin: 0;">Моссаб трафы</h3>
+                        </div>
+                        <p>Вагоны с граффити и особым оформлением от «Моссаб».</p>
+                        <a href="Моссаб_трафы.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem;">💺</span>
+                            <h3 style="margin: 0;">Уникальные элементы в салоне</h3>
+                        </div>
+                        <p>Различные уникальные детали интерьера номерных вагонов: необычный пластик, диваны, сиденья, освещение и поручни.</p>
+                        <a href="elemen_in_81-717.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 2rem;">
+                    <p>Если вы знаете о других уникальных составах на Замоскворецкой линии, сообщите нам!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Станции -->
+        <section id="stations" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+                <span class="card-icon">🗺️</span>
+                <h2>Станции Замоскворецкой линии</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <div class="feature-item">
+                        <h3>Северный участок</h3>
+                        <ul style="margin: 0.5rem 0 0 1.2rem;">
+                            <li>«Ховрино»</li>
+                            <li>«Беломорская»</li>
+                            <li>«Речной вокзал»</li>
+                            <li>«Водный стадион»</li>
+                            <li>«Войковская»</li>
+                            <li>«Сокол»</li>
+                            <li>«Аэропорт»</li>
+                            <li>«Динамо»</li>
+                            <li>«Белорусская»</li>
+                            <li>«Маяковская»</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Центральный участок</h3>
+                        <ul style="margin: 0.5rem 0 0 1.2rem;">
+                            <li>«Тверская»</li>
+                            <li>«Театральная»</li>
+                            <li>«Новокузнецкая»</li>
+                            <li>«Павелецкая»</li>
+                            <li>«Автозаводская»</li>
+                            <li>«Технопарк»</li>
+                            <li>«Коломенская»</li>
+                            <li>«Каширская»</li>
+                            <li>«Кантемировская»</li>
+                            <li>«Царицыно»</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Южный участок</h3>
+                        <ul style="margin: 0.5rem 0 0 1.2rem;">
+                            <li>«Орехово»</li>
+                            <li>«Домодедовская»</li>
+                            <li>«Красногвардейская»</li>
+                            <li>«Зябликово»</li>
+                            <li>«Алма-Атинская»</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Замоскворецкая линия — одна из самых загруженных и интересных в Московском метро. Здесь можно встретить уникальные вагоны, сохранившие редкие детали интерьера и экстерьера».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Замоскворецкая линия»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="Главная_Страница_Мосметро.html">Московский метрополитен</a></li>
+                        <li><a href="Живая_история_Мск_метро.html">Живая история</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Замоскворецкая линия — вторая линия Московского метро</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="comingSoonModal">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <div class="modal-body">
+                <h2>🚧 Страница в разработке</h2>
+                <p id="modalMessage">Подробная информация появится позже.</p>
+                <button class="btn btn-primary" id="modalOkBtn">Понятно</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function animateZlCounters() {
+                const targets = { zlYear: 1938, zlStations: 24, zlUnique: 7 };
+                let current = { zlYear: 0, zlStations: 0, zlUnique: 0 };
+                const yearEl = document.getElementById('zlYear');
+                const stationsEl = document.getElementById('zlStations');
+                const uniqueEl = document.getElementById('zlUnique');
+                if (!yearEl || !stationsEl || !uniqueEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.zlYear < targets.zlYear) {
+                        current.zlYear += Math.ceil(targets.zlYear / 50);
+                        if (current.zlYear > targets.zlYear) current.zlYear = targets.zlYear;
+                        yearEl.textContent = current.zlYear;
+                        allFinished = false;
+                    }
+                    if (current.zlStations < targets.zlStations) {
+                        current.zlStations += 1;
+                        if (current.zlStations > targets.zlStations) current.zlStations = targets.zlStations;
+                        stationsEl.textContent = current.zlStations;
+                        allFinished = false;
+                    }
+                    if (current.zlUnique < targets.zlUnique) {
+                        current.zlUnique += 1;
+                        if (current.zlUnique > targets.zlUnique) current.zlUnique = targets.zlUnique;
+                        uniqueEl.textContent = current.zlUnique;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateZlCounters();
+        });
+
+        const modal = document.getElementById('comingSoonModal');
+        const modalMessage = document.getElementById('modalMessage');
+        const closeBtn = document.getElementById('modalClose');
+        const okBtn = document.getElementById('modalOkBtn');
+
+        window.showComingSoon = function(item) {
+            if (modal && modalMessage) {
+                if (item === '0320') {
+                    modalMessage.textContent = 'Подробная информация о вагоне 0320 с длинным флагом появится позже.';
+                } else if (item === '81-570') {
+                    modalMessage.textContent = 'Подробная информация о вагонах модели 81-570 (11346, 11347) появится позже.';
+                } else {
+                    modalMessage.textContent = 'Подробная информация появится позже.';
+                }
+                modal.classList.add('active');
+            }
+        }
+
+        function closeModal() {
+            if (modal) modal.classList.remove('active');
+        }
+
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (okBtn) okBtn.addEventListener('click', closeModal);
+
+        window.addEventListener('click', function(e) {
+            if (e.target === modal) closeModal();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вагон 0665 — старые поручни (Живая история) — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Вагон 0665</h1>
+            <p class="subtitle">Один из немногих пассажирских вагонов с поручнями старого образца</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="Живая_история_Мск_метро.html">📚 Живая история</a></li>
+                    <li><a href="#about">О вагоне</a></li>
+                    <li><a href="#interior">Экстерьер</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#composition">Составность</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Вагон 0665</h2>
+                <p class="hero-text">Этот вагон был построен <strong>02.1991</strong> на Мытищинском вагоностроительном заводе (МВЗ). Это единственный эксплуатировавшийся пассажирский вагон, в котором можно было увидеть <strong>поручни старого образца</strong>.</p>
+                <p class="hero-text"><strong>Внимание:</strong> Вагон выведен из эксплуатации (02.2026) и ожидает исключения. Ранее ходил по Замоскворецкой линии (ЗЛ).</p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="vYear">0</div>
+                        <div class="stat-label">год постройки</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="vCars">0</div>
+                        <div class="stat-label">вагонов в составе</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="vYears">0</div>
+                        <div class="stat-label">лет в эксплуатации</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Общая информация -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #922B21 0%, #C0392B 100%);">
+                <span class="card-icon">ℹ️</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Основные параметры вагона 0665</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Город</td><td>Москва 🇷🇺</td></tr>
+                        <tr><td>Депо/Парк</td><td>ТЧ-17 «Южное» (ранее ТЧ-5 «Калужское»)</td></tr>
+                        <tr><td>Модель</td><td>81-714.5 (ММЗ/МВМ)</td></tr>
+                        <tr><td>Построен</td><td>02.1991</td></tr>
+                        <tr><td>Начало работы</td><td>12.2023</td></tr>
+                        <tr><td>Отставлен</td><td>02.2026</td></tr>
+                        <tr><td>Назначение</td><td>Пассажирский</td></tr>
+                        <tr><td>Текущее состояние</td><td>Выведен из эксплуатации / ожидание исключения</td></tr>
+                        <tr><td>Особенность</td><td>Один из немногих пассажирских вагонов с поручнями старого образца</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Экстерьер и интерьер -->
+        <section id="interior" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #D35400 0%, #E67E22 100%);">
+                <span class="card-icon">🎨</span>
+                <h2>Экстерьер и интерьер</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="feature-item">
+                        <h3>🎨 Экстерьер</h3>
+                        <ul>
+                            <li>Окрас бирюзового цвета с белыми полосами по борту</li>
+                            <li>Три ребра жёсткости</li>
+                            <li>Расположение сигнальных ламп: вертикальное</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🪑 Интерьер</h3>
+                        <ul>
+                            <li>Поручни:
+                                <ul>
+                                    <li>02.1991 — 12.2011: вертикальные</li>
+                                    <li>С 12.2011: <strong>старого образца</strong></li>
+                                </ul>
+                            </li>
+                            <li>Диваны, обшитые коричневым кожзаменителем</li>
+                            <li>Пластик:
+                                <ul>
+                                    <li>02.1991 — 12.2011: бежевого цвета под дерево</li>
+                                    <li>С 12.2011: бежевого цвета</li>
+                                </ul>
+                            </li>
+                            <li>Освещение:
+                                <ul>
+                                    <li>02.1991 — 12.2011: лампы типа ЛПВ-01</li>
+                                    <li>С 12.2011: лампы «Электро-Петербург»</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- История -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История вагона</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">02.1991</div>
+                        <div class="timeline-content">
+                            <h3>Постройка вагона</h3>
+                            <p>Вагон построен на Мытищинском машиностроительном заводе (ММЗ/МВМ).</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">05.1991</div>
+                        <div class="timeline-content">
+                            <h3>Поступление в депо</h3>
+                            <p>Поступил в депо приписки ТЧ-5 «Калужское».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">02.1991 — 12.2011</div>
+                        <div class="timeline-content">
+                            <h3>Вертикальные поручни</h3>
+                            <p>В вагоне были установлены вертикальные поручни стандартного образца. Освещение: лампы типа ЛПВ-01.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">12.2011</div>
+                        <div class="timeline-content">
+                            <h3>Капитальный ремонт / ОЭВРЗ</h3>
+                            <p>Проведён капитальный ремонт на ОЭВРЗ. Установлены поручни старого образца, освещение — лампы «Электро-Петербург».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">09.02.2022 — 02.2023</div>
+                        <div class="timeline-content">
+                            <h3>Хранение в ТЧ-20 «Руднёво»</h3>
+                            <p>Временное хранение в ТЧ-20 «Руднёво».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">26.11.2023</div>
+                        <div class="timeline-content">
+                            <h3>Перевод в ТЧ-17 «Южное»</h3>
+                            <p>Переведён из ТЧ-5 «Калужское» в ТЧ-17 «Южное».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">12.2023</div>
+                        <div class="timeline-content">
+                            <h3>Начало работы в ТЧ-17</h3>
+                            <p>Начал работу в депо ТЧ-17 «Южное» на Замоскворецкой линии.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">02.2026</div>
+                        <div class="timeline-content">
+                            <h3>Выведен из эксплуатации</h3>
+                            <p>Вагон отставлен и ожидает исключения.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Составность -->
+        <section id="composition" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Составность</h2>
+            </div>
+            <div class="card-content">
+                <div class="highlight-box">
+                    <p style="font-size: 1.3rem; text-align: center; font-weight: bold;">
+                        0365 — 1101 — 0939 — 1365 — 11175 — 0665 — 0962 — 0347
+                    </p>
+                    <p style="text-align: center; color: var(--text-secondary); margin-top: 0.5rem;">8 вагонов</p>
+                </div>
+
+                <table style="margin-top: 1.5rem;">
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Количество вагонов</td><td>8</td></tr>
+                        <tr><td>Депо</td><td>ТЧ-17 «Южное»</td></tr>
+                        <tr><td>Линия</td><td>Замоскворецкая (ЗЛ)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Фотогалерея (ВСЕ ФОТО ЗДЕСЬ) -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/0665.jpg" alt="Вагон 0665 на станции Красногвардейская" onerror="this.src='https://via.placeholder.com/800x500?text=Вагон+0665'">
+                        <div class="gallery-caption">Вагон 0665 на станции «Красногвардейская».</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 LASTOR_F</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Вагон 0665 — это настоящий живой памятник истории Московского метрополитена. Единственный пассажирский вагон с поручнями старого образца, к сожалению, уже выведен из эксплуатации, но его история останется в памяти».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Живая история метро»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="Живая_история_Мск_метро.html">Живая история</a></li>
+                        <li><a href="elemen_in_81-717.html">Элементы 81-717</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Информация собрана из открытых источников и может быть изменена.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
+            function animateCounters() {
+                const targets = { vYear: 1991, vCars: 8, vYears: 35 };
+                let current = { vYear: 0, vCars: 0, vYears: 0 };
+                const yearEl = document.getElementById('vYear');
+                const carsEl = document.getElementById('vCars');
+                const yearsEl = document.getElementById('vYears');
+                if (!yearEl || !carsEl || !yearsEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.vYear < targets.vYear) {
+                        current.vYear += Math.ceil(targets.vYear / 50);
+                        if (current.vYear > targets.vYear) current.vYear = targets.vYear;
+                        yearEl.textContent = current.vYear;
+                        allFinished = false;
+                    }
+                    if (current.vCars < targets.vCars) {
+                        current.vCars += 1;
+                        if (current.vCars > targets.vCars) current.vCars = targets.vCars;
+                        carsEl.textContent = current.vCars;
+                        allFinished = false;
+                    }
+                    if (current.vYears < targets.vYears) {
+                        current.vYears += 1;
+                        if (current.vYears > targets.vYears) current.vYears = targets.vYears;
+                        yearsEl.textContent = current.vYears;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+
+            // Галерея
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
+                    if (content && img) {
+                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>

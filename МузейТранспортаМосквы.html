@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музей Транспорта Москвы — Постоянная экспозиция — ТЭПП</title>
+    <meta name="description" content="Музей Транспорта Москвы: постоянная экспозиция в гараже Константина Мельникова. Наземный транспорт, метро, интерактив, маршрут «Т».">
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Музей Транспорта Москвы</h1>
+            <p class="subtitle">Постоянная экспозиция в гараже Константина Мельникова</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Музеи_транспорта.html">🏛️ Музеи</a></li>
+                    <li><a href="#about">О музее</a></li>
+                    <li><a href="#video">Видео</a></li>
+                    <li><a href="#floor1">1 этаж</a></li>
+                    <li><a href="#floor2">−1 этаж</a></li>
+                    <li><a href="#unique">Единственные</a></li>
+                    <li><a href="#interactive">Интерактив</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#visit">Посещение</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Постоянная экспозиция</h2>
+                <p class="hero-text">Прошлое, настоящее и будущее городского транспорта: от конки и первых автобусов до беспилотных технологий и современных вагонов метро.</p>
+                <p class="hero-text">Постоянная экспозиция рассказывает 150-летнюю историю Москвы через транспорт и показывает, как он менял город, архитектуру, промышленность, жизнь и привычки москвичей.</p>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="exhibitsCount">0</div>
+                        <div class="stat-label">единиц техники</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="uniqueCount">0</div>
+                        <div class="stat-label">единственных в мире</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="simulatorsCount">0</div>
+                        <div class="stat-label">симуляторов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="floorsCount">0</div>
+                        <div class="stat-label">этажа</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Видеообзор -->
+        <section id="video" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E74C3C 0%, #C0392B 100%);">
+                <span class="card-icon">🎥</span>
+                <h2>Видеообзор музея</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Если хотите сначала увидеть музей своими глазами — посмотрите видеообзор. Он покажет, как выглядит экспозиция, что стоит увидеть в первую очередь и как устроено пространство.</p>
+
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/jfdkCHOngaM"
+                        title="Обзор Музея Транспорта Москвы"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">
+                    🎬 Видеообзор постоянной экспозиции
+                </p>
+        </section>
+
+        <!-- 1 этаж -->
+        <section id="floor1" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+                <span class="card-icon">🚌</span>
+                <h2>1 этаж: Наземный транспорт</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Первый этаж — это путешествие длиной в 150 лет. Здесь всё построено как хронологическая лента: вы идёте от конки 1872 года к беспилотникам, и на каждом шаге эпоха меняется — меняются вывески, освещение, звуки, даже запахи.</p>
+
+                <div class="highlight-box">
+                    <p><strong>Как устроен этаж:</strong> шесть тематических разделов соединены «порталами» — переходами между эпохами. Портал — это не просто арка, а мультимедийный коридор, где на стены проецируются кадры кинохроники, плакаты и фотографии. Благодаря им переход из одной эпохи в другую ощущается как путешествие во времени.</p>
+                </div>
+
+                <h3 style="margin: 1.5rem 0 1rem;">Оформление и детали</h3>
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div class="feature-item">
+                        <h3>🎨 Цвет и свет</h3>
+                        <p>Каждый раздел окрашен в свой цвет — от тёплого песочного у конки до холодного синего у беспилотников. Свет тоже меняется: где-то это тусклые газовые фонари, где-то — холодные светодиодные линии.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>📜 Вывески и надписи</h3>
+                        <p>На стенах — подлинные вывески, таблички, номера маршрутов, объявления. Часть из них — оригиналы, часть — воссозданные по архивным фото.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🔊 Звук</h3>
+                        <p>В залах звучит фоновая аудиодорожка: звонки трамваев, шум улиц, голоса диспетчеров. Это создаёт эффект присутствия и помогает перенестись в эпоху.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🏗️ Архитектура залов</h3>
+                        <p>Здание гаража Мельникова — само по себе экспонат. Наклонные витражи кровли, кирпичная кладка, скошенные фронтоны — всё это часть экспозиции, и её видно с любого ракурса.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🚶 Маршрут</h3>
+                        <p>Экспозиция построена как единый маршрут — вы не можете случайно «перескочить» через эпоху. Каждый раздел перетекает в следующий, как кадры кинохроники.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🔍 Мелкие детали</h3>
+                        <p>Обратите внимание на мелочи: билеты, жетоны, форменные пуговицы, инструменты, старые схемы маршрутов. Именно они делают историю живой.</p>
+                    </div>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">Разделы экспозиции</h3>
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="train-card"><h3>Точка отсчёта</h3><p>Пролог о фундаментальных основах транспорта. Три интерактивные инсталляции.</p></div>
+                    <div class="train-card"><h3>От извозчика до трамвая</h3><p>Вторая половина XIX века. Центральные экспонаты: вагон конки 1872 года, трамвайный вагон БФ, макет Daimler Omnibus 1 T.</p></div>
+                    <div class="train-card"><h3>Портал «Транспорт революции»</h3><p>Переход из Москвы дореволюционной в Москву советскую глазами её жителей.</p></div>
+                    <div class="train-card"><h3>Машины для города. 1920–1930-е</h3><p>Первые гаражи, эпоха первой пятилетки, история ЗИС. Центральные экспонаты: ЗИС-8 и макет ЯТБ-3.</p></div>
+                    <div class="train-card"><h3>Портал «Технологии трудного времени»</h3><p>Транспорт в годы Великой Отечественной войны. Центральный экспонат — ГАЗ-АА «полуторка».</p></div>
+                    <div class="train-card"><h3>Город для людей. 1950–1960-е</h3><p>Послевоенные преобразования, автомобили личного пользования, советская школа дизайна.</p></div>
+                    <div class="train-card"><h3>Режим ожидания. 1970–1980-е</h3><p>Транспортная система определяла жизнь новых периферийных районов.</p></div>
+                    <div class="train-card"><h3>Портал «Московские дороги эпохи перемен»</h3><p>Перемены 1990-х. Главный символ — маршрутная ГАЗ-32213 «ГАЗель».</p></div>
+                    <div class="train-card"><h3>Сегодня — послезавтра</h3><p>Умная инфраструктура, автономные системы, R1, MatrЁshka, беспилотный автомобиль «Яндекса».</p></div>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">Полный список экспонатов 1 этажа (46 единиц наземного транспорта)</h3>
+
+                <h4 style="margin: 1.5rem 0 0.8rem;">Трамваи и конка</h4>
+                <table>
+                    <thead><tr><th>№</th><th>Модель</th><th>Подробнее</th></tr></thead>
+                    <tbody>
+                        <tr><td>35</td><td>Конка 1872 года</td><td><a href="Конка_1872_года_35.html">Подробнее →</a></td></tr>
+                        <tr><td>932</td><td>БФ 1927 года</td><td>Единственный отреставрированный в мире</td></tr>
+                        <tr><td>—</td><td>R1 (Russia One) 2014</td><td>Опытный трёхсекционный низкопольный</td></tr>
+                        <tr><td>б/н</td><td>71-410</td><td>—</td></tr>
+                        <tr><td>1075</td><td>МТВ-82</td><td><a href="МТВ-82 №1075.html">Подробнее →</a></td></tr>
+                        <tr><td>3130</td><td>Двухосный моторный СВАРЗ</td><td><a href="Двухосный моторный СВАРЗ №3130.html">Подробнее →</a></td></tr>
+                        <tr><td>5993</td><td>Tatra T3SU</td><td><a href="Tatra T3SU №5993.html">Подробнее →</a></td></tr>
+                        <tr><td>932</td><td>«БесФонарный»</td><td><a href="«Бесфонарный»_№932.html">Подробнее →</a></td></tr>
+                        <tr><td>0020</td><td>«Фонарный»</td><td>-</td></tr>
+                    </tbody>
+                </table>
+
+                <h4 style="margin: 1.5rem 0 0.8rem;">Автобусы, троллейбусы, микроавтобусы</h4>
+                <table>
+                    <thead><tr><th>Модель</th><th>Подробнее</th></tr></thead>
+                    <tbody>
+                        <tr><td>ЗИС-154</td><td><a href="ЗИС-154.html">Подробнее →</a></td></tr>
+                        <tr><td>ЗИС-8</td><td><a href="ЗИС-8.html">Подробнее →</a></td></tr>
+                        <tr><td>ЗИС-155</td><td><a href="ЗИС-155.html">Подробнее →</a></td></tr>
+                        <tr><td>ЗИЛ-158</td><td><a href="ЗИЛ-158.html">Подробнее →</a></td></tr>
+                        <tr><td>ЛиАЗ-677</td><td><a href="LiAz-677.html">Подробнее →</a></td></tr>
+                        <tr><td>ЛАЗ-695 «Львов»</td><td><a href="LAZ-695_Lvov_mus.html">Подробнее →</a></td></tr>
+                        <tr><td>Ikarus 55</td><td><a href="Ikarus 55.html">Подробнее →</a></td></tr>
+                        <tr><td>Ikarus 180</td><td><a href="Ikarus 180.html">Подробнее →</a></td></tr>
+                        <tr><td>Ikarus 280</td><td><a href="Ikarus 280.html">Подробнее →</a></td></tr>
+                        <tr><td>ПАЗ-652Б</td><td><a href="ПАС-652Б.html">Подробнее →</a></td></tr>
+                        <tr><td>Daimler Omnibus 1 T</td><td><a href="Daimler Omnibus 1 T.html">Подробнее →</a></td></tr>
+                        <tr><td>ЯТБ-3</td><td><a href="YTB-3.html">Подробнее →</a></td></tr>
+                        <tr><td>ТБЭС-ВСХВ</td><td>Единственный уцелевший из серии для ВСХВ</td></tr>
+                        <tr><td>ГАЗ-32213 «ГАЗель»</td><td><a href="gaz-32213.html">Подробнее →</a></td></tr>
+                        <tr><td>РАФ-976</td><td><a href="RAF-976.html">Подробнее →</a></td></tr>
+                    </tbody>
+                </table>
+
+                <h4 style="margin: 1.5rem 0 0.8rem;">Грузовые и специальные</h4>
+                <table>
+                    <thead><tr><th>Модель</th><th>Особенность</th></tr></thead>
+                    <tbody>
+                        <tr><td>ГАЗ-АА «полуторка»</td><td>Легендарный грузовик, всё ещё на ходу</td></tr>
+                    </tbody>
+                </table>
+
+                <h4 style="margin: 1.5rem 0 0.8rem;">Современные и беспилотные</h4>
+                <table>
+                    <thead><tr><th>Модель</th><th>Подробнее</th></tr></thead>
+                    <tbody>
+                        <tr><td>MatrЁshka 2016</td><td><a href="Matreshka.html">Подробнее →</a></td></tr>
+                        <tr><td>Беспилотный автомобиль «Яндекса»</td><td><a href="bespilot_auto_Yandex_toyata_prios.html">Подробнее →</a></td></tr>
+                    </tbody>
+                </table>
+
+                <div style="text-align: center; margin: 2.5rem 0 1rem;">
+                    <a href="МузейТранспортаМосквы_1этаж.html" style="display: inline-block; padding: 1rem 2.5rem; background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%); color: #fff; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);">🚌 Подробнее о 1 этаже →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- −1 этаж -->
+        <section id="floor2" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">🚇</span>
+                <h2>−1 этаж: Метро</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Подземный уровень — отдельная вселенная. Сюда метровагоны спускали через монтажный проём длиной более 22 метров, и это само по себе инженерное чудо. Экспозиция построена как «формула метро»: семь разделов, которые вместе объясняют, как метро устроено, как оно строилось и как работает каждый день.</p>
+
+                <div class="highlight-box">
+                    <p><strong>Как устроен этаж:</strong> семь разделов идут по кругу, и каждый раскрывает одну грань метро — от проходческого щита до голоса диспетчера. В центре — макет станции, вокруг которого и строится весь маршрут.</p>
+                </div>
+
+                <h3 style="margin: 1.5rem 0 1rem;">Оформление и детали</h3>
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div class="feature-item">
+                        <h3>🛠️ Макет проходческого щита</h3>
+                        <p>Главный аттракцион этажа — макет проходческого щита в разрезе. Можно рассмотреть, как устроена машина: рабочий орган с резцами, механизмы для установки тюбингов, платформы.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🎧 Голос метрополитена</h3>
+                        <p>Инсталляция «Голос метрополитена» — можно услышать, как объявления звучали в разные годы. От первых записей до современных.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>📐 Макет станции</h3>
+                        <p>В центре зала — детальный макет станции метро. Можно рассмотреть, как устроены платформы, пути, эскалаторы, вентиляция.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🎨 Архитектура подземки</h3>
+                        <p>Отдельный раздел — про архитектуру станций: макеты, чертежи, фотографии. От первой очереди до БКЛ.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🎛️ Симулятор диспетчера</h3>
+                        <p>Можно посидеть за пультом диспетчера ЕДЦ и понять, сколько решений принимается каждую минуту.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🚇 Подвижной состав</h3>
+                        <p>Вагоны метро Москвы выстроены в хронологическом порядке. Это редкая возможность увидеть их все в одном месте.</p>
+                    </div>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">Разделы экспозиции</h3>
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="train-card"><h3>Метрострой</h3><p>От личных историй первых метростроевцев до современных технологий. Шестиметровый макет проходческого щита с видеомэппингом.</p></div>
+                    <div class="train-card"><h3>Устройство станции</h3><p>Станции как сложнейший технологический комплекс. Макет станции.</p></div>
+                    <div class="train-card"><h3>Системы управления</h3><p>Симулятор диспетчера — сколько решений принимают специалисты каждую минуту.</p></div>
+                    <div class="train-card"><h3>Архитектура</h3><p>Макеты, чертежи, фотографии — от станций первой очереди до БКЛ.</p></div>
+                    <div class="train-card"><h3>Планирование и развитие</h3><p>От первых идей до современной схемы. Объёмная инсталляция.</p></div>
+                    <div class="train-card"><h3>Подвижной состав</h3><p>Вагоны метро Москвы в хронологическом порядке.</p></div>
+                    <div class="train-card"><h3>Навигация</h3><p>Инсталляция «Голос метрополитена».</p></div>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">Полный список экспонатов −1 этажа (7 единиц)</h3>
+                <table>
+                    <thead><tr><th>№</th><th>Модель</th><th>Узнать больше</th></tr></thead>
+                    <tbody>
+                        <tr><td>158</td><td>В-4</td><td><a href="Type_V_158.html">Подробнее →</a></td></tr>
+                        <tr><td>661</td><td>Г</td><td><a href="Type_G_661.html">Подробнее →</a></td></tr>
+                        <tr><td>5946</td><td>Еж3</td><td><a href="Type_Ezh3_5946.html">Подробнее →</a></td></tr>
+                        <tr><td>8535</td><td>81-717 (ЛВЗ)</td><td><a href="8535музей.html">Подробнее →</a></td></tr>
+                        <tr><td>0021</td><td>81-720 «Яуза»</td><td><a href="Яуза0021.html">Подробнее →</a></td></tr>
+                        <tr><td>65000</td><td>81-765.4 «Москва-2019»</td><td><a href="M19_65000.html">Подробнее →</a></td></tr>
+                        <tr><td>АГМу-13137</td><td>АГМу (автодрезина)</td><td><a href="AGMy-13137.html">Подробнее →</a></td></tr>
+                    </tbody>
+                </table>
+
+                <div style="text-align: center; margin: 2.5rem 0 1rem;">
+                    <a href="musiem_transport_moscow-1.html" style="display: inline-block; padding: 1rem 2.5rem; background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%); color: #fff; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 15px rgba(142, 68, 173, 0.4);">🚇 Подробнее о −1 этаже →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Единственные в мире -->
+        <section id="unique" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">⭐</span>
+                <h2>Единственные в мире</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Четыре экспоната постоянной экспозиции сохранились в единственном экземпляре.</p>
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="train-card">
+                        <h3>Конка 1872 года</h3>
+                        <p>Единственный аутентичный вагон московской конно-железной дороги. Его ходовая часть почти весь XX век проработала в составе трамвайной вышки для ремонта контактной сети; в 1999 году основание отреставрировали и построили на нём деревянный кузов с империалом.</p>
+                    </div>
+                    <div class="train-card">
+                        <h3>Метровагон типа В (1927)</h3>
+                        <p>Единственный сохранившийся вагон восьмидверной модификации. Списан в 1968 году, но не утилизирован: до 2021 года служил подсобным помещением в депо «Красная Пресня». Под поздней обшивкой реставраторы нашли оригинальную отделку салона и артефакты, включая схему берлинского метро.</p>
+                    </div>
+                    <div class="train-card">
+                        <h3>Трамвайный вагон БФ (1927)</h3>
+                        <p>Один из двух сохранившихся в мире и единственный в отреставрированном экспозиционном состоянии.</p>
+                    </div>
+                    <div class="train-card">
+                        <h3>Троллейбус ТБЭС</h3>
+                        <p>Единственный уцелевший из серии машин, построенных специально для ВСХВ.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Интерактив -->
+        <section id="interactive" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+                <span class="card-icon">🎮</span>
+                <h2>Интерактив и мультимедиа</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div class="feature-item">
+                        <h3>94 интерактивные инсталляции</h3>
+                        <p>Можно занять место машиниста метро или диспетчера ЕДЦ, повести трамвай по Москве будущего, прокатиться по городу XX века в автобусе «Лейланд», собрать двигатель «Москвича-412» или подать инструмент мастеру дорожных работ.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>27 симуляторов</h3>
+                        <p>От кабины машиниста метро до пульта диспетчера.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>946 единиц медиаконтента</h3>
+                        <p>Более 220 макетов, включая тактильные.</p>
+                    </div>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">Мультимедиа-гид</h3>
+                <p>Устройство с экраном и наушниками само определяет, где вы находитесь, и включает нужную аудиоисторию. Доступны четыре маршрута:</p>
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <div class="train-card"><h3>«Куда едет Москва»</h3><p>История города через транспорт и городские ландшафты.</p></div>
+                    <div class="train-card"><h3>«Ретро-футуро-иммерсивная прогулка»</h3><p>Самые необычные и масштабные объекты.</p></div>
+                    <div class="train-card"><h3>«Чувство дороги»</h3><p>О жизни транспорта глазами тех, кто его создавал.</p></div>
+                    <div class="train-card"><h3>«Как всё устроено»</h3><p>Техническое устройство транспорта и инфраструктуры.</p></div>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">Детям</h3>
+                <p>По всей экспозиции проложен отдельный детский маршрут с «остановками» — интерактивными точками с заданиями. Рядом работает детский центр «Автолаборатория» и инженерная школа «Фаза» — мастер-классы для детей от 7 до 14 лет.</p>
+
+                <h3 style="margin: 2rem 0 1rem;">Доступная среда</h3>
+                <p>Пандусы и лифты, эргономичная мебель. Для незрячих — аудиомаршрут, этикетки шрифтом Брайля. Специально изготовлено 77 тактильных макетов.</p>
+            </div>
+        </section>
+
+        <!-- Здание -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E74C3C 0%, #C0392B 100%);">
+                <span class="card-icon">🏛️</span>
+                <h2>Здание — тоже экспонат</h2>
+            </div>
+            <div class="card-content">
+                <p>Постоянная экспозиция разместилась в гараже для грузовых машин, который Константин Мельников спроектировал в 1926 году, — это первый в стране специализированный грузовой гараж и объект культурного наследия. Треугольный участок задал зданию узнаваемую форму подковы. За сто лет здесь сменились таксомоторный парк, Авторемонтный завод № 5 военных лет и 4-й автобусный парк.</p>
+                <p style="margin-top: 1rem;">В ходе реставрации зданию вернули исторический облик: скошенные фронтоны, кирпичную кладку, световой фонарь и ленточные наклонные витражи кровли. Подземный уровень спроектировали специально под экспозицию о метро — метровагоны опускали через монтажный проём длиной более 22 метров.</p>
+                <p style="margin-top: 1rem;">Здание гаража — объект культурного наследия регионального значения и один из самых известных памятников советского конструктивизма.</p>
+            </div>
+        </section>
+
+        <!-- Галерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/Город_Для_Людей_Музей.jpg" alt="Раздел «Город для людей»" onerror="this.src='https://via.placeholder.com/800x500?text=Город+для+людей'">
+                        <div class="gallery-caption">Раздел «Город для людей. 1950–1960-е»</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary); font-size:0.85rem;">📸 new.mtmuseum.ru</p>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="img/Устройство_Станции.jpg" alt="Раздел «Устройство станции»" onerror="this.src='https://via.placeholder.com/800x500?text=Устройство+станции'">
+                        <div class="gallery-caption">Раздел «Устройство станции» — макет станции метро</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary); font-size:0.85rem;">📸 new.mtmuseum.ru</p>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="img/R1.jpg" alt="Трамвай R1" onerror="this.src='https://via.placeholder.com/800x500?text=Трамвай+R1'">
+                        <div class="gallery-caption">Трамвай R1 (Russia One) — опытный образец 2014 года</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary); font-size:0.85rem;">📸 new.mtmuseum.ru</p>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="img/Еж3&81-717.jpg" alt="Вагоны Еж3 и 81-717" onerror="this.src='https://via.placeholder.com/800x500?text=Еж3+и+81-717'">
+                        <div class="gallery-caption">Вагоны Еж3 и 81-717 в экспозиции музея</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary); font-size:0.85rem;">📸 Dmitry Zaharov</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Правила -->
+        <section id="rules" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E74C3C 0%, #C0392B 100%);">
+                <span class="card-icon">⚠️</span>
+                <h2>Правила посещения</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Простые правила, которые делают визит приятным и безопасным для всех.</p>
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <div class="feature-item" style="border-left: 4px solid #E74C3C;"><h3>🚫 Не наступайте</h3><p>Залезать на экспонаты опасно как для вас, так и для самой техники.</p></div>
+                    <div class="feature-item" style="border-left: 4px solid #E74C3C;"><h3>🚫 Не залезайте под вагон</h3><p>Под исторической техникой скрываются сложнейшие механизмы. Лучший ракурс для фото — сверху и со стороны!</p></div>
+                    <div class="feature-item" style="border-left: 4px solid #E74C3C;"><h3>🚫 Не трогайте</h3><p>Технику, которую нельзя трогать, мы пометили специальными стикерами.</p></div>
+                    <div class="feature-item" style="border-left: 4px solid #E74C3C;"><h3>⚠️ Осторожно под ногами</h3><p>Простая внимательность убережёт вас от случайных падений.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Маршрут «Т» -->
+        <section id="route-t" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+                <span class="card-icon">🚎</span>
+                <h2>Музейный маршрут «Т»</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Музейный маршрут «Т» — единственный троллейбусный маршрут в Москве. Он связывает Комсомольскую площадь и Новорязанскую улицу.</p>
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                    <div class="feature-item"><h3>🕐 Длительность</h3><p style="font-size: 1.3rem; font-weight: bold;">60 минут</p></div>
+                    <div class="feature-item"><h3>👥 Вместимость</h3><p style="font-size: 1.3rem; font-weight: bold;">до 25 человек</p></div>
+                    <div class="feature-item"><h3>🚶 Активность</h3><p style="font-size: 1.3rem; font-weight: bold;">1000 шагов</p></div>
+                </div>
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-top: 1.5rem;">
+                    <div class="train-card"><h3>Место встречи</h3><p>Остановка «Станция метро „Комсомольская“» — прошлое и настоящее исторического транспортного эпицентра.</p></div>
+                    <div class="train-card"><h3>Елоховская площадь</h3><p>Разговоры о культурной жизни московского троллейбуса с видом на Елоховский собор.</p></div>
+                    <div class="train-card"><h3>2-й троллейбусный парк</h3><p>Пешее продолжение поездки и знакомство с островком истории столичного «рогатого» транспорта.</p></div>
+                    <div class="train-card"><h3>Гараж Мельникова</h3><p>Архитектурный шедевр советского авангарда: новая жизнь бывшего гаража и будущего дома музея.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Музей Транспорта Москвы — место, где транспорт становится инструментом осмысления истории города, его жителей и будущего развития».</p>
+                <p class="quote-author">— Музей Транспорта Москвы</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Транспортные музеи»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Музеи_транспорта.html">Музеи</a></li>
+                        <li><a href="https://mtmuseum.ru/" target="_blank" rel="noopener">Официальный сайт</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Музей транспорта Москвы — постоянная экспозиция</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <!-- Модалка галереи -->
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики — запускаются при появлении в зоне видимости
+            const counters = document.querySelectorAll('.counter-number');
+            if (!counters.length) return;
+
+            const targets = {
+                exhibitsCount: 53,
+                uniqueCount: 4,
+                simulatorsCount: 27,
+                floorsCount: 2,
+                visitorsCount: 15000,
+                areaMuseum: 20,
+                exhibitsMuseum: 53
+            };
+
+            function animateCounter(el) {
+                const id = el.id;
+                const target = targets[id];
+                if (!target || el.dataset.animated) return;
+                el.dataset.animated = 'true';
+
+                let current = 0;
+                const step = Math.ceil(target / 50);
+                const interval = setInterval(function() {
+                    current += step;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(interval);
+                    }
+                    el.textContent = current.toLocaleString();
+                }, 30);
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            counters.forEach(c => observer.observe(c));
+        });
+    </script>
+</body>
+</html>

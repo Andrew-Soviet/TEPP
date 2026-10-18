@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Транспортные музеи — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Транспортные музеи</h1>
+            <p class="subtitle">Музеи и экспозиции, где можно увидеть исторический транспорт вживую</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="#mtm">Музей Транспорта Москвы</a></li>
+                    <li><a href="#rzd">Музей РЖД</a></li>
+                    <li><a href="#akulinin">Музей Акулинина</a></li>
+                    <li><a href="#metro">Музей метро</a></li>
+                    <li><a href="#gortrans">Музей электротранспорта</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Музеи транспорта</h2>
+                <p class="hero-text">В музеях и экспозициях можно увидеть исторический транспорт вживую — от первых вагонов метро до легендарных локомотивов. Многие экспонаты находятся на ходу и участвуют в парадах.</p>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="museumCount">0</div>
+                        <div class="stat-label">музеев</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="cityCount">0</div>
+                        <div class="stat-label">городов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="exhibitCount">0</div>
+                        <div class="stat-label">тысяч экспонатов</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Музей Транспорта Москвы -->
+        <section id="mtm" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E74C3C 0%, #C0392B 100%);">
+                <span class="card-icon">🏛️</span>
+                <h2>Музей Транспорта Москвы</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>📍 Адрес</h3>
+                        <p style="font-size: 1.1rem; font-weight: bold;">Гараж Мельникова</p>
+                        <p>Новорязанская улица, 27</p>
+                        <p>Хранилище: Ступинский проезд, 1, стр. 19 (только с экскурсией)</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🎫 Билеты</h3>
+                        <p>Стандартный — 900 ₽</p>
+                        <p>Льготный — 450 ₽</p>
+                        <p>Семейный — 1600 ₽</p>
+                    </div>
+                </div>
+                <div class="highlight-box" style="margin-top: 1rem;">
+                    <p><strong>Что можно увидеть:</strong> Одна из самых богатых коллекций транспорта Москвы — от гужевых повозок до современных электробусов. Советский таксомотор ГАЗ-24-04, грузовики, служебные машины.</p>
+                </div>
+                <div style="text-align: center; margin-top: 1rem;">
+                    <a href="МузейТранспортаМосквы.html" class="btn btn-primary">Подробнее →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Музей РЖД -->
+        <section id="rzd" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+                <span class="card-icon">🚂</span>
+                <h2>Музей РЖД (Центральный музей железнодорожного транспорта)</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>📍 Адрес</h3>
+                        <p style="font-size: 1.1rem; font-weight: bold;">Санкт-Петербург, Садовая ул., 50</p>
+                        <p>7 минут пешком от метро «Садовая», «Сенная площадь», «Спасская»</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🎫 Билеты</h3>
+                        <p>Взрослый — 400 ₽</p>
+                        <p>Школьный / студенческий — 200 ₽</p>
+                        <p>Дошкольный — 100 ₽</p>
+                    </div>
+                </div>
+                <div class="highlight-box" style="margin-top: 1rem;">
+                    <p><strong>Что можно увидеть:</strong> Один из старейших научно-технических музеев мира, основанный в 1813 году. Более 72 000 предметов в фондах. Уникальные коллекции моделей подвижного состава, мостов, устройств СЦБ, фотографий и документов.</p>
+                </div>
+                <div class="highlight-box" style="margin-top: 0.5rem; background: rgba(52, 152, 219, 0.1);">
+                    <p>⭐ <strong>Главный экспонат:</strong> Здание музея специально построено в 1902 году как «Музей ведомства путей сообщения имени императора Николая I».</p>
+                </div>
+                <div style="text-align: center; margin-top: 1rem;">
+                    <a href="404_file_dont_found.html" class="btn btn-primary">Официальный сайт →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Музей ЖД техники имени Н. А. Акулинина -->
+        <section id="akulinin" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Музей ЖД техники имени Н. А. Акулинина</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>📍 Адрес</h3>
+                        <p style="font-size: 1.1rem; font-weight: bold;">Новосибирск, станция Сеятель</p>
+                        <p>Разъездная ул., 35, рядом с Академгородком</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>📅 История</h3>
+                        <p>Основан в августе 2000 года</p>
+                        <p>По инициативе Николая Архиповича Акулинина — потомственного железнодорожника</p>
+                    </div>
+                </div>
+                <div class="highlight-box" style="margin-top: 1rem;">
+                    <p><strong>Что можно увидеть:</strong> Крупнейший за Уралом музей железнодорожной техники под открытым небом. Более 140 единиц исторического транспорта и 80 раритетных автомобилей. Личный вагон Троцкого, вагон-кухня и операционная санитарного поезда, вагоны для перевозки заключённых, танк-паровоз.</p>
+                </div>
+                <div class="highlight-box" style="margin-top: 0.5rem; background: rgba(46, 204, 113, 0.1);">
+                    <p>⭐ <strong>Главный экспонат:</strong> Макет в натуральную величину первого российского паровоза отца и сына Черепановых.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Народный музей Московского метрополитена -->
+        <section id="metro" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">🚇</span>
+                <h2>Народный музей Московского метрополитена</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>📍 Адрес</h3>
+                        <p style="font-size: 1.1rem; font-weight: bold;">Москва, станция «Выставочная»</p>
+                        <p>Центр профориентации Транспортного комплекса, вестибюль станции</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🎫 Вход</h3>
+                        <p style="font-size: 1.1rem; font-weight: bold;">Свободный</p>
+                        <p>Часы работы: ежедневно (кроме государственных праздников) с 10:00 до 18:00</p>
+                    </div>
+                </div>
+                <div class="highlight-box" style="margin-top: 1rem;">
+                    <p><strong>Что можно увидеть:</strong> Музей основан в 1967 году по инициативе ветеранов метрополитена и первой женщины-машиниста Зинаиды Троицкой. Коллекция собрана частными лицами и сотрудниками метро. Документы, фотографии, планы первых проектов, коллекции мрамора для отделки станций, первые турникеты, интерактивные тренажёры профессий метро.</p>
+                </div>
+                <div class="highlight-box" style="margin-top: 0.5rem; background: rgba(142, 68, 173, 0.1);">
+                    <p>⭐ <strong>Особенность:</strong> Музей называется «народным», так как коллекция собрана без государственного участия.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Музей городского электрического транспорта -->
+        <section id="gortrans" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #F1C40F 0%, #F39C12 100%);">
+                <span class="card-icon">🚊</span>
+                <h2>Музей городского электрического транспорта</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>📍 Адрес</h3>
+                        <p style="font-size: 1.1rem; font-weight: bold;">Санкт-Петербург, Средний пр. В.О., 77</p>
+                        <p>Территория бывшего трамвайного парка № 2</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🎫 Билеты</h3>
+                        <p>Взрослый — 530 ₽ (с 2025 года)</p>
+                        <p>Посещение только с экскурсией, по предварительной записи</p>
+                    </div>
+                </div>
+                <div class="highlight-box" style="margin-top: 1rem;">
+                    <p><strong>Что можно увидеть:</strong> 46 трамваев и 18 троллейбусов в двух ангарах. Почти все экспонаты на ходу и участвуют в парадах. От конки (более 100 лет) до трамваев 1990-х. Троллейбус МТБ-82Д 1947 года — тот самый «полночный синий троллейбус».</p>
+                </div>
+                <div class="highlight-box" style="margin-top: 0.5rem; background: rgba(241, 196, 15, 0.1);">
+                    <p>⭐ <strong>Особенность:</strong> Можно зайти почти в каждый трамвай или троллейбус, посидеть в салоне, прокомпостировать билетик.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Транспортные музеи — это не просто выставки техники. Это места, где история оживает, где можно прикоснуться к прошлому и увидеть, как развивался транспорт на протяжении десятилетий».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Транспортные музеи»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="#mtm">Музей Транспорта Москвы</a></li>
+                        <li><a href="#rzd">Музей РЖД</a></li>
+                        <li><a href="#akulinin">Музей Акулинина</a></li>
+                        <li><a href="#metro">Музей метро</a></li>
+                        <li><a href="#gortrans">Музей электротранспорта</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Открывайте историю транспорта в музеях</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function animateCounters() {
+                const targets = { museumCount: 5, cityCount: 4, exhibitCount: 100 };
+                let current = { museumCount: 0, cityCount: 0, exhibitCount: 0 };
+                const museumEl = document.getElementById('museumCount');
+                const cityEl = document.getElementById('cityCount');
+                const exhibitEl = document.getElementById('exhibitCount');
+                if (!museumEl || !cityEl || !exhibitEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.museumCount < targets.museumCount) {
+                        current.museumCount += 1;
+                        if (current.museumCount > targets.museumCount) current.museumCount = targets.museumCount;
+                        museumEl.textContent = current.museumCount;
+                        allFinished = false;
+                    }
+                    if (current.cityCount < targets.cityCount) {
+                        current.cityCount += 1;
+                        if (current.cityCount > targets.cityCount) current.cityCount = targets.cityCount;
+                        cityEl.textContent = current.cityCount;
+                        allFinished = false;
+                    }
+                    if (current.exhibitCount < targets.exhibitCount) {
+                        current.exhibitCount += Math.ceil(targets.exhibitCount / 50);
+                        if (current.exhibitCount > targets.exhibitCount) current.exhibitCount = targets.exhibitCount;
+                        exhibitEl.textContent = current.exhibitCount;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+        });
+    </script>
+</body>
+</html>

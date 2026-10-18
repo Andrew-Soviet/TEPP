@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎄 Новогодние поезда Московского метрополитена — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>🎄 Новогодние поезда Московского метро 🎅</h1>
+            <p class="subtitle">Праздничное украшение столичной подземки</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="Главная_Страница_Мосметро.html">🏙️ Мосметро</a></li>
+                    <li><a href="#about">О проекте</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#ng_train">Новогодние составы</a></li>
+                    <li><a href="#lines">Линии</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>🎄 Новогодние поезда</h2>
+                <p class="hero-text">Первый новогодний состав вышел на линию в 2016 году, им стал новогодний Еж3. Проект работает с 2016 года по настоящее время.</p>
+                <p class="hero-text">Даже во время пандемии составы всё равно выходили на линию и радовали пассажиров. Выпуск новогодних поездов уже стал традицией, эта традиция будет долго жить.</p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="ngStartYear">0</div>
+                        <div class="stat-label">год запуска проекта</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="ngLines">0</div>
+                        <div class="stat-label">линий с НГ-составами</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="ngTrainsCount">0</div>
+                        <div class="stat-label">составов</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- О проекте -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #C0392B 0%, #E74C3C 100%);">
+                <span class="card-icon">🎯</span>
+                <h2>О проекте</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Новогодние составы — это праздничные поезда, которые выходят на линии Московского метрополитена в преддверии Нового года и радуют пассажиров своим оформлением.</p>
+                
+                <h3 style="margin: 1.5rem 0 1rem;">Участвовавшие составы</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Состав</th>
+                            <th>Линия работы</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>🎄 Новогодний Русич 🎄</td><td>СокЛ (1)</td></tr>
+                        <tr><td>🎄 Новогодний 81-717 🎄</td><td>ЗЛ (2)</td></tr>
+                        <tr><td>🎄 Новогодний Русич 🎄</td><td>АПЛ (3)</td></tr>
+                        <tr><td>🎄 Новогодняя Москва 🎄</td><td>ФЛ (4)</td></tr>
+                        <tr><td>🎄 Новогодняя М20 🎄</td><td>КолЛ (5)</td></tr>
+                        <tr><td>🎄 Новогодняя Ока 🎄</td><td>КРЛ (6)</td></tr>
+                        <tr><td>🎄 Новогодний Еж3 (2016–2024) 🎄</td><td>ТКЛ (7)</td></tr>
+                        <tr><td>🎄 Новогодняя Москва (2025–?) 🎄</td><td>ТКЛ (7)</td></tr>
+                        <tr><td>🎄 Новогодняя Ока 🎄</td><td>КСЛ (8+8А)</td></tr>
+                        <tr><td>🎄 Новогодняя Ока 🎄</td><td>СТЛ (9)</td></tr>
+                        <tr><td>🎄 Новогодние трафы 🎄</td><td>ЛДЛ (10)</td></tr>
+                        <tr><td>🎄 Новогодняя М20 🎄</td><td>БКЛ (11)</td></tr>
+                        <tr><td>🎄 Новогодний Русич 🎄</td><td>БЛ (12)</td></tr>
+                        <tr><td>🕸 Отсутствует 🕸</td><td>НЛ, ТЛ (15, 16)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- История появления -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История появления</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Традиция выпуска новогодних поездов появляется в ТЧ-9 примерно в 2004 году.</p>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">~2004</div>
+                        <div class="timeline-content">
+                            <h3>Начало традиции</h3>
+                            <p>В ТЧ-9 начинают наряжать состав к Новому году. Изначально поезд наряжали в депо Фили: в начале «Е», затем «Русич» и сейчас «Москва».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2004–2015</div>
+                        <div class="timeline-content">
+                            <h3>Развитие традиции</h3>
+                            <p>Каждый год в депо наряжают состав, хоть не полноценно, но красиво. После украшения для работников проходило специальное мероприятие: поездка на составе без пассажиров, после возвращения состав выходил с пассажирами.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2016</div>
+                        <div class="timeline-content">
+                            <h3>Первый официальный новогодний состав</h3>
+                            <p>Руководству понравилась такая креативность, позже появились новогодние составы. Первым стал новогодний Еж3.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2016 — н.в.</div>
+                        <div class="timeline-content">
+                            <h3>Традиция продолжается</h3>
+                            <p>Даже во время пандемии составы всё равно выходили на линию и радовали пассажиров.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Новогодние составы -->
+        <section id="ng_train" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #B9770E 0%, #D4AC0D 100%);">
+                <span class="card-icon">🎅</span>
+                <h2>Новогодние составы</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Выберите состав для подробной информации:</p>
+                
+                <div class="trains-grid">
+                    <div class="train-card">
+                        <h3>🎄 Е «Фили»</h3>
+                        <p class="route-number">2004</p>
+                        <p>Первый новогодний состав в депо Фили. Модель «Е».</p>
+                        <a href="нг_Фили_е_2004.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Перейти →</a>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3>🎄 Русич «Фили»</h3>
+                        <p class="route-number">2005</p>
+                        <p>Новогодний состав «Русич» в депо Фили.</p>
+                        <a href="нг_Фили_Скиф_2005.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Перейти →</a>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3>🎄 НГ Еж3</h3>
+                        <p class="route-number">2016–2024</p>
+                        <p>Легендарный новогодний Еж3, работавший на ТКЛ. Сохранён энтузиастами.</p>
+                        <a href="ng_Ezh3.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Перейти →</a>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3>🎄 Еж3-путеизмеритель</h3>
+                        <p class="route-number">2026</p>
+                        <p>Новогодний путеизмеритель на базе Еж3.</p>
+                        <a href="Еж3-путеизмеритель.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Перейти →</a>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3>🎄 НГ 81-717/714</h3>
+                        <p class="route-number">2025–?</p>
+                        <p>Новогодний состав модели 81-717/714.</p>
+                        <a href="НГ_номер.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Перейти →</a>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3>🎄 НГ трафы 81-717/714</h3>
+                        <p class="route-number">2025–?</p>
+                        <p>Новогодние трафаретные составы 81-717/714.</p>
+                        <a href="Моссаб_трафы.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Перейти →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Линии -->
+        <section id="lines" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #7D3C98 0%, #A569BD 100%);">
+                <span class="card-icon">🚇</span>
+                <h2>Линии с новогодними составами</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="feature-item">
+                        <h3>Сокольническая (1)</h3>
+                        <p>Новогодний Русич</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Замоскворецкая (2)</h3>
+                        <p>Новогодний 81-717</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Арбатско-Покровская (3)</h3>
+                        <p>Новогодний Русич</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Филёвская (4)</h3>
+                        <p>Новогодняя Москва</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Кольцевая (5)</h3>
+                        <p>Новогодняя М20</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Калужско-Рижская (6)</h3>
+                        <p>Новогодняя Ока</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Таганско-Краснопресненская (7)</h3>
+                        <p>Новогодний Еж3 (2016–2024), Новогодняя Москва (2025–?)</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Калининская (8+8А)</h3>
+                        <p>Новогодняя Ока</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Серпуховско-Тимирязевская (9)</h3>
+                        <p>Новогодняя Ока</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Люблинско-Дмитровская (10)</h3>
+                        <p>Новогодние трафы</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Большая кольцевая (11)</h3>
+                        <p>Новогодняя М20</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Бутовская (12)</h3>
+                        <p>Новогодний Русич</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Некрасовская (15)</h3>
+                        <p>🕸 Отсутствует</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Троицкая (16)</h3>
+                        <p>🕸 Отсутствует</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Новогодние поезда — это не просто транспорт. Это праздник, который каждый год дарит радость миллионам пассажиров Московского метрополитена».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Новогодние поезда метро»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="Главная_Страница_Мосметро.html">Московский метрополитен</a></li>
+                        <li><a href="ng_Ezh3.html">Новогодний Еж3</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Информация собрана из открытых источников и может быть изменена.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
+            function animateCounters() {
+                const targets = { ngStartYear: 2016, ngLines: 14, ngTrainsCount: 8 };
+                let current = { ngStartYear: 0, ngLines: 0, ngTrainsCount: 0 };
+                const yearEl = document.getElementById('ngStartYear');
+                const linesEl = document.getElementById('ngLines');
+                const trainsEl = document.getElementById('ngTrainsCount');
+                if (!yearEl || !linesEl || !trainsEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.ngStartYear < targets.ngStartYear) {
+                        current.ngStartYear += Math.ceil(targets.ngStartYear / 50);
+                        if (current.ngStartYear > targets.ngStartYear) current.ngStartYear = targets.ngStartYear;
+                        yearEl.textContent = current.ngStartYear;
+                        allFinished = false;
+                    }
+                    if (current.ngLines < targets.ngLines) {
+                        current.ngLines += 1;
+                        if (current.ngLines > targets.ngLines) current.ngLines = targets.ngLines;
+                        linesEl.textContent = current.ngLines;
+                        allFinished = false;
+                    }
+                    if (current.ngTrainsCount < targets.ngTrainsCount) {
+                        current.ngTrainsCount += 1;
+                        if (current.ngTrainsCount > targets.ngTrainsCount) current.ngTrainsCount = targets.ngTrainsCount;
+                        trainsEl.textContent = current.ngTrainsCount;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+
+            // Галерея
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
+                    if (content && img) {
+                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>

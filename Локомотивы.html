@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Локомотивы — Транспортная энциклопедия</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Локомотивы</h1>
+            <p class="subtitle">Тяговый подвижной состав: от легендарных тепловозов до современных электровозов</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Железная_дорога.html">🚂 Железные дороги</a></li>
+                    <li><a href="#teplovoz">🔥 Тепловозы</a></li>
+                    <li><a href="#electrovoz">⚡ Электровозы</a></li>
+                    <li><a href="#manevrovye">🔧 Маневровые</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Тяговый подвижной состав</h2>
+                <p class="hero-text">Локомотив — это сердце железной дороги. За более чем вековую историю постсоветское пространство прошло путь от паровозов до мощнейших электровозов и инновационных беспилотных машин. В этом разделе мы собираем информацию о самых значимых, редких и уникальных локомотивах.</p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="locoTotal">0</div>
+                        <div class="stat-label">моделей в базе</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="locoTeplo">0</div>
+                        <div class="stat-label">тепловозов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="locoElectro">0</div>
+                        <div class="stat-label">электровозов</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Тепловозы -->
+        <section id="teplovoz" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">🔥</span>
+                <h2>Тепловозы</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Тепловоз — это автономный локомотив, первичным двигателем которого является дизель. Тепловозы не зависят от контактной сети, что делает их незаменимыми на неэлектрифицированных участках, в маневровой работе и в регионах со сложными климатическими условиями.</p>
+                
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>Принцип работы</h3>
+                        <p>Дизельный двигатель вращает коленчатый вал, который через гидравлическую или электрическую передачу передаёт крутящий момент на колёсные пары. Большинство современных магистральных тепловозов имеют электрическую передачу (дизель-генератор — тяговые электродвигатели).</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Преимущества</h3>
+                        <p>Автономность: не требуют строительства дорогостоящих контактных сетей и подстанций. Могут работать на любых участках, включая малонагруженные линии и подъездные пути промышленных предприятий.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Применение</h3>
+                        <p>Используются на неэлектрифицированных магистралях, для вождения грузовых и пассажирских поездов, а также в качестве вывозных и передаточных локомотивов.</p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2.5rem;">
+                    <a href="Тепловозы.html" class="btn btn-primary" style="padding: 0.8rem 2.5rem; font-size: 1.1rem;">Перейти в раздел «Тепловозы» →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Электровозы -->
+        <section id="electrovoz" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2980B9 0%, #1A5276 100%);">
+                <span class="card-icon">⚡</span>
+                <h2>Электровозы</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Электровоз — локомотив, приводимый в движение тяговыми электродвигателями, получающими энергию от контактной сети. Это самый мощный и экологически чистый тип локомотивов, основа современного железнодорожного транспорта на загруженных магистралях.</p>
+
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>Системы тока</h3>
+                        <p>На постсоветском пространстве используются две основные системы: постоянный ток (3 кВ) и переменный ток (25 кВ). Существуют также двухсистемные электровозы, способные работать на обеих системах.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Преимущества</h3>
+                        <p>Огромная мощность, высокая скорость, отсутствие выбросов в местах эксплуатации. Способны водить тяжеловесные поезда и обеспечивать высокие скорости пассажирского сообщения.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Применение</h3>
+                        <p>Магистральные грузовые и пассажирские перевозки на электрифицированных линиях. Составляют основу тягового парка РЖД и железных дорог стран СНГ.</p>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 2.5rem;">
+                    <a href="Электровозы.html" class="btn btn-primary" style="padding: 0.8rem 2.5rem; font-size: 1.1rem;">Перейти в раздел «Электровозы» →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Маневровые и специальные -->
+        <section id="manevrovye" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #1E8449 100%);">
+                <span class="card-icon">🔧</span>
+                <h2>Маневровые и специальные</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Эта категория объединяет локомотивы, не предназначенные для дальних магистральных рейсов. Их стихия — станции, сортировочные горки, депо и подъездные пути. Также сюда входит уникальная специальная техника.</p>
+                
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>Маневровые локомотивы</h3>
+                        <p>Используются для сортировки вагонов, формирования и расформирования поездов, подачи вагонов к погрузочно-разгрузочным фронтам. Отличаются высокой тягой при малых скоростях и частыми остановками.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Специальный подвижной состав</h3>
+                        <p>Путеизмерители, дефектоскопы, автомотрисы для служебных поездок, рельсошлифовальные поезда и другая техника, обеспечивающая содержание и ремонт инфраструктуры.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Особенности</h3>
+                        <p>Чаще всего это тепловозы с гидравлической или электрической передачей. Многие из них были выпущены десятилетия назад, но продолжают работать благодаря надёжности и ремонтопригодности.</p>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 2.5rem;">
+                    <a href="Маневровые.html" class="btn btn-primary" style="padding: 0.8rem 2.5rem; font-size: 1.1rem;">Перейти в раздел «Маневровые» →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Каждый локомотив — это не просто машина, это целая биография. От первых паровозов до современных гигантов, они везут историю нашей страны сквозь время и расстояния».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел "Локомотивы"</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Железная_дорога.html">Железные дороги</a></li>
+                        <li><a href="#teplovoz">Тепловозы</a></li>
+                        <li><a href="#electrovoz">Электровозы</a></li>
+                        <li><a href="#manevrovye">Маневровые</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram-канал</a></p>
+                    <p>✉️ <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Предложка</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Все права защищены. При использовании материалов ссылка на источник обязательна.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка прокрутки вверх -->
+    <div class="scroll-top">↑</div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function animateLocoCounters() {
+                const targets = {
+                    locoTotal: 120,
+                    locoTeplo: 45,
+                    locoElectro: 60
+                };
+                
+                let current = {
+                    locoTotal: 0,
+                    locoTeplo: 0,
+                    locoElectro: 0
+                };
+                
+                const totalElement = document.getElementById('locoTotal');
+                const teploElement = document.getElementById('locoTeplo');
+                const electroElement = document.getElementById('locoElectro');
+                
+                if (!totalElement || !teploElement || !electroElement) return;
+                
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    
+                    if (current.locoTotal < targets.locoTotal) {
+                        current.locoTotal += Math.ceil(targets.locoTotal / 50);
+                        if (current.locoTotal > targets.locoTotal) current.locoTotal = targets.locoTotal;
+                        totalElement.textContent = current.locoTotal;
+                        allFinished = false;
+                    }
+                    
+                    if (current.locoTeplo < targets.locoTeplo) {
+                        current.locoTeplo += Math.ceil(targets.locoTeplo / 50);
+                        if (current.locoTeplo > targets.locoTeplo) current.locoTeplo = targets.locoTeplo;
+                        teploElement.textContent = current.locoTeplo;
+                        allFinished = false;
+                    }
+                    
+                    if (current.locoElectro < targets.locoElectro) {
+                        current.locoElectro += Math.ceil(targets.locoElectro / 50);
+                        if (current.locoElectro > targets.locoElectro) current.locoElectro = targets.locoElectro;
+                        electroElement.textContent = current.locoElectro;
+                        allFinished = false;
+                    }
+                    
+                    if (allFinished) {
+                        clearInterval(interval);
+                    }
+                }, 30);
+            }
+            
+            animateLocoCounters();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Железные дороги - Транспортная энциклопедия</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Анимированные частицы -->
+    <div id="particles-js"></div>
+    
+    <!-- Анимированный градиентный фон -->
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Железные дороги</h1>
+            <p class="subtitle">История и современность железнодорожного транспорта постсоветского пространства</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="#regions">Регионы</a></li>
+                    <li><a href="Локомотивы.html">🚂 Локомотивы</a></li>
+                    <li><a href="#trains">Фирменные поезда</a></li>
+                    <li><a href="#electric">Электропоезда</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Железнодорожный транспорт</h2>
+                <p class="hero-text">Железная дорога — распространенный вид транспорта, связывающий города и страны. На постсоветском пространстве сохранилась единая колея и общие стандарты, позволяющие поездам свободно пересекать границы.</p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="railwayLength">0</div>
+                        <div class="stat-label">км путей</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="railwayCountries">0</div>
+                        <div class="stat-label">стран</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="railwayTrains">0</div>
+                        <div class="stat-label">фирменных поездов</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Локомотивы (главная страница раздела) -->
+        <section id="locomotives" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">🚂</span>
+                <h2>Локомотивы</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Раздел о локомотивах постсоветского пространства — от легендарных тепловозов до современных электровозов. Изучайте историю, технические характеристики и уникальные экземпляры.</p>
+                
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    
+                    <!-- Тепловозы -->
+                    <div class="train-card">
+                        <h3>🔥 Тепловозы</h3>
+                        <p>Тепловозы разных серий: 2М62, ТЭП70, ТЭП70БС, ДМ62, 611М</p>
+                        <ul style="margin: 0.5rem 0 0 1.2rem;">
+                            <li>2М62, ДМ62</li>
+                            <li>ТЭП70, ТЭП70БС, новопидный</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Электровозы -->
+                    <div class="train-card">
+                        <h3>⚡ Электровозы</h3>
+                        <p>Электровозы постоянного, переменного тока и двухсистемные</p>
+                        <ul style="margin: 0.5rem 0 0 1.2rem;">
+                            <li>ВЛ10У, ВЛ11, ВЛ80С, 2ЭС4К</li>
+                            <li>ЭП20, ЭП2К</li>
+                            <li>Чехословацкие ЧС (ЧС7, ЧС200, ЧС4Т, ЧС6)</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Маневровые -->
+                    <div class="train-card">
+                        <h3>🔧 Маневровые</h3>
+                        <p>Маневровые локомотивы и специальный подвижной состав</p>
+                        <ul style="margin: 0.5rem 0 0 1.2rem;">
+                            <li>ЧМЭ3 и ТЭМ18</li>
+                            <li>Автомотриса «СЕВЕР»</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Общая кнопка перехода внизу -->
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="Локомотивы.html" class="btn btn-primary" style="padding: 0.8rem 2.5rem; font-size: 1.1rem;">Перейти в раздел «Локомотивы» →</a>
+                </div>
+                
+            </div>
+        </section>
+        
+        <!-- Регионы -->
+        <section id="regions" class="section-card">
+            <div class="card-header">
+                <span class="card-icon">🗺️</span>
+                <h2>Регионы и направления</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Выберите регион для изучения железнодорожной сети:</p>
+                
+                <div class="features-grid">
+                    <!-- Москва -->
+                    <div class="feature-item" style="border-left: 4px solid #27AE60; display: flex; flex-direction: column;">
+                        <h3>Москва и область</h3>
+                        <p>Крупнейший узел страны: 10 вокзалов, МЦД, МЦК и центральные диаметры.</p>
+                        <a href="Мск_жд.html" class="btn btn-primary" style="margin-top: auto; align-self: flex-start;">Перейти →</a>
+                    </div>
+                    
+                    <!-- Санкт-Петербург -->
+                    <div class="feature-item" style="border-left: 4px solid #95A5A6; display: flex; flex-direction: column;">
+                        <h3>Санкт-Петербург <span style="font-size: 0.75rem; color: #E74C3C;">(В разработке)</span></h3>
+                        <p>Окно в Европу. Витебский вокзал (первый в России), «Сапсаны» и пригородные линии.</p>
+                        <a href="#" class="btn btn-secondary" style="margin-top: auto; align-self: flex-start; opacity: 0.6;" onclick="alert('Раздел в разработке'); return false;">Скоро →</a>
+                    </div>
+                    
+                    <!-- Транссиб -->
+                    <div class="feature-item" style="border-left: 4px solid #95A5A6; display: flex; flex-direction: column;">
+                        <h3>Транссибирская магистраль <span style="font-size: 0.75rem; color: #E74C3C;">(В разработке)</span></h3>
+                        <p>Самая длинная железная дорога в мире (9288 км), соединяющая Москву и Владивосток.</p>
+                        <a href="#" class="btn btn-secondary" style="margin-top: auto; align-self: flex-start; opacity: 0.6;" onclick="alert('Раздел в разработке'); return false;">Скоро →</a>
+                    </div>
+                    
+                    <!-- БАМ -->
+                    <div class="feature-item" style="border-left: 4px solid #95A5A6; display: flex; flex-direction: column;">
+                        <h3>Байкало-Амурская магистраль <span style="font-size: 0.75rem; color: #E74C3C;">(В разработке)</span></h3>
+                        <p>Легендарная стройка XX века (4287 км). Северный ход Транссиба через Сибирь и Дальний Восток.</p>
+                        <a href="#" class="btn btn-secondary" style="margin-top: auto; align-self: flex-start; opacity: 0.6;" onclick="alert('Раздел в разработке'); return false;">Скоро →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Электропоезда -->
+        <section id="electric" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+                <span class="card-icon">🚄</span>
+                <h2>Электропоезда</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Моторвагонный подвижной состав для пригородных и межрегиональных перевозок. Тяговые двигатели расположены непосредственно в вагонах поезда.</p>
+                
+                <div class="trains-grid">
+                    
+                    <!-- ЭР2Р -->
+                    <div class="train-card">
+                        <h3>ЭР2Р</h3>
+                        <p>Модернизированная версия легендарного электропоезда ЭР2. Выпускалась на Рижском вагоностроительном заводе. Долгое время была основой пригородного сообщения на постоянном токе.</p>
+                        <ul>
+                            <li>Постоянный ток (3 кВ)</li>
+                            <li>Рижский вагоностроительный завод</li>
+                            <li>Пригородное сообщение</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- ЭД9Т -->
+                    <div class="train-card">
+                        <h3>ЭД9Т</h3>
+                        <p>Электропоезд переменного тока, выпускавшийся Демиховским машиностроительным заводом. Один из самых распространенных поездов на линиях с напряжением 25 кВ.</p>
+                        <ul>
+                            <li>Переменный ток (25 кВ)</li>
+                            <li>Демиховский завод</li>
+                            <li>Пригородное сообщение</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Иволга 5.0 -->
+                    <div class="train-card">
+                        <h3>Иволга 5.0</h3>
+                        <p>Новейшая модификация современных электропоездов «Иволга», созданная для Московских центральных диаметров (МЦД). Отличается улучшенной эргономикой, новым дизайном и повышенным уровнем комфорта для пассажиров.</p>
+                        <ul>
+                            <li>Городские перевозки (МЦД)</li>
+                            <li>Сквозной проход</li>
+                            <li>Современный дизайн и комфорт</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- Общая кнопка перехода внизу -->
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="Electrotrainzhd.html" class="btn btn-primary" style="padding: 0.8rem 2.5rem; font-size: 1.1rem;">Перейти в раздел «Электропоезда» →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Фирменные поезда -->
+        <section id="trains" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">🚂</span>
+                <h2>Фирменные поезда</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Легендарные составы, связывающие столицы и регионы:</p>
+                
+                <div class="trains-grid">
+                    <div class="train-card">
+                        <h3>Полярная стрела</h3>
+                        <p>Москва — Мурманск, поезд №015А/016А. Путешествие за полярный круг через Карелию и Кольский полуостров.</p>
+                        <a href="Полярная_стрела.html" class="btn btn-secondary">Подробнее →</a>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3>Красная стрела</h3>
+                        <p>Москва — Санкт-Петербург, поезд №001А/002А. Легендарный состав, курсирующий с 1931 года, символ сообщения двух столиц.</p>
+                        <a href="Красная_стрела_жд.html" class="btn btn-secondary">Подробнее →</a>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3>Поезд Деда Мороза</h3>
+                        <p>Специальный праздничный состав, путешествующий по городам России в новогодние праздники.</p>
+                        <a href="ПДМ_ЖД.html" class="btn btn-secondary">Подробнее →</a>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3>Арктика</h3>
+                        <p>Москва — Анадырь, самый длинный маршрут в России, пересекающий всю страну с запада на восток.</p>
+                        <a href="#" class="btn btn-secondary" style="margin-top: auto; align-self: flex-start; opacity: 0.6;" onclick="alert('Раздел в разработке'); return false;">Скоро →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">"Российские железные дороги — это не просто транспортная система, это образ жизни, связывающая огромные пространства нашей страны. А уникальные локомотивы — это живая история железнодорожного транспорта."</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел "Железные дороги"</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="#regions">Регионы</a></li>
+                        <li><a href="Локомотивы.html">Локомотивы</a></li>
+                        <li><a href="#electric">Электропоезда</a></li>
+                        <li><a href="#trains">Фирменные поезда</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Все права защищены. При использовании материалов ссылка на источник обязательна.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка прокрутки вверх -->
+    <div class="scroll-top">↑</div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function animateRailwayCounters() {
+                const targets = {
+                    railwayLength: 85600,
+                    railwayCountries: 15,
+                    railwayTrains: 124
+                };
+                
+                let current = {
+                    railwayLength: 0,
+                    railwayCountries: 0,
+                    railwayTrains: 0
+                };
+                
+                const lengthElement = document.getElementById('railwayLength');
+                const countriesElement = document.getElementById('railwayCountries');
+                const trainsElement = document.getElementById('railwayTrains');
+                
+                if (!lengthElement || !countriesElement || !trainsElement) return;
+                
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    
+                    if (current.railwayLength < targets.railwayLength) {
+                        current.railwayLength += Math.ceil(targets.railwayLength / 50);
+                        if (current.railwayLength > targets.railwayLength) {
+                            current.railwayLength = targets.railwayLength;
+                        }
+                        lengthElement.textContent = current.railwayLength.toLocaleString();
+                        allFinished = false;
+                    }
+                    
+                    if (current.railwayCountries < targets.railwayCountries) {
+                        current.railwayCountries += 1;
+                        if (current.railwayCountries > targets.railwayCountries) {
+                            current.railwayCountries = targets.railwayCountries;
+                        }
+                        countriesElement.textContent = current.railwayCountries;
+                        allFinished = false;
+                    }
+                    
+                    if (current.railwayTrains < targets.railwayTrains) {
+                        current.railwayTrains += Math.ceil(targets.railwayTrains / 50);
+                        if (current.railwayTrains > targets.railwayTrains) {
+                            current.railwayTrains = targets.railwayTrains;
+                        }
+                        trainsElement.textContent = current.railwayTrains;
+                        allFinished = false;
+                    }
+                    
+                    if (allFinished) {
+                        clearInterval(interval);
+                    }
+                }, 30);
+            }
+            
+            animateRailwayCounters();
+        });
+    </script>
+</body>
+</html>

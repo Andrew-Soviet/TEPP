@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Московский метрополитен — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Московский метрополитен</h1>
+            <p class="subtitle">Крупнейшее метро постсоветского пространства: история, подвижной состав, легенды</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="#about">О метро</a></li>
+                    <li><a href="#sections">Разделы</a></li>
+                    <li><a href="#unique">Уникальные составы</a></li>
+                    <li><a href="#facts">Топ-5 фактов</a></li>
+                    <li><a href="#evolution">Эволюция</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Московское метро</h2>
+                <p class="hero-text">Этот раздел о Московском метрополитене. Здесь вы сможете найти различную информацию о подвижном составе, истории, легендах и многом другом. В Московском метро много чего интересного!</p>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="mskMetroYears">0</div>
+                        <div class="stat-label">лет истории</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="mskMetroStations">0</div>
+                        <div class="stat-label">станций</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="mskMetroLines">0</div>
+                        <div class="stat-label">линий</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Разделы сайта -->
+        <section id="sections" class="section-card">
+            <div class="card-header">
+                <span class="card-icon">📚</span>
+                <h2>Разделы о Московском метро</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Выберите интересующий вас раздел:</p>
+
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div class="feature-item">
+                        <h3>🚇 Опытные составы</h3>
+                        <p>Экспериментальные и уникальные поезда, которые тестировались в Московском метро.</p>
+                        <a href="Опытные_составы.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Перейти →</a>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>📖 Живая история</h3>
+                        <p>Сохранившиеся исторические вагоны, ретропоезда и музеи на колёсах.</p>
+                        <a href="Живая_история_Мск_метро.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Перейти →</a>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>⏳ Ушедшие в историю</h3>
+                        <p>Типы вагонов, которые когда-то работали на линиях, но теперь сняты с эксплуатации.</p>
+                        <a href="Ушедшие_в_историю_метро.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Перейти →</a>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>👻 Легенды и мифы</h3>
+                        <p>Метро-2, поезда-призраки, секретные бункеры и другие тайны подземки.</p>
+                        <a href="Легенды_и_мифы_метро.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Перейти →</a>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>📜 История метро</h3>
+                        <p>От открытия первой линии в 1935 году до современных станций и линий.</p>
+                        <a href="Метро_Мск_история.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Перейти →</a>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🔧 Служебные поезда</h3>
+                        <p>Путеизмерители, дефектоскопы, контактно-аккумуляторные электровозы и другая спецтехника.</p>
+                        <a href="Служебные_поезда_метро.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Перейти →</a>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🎄 Новогодние поезда</h3>
+                        <p>Праздничные составы, украшенные к Новому году, которые радуют пассажиров.</p>
+                        <a href="нг_метро.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Перейти →</a>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🎉 Мероприятия</h3>
+                        <p>Парады поездов, выставки, ночные экскурсии и другие события Московского метрополитена.</p>
+                        <a href="Мероприятия_метро.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Перейти →</a>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🎨 Тематические поезда</h3>
+                        <p>Именные и брендированные составы: «Акварель», «Красная стрела», «Табаков», «Народный ополченец» и другие.</p>
+                        <a href="404_file_dont_found.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Перейти →</a>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🚆 Подвижной состав</h3>
+                        <p>Все типы вагонов Московского метро: от первых «А» до современных «Москва-2026».</p>
+                        <a href="ps_mosmetro.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Перейти →</a>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🏛️ Архитектура</h3>
+                        <p>Подземные дворцы, мозаики, витражи, скульптуры. Как метро стало музеем.</p>
+                        <a href="ach_mosmetro.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Перейти →</a>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>💡 Предложения по улучшению</h3>
+                        <p>Идеи и предложения по развитию Московского метрополитена на официальный сайт.</p>
+                        <a href="https://ask.mos.ru/?channel=chatbot_vk" target="_blank" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Открыть →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Уникальные и тематические составы -->
+        <section id="unique" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">⭐</span>
+                <h2>Уникальные и тематические составы</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">В Московском метро курсируют уникальные и тематические поезда, которые стоит увидеть:</p>
+
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div class="feature-item">
+                        <h3>🚂 Ретропоезд «Сокольники»</h3>
+                        <p>Исторический состав, стилизованный под первые вагоны типа А. Работает на Сокольнической линии в праздничные дни.</p>
+                        <a href="Ретро поезд.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Перейти →</a>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🎨 Акварель</h3>
+                        <p>Поезд-картинная галерея. Внутри вагонов — репродукции картин известных художников. Проект с Московской школой акварели.</p>
+                        <a href="Акварель.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Перейти →</a>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🔬 Синергия</h3>
+                        <p>Служебные диагностические комплексы «Синергия-1» и «Синергия-2». Проверяют состояние путей, тоннелей и коммуникаций.</p>
+                        <a href="ДК1_метро.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🤖 Беспилотная «Москва-2024»</h3>
+                        <p>Поезд с автоматическим управлением. Тестируется на Замоскворецкой линии. Один из самых современных составов метро.</p>
+                        <a href="bespilotm24.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Подробнее →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Топ-5 интересных фактов -->
+        <section id="facts" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #B9770E 0%, #D4AC0D 100%);">
+                <span class="card-icon">🏆</span>
+                <h2>Топ-5 самых интересных фактов о Мосметро</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr;">
+                    <div class="feature-item">
+                        <h3>1️⃣ Один-единственный день простоя</h3>
+                        <p>За всю свою историю Московское метро не работало для пассажиров всего <strong>один день — 16 октября 1941 года</strong>. В день паники во время Великой Отечественной войны поступил приказ демонтировать оборудование и затопить тоннели, однако уже к вечеру приказ отменили, и на следующий день поезда снова пошли.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>2️⃣ Как поезда попадают под землю?</h3>
+                        <p>Вагоны <strong>не спускают кранами через люки</strong>. Поезда перегоняют с завода «Метровагонмаш» по обычным железнодорожным путям общего пользования. Они прибывают на специальную соединительную ветку (гейт) в районе станции «Солнечная», откуда по рельсам заезжают прямиком в электродепо «Солнцево».</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>3️⃣ Голоса метро</h3>
+                        <p>Мужские и женские голоса, объявляющие станции, — это не случайность, а <strong>система ориентирования для незрячих пассажиров</strong>. При движении к центру города станции объявляет мужской голос, а от центра — женский. На Кольцевой линии мужской голос звучит при движении по часовой стрелке, а женский — против часовой. Сейчас заменяется на нейроинформатор — на момент создания (30 сентября 2026) ИИ-информатор работает на линиях 1–4.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>4️⃣ Мировой рекорд Большой кольцевой линии</h3>
+                        <p>Открытая в марте 2023 года Большая кольцевая линия (БКЛ) протяжённостью <strong>70 километров</strong> официально стала самой длинной кольцевой веткой метро в мире, обогнав прежнего лидера — Второе кольцо Пекинского метрополитена.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>5️⃣ Подземный беби-бум во время войны</h3>
+                        <p>В годы Великой Отечественной войны станции глубокого заложения использовались как бомбоубежища. Во время ночных налётов авиации на станциях разворачивали настоящие спальные места и пункты медицинской помощи. Согласно архивным документам, в периоды бомбёжек под землёй родилось <strong>более 200 детей</strong>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Эволюция поездов -->
+        <section id="evolution" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Эволюция поездов: от «А» до «Москва-2026»</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Московское метро прошло путь от первых вагонов типа А до современных поездов «Москва-2026».</p>
+
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>🚂 Первый состав — тип А</h3>
+                        <p>Первый состав Московского метро <strong>сохранён</strong>, и на нём можно проехаться! Состав был построен в <strong>1934 году</strong>. Его можно увидеть на ночных экскурсиях, на экскурсиях в депо и на реконструкциях запуска.</p>
+                        <a href="Ашка.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🚆 Новейшие «Москва-2026»</h3>
+                        <p>Самые новые поезда <strong>«Москва-2026»</strong> до сих пор поступают в метро. Их иногда можно увидеть на Киевском вокзале, на Солнцевской линии при обкатке или перегонке, а также на 2-й и 17-й линиях.</p>
+                        <a href="#" class="btn btn-secondary" style="margin-top: 1rem; width: 100%;" onclick="showComingSoon(); return false;">Подробнее →</a>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p>💡 <strong>Интересно:</strong> между первым составом типа А (1934) и «Москва-2026» — <strong>92 года разницы</strong>. За это время метро прошло путь от деревянных вагонов до беспилотных поездов.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Интересные факты (краткие) -->
+        <section class="section-card">
+            <div class="card-header">
+                <span class="card-icon">⭐</span>
+                <h2>Краткие факты о Московском метро</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <div class="feature-item">
+                        <h3>Самая глубокая станция</h3>
+                        <p>«Парк Победы» — глубина 84 метра, один из самых длинных эскалаторов в Европе.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>Самая длинная линия</h3>
+                        <p>Арбатско-Покровская линия — 45 км с 22 станциями.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>Самая загруженная</h3>
+                        <p>Станция «Комсомольская» — до 200 тысяч пассажиров в сутки.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>Первое открытие</h3>
+                        <p>15 мая 1935 года — открыта первая линия от «Сокольников» до «Парка культуры».</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>Кольцевая линия</h3>
+                        <p>Построена в 1950–1954 годах для соединения всех радиусов.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Московский метрополитен — это не просто транспорт, это подземный музей, инженерное чудо и символ города, который ежедневно перевозит миллионы людей».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Московский метрополитен»</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="#sections">Разделы</a></li>
+                        <li><a href="#facts">Топ-5 фактов</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Исследуйте подземные дворцы и легенды метро</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="comingSoonModal">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <div class="modal-body">
+                <h2>🚧 Страница в разработке</h2>
+                <p>Подробная информация появится позже.</p>
+                <button class="btn btn-primary" id="modalOkBtn">Понятно</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
+            function animateCounters() {
+                const targets = { mskMetroYears: 91, mskMetroStations: 306, mskMetroLines: 17 };
+                let current = { mskMetroYears: 0, mskMetroStations: 0, mskMetroLines: 0 };
+                const yearsEl = document.getElementById('mskMetroYears');
+                const stationsEl = document.getElementById('mskMetroStations');
+                const linesEl = document.getElementById('mskMetroLines');
+                if (!yearsEl || !stationsEl || !linesEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.mskMetroYears < targets.mskMetroYears) {
+                        current.mskMetroYears += Math.ceil(targets.mskMetroYears / 50);
+                        if (current.mskMetroYears > targets.mskMetroYears) current.mskMetroYears = targets.mskMetroYears;
+                        yearsEl.textContent = current.mskMetroYears;
+                        allFinished = false;
+                    }
+                    if (current.mskMetroStations < targets.mskMetroStations) {
+                        current.mskMetroStations += Math.ceil(targets.mskMetroStations / 50);
+                        if (current.mskMetroStations > targets.mskMetroStations) current.mskMetroStations = targets.mskMetroStations;
+                        stationsEl.textContent = current.mskMetroStations;
+                        allFinished = false;
+                    }
+                    if (current.mskMetroLines < targets.mskMetroLines) {
+                        current.mskMetroLines += 1;
+                        if (current.mskMetroLines > targets.mskMetroLines) current.mskMetroLines = targets.mskMetroLines;
+                        linesEl.textContent = current.mskMetroLines;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+        });
+
+        // Модальное окно
+        const modal = document.getElementById('comingSoonModal');
+        const closeBtn = document.getElementById('modalClose');
+        const okBtn = document.getElementById('modalOkBtn');
+
+        window.showComingSoon = function() {
+            if (modal) modal.classList.add('active');
+        }
+
+        function closeModal() {
+            if (modal) modal.classList.remove('active');
+        }
+
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (okBtn) okBtn.addEventListener('click', closeModal);
+
+        window.addEventListener('click', function(e) {
+            if (e.target === modal) closeModal();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подвижной состав Монорельса — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Подвижной состав Монорельса</h1>
+            <p class="subtitle">От опытных макетов до серийных вагонов ЭПС</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="Монорельс_история.html">🚝 История монорельса</a></li>
+                    <li><a href="#maket">Макет</a></li>
+                    <li><a href="#intamin">Intamin P30</a></li>
+                    <li><a href="#eps">ЭПС</a></li>
+                    <li><a href="#timeline">Хронология</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Подвижной состав Московского монорельса</h2>
+                <p class="hero-text">Для движения по монорельсу нужен был подвижной состав. Для открытия новой линии начали разрабатывать первый состав. Он был построен в Московском институте теплотехники (МИТ). На его базе сделали опытный состав из 2 вагонов, после доработки начали выпускать новый тип вагонов «ЭПС».</p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="epsCount">0</div>
+                        <div class="stat-label">вагонов ЭПС</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="intaminCount">0</div>
+                        <div class="stat-label">опытных вагона</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="monoPsYear">0</div>
+                        <div class="stat-label">год запуска</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Макет -->
+        <section id="maket" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                <span class="card-icon">🧩</span>
+                <h2>Макет вагона</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Первый макет вагона монорельса был создан в Московском институте теплотехники (МИТ) для отработки конструкции и компоновки.</p>
+                
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/макет монорельсика.jpg" alt="Макет вагона монорельса" onerror="this.src='https://via.placeholder.com/800x500?text=Макет+монорельса'">
+                        <div class="gallery-caption">Макет вагона на территории ТЧ-1. Фото: Назаров Сергей</div>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Важно:</strong> В апреле 2012 года макет перевезли с МИТ в депо «Ростокино» на хранение.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Опытный состав Intamin P30 -->
+        <section id="intamin" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #B9770E 0%, #D4AC0D 100%);">
+                <span class="card-icon">🚝</span>
+                <h2>Опытный состав Intamin P30</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Опытный состав имел тоже интересную историю. Он относится к модели <strong>Intamin P30</strong>.</p>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2000</div>
+                        <div class="timeline-content">
+                            <h3>Тестовая линия</h3>
+                            <p>Использовался на тестовой линии монорельса.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Октябрь 2012</div>
+                        <div class="timeline-content">
+                            <h3>Перевоз в депо</h3>
+                            <p>Перевезён в электродепо «Ростокино» на хранение.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Август 2021</div>
+                        <div class="timeline-content">
+                            <h3>Модернизация</h3>
+                            <p>Модернизация с использованием технологии «маглев».</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); margin-top: 1.5rem;">
+                    <div class="gallery-item">
+                        <img src="img/Intamin P30.jpg" alt="Опытный состав Intamin P30" onerror="this.src='https://via.placeholder.com/800x500?text=Intamin+P30'">
+                        <div class="gallery-caption">Опытный состав Intamin P30. Фото: Михаил_123</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Серийный ЭПС -->
+        <section id="eps" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Серийный подвижной состав «ЭПС»</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">После доработки была выпущена модель «ЭПС». Всего было произведено <strong>10 вагонов</strong>.</p>
+                
+                <table>
+                    <caption>Основные характеристики вагонов ЭПС</caption>
+                    <thead>
+                        <tr>
+                            <th>Параметр</th>
+                            <th>Значение</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Модель</td>
+                            <td>ЭПС (серийный)</td>
+                        </tr>
+                        <tr>
+                            <td>Количество вагонов</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Производитель</td>
+                            <td>ОАО «Метровагонмаш»</td>
+                        </tr>
+                        <tr>
+                            <td>Тип</td>
+                            <td>Подвесной монорельсовый</td>
+                        </tr>
+                        <tr>
+                            <td>Составность</td>
+                            <td>6 вагонов в составе</td>
+                        </tr>
+                        <tr>
+                            <td>Особенности</td>
+                            <td>Полностью автоматизированное движение, оператор в кабине для контроля</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); margin-top: 1.5rem;">
+                    <div class="gallery-item">
+                        <img src="img/ЭПС 01.jpg" alt="Состав ЭПС на разворотном кольце" onerror="this.src='https://via.placeholder.com/800x500?text=ЭПС'">
+                        <div class="gallery-caption">Состав на разворотном кольце. Фото: ЭР200</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Хронология -->
+        <section id="timeline" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #7D3C98 0%, #A569BD 100%);">
+                <span class="card-icon">📜</span>
+                <h2>Хронология подвижного состава</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2000</div>
+                        <div class="timeline-content">
+                            <h3>Опытный состав Intamin P30</h3>
+                            <p>Использовался на тестовой линии монорельса.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2004</div>
+                        <div class="timeline-content">
+                            <h3>Открытие монорельса</h3>
+                            <p>20 ноября 2004 года — первые пассажиры на монорельсе.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">04.2012</div>
+                        <div class="timeline-content">
+                            <h3>Перевоз макета</h3>
+                            <p>Макет вагона перевезён с МИТ в депо «Ростокино» на хранение.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Октябрь 2012</div>
+                        <div class="timeline-content">
+                            <h3>Перевоз опытного состава</h3>
+                            <p>Опытный состав Intamin P30 перевезён в электродепо «Ростокино».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Август 2021</div>
+                        <div class="timeline-content">
+                            <h3>Модернизация «маглев»</h3>
+                            <p>Модернизация опытного состава с использованием технологии «маглев».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">27.06.2025</div>
+                        <div class="timeline-content">
+                            <h3>Прекращение движения</h3>
+                            <p>Движение поездов с пассажирами по монорельсу полностью прекращено.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Галерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/макет монорельсика.jpg" alt="Макет вагона" onerror="this.src='https://via.placeholder.com/600x400?text=Макет'">
+                        <div class="gallery-caption">Макет вагона на территории ТЧ-1. Фото: Назаров Сергей</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Назаров Сергей(transphoto)</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/Intamin P30.jpg" alt="Intamin P30" onerror="this.src='https://via.placeholder.com/600x400?text=Intamin+P30'">
+                        <div class="gallery-caption">Опытный состав Intamin P30. Фото: Михаил_123</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Михаил_123(transphoto)</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/ЭПС 01.jpg" alt="ЭПС на разворотном кольце" onerror="this.src='https://via.placeholder.com/600x400?text=ЭПС'">
+                        <div class="gallery-caption">Состав на разворотном кольце.</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 ЭР200(transphoto)</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Подвижной состав монорельса — это уникальная страница в истории московского транспорта. От первых макетов до серийных вагонов ЭПС — каждый состав хранит свою историю».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Подвижной состав монорельса»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Монорельс_история.html">История монорельса</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="Главная_Страница_Мосметро.html">Московский метрополитен</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Информация собрана из открытых источников и может быть изменена.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
+            function animateCounters() {
+                const targets = { epsCount: 10, intaminCount: 2, monoPsYear: 2004 };
+                let current = { epsCount: 0, intaminCount: 0, monoPsYear: 0 };
+                const epsEl = document.getElementById('epsCount');
+                const intaminEl = document.getElementById('intaminCount');
+                const yearEl = document.getElementById('monoPsYear');
+                if (!epsEl || !intaminEl || !yearEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.epsCount < targets.epsCount) {
+                        current.epsCount += 1;
+                        if (current.epsCount > targets.epsCount) current.epsCount = targets.epsCount;
+                        epsEl.textContent = current.epsCount;
+                        allFinished = false;
+                    }
+                    if (current.intaminCount < targets.intaminCount) {
+                        current.intaminCount += 1;
+                        if (current.intaminCount > targets.intaminCount) current.intaminCount = targets.intaminCount;
+                        intaminEl.textContent = current.intaminCount;
+                        allFinished = false;
+                    }
+                    if (current.monoPsYear < targets.monoPsYear) {
+                        current.monoPsYear += Math.ceil(targets.monoPsYear / 50);
+                        if (current.monoPsYear > targets.monoPsYear) current.monoPsYear = targets.monoPsYear;
+                        yearEl.textContent = current.monoPsYear;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+
+            // Галерея
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
+                    if (content && img) {
+                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>

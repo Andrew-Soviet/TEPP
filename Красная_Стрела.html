@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Красная стрела (вагон метро) — Московский метрополитен</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Красная стрела</h1>
+            <p class="subtitle">Именной состав Московского метрополитена, посвящённый 75-летию легендарного поезда</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="Главная_Страница_Мосметро.html">🏙️ Мосметро</a></li>
+                    <li><a href="#about">О поезде</a></li>
+                    <li><a href="#composition">Состав</a></li>
+                    <li><a href="#interior">Интерьер</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Красная стрела</h2>
+                <p class="hero-text">Этот поезд был построен в августе 2006 года. После прохождения испытаний в ТЧ-2 «Сокол», «Красная стрела» отправилась на работу в ТЧ-1 «Северное». Состав был построен в честь 75-летия легендарного поезда «Красная стрела», в честь него он так и называется.</p>
+                <p class="hero-text">09.10.2006 состав впервые вышел на линию с пассажирами. До сих пор ходит на Сокольнической линии — вы можете на нём прокатиться!</p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="ksYear">0</div>
+                        <div class="stat-label">год постройки</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="ksCars">0</div>
+                        <div class="stat-label">вагонов в составе</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="ksYears">0</div>
+                        <div class="stat-label">лет в эксплуатации</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Общая информация -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #C0392B 0%, #E74C3C 100%);">
+                <span class="card-icon">🚇</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="feature-item">
+                        <h3>📅 Постройка</h3>
+                        <p>Август 2006 года. Заводская постройка вагонов модели 81-714.5М (МВМ).</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🏭 Депо</h3>
+                        <p>ТЧ-1 «Северное». Испытания проходил в ТЧ-2 «Сокол».</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🎉 Повод</h3>
+                        <p>Построен в честь 75-летия поезда «Красная стрела» (1931–2006).</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🛤️ Линия</h3>
+                        <p>Сокольническая линия (СокЛ). Работает с пассажирами с 09.10.2006.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Состав поезда -->
+        <section id="composition" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Состав поезда</h2>
+            </div>
+            <div class="card-content">
+                <div class="highlight-box" style="margin-bottom: 2rem;">
+                    <p style="font-size: 1.5rem; text-align: center; font-weight: bold;">2763 — 1699 — 1700 — 1701 — 1702 — 1938 — 2764</p>
+                    <p style="text-align: center; color: var(--text-secondary); margin-top: 0.5rem;">(с 04.2010, после замены вагона 1703 на 1938)</p>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">Вагон №1702</h3>
+                <table>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Модель</td><td>81-714.5М (МВМ)</td></tr>
+                        <tr><td>Построен</td><td>09.2006</td></tr>
+                        <tr><td>Депо</td><td>ТЧ-1 «Северное»</td></tr>
+                        <tr><td>Назначение</td><td>Пассажирский</td></tr>
+                        <tr><td>Начало работы</td><td>09.10.2006</td></tr>
+                        <tr><td>Текущее состояние</td><td>Эксплуатируется</td></tr>
+                        <tr><td>Примечание</td><td>«Красная стрела»</td></tr>
+                    </tbody>
+                </table>
+                <div class="highlight-box" style="margin-top: 0.8rem;">
+                    <p><strong>История:</strong> 13.09.2006 — отправлен с завода в метрополитен; 15.09.2006 — поступил в метрополитен через гейт ТЧ-2 «Сокол»; 17.09.2006 — поступил в депо приписки ТЧ-1 «Северное»; 09.10.2006 — начал работу с пассажирами; 08.2016 — перекрашен по новой схеме; 10.2015 — капитальный ремонт / ВРК «Выхино»; перекрашен по новой схеме; 16.05.2026 и 17.05.2026 — участвовал в Параде поездов на Кольцевой линии.</p>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">Вагон №1703 (выведен из эксплуатации)</h3>
+                <table>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Модель</td><td>81-714.5М (МВМ)</td></tr>
+                        <tr><td>Построен</td><td>09.2006</td></tr>
+                        <tr><td>Депо</td><td>ТЧ-1 «Северное»</td></tr>
+                        <tr><td>Назначение</td><td>Пассажирский</td></tr>
+                        <tr><td>Начало работы</td><td>09.10.2006</td></tr>
+                        <tr><td>Отставлен</td><td>29.03.2010</td></tr>
+                        <tr><td>Текущее состояние</td><td>Выведен из эксплуатации / ожидание исключения</td></tr>
+                        <tr><td>Примечание</td><td>«Красная стрела»</td></tr>
+                    </tbody>
+                </table>
+                <div class="highlight-box" style="margin-top: 0.8rem; border-left-color: #C0392B;">
+                    <p><strong>История:</strong> 13.09.2006 — отправлен с завода в метрополитен; 15.09.2006 — поступил в метрополитен через гейт ТЧ-2 «Сокол»; 17.09.2006 — поступил в депо приписки ТЧ-1 «Северное»; <strong>29.03.2010</strong> — серьёзно повреждён на станции «Лубянка» в результате террористического акта, восстановлению не подлежит, ожидает списания; 11.05.2010 — заменён на вагон №1938.</p>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem; border-left-color: #E74C3C;">
+                    <p><strong>⚠️ Важно:</strong> 29 марта 2010 года в вагоне 1703 произошёл террористический акт на станции «Лубянка». Вагон был отстранён от эксплуатации и заменён на вагон 1903 (позже — 1938). На данный момент вагон 1703 находится на парковых путях депо ТЧ-1.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Экстерьер и интерьер -->
+        <section id="interior" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #D35400 0%, #E67E22 100%);">
+                <span class="card-icon">🎨</span>
+                <h2>Экстерьер и интерьер</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="feature-item">
+                        <h3>🎨 Окрас</h3>
+                        <ul>
+                            <li><strong>08.2006 — 08.2016:</strong> красного цвета с жёлтыми полосами по борту и рисунком «75» на дверях</li>
+                            <li><strong>С 08.2016:</strong> красного цвета с жёлтыми полосами по борту; двери полностью закрашены в красный цвет</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🔧 Конструкция</h3>
+                        <ul>
+                            <li>Три ребра жёсткости</li>
+                            <li>Расположение сигнальных ламп: вертикальное</li>
+                            <li>Компоновка фар: 1-4-1</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🪑 Интерьер</h3>
+                        <ul>
+                            <li>Вертикальные поручни жёлтого цвета с оранжево-красными крепежами</li>
+                            <li>Антивандальные сиденья красного цвета</li>
+                            <li>Пластик светло-рыжего цвета под дерево</li>
+                            <li>Освещение: лампы типа ЛПВ-02</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h3>📅 Важные даты</h3>
+                        <ul>
+                            <li><strong>08.2006</strong> — постройка</li>
+                            <li><strong>09.10.2006</strong> — выход на линию с пассажирами</li>
+                            <li><strong>29.03.2010</strong> — теракт на «Лубянке» (вагон 1703)</li>
+                            <li><strong>08.2016</strong> — перекраска по новой схеме</li>
+                            <li><strong>16–17.05.2026</strong> — Парад поездов на Кольцевой линии</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Галерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/кс_тер.jpg" alt="Красная стрела — теракт 2010" onerror="this.src='https://via.placeholder.com/800x500?text=Красная+Стрела'">
+                        <div class="gallery-caption">Вагон красной стрелы после терракта</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 програме</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/кс.jpg" alt="Красная стрела в нынешнем виде" onerror="this.src='https://via.placeholder.com/800x500?text=Красная+Стрела'">
+                        <div class="gallery-caption">Красная стрела в нынешнем виде.</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Fsm</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/ks_int.jpg" alt="Интерьер Красной стрелы" onerror="this.src='https://via.placeholder.com/800x500?text=Интерьер'">
+                        <div class="gallery-caption">Интерьер вагона «Красная стрела».</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Roman_0298</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Красная стрела» — это не просто именной состав. Это память о легендарном поезде, символ эпохи и напоминание о трагических страницах истории Московского метрополитена».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Подвижной состав метро»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="Главная_Страница_Мосметро.html">Московский метрополитен</a></li>
+                        <li><a href="Служебные_поезда_метро.html">Служебные поезда</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Информация собрана из открытых источников и может быть изменена.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
+            function animateCounters() {
+                const targets = { ksYear: 2006, ksCars: 7, ksYears: 20 };
+                let current = { ksYear: 0, ksCars: 0, ksYears: 0 };
+                const yearEl = document.getElementById('ksYear');
+                const carsEl = document.getElementById('ksCars');
+                const yearsEl = document.getElementById('ksYears');
+                if (!yearEl || !carsEl || !yearsEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.ksYear < targets.ksYear) {
+                        current.ksYear += Math.ceil(targets.ksYear / 50);
+                        if (current.ksYear > targets.ksYear) current.ksYear = targets.ksYear;
+                        yearEl.textContent = current.ksYear;
+                        allFinished = false;
+                    }
+                    if (current.ksCars < targets.ksCars) {
+                        current.ksCars += 1;
+                        if (current.ksCars > targets.ksCars) current.ksCars = targets.ksCars;
+                        carsEl.textContent = current.ksCars;
+                        allFinished = false;
+                    }
+                    if (current.ksYears < targets.ksYears) {
+                        current.ksYears += 1;
+                        if (current.ksYears > targets.ksYears) current.ksYears = targets.ksYears;
+                        yearsEl.textContent = current.ksYears;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+
+            // Галерея
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
+                    if (content && img) {
+                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>
