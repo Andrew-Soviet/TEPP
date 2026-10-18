@@ -695,14 +695,13 @@ function setupRandomRecommendations() {
         { src: 'sud_Yauza_81-714.jpg', caption: 'Сиденья от Яузы в вагоне 1598', author: 'pfandrom' },
         { src: '0959.jpg', caption: '«Ковидные» сиденья в вагоне 0959', author: 'pfandrom' },
         { src: '0963.jpg', caption: '«Ковидные» сиденья в вагоне 0963', author: 'pfandrom' },
-        { src: '8535.jpg', caption: '81-717 (ЛВЗ) №8535', author: 'pfandrom' },
+        { src: '8535_museum.jpg', caption: '81-717 (ЛВЗ) №8535', author: 'pfandrom' },
         { src: '8535_imba.jpg', caption: 'Вагон №8535 с уровня платформы', author: 'pfandrom' },
         { src: '0379.jpg', caption: 'Вагон 0379 с трёхцветной маской', author: 'Gleb5564(transphoto)' },
         { src: 'Type_B_ploshad_sverlova.jpg', caption: 'Вагон Б на станции Площадь Свердлова', author: 'Трёхгранка' },
         { src: '10001.jpg', caption: 'Поезд И 81-715.1', author: 'ТАСС' },
         { src: 'Опыт номер.jpg', caption: 'Опытный 81-717', author: 'Виктор Будан(ТАСС)' },
         { src: '1709421.jpg', caption: 'Опытный поезд 81-717.6К', author: 'andzis' },
-        { src: '0021.jpg', caption: 'Яуза №0021', author: 'Dmitry Zaharov' },
         { src: '0021_int.jpg', caption: 'Интерьер Яузы №0021', author: 'Transport_moscow' },
         { src: '0021_fl.jpg', caption: 'Яуза №0021, вид с пола', author: 'pfandrom' },
         { src: 'Скиф0152.jpg', caption: '«Черноглазый» Русич 0152', author: 'Tosh Evs' },
@@ -755,7 +754,7 @@ function setupRandomRecommendations() {
                 <div class="random-photo-item">
                     <img src="img/${photo.src}"
                          alt="${photo.caption}"
-                         onerror="this.src='https://via.placeholder.com/400x300?text=ТЭПП'">
+                         onerror="this.src='img/no-photo.png'">
                     <div class="random-photo-caption">📷 ${photo.caption}${authorPart}</div>
                 </div>
             `;
