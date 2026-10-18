@@ -702,7 +702,6 @@ function setupRandomRecommendations() {
         { src: '10001.jpg', caption: 'Поезд И 81-715.1', author: 'ТАСС' },
         { src: 'Опыт номер.jpg', caption: 'Опытный 81-717', author: 'Виктор Будан(ТАСС)' },
         { src: '1709421.jpg', caption: 'Опытный поезд 81-717.6К', author: 'andzis' },
-        { src: '0021.jpg', caption: 'Яуза №0021', author: 'Dmitry Zaharov' },
         { src: '0021_int.jpg', caption: 'Интерьер Яузы №0021', author: 'Transport_moscow' },
         { src: '0021_fl.jpg', caption: 'Яуза №0021, вид с пола', author: 'pfandrom' },
         { src: 'Скиф0152.jpg', caption: '«Черноглазый» Русич 0152', author: 'Tosh Evs' },
