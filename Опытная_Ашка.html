@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опытный вагон типа А №1-1001 - Московский метрополитен</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Анимированные частицы -->
+    <div id="particles-js"></div>
+    
+    <!-- Анимированный градиентный фон -->
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Опытный вагон типа А</h1>
+            <p class="subtitle">Первый опытный поезд Московского метрополитена №1-1001</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="Опытные_составы.html">🔬 Опытные</a></li>
+                    <li><a href="#about">О вагоне</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#today">Сегодня</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Опытный вагон типа А №1-1001</h2>
+                <p class="hero-text">Этот опытный поезд был построен в 1934 году на Мытищинском вагоностроительном заводе (МВЗ). Поезд состоял из двух вагонов: 1 и 1001. Это были первый головной и промежуточный вагоны.</p>
+                <p class="hero-text">Уникальный случай, когда опытный состав сохранился, пусть и в разных городах — Москве и Баку.</p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="aYear">0</div>
+                        <div class="stat-label">год постройки</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="aAge">0</div>
+                        <div class="stat-label">лет истории</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="aCars">0</div>
+                        <div class="stat-label">сохранилось вагонов</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Основная информация -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>История вагона</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline" style="padding: 1rem 0;">
+                    <div class="timeline-item">
+                        <div class="timeline-date">1934</div>
+                        <div class="timeline-content">
+                            <h3>Постройка</h3>
+                            <p>Вагоны №1 и №1001 построены на Мытищинском вагоностроительном заводе (МВЗ) для испытаний.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">После испытаний</div>
+                        <div class="timeline-content">
+                            <h3>Расформирование</h3>
+                            <p>После испытаний поезд расформировали. Вагоны эксплуатировались в разных составах.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">1954</div>
+                        <div class="timeline-content">
+                            <h3>Отправка в Баку</h3>
+                            <p>Вагон №1001 отправлен в Баку. Вагон №1 в июне 1954 года прошел модернизацию.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">1980-е</div>
+                        <div class="timeline-content">
+                            <h3>Съёмки в кино</h3>
+                            <p>Поезд серии А в составности 1-21-? участвовал в киноэпопее "Битва за Москву".</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2015</div>
+                        <div class="timeline-content">
+                            <h3>Капитальный ремонт</h3>
+                            <p>Вагон №1 прошел капитально-восстановительный ремонт (КВР) и был зачислен на баланс как музейный.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2015</div>
+                        <div class="timeline-content">
+                            <h3>ЭКСПО 1520</h3>
+                            <p>Участвовал в выставке "Международный железнодорожный салон техники и технологий ЭКСПО 1520".</p>
+                            <div class="highlight-box" style="margin-top: 0.5rem; background: rgba(255, 0, 0, 0.05);">
+                                <p>⚠️ На выставке вагон пострадал от вандалов — на нём появилось граффити.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2016</div>
+                        <div class="timeline-content">
+                            <h3>Восстановление</h3>
+                            <p>Вагон прошёл ещё один ремонт, и к нему присоединили ещё один вагон.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Сегодняшний день -->
+        <section id="today" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2E8B57 0%, #228B22 100%);">
+                <span class="card-icon">📍</span>
+                <h2>Где увидеть сегодня</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>🚇 Москва — Вагон №1</h3>
+                        <ul style="margin: 1rem 0 0 1.2rem;">
+                            <li><strong>Местонахождение:</strong> ТЧ-3 (депо "Измайлово")</li>
+                            <li><strong>Доступ:</strong> На ночных экскурсиях, на реконструкции запуска метро</li>
+                            <li><strong>Состояние:</strong> Музейный, после КВР</li>
+                        </ul>
+                        <div class="highlight-box" style="margin-top: 1rem;">
+                            <p>🎬 Участвовал в киноэпопее "Битва за Москву"</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>🚇 Баку — Вагон №1001</h3>
+                        <ul style="margin: 1rem 0 0 1.2rem;">
+                            <li><strong>Местонахождение:</strong> В ретро-поезде Бакинского метрополитена</li>
+                            <li><strong>Доступ:</strong> В дни рождения метро, на специальных мероприятиях</li>
+                            <li><strong>Особенность:</strong> Один из старейших вагонов в Баку</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="highlight-box" style="margin-top: 2rem; background: rgba(46, 139, 87, 0.1); border-left-color: #2E8B57;">
+                    <p style="font-size: 1.2rem;">Это один из немногих случаев, когда опытный состав сохранён, пусть и в разных городах.</p>
+                    <p style="margin-top: 0.5rem;">Московский метрополитен пытается выкупить вагон №1001 из Баку, однако пока это не удалось.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Связь с музейной Ашкой -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);">
+                <span class="card-icon">🔗</span>
+                <h2>Связь с музейной Ашкой</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Вагон <strong>№1</strong> из этого опытного поезда сегодня входит в состав музейного ретро-поезда <strong>1 — 1031 — 21</strong> и участвует в экскурсиях и праздничных рейсах Московского метрополитена.</p>
+
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>🚆 Музейный состав 1-1031-21</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>Составность: <strong>1 — 1031 — 21</strong></li>
+                            <li>Вагон №1 — самый первый вагон Московского метро</li>
+                            <li>Базируется в ТЧ-3 «Измайлово»</li>
+                            <li>Участвует в экскурсиях и реконструкциях</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🔬 Опытная Ашка (здесь)</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>Первый опытный поезд: <strong>№1 + №1001</strong></li>
+                            <li>Построен в 1934 году на МВЗ</li>
+                            <li>Вагон №1 → музейный состав 1-1031-21</li>
+                            <li>Вагон №1001 → Бакинский метрополитен</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Судьба вагонов:</strong> Вагон №1 после расформирования опытного поезда прошёл КВР в 2015 году и был включён в музейный состав 1-1031-21. Вагон №1001 был отправлен в Баку в 1954 году.</p>
+                </div>
+
+                <div style="text-align: center; margin-top: 1.5rem;">
+                    <a href="Ашка.html" class="btn btn-primary">Подробнее о музейном составе 1-1031-21 →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Фотогалерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #9370DB 0%, #8A2BE2 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/Ашка_опыт_1.jpg" alt="Опытный вагон типа А №1-1001" onerror="this.src='https://via.placeholder.com/750x500?text=Ашка+опытная'">
+                        <div class="gallery-caption">Опытный вагон типа А №1-1001</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Б. Филимана</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">"Вагоны типа А — это первенцы Московского метро. Они открывали движение 15 мая 1935 года. Сохранить хотя бы один такой вагон — сохранить память о том, с чего начиналось метростроение в нашей стране."</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел "Опытные составы"</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Опытные_составы.html">Опытные составы</a></li>
+                        <li><a href="Опытная_Ешка.html">Опытная Ешка</a></li>
+                        <li><a href="Опытный_поезд_И.html">Опытный И</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Вагон №1 в Москве, вагон №1001 в Баку — два города, одна история</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка прокрутки вверх -->
+    <div class="scroll-top">↑</div>
+
+    <!-- Модальное окно для галереи -->
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <!-- Подключаем библиотеку частиц -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Подключаем общий JS файл -->
+    <script src="script.js"></script>
+    
+    <!-- Дополнительный скрипт для счетчиков и галереи -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Анимация счетчиков
+            function animateACounters() {
+                const targets = {
+                    aYear: 1934,
+                    aAge: 92,  // 2026 - 1934 = 92 года
+                    aCars: 2
+                };
+                
+                let current = {
+                    aYear: 0,
+                    aAge: 0,
+                    aCars: 0
+                };
+                
+                const yearElement = document.getElementById('aYear');
+                const ageElement = document.getElementById('aAge');
+                const carsElement = document.getElementById('aCars');
+                
+                if (!yearElement || !ageElement || !carsElement) return;
+                
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    
+                    if (current.aYear < targets.aYear) {
+                        current.aYear += Math.ceil(targets.aYear / 50);
+                        if (current.aYear > targets.aYear) {
+                            current.aYear = targets.aYear;
+                        }
+                        yearElement.textContent = current.aYear;
+                        allFinished = false;
+                    }
+                    
+                    if (current.aAge < targets.aAge) {
+                        current.aAge += Math.ceil(targets.aAge / 50);
+                        if (current.aAge > targets.aAge) {
+                            current.aAge = targets.aAge;
+                        }
+                        ageElement.textContent = current.aAge;
+                        allFinished = false;
+                    }
+                    
+                    if (current.aCars < targets.aCars) {
+                        current.aCars += 1;
+                        if (current.aCars > targets.aCars) {
+                            current.aCars = targets.aCars;
+                        }
+                        carsElement.textContent = current.aCars;
+                        allFinished = false;
+                    }
+                    
+                    if (allFinished) {
+                        clearInterval(interval);
+                    }
+                }, 30);
+            }
+            
+            animateACounters();
+            
+            // Настройка галереи
+            const galleryModal = document.getElementById('galleryModal');
+            const galleryModalContent = document.getElementById('galleryModalContent');
+            const galleryCloseBtn = document.getElementById('galleryModalClose');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            if (galleryModal && galleryItems.length > 0) {
+                galleryItems.forEach(item => {
+                    item.addEventListener('click', function() {
+                        const img = this.querySelector('img');
+                        const caption = this.querySelector('.gallery-caption').textContent;
+                        
+                        if (galleryModalContent) {
+                            galleryModalContent.innerHTML = `
+                                <img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}">
+                                <p style="text-align:center; margin-top:1rem; color:#333;">${caption}</p>
+                            `;
+                        }
+                        
+                        galleryModal.classList.add('active');
+                    });
+                });
+                
+                if (galleryCloseBtn) {
+                    galleryCloseBtn.addEventListener('click', function() {
+                        galleryModal.classList.remove('active');
+                    });
+                }
+                
+                window.addEventListener('click', function(e) {
+                    if (e.target === galleryModal) {
+                        galleryModal.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

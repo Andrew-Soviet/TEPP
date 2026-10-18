@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Служебные поезда метро - Транспортная энциклопедия</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Анимированные частицы -->
+    <div id="particles-js"></div>
+    
+    <!-- Анимированный градиентный фон -->
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Служебные поезда метро</h1>
+            <p class="subtitle">Специализированный подвижной состав для обслуживания инфраструктуры</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="Главная_Страница_Мосметро.html">📍 Мосметро</a></li>
+                    <li><a href="#about">О служебных</a></li>
+                    <li><a href="#trains">Составы</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Служебные поезда Московского метро</h2>
+                <p class="hero-text">В Московском метрополитене эксплуатируются различные служебные поезда для обслуживания путей, контактного рельса, тоннелей и другого хозяйства. Случайно поймать такой — большая удача для любителя транспорта!</p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="serviceTrains">0</div>
+                        <div class="stat-label">типов поездов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="serviceYears">0</div>
+                        <div class="stat-label">лет эксплуатации</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="serviceLines">0</div>
+                        <div class="stat-label">обслуживают линий</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Что такое служебные поезда -->
+        <section class="section-card">
+            <div class="card-header">
+                <span class="card-icon">🔧</span>
+                <h2>Что такое служебные поезда?</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="feature-item">
+                        <h3>Путеизмерители</h3>
+                        <p>Контроль геометрии рельсового пути, выявление дефектов и отклонений.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Контактно-аккумуляторные</h3>
+                        <p>Для работы на обесточенных участках, доставки бригад и материалов.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Дефектоскопы</h3>
+                        <p>Обнаружение внутренних дефектов рельсов ультразвуком.</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p>Служебные поезда обычно работают в ночное время, в технологические окна, когда метро закрыто для пассажиров. Увидеть их днем — большая редкость!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Список служебных поездов -->
+        <section id="trains" class="section-card">
+            <div class="card-header">
+                <span class="card-icon">🚆</span>
+                <h2>Служебные поезда Московского метро</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Вот некоторые из служебных поездов, эксплуатирующихся в метрополитене:</p>
+                
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <!-- Еж3-путеизмеритель -->
+                    <div class="train-card">
+                        <img src="img/Ezh3_full.jpg" alt="Еж3-путеизмеритель" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;" onerror="this.src='https://via.placeholder.com/400x200?text=Еж3'">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem;">🚞</span>
+                            <h3 style="margin: 0;">Еж3-путеизмеритель</h3>
+                        </div>
+                        <p>Служебный состав Московского метрополитена. В его составе — вагон-лаборатория автоматики и радиосвязи службы СЦБ (№5564, служит с 1975 года) и вагон сопровождения путеизмерителя (№5824 — последний оригинальный Еж3 в РФ).</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: #666;">
+                            <li>Вагон №5564 — лаборатория СЦБ и связи, салон перестроен из пассажирского в техническое купе с оборудованием (служит с 1975 года)</li>
+                            <li>Вагон №7374 — путеизмеритель (81-714 ЛВЗ, переоборудован в 2006)</li>
+                        </ul>
+
+                        <a href="Еж3-путеизмеритель.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+                    
+                    <!-- ДК1 -->
+                    <div class="train-card">
+                        <img src="img/ДК1.jpg" alt="ДК1" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;" onerror="this.src='https://via.placeholder.com/400x200?text=ДК1'">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem;">⚡</span>
+                            <h3 style="margin: 0;">ДК1</h3>
+                        </div>
+                        <p>Диагностический комплекс «Синергия-1» — служебный поезд-лаборатория для диагностики инфраструктуры Московского метрополитена.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: #666;">
+                            <li>Введён в эксплуатацию в 2017 году</li>
+                            <li>Состоит из 5 вагонов на базе номерных</li>
+                            <li>Вагоны сопровождения диагностического комплекса</li>
+                            <li>Депо: ТЧ-4 «Красная Пресня»</li>
+                        </ul>
+                        <a href="ДК1_метро.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+                    
+                    <!-- ДК2 -->
+                    <div class="train-card">
+                        <img src="img/дк2.jpg" alt="ДК2" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;" onerror="this.src='https://via.placeholder.com/400x200?text=ДК2'">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem;">🔋</span>
+                            <h3 style="margin: 0;">ДК2</h3>
+                        </div>
+                        <p>Диагностический комплекс «Синергия-2» — служебный поезд-лаборатория для диагностики инфраструктуры Московского метрополитена.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: #666;">
+                            <li>Введён в эксплуатацию в июле 2015 года</li>
+                            <li>Состоит из 5 вагонов на базе номерных</li>
+                            <li>Вагоны сопровождения диагностического комплекса</li>
+                            <li>Депо: ТЧ-4 «Красная Пресня»</li>
+                        </ul>
+                        <a href="ДК2_метро.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <!-- Олег Такбаков -->
+                    <div class="train-card">
+                        <img src="img/0381.jpg" alt="Олег Табаков" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;" onerror="this.src='https://via.placeholder.com/400x200?text=Олег+Табаков'">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem;">🔋</span>
+                            <h3 style="margin: 0;">Олег Табаков</h3>
+                        </div>
+                        <p>Перегоночный поезд посвященный Олегу Табакову</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: #666;">
+                            <li>Перегоночный поезд в депо ТЧ-15</li>
+                            <li>Тематическая расцветка</li>
+                        </ul>
+                        <a href="Табаков0350.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Как увидеть служебный поезд -->
+        <section class="section-card">
+            <div class="card-header">
+                <span class="card-icon">👀</span>
+                <h2>Как увидеть служебный поезд?</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="feature-item">
+                        <h3>Ночные смены</h3>
+                        <p>Служебные поезда работают преимущественно ночью, когда метро закрыто. Увидеть их можно только находясь на станции в момент открытия/закрытия.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Технологические окна</h3>
+                        <p>Днем служебные поезда можно встретить во время технологических окон на отдельных участках линий.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Станции с тупиками</h3>
+                        <p>На конечных станциях с оборотными тупиками иногда можно заметить служебную технику.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Специальные мероприятия</h3>
+                        <p>На выставках и парадах поездов иногда показывают служебный подвижной состав.</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-box" style="margin-top: 1.5rem; background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);">
+                    <p><strong>Помните:</strong> Служебные поезда не предназначены для перевозки пассажиров. Наблюдать за ними можно только с платформы, соблюдая правила безопасности!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">"Служебные поезда — это незаметные герои метро, которые каждую ночь проверяют пути, убирают тоннели и обеспечивают безопасность миллионов пассажиров."</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел "Служебные поезда метро"</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="Главная_Страница_Мосметро.html">Московское метро</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Исследуйте мир служебного транспорта</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка прокрутки вверх -->
+    <div class="scroll-top">↑</div>
+
+    <!-- Подключаем библиотеку частиц -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Подключаем общий JS файл -->
+    <script src="script.js"></script>
+    
+    <!-- Дополнительный скрипт для счетчиков -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Анимация счетчиков
+            function animateServiceCounters() {
+                const targets = {
+                    serviceTrains: 12,
+                    serviceYears: 50,
+                    serviceLines: 15
+                };
+                
+                let current = {
+                    serviceTrains: 0,
+                    serviceYears: 0,
+                    serviceLines: 0
+                };
+                
+                const trainsElement = document.getElementById('serviceTrains');
+                const yearsElement = document.getElementById('serviceYears');
+                const linesElement = document.getElementById('serviceLines');
+                
+                if (!trainsElement || !yearsElement || !linesElement) return;
+                
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    
+                    if (current.serviceTrains < targets.serviceTrains) {
+                        current.serviceTrains += 1;
+                        if (current.serviceTrains > targets.serviceTrains) {
+                            current.serviceTrains = targets.serviceTrains;
+                        }
+                        trainsElement.textContent = current.serviceTrains;
+                        allFinished = false;
+                    }
+                    
+                    if (current.serviceYears < targets.serviceYears) {
+                        current.serviceYears += Math.ceil(targets.serviceYears / 50);
+                        if (current.serviceYears > targets.serviceYears) {
+                            current.serviceYears = targets.serviceYears;
+                        }
+                        yearsElement.textContent = current.serviceYears;
+                        allFinished = false;
+                    }
+                    
+                    if (current.serviceLines < targets.serviceLines) {
+                        current.serviceLines += 1;
+                        if (current.serviceLines > targets.serviceLines) {
+                            current.serviceLines = targets.serviceLines;
+                        }
+                        linesElement.textContent = current.serviceLines;
+                        allFinished = false;
+                    }
+                    
+                    if (allFinished) {
+                        clearInterval(interval);
+                    }
+                }, 30);
+            }
+            
+            animateServiceCounters();
+        });
+    </script>
+</body>
+</html>

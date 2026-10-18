@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сокольническая линия — история и уникальные поезда — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Сокольническая линия (СокЛ)</h1>
+            <p class="subtitle">Первая линия Московского метрополитена — история и уникальные поезда</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="Главная_Страница_Мосметро.html">🏙️ Мосметро</a></li>
+                    <li><a href="#about">О линии</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#unique">Уникальные поезда</a></li>
+                    <li><a href="#stations">Станции</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Сокольническая линия</h2>
+                <p class="hero-text">Сокольническая линия (СокЛ) — первая линия Московского метрополитена, открытая <strong>15 мая 1935 года</strong>. Она соединила центр города с Сокольниками, откуда и получила своё название. Сегодня это одна из самых длинных и загруженных линий столичной подземки.</p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="sokolYear">0</div>
+                        <div class="stat-label">год открытия</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="sokolStations">0</div>
+                        <div class="stat-label">станций</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="sokolUnique">0</div>
+                        <div class="stat-label">уникальных составов</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Общая информация -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #C0392B 0%, #E74C3C 100%);">
+                <span class="card-icon">🚇</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Основные параметры Сокольнической линии</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Дата открытия</td><td>15 мая 1935 года</td></tr>
+                        <tr><td>Длина</td><td>41,5 км</td></tr>
+                        <tr><td>Количество станций</td><td>26</td></tr>
+                        <tr><td>Цвет на схеме</td><td>🔴 Красный</td></tr>
+                        <tr><td>Первые станции</td><td>«Сокольники» — «Парк культуры» (13 станций)</td></tr>
+                        <tr><td>Название до 1990</td><td>Кировско-Фрунзенская линия</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p>⭐ <strong>Интересный факт:</strong> Сокольническая линия — старейшая в Московском метрополитене. В день открытия по ней проехали первые пассажиры — более 300 тысяч человек.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- История линии -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История линии</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">1931–1935</div>
+                        <div class="timeline-content">
+                            <h3>Строительство первой очереди</h3>
+                            <p>В начале 1930-х годов в Москве началось строительство первой линии метро. Работы велись ударными темпами — за 3,5 года было проложено 11,2 км тоннелей и построено 13 станций.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">15.05.1935</div>
+                        <div class="timeline-content">
+                            <h3>Торжественное открытие</h3>
+                            <p>В 7:00 утра открылась первая линия от станции «Сокольники» до станции «Парк культуры» с ответвлением на «Смоленскую». За первый день метро перевезло более 300 тысяч пассажиров.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1937–1938</div>
+                        <div class="timeline-content">
+                            <h3>Продление линии</h3>
+                            <p>Линия продлена до станции «Сокол» (1938), началось строительство второй очереди. Появились станции «Площадь Революции», «Курская», «Измайловская».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1950-е</div>
+                        <div class="timeline-content">
+                            <h3>Развитие в послевоенные годы</h3>
+                            <p>В 1950-х годах линия активно развивалась: открыты станции «Спортивная», «Университет», «Воробьёвы горы» (первая станция на мосту через Москву-реку).</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1960–1980-е</div>
+                        <div class="timeline-content">
+                            <h3>Продление на юго-запад</h3>
+                            <p>Линия продлена до «Юго-Западной» (1963), затем до «Тропарёво» (2014). Строились новые станции в спальных районах.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1990</div>
+                        <div class="timeline-content">
+                            <h3>Переименование</h3>
+                            <p>Кировско-Фрунзенская линия переименована в Сокольническую.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2014–2024</div>
+                        <div class="timeline-content">
+                            <h3>Современный этап</h3>
+                            <p>Линия продлена до «Саларьево» (2016), «Коммунарки» (2019), «Потапово» (2024). Сегодня это одна из самых длинных линий метро.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Итог:</strong> За 90 лет Сокольническая линия прошла путь от первой очереди длиной 11 км до современной магистрали длиной более 41 км с 26 станциями.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Уникальные составы -->
+        <section id="unique" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Уникальные экземпляры на линии</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">На Сокольнической линии можно встретить следующие уникальные экземпляры подвижного состава:</p>
+
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="train-card">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem;">🚂</span>
+                            <h3 style="margin: 0;">Ретро-поезд «Сокольники»</h3>
+                        </div>
+                        <p>Исторический состав, стилизованный под первые вагоны Московского метро типа А. Используется для экскурсионных и праздничных рейсов.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Воссоздан по образцу вагонов 1935 года</li>
+                            <li>Участвует в парадах поездов</li>
+                            <li>Работает на линии в праздничные дни</li>
+                        </ul>
+                        <a href="Ретро поезд.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem;">🚃</span>
+                            <h3 style="margin: 0;">Красная Стрела</h3>
+                        </div>
+                        <p>Именной поезд, посвящённый легендарному фирменному поезду РЖД «Красная стрела». Имеет особое оформление салона.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Тематическое оформление салона</li>
+                            <li>Исторические фотографии и информация</li>
+                            <li>Памятные таблички</li>
+                        </ul>
+                        <a href="Красная_Стрела.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem;">💺</span>
+                            <h3 style="margin: 0;">2646 и 2649</h3>
+                        </div>
+                        <p>Вагоны с диванами — редкие экземпляры, сохранившие оригинальные мягкие сиденья (диваны) вместо современных антивандальных кресел.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li><strong>№2646</strong> — вагон с диванами</li>
+                            <li><strong>№2649</strong> — вагон с диванами</li>
+                            <li>Редкие экземпляры с историческим интерьером</li>
+                        </ul>
+                        <a href="#" class="btn btn-secondary" style="width: 100%;" onclick="showComingSoon(); return false;">Подробнее →</a>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 2rem;">
+                    <p>Если вы знаете о других уникальных составах на Сокольнической линии, сообщите нам!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Станции -->
+        <section id="stations" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+                <span class="card-icon">🗺️</span>
+                <h2>Станции Сокольнической линии</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                    <div class="feature-item">
+                        <h3>Северный участок</h3>
+                        <ul style="margin: 0.5rem 0 0 1.2rem;">
+                            <li>«Бульвар Рокоссовского»</li>
+                            <li>«Черкизовская»</li>
+                            <li>«Преображенская площадь»</li>
+                            <li>«Сокольники»</li>
+                            <li>«Красносельская»</li>
+                            <li>«Комсомольская»</li>
+                            <li>«Красные Ворота»</li>
+                            <li>«Чистые пруды»</li>
+                            <li>«Лубянка»</li>
+                            <li>«Охотный Ряд»</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Центральный участок</h3>
+                        <ul style="margin: 0.5rem 0 0 1.2rem;">
+                            <li>«Библиотека имени Ленина»</li>
+                            <li>«Кропоткинская»</li>
+                            <li>«Парк культуры»</li>
+                            <li>«Фрунзенская»</li>
+                            <li>«Спортивная»</li>
+                            <li>«Воробьёвы горы»</li>
+                            <li>«Университет»</li>
+                            <li>«Проспект Вернадского»</li>
+                            <li>«Юго-Западная»</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Южный участок</h3>
+                        <ul style="margin: 0.5rem 0 0 1.2rem;">
+                            <li>«Тропарёво»</li>
+                            <li>«Румянцево»</li>
+                            <li>«Саларьево»</li>
+                            <li>«Филатов Луг»</li>
+                            <li>«Прокшино»</li>
+                            <li>«Ольховая»</li>
+                            <li>«Новомосковская»</li>
+                            <li>«Потапово»</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Сокольническая линия — это не только первая линия метро, но и настоящий музей под открытым небом, где можно встретить уникальные составы, сохранившие историю развития подвижного состава».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Сокольническая линия»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="Главная_Страница_Мосметро.html">Московский метрополитен</a></li>
+                        <li><a href="Живая_история_Мск_метро.html">Живая история</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Сокольническая линия — первая линия Московского метро</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="comingSoonModal">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <div class="modal-body">
+                <h2>🚧 Страница в разработке</h2>
+                <p>Подробная информация о вагонах 2646 и 2649 появится позже.</p>
+                <p>Они примечательны тем, что сохранили оригинальные диваны (мягкие сиденья) вместо современных антивандальных кресел.</p>
+                <button class="btn btn-primary" id="modalOkBtn">Понятно</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function animateCounters() {
+                const targets = { sokolYear: 1935, sokolStations: 26, sokolUnique: 4 };
+                let current = { sokolYear: 0, sokolStations: 0, sokolUnique: 0 };
+                const yearEl = document.getElementById('sokolYear');
+                const stationsEl = document.getElementById('sokolStations');
+                const uniqueEl = document.getElementById('sokolUnique');
+                if (!yearEl || !stationsEl || !uniqueEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.sokolYear < targets.sokolYear) {
+                        current.sokolYear += Math.ceil(targets.sokolYear / 50);
+                        if (current.sokolYear > targets.sokolYear) current.sokolYear = targets.sokolYear;
+                        yearEl.textContent = current.sokolYear;
+                        allFinished = false;
+                    }
+                    if (current.sokolStations < targets.sokolStations) {
+                        current.sokolStations += 1;
+                        if (current.sokolStations > targets.sokolStations) current.sokolStations = targets.sokolStations;
+                        stationsEl.textContent = current.sokolStations;
+                        allFinished = false;
+                    }
+                    if (current.sokolUnique < targets.sokolUnique) {
+                        current.sokolUnique += 1;
+                        if (current.sokolUnique > targets.sokolUnique) current.sokolUnique = targets.sokolUnique;
+                        uniqueEl.textContent = current.sokolUnique;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+        });
+
+        const modal = document.getElementById('comingSoonModal');
+        const closeBtn = document.getElementById('modalClose');
+        const okBtn = document.getElementById('modalOkBtn');
+
+        window.showComingSoon = function() {
+            if (modal) modal.classList.add('active');
+        }
+
+        function closeModal() {
+            if (modal) modal.classList.remove('active');
+        }
+
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (okBtn) okBtn.addEventListener('click', closeModal);
+
+        window.addEventListener('click', function(e) {
+            if (e.target === modal) closeModal();
+        });
+    </script>
+</body>
+</html>

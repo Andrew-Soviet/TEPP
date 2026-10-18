@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ретро-поезд «Сокольники» — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Ретро-поезд «Сокольники»</h1>
+            <p class="subtitle">Атмосферный тематический поезд на базе вагонов 81-717.5А</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="Главная_Страница_Мосметро.html">🏙️ Мосметро</a></li>
+                    <li><a href="#about">О поезде</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#features">Особенности</a></li>
+                    <li><a href="#composition">Составность</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Ретро-поезд «Сокольники»</h2>
+                <p class="hero-text">Ретро-поезд «Сокольники» на базе вагонов типа <strong>81-717.5А</strong> — это один из самых известных и атмосферных тематических поездов Московского метрополитена. Этот поезд можно встретить на Сокольнической линии (СокЛ).</p>
+                <p class="hero-text">Состав выпустили на 1-ю линию Мосметро в 2010 году. Состав имеет нетипичную для московских номерных маску <strong>1-1</strong> и получил ретро-окраску.</p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="retroYear">0</div>
+                        <div class="stat-label">год выпуска</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="retroCars">0</div>
+                        <div class="stat-label">вагонов в составе</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="retroYears">0</div>
+                        <div class="stat-label">лет в работе</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Общая информация -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #922B21 0%, #C0392B 100%);">
+                <span class="card-icon">ℹ️</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Основные параметры ретро-поезда «Сокольники»</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Модель</td><td>81-717.5А</td></tr>
+                        <tr><td>Депо</td><td>ТЧ-1 «Северное»</td></tr>
+                        <tr><td>Линия</td><td>Сокольническая (СокЛ)</td></tr>
+                        <tr><td>Год выпуска</td><td>2010</td></tr>
+                        <tr><td>Начало работы с пассажирами</td><td>15.05.2010</td></tr>
+                        <tr><td>Маска</td><td>1-1 (нетипичная для московских номерных)</td></tr>
+                        <tr><td>Окраска</td><td>Ретро</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- История -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История поезда</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">19.04.2010</div>
+                        <div class="timeline-content">
+                            <h3>Отправлен с завода</h3>
+                            <p>Состав отправлен с завода в метрополитен.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">20.04.2010</div>
+                        <div class="timeline-content">
+                            <h3>Поступление в метрополитен</h3>
+                            <p>Поступил в метрополитен через гейт ТЧ-2 «Сокол».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">21.04.2010</div>
+                        <div class="timeline-content">
+                            <h3>Поступление в депо</h3>
+                            <p>Поступил в депо приписки ТЧ-1 «Северное».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">15.05.2010</div>
+                        <div class="timeline-content">
+                            <h3>Начало работы с пассажирами</h3>
+                            <p>Состав начал работу с пассажирами.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">16.05.2010</div>
+                        <div class="timeline-content">
+                            <h3>Ночной концерт</h3>
+                            <p>Участвовал в ночном концерте на станции «Кропоткинская».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2015 — 2022</div>
+                        <div class="timeline-content">
+                            <h3>Парады поездов</h3>
+                            <p>Участвовал в Параде поездов на Кольцевой линии.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">30.09.2017</div>
+                        <div class="timeline-content">
+                            <h3>Ночной концерт на «Деловом центре»</h3>
+                            <p>Участвовал в ночном концерте на станции «Деловой центр» (СолЛ).</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">22.03.2018</div>
+                        <div class="timeline-content">
+                            <h3>Открытие участка</h3>
+                            <p>Участвовал в открытии участка «Окружная» — «Селигерская».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023 — 2024</div>
+                        <div class="timeline-content">
+                            <h3>Парад на БКЛ</h3>
+                            <p>Участвовал в Параде поездов на Большой кольцевой линии.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">С 2025</div>
+                        <div class="timeline-content">
+                            <h3>Парад на Кольцевой</h3>
+                            <p>Участвует в Параде поездов на Кольцевой линии.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Особенности -->
+        <section id="features" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #B9770E 0%, #D4AC0D 100%);">
+                <span class="card-icon">✨</span>
+                <h2>Особенности поезда</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="feature-item">
+                        <h3>🎭 Маска 1-1</h3>
+                        <p>Нетипичная для московских номерных маска 1-1.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🎨 Ретро-окраска</h3>
+                        <p>Состав получил ретро-окраску, подчёркивающую его исторический облик.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🛋️ Салон</h3>
+                        <p>Диваны с пружинами, линкруст, светильники «Бра».</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>⚙️ БПСН</h3>
+                        <p>Возможно, не так, но у него немного отличается БПСН.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Составность -->
+        <section id="composition" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Составность ретро-поезда</h2>
+            </div>
+            <div class="card-content">
+                <div class="highlight-box">
+                    <p style="font-size: 1.5rem; text-align: center; font-weight: bold;">
+                        2837 — 1946 — 1947 — 1948 — 1949 — 1950 — 2838
+                    </p>
+                    <p style="text-align: center; color: var(--text-secondary); margin-top: 0.5rem;">7 вагонов</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Фотогалерея (ВСЕ ФОТО ЗДЕСЬ) -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/ретро_1.jpg" alt="Ретро-поезд Сокольники на параде" onerror="this.src='https://via.placeholder.com/600x400?text=Ретро+Сокольники'">
+                        <div class="gallery-caption">Первый парадный поезд на первом параде. Фото: Андрей Рябицев</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Андрей Рябицев</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/2838_int.jpg" alt="Интерьер вагона 2838" onerror="this.src='https://via.placeholder.com/600x400?text=Интерьер+2838'">
+                        <div class="gallery-caption">Интерьер вагона 2838. Фото: albert33241</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 albert33241</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/2837_kab.jpg" alt="Кабина вагона 2837" onerror="this.src='https://via.placeholder.com/600x400?text=Кабина+2837'">
+                        <div class="gallery-caption">Кабина вагона 2837. Фото: Romach</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Romach</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Ретро-поезд «Сокольники» — это машина времени на рельсах. Он переносит пассажиров в атмосферу московского метро прошлых лет и остаётся одним из самых любимых тематических составов».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Ретро-поезда метро»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="Главная_Страница_Мосметро.html">Московский метрополитен</a></li>
+                        <li><a href="Красная_Стрела.html">Красная стрела</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Информация собрана из открытых источников и может быть изменена.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
+            function animateCounters() {
+                const targets = { retroYear: 2010, retroCars: 7, retroYears: 15 };
+                let current = { retroYear: 0, retroCars: 0, retroYears: 0 };
+                const yearEl = document.getElementById('retroYear');
+                const carsEl = document.getElementById('retroCars');
+                const yearsEl = document.getElementById('retroYears');
+                if (!yearEl || !carsEl || !yearsEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.retroYear < targets.retroYear) {
+                        current.retroYear += Math.ceil(targets.retroYear / 50);
+                        if (current.retroYear > targets.retroYear) current.retroYear = targets.retroYear;
+                        yearEl.textContent = current.retroYear;
+                        allFinished = false;
+                    }
+                    if (current.retroCars < targets.retroCars) {
+                        current.retroCars += 1;
+                        if (current.retroCars > targets.retroCars) current.retroCars = targets.retroCars;
+                        carsEl.textContent = current.retroCars;
+                        allFinished = false;
+                    }
+                    if (current.retroYears < targets.retroYears) {
+                        current.retroYears += 1;
+                        if (current.retroYears > targets.retroYears) current.retroYears = targets.retroYears;
+                        yearsEl.textContent = current.retroYears;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+
+            // Галерея
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
+                    if (content && img) {
+                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опытная Яуза 001-005 - История создания первого состава</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Анимированные частицы -->
+    <div id="particles-js"></div>
+    
+    <!-- Анимированный градиентный фон -->
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Опытная Яуза 001-005</h1>
+            <p class="subtitle">Первый опытный состав семейства "Яуза" — начало новой эры</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="Опытные_составы.html">🔬 Опытные</a></li>
+                    <li><a href="#about">О поезде</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#fate">Судьба</a></li>
+                    <li><a href="#surviving">Сохранившийся</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Опытная Яуза — начало истории</h2>
+                <p class="hero-text">Многие знают Яузу, но немногие знают, с чего это всё начиналось. После неудач с типом "И", приступили к разработке Яузы (в начале сделали 81-717 как временный поезд). Завершить разработку не успели — СССР распался, и было не до этого. Позже разработка продолжилась, и уже в 1992 году был готов первый опытный состав.</p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="yauzaYear">0</div>
+                        <div class="stat-label">год создания</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="yauzaCars">0</div>
+                        <div class="stat-label">вагонов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="yauzaSurviving">0</div>
+                        <div class="stat-label">сохранилось</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Основная информация -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Первый опытный состав</h2>
+            </div>
+            <div class="card-content">
+                <div class="highlight-box" style="margin-bottom: 2rem;">
+                    <p style="font-size: 1.8rem; text-align: center; font-weight: bold;">001-002-003-004-005</p>
+                </div>
+                
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>Дата презентации</h3>
+                        <p style="font-size: 1.3rem; font-weight: bold;">18 января 1993 года</p>
+                        <p>Презентация состава нового поколения Президенту России Б.Н. Ельцину на 3 пути станции "Полежаевская"</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Период испытаний</h3>
+                        <p>1992 — январь 1993 года</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- История -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">⏳</span>
+                <h2>История создания</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline" style="padding: 1rem 0;">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Конец 1980-х</div>
+                        <div class="timeline-content">
+                            <h3>Начало разработки</h3>
+                            <p>После неудач с типом "И" приступили к разработке нового поезда — "Яуза". В начале сделали 81-717 как временный поезд.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">1991</div>
+                        <div class="timeline-content">
+                            <h3>Распад СССР</h3>
+                            <p>Завершить разработку не успели — СССР распался, и финансирование было заморожено.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">1992</div>
+                        <div class="timeline-content">
+                            <h3>Готов первый состав</h3>
+                            <p>Разработка продолжилась, и в 1992 году был готов первый опытный состав.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">1992-1993</div>
+                        <div class="timeline-content">
+                            <h3>Испытания</h3>
+                            <p>До января 1993 года длились испытания нового состава.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">18 января 1993</div>
+                        <div class="timeline-content">
+                            <h3>Презентация президенту</h3>
+                            <p>Презентация состава нового поколения Президенту России Б.Н. Ельцину на 3 пути станции "Полежаевская".</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Судьба вагонов -->
+        <section id="fate" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">⚰️</span>
+                <h2>Судьба вагонов</h2>
+            </div>
+            <div class="card-content">
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <div class="train-card">
+                        <h3>001 и 005</h3>
+                        <p>Головные вагоны</p>
+                        <p>Отправлены на территорию завода МетровагонМаш (ныне Трансмашхолдинг)</p>
+                        <p class="route-number" style="color: #C0392B;">Утилизированы в 2010</p>
+                    </div>
+                    
+                    <div class="train-card">
+                        <h3>003 и 004</h3>
+                        <p>Промежуточные вагоны</p>
+                        <p>Перенумерованы в 0003 и 0004, эксплуатировались до 2019 года</p>
+                        <p class="route-number" style="color: #C0392B;">Утилизированы в 2024</p>
+                    </div>
+                    
+                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                        <h3>002</h3>
+                        <p>Промежуточный вагон</p>
+                        <p>Единственный сохранившийся вагон от опытного состава</p>
+                        <p class="route-number" style="color: #27AE60;">В ТЧ-4 "Красная Пресня"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Фотогалерея (обновленная с 3 изображениями) -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E74C3C 0%, #C0392B 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/яуза 001.jpg" alt="Опытная Яуза на испытательном кольце" onerror="this.src='https://via.placeholder.com/671x450?text=Яуза+001'">
+                        <div class="gallery-caption">Опытная Яуза 001 на экспериментальном кольце ВНИИЖТ</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Станислав Панов/ТАСС</p>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="img/002_салон.jpg" alt="Салон вагона 002 Яузы" onerror="this.src='https://via.placeholder.com/600x400?text=Салон+002'">
+                        <div class="gallery-caption">Салон вагона 001 во время испытаний</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Станислав Панов/ТАСС</p>
+                    </div>
+                
+                <p style="text-align: center; margin-top: 1rem; color: #666;">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Технические характеристики -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #7F8C8D 0%, #95A5A6 100%);">
+                <span class="card-icon">⚙️</span>
+                <h2>Технические характеристики</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Параметр</th>
+                            <th>Значение</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Год создания</td><td>1992</td></tr>
+                        <tr><td>Завод-изготовитель</td><td>Мытищинский машиностроительный завод (ММЗ)</td></tr>
+                        <tr><td>Модель</td><td>81-720/721 "Яуза" (опытная)</td></tr>
+                        <tr><td>Составность</td><td>001-002-003-004-005</td></tr>
+                        <tr><td>Количество вагонов</td><td>5</td></tr>
+                        <tr><td>Период испытаний</td><td>1992 — январь 1993</td></tr>
+                        <tr><td>Дата презентации</td><td>18 января 1993</td></tr>
+                        <tr><td>Утилизированы</td><td>001,005 — 2010; 003,004 — 2024</td></tr>
+                        <tr><td>Сохранился</td><td>002 (в ТЧ-4)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">"Яуза стала символом перехода от советского метровагоностроения к российскому. Первый опытный состав, показанный Ельцину в 1993 году, открыл новую страницу в истории Московского метро. Жаль, что от него остался всего один вагон."</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел "Опытные составы"</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Опытные_составы.html">Опытные составы</a></li>
+                        <li><a href="Опытный_поезд_И.html">Опытный И</a></li>
+                        <li><a href="Опытный_81-717.html">Опытный 81-717</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Спасите вагон 002! #СохранимЯузу</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка прокрутки вверх -->
+    <div class="scroll-top">↑</div>
+
+    <!-- Модальное окно для галереи -->
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <!-- Подключаем библиотеку частиц -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Подключаем общий JS файл -->
+    <script src="script.js"></script>
+    
+    <!-- Дополнительный скрипт для счетчиков и галереи -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Анимация счетчиков
+            function animateYauzaCounters() {
+                const targets = {
+                    yauzaYear: 1992,
+                    yauzaCars: 5,
+                    yauzaSurviving: 1
+                };
+                
+                let current = {
+                    yauzaYear: 0,
+                    yauzaCars: 0,
+                    yauzaSurviving: 0
+                };
+                
+                const yearElement = document.getElementById('yauzaYear');
+                const carsElement = document.getElementById('yauzaCars');
+                const survivingElement = document.getElementById('yauzaSurviving');
+                
+                if (!yearElement || !carsElement || !survivingElement) return;
+                
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    
+                    if (current.yauzaYear < targets.yauzaYear) {
+                        current.yauzaYear += Math.ceil(targets.yauzaYear / 50);
+                        if (current.yauzaYear > targets.yauzaYear) {
+                            current.yauzaYear = targets.yauzaYear;
+                        }
+                        yearElement.textContent = current.yauzaYear;
+                        allFinished = false;
+                    }
+                    
+                    if (current.yauzaCars < targets.yauzaCars) {
+                        current.yauzaCars += 1;
+                        if (current.yauzaCars > targets.yauzaCars) {
+                            current.yauzaCars = targets.yauzaCars;
+                        }
+                        carsElement.textContent = current.yauzaCars;
+                        allFinished = false;
+                    }
+                    
+                    if (current.yauzaSurviving < targets.yauzaSurviving) {
+                        current.yauzaSurviving += 1;
+                        if (current.yauzaSurviving > targets.yauzaSurviving) {
+                            current.yauzaSurviving = targets.yauzaSurviving;
+                        }
+                        survivingElement.textContent = current.yauzaSurviving;
+                        allFinished = false;
+                    }
+                    
+                    if (allFinished) {
+                        clearInterval(interval);
+                    }
+                }, 30);
+            }
+            
+            animateYauzaCounters();
+            
+            // Настройка галереи
+            const galleryModal = document.getElementById('galleryModal');
+            const galleryModalContent = document.getElementById('galleryModalContent');
+            const galleryCloseBtn = document.getElementById('galleryModalClose');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            if (galleryModal && galleryItems.length > 0) {
+                galleryItems.forEach(item => {
+                    item.addEventListener('click', function() {
+                        const img = this.querySelector('img');
+                        const caption = this.querySelector('.gallery-caption').textContent;
+                        
+                        if (galleryModalContent) {
+                            galleryModalContent.innerHTML = `
+                                <img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}">
+                                <p style="text-align:center; margin-top:1rem; color:#333;">${caption}</p>
+                            `;
+                        }
+                        
+                        galleryModal.classList.add('active');
+                    });
+                });
+                
+                if (galleryCloseBtn) {
+                    galleryCloseBtn.addEventListener('click', function() {
+                        galleryModal.classList.remove('active');
+                    });
+                }
+                
+                window.addEventListener('click', function(e) {
+                    if (e.target === galleryModal) {
+                        galleryModal.classList.remove('active');
+                    }
+                });
+                
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && galleryModal.classList.contains('active')) {
+                        galleryModal.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

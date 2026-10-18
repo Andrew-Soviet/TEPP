@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опытный Скиф (Русич) - Первый сочлененный поезд Московского метро</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Анимированные частицы -->
+    <div id="particles-js"></div>
+    
+    <!-- Анимированный градиентный фон -->
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Опытный Скиф (Русич)</h1>
+            <p class="subtitle">Первый сочленённый поезд Московского метро, открывший новую эру</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="Опытные_составы.html">🔬 Опытные</a></li>
+                    <li><a href="#about">О поезде</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#timeline">Хронология</a></li>
+                    <li><a href="#fate">Судьба</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Опытный Скиф — начало семейства "Русич"</h2>
+                <p class="hero-text">Опытный Скиф был построен в 2003 году. Изначально был в составности 0001-0002, однако позже добавился вагон 0501. Это был первый сочленённый поезд в Московском метро, положивший начало семейству "Русич".</p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="skifYear">0</div>
+                        <div class="stat-label">год постройки</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="skifCars">0</div>
+                        <div class="stat-label">вагонов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="skifSurviving">0</div>
+                        <div class="stat-label">сохранилось</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Основная информация -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Состав поезда</h2>
+            </div>
+            <div class="card-content">
+                <div class="highlight-box" style="margin-bottom: 2rem;">
+                    <p style="font-size: 1.8rem; text-align: center; font-weight: bold;">0001-0501-0002</p>
+                    <p style="text-align: center; margin-top: 0.5rem;">(первоначально 0001-0002, позже добавлен 0501)</p>
+                </div>
+                
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>Производитель</h3>
+                        <p>Мытищинский машиностроительный завод (ММЗ)</p>
+                        <p>Модель: 81-740/741 "Русич" (опытный)</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Особенности</h3>
+                        <p>Первый сочленённый поезд в Московском метро</p>
+                        <p>Новая конструкция кузова и тележек</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Хронология событий -->
+        <section id="timeline" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">⏳</span>
+                <h2>Хронология испытаний</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline" style="padding: 1rem 0;">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Лето 2002</div>
+                        <div class="timeline-content">
+                            <h3>Испытания в Щербинке</h3>
+                            <p>Испытания на экспериментальном кольце ВНИИЖТ в Щербинке.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">Август 2002</div>
+                        <div class="timeline-content">
+                            <h3>Поступление в метро</h3>
+                            <p>Поступил в метрополитен через гейт ТЧ-2 "Сокол".</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">Зима 2002-2003</div>
+                        <div class="timeline-content">
+                            <h3>Испытания на линиях</h3>
+                            <p>Испытания на Замоскворецкой и Серпуховско-Тимирязевской линиях.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">26.12.2002</div>
+                        <div class="timeline-content">
+                            <h3>Открытие станции</h3>
+                            <p>Участвовал в открытии станции "Бульвар Дмитрия Донского".</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">Февраль-март 2003</div>
+                        <div class="timeline-content">
+                            <h3>Уличные условия</h3>
+                            <p>Испытания в уличных условиях на Филёвской линии.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">06.05.2003</div>
+                        <div class="timeline-content">
+                            <h3>Открытие "Парка Победы"</h3>
+                            <p>Участвовал в открытии станции "Парк Победы".</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">Лето 2003</div>
+                        <div class="timeline-content">
+                            <h3>Продолжение испытаний</h3>
+                            <p>Продолжение испытаний на Серпуховско-Тимирязевской линии с вагоном №0501, дополнившим состав.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Судьба вагонов -->
+        <section id="fate" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #C0392B 0%, #E74C3C 100%);">
+                <span class="card-icon">⚰️</span>
+                <h2>Судьба вагонов</h2>
+            </div>
+            <div class="card-content">
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                        <h3>Вагон 0001</h3>
+                        <p class="route-number" style="color: #27AE60;">Музейный</p>
+                        <p>5 декабря 2012 года стал тренажером в ТЧ-3. На данный момент это музейный вагон.</p>
+                        <p><strong>Статус:</strong> Сохранён</p>
+                    </div>
+                    
+                    <div class="train-card" style="border-left: 4px solid #E67E22;">
+                        <h3>Вагон 0501</h3>
+                        <p class="route-number" style="color: #E67E22;">Списан в 2023</p>
+                        <p>Некоторое время был служебным. Списан, ожидает утилизации.</p>
+                        <p><strong>Статус:</strong> Донор деталей</p>
+                    </div>
+                    
+                    <div class="train-card" style="border-left: 4px solid #E67E22;">
+                        <h3>Вагон 0002</h3>
+                        <p class="route-number" style="color: #E67E22;">Списан в 2023</p>
+                        <p>Некоторое время был служебным. Списан, ожидает утилизации.</p>
+                        <p><strong>Статус:</strong> Донор деталей</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-box" style="margin-top: 2rem; background: rgba(231, 126, 34, 0.1);">
+                    <p><strong>Вагоны 0501 и 0002:</strong> Их до сих пор не утилизировали, потому что эти вагоны используются как доноры деталей. 2 этих вагона были списаны в 2023.</p>
+                    <p style="margin-top: 0.5rem; font-weight: bold;">Желательно сохранить хоть 1 вагон из оставшихся!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Сохранившийся вагон -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+                <span class="card-icon">🏛️</span>
+                <h2>Музейный вагон 0001</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>📍 Текущее местонахождение</h3>
+                        <p style="font-size: 1.3rem; font-weight: bold;">ТЧ-3 "Измайлово"</p>
+                        <p>С 5 декабря 2012 года используется как тренажёр. Имеет музейный статус.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>🔧 Состояние</h3>
+                        <p>Вагон сохранён для истории, в отличие от своих собратьев.</p>
+                        <p>Это единственный вагон из опытного состава, который имеет шанс остаться в музее.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Фотогалерея (обновленная с 3 изображениями) -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                    
+                    <!-- Фото 2: Опытный Скиф во время испытаний -->
+                    <div class="gallery-item">
+                        <img src="img/Type_Skif_0001.jpg" alt="Опытный Скиф во время испытаний" onerror="this.src='https://via.placeholder.com/750x500?text=Опытный+Скиф'">
+                        <div class="gallery-caption">Опытный Скиф в депо ТЧ-3 "Измайлово"</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                    </div>
+                    
+                    <!-- Фото 3: Салон вагона 0001 (НОВОЕ) -->
+                    <div class="gallery-item">
+                        <img src="img/Скиф0001_салон.jpg" alt="Салон музейного вагона 0001" onerror="this.src='https://via.placeholder.com/750x500?text=Салон+Скиф+0001'">
+                        <div class="gallery-caption">Салон опытного Скифа</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Александр Попов</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: #666;">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">"Опытный Скиф стал родоначальником всего семейства 'Русич' — первых сочленённых поездов Московского метро. Жаль, что из трёх вагонов сохранился только один. Остальные ещё можно спасти от утилизации."</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел "Опытные составы"</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Опытные_составы.html">Опытные составы</a></li>
+                        <li><a href="Опытный_поезд_И.html">Опытный И</a></li>
+                        <li><a href="Опытная_Яуза_001-005.html">Опытная Яуза</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Сохраним вагоны 0501 и 0002! #СпастиСкифа</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка прокрутки вверх -->
+    <div class="scroll-top">↑</div>
+
+    <!-- Модальное окно для галереи -->
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <!-- Подключаем библиотеку частиц -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Подключаем общий JS файл -->
+    <script src="script.js"></script>
+    
+    <!-- Дополнительный скрипт для счетчиков и галереи -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Анимация счетчиков
+            function animateSkifCounters() {
+                const targets = {
+                    skifYear: 2003,
+                    skifCars: 3,
+                    skifSurviving: 1
+                };
+                
+                let current = {
+                    skifYear: 0,
+                    skifCars: 0,
+                    skifSurviving: 0
+                };
+                
+                const yearElement = document.getElementById('skifYear');
+                const carsElement = document.getElementById('skifCars');
+                const survivingElement = document.getElementById('skifSurviving');
+                
+                if (!yearElement || !carsElement || !survivingElement) return;
+                
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    
+                    if (current.skifYear < targets.skifYear) {
+                        current.skifYear += Math.ceil(targets.skifYear / 50);
+                        if (current.skifYear > targets.skifYear) {
+                            current.skifYear = targets.skifYear;
+                        }
+                        yearElement.textContent = current.skifYear;
+                        allFinished = false;
+                    }
+                    
+                    if (current.skifCars < targets.skifCars) {
+                        current.skifCars += 1;
+                        if (current.skifCars > targets.skifCars) {
+                            current.skifCars = targets.skifCars;
+                        }
+                        carsElement.textContent = current.skifCars;
+                        allFinished = false;
+                    }
+                    
+                    if (current.skifSurviving < targets.skifSurviving) {
+                        current.skifSurviving += 1;
+                        if (current.skifSurviving > targets.skifSurviving) {
+                            current.skifSurviving = targets.skifSurviving;
+                        }
+                        survivingElement.textContent = current.skifSurviving;
+                        allFinished = false;
+                    }
+                    
+                    if (allFinished) {
+                        clearInterval(interval);
+                    }
+                }, 30);
+            }
+            
+            animateSkifCounters();
+            
+            // Настройка галереи
+            const galleryModal = document.getElementById('galleryModal');
+            const galleryModalContent = document.getElementById('galleryModalContent');
+            const galleryCloseBtn = document.getElementById('galleryModalClose');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            if (galleryModal && galleryItems.length > 0) {
+                galleryItems.forEach(item => {
+                    item.addEventListener('click', function() {
+                        const img = this.querySelector('img');
+                        const caption = this.querySelector('.gallery-caption').textContent;
+                        
+                        if (galleryModalContent) {
+                            galleryModalContent.innerHTML = `
+                                <img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}">
+                                <p style="text-align:center; margin-top:1rem; color:#333;">${caption}</p>
+                            `;
+                        }
+                        
+                        galleryModal.classList.add('active');
+                    });
+                });
+                
+                if (galleryCloseBtn) {
+                    galleryCloseBtn.addEventListener('click', function() {
+                        galleryModal.classList.remove('active');
+                    });
+                }
+                
+                window.addEventListener('click', function(e) {
+                    if (e.target === galleryModal) {
+                        galleryModal.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

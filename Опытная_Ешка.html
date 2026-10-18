@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опытный поезд типа Е - История Московского метро</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Анимированные частицы -->
+    <div id="particles-js"></div>
+    
+    <!-- Анимированный градиентный фон -->
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Опытный поезд типа "Е"</h1>
+            <p class="subtitle">Первый опытный состав серии Е (3001-3007) 1959 года</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="Опытные_составы.html">🔬 Опытные</a></li>
+                    <li><a href="#about">О поезде</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#surviving">Сохранившийся</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Опытный поезд типа "Е" №3001-3007</h2>
+                <p class="hero-text">Опытный поезд был построен в декабре 1959 года. Поезд имел 7-вагонную составность, став предшественником легендарной серии вагонов типа Е, которые на долгие годы определили облик Московского метрополитена.</p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="eYear">0</div>
+                        <div class="stat-label">год постройки</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="eCars">0</div>
+                        <div class="stat-label">вагонов в составе</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="eSurviving">0</div>
+                        <div class="stat-label">сохранилось</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Основная информация -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #4B0082 0%, #6A0DAD 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>История опытного поезда</h2>
+            </div>
+            <div class="card-content">
+                <div class="highlight-box" style="margin-bottom: 2rem;">
+                    <p style="font-size: 1.2rem; text-align: center;"><strong>Составность поезда:</strong> 3001-3002-3003-3004-3005-3006-3007</p>
+                </div>
+                
+                <div class="timeline" style="padding: 1rem 0;">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Декабрь 1959</div>
+                        <div class="timeline-content">
+                            <h3>Постройка</h3>
+                            <p>Опытный поезд из 7 вагонов построен для испытаний новых технических решений.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">После испытаний</div>
+                        <div class="timeline-content">
+                            <h3>Расформирование</h3>
+                            <p>После прохождения испытаний поезд был расформирован. Вагоны начали эксплуатироваться в разных депо.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">1960-1970</div>
+                        <div class="timeline-content">
+                            <h3>Первые вагоны (3001-3002)</h3>
+                            <p>Первые два вагона до 1970 года эксплуатировались в ТЧ-2 ("Сокол"). В 1970 переданы в ТЧ-9 ("Фили") в качестве служебных. Утилизированы в 2006 году.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">1968</div>
+                        <div class="timeline-content">
+                            <h3>Путешествие вагона 3007</h3>
+                            <p>Вагон 3007 был передан в Венгрию, затем в Прагу для испытаний и изучения.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">1975</div>
+                        <div class="timeline-content">
+                            <h3>Возвращение</h3>
+                            <p>В 1975 году вагон 3007 вернулся в Москву. Участвовал в испытаниях опытного поезда "И".</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">1997</div>
+                        <div class="timeline-content">
+                            <h3>Вагон-сарай</h3>
+                            <p>В 1997 году вагон стал использоваться как вагон-сарай (хозяйственный) в ТЧ-15 ("Печатники").</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2003</div>
+                        <div class="timeline-content">
+                            <h3>Передача в ТЧ-8</h3>
+                            <p>В 2003 году вагон был передан в ТЧ-8 ("Варшавское"), где находится до сих пор.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="highlight-box" style="margin-top: 2rem; background: rgba(75, 0, 130, 0.1); border-left-color: #4B0082;">
+                    <p><strong>Судьба остальных вагонов:</strong> Оставшиеся вагоны (3003-3006) работали в ТЧ-2. К сожалению, все они были утилизированы.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Сохранившийся вагон -->
+        <section id="surviving" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2E8B57 0%, #228B22 100%);">
+                <span class="card-icon">🏛️</span>
+                <h2>Сохранившийся вагон №3007</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>📍 Текущее местонахождение</h3>
+                        <p style="font-size: 1.2rem; font-weight: bold; color: #2E8B57;">ТЧ-8 "Варшавское"</p>
+                        <p>Вагон №3007 находится в депо с 2003 года. Используется как хозяйственный.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>📅 Историческая ценность</h3>
+                        <p>Это единственный сохранившийся вагон из первого опытного поезда серии Е. Он также участвовал в испытаниях поезда "И".</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-box" style="margin-top: 2rem; background: rgba(46, 139, 87, 0.1); border-left-color: #2E8B57;">
+                    <p style="font-size: 1.2rem;">Из состава уцелел лишь 3007. Надеюсь, его сохранят для истории, как сохранили вагоны 3605, 4412, 5170, 3941.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Фотогалерея с новым фото интерьера -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #CD5C5C 0%, #B22222 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                    <!-- Фото 1: Опытный поезд в депо Сокол -->
+                    <div class="gallery-item">
+                        <img src="img/Type_E_3001.jpg" alt="Опытный поезд в депо Сокол" onerror="this.src='https://via.placeholder.com/750x500?text=Опытный+поезд+Е'">
+                        <div class="gallery-caption">Опытный поезд в депо "Сокол" (ТЧ-2)</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸???</p>
+                    </div>
+                    
+                    <!-- Фото 3: Опытный вагон 3007 в наши дни -->
+                    <div class="gallery-item">
+                        <img src="img/ешка_опыт_капут.jpg" alt="Опытный вагон 3007 в наши дни" onerror="this.src='https://via.placeholder.com/750x500?text=Вагон+3007'">
+                        <div class="gallery-caption">Опытный вагон 3007 на данный момент</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Metroman_2</p>
+                    </div>
+                    
+                    <!-- Фото 4: Опытный вагон 3001 -->
+                    <div class="gallery-item">
+                        <img src="img/ешка_опыт_капут2.jpg" alt="Опытный вагон 3001" onerror="this.src='https://via.placeholder.com/750x500?text=Вагон+3001'">
+                        <div class="gallery-caption">Опытный вагон 3001 (утилизирован в 2006)</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Трехгранка</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">   
+                <p class="quote-text">"Вагоны типа Е стали настоящей легендой Московского метро. Они эксплуатировались более полувека и перевезли миллиарды пассажиров. Первый опытный состав — это начало великой истории."</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел "Опытные составы"</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Опытные_составы.html">Опытные составы</a></li>
+                        <li><a href="Опытная_Ашка.html">Опытная Ашка</a></li>
+                        <li><a href="Опытный_поезд_И.html">Опытный И</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Из семи вагонов уцелел только 3007. Надеемся на его сохранение для истории.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка прокрутки вверх -->
+    <div class="scroll-top">↑</div>
+
+    <!-- Модальное окно для галереи -->
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <!-- Подключаем библиотеку частиц -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Подключаем общий JS файл -->
+    <script src="script.js"></script>
+    
+    <!-- Дополнительный скрипт для счетчиков и галереи -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Анимация счетчиков
+            function animateECounters() {
+                const targets = {
+                    eYear: 1959,
+                    eCars: 7,
+                    eSurviving: 1
+                };
+                
+                let current = {
+                    eYear: 0,
+                    eCars: 0,
+                    eSurviving: 0
+                };
+                
+                const yearElement = document.getElementById('eYear');
+                const carsElement = document.getElementById('eCars');
+                const survivingElement = document.getElementById('eSurviving');
+                
+                if (!yearElement || !carsElement || !survivingElement) return;
+                
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    
+                    if (current.eYear < targets.eYear) {
+                        current.eYear += Math.ceil(targets.eYear / 50);
+                        if (current.eYear > targets.eYear) {
+                            current.eYear = targets.eYear;
+                        }
+                        yearElement.textContent = current.eYear;
+                        allFinished = false;
+                    }
+                    
+                    if (current.eCars < targets.eCars) {
+                        current.eCars += 1;
+                        if (current.eCars > targets.eCars) {
+                            current.eCars = targets.eCars;
+                        }
+                        carsElement.textContent = current.eCars;
+                        allFinished = false;
+                    }
+                    
+                    if (current.eSurviving < targets.eSurviving) {
+                        current.eSurviving += 1;
+                        if (current.eSurviving > targets.eSurviving) {
+                            current.eSurviving = targets.eSurviving;
+                        }
+                        survivingElement.textContent = current.eSurviving;
+                        allFinished = false;
+                    }
+                    
+                    if (allFinished) {
+                        clearInterval(interval);
+                    }
+                }, 30);
+            }
+            
+            animateECounters();
+            
+            // Настройка галереи
+            const galleryModal = document.getElementById('galleryModal');
+            const galleryModalContent = document.getElementById('galleryModalContent');
+            const galleryCloseBtn = document.getElementById('galleryModalClose');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            if (galleryModal && galleryItems.length > 0) {
+                galleryItems.forEach(item => {
+                    item.addEventListener('click', function() {
+                        const img = this.querySelector('img');
+                        const caption = this.querySelector('.gallery-caption').textContent;
+                        
+                        if (galleryModalContent) {
+                            galleryModalContent.innerHTML = `
+                                <img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}">
+                                <p style="text-align:center; margin-top:1rem; color:#333;">${caption}</p>
+                            `;
+                        }
+                        
+                        galleryModal.classList.add('active');
+                    });
+                });
+                
+                if (galleryCloseBtn) {
+                    galleryCloseBtn.addEventListener('click', function() {
+                        galleryModal.classList.remove('active');
+                    });
+                }
+                
+                window.addEventListener('click', function(e) {
+                    if (e.target === galleryModal) {
+                        galleryModal.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

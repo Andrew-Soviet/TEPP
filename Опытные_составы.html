@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опытные составы Московского метро</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Анимированные частицы -->
+    <div id="particles-js"></div>
+    
+    <!-- Анимированный градиентный фон -->
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Опытные составы Московского метро</h1>
+            <p class="subtitle">Пробные поезда, проходившие испытания и обкатки</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="Главная_Страница_Мосметро.html">📍 Мосметро</a></li>
+                    <li><a href="#about">Опытные составы</a></li>
+                    <li><a href="#list">Список</a></li>
+                    <li><a href="#surviving">Сохранившиеся</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Опытные составы</h2>
+                <p class="hero-text">Опытные составы — это пробные поезда, которые проходят испытания и обкатки. После различных тестов выявляются минусы и исправляются их, поезд дорабатывают. После достижения приемлемого состояния, поезд запускают в серийное производство.</p>
+                <p class="hero-text">Как правило, опытные поезда утилизируются, но иногда сохраняют один или несколько вагонов. Не всегда в хорошем состоянии, иногда их позже всё же отвозят на утилизацию.</p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="experimentalTrains">0</div>
+                        <div class="stat-label">опытных составов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="experimentalCars">0</div>
+                        <div class="stat-label">всего вагонов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="experimentalSurviving">0</div>
+                        <div class="stat-label">сохранилось</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Все опытные поезда Мосметро -->
+        <section id="list" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #6A5ACD 0%, #483D8B 100%);">
+                <span class="card-icon">🚇</span>
+                <h2>Все опытные поезда Московского метро</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Полный список опытных составов, проходивших испытания в Московском метрополитене:</p>
+                
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <!-- А:1-1001 -->
+                    <div class="train-card">
+                        <h3>А: 1-1001</h3>
+                        <p>Опытный состав на базе вагонов типа А. Первый опытный поезд.</p>
+                        <a href="Опытная_Ашка.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Подробнее →</a>
+                    </div>
+                    
+                    <!-- Е:3001-*-3007 -->
+                    <div class="train-card">
+                        <h3>Е: 3001-...-3007</h3>
+                        <p>Опытный состав на базе вагонов типа Е, проходивший испытания в 1970-х.</p>
+                        <a href="Опытная_Ешка.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Подробнее →</a>
+                    </div>
+                    
+                    <!-- ЕжТК:5923-5582-5696 -->
+                    <div class="train-card">
+                        <h3>ЕжТК: 5923-5582-5696</h3>
+                        <p>Модифицированная версия вагонов типа Еж с тиристорно-импульсной системой управления.</p>
+                        <a href="Type_EzhTK.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Подробнее →</a>
+                    </div>
+                    
+                    <!-- И:10001-10002-10003-10004 -->
+                    <div class="train-card">
+                        <h3>И: 10001-10002-10003-10004</h3>
+                        <p>Экспериментальный поезд типа И с асинхронным тяговым приводом.</p>
+                        <a href="Опытный_поезд_И.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Подробнее →</a>
+                    </div>
+                    
+                    <!-- 81-717: 5855-7212-7220-5854 -->
+                    <div class="train-card">
+                        <h3>81-717: 5855-7212-7220-5854</h3>
+                        <p>Опытный состав легендарного семейства 81-717/714, самого массового в мире.</p>
+                        <a href="Опытный_81-717.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Подробнее →</a>
+                    </div>
+                    
+                    <!-- 81-717.6К:0252-0706-*-0711-0253 -->
+                    <div class="train-card">
+                        <h3>81-717.6К: 0252-0706-...-0711-0253</h3>
+                        <p>Модернизированная версия с новым оборудованием и дизайном.</p>
+                        <a href="Опытный_поезд_81-717.6К.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Подробнее →</a>
+                    </div>
+                    
+                    <!-- Яуза: 001-*-005 -->
+                    <div class="train-card">
+                        <h3>Яуза: 001-...-005</h3>
+                        <p>Экспериментальный поезд с асинхронным тяговым приводом, разработанный в 1990-х.</p>
+                        <a href="Опытная_Яуза_001-005.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Подробнее →</a>
+                    </div>
+                    
+                    <!-- 81-720.1(ЛВЗ): 10036-11027-11028-10037 -->
+                    <div class="train-card">
+                        <h3>81-720.1 (ЛВЗ): 10036-11027-11028-10037</h3>
+                        <p>Опытный поезд Ленинградского вагоностроительного завода.</p>
+                        <a href="81-720.1(ЛВЗ).html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Подробнее →</a>
+                    </div>
+                    
+                    <!-- Скиф (Русич): 0001-0501-0502-0002 -->
+                    <div class="train-card">
+                        <h3>Скиф (Русич): 0001-0501-0502-0002</h3>
+                        <p>Первый опытный состав семейства "Русич" — первый сочлененный поезд Московского метро.</p>
+                        <a href="Опытный_Скиф.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Подробнее →</a>
+                    </div>
+                    
+                    <!-- Ока: 37001-30001-30002-37002 + 30003-30006 -->
+                    <div class="train-card">
+                        <h3>Ока: 37001-30001-30002-37002 + 30003-30006</h3>
+                        <p>Опытный поезд семейства "Ока" (81-760/761), позже добавлены вагоны 30003-30006.</p>
+                        <a href="Опытная_Ока.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Подробнее →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Сохранившиеся вагоны -->
+        <section id="surviving" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2E8B57 0%, #228B22 100%);">
+                <span class="card-icon">🏛️</span>
+                <h2>Сохранившиеся вагоны</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">На данный момент осталось несколько вагонов от опытных составов:</p>
+                
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="feature-item">
+                        <h3>Тип А</h3>
+                        <ul style="margin: 0.5rem 0 0 1.2rem;">
+                            <li><strong>Вагон №1</strong> — находится в ретро-поезде (1-1031-21) в Москве</li>
+                            <li><strong>Вагон №1001</strong> — в ретро-поезде в Баку</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Тип Е</h3>
+                        <ul style="margin: 0.5rem 0 0 1.2rem;">
+                            <li><strong>Вагон №3007</strong> — находится в депо ТЧ-8 в Москве</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Яуза</h3>
+                        <ul style="margin: 0.5rem 0 0 1.2rem;">
+                            <li><strong>Вагон №002</strong> — находится в ТЧ-4 в Москве</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Русич (Скиф)</h3>
+                        <ul style="margin: 0.5rem 0 0 1.2rem;">
+                            <li><strong>Вагон №0001</strong> — музейный в ТЧ-3</li>
+                            <li><strong>Остальные</strong> — ожидают утилизации в ТЧ-16</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Ока</h3>
+                        <ul style="margin: 0.5rem 0 0 1.2rem;">
+                            <li><strong>37001, 30004, 30006</strong> — в ТЧ-16</li>
+                            <li><strong>30001, 30002</strong> — доноры запчастей в ТЧ-8</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="highlight-box" style="margin-top: 2rem; background: rgba(46, 139, 87, 0.1); border-left-color: #2E8B57;">
+                    <p style="font-size: 1.2rem; font-weight: 500;">Оставшиеся вагоны, по моему мнению, нужно сохранить для истории!</p>
+                    <p style="margin-top: 0.5rem;">Каждый из этих вагонов — уникальный свидетель истории развития Московского метрополитена.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Таблица всех опытных составов -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #9370DB 0%, #8A2BE2 100%);">
+                <span class="card-icon">📊</span>
+                <h2>Полный список опытных составов</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Модель</th>
+                            <th>Номера вагонов</th>
+                            <th>Годы испытаний</th>
+                            <th>Судьба</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><a href="Опытная_Ашка.html">А</a></td><td>1-1001</td><td>1930-е</td><td>№1 в Москве, №1001 в Баку</td></tr>
+                        <tr><td><a href="Опытная_Ешка.html">Е</a></td><td>3001-3007</td><td>1970-е</td><td>3007 в ТЧ-8</td></tr>
+                        <tr><td><a href="ЕжТК.html">ЕжТК</a></td><td>5923-5582-5696</td><td>1980-е</td><td>Утилизированы</td></tr>
+                        <tr><td><a href="Опытный_поезд_И.html">И</a></td><td>10001-10004</td><td>1980-е</td><td>Утилизированы</td></tr>
+                        <tr><td><a href="Опытный_81-717.html">81-717</a></td><td>5855-7212-7220-5854</td><td>1970-е</td><td>Утилизированы</td></tr>
+                        <tr><td><a href="Опытный_поезд_81-717.6К.html">81-717.6К</a></td><td>0252-0706-...-0711-0253</td><td>2000-е</td><td>Утилизированы</td></tr>
+                        <tr><td><a href="Опытная_Яуза_001-005.html">Яуза</a></td><td>001-005</td><td>1990-е</td><td>002 в ТЧ-4</td></tr>
+                        <tr><td><a href="81-720.1(ЛВЗ).html">81-720.1 (ЛВЗ)</a></td><td>10036-11027-11028-10037</td><td>1980-е</td><td>Утилизированы</td></tr>
+                        <tr><td><a href="Опытный_Скиф.html">Скиф (Русич)</a></td><td>0001-0501-0502-0002</td><td>2000-е</td><td>0001 в ТЧ-3, остальные в ТЧ-16</td></tr>
+                        <tr><td><a href="Опытная_Ока.html">Ока</a></td><td>37001-30001-30002-37002 + 30003-30006</td><td>2000-е</td><td>Частично в ТЧ-16 и ТЧ-8</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">"Каждый опытный состав — это шаг вперед в развитии метростроения. Даже если они не пошли в серию, их вклад в создание современных поездов неоценим. Сохранить хотя бы один вагон от каждого типа — наш долг перед историей."</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел "Опытные составы"</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Главная_метro.html">Метрополитены</a></li>
+                        <li><a href="Главная_Страница_Мосметро.html">Московское метро</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Сохраняем историю опытных составов метро</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка прокрутки вверх -->
+    <div class="scroll-top">↑</div>
+
+    <!-- Подключаем библиотеку частиц -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Подключаем общий JS файл -->
+    <script src="script.js"></script>
+    
+    <!-- Дополнительный скрипт для счетчиков -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Анимация счетчиков
+            function animateExperimentalCounters() {
+                const targets = {
+                    experimentalTrains: 10,
+                    experimentalCars: 42,
+                    experimentalSurviving: 7
+                };
+                
+                let current = {
+                    experimentalTrains: 0,
+                    experimentalCars: 0,
+                    experimentalSurviving: 0
+                };
+                
+                const trainsElement = document.getElementById('experimentalTrains');
+                const carsElement = document.getElementById('experimentalCars');
+                const survivingElement = document.getElementById('experimentalSurviving');
+                
+                if (!trainsElement || !carsElement || !survivingElement) return;
+                
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    
+                    if (current.experimentalTrains < targets.experimentalTrains) {
+                        current.experimentalTrains += 1;
+                        if (current.experimentalTrains > targets.experimentalTrains) {
+                            current.experimentalTrains = targets.experimentalTrains;
+                        }
+                        trainsElement.textContent = current.experimentalTrains;
+                        allFinished = false;
+                    }
+                    
+                    if (current.experimentalCars < targets.experimentalCars) {
+                        current.experimentalCars += Math.ceil(targets.experimentalCars / 50);
+                        if (current.experimentalCars > targets.experimentalCars) {
+                            current.experimentalCars = targets.experimentalCars;
+                        }
+                        carsElement.textContent = current.experimentalCars;
+                        allFinished = false;
+                    }
+                    
+                    if (current.experimentalSurviving < targets.experimentalSurviving) {
+                        current.experimentalSurviving += 1;
+                        if (current.experimentalSurviving > targets.experimentalSurviving) {
+                            current.experimentalSurviving = targets.experimentalSurviving;
+                        }
+                        survivingElement.textContent = current.experimentalSurviving;
+                        allFinished = false;
+                    }
+                    
+                    if (allFinished) {
+                        clearInterval(interval);
+                    }
+                }, 30);
+            }
+            
+            animateExperimentalCounters();
+        });
+    </script>
+</body>
+</html>
