@@ -2036,3 +2036,58 @@ header.header-hidden {
     transform: translateY(-100%);
 }
 
+/* ============================================================
+   ИСПРАВЛЕНИЕ СЛУЧАЙНЫХ ФОТО (на главной странице)
+   ============================================================ */
+#randomPhoto {
+    display: grid !important;
+    /* Делаем сетку: на ПК в 3-4 колонки, на телефоне — в 2 */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important;
+    gap: 1rem !important;
+    align-items: start !important; /* Чтобы карточки не растягивались по высоте */
+}
+
+.random-photo-item {
+    display: flex !important;
+    flex-direction: column !important;
+    background: var(--bg-card-solid) !important;
+    border-radius: var(--radius-sm) !important;
+    overflow: hidden !important;
+    height: 100% !important;
+}
+
+.random-photo-item img {
+    width: 100% !important;
+    height: 180px !important; /* Фиксированная высота для картинок */
+    object-fit: cover !important; /* Картинка заполняет блок, не искажаясь */
+    display: block !important;
+}
+
+.random-photo-caption {
+    padding: 0.5rem !important;
+    font-size: 0.8rem !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+    flex-grow: 1 !important; /* Подпись занимает оставшееся место */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    border-top: 1px solid var(--border-color) !important;
+}
+
+/* И отдельно для мобилок (чтобы было ровно 2 колонки) */
+@media (max-width: 768px) {
+    #randomPhoto {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.5rem !important;
+    }
+    
+    .random-photo-item img {
+        height: 120px !important; 
+    }
+    
+    .random-photo-caption {
+        font-size: 0.7rem !important;
+        padding: 0.3rem !important;
+    }
+}
