@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>81-570/571 - Вагоны для Тегерана в Московском метро</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Анимированные частицы -->
+    <div id="particles-js"></div>
+
+    <!-- Анимированный градиентный фон -->
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>81-570/571</h1>
+            <p class="subtitle">Модель вагонов, предназначенная для Тегерана, но оказавшаяся в Московском метро</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="Живая_история_Мск_метро.html">📚 Живая история</a></li>
+                    <li><a href="#about">О модели</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#wagons">Вагоны в Москве</a></li>
+                    <li><a href="#tehran">Вагоны в Тегеране</a></li>
+                    <li><a href="#features">Особенности</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>81-570/571</h2>
+                <p class="hero-text">81-570/571 — модель вагонов, изначально предназначенная для Тегерана (Иран). Сборка началась осенью 1993 года на ЗАО «Вагонмаш». Большая часть состава в итоге отправилась в Москву. Состав изначально был полноценным, но позже разошёлся по Замоскворецкой и Люблинско-Дмитровской линиям.</p>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="totalCars">0</div>
+                        <div class="stat-label">всего вагонов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="inMoscow">0</div>
+                        <div class="stat-label">в Москве</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="inTehran">0</div>
+                        <div class="stat-label">в Тегеране</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- История -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline" style="padding: 1rem 0;">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Осень 1993</div>
+                        <div class="timeline-content">
+                            <h3>Изготовление состава для Тегерана</h3>
+                            <p>На ЗАО «Вагонмаш» для строящегося Тегеранского метрополитена изготовлен состав из двух головных и шести промежуточных вагонов модели 81-570/571.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">1993–1994</div>
+                        <div class="timeline-content">
+                            <h3>Отказ заказчика и простой</h3>
+                            <p>Из-за несогласования цен заказчик отказался от оплаты и приёмки вагонов. Состав длительно простаивал на предприятии как минимум до ноября 1994 года.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">1995</div>
+                        <div class="timeline-content">
+                            <h3>Продажа в Москву</h3>
+                            <p>Состав был перекрашен и продан ГУП «Московский метрополитен». Вагоны получили бортовые номера: №№ 10188–10189 (головные) и № 11317, №№ 11343–11347 (промежуточные). Начали работу на Люблинской линии.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">1995</div>
+                        <div class="timeline-content">
+                            <h3>Вторая поставка — для Тегерана</h3>
+                            <p>На заводе имени Егорова для Тегерана изготовлены 2 контактно-аккумуляторных электровоза типа 81-580, а также 2 головных и 4 промежуточных вагона метро. Испытания проходили на временных тележках российской колеи (1520 мм) на базе Петербургского метрополитена — сперва в депо «Автово», затем в депо «Невское».</p>
+                            <p>Четырёхвагонный состав обкатывался по парковым путям, а по ночам доезжал от депо до станции «Обухово».</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Конец 1995 — начало 1996</div>
+                        <div class="timeline-content">
+                            <h3>Доставка в Тегеран морем</h3>
+                            <p>Вагоны доставлены в Тегеран морем. По пути следования часть метровагонов была повреждена. Для первого рейса в тегеранском метрополитене был собран состав из двух электровозов, двух головных и не менее одного промежуточного вагона. Известно как минимум об одном испытании со скоростью от 5 до 20 км/ч.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">1996</div>
+                        <div class="timeline-content">
+                            <h3>Отказ от эксплуатации и прототип 81-576</h3>
+                            <p>Среди причин отказа от эксплуатации вагонов в тоннелях тегеранского метро называют несоответствие фактических габаритов приближения строения тоннелей к заявленным. В пользу этого говорит постройка в 1996 году на ЗАО «Вагонмаш» фрагмента лицевой части головного вагона мод. 81-570 (в одном из источников — 81-576) с усечённой по бокам крышей. Из-за потери интереса со стороны Тегерана дальнейшие проработки были свёрнуты, а фрагмент кузова утилизирован.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">1997</div>
+                        <div class="timeline-content">
+                            <h3>Замена сидений в Москве</h3>
+                            <p>Жёсткие пластиковые сиденья, предназначавшиеся для тегеранского метро, в электродепо «Печатники» были заменены на стандартные дерматиновые диваны.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2019</div>
+                        <div class="timeline-content">
+                            <h3>Первые снимки из Тегерана</h3>
+                            <p>Появились снимки жителей Тегерана, запечатлевшие характерные кузова метро российского производства на улицах города. На снимки попали три вагона: головной <strong>006</strong> и промежуточные <strong>004</strong> и <strong>005</strong>. Судя по состоянию, вагоны давно не эксплуатировались и были проданы частным лицам для использования в качестве коммерческих помещений. Из вагона №005 сделали уличное кафе. Все три вагона размещены вблизи вестибюлей станций «Karaj», «Sadeghiyeh» и «Gholshahr».</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2025</div>
+                        <div class="timeline-content">
+                            <h3>Сплотка в депо «Кередж»</h3>
+                            <p>Появилось свидетельство, подтверждённое фотоснимком, что все российские вагоны выставлены одной сплоткой на недействующий путь электродепо «Кередж».</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Список вагонов в Москве -->
+        <section id="wagons" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Вагоны в Московском метро</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Вагоны модели 81-570/571, распределённые по депо Московского метрополитена:</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Бортовой номер</th>
+                            <th>Тип</th>
+                            <th>Депо</th>
+                            <th>Линия</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>10188</td><td>Головной</td><td>ТЧ-15</td><td>ЛДЛ</td></tr>
+                        <tr><td>10189</td><td>Головной</td><td>ТЧ-15</td><td>ЛДЛ</td></tr>
+                        <tr><td>11317</td><td>Промежуточный</td><td>ТЧ-19</td><td>ЛДЛ</td></tr>
+                        <tr><td>11343</td><td>Промежуточный</td><td>ТЧ-19</td><td>ЛДЛ</td></tr>
+                        <tr><td>11344</td><td>Промежуточный</td><td>ТЧ-15</td><td>ЛДЛ</td></tr>
+                        <tr><td>11345</td><td>Промежуточный</td><td>ТЧ-15</td><td>ЛДЛ</td></tr>
+                        <tr><td>11346</td><td>Промежуточный</td><td>ТЧ-17</td><td>ЗЛ</td></tr>
+                        <tr><td>11347</td><td>Промежуточный</td><td>ТЧ-17</td><td>ЗЛ</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Всего в Москве:</strong> 8 вагонов (2 головных, 6 промежуточных)</p>
+                    <p><strong>Распределение:</strong> ТЧ-15 (4 вагона), ТЧ-19 (2 вагона), ТЧ-17 (2 вагона)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Вагоны в Тегеране -->
+        <section id="tehran" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">🇮🇷</span>
+                <h2>Вагоны в Тегеране</h2>
+            </div>
+            <div class="card-content">
+                <p>Несколько вагонов всё же дошли до Тегерана. Их судьба складывалась по-разному:</p>
+
+                <h3 style="margin: 1.5rem 0 1rem;">Нумерация</h3>
+                <div class="features-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="feature-item">
+                        <h3>81-570 (головные)</h3>
+                        <p style="font-size: 1.3rem; font-weight: bold;">001 и 006</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>81-571 (промежуточные)</h3>
+                        <p style="font-size: 1.3rem; font-weight: bold;">002–005</p>
+                    </div>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">Судьба вагонов</h3>
+                <div class="features-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="feature-item">
+                        <h3>🚫 Не эксплуатируются</h3>
+                        <p>Из-за несоответствия габаритам тоннелей вагоны не эксплуатировались в тегеранской подземке.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🏪 Коммерческие помещения</h3>
+                        <p>Вагоны 004, 005 и 006 были проданы частным лицам. Из вагона №005 сделали уличное кафе. Они находятся вблизи станций «Karaj», «Sadeghiyeh» и «Gholshahr».</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🚂 Сплотка в депо «Кередж» (2025)</h3>
+                        <p>По состоянию на 2025 год все российские вагоны выставлены одной сплоткой на недействующий путь электродепо «Кередж».</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🔧 Электровозы 81-580</h3>
+                        <p>Два контактно-аккумуляторных электровоза типа 81-580, изготовленных на заводе имени Егорова, также находились в Тегеране. Их судьба долгое время была неизвестна, но в 2025 году подтверждено, что они находятся в сплотке в депо «Кередж».</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem; background: rgba(192, 57, 43, 0.1); border-left-color: #C0392B;">
+                    <p>⚠️ <strong>Важно:</strong> В Тегеране вагоны не эксплуатируются — они либо разбросаны по городу в качестве коммерческих помещений, либо выставлены сплоткой в депо «Кередж».</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Особенности -->
+        <section id="features" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">✨</span>
+                <h2>Отличия и особенности</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="feature-item">
+                        <h3>Уникальная судьба</h3>
+                        <p>Вагоны, предназначенные для Тегерана, оказались в Московском метро. Это редкий случай перенаправления подвижного состава.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>Пластиковые сиденья</h3>
+                        <p>Изначально вагоны комплектовались жёсткими пластиковыми сиденьями, предназначавшимися для тегеранского метро. В 1997 году в ТЧ «Печатники» их заменили на стандартные дерматиновые диваны. Старые сиденья до сих пор используются в качестве скамеек на территории ТЧ-15 «Печатники».</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>Светлая крыша</h3>
+                        <p>Крыша вагонов была заметно светлее основного тона кузова — по всей видимости, вагоны перекрашивали поверх прежней эмали, и более светлый цвет дала белая крыша оригинала.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>Белые матовые стёкла</h3>
+                        <p>Верхние габаритные огни были сохранены в обводах белых матовых стёкол, оставшихся также по наследству от первого заказчика.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>Интерьер 1993 года</h3>
+                        <p>Интерьеры вагонов были отделаны свойственным тому периоду (1993 год) слоистым пластиком тёмно-коричневого оттенка. Поверхности дверей, рундуки и пульт машиниста были выкрашены бежево-розовой краской.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>Надписи на пульте</h3>
+                        <p>Обозначения на пульте машиниста были нанесены на английском языке и фарси.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>Брендированные вагоны</h3>
+                        <p>На данный момент часть вагонов брендированные. Лишь 1 вагон сохранил зелёный цвет и оригинальные диваны.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>Возврат старого вида</h3>
+                        <p>Один машинист ТЧ-15 «Печатники» вернул старый вид головному вагону 10188, окрасив подложки габаритных огней в белый цвет.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1rem;">
+                    <p>⚡ Сегодня в Московском метро остался только <strong>один вагон</strong> в оригинальной зелёной окраске с диванами — уникальный экземпляр, напоминающий о несостоявшейся поездке в Тегеран.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Фотогалерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/005.jpg" alt="Вагон 005 в Тегеране" onerror="this.src='https://via.placeholder.com/600x400?text=005+Тегеран'">
+                        <div class="gallery-caption">Списанный вагон №005 в Тегеране</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸: Omid Vahabzadeh</p>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="img/10189.jpg" alt="Вагон 10189 в Москве" onerror="this.src='https://via.placeholder.com/600x400?text=10189+Москва'">
+                        <div class="gallery-caption">Вагон №10189 в Московском метро</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸: Никита Лапин</p>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="img/11347.jpg" alt="Вагон 11347 в Москве" onerror="this.src='https://via.placeholder.com/600x400?text=11347+Москва'">
+                        <div class="gallery-caption">Вагон №11347 в Московском метро</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸: Стальной гвоздь</p>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="img/81-570_7-thmb.jpg" alt="Вагон 11347 в Москве" onerror="this.src='https://via.placeholder.com/600x400?text=11347+Москва'">
+                        <div class="gallery-caption">Погрузка вагонов в Большом морском порту Санкт-Петербурга. 1995 год</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸: https://metro.vpeterburge.ru</p>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="img/81-570_3-thmb.jpg" alt="Салон вагона 81-571" onerror="this.src='https://via.placeholder.com/600x400?text=11347+Москва'">
+                        <div class="gallery-caption">Салон промежуточного вагона модели 81-571 с сидениями для Тегерана.</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸: https://metro.vpeterburge.ru</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">"81-570/571 — уникальная история вагонов, которые должны были уехать в Тегеран, но остались в Москве. Сегодня только один вагон напоминает об их иранском предназначении — зелёный, с диванами, хранящий память о несостоявшейся поездке."</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел "Подвижной состав"</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="Живая_история_Мск_метро.html">Живая история</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">81-570/571 — путь из Тегерана в Москву</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка прокрутки вверх -->
+    <div class="scroll-top">↑</div>
+
+    <!-- Модальное окно для галереи -->
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <!-- Подключаем библиотеку частиц -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function animateCounters() {
+                const targets = {
+                    totalCars: 14,
+                    inMoscow: 7,
+                    inTehran: 6
+                };
+
+                let current = {
+                    totalCars: 0,
+                    inMoscow: 0,
+                    inTehran: 0
+                };
+
+                const totalEl = document.getElementById('totalCars');
+                const moscowEl = document.getElementById('inMoscow');
+                const tehranEl = document.getElementById('inTehran');
+
+                if (!totalEl || !moscowEl || !tehranEl) return;
+
+                const interval = setInterval(function() {
+                    let allFinished = true;
+
+                    if (current.totalCars < targets.totalCars) {
+                        current.totalCars += 1;
+                        if (current.totalCars > targets.totalCars) current.totalCars = targets.totalCars;
+                        totalEl.textContent = current.totalCars;
+                        allFinished = false;
+                    }
+
+                    if (current.inMoscow < targets.inMoscow) {
+                        current.inMoscow += 1;
+                        if (current.inMoscow > targets.inMoscow) current.inMoscow = targets.inMoscow;
+                        moscowEl.textContent = current.inMoscow;
+                        allFinished = false;
+                    }
+
+                    if (current.inTehran < targets.inTehran) {
+                        current.inTehran += 1;
+                        if (current.inTehran > targets.inTehran) current.inTehran = targets.inTehran;
+                        tehranEl.textContent = current.inTehran;
+                        allFinished = false;
+                    }
+
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+
+            animateCounters();
+
+            // Галерея
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
+                    if (content && img) {
+                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>

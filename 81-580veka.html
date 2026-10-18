@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>81-580/581/582 ВЭКА — контактно-аккумуляторные электровозы метрополитена — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Анимированные частицы -->
+    <div id="particles-js"></div>
+
+    <!-- Анимированный градиентный фон -->
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>81-580/581/582 ВЭКА</h1>
+            <p class="subtitle">Контактно-аккумуляторные электровозы метрополитена — от ВЭКА-001 до ЭКА-12</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="ps_mosmetro.html">🚆 Подвижной состав</a></li>
+                    <li><a href="Опытные_составы.html">🔬 Опытные</a></li>
+                    <li><a href="#about">О вагоне</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#modifications">Модификации</a></li>
+                    <li><a href="#design">Конструкция</a></li>
+                    <li><a href="#specs">Характеристики</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>81-580/581/582 ВЭКА</h2>
+                <p class="hero-text"><strong>81-580/581/582 ВЭКА</strong> — тип контактно-аккумуляторных вагонов метрополитена (по сути — электровоз), разработанный на базе вагонов метро 81-717/714 и выпускаемый Петербургским заводом «Вагонмаш» для служебных нужд метрополитена.</p>
+                <p class="hero-text">Название «ВЭКА» расшифровывается как <strong>«Вагон-Электровоз Контактно-Аккумуляторный»</strong>. Первый представитель семейства — 81-580 №ВЭКА-001, построенный в 1992 году и сохранившийся до наших дней как музейный экспонат.</p>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="vekaYear">0</div>
+                        <div class="stat-label">год постройки первого</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="vekaType">0</div>
+                        <div class="stat-label">всего построено</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="vekaModels">0</div>
+                        <div class="stat-label">модификаций</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Общая информация -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>🏭 Заводы-изготовители</h3>
+                        <p style="font-size: 1.1rem; font-weight: bold;">«Вагонмаш», «Метровагонмаш», ОЭВРЗ</p>
+                        <p>Разработка: Ленинградский вагоностроительный завод имени Егорова (ЗАО «Вагонмаш»)</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🔢 Первый экземпляр</h3>
+                        <p style="font-size: 1.3rem; font-weight: bold;">ВЭКА-001</p>
+                        <p>Первый экземпляр, отправленный в Москву</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>📅 Годы постройки</h3>
+                        <p>1992 (81-580), 1995 (81-580.1), 2002–2009 (81-581), 2005 (81-581.3), 2015–2016 (81-581.4), 2016–2017 (81-581.5), 2022 (81-581.6)</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>📍 Текущее местонахождение</h3>
+                        <p style="font-size: 1.1rem; font-weight: bold;">Москва (музейный), Санкт-Петербург, Казань, Тегеран</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p>ВЭКА-001 — первый экземпляр, отправленный в Москву. Работал как <strong>вагон-электровоз контактно-аккумуляторный</strong>. Всего было построено либо модернизировано <strong>17 электровозов</strong> разных модификаций.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- История создания -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История создания</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline" style="padding: 1rem 0;">
+                    <div class="timeline-item">
+                        <div class="timeline-date">1991</div>
+                        <div class="timeline-content">
+                            <h3>Начало разработки</h3>
+                            <p>Ленинградский вагоностроительный завод имени Егорова (ЗАО «Вагонмаш») начал разработку контактно-аккумуляторных электровозов для служебных нужд Ленинградского метрополитена для замены устаревших контактно-аккумуляторных электровозов на базе вагонов типа Д, 7 из которых на тот момент эксплуатировались в электродепо Петербургского метрополитена.</p>
+                            <p>Условия эксплуатации требовали наличия торцевых дверей в кабине машиниста для перехода в другие вагоны, в то время как кабины головных вагонов 81-717 не имели сквозного прохода. Поэтому за основу было решено взять кузова промежуточных вагонов 81-714, оснастив их двумя кабинами машиниста с пультами управления по торцам.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">1992</div>
+                        <div class="timeline-content">
+                            <h3>Постройка первых двух экземпляров</h3>
+                            <p>Заводом выпущены два опытных контактно-аккумуляторных электровоза, получивших обозначение ВЭКА и номера 001 и 002. Первый поступил в электродепо «Калужское» Московского метрополитена, второй — в электродепо «Московское» Петербургского метрополитена. Оба окрашены в жёлто-коричневые цвета.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">1992–2002</div>
+                        <div class="timeline-content">
+                            <h3>Эксплуатация и отставка</h3>
+                            <p>В ходе эксплуатации выявлен ряд недостатков, оборудование периодически выходило из строя. Электровозы были отставлены от работы. Петербургский электровоз № 002 списан с баланса в 2002 году, дальнейшая судьба неизвестна.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">1995</div>
+                        <div class="timeline-content">
+                            <h3>Постройка 81-580.1 для Тегерана</h3>
+                            <p>По договорённости с Ираном завод «Вагонмаш» построил 2 контактно-аккумуляторных электровоза модели 81-580.1 (номера 01–02) для строящегося Тегеранского метрополитена. В отличие от 81-580, они не имели торцевых дверей, кабина была аналогична стандартным головным вагонам 81-717. Окраска — ярко-зелёная с белой лобовой частью. Ширина колеи — 1435 мм (европейская).</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2002–2009</div>
+                        <div class="timeline-content">
+                            <h3>Серия 81-581 (ЭКА)</h3>
+                            <p>Петербургский метрополитен продолжил обновление электровозного парка. Выпущены 4 электровоза 81-581 с асинхронным тяговым приводом. Первый (Эка-01, № 10260) поступил в депо «Автово» в 2003 году. В 2008 году выпущен Эка-02 (кузов вагона № 10356), в 2009 — электровозы 003 и 004 (кузова ОАО «Метровагонмаш»).</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2005</div>
+                        <div class="timeline-content">
+                            <h3>81-581.3 для Казани</h3>
+                            <p>По заказу Казанского метрополитена опытный метровагон типа 81-561 («Ритор») № 11342 переоборудован в контактно-аккумуляторный электровоз с асинхронным приводом. Получил бортовой номер 10297 и отправлен в электродепо «Аметьево» Казанского метрополитена.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2014–2015</div>
+                        <div class="timeline-content">
+                            <h3>81-581.4</h3>
+                            <p>Петербургский метрополитен заказал АО «Технологии метро» два электровоза на базе 81-581 с обновлённым электрооборудованием. За основу взяты кузова от промежуточных вагонов 81-541.3К (2013). Сборка — на ОЭВРЗ, завершена в марте 2015 года. Электровозы получили обозначение 81-581.4 и бортовые ЭКА-05 и ЭКА-06.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2016–2022</div>
+                        <div class="timeline-content">
+                            <h3>81-581.5 и 81-581.6</h3>
+                            <p>В мае 2016 года на ОЭВРЗ началась сборка двух электровозов ЭКА-07 и 08 модели 81-581.5 (усовершенствованная версия 81-581.4). В 2017 году выпущены ещё два — ЭКА-09 и ЭКА-10. В 2022 году — ЭКА-11 и ЭКА-12 модели 81-581.6.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Судьба ВЭКА-001:</strong> Московский электровоз № 001 долгое время использовался как хозяйственное помещение в электродепо «Калужское». Затем был передан в электродепо «Выхино», отремонтирован и перекрашен в жёлто-красную схему. В 2015 году выставлен на станции «Партизанская» в рамках выставки к 80-летию метрополитена. Демонстрируется там и в последующие годы.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Модификации -->
+        <section id="modifications" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">🔄</span>
+                <h2>Модификации</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Всего было построено либо модернизировано <strong>17 электровозов</strong> семейства ВЭКА. Ниже — все модификации с кратким описанием.</p>
+
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <!-- 81-580 -->
+                    <div class="train-card">
+                        <h3>81-580 (ВЭКА)</h3>
+                        <p>Первая модель. Построено 2 экземпляра в 1992 году. Кузова промежуточных вагонов 81-714 с двумя кабинами. Жёлто-коричневая окраска.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Номера: 001 (Москва), 002 (Петербург)</li>
+                            <li>Коллекторные ТЭД</li>
+                            <li>№ 001 — музейный</li>
+                        </ul>
+                    </div>
+
+                    <!-- 81-580.1 -->
+                    <div class="train-card">
+                        <h3>81-580.1</h3>
+                        <p>Модификация для Тегеранского метрополитена. Построено 2 экземпляра в 1995 году. Кабина как у головных вагонов 81-717. Ярко-зелёная окраска с белой лобовой частью.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Номера: 01–02</li>
+                            <li>Ширина колеи: 1435 мм</li>
+                            <li>Судьба неизвестна</li>
+                        </ul>
+                    </div>
+
+                    <!-- 81-581 -->
+                    <div class="train-card">
+                        <h3>81-581 (ЭКА)</h3>
+                        <p>Новое поколение с асинхронным тяговым приводом. Построено 4 экземпляра в 2002–2009 годах. Жёлто-красная окраска.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Мощность: 456 кВт (4 × 114)</li>
+                            <li>Номера: Эка-01, Эка-02, 003, 004</li>
+                            <li>Все 4 в регулярной эксплуатации в Петербурге</li>
+                        </ul>
+                    </div>
+
+                    <!-- 81-581.3 -->
+                    <div class="train-card">
+                        <h3>81-581.3</h3>
+                        <p>Построен в 2005 году для Казанского метрополитена. Переоборудован из опытного вагона 81-561 «Ритор» № 11342. Мощность повышена до 680 кВт (4 × 170).</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Бортовой номер: 10297</li>
+                            <li>Депо «Аметьево» (Казань)</li>
+                            <li>Эксплуатируется по настоящее время</li>
+                        </ul>
+                    </div>
+
+                    <!-- 81-581.4 -->
+                    <div class="train-card">
+                        <h3>81-581.4</h3>
+                        <p>Построено 2 экземпляра в 2015 году на ОЭВРЗ. Кузова от промежуточных вагонов 81-541.3К. Современное оборудование, аккумуляторы Tensor TCSM 2030.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Номера: ЭКА-05, ЭКА-06</li>
+                            <li>Автономный ход: 7–8 часов</li>
+                            <li>Депо: ТЧ-6 «Выборгское», ТЧ-5 «Невское»</li>
+                        </ul>
+                    </div>
+
+                    <!-- 81-581.5 -->
+                    <div class="train-card">
+                        <h3>81-581.5</h3>
+                        <p>Усовершенствованная версия 81-581.4. Сборка начата в мае 2016 года на ОЭВРЗ. Построено 4 экземпляра.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Номера: ЭКА-07, 08, 09, 10</li>
+                            <li>Депо: «Автово», «Невское», «Выборгское», «Северное», «Южное»</li>
+                        </ul>
+                    </div>
+
+                    <!-- 81-581.6 -->
+                    <div class="train-card">
+                        <h3>81-581.6</h3>
+                        <p>Новейшая модификация. Построено 2 экземпляра в 2022 году. Поступили в метрополитен в феврале 2022 года.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Номера: ЭКА-11, ЭКА-12</li>
+                            <li>Депо: «Северное» (11), «Южное» (12)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 2rem;">
+                    <p><strong>Итог:</strong> За 30 лет семейство ВЭКА прошло путь от опытных 81-580 с коллекторными двигателями до современных 81-581.6 с асинхронным приводом и аккумуляторами Tensor. Сегодня электровозы ВЭКА работают в Петербурге, Казани, а один музейный экземпляр — в Москве.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Конструкция -->
+        <section id="design" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+                <span class="card-icon">🔧</span>
+                <h2>Конструктивные особенности</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="feature-item">
+                        <h3>⚡ Асинхронный тяговый привод</h3>
+                        <p>Начиная с 81-581, электровозы оснащены асинхронным приводом, который впоследствии стал стандартом для новых поездов. Первые 81-580 имели коллекторные ТЭД.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🔋 Контактно-аккумуляторный</h3>
+                        <p>Электровозы работают как от контактного рельса (750 В), так и от аккумуляторов. Это позволяет им работать на обесточенных участках и в депо.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🪟 Конструкция кузова</h3>
+                        <p>Кузов цельнометаллический стальной сварной, по аналогии с вагонами Еж3 и промежуточными 81-714. Две кабины машиниста по торцам, аккумуляторное помещение между ними.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🚪 Двери и сцепки</h3>
+                        <p>По 4 двухстворчатых раздвижных двери с каждой стороны, ведущие в аккумуляторный отсек. Двери открываются вручную. На одном торце — автосцепка СА-3, на другом — Шарфенберга.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🔦 Оригинальные фары</h3>
+                        <p>Из-за снятия с производства фар для вагонов Ем и Еж3 в нижнюю часть торца кабин вмонтированы стандартные фарные блоки вагонов 81-717, что придало электровозам оригинальный внешний вид.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>💺 Аккумуляторное помещение</h3>
+                        <p>Занимает место пассажирского салона между кабинами. Тяговые аккумуляторы расположены на стеллажах продольно в два ряда по бокам от центрального прохода. Оконные проёмы оборудованы металлическими решётками.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p>Вагон 81-580 стал прототипом для многих технических решений. Асинхронный привод, впервые испытанный на электровозах ВЭКА, в дальнейшем использовался на поездах «Яуза», «Ока», «Москва».</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Технические характеристики -->
+        <section id="specs" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+                <span class="card-icon">⚙️</span>
+                <h2>Технические характеристики</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Основные технические данные семейства ВЭКА</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Годы постройки</td><td>1992 (81-580), 1995 (81-580.1), 2002, 2008, 2009 (81-581), 2005 (81-581.3), 2015, 2016 (81-581.4), 2016, 2017 (81-581.5), 2022 (81-581.6)</td></tr>
+                        <tr><td>Страна постройки</td><td>Россия 🇷🇺</td></tr>
+                        <tr><td>Заводы</td><td>«Вагонмаш», «Метровагонмаш», ОЭВРЗ</td></tr>
+                        <tr><td>Всего построено</td><td>17 (всего), в т.ч.: 81-580 — 2; 81-580.1 — 2; 81-581 — 4; 81-581.3 — 1; 81-581.4 — 2; 81-581.5 — 4; 81-581.6 — 2</td></tr>
+                        <tr><td>Тип токосъёма</td><td>Нижний боковой контактный рельс (токосъём снизу) + аккумуляторы</td></tr>
+                        <tr><td>Род тока и напряжение</td><td>750 В постоянного тока</td></tr>
+                        <tr><td>Типы вагонов</td><td>к/а электровоз</td></tr>
+                        <tr><td>Длина вагона</td><td>19 210 мм (по осям автосцепок Шарфенберга); 19 260 мм (по осям автосцепки СА-3 и Шарфенберга)</td></tr>
+                        <tr><td>Ширина</td><td>2 670 мм</td></tr>
+                        <tr><td>Высота</td><td>3 700 мм</td></tr>
+                        <tr><td>Полная колёсная база вагона</td><td>14 700 мм</td></tr>
+                        <tr><td>Расстояние между шкворнями тележек</td><td>12 600 мм</td></tr>
+                        <tr><td>Колёсная база тележек</td><td>2 100 мм</td></tr>
+                        <tr><td>Диаметр колёс</td><td>860 мм</td></tr>
+                        <tr><td>Ширина колеи</td><td>1 520 мм; 1 435 мм (81-580.1)</td></tr>
+                        <tr><td>Масса тары</td><td>54 т</td></tr>
+                        <tr><td>Нагрузка от оси на рельсы</td><td>132 кН (13,5 тс)</td></tr>
+                        <tr><td>Материал вагона</td><td>Сталь</td></tr>
+                        <tr><td>Выходная мощность</td><td>81-581: 456 кВт; 81-581.3: 680 кВт</td></tr>
+                        <tr><td>Тип ТЭД</td><td>Коллекторные (81-580), асинхронные (81-581)</td></tr>
+                        <tr><td>Мощность ТЭД</td><td>81-581: 4 × 114 кВт; 81-581.3: 4 × 170 кВт</td></tr>
+                        <tr><td>Макс. скорость</td><td>50 км/ч</td></tr>
+                        <tr><td>Макс. служебная скорость</td><td>35–50 км/ч</td></tr>
+                        <tr><td>Ускорение при пуске</td><td>0,5–1,2 м/с²</td></tr>
+                        <tr><td>Ускорение при торможении</td><td>0,7–1 м/с²</td></tr>
+                        <tr><td>Электрическое торможение</td><td>Рекуперативно-реостатное</td></tr>
+                        <tr><td>Тормозная система</td><td>Пневматическая, электропневматическая, электрическая</td></tr>
+                    </tbody>
+                </table>
+
+                <h3 style="margin: 2rem 0 1rem;">Эксплуатация</h3>
+                <table>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Страны эксплуатации</td><td>Россия 🇷🇺, Иран 🇮🇷</td></tr>
+                        <tr><td>Метрополитены</td><td>Москва (81-580), Петербург (81-580, 581, 581.4, 581.5, 581.6), Казань (81-581.3), Тегеран (81-580.1)</td></tr>
+                        <tr><td>Годы эксплуатации</td><td>с 1992 (81-580), с 1995 (81-580.1), с 1993 (81-581), с 2005 (81-581.3), с 2016 (81-581.4 и .5), с 2022 (81-581.6)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Где увидеть -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+                <span class="card-icon">📍</span>
+                <h2>Где увидеть ВЭКА-001</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>Выставки на «Партизанской»</h3>
+                        <p>Вагон можно увидеть на выставках на станции <strong>«Партизанская»</strong> к дню рождения Московского метрополитена (15 мая).</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>Музейный фонд</h3>
+                        <p>Вагон сохранён для истории и находится в музейном фонде Московского метрополитена.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p>📅 <strong>Когда можно увидеть:</strong> Обычно вагон выставляется на станции «Партизанская» в дни празднования дня рождения Московского метрополитена (15 мая).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Фотогалерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/81-580.jpg" alt="81-580 №ВЭКА-001" onerror="this.src='https://via.placeholder.com/750x500?text=ВЭКА-001'">
+                        <div class="gallery-caption">Вагон 81-580 №ВЭКА-001</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Артём Алмазов</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/81-580_int.jpg" alt="Интерьер ВЭКА-001" onerror="this.src='https://via.placeholder.com/750x500?text=Интерьер+ВЭКА-001'">
+                        <div class="gallery-caption">Салон вагона ВЭКА-001</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Kr1p</p>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="img/81-581.jpg" alt="81-580 №ВЭКА-001" onerror="this.src='https://via.placeholder.com/750x500?text=ВЭКА-001'">
+                        <div class="gallery-caption">Вагон 81-581 № ЭКА-004</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Артём Алмазов</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/81-582.jpg" alt="81-580 №ВЭКА-001" onerror="this.src='https://via.placeholder.com/750x500?text=ВЭКА-001'">
+                        <div class="gallery-caption">Контактно-аккумуляторный электровоз ВЭКА-10297 для Казанского метрополитена</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Vladislav Prudnikov</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">📸 Фото взяты с transphoto</p>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">"ВЭКА-001 — уникальный вагон-электровоз, который стал важным этапом в развитии асинхронного привода. Построенный на Ленинградском вагоностроительном заводе, он до сих пор радует посетителей выставок на станции «Партизанская». А его потомки — 81-581.6 — продолжают работать в Петербургском метрополитене."</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел "Уникальные вагоны"</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="ps_mosmetro.html">Подвижной состав</a></li>
+                        <li><a href="Опытные_составы.html">Опытные составы</a></li>
+                        <li><a href="Живая_история_Мск_метро.html">Живая история</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">ВЭКА-001 — пионер асинхронного привода</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка прокрутки вверх -->
+    <div class="scroll-top">↑</div>
+
+    <!-- Модальное окно для галереи -->
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function animateVekaCounters() {
+                const targets = {
+                    vekaYear: 1992,
+                    vekaType: 17,
+                    vekaModels: 7
+                };
+
+                let current = {
+                    vekaYear: 0,
+                    vekaType: 0,
+                    vekaModels: 0
+                };
+
+                const yearEl = document.getElementById('vekaYear');
+                const typeEl = document.getElementById('vekaType');
+                const modelsEl = document.getElementById('vekaModels');
+
+                if (!yearEl || !typeEl || !modelsEl) return;
+
+                const interval = setInterval(function() {
+                    let allFinished = true;
+
+                    if (current.vekaYear < targets.vekaYear) {
+                        current.vekaYear += Math.ceil(targets.vekaYear / 50);
+                        if (current.vekaYear > targets.vekaYear) current.vekaYear = targets.vekaYear;
+                        yearEl.textContent = current.vekaYear;
+                        allFinished = false;
+                    }
+
+                    if (current.vekaType < targets.vekaType) {
+                        current.vekaType += 1;
+                        if (current.vekaType > targets.vekaType) current.vekaType = targets.vekaType;
+                        typeEl.textContent = current.vekaType;
+                        allFinished = false;
+                    }
+
+                    if (current.vekaModels < targets.vekaModels) {
+                        current.vekaModels += 1;
+                        if (current.vekaModels > targets.vekaModels) current.vekaModels = targets.vekaModels;
+                        modelsEl.textContent = current.vekaModels;
+                        allFinished = false;
+                    }
+
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+
+            animateVekaCounters();
+
+            // Галерея
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
+                    if (content && img) {
+                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+
+    
+</body>
+</html>
