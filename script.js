@@ -958,3 +958,20 @@ document.addEventListener('copy', function(e) {
         e.preventDefault();
     }
 });
+
+
+// ============================================================
+// УМНЫЙ ПЕРЕХОД: Если ссылка ведет на Главная_страница.html,
+// а файл переименован в index.html, мы это исправляем на лету.
+// ============================================================
+document.addEventListener('DOMContentLoaded', function() {
+    const allLinks = document.querySelectorAll('a');
+    allLinks.forEach(link => {
+        let href = link.getAttribute('href');
+        // Если ссылка ведет на Главная_страница.html
+        if (href === 'Главная_страница.html') {
+            // Меняем её на index.html
+            link.setAttribute('href', 'index.html');
+        }
+    });
+});
