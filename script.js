@@ -267,11 +267,24 @@ function loadSettings() {
 // СЧЁТЧИКИ
 // ============================================================
 function animateCounters() {
-    const counters = { pagesStat: 120, photosStat: 288, sectionsStat: 5 };
-    for (const [id, target] of Object.entries(counters)) {
-        const el = document.getElementById(id);
-        if (el) animateCounter(el, target, 2000);
-    }
+    setTimeout(() => {
+        const counters = { pagesStat: 120, photosStat: 288, sectionsStat: 5 };
+        for (const [id, target] of Object.entries(counters)) {
+            const el = document.getElementById(id);
+            if (el) {
+                let current = 0;
+                const timer = setInterval(() => {
+                    current += Math.ceil(target / 50);
+                    if (current >= target) { 
+                        el.textContent = target.toLocaleString(); 
+                        clearInterval(timer); 
+                    } else { 
+                        el.textContent = current.toLocaleString(); 
+                    }
+                }, 30);
+            }
+        }
+    }, 100); // Небольшая задержка
 }
 
 function animateCounter(element, target, duration) {
@@ -695,7 +708,7 @@ function setupRandomRecommendations() {
         { src: 'sud_Yauza_81-714.jpg', caption: 'Сиденья от Яузы в вагоне 1598', author: 'pfandrom' },
         { src: '0959.jpg', caption: '«Ковидные» сиденья в вагоне 0959', author: 'pfandrom' },
         { src: '0963.jpg', caption: '«Ковидные» сиденья в вагоне 0963', author: 'pfandrom' },
-        { src: '8535_museum.jpg', caption: '81-717 (ЛВЗ) №8535', author: 'pfandrom' },
+        { src: '8535.jpg', caption: '81-717 (ЛВЗ) №8535', author: 'pfandrom' },
         { src: '8535_imba.jpg', caption: 'Вагон №8535 с уровня платформы', author: 'pfandrom' },
         { src: '0379.jpg', caption: 'Вагон 0379 с трёхцветной маской', author: 'Gleb5564(transphoto)' },
         { src: 'Type_B_ploshad_sverlova.jpg', caption: 'Вагон Б на станции Площадь Свердлова', author: 'Трёхгранка' },
@@ -751,11 +764,12 @@ function setupRandomRecommendations() {
         photoContainer.innerHTML = selectedPhotos.map(photo => {
             const authorPart = photo.author ? ` — 📸 ${photo.author}` : '';
             return `
-                <div class="random-photo-item">
+                <div class="random-photo-item" style="display: flex; flex-direction: column; background: var(--bg-card-solid); border-radius: var(--radius-sm); overflow: hidden; height: 100%;">
                     <img src="img/${photo.src}"
                          alt="${photo.caption}"
+                         style="width: 100%; height: 200px; object-fit: cover; display: block;"
                          onerror="this.src='img/no-photo.png'">
-                    <div class="random-photo-caption">📷 ${photo.caption}${authorPart}</div>
+                    <div class="random-photo-caption" style="padding: 0.6rem; text-align: center; border-top: 1px solid var(--border-color); flex-grow: 1; display: flex; align-items: center; justify-content: center; font-size: 0.85rem;">📷 ${photo.caption}${authorPart}</div>
                 </div>
             `;
         }).join('');
