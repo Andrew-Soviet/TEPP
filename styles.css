@@ -2037,36 +2037,39 @@ header.header-hidden {
 }
 
 /* ============================================================
-   СЕТКА СЛУЧАЙНЫХ ФОТО (РОВНО 3 В РЯД)
+   ЖЁСТКОЕ ИСПРАВЛЕНИЕ СЕТКИ СЛУЧАЙНЫХ ФОТО
    ============================================================ */
 #randomPhoto {
     display: grid !important;
-    /* На ПК и планшетах ровно 3 колонки */
+    /* На компьютере 3 колонки */
     grid-template-columns: repeat(3, 1fr) !important; 
     gap: 1rem !important;
-    align-items: start !important;
 }
 
-.random-photo-item {
+/* Принудительно делаем карточки блоками и убираем встроенные стили */
+#randomPhoto .random-photo-item {
     display: flex !important;
     flex-direction: column !important;
+    width: 100% !important;
+    height: 100% !important;
     background: var(--bg-card-solid) !important;
     border-radius: var(--radius-sm) !important;
     overflow: hidden !important;
-    box-shadow: 0 4px 12px var(--shadow-color) !important;
-    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Жёстко фиксируем размер фото */
+#randomPhoto .random-photo-item img {
+    width: 100% !important;
+    height: 200px !important; 
+    object-fit: cover !important; 
+    display: block !important;
     margin: 0 !important;
 }
 
-.random-photo-item img {
-    width: 100% !important;
-    height: 200px !important; /* Делаем фото чуть выше, раз они крупнее */
-    object-fit: cover !important; 
-    display: block !important;
-    border-radius: 0 !important;
-}
-
-.random-photo-caption {
+/* Прижимаем подпись к низу */
+#randomPhoto .random-photo-caption {
     padding: 0.6rem !important;
     font-size: 0.85rem !important;
     text-align: center !important;
@@ -2078,18 +2081,18 @@ header.header-hidden {
     margin: 0 !important;
 }
 
-/* Для телефонов оставляем 2 колонки */
+/* Для мобильных (2 колонки) */
 @media (max-width: 768px) {
     #randomPhoto {
         grid-template-columns: repeat(2, 1fr) !important; 
         gap: 0.5rem !important;
     }
     
-    .random-photo-item img {
+    #randomPhoto .random-photo-item img {
         height: 120px !important; 
     }
     
-    .random-photo-caption {
+    #randomPhoto .random-photo-caption {
         font-size: 0.7rem !important;
         padding: 0.3rem !important;
     }
