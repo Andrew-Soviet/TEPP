@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Минский метрополитен — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Минский метрополитен</h1>
+            <p class="subtitle">Три линии, 36 станций, 44,89 км — история, подвижной состав, факты</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="#about">О метро</a></li>
+                    <li><a href="#sections">Разделы</a></li>
+                    <li><a href="#unique">Уникальные составы</a></li>
+                    <li><a href="#facts">Топ-5 фактов</a></li>
+                    <li><a href="#evolution">Эволюция</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Минское метро</h2>
+                <p class="hero-text">Этот раздел о Минском метрополитене. Здесь вы сможете найти различную информацию о подвижном составе, истории, линиях и многом другом. В Минском метро много чего интересного!</p>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="minskYears">0</div>
+                        <div class="stat-label">лет истории</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="minskStations">0</div>
+                        <div class="stat-label">станций</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="minskLines">0</div>
+                        <div class="stat-label">линий</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Разделы сайта -->
+        <section id="sections" class="section-card">
+            <div class="card-header">
+                <span class="card-icon">📚</span>
+                <h2>Разделы о Минском метро</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Выберите интересующий вас раздел:</p>
+
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div class="feature-item">
+                        <h3>📜 История метро</h3>
+                        <p>От начала строительства в 1976 году до современных станций и линий.</p>
+                        <a href="404_file_dont_found.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Перейти →</a>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🗺️ Линии и станции</h3>
+                        <p>Московская, Автозаводская и Зеленолужская линии: станции, пересадки, архитектура.</p>
+                        <a href="404_file_dont_found.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Перейти →</a>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🚆 Подвижной состав</h3>
+                        <p>Все типы вагонов Минского метро: от 81-717/714 до «Минск 2024».</p>
+                        <a href="404_file_dont_found.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Перейти →</a>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>📖 Живая история</h3>
+                        <p>Сохранившиеся исторические вагоны и ретропоезда Минского метрополитена.</p>
+                        <a href="404_file_dont_found.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Перейти →</a>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>⏳ Ушедшие в историю</h3>
+                        <p>Типы вагонов, которые когда-то работали на линиях, но теперь сняты с эксплуатации.</p>
+                        <a href="404_file_dont_found.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Перейти →</a>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🏛️ Архитектура станций</h3>
+                        <p>«Площадь Победы», «Немига», «Купаловская» — подземные дворцы Минска.</p>
+                        <a href="404_file_dont_found.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Перейти →</a>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🔧 Служебный транспорт</h3>
+                        <p>Путеизмерители, дефектоскопы и другая спецтехника Минского метрополитена.</p>
+                        <a href="404_file_dont_found.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Перейти →</a>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🎉 Мероприятия</h3>
+                        <p>День рождения метро, выставки, ночные экскурсии и другие события.</p>
+                        <a href="404_file_dont_found.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Перейти →</a>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>💡 Предложения по улучшению</h3>
+                        <p>Идеи и предложения по развитию Минского метрополитена.</p>
+                        <a href="https://minsk-metro.net/" target="_blank" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Открыть →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Уникальные и тематические составы -->
+        <section id="unique" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">⭐</span>
+                <h2>Уникальные и тематические составы</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">В Минском метро сохранились уникальные вагоны, которые выделяются на фоне остальных:</p>
+
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div class="feature-item">
+                        <h3>🟫 Польский бархат (№ 11554)</h3>
+                        <p>Уникальный вагон 81-717 с <strong>бархатными диванами</strong>. Такая обивка — редчайший случай для номерных вагонов. Сохранился в Минском метрополитене.</p>
+                        <a href="404_file_dont_found.html" class="btn btn-secondary" style="margin-top: 1rem; width: 100%;" onclick="showComingSoon(); return false;">Подробнее →</a>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>💺 Диваны</h3>
+                        <p>Вагоны, сохранившие <strong>оригинальные мягкие диваны</strong> вместо современных антивандальных сидений. Редкие экземпляры с историческим интерьером.</p>
+                        <a href="404_file_dont_found.html" class="btn btn-secondary" style="margin-top: 1rem; width: 100%;" onclick="showComingSoon(); return false;">Подробнее →</a>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🚇 Подстекольник</h3>
+                        <p><strong>Первый поезд Минска с оригинальным экстерьером.</strong> Уникальная маска с подстекольной конструкцией фар — редкий вариант оформления передней части вагона.</p>
+                        <a href="404_file_dont_found.html" class="btn btn-secondary" style="margin-top: 1rem; width: 100%;" onclick="showComingSoon(); return false;">Подробнее →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Топ-5 интересных фактов -->
+        <section id="facts" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #B9770E 0%, #D4AC0D 100%);">
+                <span class="card-icon">🏆</span>
+                <h2>Топ-5 самых интересных фактов о Минском метро</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr;">
+                    <div class="feature-item">
+                        <h3>1️⃣ Самый молодой метрополитен СССР</h3>
+                        <p>Минское метро открылось 30 июня 1984 года — это был <strong>последний метрополитен, открытый в Советском Союзе</strong>. Первая очередь Московской линии включала 8 станций протяжённостью 7,84 км.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>2️⃣ Открытие в канун 40-летия освобождения Беларуси</h3>
+                        <p>Открытие метро было приурочено к 40-летию освобождения Беларуси от немецко-фашистских захватчиков. Первые пассажиры проехали по линии уже 30 июня 1984 года.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>3️⃣ Пересадочный узел «Октябрьская» — «Купаловская»</h3>
+                        <p>Станции «Октябрьская» (Московская линия) и «Купаловская» (Автозаводская линия) образуют единый пересадочный узел в центре Минска. Это единственная пересадка между двумя старейшими линиями.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>4️⃣ Самая глубокая станция — «Юбилейная площадь»</h3>
+                        <p>Станция «Юбилейная площадь» — <strong>самая глубокая в Минском метрополитене</strong>. Глубина котлована достигала почти 30 метров. Для удержания грунта была запроектирована монолитная стена в грунте толщиной 800 мм.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>5️⃣ Уникальный дизайн станций</h3>
+                        <p>Станция «Купаловская» оформлена в честь белорусского поэта Янки Купалы, а «Площадь Победы» — в честь Победы в Великой Отечественной войне. Мозаичные панно, мраморные колонны, национальные мотивы.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Эволюция поездов -->
+        <section id="evolution" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Эволюция поездов: от 81-717 до «Минск 2024»</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Минское метро прошло путь от первых вагонов 81-717/714 до современных поездов «Минск 2024».</p>
+
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>🚂 Первые вагоны — 81-717/714</h3>
+                        <p>Первые поезда поступили в 1984 году. Это самый массовый тип вагонов Минского метро. Модернизированные версии до сих пор в эксплуатации.</p>
+                        <a href="#" class="btn btn-secondary" style="margin-top: 1rem; width: 100%;" onclick="showComingSoon(); return false;">Подробнее →</a>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🚆 Новейшие «Минск 2024» (81-765.7/766.7)</h3>
+                        <p>Самые новые поезда <strong>«Минск 2024»</strong> специально разработаны для Минского метрополитена. Модель <strong>81-765.7/766.7</strong>, производство «Метровагонмаш».</p>
+                        <a href="#" class="btn btn-secondary" style="margin-top: 1rem; width: 100%;" onclick="showComingSoon(); return false;">Подробнее →</a>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p>💡 <strong>Интересно:</strong> между первыми вагонами 81-717/714 (1984) и «Минск 2024» — <strong>40 лет разницы</strong>. За это время метро прошло путь от советских номерных до современных поездов с асинхронным приводом.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Краткие факты -->
+        <section class="section-card">
+            <div class="card-header">
+                <span class="card-icon">⭐</span>
+                <h2>Краткие факты о Минском метро</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <div class="feature-item">
+                        <h3>Дата открытия</h3>
+                        <p>30 июня 1984 года — открытие первой очереди Московской линии.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>Количество линий</h3>
+                        <p><strong>3 линии:</strong> Московская (красная), Автозаводская (зелёная) и Зеленолужская. Планируется четвёртая — кольцевая.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>Количество станций</h3>
+                        <p><strong>36 станций:</strong> 15 на Московской, 14 на Автозаводской, 7 на Зеленолужской.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>Протяжённость</h3>
+                        <p><strong>44,89 км</strong> эксплуатационной длины в двухпутном исчислении.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>Депо</h3>
+                        <p>ТЧ-1 «Московское» и ТЧ-2 «Могилёвское».</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>Пассажиропоток</h3>
+                        <p>За 2025 год — свыше 267 миллионов пассажиров.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Минский метрополитен — это не просто транспорт, это гордость белорусской столицы. Его станции — настоящие подземные дворцы, а современные поезда „Минск 2024“ задают новые стандарты комфорта».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Минский метрополитен»</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="#sections">Разделы</a></li>
+                        <li><a href="#facts">Топ-5 фактов</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Минский метрополитен — самый молодой из открытых в СССР</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="comingSoonModal">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <div class="modal-body">
+                <h2>🚧 Страница в разработке</h2>
+                <p>Подробная информация появится позже.</p>
+                <button class="btn btn-primary" id="modalOkBtn">Понятно</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function animateCounters() {
+                const targets = { minskYears: 42, minskStations: 36, minskLines: 3 };
+                let current = { minskYears: 0, minskStations: 0, minskLines: 0 };
+                const yearsEl = document.getElementById('minskYears');
+                const stationsEl = document.getElementById('minskStations');
+                const linesEl = document.getElementById('minskLines');
+                if (!yearsEl || !stationsEl || !linesEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.minskYears < targets.minskYears) {
+                        current.minskYears += Math.ceil(targets.minskYears / 50);
+                        if (current.minskYears > targets.minskYears) current.minskYears = targets.minskYears;
+                        yearsEl.textContent = current.minskYears;
+                        allFinished = false;
+                    }
+                    if (current.minskStations < targets.minskStations) {
+                        current.minskStations += Math.ceil(targets.minskStations / 50);
+                        if (current.minskStations > targets.minskStations) current.minskStations = targets.minskStations;
+                        stationsEl.textContent = current.minskStations;
+                        allFinished = false;
+                    }
+                    if (current.minskLines < targets.minskLines) {
+                        current.minskLines += 1;
+                        if (current.minskLines > targets.minskLines) current.minskLines = targets.minskLines;
+                        linesEl.textContent = current.minskLines;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+        });
+
+        const modal = document.getElementById('comingSoonModal');
+        const closeBtn = document.getElementById('modalClose');
+        const okBtn = document.getElementById('modalOkBtn');
+
+        window.showComingSoon = function() {
+            if (modal) modal.classList.add('active');
+        }
+
+        function closeModal() {
+            if (modal) modal.classList.remove('active');
+        }
+
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (okBtn) okBtn.addEventListener('click', closeModal);
+
+        window.addEventListener('click', function(e) {
+            if (e.target === modal) closeModal();
+        });
+    </script>
+</body>
+</html>

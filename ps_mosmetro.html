@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подвижной состав Московского метрополитена — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Подвижной состав Московского метрополитена</h1>
+            <p class="subtitle">Полный справочник моделей: от типа А до «Москва-2026»</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="Главная_Страница_Мосметро.html">🏙️ Мосметро</a></li>
+                    <li><a href="#prewar">Довоенные</a></li>
+                    <li><a href="#postwar">Послевоенные</a></li>
+                    <li><a href="#russian">Российские</a></li>
+                    <li><a href="#experimental">Опытные</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Подвижной состав Московского метро</h2>
+                <p class="hero-text">За 90 лет Московский метрополитен эксплуатировал десятки типов вагонов — от деревянных «А» до новейших «Москва-2026». Этот раздел документирует все модификации подвижного состава: серийные, опытные, служебные и уникальные экземпляры.</p>
+                <p class="hero-text">Многие модели сохранились до наших дней — в музеях, в депо или в виде отдельных вагонов. Некоторые ушли в историю, оставив след в развитии метровагоностроения.</p>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="psTotal">0</div>
+                        <div class="stat-label">моделей и модификаций</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="psYears">0</div>
+                        <div class="stat-label">лет истории</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="psSurviving">0</div>
+                        <div class="stat-label">сохранилось экземпляров</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Довоенные -->
+        <section id="prewar" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);">
+                <span class="card-icon">🚂</span>
+                <h2>Довоенные (1934–1941)</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Первое поколение вагонов Московского метрополитена. Деревянные кузова, продольные сиденья, ручное управление. Именно эти вагоны открыли движение 15 мая 1935 года.</p>
+
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="train-card">
+                        <h3>А (моторный / прицепной)</h3>
+                        <p>Первый тип вагонов Московского метрополитена. Построен на Мытищинском вагоностроительном заводе (МВЗ) в 1934 году. Кузов деревянный с металлической обшивкой, сиденья продольные.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Моторные — с токоприёмниками</li>
+                            <li>Прицепные — без токоприёмников</li>
+                            <li>Сохранился №1 (Москва) и №1001 (Баку)</li>
+                        </ul>
+                        <a href="Type_A.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>Б (моторный / прицепной) / Бм</h3>
+                        <p>Модернизированная версия типа А, выпускавшаяся МВЗ в 1937–1939 годах. Построено 162 вагона (81 секция). Токоприёмники — только на моторных.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Увеличено количество воздухозаборников</li>
+                            <li>Усилены тележки</li>
+                            <li>Сохранился вагон №1119</li>
+                        </ul>
+                        <a href="Type_B.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>Г</h3>
+                        <p>Серийный тип, выпускавшийся в 1939–1940 и 1947–1955 годах. Всего построено 425 вагонов. <strong>Все вагоны типа Г были моторными.</strong></p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Реостатное электрическое торможение</li>
+                            <li>Первым получил сине-голубую окраску</li>
+                            <li>Сохранились вагоны №530; 661</li>
+                        </ul>
+                        <a href="Type_G.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Послевоенные -->
+        <section id="postwar" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #4B0082 0%, #6A0DAD 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Послевоенные (1945–1991)</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Эпоха массового метровагоностроения. Трофейные немецкие вагоны, типы Д и Е, Е-образные модификации (Еж, Еж3, Еж6), служебные электровозы типа Л.</p>
+
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="train-card">
+                        <h3>В (В-1 – В-4)</h3>
+                        <p>Трофейные немецкие вагоны, полученные по репарации после войны. Бывшие вагоны Берлинского метро (типы С1–С3), адаптированные под советские стандарты.</p>
+                        <a href="Type_V.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>УМ5</h3>
+                        <p>Учебно-моторный вагон на базе типа Д. Построен в 1949 году как модель М5. Использовался для обучения машинистов.</p>
+                        <a href="Type_M5.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>Д</h3>
+                        <p>Серийный тип, выпускавшийся в 1955–1963 годах. Всего построено 662 вагона. <strong>Все вагоны — моторные.</strong></p>
+                        <a href="Type_D.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>Е</h3>
+                        <p>Базовый тип серии, выпускавшийся с 1963 года. ММЗ начал выпуск вагонов Е, подвергавшихся неоднократной модернизации.</p>
+                        <a href="Type_E.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>Еж / Еж1</h3>
+                        <p>Созданы на базе типа Е. Выпускались в двух модификациях: Еж (81-707) — головные и промежуточные; Еж1 (81-708) — облегчённый вариант, только промежуточные.</p>
+                        <a href="Type_Ezh.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>Еж3</h3>
+                        <p>Новая модификация, разработанная в 1973 году (81-710). Изменена электрическая схема: система АРС, радиодиспетчерская связь, новый пульт управления.</p>
+                        <a href="Type_Ezh3.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>ЕжТК</h3>
+                        <p>Опытная модернизация вагонов Еж3/Еж6 (1997). Заменено контакторное оборудование, напряжение внутренней сети снижено до 80 В. Из-за высокой стоимости от проекта отказались.</p>
+                        <a href="Type_EzhTK.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>Еж6</h3>
+                        <p>Промежуточный вагон Еж3 для системы Д-6 («Метро-2»). Использовался в служебных составах совместно с электровозами типа Л.</p>
+                        <a href="Type_Ezh6.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>Л</h3>
+                        <p>Контактно-аккумуляторный электровоз (81-711), построенный МВЗ в 1974 и 1986 годах. Всего выпущено 6 вагонов.</p>
+                        <a href="Type_L.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>81-715 «И»</h3>
+                        <p>Опытный тип, разработанный в 1973 году. Кузов из высокопрочного алюминиевого сплава — на 3 тонны легче вагонов Е.</p>
+                        <a href="Опытный_поезд_И.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>81-717 базовые</h3>
+                        <p>Изначально предназначался как временный тип, однако по итогу производство последней модификации завершилось в 2018 году.</p>
+                        <a href="Type_81-717.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Российские -->
+        <section id="russian" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                <span class="card-icon">🇷🇺</span>
+                <h2>Российские (1991 — наст. вр.)</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Современный подвижной состав Московского метрополитена: номерные модификации, «Русич», «Ока», «Москва» и беспилотные поезда.</p>
+
+                <h3 style="margin: 1.5rem 0 1rem;">Номерные (81-717 / 81-714)</h3>
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="train-card">
+                        <h3>81-717 / 81-714 новые</h3>
+                        <p>Новые версии базовых вагонов производства ЛВЗ и ММЗ.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Три ребра жёсткости</li>
+                            <li>Разные модификации: .5, .5М, .5П</li>
+                        </ul>
+                        <a href="Type_81-717-5.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>81-717.5А</h3>
+                        <p>Модификация с улучшенным салоном и некоторыми конструктивными изменениями. Использовалась для ретро-поезда «Сокольники».</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Маска 1-1</li>
+                            <li>Ретро-окраска</li>
+                        </ul>
+                        <a href="Ретро поезд.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>81-717.6</h3>
+                        <p>Модернизированная версия с новым оборудованием. Самая новая модификация номерных для Москвы</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Улучшенные характеристики</li>
+                            <li>Разные варианты окраски</li>
+                        </ul>
+                        <a href="Type_81-717-6.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>81-570</h3>
+                        <p>Модель вагонов номерной для Тегерана, большая часть отправилась в Москву. Состав изначально был полноценным, но позже разошёлся по ЗЛ и ЛДЛ.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Вагоны: 10188, 10189, 11317, 11343-11347</li>
+                            <li>6 вагонов ушли в Тегеран</li>
+                        </ul>
+                        <a href="81-570_571.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">Русич (81-740 / 81-741)</h3>
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="train-card">
+                        <h3>81-740 «Русич»</h3>
+                        <p>Базовый сочленённый вагон. Выпускается с 2003 года. Используется на Бутовской линии и других.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Сочленённая конструкция</li>
+                            <li>Три тележки</li>
+                        </ul>
+                        <a href="Type_81-740.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>81-740.1 «Акварель»</h3>
+                        <p>Именной состав-картинная галерея. Внутри вагонов — репродукции картин. Проект с Московской школой акварели.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Курсирует по АПЛ</li>
+                            <li>В каждом вагоне своя экспозиция</li>
+                        </ul>
+                        <a href="Акварель.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>81-740.1 «Русич»</h3>
+                        <p>Модификация с улучшенными характеристиками. Используется на разных линиях. Отдельная вкладка пока в разработке.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Улучшенный салон</li>
+                            <li>Разные варианты окраски</li>
+                        </ul>
+                        <a href="Type_81-740-1.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>81-740.4 «Русич»</h3>
+                        <p>Модификация с четырьмя вагонами. Используется на Бутовской линии.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>4-вагонная составность</li>
+                            <li>Для лёгкого метро</li>
+                        </ul>
+                        <a href="Type_81-740-4.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">Ока (81-760 / 81-761)</h3>
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="train-card">
+                        <h3>81-760 «Ока» (серийная)</h3>
+                        <p>Серийный состав семейства «Ока». Выпускается с 2010 года. Используется на Калининской, Серпуховско-Тимирязевской и других линиях.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Асинхронный привод</li>
+                            <li>Массовая эксплуатация</li>
+                        </ul>
+                        <a href="Type_81-760.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>81-760А «Баклажан»</h3>
+                        <p>Модификация для Баку, оставшаяся в Москве. Главное новшество — сквозной проход между вагонами. Пурпурно-голубая окраска.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Сквозной проход</li>
+                            <li>Работает на КСЛ</li>
+                            <li>3 тематических оформления</li>
+                        </ul>
+                        <a href="Баклан.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">Москва (81-765 / 81-775)</h3>
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="train-card">
+                        <h3>81-765 «Москва»</h3>
+                        <p>Первый состав нового семейства. Выпускается с 2016 года. Сквозной проход, современный дизайн.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Первый серийный состав: 65001</li>
+                            <li>Работает на разных линиях</li>
+                        </ul>
+                        <a href="Type_81-765.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>81-765.2 «Москва»</h3>
+                        <p>Модификация с улучшенными характеристиками. Используется на Филёвской и других линиях.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Улучшенный комфорт</li>
+                            <li>Работает на разных линиях</li>
+                        </ul>
+                        <a href="Type_81-765-2.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>81-765.4 «Москва-2019»</h3>
+                        <p>Модификация 2019 года с небольшими доработками. В Музее Транспорта Москвы есть макет.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Доработка модели Москва-2017</li>
+                            <li>Современный дизайн</li>
+                        </ul>
+                        <a href="Type_81-765-4.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>81-775 «Москва-2020»</h3>
+                        <p>Новое поколение поездов. Выпускается с 2020 года. Улучшенный комфорт, современные системы.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Первый серийный состав: 75001-75002</li>
+                            <li>Составы работают на Кольцевой, КРЛ, БКЛ</li>
+                        </ul>
+                        <a href="Type_81-775.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>81-775.2 «Москва-2024»</h3>
+                        <p>Серийная модификация 2024 года. Используется на Замоскворецкой линии и других.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Работает с пассажирами</li>
+                            <li>Сквозной проход, USB-зарядки</li>
+                        </ul>
+                        <a href="Type_81-775-2.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>81-775.2 «Москва-2026»</h3>
+                        <p>Серийная модификация 2026 года. Новейший поезд семейства «Москва».</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Работает с пассажирами</li>
+                            <li>Улучшенный комфорт</li> 
+                        </ul>
+                        <a href="Type_81-775-2026.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">🤖 Беспилотные составы (отдельные экземпляры)</h3>
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="train-card" style="border-left: 4px solid #00ff11;">
+                        <h3>Беспилотная «Москва-2024»</h3>
+                        <p>Первый беспилотный поезд Московского метрополитена. Модель 81-775.2 с системой автоматического управления. Головной вагон №75371.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Брендирование «Это беспилотный поезд»</li>
+                            <li>Дополнительные камеры и датчики</li>
+                            <li>Презентован президенту 16.01.2026</li>
+                            <li>Испытывается на БКЛ</li>
+                        </ul>
+                        <a href="bespilotm24.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card" style="border-left: 4px solid #0081f1;">
+                        <h3>Беспилотная «Москва-2026»</h3>
+                        <p>Второй беспилотный состав, на базе модели 81-775.2 «Москва-2026». <strong>Перестал участвовать в испытаниях.</strong></p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Беспилотное управление</li>
+                            <li>Участник Парада поездов 2026</li>
+                            <li>Уже лишился уникальной ливреи, в испытаниях не участвует</li>
+                        </ul>
+                        <a href="75488.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Опытные составы -->
+        <section id="experimental" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #B9770E 0%, #D4AC0D 100%);">
+                <span class="card-icon">🔬</span>
+                <h2>Опытные составы</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Полный список опытных составов, проходивших испытания в Московском метрополитене:</p>
+
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="train-card">
+                        <h3>А: 1-1001</h3>
+                        <p>Опытный состав на базе вагонов типа А. Первый опытный поезд.</p>
+                        <a href="Опытная_Ашка.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>Г: 301-306</h3>
+                        <p>Опытный состав на базе вагонов типа Г. Опытные вагоны имели смешанную продольно-поперечную схему размещения диванов</p>
+                        <a href="Opit_G.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>Д: 807-812</h3>
+                        <p>Уникальный салон с другими поручнями. </p>
+                        <a href="Type_D.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+
+                    <div class="train-card">
+                        <h3>Д: 2018</h3>
+                        <p>Первый вагон с ребрами жесткости и уноньшенным кузовом</p>
+                        <a href="Opit_D_2018.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>Е: 3001-...-3007</h3>
+                        <p>Опытный состав на базе вагонов типа Е, проходивший испытания в 1970-х.</p>
+                        <a href="Опытная_Ешка.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>ЕжТК: 5923-5582-5696</h3>
+                        <p>Модифицированная версия вагонов типа Еж с тиристорно-импульсной системой управления.</p>
+                        <a href="Type_EzhTK.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>И: 10001-10002-10003-10004</h3>
+                        <p>Экспериментальный поезд типа И с асинхронным тяговым приводом.</p>
+                        <a href="Опытный_поезд_И.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>81-717: 5855-7212-7220-5854</h3>
+                        <p>Опытный состав легендарного семейства 81-717/714, самого массового в мире.</p>
+                        <a href="Опытный_81-717.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>81-717(ММЗ) №0067</h3>
+                        <p>Обычный номерной, ставший уникальным. После аварии 2003 года использовался для монтажа экспериментальной маски кузова — прототипа состава 81-717.6К.</p>
+                        <a href="81-717(ММЗ)№0067.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>81-717.6К: 0252-0706-...-0711-0253</h3>
+                        <p>Модернизированная версия с новым оборудованием и дизайном.</p>
+                        <a href="Опытный_поезд_81-717.6К.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>Яуза: 001-...-005</h3>
+                        <p>Экспериментальный поезд с асинхронным тяговым приводом, разработанный в 1990-х.</p>
+                        <a href="Опытная_Яуза_001-005.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>81-720.1 (ЛВЗ): 10036-11027-11028-10037</h3>
+                        <p>Опытный поезд Ленинградского вагоностроительного завода.</p>
+                        <a href="81-720.1(ЛВЗ).html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>81-580 ВЭКА</h3>
+                        <p>Уникальный опытный вагон-электровоз контактно-аккумуляторный (ВЭКА). Построены на Ленинградском вагоностроительном заводе.</p>
+                        <a href="81-580veka.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>Скиф (Русич): 0001-0501-0502-0002</h3>
+                        <p>Первый опытный состав семейства «Русич» — первый сочленённый поезд Московского метро.</p>
+                        <a href="Опытный_Скиф.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card">
+                        <h3>Ока: 37001-30001-30002-37002 + 30003-30006</h3>
+                        <p>Опытный поезд семейства «Ока» (81-760/761), позже добавлены вагоны 30003-30006.</p>
+                        <a href="Опытная_Ока.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Фотогалерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/Type_A_1.jpeg" alt="Вагон типа А" onerror="this.src='https://via.placeholder.com/800x500?text=Тип+А'">
+                        <div class="gallery-caption">Вагон типа А — первый вагон Московского метро</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/Опыт номер.jpg" alt="Опытный 81-717" onerror="this.src='https://via.placeholder.com/800x500?text=Опытный+81-717'">
+                        <div class="gallery-caption">Опытный 81-717 — родоначальник самого массового семейства</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Виктор Будан(ТАСС)</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/760A_37282_Maiakovskaia.jpg" alt="Баклажан" onerror="this.src='https://via.placeholder.com/800x500?text=Баклажан'">
+                        <div class="gallery-caption">81-760А «Баклажан» — бакинский поезд, ставший московским</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Romach(transphoto)</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/75488.jpg" alt="Москва-2026" onerror="this.src='https://via.placeholder.com/800x500?text=Москва-2026'">
+                        <div class="gallery-caption">81-775.2 «Москва-2026» — новейший поезд в расцветке беспилотного</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Артём Алмазов(transphoto)</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Подвижной состав Московского метрополитена — это живая история города. От деревянных вагонов 1935 года до беспилотных поездов 2026 года — каждый тип оставил свой след в развитии метровагоностроения».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Подвижной состав метро»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="Главная_Страница_Мосметро.html">Московский метрополитен</a></li>
+                        <li><a href="Живая_история_Мск_метро.html">Живая история</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Подвижной состав Московского метро — от А до Москва-2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
+            function animateCounters() {
+                const targets = { psTotal: 35, psYears: 92, psSurviving: 12 };
+                let current = { psTotal: 0, psYears: 0, psSurviving: 0 };
+                const totalEl = document.getElementById('psTotal');
+                const yearsEl = document.getElementById('psYears');
+                const survivingEl = document.getElementById('psSurviving');
+                if (!totalEl || !yearsEl || !survivingEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.psTotal < targets.psTotal) {
+                        current.psTotal += 1;
+                        if (current.psTotal > targets.psTotal) current.psTotal = targets.psTotal;
+                        totalEl.textContent = current.psTotal;
+                        allFinished = false;
+                    }
+                    if (current.psYears < targets.psYears) {
+                        current.psYears += Math.ceil(targets.psYears / 50);
+                        if (current.psYears > targets.psYears) current.psYears = targets.psYears;
+                        yearsEl.textContent = current.psYears;
+                        allFinished = false;
+                    }
+                    if (current.psSurviving < targets.psSurviving) {
+                        current.psSurviving += 1;
+                        if (current.psSurviving > targets.psSurviving) current.psSurviving = targets.psSurviving;
+                        survivingEl.textContent = current.psSurviving;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+
+            // Галерея
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
+                    if (content && img) {
+                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+
+        // Модальное окно «Страница в разработке»
+        window.showComingSoon = function(model) {
+            const modal = document.getElementById('comingSoonModal');
+            const msg = document.getElementById('modalMessage');
+            if (modal && msg) {
+                msg.textContent = 'Подробная информация о модели ' + (model || '') + ' появится позже.';
+                modal.classList.add('active');
+            }
+        }
+        function closeComingSoon() {
+            const modal = document.getElementById('comingSoonModal');
+            if (modal) modal.classList.remove('active');
+        }
+        document.getElementById('modalClose')?.addEventListener('click', closeComingSoon);
+        document.getElementById('modalOkBtn')?.addEventListener('click', closeComingSoon);
+        window.addEventListener('click', e => {
+            const modal = document.getElementById('comingSoonModal');
+            if (e.target === modal) closeComingSoon();
+        });
+    </script>
+
+    <!-- Модальное окно «Страница в разработке» -->
+    <div class="modal" id="comingSoonModal">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <div class="modal-body">
+                <h2>🚧 Страница в разработке</h2>
+                <p id="modalMessage">Подробная информация появится позже.</p>
+                <button class="btn btn-primary" id="modalOkBtn">Понятно</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

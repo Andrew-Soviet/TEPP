@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Электропоезда и МВПС — Транспортная энциклопедия</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Электропоезда и МВПС</h1>
+            <p class="subtitle">Моторвагонный подвижной состав: от советской классики до современных «Иволог»</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Железная_дорога.html">🚂 Железные дороги</a></li>
+                    <li><a href="#ussr-ru">🇷🇺 СССР / Россия</a></li>
+                    <li><a href="#belarus">🇧🇾 Беларусь</a></li>
+                    <li><a href="#ukraine">🇺🇦 Украина</a></li>
+                    <li><a href="#diesel">🛤️ Дизель-поезда</a></li>
+                    <li><a href="#unique">⭐ Уникальные</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Моторвагонный подвижной состав</h2>
+                <p class="hero-text">Электропоезда и дизель-поезда — это основа пригородного сообщения. В отличие от локомотивов, тяговые двигатели находятся в самих вагонах. На постсоветском пространстве за столетие сменилось несколько поколений этого транспорта: от первых машин с электрооборудованием Vickers до современных «Иволог» и импортозамещенных «Финистов».</p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="modelsCount">0</div>
+                        <div class="stat-label">моделей в базе</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="countriesCount">0</div>
+                        <div class="stat-label">стран</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="yearsHistory">0</div>
+                        <div class="stat-label">лет истории</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- СОВЕТСКОЕ НАСЛЕДИЕ И РОССИЯ -->
+        <section id="ussr-ru" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E74C3C 0%, #C0392B 100%);">
+                <span class="card-icon">🇷🇺</span>
+                <h2>Советское наследие и Россия</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Классические поезда Рижского вагоностроительного завода (РВЗ), Демиховского (ДМЗ), Торжокского (ТВЗ) и современные разработки «Трансмашхолдинга».</p>
+
+                <h3 class="family-title" style="margin-top: 2rem; border-bottom: 2px solid #E74C3C; padding-bottom: 0.5rem;">🚂 Семейство «С» (1929–1958)</h3>
+                <div class="trains-grid">
+                    <div class="train-card">
+                        <h3>Св / Сд</h3>
+                        <p>Первые советские электропоезда. Св — с оборудованием Vickers (Великобритания), Сд — с советским электрооборудованием завода «Динамо».</p>
+                    </div>
+                    <div class="train-card">
+                        <h3>См / Ср / Ср3</h3>
+                        <p>См — модернизация под 3000 В. Ср — «Строились для Риги» (выход на низкие платформы). Ср3 — финальная послевоенная серия с жесткой базой.</p>
+                    </div>
+                </div>
+
+                <h3 class="family-title" style="margin-top: 2rem; border-bottom: 2px solid #E74C3C; padding-bottom: 0.5rem;">🇱🇻 Рижские поезда (ЭР)</h3>
+                <div class="trains-grid">
+                    <div class="train-card">
+                        <h3>ЭР1</h3>
+                        <p>Базовая модель с круглой кабиной, выпускалась с 1957 года. Предшественник самого массового поезда.</p>
+                    </div>
+                    <div class="train-card" style="border-left: 4px solid #E74C3C;">
+                        <h3>ЭР2</h3>
+                        <p>Самый массовый электропоезд. Имел «круглоголовую» (до №1027) и «квадратную» (с №1028) кабины.</p>
+                    </div>
+                    <div class="train-card">
+                        <h3>ЭР2Р / ЭР2Т</h3>
+                        <p>ЭР2Р — модификация с динамическим торможением. ЭР2Т — финальная рижская модель постоянного тока.</p>
+                    </div>
+                    <div class="train-card" style="border-left: 4px solid #F39C12;">
+                        <h3>ЭР22</h3>
+                        <p>Легендарные трехдверные бестамбурные поезда увеличенной длины (24,2 м) для скоростных пригородных линий.</p>
+                    </div>
+                    <div class="train-card">
+                        <h3>ЭР10 / ЭР12</h3>
+                        <p>Опытные поезда: ЭР10 — четыредверный, ЭР12 — с тиристорно-импульсной системой управления (ТИСУ).</p>
+                    </div>
+                    <div class="train-card">
+                        <h3>ЭР7 / ЭР9 (Переменный ток)</h3>
+                        <p>ЭР7 — первые опытные с ртутными выпрямителями. ЭР9 и его модификации (П, М, Е, Т) — основа переменного тока.</p>
+                    </div>
+                </div>
+
+                <h3 class="family-title" style="margin-top: 2rem; border-bottom: 2px solid #E74C3C; padding-bottom: 0.5rem;">🇷🇺 Современная Россия (ДМЗ, ТВЗ, МЛРЗ)</h3>
+                <div class="trains-grid">
+                    <div class="train-card">
+                        <h3>ЭД4М</h3>
+                        <p>Главная электричка РФ XXI века. Выпускалась в сотнях вариантов (разные кабины, двери, светодиоды).</p>
+                    </div>
+                    <div class="train-card">
+                        <h3>ЭД4МК / МКу</h3>
+                        <p>Комфортные межобластные экспрессы с салонами классов, барами и оригинальными обтекаемыми масками.</p>
+                    </div>
+                    <div class="train-card">
+                        <h3>ЭД9М / ЭД9Э</h3>
+                        <p>Массовый пригородный поезд переменного тока для Сибири и Поволжья. ЭД9Э — энергосберегающая версия.</p>
+                    </div>
+                    <div class="train-card">
+                        <h3>ЭТ2М / ЭТ4А</h3>
+                        <p>Торжокские поезда. ЭТ2М — самая массовая серия, ЭТ4А — высокотехнологичный поезд с асинхронными двигателями.</p>
+                    </div>
+                    <div class="train-card">
+                        <h3>ЭМ1 / ЭМ2 / ЭМ4</h3>
+                        <p>Глубокие модернизации старых ЭР2. ЭМ4 «Спутник» — бестамбурные поезда для первых скоростных линий Москвы.</p>
+                    </div>
+                </div>
+
+                <h3 class="family-title" style="margin-top: 2rem; border-bottom: 2px solid #E74C3C; padding-bottom: 0.5rem;">🚄 Новое поколение (ЭП, ЭС, Иволга)</h3>
+                <div class="trains-grid">
+                    <div class="train-card">
+                        <h3>ЭП2Д / ЭП3Д</h3>
+                        <p>Современная платформа ТМХ с крэш-системой и климат-контролем. ЭП2Д (3 кВ) и ЭП3Д (25 кВ).</p>
+                    </div>
+                    <div class="train-card">
+                        <h3>ЭП2ДМ</h3>
+                        <p>Новейшая модификация с вертикальной маской кабины и полностью российской компонентной базой.</p>
+                    </div>
+                    <div class="train-card">
+                        <h3>ЭС1 / ЭС2Г «Ласточка»</h3>
+                        <p>Скоростные поезда (Siemens / Уральские локомотивы). ЭС2Г — постоянный ток, ЭС1 — двухсистемный.</p>
+                    </div>
+                    <div class="train-card">
+                        <h3>ЭС104 «Финист»</h3>
+                        <p>Полностью импортозамещенная российская скоростная платформа (замена «Ласточке»).</p>
+                    </div>
+                    <div class="train-card">
+                        <h3>ЭГ2Тв «Иволга» (1.0 – 5.0)</h3>
+                        <p>Городские поезда для МЦД. От 1.0 с широкими дверями до 5.0 с улучшенной эргономикой и маской.</p>
+                    </div>
+                    <div class="train-card">
+                        <h3>ЭШ2 (Stadler KISS)</h3>
+                        <p>Двухэтажные скоростные электропоезда постоянного или двухсистемного тока.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- БЕЛАРУСЬ -->
+        <section id="belarus" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #D35400 100%);">
+                <span class="card-icon">🇧🇾</span>
+                <h2>Беларусь (БЧ)</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Поезда, эксплуатируемые Белорусской железной дорогой, включая модернизации и польские составы.</p>
+
+                <div class="trains-grid">
+                    <div class="train-card">
+                        <h3>ДР1Б</h3>
+                        <p>Глубокая модернизация дизель-поезда ДР1. Получил панорамную обтекаемую маску кабины и бортовые компьютеры.</p>
+                    </div>
+                    <div class="train-card">
+                        <h3>МДП</h3>
+                        <p>Мини-дизель-поезд. Состоит из моторного вагона ДР1А и прицепного вагона с кабиной управления.</p>
+                    </div>
+                    <div class="train-card">
+                        <h3>ДП1 / ДП3 / ДП6 (Pesa)</h3>
+                        <p>Польские дизель-поезда БЧ: ДП1 (автомотриса), ДП3 (3 вагона), ДП6 (6 вагонов).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- УКРАИНА -->
+        <section id="ukraine" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+                <span class="card-icon">🇺🇦</span>
+                <h2>Украина (УЗ)</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Украинские модернизации советских поездов и современные скоростные составы.</p>
+
+                <div class="trains-grid">
+                    <div class="train-card">
+                        <h3>ЭР2-КВР (УЗ)</h3>
+                        <p>Украинская модернизация ЭР2 с «хищной» пластиковой маской и сидениями-полукреслами для City Express.</p>
+                    </div>
+                    <div class="train-card">
+                        <h3>HRCS2 (Hyundai Rotem)</h3>
+                        <p>Двухсистемный 9-вагонный скоростной электропоезд, основа сети Интерсити+.</p>
+                    </div>
+                    <div class="train-card">
+                        <h3>ЕКр1 «Тарпан»</h3>
+                        <p>Украинский скоростной двухсистемный поезд Крюковского завода (выпущено 2 состава).</p>
+                    </div>
+                    <div class="train-card">
+                        <h3>EJ675 «Шкода»</h3>
+                        <p>Двухэтажные шестисоставные двухсистемные электропоезда УЗ (известны как «Шкода-Слоник»).</p>
+                    </div>
+                    <div class="train-card">
+                        <h3>ДПКр2 / ДПКр3</h3>
+                        <p>Современные дизель-поезда Крюковского завода для пригородных и региональных линий.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ДИЗЕЛЬ-ПОЕЗДА -->
+        <section id="diesel" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">🛤️</span>
+                <h2>Дизель-поезда и автомотрисы</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Автономный пригородный ход — поезда для неэлектрифицированных участков и малодеятельных линий.</p>
+
+                <div class="trains-grid">
+                    <div class="train-card">
+                        <h3>РА1 / РА2 / РА3 «Орлан»</h3>
+                        <p>Семейство рельсовых автобусов Метровагонмаша. От одиночной автомотрисы до современных комфортабельных дизель-поездов.</p>
+                    </div>
+                    <div class="train-card">
+                        <h3>ДР1 / ДР1А / ДР1АЦ</h3>
+                        <p>Классические рижские дизель-поезда. ДР1АЦ — латвийская модернизация с футуристической кабиной и двигателями MTU.</p>
+                    </div>
+                    <div class="train-card">
+                        <h3>Д1</h3>
+                        <p>Легендарный венгерский дизель-поезд Ganz-MÁVAG. Основа пригородного сообщения в Тульской, Калужской и Рязанской областях.</p>
+                    </div>
+                    <div class="train-card">
+                        <h3>АЧ2</h3>
+                        <p>Чехословацкая автомотриса Vagónka Studénka, работавшая как самостоятельно, так и с прицепными вагонами АПЧ2.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- УНИКАЛЬНЫЕ И ГИБРИДЫ -->
+        <section id="unique" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #27AE60 100%);">
+                <span class="card-icon">⭐</span>
+                <h2>Уникальные гибриды и легенды</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Экспериментальные составы, поезда локомотивной тяги («кентавры») и легендарные скоростные экспрессы.</p>
+
+                <div class="trains-grid">
+                    <div class="train-card">
+                        <h3>ДПМ1 / ДДБ1 / ДРБ1</h3>
+                        <p>Белорусские «кентавры»: секции тепловозов (2ТЭ116, 2М62) скрещенные с пригородными вагонами ДР1А.</p>
+                    </div>
+                    <div class="train-card">
+                        <h3>ДТ1</h3>
+                        <p>Торжокский дизель-электропоезд. Под проводами едет от сети 3000 В, на неэлектрифицированных ветках запускает дизели.</p>
+                    </div>
+                    <div class="train-card">
+                        <h3>ЭД1 / ЭД4DK</h3>
+                        <p>Поезда-челноки для Дальнего Востока на базе секций грузовых электровозов ВЛ80С и ВЛ10, между которыми — вагоны ДМЗ.</p>
+                    </div>
+                    <div class="train-card" style="border-left: 4px solid #F1C40F;">
+                        <h3>ЭР200</h3>
+                        <p>Рижский высокоскоростной электропоезд из алюминиевых сплавов. Развивал до 200 км/ч на линии Москва — Ленинград. Собрано всего 2 состава.</p>
+                    </div>
+                    <div class="train-card">
+                        <h3>Сокол-250 (ЭС250)</h3>
+                        <p>Опытный российский высокоскоростной поезд (построен 1 состав, проект закрыт).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Электропоезда — это артерии пригорода. От старых добрых ЭР2 до современных «Иволг» и «Финистов» — они каждый день перевозят миллионы людей на работу, учебу и дачу».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Электропоезда»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Железная_дорога.html">Железные дороги</a></li>
+                        <li><a href="Локомотивы.html">Локомотивы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram-канал</a></p>
+                    <p>✉️ <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Предложка</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Электропоезда — от первых «С» до новейших «Иволог»</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
+            function animateCounters() {
+                const targets = { modelsCount: 45, countriesCount: 4, yearsHistory: 95 };
+                let current = { modelsCount: 0, countriesCount: 0, yearsHistory: 0 };
+                const modelsEl = document.getElementById('modelsCount');
+                const countriesEl = document.getElementById('countriesCount');
+                const yearsEl = document.getElementById('yearsHistory');
+                
+                if (!modelsEl || !countriesEl || !yearsEl) return;
+                
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    
+                    if (current.modelsCount < targets.modelsCount) {
+                        current.modelsCount += Math.ceil(targets.modelsCount / 50);
+                        if (current.modelsCount > targets.modelsCount) current.modelsCount = targets.modelsCount;
+                        modelsEl.textContent = current.modelsCount;
+                        allFinished = false;
+                    }
+                    if (current.countriesCount < targets.countriesCount) {
+                        current.countriesCount += 1;
+                        if (current.countriesCount > targets.countriesCount) current.countriesCount = targets.countriesCount;
+                        countriesEl.textContent = current.countriesCount;
+                        allFinished = false;
+                    }
+                    if (current.yearsHistory < targets.yearsHistory) {
+                        current.yearsHistory += Math.ceil(targets.yearsHistory / 50);
+                        if (current.yearsHistory > targets.yearsHistory) current.yearsHistory = targets.yearsHistory;
+                        yearsEl.textContent = current.yearsHistory;
+                        allFinished = false;
+                    }
+                    
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+        });
+    </script>
+</body>
+</html>

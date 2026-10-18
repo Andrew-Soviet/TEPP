@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>−1 этаж: Метро — Музей Транспорта Москвы — ТЭПП</title>
+    <meta name="description" content="Подземный этаж Музея Транспорта Москвы: метро, проходческий щит, вагоны, навигация, турникеты, диспетчерская.">
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .spec-card {
+            background: #1e2a3a;
+            border-radius: 12px;
+            padding: 1.2rem 1.5rem;
+            margin-bottom: 1.2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        .spec-card h4 {
+            color: #2ecc71;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .spec-card p {
+            color: #d0d8e0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+        /* Карточка с фото внутри раздела */
+        .media-card {
+            background: #1e2a3a;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            margin-bottom: 1.5rem;
+        }
+        .media-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+        .media-card .caption {
+            padding: 0.8rem 1.2rem;
+            color: #d0d8e0;
+            font-size: 0.9rem;
+            background: rgba(0,0,0,0.2);
+        }
+        .media-card .caption strong {
+            color: #2ecc71;
+        }
+        /* Чередование: фото слева / фото справа */
+        .media-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        .media-row.reverse {
+            direction: rtl;
+        }
+        .media-row.reverse > * {
+            direction: ltr;
+        }
+        .media-row img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        .media-row .text {
+            color: #d0d8e0;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        .media-row .text h3 {
+            color: #2ecc71;
+            margin-bottom: 0.8rem;
+        }
+        @media (max-width: 768px) {
+            .media-row {
+                grid-template-columns: 1fr;
+            }
+            .media-row.reverse {
+                direction: ltr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>−1 этаж: Метро</h1>
+            <p class="subtitle">Музей Транспорта Москвы — подземная вселенная</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Музеи_транспорта.html">🏛️ Музеи</a></li>
+                    <li><a href="МузейТранспортаМосквы.html">🏛️ Музей Транспорта Москвы</a></li>
+                    <li><a href="#metro">Метрострой</a></li>
+                    <li><a href="#people">Люди</a></li>
+                    <li><a href="#rolling">Подвижной состав</a></li>
+                    <li><a href="#navigation">Навигация</a></li>
+                    <li><a href="#turnstiles">Турникеты</a></li>
+                    <li><a href="#control">Управление</a></li>
+                    <li><a href="#architecture">Архитектура</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h2>Подземная вселенная музея</h2>
+                <p class="hero-text">Сюда метровагоны спускали через монтажный проём длиной более 22 метров, и это само по себе инженерное чудо. Экспозиция построена как «формула метро»: семь разделов, которые вместе объясняют, как метро устроено, как оно строилось и как работает каждый день.</p>
+                <p class="hero-text"><strong>Как устроен этаж:</strong> семь разделов идут по кругу, и каждый раскрывает одну грань метро — от проходческого щита до голоса диспетчера. В центре — макет станции, вокруг которого и строится весь маршрут.</p>
+            </div>
+        </section>
+
+
+        <!-- ===================== КАРТА НИЖНЕГО ЭТАЖА ===================== -->
+        <section id="map" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">🗺️</span>
+                <h2>Карта −1 этажа</h2>
+            </div>
+            <div class="card-content">
+
+                <p class="card-description">
+                    Подземный уровень музея имеет форму подковы — его контуры повторяют очертания исторического гаража
+                    Константина Мельникова. Семь разделов идут по кругу, а в центре расположен макет станции.
+                    Ниже — схема расположения всех зон и экспонатов.
+                </p>
+
+                <!-- Карта -->
+                <div style="
+                    background: #1e2a3a;
+                    border-radius: 12px;
+                    padding: 1rem;
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+                    margin-top: 1.5rem;
+                    text-align: center;
+                ">
+                    <img src="img/map_-1flour_mosmuseim_transport.jpg"
+                         alt="Карта −1 этажа Музея Транспорта Москвы"
+                         onerror="this.src='https://via.placeholder.com/1200x600/8E44AD/FFFFFF?text=Карта+−1+этажа'"
+                         style="
+                            width: 100%;
+                            max-width: 1000px;
+                            height: auto;
+                            border-radius: 8px;
+                            display: block;
+                            margin: 0 auto;
+                         ">
+                    <p style="margin-top: 0.8rem; color: #d0d8e0; font-size: 0.9rem;">
+                        📸 ???
+                    </p>
+                </div>
+
+                <!-- Условные обозначения -->
+                <h3 style="margin: 2rem 0 1rem;">Что где находится</h3>
+                <div class="spec-grid">
+                    <div class="spec-card">
+                        <h4>🛠️ Метрострой</h4>
+                        <p>Макет проходческого щита и рассказ о том, как строили и строят метро.</p>
+                    </div>
+                    <div class="spec-card">
+                        <h4>👷 Эпоха энтузиазма</h4>
+                        <p>Билеты, паспорта, награды и личные истории метростроевцев.</p>
+                    </div>
+                    <div class="spec-card">
+                        <h4>🚇 Подвижной состав</h4>
+                        <p>Шесть метровагонов и мотовоз АГМу — от типа В до «Москвы-2019».</p>
+                    </div>
+                    <div class="spec-card">
+                        <h4>🧭 Навигация</h4>
+                        <p>Подлинные указатели разных лет, включая знаменитое «Сапарёво».</p>
+                    </div>
+                    <div class="spec-card">
+                        <h4>🚪 Турникеты</h4>
+                        <p>От АКП-1 до АКП-73, а также жетоны разных лет.</p>
+                    </div>
+                    <div class="spec-card">
+                        <h4>🎛️ Управление</h4>
+                        <p>Пульт диспетчера ЕДЦ и привод автостопа ПАМ-2.</p>
+                    </div>
+                    <div class="spec-card">
+                        <h4>🏛️ Архитектура</h4>
+                        <p>Интерактивный макет станции в разрезе и «Голос метрополитена».</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- ===================== МЕТРОСТРОЙ ===================== -->
+        <section id="metro" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">🛠️</span>
+                <h2>Метрострой: как строили и как строят</h2>
+            </div>
+            <div class="card-content">
+
+                <!-- Фото + текст: спуск на этаж -->
+                <div class="media-row">
+                    <img src="img/escalator_museim_mos_transport-1.jpg" alt="Спуск на −1 этаж" onerror="this.src='https://via.placeholder.com/600x400/8E44AD/FFFFFF?text=Спуск+на+−1+этаж'">
+                    <div class="text">
+                        <h3>Спуск в подземную вселенную</h3>
+                        <p>Спуск на −1 этаж — это уже часть экспозиции. Эскалатор в сине-фиолетовой подсветке ведёт в пространство, где метровагоны стоят на настоящих рельсах, а стены рассказывают о том, как строилось московское метро. 📸Фото: pfandrom</p>
+                    </div>
+                </div>
+
+                <!-- Фото + текст: проходческий щит -->
+                <div class="media-row reverse">
+                    <img src="img/maket_cshit.jpg" alt="Макет проходческого щита" onerror="this.src='https://via.placeholder.com/600x400/8E44AD/FFFFFF?text=Макет+проходческого+щита'">
+                    <div class="text">
+                        <h3>Макет проходческого щита</h3>
+                        <p>Главный аттракцион этажа — макет проходческого щита в разрезе. В музее показан самый первый щит, купленный в 1930-е в Англии специально для строительства московского метро. Можно рассмотреть рабочий орган с резцами, механизмы для установки тюбингов и платформы. 📸Фото: pfandrom</p>
+                    </div>
+                </div>
+
+                <p>Первая очередь Московского метрополитена строилась в основном вручную. Даже внедрение проходческого щита не позволило полностью механизировать процесс: проходчики разрабатывали грунт с помощью кирок и лопат — отбойные молотки у метростроевцев появились не сразу. Пока не было электровозов, вагонетки с породой и бетоном тоже приходилось толкать самим.</p>
+
+                <p style="margin-top: 1rem;">К маю 1935 года на Метрострое было занято до <strong>75 тысяч человек</strong>. Работать приходили люди из разных сфер: одними двигал энтузиазм, другие видели профессиональный вызов, третьи искали заработок и исключительные возможности.</p>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Геология:</strong> геологическое строение Москвы отличается от подземных слоёв почвы в европейских столицах. Под Москвой накопились изменчивые и неустойчивые отложения четырёх ледниковых периодов. Недра российской столицы полны воды. Так что каждый участок строительства диктовал свой метод работы, а прокладке шахт и тоннелей предшествовала тщательная геологоразведка.</p>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem;">Методы строительства</h3>
+                <div class="spec-grid">
+                    <div class="spec-card">
+                        <h4>🏗️ Открытый способ</h4>
+                        <p>На месте будущей станции рыли котлован, затем строили конструкции и засыпали.</p>
+                    </div>
+                    <div class="spec-card">
+                        <h4>🕳️ Закрытый способ</h4>
+                        <p>Через шахты, без вскрытия поверхности (самый трудоёмкий, но незаметный для города).</p>
+                    </div>
+                    <div class="spec-card">
+                        <h4>🧱 Траншейный способ</h4>
+                        <p>Разработан в Москве: сначала сооружали стену в грунте, затем выбирали породу под защитой этой стены.</p>
+                    </div>
+                </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/7KA_metro.jpg" alt="" onerror="this.src='https://via.placeholder.com/800x500?text=Тип+А'">
+                        <div class="gallery-caption">рудничный (шахтный) контактный электровоз модели 7КА</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/tunnel_maket_mus.jpg" alt="Опытный 81-717" onerror="this.src='https://via.placeholder.com/800x500?text=Опытный+81-717'">
+                        <div class="gallery-caption">Часть туннеля</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/kak_stroiat_metro_mus.jpg" alt="Баклажан" onerror="this.src='https://via.placeholder.com/800x500?text=Баклажан'">
+                        <div class="gallery-caption">Как строят метро сейчас?</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+            </div>
+        </section>
+
+        <!-- ===================== ЛЮДИ МЕТРОСТРОЯ ===================== -->
+        <section id="people" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">👷</span>
+                <h2>Эпоха энтузиазма: люди Метростроя</h2>
+            </div>
+            <div class="card-content">
+
+                <div class="media-row">
+                    <img src="img/metro_lydi_metrostroi_nagrad.jpg" alt="Люди Метростроя" onerror="this.src='https://via.placeholder.com/600x400/E67E22/FFFFFF?text=Люди+Метростроя'">
+                    <div class="text">
+                        <h3>Билеты, паспорта, награды</h3>
+                        <p>Отдельный раздел посвящён тем, кто строил метро. В экспозиции — билеты ударников, паспорта, наградные знаки, грамоты и даже копия Ордена Красной Звезды, врученного Павлу Ротэрту за руководство первой очередью. 📸Фото: pfandrom</p>
+                    </div>
+                </div>
+
+                <div class="spec-grid">
+                    <div class="spec-card">
+                        <h4>💬 Из воспоминаний</h4>
+                        <p>«Многие не имели представления, что такое метро, но слышали, что в СССР прежде не было ничего подобного. Этого хватило, чтобы тысячи записались добровольцами».</p>
+                    </div>
+                    <div class="spec-card">
+                        <h4>💬 Из воспоминаний</h4>
+                        <p>«Бригадирам-комсомольцам было легче, потому что все их подчинённые были комсомольцы. А партийцам приходилось сталкиваться со всякими настроениями в бригаде».</p>
+                    </div>
+                </div>
+                <p style="margin-top: 1.5rem;">Представлен и <strong>распорядок дня метростроевца</strong>: комсомольцы-ударники приходили за 2 часа до начала работы, главный инженер Арбатского радиуса спускался в шахты в 10:00, а после второй смены добровольцы участвовали в перекладке трамвайного пути.</p>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/entysiazm_i_kirka.jpg" alt="" onerror="this.src='https://via.placeholder.com/800x500?text=Тип+А'">
+                        <div class="gallery-caption">энтузиазм и кирка</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/nagradi_metro_mus.jpg" alt="Опытный 81-717" onerror="this.src='https://via.placeholder.com/800x500?text=Опытный+81-717'">
+                        <div class="gallery-caption">Памятный знак в честь сдачи очереди</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/daymetrostroi_mus.jpg" alt="" onerror="this.src='https://via.placeholder.com/800x500?text=Баклажан'">
+                        <div class="gallery-caption">День метростроевца</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/nagr_znaki_metrostroi_mus.jpg" alt="" onerror="this.src='https://via.placeholder.com/800x500?text=Баклажан'">
+                        <div class="gallery-caption">Нагрудные знаки метростроевца</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/kom_pravda_mus_mos.jpg" alt="" onerror="this.src='https://via.placeholder.com/800x500?text=Баклажан'">
+                        <div class="gallery-caption">Комсомольская правда на метрострое</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/gramota_mus_mos_stalin.jpg" alt="" onerror="this.src='https://via.placeholder.com/800x500?text=Баклажан'">
+                        <div class="gallery-caption">Грамота</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+            </div>
+        </section>
+
+        <!-- ===================== ПОДВИЖНОЙ СОСТАВ ===================== -->
+        <section id="rolling" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+                <span class="card-icon">🚇</span>
+                <h2>Подвижной состав: от «номерных» до «Москвы-2019»</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">В экспозиции представлены шесть метровагонов и мотовоз АГМу. Все вагоны можно рассмотреть не только снаружи, но и внутри.</p>
+
+                <!-- Вагон типа В -->
+                <div class="media-row" style="margin-top: 2rem;">
+                    <img src="img/Type_V_158.jpg" alt="Вагон типа В" onerror="this.src='https://via.placeholder.com/600x400/3498DB/FFFFFF?text=Вагон+типа+В'">
+                    <div class="text">
+                        <h3>Вагон типа В (1927)</h3>
+                        <p>Один из трёх сохранившихся вагон берлинского метрополитена серии В4. Один из 120 экземпляров, вывезенных из Берлина в 1945 году. Списан в 1968 году, но не утилизирован: до 2021 года служил подсобным помещением в депо «Красная Пресня». Реставраторы восстановили интерьер из ценных пород дерева — берёзы, дуба и вяза. 📸Фото: pfandrom</p>
+                    </div>
+                </div>
+
+                <!-- Вагон типа Г -->
+                <div class="media-row reverse">
+                    <img src="img/Type_G_661.jpg" alt="Вагон типа Г" onerror="this.src='https://via.placeholder.com/600x400/3498DB/FFFFFF?text=Вагон+типа+Г'">
+                    <div class="text">
+                        <h3>Вагон типа Г (1954)</h3>
+                        <p>Первый вагон московского метро с <strong>электродинамическим тормозом</strong>. Именно этот тип вагона первым получил традиционную для советских метрополитенов сине-голубую окраску. Возросший пассажиропоток требовал повышения скорости составов. Этого добились за счёт быстрого разгона и интенсивного торможения. 📸Фото: pfandrom</p>
+                    </div>
+                </div>
+
+                <!-- Остальные вагоны карточками -->
+                <div class="spec-grid">
+                    <div class="spec-card">
+                        <h4>Вагон Еж3 (1973)</h4>
+                        <p>На этих вагонах устанавливались более мощные тяговые двигатели, а система широтно-импульсного регулирования обеспечивала плавное реостатное торможение на любой скорости.</p>
+                    </div>
+                    <div class="spec-card">
+                        <h4>Вагон 81-717 (1983)</h4>
+                        <p>Первый вагон метро, не имевший буквенного обозначения, за что получил прозвище <strong>«номерной»</strong>. Вагоны этой серии считаются самыми распространёнными на постсоветском пространстве.</p>
+                    </div>
+                    <div class="spec-card">
+                        <h4>Вагон 81-720 «Яуза» (2001)</h4>
+                        <p>Вагон, задуманный как прорывной по уровню технологических решений. В этом вагоне появились автоматическая система пожаротушения, асинхронные тяговые двигатели, микропроцессорная система управления, принудительная вентиляция.</p>
+                    </div>
+                    <div class="spec-card">
+                        <h4>Вагон 81-765.4 «Москва-2019» (2019)</h4>
+                        <p>Первый вагон метро с <strong>крэш-системой</strong> для снижения рисков аварий, сенсорными экранами с картами метро и USB-портами для зарядки гаджетов.</p>
+                    </div>
+                    <div class="spec-card">
+                        <h4>Автодрезина АГМу (1984)</h4>
+                        <p>Грузовая монтажная автодрезина представляет собой самоходную железнодорожную платформу с грузоподъёмным краном и кабиной.</p>
+                    </div>
+                </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/Ezh3_5946.jpg" alt="" onerror="this.src='https://via.placeholder.com/800x500?text=Тип+А'">
+                        <div class="gallery-caption">Еж3 №5946</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/8535_museum.jpg" alt="" onerror="this.src='https://via.placeholder.com/800x500?text=Баклажан'">
+                        <div class="gallery-caption">Музейный вагон 81-717 №8535</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/tabl_81-717_LVZ_mus.jpg" alt="" onerror="this.src='https://via.placeholder.com/800x500?text=Опытный+81-717'">
+                        <div class="gallery-caption">Таблички с вагонов метро 81-717.5/714.5(ЛВЗ)</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/tabl_81-717-MMZ_mus.jpg" alt="" onerror="this.src='https://via.placeholder.com/800x500?text=Опытный+81-717'">
+                        <div class="gallery-caption">Заводские таблички вагонов метро 81-717(ММЗ) и 81-717.5М</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Метро на даче</p>
+                    </div>
+                    <div class="gallery-item">  
+                        <img src="img/0021_museum.jpg" alt="" onerror="this.src='https://via.placeholder.com/800x500?text=Баклажан'">
+                        <div class="gallery-caption">Вагон 81-720 "Яуза"</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                    </div>
+                    <div class="gallery-item">  
+                        <img src="img/AGMy-13137.jpg" alt="" onerror="this.src='https://via.placeholder.com/800x500?text=Баклажан'">
+                        <div class="gallery-caption">Автодрезина АГМу-13137</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+            </div>
+        </section>
+
+        <!-- ===================== НАВИГАЦИЯ ===================== -->
+        <section id="navigation" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">🧭</span>
+                <h2>Навигация: от табличек до приложения</h2>
+            </div>
+            <div class="card-content">
+
+                <div class="media-row">
+                    <img src="img/mus_nav_mos.jpg" alt="Навигация в метро" onerror="this.src='https://via.placeholder.com/600x400/16A085/FFFFFF?text=Навигация+в+метро'">
+                    <div class="text">
+                        <h3>Как менялись указатели</h3>
+                        <p>В экспозиции — подлинные указатели разных лет, включая знаменитое <strong>«Сапарёво»</strong>, а также современные таблички 2010–2020-х годов: «Алма-Атинская», «Некрасовка», «Выход в город». 📸Фото: Метро на даче</p>
+                    </div>
+                </div>
+
+                <div class="spec-grid">
+                    <div class="spec-card">
+                        <h4>1934–1935</h4>
+                        <p>Первые таблички «К кассам и поездам», «К поездам».</p>
+                    </div>
+                    <div class="spec-card">
+                        <h4>1950–1960-е</h4>
+                        <p>Появляются новые шрифты и схемы.</p>
+                    </div>
+                    <div class="spec-card">
+                        <h4>1967</h4>
+                        <p>Новая система навигации от «Метрогипротранса».</p>
+                    </div>
+                    <div class="spec-card">
+                        <h4>1970</h4>
+                        <p>Пиктограммы схемы метро.</p>
+                    </div>
+                    <div class="spec-card">
+                        <h4>1972</h4>
+                        <p>Автоинформаторы для объявления станций.</p>
+                    </div>
+                    <div class="spec-card">
+                        <h4>1979</h4>
+                        <p>Новый логотип метро.</p>
+                    </div>
+                    <div class="spec-card">
+                        <h4>1980</h4>
+                        <p>Схема метро на нитроэмали.</p>
+                    </div>
+                    <div class="spec-card">
+                        <h4>1984</h4>
+                        <p>Разделение оповещений на женский и мужской голоса.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== ТУРНИКЕТЫ ===================== -->
+        <section id="turnstiles" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E74C3C 0%, #C0392B 100%);">
+                <span class="card-icon">🚪</span>
+                <h2>Турникеты и системы оплаты</h2>
+            </div>
+            <div class="card-content">
+
+                <div class="media-row">
+                    <img src="img/mus_turn_i_hz.jpg" alt="Турникеты" onerror="this.src='https://via.placeholder.com/600x400/E74C3C/FFFFFF?text=Турникеты'">
+                    <div class="text">
+                        <h3>От АКП-1 до АКП-73</h3>
+                        <p>Осенью 1958 года в Московском метрополитене началось массовое внедрение автоматических контрольных пунктов <strong>АКП-1</strong>. «Нормально открытый» турникет, собранный в стильном деревянном корпусе, с лязгом преграждал дорогу пассажиру, если предварительно не опустить в него пятикопеечную монету. 📸Фото: Метро на даче</p>
+                    </div>
+                </div>
+
+                <p>С 1972 года на станциях ставили усовершенствованные <strong>АКП-73</strong>. Уже никакого дерева — только металл и немного резины. С этими турникетами московское метро прошло всю эволюцию системы оплаты. В экспозиции представлены жетоны разных лет, которые можно рассмотреть вблизи.</p>
+            </div>
+        </section>
+
+        <!-- ===================== УПРАВЛЕНИЕ ===================== -->
+        <section id="control" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+                <span class="card-icon">🎛️</span>
+                <h2>Управление: пульт диспетчера и «формула управления»</h2>
+            </div>
+            <div class="card-content">
+
+                <div class="media-row">
+                    <img src="img/metro_pult_mus.jpg" alt="Пульт диспетчера" onerror="this.src='https://via.placeholder.com/600x400/27AE60/FFFFFF?text=Пульт+диспетчера'">
+                    <div class="text">
+                        <h3>Пульт диспетчера ЕДЦ</h3>
+                        <p>Зона воссоздаёт атмосферу <strong>Единого диспетчерского центра метро</strong>. Посетители могут встать за пульт управления и узнать, как специалисты действуют в нештатных ситуациях. 📸Фото:  Метро на даче</p>
+                    </div>
+                </div>
+
+                <p>Московское метро унаследовало от железных дорог особое почтение к системам связи, сигнализации и управления движением. Главный узел рельсовых перевозок — <strong>диспетчерская</strong>. Именно здесь обеспечивается надёжность и бесперебойность работы метро в любых условиях.</p>
+            </div>
+        </section>
+
+        <!-- ===================== АРХИТЕКТУРА ===================== -->
+        <section id="architecture" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #9B59B6 0%, #8E44AD 100%);">
+                <span class="card-icon">🏛️</span>
+                <h2>Формула станции: устройство и архитектура</h2>
+            </div>
+            <div class="card-content">
+
+                <div class="media-row reverse">
+                    <img src="img/Устройство_Станции.jpg" alt="Фото норм не нашел, своё с плохим качеством" onerror="this.src='https://via.placeholder.com/600x400/9B59B6/FFFFFF?text=Архитектура+станции'">
+                    <div class="text">
+                        <h3>Станция по слоям</h3>
+                        <p>Интерактивный макет позволяет рассмотреть станцию буквально по слоям. Пассажирская платформа оказывается лишь небольшой частью сложной подземной конструкции. Вокруг неё скрыты мощные тяговые подстанции, вентшахты, обеспечивающие циркуляцию воздуха, машинные отделения эскалаторов и массивные противоатомные гермозатворы. 📸 new.mtmuseum.ru</p>
+                    </div>
+                </div>
+<div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); margin-top: 1.5rem;">
+    <div class="gallery-item">
+        <img src="img/stantion_virez_museim.jpg" alt="Макет станции Киевская" onerror="this.src='https://via.placeholder.com/800x500?text=Макет+Киевская'">
+        <div class="gallery-caption">Макет станции «Киевская» (Филевской линии)</div>
+        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Метро на даче</p>
+    </div>
+    <div class="gallery-item">
+        <img src="img/maikovskii_stantion_maket.jpg" alt="Макет станции Сокол" onerror="this.src='https://via.placeholder.com/800x500?text=Макет+Сокол'">
+        <div class="gallery-caption">Макет станции «Маяковская»</div>
+        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Метро на даче</p>
+    </div>
+</div>
+
+                <div class="spec-card">
+                    <h4>🎧 Голос метрополитена</h4>
+                    <p>Инсталляция <strong>«Голос метрополитена»</strong> — можно услышать, как объявления звучали в разные годы: от первых записей до современных. В 1984 году произошло разделение оповещений на женский и мужской голоса.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== ВАГОН И ТОННЕЛЬ ===================== -->
+        <section id="tunnel" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #34495E 0%, #2C3E50 100%);">
+                <span class="card-icon">🚇</span>
+                <h2>«Вагон и тоннель: напряжённые отношения»</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Во второй половине XIX века городское население начало активно расти, а с самим городом — увеличивалась потребность в доступном и быстром общественном транспорте. Тогда и возникла концепция городской железной дороги, которая проходит под землёй.</p>
+
+                <p style="margin-top: 1rem;">Готового решения, какой должна быть эта железная дорога, не существовало. В 1863 году в Лондоне в тоннели мелкого заложения пустили обычные паровозы, однако пар и дым под землёй мешали работникам и пассажирам. Переход на электрическую тягу способствовал решению этой проблемы. Тем не менее, тоннели меньшего диаметра — чем они меньше, тем дешевле обходятся по габаритам — но тогда и вагоны будут малогабаритными. А может, вообще отказаться от тоннелей и отправлять поезда по эстакадам над улицами? Полтора столетия поисков показали: универсального ответа нет, и города мира до сих пор используют разные системы.</p>
+            </div>
+        </section>
+
+        <!-- ===================== СПИСОК ЭКСПОНАТОВ ===================== -->
+        <section id="exhibits" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">📋</span>
+                <h2>Полный список экспонатов −1 этажа (7 единиц)</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <thead><tr><th>№</th><th>Модель</th><th>Узнать больше</th></tr></thead>
+                    <tbody>
+                        <tr><td>158</td><td>В-4</td><td><a href="Type_V_158.html">Подробнее →</a></td></tr>
+                        <tr><td>661</td><td>Г</td><td><a href="Type_G_661.html">Подробнее →</a></td></tr>
+                        <tr><td>5946</td><td>Еж3</td><td><a href="Type_Ezh3_5946.html">Подробнее →</a></td></tr>
+                        <tr><td>8535</td><td>81-717 (ЛВЗ)</td><td><a href="8535музей.html">Подробнее →</a></td></tr>
+                        <tr><td>0021</td><td>81-720 «Яуза»</td><td><a href="Яуза0021.html">Подробнее →</a></td></tr>
+                        <tr><td>65000</td><td>81-765.4 «Москва-2019»</td><td><a href="M19_65000.html">Подробнее →</a></td></tr>
+                        <tr><td>АГМу-13137</td><td>АГМу (автодрезина)</td><td><a href="AGMy-13137.html">Подробнее →</a></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Переход -->
+        <section class="section-card">
+            <div class="card-content" style="text-align: center;">
+                <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">Вернуться к основной странице музея:</p>
+                <a href="МузейТранспортаМосквы.html" style="display: inline-block; padding: 1rem 2.5rem; background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%); color: #fff; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(142, 68, 173, 0.4);">🏛️ Музей Транспорта Москвы →</a>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Метрополитен — подземное отражение города, символ его целостности, а также результат поиска решений в уравнении со многими переменными».</p>
+                <p class="quote-author">— Оксана Бондаренко, директор Музея Транспорта Москвы</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Транспортные музеи»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Музеи_транспорта.html">Музеи</a></li>
+                        <li><a href="МузейТранспортаМосквы.html">Музей Транспорта Москвы</a></li>
+                        <li><a href="https://mtmuseum.ru/" target="_blank" rel="noopener">Официальный сайт</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Музей транспорта Москвы — −1 этаж: Метро</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+        <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

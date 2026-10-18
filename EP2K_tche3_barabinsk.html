@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЭП2К в расцветке ТЧЭ-3 «Барабинск» — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>ЭП2К в расцветке ТЧЭ-3 «Барабинск»</h1>
+            <p class="subtitle">Пассажирские электровозы постоянного тока, приписанные к депо Барабинск</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Железная_дорога.html">🚂 Железные дороги</a></li>
+                    <li><a href="Локомотивы.html">🔧 Локомотивы</a></li>
+                    <li><a href="Электровозы.html">⚡ Электровозы</a></li>
+                    <li><a href="ЭП2К.html">🚆 ЭП2К</a></li>
+                    <li><a href="#list">🎨 Варианты расцветки</a></li>
+                    <li><a href="#gallery">📸 Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>ЭП2К с «барабинской» ливреей</h2>
+                <p class="hero-text">Часть пассажирских электровозов <strong>ЭП2К</strong>, приписанных к эксплуатационному локомотивному депо <strong>ТЧЭ-3 «Барабинск»</strong> Западно-Сибирской железной дороги, несёт на себе характерную красно-белую расцветку с эмблемой депо.</p>
+                <p class="hero-text">Эта расцветка — фирменная и любимая у владельца, депо ТЧЭ-3 «Барабинск». Локомотивы с ней работают на Западно-Сибирской железной дороге и обслуживают пассажирские поезда дальнего следования.</p>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="ep2kCount">0</div>
+                        <div class="stat-label">локомотивов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="ep2kVariants">0</div>
+                        <div class="stat-label">вариант расцветки</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="ep2kSpeed">0</div>
+                        <div class="stat-label">км/ч макс.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Основная информация -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #C0392B 0%, #E74C3C 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>🏭 Производство</h3>
+                        <p><strong>Завод:</strong> Коломенский завод</p>
+                        <p><strong>Модель:</strong> ЭП2К (Электровоз Пассажирский, тип 2, Коллекторный тяговый привод)</p>
+                        <p><strong>Тип:</strong> Пассажирский, постоянного тока</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>📍 Эксплуатация</h3>
+                        <p><strong>Дорога:</strong> Западно-Сибирская железная дорога</p>
+                        <p><strong>Депо:</strong> ТЧЭ-3 «Барабинск»</p>
+                        <p><strong>Текущее состояние:</strong> Эксплуатируется</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Варианты расцветки -->
+        <section id="list" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #C0392B 0%, #E74C3C 100%);">
+                <span class="card-icon">🎨</span>
+                <h2>Варианты расцветки</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Локомотивы ЭП2К депо ТЧЭ-3 «Барабинск» несут несколько вариантов фирменной расцветки — от стандартной до именной и юбилейной.</p>
+
+                <div class="features-grid" style="grid-template-columns: 1fr; gap: 1.5rem;">
+
+                    <!-- Вариант 1: стандартная барабинская -->
+                    <div class="feature-item" style="border-left: 5px solid #C0392B; padding-left: 1.2rem;">
+                        <h3>🎨 ТЧЭ-3 «Барабинск» (стандартная)</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li><strong>Красный кузов</strong> с белой полосой по борту</li>
+                            <li>Надпись <strong>«ТЧЭ-3 Барабинск»</strong> на боковине</li>
+                            <li>Характерный белый «ус» на лобовой части</li>
+                            <li>Надпись «РЖД» на борту</li>
+                        </ul>
+                        <p style="margin-top: 1rem;">Это любимая расцветка владельца — депо ТЧЭ-3 «Барабинск». Она подчёркивает принадлежность локомотивов к одному из старейших и наиболее технически оснащённых локомотивных депо России. Локомотивы с этой расцветкой работают на Западно-Сибирской, Южно-Уральской, Куйбышевской и Свердловской железных дорогах.</p>
+                        <div class="highlight-box" style="margin-top: 1rem; background: rgba(44, 62, 80, 0.08); border-left-color: #34495E;">
+                            <p style="font-size: 1.1rem; font-weight: bold; text-align: center; letter-spacing: 1px;">
+                                007, 010, 011, 044, 080, 094, 100, 114, 126, 133, 135, 144, 160, 162, 172, 200, 201, 206, 257, 259
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Вариант 2: именной -->
+                    <div class="feature-item" style="border-left: 5px solid #2C3E50; padding-left: 1.2rem;">
+                        <h3>⭐ Именной — ЭП2К-080 имени Леонида Васильевича Троценко</h3>
+                        <p><strong>ЭП2К-080</strong> носит имя <strong>Леонида Васильевича Троценко</strong> — начальника локомотивного депо Барабинск. Имя присвоено 24 февраля 2012 года.</p>
+                    </div>
+
+                    <!-- Вариант 3: юбилейный -->
+                    <div class="feature-item" style="border-left: 5px solid #DAA520; padding-left: 1.2rem;">
+                        <h3>🎉 Юбилейная расцветка «130 лет ТЧ-3 Барабинск»</h3>
+                        <p>В 2026 году депо ТЧЭ-3 «Барабинск» отмечает <strong>130 лет со дня основания</strong>. К этому юбилею часть локомотивов ЭП2К получила специальную юбилейную ливрею:</p>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li><strong>Красный кузов</strong> с жёлтой полосой по борту</li>
+                            <li><strong>Юбилейный логотип «130 лет»</strong> на борту</li>
+                            <li><strong>Надпись «130 лет Локомотивному депо Барабинск»</strong></li>
+                        </ul>
+                        <p style="margin-top: 1rem;">Юбилейную ливрею получили как минимум два локомотива:</p>
+                        <ul style="margin: 0.5rem 0 0 1.5rem;">
+                            <li><strong>ЭП2К-172</strong> — прошёл КР на ЯЭРЗ в сентябре 2026 года</li>
+                            <li><strong>ЭП2К-206</strong> — отправлен из Москвы с поездом 14 Москва — Челябинск 26 сентября 2026 года</li>
+                        </ul>
+                        <div class="highlight-box" style="margin-top: 1rem; background: rgba(218, 165, 32, 0.15); border-left-color: #DAA520;">
+                            <p><strong>Важно:</strong> Юбилейная расцветка — временное оформление. После окончания праздничных мероприятий локомотивы могут вернуться к стандартной барабинской схеме.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Фотогалерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/EP2K_080_floor.jpg" alt="ЭП2К-080 имени Л. В. Троценко" onerror="this.src='https://via.placeholder.com/800x500?text=ЭП2К-080'">
+                        <div class="gallery-caption">ЭП2К-080 имени Леонида Васильевича Троценко</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/EP2K_080_panorama.jpg" alt="ЭП2К-080 имени Л. В. Троценко" onerror="this.src='https://via.placeholder.com/800x500?text=ЭП2К-080'">
+                        <div class="gallery-caption">ЭП2К-080 имени Леонида Васильевича Троценко панорамма</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/EP2K_172+206.jpg" alt="ЭП2К-172 с юбилейной ливреей" onerror="this.src='https://via.placeholder.com/800x500?text=ЭП2К-172'">
+                        <div class="gallery-caption">ЭП2К-172 + ЭП2К-206 — юбилейная расцветка «130 лет ТЧ-3 Барабинск»</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 ЧС200-001(railgallery)</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«ЭП2К в расцветке ТЧЭ-3 «Барабинск» — это не просто локомотивы, а живая история депо, которое в 2026 году отмечает 130 лет. Юбилейная ливрея — дань уважения труду нескольких поколений железнодорожников».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Электровозы»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Железная_дорога.html">Железные дороги</a></li>
+                        <li><a href="ЭП2К.html">ЭП2К</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">ЭП2К — пассажирский электровоз постоянного тока</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function animateCounters() {
+                const targets = { ep2kCount: 20, ep2kVariants: 1, ep2kSpeed: 160 };
+                let current = { ep2kCount: 0, ep2kVariants: 0, ep2kSpeed: 0 };
+                const countEl = document.getElementById('ep2kCount');
+                const variantsEl = document.getElementById('ep2kVariants');
+                const speedEl = document.getElementById('ep2kSpeed');
+                if (!countEl || !variantsEl || !speedEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.ep2kCount < targets.ep2kCount) {
+                        current.ep2kCount += 1;
+                        if (current.ep2kCount > targets.ep2kCount) current.ep2kCount = targets.ep2kCount;
+                        countEl.textContent = current.ep2kCount;
+                        allFinished = false;
+                    }
+                    if (current.ep2kVariants < targets.ep2kVariants) {
+                        current.ep2kVariants += 1;
+                        if (current.ep2kVariants > targets.ep2kVariants) current.ep2kVariants = targets.ep2kVariants;
+                        variantsEl.textContent = current.ep2kVariants;
+                        allFinished = false;
+                    }
+                    if (current.ep2kSpeed < targets.ep2kSpeed) {
+                        current.ep2kSpeed += Math.ceil(targets.ep2kSpeed / 50);
+                        if (current.ep2kSpeed > targets.ep2kSpeed) current.ep2kSpeed = targets.ep2kSpeed;
+                        speedEl.textContent = current.ep2kSpeed;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
+                    const author = this.querySelector('p')?.textContent || '';
+                    if (content && img) {
+                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p><p style="text-align:center; color:#666;">${author}</p>`;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>

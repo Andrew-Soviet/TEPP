@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>75488 - Беспилотный поезд Москва 2026</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Анимированные частицы -->
+    <div id="particles-js"></div>
+    
+    <!-- Анимированный градиентный фон -->
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Беспилотный поезд 75488</h1>
+            <p class="subtitle">Первый беспилотный поезд на базе «Москва-2026»</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="Живая_история_Мск_метро.html">📚 Живая история</a></li>
+                    <li><a href="#about">О поезде</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#branding">Оформление</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Вагон №75488</h2>
+                <p class="hero-text">Первый беспилотный поезд на базе модели «Москва-2026» (81-775.2). Прошёл презентацию президенту РФ В. В. Путину и мэру Москвы С. С. Собянину, участвовал в Параде поездов 2026 года.</p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="carYear">0</div>
+                        <div class="stat-label">год постройки</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="carStatus">0</div>
+                        <div class="stat-label">состояние</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="carType">0</div>
+                        <div class="stat-label">назначение</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Основная информация -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                <span class="card-icon">🚇</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>📋 Основные данные</h3>
+                        <ul style="margin: 0.5rem 0 0 1.2rem;">
+                            <li><strong>Город:</strong> Москва</li>
+                            <li><strong>Модель:</strong> 81-775.2 «Москва-2026»</li>
+                            <li><strong>Номер:</strong> 75488</li>
+                            <li><strong>Построен:</strong> Ноябрь 2025</li>
+                            <li><strong>Депо:</strong> ТЧ-2 «Сокол»</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>📌 Назначение</h3>
+                        <ul style="margin: 0.5rem 0 0 1.2rem;">
+                            <li><strong>Назначение:</strong> Пассажирский</li>
+                            <li><strong>Текущее состояние:</strong> Эксплуатируется</li>
+                            <li><strong>Начало работы:</strong> 06.02.2026</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>💻 Информационная система</h3>
+                        <ul style="margin: 0.5rem 0 0 1.2rem;">
+                            <li><strong>Производитель:</strong> КБ «Метроспецтехника»</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>🚪 Двери</h3>
+                        <ul style="margin: 0.5rem 0 0 1.2rem;">
+                            <li><strong>Производитель:</strong> «КМТ»</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p>⭐ <strong>Главная особенность:</strong> Первый беспилотный поезд Московского метрополитена на базе модели «Москва-2026».</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- История -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline" style="padding: 1rem 0;">
+                    <div class="timeline-item">
+                        <div class="timeline-date">11.2025</div>
+                        <div class="timeline-content">
+                            <h3>Постройка</h3>
+                            <p>Вагон построен в рамках модели 81-775.2 «Москва-2026».</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">14.12.2025</div>
+                        <div class="timeline-content">
+                            <h3>Поступление в метро</h3>
+                            <p>Поезд поступил в метрополитен через гейт ТЧ-18 «Солнцево».</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">16.12.2025</div>
+                        <div class="timeline-content">
+                            <h3>Депо приписки</h3>
+                            <p>Поезд поступил в депо ТЧ-2 «Сокол».</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">16.01.2026</div>
+                        <div class="timeline-content">
+                            <h3>Презентация президенту</h3>
+                            <p>Поезд принимал участие в презентации беспилотного состава на базе «Москвы-2024» <strong>президенту РФ В. В. Путину</strong> и <strong>мэру Москвы С. С. Собянину</strong> в ТЧ-22 «Аминьевское».</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">06.02.2026</div>
+                        <div class="timeline-content">
+                            <h3>Начало работы</h3>
+                            <p>Поезд начал регулярную пассажирскую эксплуатацию.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">16-17.05.2026</div>
+                        <div class="timeline-content">
+                            <h3>Парад поездов</h3>
+                            <p>Поезд участвовал в <strong>Параде поездов</strong> на Кольцевой линии, посвящённом дню рождения Московского метрополитена.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Тематическое оформление -->
+        <section id="branding" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">🎨</span>
+                <h2>Тематическое оформление</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>16.01.2026 — 19.01.2026</h3>
+                        <div class="highlight-box" style="margin-top:0.5rem;">
+                            <p><strong>«Это беспилотный поезд»</strong></p>
+                            <p>Первое тематическое оформление, подчёркивающее уникальность состава.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>С 19.01.2026 — 06.02.2026</h3>
+                        <div class="highlight-box" style="margin-top:0.5rem; background: rgba(44, 62, 80, 0.1);">
+                            <p><strong>Чёрная плёнка</strong></p>
+                            <p>Вагон оклеен в чёрную плёнку без каких-либо надписей. Минималистичный дизайн.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p>🔲 <strong>С 06.02.2026:</strong> Оформление снято, поезд эксплуатируется в стандартной ливрее «Москва-2026».</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Модель Москва-2026 -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Модель «Москва-2026» (81-775.2)</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>Особенности модели</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>Сквозной проход по всему составу</li>
+                            <li>USB-зарядки для пассажиров</li>
+                            <li>Информационные табло</li>
+                            <li>Современная система климат-контроля</li>
+                            <li>Беспилотное управление (опытный образец)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Производство</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li><strong>Завод:</strong> Метровагонмаш (ТМХ)</li>
+                            <li><strong>Год начала выпуска:</strong> 2025</li>
+                            <li><strong>Тип:</strong> 8-вагонный состав</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Фотогалерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/75488.jpg" alt="Беспилотный поезд 75488" onerror="this.src='https://via.placeholder.com/800x500?text=75488'">
+                        <div class="gallery-caption">Вагон 75488 — беспилотный поезд «Москва-2026».</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Артём Алмазов(transphoto)</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Интересные факты -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E74C3C 0%, #C0392B 100%);">
+                <span class="card-icon">💡</span>
+                <h2>Интересные факты</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="feature-item">
+                        <h3>Первый беспилотный</h3>
+                        <p>Первый поезд Московского метро с системой беспилотного управления, прошедший презентацию на высшем уровне.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Презентация президенту</h3>
+                        <p>16 января 2026 года поезд был показан президенту РФ В. В. Путину и мэру Москвы С. С. Собянину.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Участник парада</h3>
+                        <p>Поезд участвовал в Параде поездов 2026 года на Кольцевой линии, став одним из главных экспонатов.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">"Этот поезд — символ нового этапа развития Московского метрополитена. Беспилотные технологии, представленные на нём, определят будущее городского транспорта."</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел "Современный подвижной состав"</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="Живая_история_Мск_метро.html">Живая история</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">75488 — первый беспилотный поезд Московского метро</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка прокрутки вверх -->
+    <div class="scroll-top">↑</div>
+
+    <!-- Модальное окно для галереи -->
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function animateCounters() {
+                const targets = {
+                    carYear: 2025,
+                    carStatus: 1,
+                    carType: 1
+                };
+                
+                let current = {
+                    carYear: 0,
+                    carStatus: 0,
+                    carType: 0
+                };
+                
+                const yearEl = document.getElementById('carYear');
+                const statusEl = document.getElementById('carStatus');
+                const typeEl = document.getElementById('carType');
+                
+                if (!yearEl || !statusEl || !typeEl) return;
+                
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    
+                    if (current.carYear < targets.carYear) {
+                        current.carYear += Math.ceil(targets.carYear / 50);
+                        if (current.carYear > targets.carYear) current.carYear = targets.carYear;
+                        yearEl.textContent = current.carYear;
+                        allFinished = false;
+                    }
+                    
+                    if (current.carStatus < targets.carStatus) {
+                        current.carStatus += 1;
+                        if (current.carStatus > targets.carStatus) current.carStatus = targets.carStatus;
+                        statusEl.textContent = '✅ Эксплуатируется';
+                        allFinished = false;
+                    }
+                    
+                    if (current.carType < targets.carType) {
+                        current.carType += 1;
+                        if (current.carType > targets.carType) current.carType = targets.carType;
+                        typeEl.textContent = '🚇 Пассажирский';
+                        allFinished = false;
+                    }
+                    
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            
+            animateCounters();
+            
+            // Галерея
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+            
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
+                    if (content && img) {
+                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+            
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>

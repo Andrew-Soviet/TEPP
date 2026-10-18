@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Городской транспорт — Трамваи, троллейбусы, автобусы — ТЭПП</title>
+    <meta name="description" content="История и современность городского наземного транспорта: трамваи, троллейбусы, автобусы, монорельсы и уникальные системы.">
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Наземный транспорт</h1>
+            <p class="subtitle">Трамваи, троллейбусы, автобусы, монорельсы — история и современность</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="#tram">Трамваи</a></li>
+                    <li><a href="#trolley">Троллейбусы</a></li>
+                    <li><a href="#bus">Автобусы</a></li>
+                    <li><a href="#monorail">Московский монорельс</a></li>
+                    <li><a href="#strela">Стрела</a></li>
+                    <li><a href="#unique">Уникальные системы</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция со счётчиками -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Городской наземный транспорт</h2>
+                <p class="hero-text">Наземный транспорт — неотъемлемая часть жизни любого города. Трамваи, троллейбусы и автобусы ежедневно перевозят миллионы пассажиров, связывая районы и создавая уникальный облик городской среды.</p>
+                <p class="hero-text">От старых чешских трамваев до современных низкопольных автобусов — каждый вид транспорта имеет свою богатую историю и особенности.</p>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="groundCities">0</div>
+                        <div class="stat-label">городов с трамваем</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="groundTrolley">0</div>
+                        <div class="stat-label">троллейбусных систем</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="groundRoutes">0</div>
+                        <div class="stat-label">маршрутов</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Трамваи -->
+        <section id="tram" class="section-card">
+            <div class="card-header">
+                <span class="card-icon">🚊</span>
+                <h2>Трамваи</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">От конки до современных низкопольных вагонов — трамвай остаётся одним из самых узнаваемых символов города.</p>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>История трамвая</h3>
+                        <p>От первых конных линий XIX века до электрических систем XX века и современных моделей.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Легендарные модели</h3>
+                        <p>Tatra T3, РВЗ-6, КТМ-5, ЛМ-68, Gotha, 71-135 №3001.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Уникальные системы</h3>
+                        <p>Скоростной трамвай в Киеве, узкоколейные системы Львова и Одессы.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Троллейбусы -->
+        <section id="trolley" class="section-card">
+            <div class="card-header">
+                <span class="card-icon">🚎</span>
+                <h2>Троллейбусы</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Экологичный транспорт, объединивший преимущества трамвая и автобуса. От ЗиУ-9 до современных моделей.</p>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>История троллейбуса</h3>
+                        <p>От первых машин 1930-х до массовых ЗиУ-9 и современных низкопольных моделей.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Легендарные модели</h3>
+                        <p>ЗиУ-9 (более 40 000 экземпляров), МТБ-82, Škoda 14Tr/15Tr, ЯТБ.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Уникальные системы</h3>
+                        <p>Крымский троллейбус (86 км) — самая длинная линия в мире.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Автобусы -->
+        <section id="bus" class="section-card">
+            <div class="card-header">
+                <span class="card-icon">🚌</span>
+                <h2>Автобусы</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Самый массовый вид городского транспорта. От легендарных ЛиАЗ-677 и ПАЗ-3205 до современных электробусов.</p>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>История автобуса</h3>
+                        <p>От первых отечественных моделей до массового производства ЛиАЗ и ПАЗ.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Легендарные модели</h3>
+                        <p>ЛиАЗ-677 (более 200 000 экземпляров), ПАЗ-3205, ЛиАЗ-5292, МАЗ.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Электробусы</h3>
+                        <p>Современный экологичный транспорт. Москва — лидер по количеству в Европе.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Московский монорельс -->
+        <section id="monorail" class="section-card">
+            <div class="card-header">
+                <span class="card-icon">🚝</span>
+                <h2>Московский монорельс</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Первый пассажирский монорельс в России, работавший с 2004 по 2025 год. Уникальная эстакадная система.</p>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>История монорельса</h3>
+                        <p>2004 — открытие, 2008 — пассажирское движение, 2025 — закрытие и демонтаж.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Подвижной состав</h3>
+                        <p>Вагоны 01-045 производства ОАО «Метровагонмаш», полностью автоматизированные.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Наследие</h3>
+                        <p>Два поезда сохранены как музейные экспонаты, на месте линии планируется парк.</p>
+                    </div>
+                </div>
+                <a href="Монорельс.html" class="btn btn-primary" style="margin-top: 1.5rem;">Подробнее о монорельсе →</a>
+            </div>
+        </section>
+
+        <!-- Монорельсовая система «Стрела» -->
+        <section id="strela" class="section-card">
+            <div class="card-header">
+                <span class="card-icon">🚝</span>
+                <h2>Монорельсовая система «Стрела»</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Легендарный заброшенный подвесной монорельс в Подмосковье, простоявший 10 лет и почти полностью снесённый.</p>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>История проекта</h3>
+                        <p>2016 — постройка 920-метрового участка, 2016 — отказ от проекта, 2026 — снос.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Конструкция</h3>
+                        <p>Подвесной монорельс по типу системы в Вуппертале (Германия), маршрут Ильинское-Усово → «Мякинино».</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Итог</h3>
+                        <p>Участок почти полностью снесён, «надземных парков» не будет, система не сохранилась.</p>
+                    </div>
+                </div>
+                <a href="Монорельс_Стрела.html" class="btn btn-primary" style="margin-top: 1.5rem;">Подробнее о «Стреле» →</a>
+            </div>
+        </section>
+
+        <!-- Уникальные транспортные системы -->
+        <section id="unique" class="section-card">
+            <div class="card-header">
+                <span class="card-icon">⭐</span>
+                <h2>Уникальные транспортные системы</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Особые виды транспорта, не вписывающиеся в стандартные категории — фуникулёры, канатные дороги, метротрамы.</p>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>Тбилисский фуникулер</h3>
+                        <p>Уникальная транспортная система, соединяющая центр Тбилиси с парком Мтацминда. Работает с 1905 года.</p>
+                        <a href="Тбилиси_фуникулер.html" class="btn btn-secondary" style="margin-top: 1rem; width: 100%;">Подробнее →</a>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Канатная дорога в Алма-Ате</h3>
+                        <p>Соединяет город с высокогорным спортивным комплексом «Медео». Уникальные виды и инженерное решение.</p>
+                        <a href="Almata-kd.html" class="btn btn-secondary" style="margin-top: 1rem; width: 100%;">Подробнее →</a>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Крымский троллейбус</h3>
+                        <p>Самая длинная троллейбусная линия в мире (Симферополь — Алушта — Ялта, 86 км).</p>
+                        <a href="Крым_троллейбус.html" class="btn btn-secondary" style="margin-top: 1rem; width: 100%;">Подробнее →</a>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Нижегородская канатная дорога</h3>
+                        <p>Уникальная канатная дорога через Волгу, соединяющая Нижний Новгород и Бор.</p>
+                        <a href="НН_канатка.html" class="btn btn-secondary" style="margin-top: 1rem; width: 100%;">Подробнее →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Интересные факты -->
+        <section class="section-card">
+            <div class="card-header">
+                <span class="card-icon">💡</span>
+                <h2>Интересные факты</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>Самый длинный трамвайный маршрут</h3>
+                        <p>В Европе — №52 в Будапеште, в России — №25 в Санкт-Петербурге.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Первый трамвай</h3>
+                        <p>В Российской империи запущен в Киеве в 1892 году.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Самый массовый троллейбус</h3>
+                        <p>ЗиУ-9 — выпущено более 42 000 экземпляров.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Самая длинная троллейбусная линия</h3>
+                        <p>Крымский троллейбус (Симферополь — Ялта) — 86 км.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Самый массовый автобус</h3>
+                        <p>ЛиАЗ-677 — выпущено более 200 000 экземпляров.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Старейший трамвай</h3>
+                        <p>Львов — 1880 год (конка), с 1894 электрический.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Наземный транспорт — это лицо города. По тому, какие трамваи ходят по улицам, какие автобусы перевозят пассажиров, можно судить о развитии и культуре города».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Наземный транспорт»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="#tram">Трамваи</a></li>
+                        <li><a href="#trolley">Троллейбусы</a></li>
+                        <li><a href="#bus">Автобусы</a></li>
+                        <li><a href="#monorail">Московский монорельс</a></li>
+                        <li><a href="#strela">Стрела</a></li>
+                        <li><a href="#unique">Уникальные системы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram-канал</a></p>
+                    <p>✉️ <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Предложка</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Исследуйте мир наземного транспорта</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
+            function animateGroundCounters() {
+                const targets = {
+                    groundCities: 86,
+                    groundTrolley: 97,
+                    groundRoutes: 5200
+                };
+                let current = { groundCities: 0, groundTrolley: 0, groundRoutes: 0 };
+                const citiesEl = document.getElementById('groundCities');
+                const trolleyEl = document.getElementById('groundTrolley');
+                const routesEl = document.getElementById('groundRoutes');
+                
+                if (!citiesEl || !trolleyEl || !routesEl) return;
+                
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.groundCities < targets.groundCities) {
+                        current.groundCities += Math.ceil(targets.groundCities / 50);
+                        if (current.groundCities > targets.groundCities) current.groundCities = targets.groundCities;
+                        citiesEl.textContent = current.groundCities;
+                        allFinished = false;
+                    }
+                    if (current.groundTrolley < targets.groundTrolley) {
+                        current.groundTrolley += Math.ceil(targets.groundTrolley / 50);
+                        if (current.groundTrolley > targets.groundTrolley) current.groundTrolley = targets.groundTrolley;
+                        trolleyEl.textContent = current.groundTrolley;
+                        allFinished = false;
+                    }
+                    if (current.groundRoutes < targets.groundRoutes) {
+                        current.groundRoutes += Math.ceil(targets.groundRoutes / 50);
+                        if (current.groundRoutes > targets.groundRoutes) current.groundRoutes = targets.groundRoutes;
+                        routesEl.textContent = current.groundRoutes.toLocaleString();
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateGroundCounters();
+        });
+    </script>
+</body>
+</html>

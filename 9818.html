@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9818 - Уникальный вагон-сопровождение</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Анимированные частицы -->
+    <div id="particles-js"></div>
+    
+    <!-- Анимированный градиентный фон -->
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Вагон №9818</h1>
+            <p class="subtitle">Уникальный вагон-сопровождение путеизмерителя УМ5 №806</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="Ушедшие_в_историю_метро.html">📜 Ушедшие в историю</a></li>
+                    <li><a href="#about">О вагоне</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#design">Конструкция</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Вагон №9818</h2>
+                <p class="hero-text">Сейчас вы узнаете о вагоне 9818 — одном из самых уникальных и любимых вагонов. Этот вагон имеет необычную историю: он был вагоном-сопровождением путеизмерителя УМ5 №806 и проработал в этой роли более 11 лет.</p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="carYear">0</div>
+                        <div class="stat-label">год постройки</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="carAge">0</div>
+                        <div class="stat-label">лет эксплуатации</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="carStatus">0</div>
+                        <div class="stat-label">состояние</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Основная информация -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>📅 Постройка</h3>
+                        <p style="font-size: 1.2rem; font-weight: bold;">Август 1984</p>
+                        <p>Вагон поступил в депо приписки ТЧ-4 «Красная Пресня»</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>📍 Последнее местонахождение</h3>
+                        <p style="font-size: 1.2rem; font-weight: bold;">ТЧ-16 «Митино»</p>
+                        <p>Утилизирован в июне 2020</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>📌 Особенность</h3>
+                        <p style="font-size: 1.2rem; font-weight: bold;">Вагон-сопровождение</p>
+                        <p>С 1989 по 2000 год сопровождал путеизмеритель УМ5 №806</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>⚡ Статус</h3>
+                        <p style="font-size: 1.2rem; font-weight: bold;">Утилизирован</p>
+                        <p>Июнь 2020, ТЧ-16 «Митино»</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p>⭐ <strong>Уникальность:</strong> Вагон 9818 — один из немногих вагонов-сопровождений путеизмерителей. Более 11 лет он работал в паре с УМ5 №806, обеспечивая контроль состояния путей Московского метро.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- История -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История вагона</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline" style="padding: 1rem 0;">
+                    <div class="timeline-item">
+                        <div class="timeline-date">09.1984</div>
+                        <div class="timeline-content">
+                            <h3>Поступление</h3>
+                            <p>Вагон поступил в депо приписки ТЧ-4 «Красная Пресня».</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">12.1989</div>
+                        <div class="timeline-content">
+                            <h3>Вагон-сопровождение</h3>
+                            <p>Вагон начал работу в качестве <strong>вагона-сопровождения путеизмерителя УМ5 №806</strong>. Эта роль длилась до декабря 2000 года — более 11 лет.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2007 (примерно)</div>
+                        <div class="timeline-content">
+                            <h3>Капитальный ремонт</h3>
+                            <p>Вагон прошёл капитальный ремонт на ЗРЭПС. После ремонта пластик на боковинах был заменён на голубой.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">03.2014 — 05.2014</div>
+                        <div class="timeline-content">
+                            <h3>Хранение</h3>
+                            <p>Вагон находился на хранении в ТЧ-17 «Братеево».</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">10.2019 — 06.2020</div>
+                        <div class="timeline-content">
+                            <h3>Хранение</h3>
+                            <p>Вагон находился на хранении в ТЧ-16 «Митино».</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">06.2020</div>
+                        <div class="timeline-content">
+                            <h3>Утилизация</h3>
+                            <p>Вагон был утилизирован в ТЧ-16 «Митино».</p>
+                            <div class="highlight-box" style="margin-top:0.5rem; background: rgba(192, 57, 43, 0.1);">
+                                <p>😔 Вагон утрачен. Память о нём осталась в фотографиях и воспоминаниях энтузиастов.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Экстерьер -->
+        <section id="design" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">🚉</span>
+                <h2>Экстерьер</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>Окраска</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>Бирюзового цвета с белыми полосами по борту</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Рёбра жёсткости</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>Два ребра жёсткости</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Сигнальные лампы</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>Расположение: горизонтальное</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Интерьер -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+                <span class="card-icon">💺</span>
+                <h2>Интерьер</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>Поручни</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>Поручни старого образца</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Сиденья</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>Диваны, обшитые кожзаменителем</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Пластик</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li><strong>08.1984 — 2007 (примерно):</strong> рыжего цвета под дерево</li>
+                            <li><strong>С 2007 (примерно):</strong> тот же пластик, но пластик на боковинах заменён на голубой</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Освещение</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>Лампы типа ЛПВ-01</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p>🔵 <strong>Особенность интерьера:</strong> После капитального ремонта 2007 года вагон сохранил рыжий пластик под дерево, но боковины были заменены на голубые — редкое сочетание для номерных вагонов.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Технические характеристики -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+                <span class="card-icon">⚙️</span>
+                <h2>Технические характеристики</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="feature-item">
+                        <h3>Модель</h3>
+                        <p>81-714 (ММЗ)</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Номер</h3>
+                        <p>9818</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Год постройки</h3>
+                        <p>1984</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Тип</h3>
+                        <p>Вагон-сопровождение</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Статус</h3>
+                        <p>Утилизирован (06.2020)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Связь с УМ5 №806 -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">🔗</span>
+                <h2>Связь с УМ5 №806</h2>
+            </div>
+            <div class="card-content">
+                <div class="highlight-box" style="margin-bottom: 1rem;">
+                    <p>Вагон 9818 работал в паре с путеизмерителем <strong>УМ5 №806</strong> с декабря 1989 по декабрь 2000 года — более 11 лет совместной работы.</p>
+                </div>
+                
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>Роль вагона 9818</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>Вагон-сопровождение</li>
+                            <li>Обеспечение работы путеизмерителя</li>
+                            <li>Перевозка бригады</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Путеизмеритель УМ5 №806</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>Также утилизирован</li>
+                            <li>Судьба неизвестна</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Фотогалерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/9818.jpg" alt="Вагон 9818" onerror="this.src='https://via.placeholder.com/800x500?text=9818'">
+                        <div class="gallery-caption">Вагон 9818 на станции «Котельники»</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸: Reostator</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/9818_int.jpg" alt="Вагон 9818" onerror="this.src='https://via.placeholder.com/800x500?text=9818'">
+                        <div class="gallery-caption">Вагон 9818 салон</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸: MetroSim</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">📸 Фото взяты с transphoto</p>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">"Вагон 9818 — один из тех уникальных экземпляров, которые остались в памяти энтузиастов. 11 лет работы в паре с путеизмерителем, редкое сочетание рыжего и голубого пластика — всё это делает его по-настоящему особенным."</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел "Ушедшие в историю"</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="Ушедшие_в_историю_метро.html">Ушедшие в историю</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">9818 — вагон-сопровождение, ушедший в историю</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка прокрутки вверх -->
+    <div class="scroll-top">↑</div>
+
+    <!-- Модальное окно для галереи -->
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function animateCounters() {
+                const targets = {
+                    carYear: 1984,
+                    carAge: 36,
+                    carStatus: 0
+                };
+                
+                let current = {
+                    carYear: 0,
+                    carAge: 0,
+                    carStatus: 0
+                };
+                
+                const yearEl = document.getElementById('carYear');
+                const ageEl = document.getElementById('carAge');
+                const statusEl = document.getElementById('carStatus');
+                
+                if (!yearEl || !ageEl || !statusEl) return;
+                
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    
+                    if (current.carYear < targets.carYear) {
+                        current.carYear += Math.ceil(targets.carYear / 50);
+                        if (current.carYear > targets.carYear) current.carYear = targets.carYear;
+                        yearEl.textContent = current.carYear;
+                        allFinished = false;
+                    }
+                    
+                    if (current.carAge < targets.carAge) {
+                        current.carAge += Math.ceil(targets.carAge / 50);
+                        if (current.carAge > targets.carAge) current.carAge = targets.carAge;
+                        ageEl.textContent = current.carAge;
+                        allFinished = false;
+                    }
+                    
+                    if (current.carStatus < targets.carStatus) {
+                        current.carStatus += 1;
+                        if (current.carStatus > targets.carStatus) current.carStatus = targets.carStatus;
+                        statusEl.textContent = current.carStatus;
+                        allFinished = false;
+                    }
+                    
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            
+            animateCounters();
+            
+            // Галерея
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+            
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
+                    if (content && img) {
+                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+            
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>

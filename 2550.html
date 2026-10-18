@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2550 - Уникальный вагон с богатой историей</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Анимированные частицы -->
+    <div id="particles-js"></div>
+    
+    <!-- Анимированный градиентный фон -->
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Вагон №2550</h1>
+            <p class="subtitle">Уникальный вагон, потерявший свою уникальную маску</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="ЗЛ_уники.html">📋 Замоскворецкая линия</a></li>
+                    <li><a href="Ушедшие_в_историю_метро.html">📜 Ушедшие в историю</a></li>
+                    <li><a href="#about">О вагоне</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#design">Конструкция</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Вагон №2550</h2>
+                <p class="hero-text">Вагон 2550 был построен в мае 1996 года на МВЗ (ныне ТМХ). За свою историю он сменил несколько депо и прошёл капитальный ремонт. Недавно вагон потерял свою уникальную маску — теперь из интересных особенностей осталось только жёлтое освещение.</p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="carYear">0</div>
+                        <div class="stat-label">год постройки</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="carAge">0</div>
+                        <div class="stat-label">лет эксплуатации</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Основная информация -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>📅 Постройка</h3>
+                        <p style="font-size: 1.2rem; font-weight: bold;">Май 1996</p>
+                        <p>Модель: 81-717.5М (МВМ)</p>
+                        <p>Завод-изготовитель: МВЗ (ныне ТМХ)</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>📍 Текущее местонахождение</h3>
+                        <p style="font-size: 1.2rem; font-weight: bold;">ТЧ-17 «Южное»</p>
+                        <p>Линия: Замоскворецкая (ЗЛ)</p>
+                        <p>Назначение: Пассажирский</p>
+                        <p>Статус: Эксплуатируется</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- История депо -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История депо</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Депо</th>
+                            <th>Период</th>
+                            <th>Примечание</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>ТЧ-10 «Свиблово»</td><td>05.1996 — 06.2016</td><td>Поступление</td></tr>
+                        <tr><td>ТЧ-13 «Черкизово»</td><td>06.2016 — 03.2018</td><td></td></tr>
+                        <tr><td>ТЧ-15 «Печатники»</td><td>03.2018 — 04.2019</td><td></td></tr>
+                        <tr><td>ТЧ-19 «Лихоборы»</td><td>04.2019 — 01.2022</td><td></td></tr>
+                        <tr><td>ТЧ-17 «Южное»</td><td>01.2022 — 02.2023</td><td></td></tr>
+                        <tr><td>ТЧ-5 «Калужское»</td><td>02.2023 — 09.05.2023</td><td></td></tr>
+                        <tr><td>ТЧ-17 «Южное»</td><td>09.05.2023 — 04.2025</td><td></td></tr>
+                        <tr><td>ТЧ-17 «Южное»</td><td>04.2025 — 28.05.2025</td><td>Вагон для перегонок</td></tr>
+                        <tr><td>ТЧ-17 «Южное»</td><td>≥ 29.05.2025</td><td>Эксплуатируется</td></tr>
+                    </tbody>
+                </table>
+                
+                <div class="highlight-box" style="margin-top: 1.5rem; background: rgba(231, 126, 34, 0.1);">
+                    <p><strong>Важные даты:</strong></p>
+                    <p>• 30.06.2015 — капитальный ремонт на ОЭВРЗ</p>
+                    <p>• 04.2025 — 28.05.2025 — вагон для перегонок</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Экстерьер -->
+        <section id="design" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">🚉</span>
+                <h2>Экстерьер</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>Окраска</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>Бирюзового цвета с белыми полосами по борту</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Компоновка фар</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>1-4-1</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Бывшие особенности (06.2015 — 01.2026)</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>❌ Окантовка маски окрашена в цвет кузова</li>
+                            <li>❌ Рисунок изгиба на двери в кабину совпадал с рисунком на дверях в салон</li>
+                        </ul>
+                        <p style="color: #C0392B; font-weight: 500; margin-top: 0.5rem;">⚠️ Утрачено в 2026 году</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Текущие особенности</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>✅ Три ребра жёсткости</li>
+                            <li>✅ Вертикальное расположение сигнальных ламп</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Интерьер -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+                <span class="card-icon">💺</span>
+                <h2>Интерьер</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>Сиденья</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li><strong>05.1996 — 06.2015:</strong> диваны, обшитые кожзаменителем</li>
+                            <li><strong>С 06.2015:</strong> антивандальные сиденья коричневого цвета с ортопедической спинкой</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Пластик</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li><strong>05.1996 — 06.2015:</strong> жёлтого цвета под дерево</li>
+                            <li><strong>С 06.2015:</strong> пластиковые композитные панели</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Освещение</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li><strong>05.1996 — 06.2015:</strong> лампы типа ЛПВ-02</li>
+                            <li><strong>С 06.2015:</strong> световая линия жёлтого цвета ⭐</li>
+                        </ul>
+                        <div class="highlight-box" style="margin-top:0.5rem;">
+                            <p>⭐ <strong>Единственная сохранившаяся особенность</strong> — жёлтое освещение, которое отличает этот вагон от других.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Поручни</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>Вертикальные поручни</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Сводная таблица -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+                <span class="card-icon">📊</span>
+                <h2>Эволюция изменений</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Элемент</th>
+                            <th>До 06.2015</th>
+                            <th>06.2015 — 01.2026</th>
+                            <th>С 2026</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Маска</td><td>Стандартная</td><td>Уникальная окантовка</td><td>Стандартная (утрачена)</td></tr>
+                        <tr><td>Сиденья</td><td>Диваны</td><td>Коричневые антивандальные</td><td>Коричневые антивандальные</td></tr>
+                        <tr><td>Пластик</td><td>Жёлтый "под дерево"</td><td>Композитные панели</td><td>Композитные панели</td></tr>
+                        <tr><td>Освещение</td><td>ЛПВ-02</td><td>Жёлтая световая линия</td><td>Жёлтая световая линия</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Фотогалерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/2550_1.jpg" alt="Вагон 2550 на станции Технопарк" onerror="this.src='https://via.placeholder.com/800x500?text=2550'">
+                        <div class="gallery-caption">Вагон 2550 на станции Технопарк</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸: Tosh Evs</p>
+                    </div>
+                   <div class="gallery-item">
+                        <img src="img/2550_new.jpg" alt="Вагон 2550 на станции Технопарк" onerror="this.src='https://via.placeholder.com/800x500?text=2550'">
+                        <div class="gallery-caption">Вагон 2550 в текщем виде</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸: Стальной гвоздь</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">📸 Фото взяты с transphoto</p>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">"Вагон 2550 запомнился энтузиастам своей уникальной маской, которую он носил почти 11 лет. К сожалению, в 2026 году она была утрачена. Теперь только жёлтое освещение напоминает о былой уникальности этого вагона."</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел "Уникальные вагоны"</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="ЗЛ_уники.html">Замоскворецкая линия</a></li>
+                        <li><a href="Ушедшие_в_историю_метро.html">Ушедшие в историю</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Вагон 2550 — уникальная маска утрачена, осталось жёлтое освещение</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка прокрутки вверх -->
+    <div class="scroll-top">↑</div>
+
+    <!-- Модальное окно для галереи -->
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <!-- Подключаем библиотеку частиц -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function animateCounters() {
+                const targets = {
+                    carYear: 1996,
+                    carAge: 30
+                };
+                
+                let current = {
+                    carYear: 0,
+                    carAge: 0
+                };
+                
+                const yearEl = document.getElementById('carYear');
+                const ageEl = document.getElementById('carAge');
+                
+                if (!yearEl || !ageEl) return;
+                
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    
+                    if (current.carYear < targets.carYear) {
+                        current.carYear += Math.ceil(targets.carYear / 50);
+                        if (current.carYear > targets.carYear) current.carYear = targets.carYear;
+                        yearEl.textContent = current.carYear;
+                        allFinished = false;
+                    }
+                    
+                    if (current.carAge < targets.carAge) {
+                        current.carAge += Math.ceil(targets.carAge / 50);
+                        if (current.carAge > targets.carAge) current.carAge = targets.carAge;
+                        ageEl.textContent = current.carAge;
+                        allFinished = false;
+                    }
+                    
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            
+            animateCounters();
+            
+            // Галерея
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+            
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
+                    if (content && img) {
+                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+            
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>

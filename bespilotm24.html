@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Беспилотная «Москва-2024» (81-775.2) — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Беспилотная «Москва-2024»</h1>
+            <p class="subtitle">Первый беспилотный поезд Московского метрополитена (81-775.2)</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="Главная_Страница_Мосметро.html">🏙️ Мосметро</a></li>
+                    <li><a href="#about">О поезде</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#specs">Характеристики</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Беспилотная «Москва-2024»</h2>
+                <p class="hero-text">Беспилотный поезд <strong>81-775.2 «Москва-2024»</strong> — первый состав Московского метрополитена, оснащённый системой автоматического управления. Испытывается на Большой кольцевой линии (БКЛ) с 2024 года.</p>
+                <p class="hero-text">Головной вагон <strong>№ 75371</strong> получил тематическое брендирование <strong>«Это беспилотный поезд»</strong> с 16 января 2026 года.</p>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="bpYear">0</div>
+                        <div class="stat-label">год постройки</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="bpCars">0</div>
+                        <div class="stat-label">вагонов в составе</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="bpSpeed">0</div>
+                        <div class="stat-label">км/ч макс.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Общая информация -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Основные параметры беспилотной «Москвы-2024»</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Город</td><td>Москва 🇷🇺</td></tr>
+                        <tr><td>Депо/Парк</td><td>ТЧ-7 «Замоскворецкое»</td></tr>
+                        <tr><td>Модель</td><td>81-775.2 «Москва-2024»</td></tr>
+                        <tr><td>Построен</td><td>06.2024</td></tr>
+                        <tr><td>Текущее состояние</td><td>Эксплуатируется</td></tr>
+                        <tr><td>Назначение</td><td>Служебный (испытания)</td></tr>
+                        <tr><td>Примечание</td><td>«Это беспилотный поезд»</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <h3>Составность</h3>
+                    <p style="font-size: 1.3rem; text-align: center; font-weight: bold; margin-top: 0.5rem;">
+                        75371 — 77371 — 76701 — 76702 — 76703 — 76704 — 77372 — 75372
+                    </p>
+                    <p style="text-align: center; color: var(--text-secondary); margin-top: 0.3rem;">8 вагонов · с 11.2025 · испытания беспилотных систем</p>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1rem; border-left-color: #8E44AD;">
+                    <h3>Тематическое брендирование</h3>
+                    <p><strong>С 16.01.2026:</strong> «Это беспилотный поезд»</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- История -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История испытаний</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">04.07.2024</div>
+                        <div class="timeline-content">
+                            <h3>Поступил в метрополитен</h3>
+                            <p>Состав поступил в метрополитен через гейт ТЧ-18 «Солнцево».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">21.07.2024</div>
+                        <div class="timeline-content">
+                            <h3>Поступление в ТЧ-2 «Сокол»</h3>
+                            <p>Состав поступил в депо приписки ТЧ-2 «Сокол».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">29.08.2024</div>
+                        <div class="timeline-content">
+                            <h3>Передача в ТЧ-7 «Замоскворецкое»</h3>
+                            <p>Состав поступил в депо текущей приписки ТЧ-7 «Замоскворецкое».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Конец ноября 2025</div>
+                        <div class="timeline-content">
+                            <h3>Отставлен от пассажирской эксплуатации</h3>
+                            <p>Состав отставлен от пассажирской эксплуатации для испытания беспилотных систем.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Начало декабря 2025</div>
+                        <div class="timeline-content">
+                            <h3>Установка оборудования</h3>
+                            <p>В рамках испытаний установлены дополнительные камеры и датчики.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">16.01.2026</div>
+                        <div class="timeline-content">
+                            <h3>Презентация президенту</h3>
+                            <p>Состав представлен в качестве беспилотного состава президенту РФ В. В. Путину и мэру Москвы С. С. Собянину в ТЧ-22 «Аминьевское».</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Оборудование -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+                <span class="card-icon">⚙️</span>
+                <h2>Оборудование беспилотного управления</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>🧠 Информационная система</h3>
+                        <p><strong>Производитель:</strong> КБ «Метроспецтехника»</p>
+                        <p>Система обработки данных и управления движением поезда в автоматическом режиме.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🚪 Двери</h3>
+                        <p><strong>Производитель:</strong> «СТЕСА»</p>
+                        <p>Автоматические двери с системой контроля закрытия.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Дополнительное оборудование:</strong> в рамках испытаний установлены дополнительные камеры и датчики для обеспечения беспилотного движения.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Технические характеристики -->
+        <section id="specs" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">📊</span>
+                <h2>Технические характеристики</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="feature-item">
+                        <h3>Модель</h3>
+                        <p>81-775.2 «Москва-2024»</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Год постройки</h3>
+                        <p>06.2024</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Составность</h3>
+                        <p>8 вагонов</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Депо</h3>
+                        <p>ТЧ-7 «Замоскворецкое»</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Назначение</h3>
+                        <p>Служебный (испытания)</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Брендирование</h3>
+                        <p>«Это беспилотный поезд»</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Фотогалерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/bespilotm24_cab.jpg" alt="Кабина вагона 81-775.2 «Москва-2024» № 75371" onerror="this.src='https://via.placeholder.com/800x500?text=Кабина'">
+                        <div class="gallery-caption">Кабина вагона 81-775.2 «Москва-2024» № 75371</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Mixpokr_Hedgehog</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/bespilotm24.jpg" alt="Испытания поезда на станции Лефортово" onerror="this.src='https://via.placeholder.com/800x500?text=Лефортово'">
+                        <div class="gallery-caption">Испытания поезда на станции «Лефортово»</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Артём Алмазов</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/bespilotm24_int.jpg" alt="Салон, вид вперёд" onerror="this.src='https://via.placeholder.com/800x500?text=Салон'">
+                        <div class="gallery-caption">Салон, вид вперёд (30 ноября 2024 г.)</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 mosnikita</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/bespilotm24_2.jpg" alt="Обкатка поезда" onerror="this.src='https://via.placeholder.com/800x500?text=Обкатка'">
+                        <div class="gallery-caption">Обкатка поезда</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 ShetrPetr</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">📸 Фото взяты с transphoto</p>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Беспилотная «Москва-2024» — это шаг в будущее Московского метрополитена. Впервые в истории столичной подземки поезд может управляться без машиниста».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Подвижной состав метро»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="Главная_Страница_Мосметро.html">Московский метрополитен</a></li>
+                        <li><a href="Акварель.html">Акварель</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Беспилотная «Москва-2024» — первый беспилотный поезд Московского метро</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
+            function animateCounters() {
+                const targets = { bpYear: 2024, bpCars: 8, bpSpeed: 80 };
+                let current = { bpYear: 0, bpCars: 0, bpSpeed: 0 };
+                const yearEl = document.getElementById('bpYear');
+                const carsEl = document.getElementById('bpCars');
+                const speedEl = document.getElementById('bpSpeed');
+                if (!yearEl || !carsEl || !speedEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.bpYear < targets.bpYear) {
+                        current.bpYear += Math.ceil(targets.bpYear / 50);
+                        if (current.bpYear > targets.bpYear) current.bpYear = targets.bpYear;
+                        yearEl.textContent = current.bpYear;
+                        allFinished = false;
+                    }
+                    if (current.bpCars < targets.bpCars) {
+                        current.bpCars += 1;
+                        if (current.bpCars > targets.bpCars) current.bpCars = targets.bpCars;
+                        carsEl.textContent = current.bpCars;
+                        allFinished = false;
+                    }
+                    if (current.bpSpeed < targets.bpSpeed) {
+                        current.bpSpeed += 1;
+                        if (current.bpSpeed > targets.bpSpeed) current.bpSpeed = targets.bpSpeed;
+                        speedEl.textContent = current.bpSpeed;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+
+            // Галерея
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
+                    const author = this.querySelector('p')?.textContent || '';
+                    if (content && img) {
+                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p><p style="text-align:center; color:#666;">${author}</p>`;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>

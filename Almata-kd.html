@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Канатная дорога в Алма-Ате — Уникальная транспортная система</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Канатная дорога в Алма-Ате</h1>
+            <p class="subtitle">Уникальная транспортная система, соединяющая город с высокогорным комплексом «Медео» и курортом «Шымбулак»</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="tram.html">🚍 Наземный транспорт</a></li>
+                    <li><a href="#about">О канатной дороге</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#specs">Характеристики</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Канатная дорога Алма-Аты</h2>
+                <p class="hero-text">Канатная дорога «Медео — Шымбулак» — уникальная транспортная система, соединяющая город с высокогорным спортивным комплексом «Медео» и горнолыжным курортом «Шымбулак». Это не только способ передвижения, но и популярная туристическая достопримечательность с захватывающими видами на Заилийский Алатау.</p>
+                <p class="hero-text">Открыта <strong>в 2011 году</strong> после масштабной реконструкции. Протяжённость первой очереди — <strong>4 572 метра</strong>, что делает её одной из самых длинных канатных дорог в мире. Верхняя точка всей системы достигает <strong>3 200 метров</strong> над уровнем моря.</p>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="cableYear">0</div>
+                        <div class="stat-label">год открытия</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="cableLength">0</div>
+                        <div class="stat-label">длина, м</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="cableHeight">0</div>
+                        <div class="stat-label">макс. высота, м</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Основная информация -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                <span class="card-icon">🚡</span>
+                <h2>О канатной дороге</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>📅 Дата открытия</h3>
+                        <p style="font-size: 1.3rem; font-weight: bold;">2011 год</p>
+                        <p>Канатная дорога открыта после масштабной реконструкции, приуроченной к зимним Азиатским играм 2011 года. Строительство велось с июля 2007 года австрийской компанией Doppelmayr.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>📍 Маршрут</h3>
+                        <p><strong>Нижняя станция:</strong> «Медео» (1691 м над уровнем моря)</p>
+                        <p><strong>Верхняя станция (1-я очередь):</strong> «Шымбулак» (2260 м)</p>
+                        <p><strong>Высшая точка системы:</strong> Талгарский перевал (3200 м)</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p>Канатная дорога работает круглый год, обеспечивая доступ к горнолыжным трассам зимой и к живописным видам летом. Система состоит из нескольких очередей с пересадками на промежуточных станциях.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- История создания -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История создания</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline" style="padding: 1rem 0;">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2007</div>
+                        <div class="timeline-content">
+                            <h3>Начало строительства</h3>
+                            <p>В июле 2007 года началось строительство современной гондольной канатной дороги австрийской компанией Doppelmayr.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Декабрь 2010</div>
+                        <div class="timeline-content">
+                            <h3>Технический запуск</h3>
+                            <p>23 декабря 2010 года состоялся массовый технический проезд по канатной дороге.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2011</div>
+                        <div class="timeline-content">
+                            <h3>Официальное открытие</h3>
+                            <p>Канатная дорога официально открыта к зимним Азиатским играм 2011 года. Система включает несколько очередей: «Медео — Шымбулак» (Combi-1) и далее до средних и верхних станций (Combi-2).</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Настоящее время</div>
+                        <div class="timeline-content">
+                            <h3>Современное состояние</h3>
+                            <p>Канатная дорога — одна из главных туристических достопримечательностей Алма-Аты и одна из самых длинных канатных дорог в мире (третье место по протяжённости).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Технические характеристики -->
+        <section id="specs" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+                <span class="card-icon">⚙️</span>
+                <h2>Технические характеристики</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Параметр</th>
+                            <th>Значение</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Год открытия</td><td>2011 (после реконструкции)</td></tr>
+                        <tr><td>Протяжённость (1-я очередь)</td><td>4 572 м</td></tr>
+                        <tr><td>Перепад высот (1-я очередь)</td><td>569 м (от 1691 до 2260 м)</td></tr>
+                        <tr><td>Высшая точка системы</td><td>3 200 м (Талгарский перевал)</td></tr>
+                        <tr><td>Тип</td><td>Гондольная (Doppelmayr)</td></tr>
+                        <tr><td>Количество очередей</td><td>2 (Combi-1 и Combi-2)</td></tr>
+                        <tr><td>Время в пути (1-я очередь)</td><td>14–15 минут</td></tr>
+                        <tr><td>Пропускная способность</td><td>до 2000 человек в час</td></tr>
+                        <tr><td>Скорость</td><td>5–6 м/с</td></tr>
+                        <tr><td>Количество кабин</td><td>114 восьмиместных</td></tr>
+                        <tr><td>Вместимость кабины</td><td>8 человек</td></tr>
+                        <tr><td>Производитель</td><td>Doppelmayr (Австрия)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Маршрут и достопримечательности -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+                <span class="card-icon">🏔️</span>
+                <h2>Маршрут и достопримечательности</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>Нижняя станция — Медео</h3>
+                        <ul style="margin: 1rem 0 0 1.2rem;">
+                            <li>Высокогорный спортивный комплекс «Медео»</li>
+                            <li>Самый высокогорный каток в мире (1691 м)</li>
+                            <li>Уникальная ледовая арена</li>
+                            <li>Плотина Медео — защита от селей</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>Верхние станции — Шымбулак</h3>
+                        <ul style="margin: 1rem 0 0 1.2rem;">
+                            <li>Горнолыжный курорт «Шымбулак» (2260 м)</li>
+                            <li>Средняя станция (2860 м)</li>
+                            <li>Верхняя станция — Талгарский перевал (3200 м)</li>
+                            <li>Горнолыжные трассы различной сложности</li>
+                            <li>Панорамный вид на Заилийский Алатау</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Вид из кабины:</strong> Во время подъёма открываются захватывающие панорамы на город Алма-Ату, Заилийский Алатау и ущелье реки Малая Алматинка.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Интересные факты -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #F1C40F 0%, #F39C12 100%);">
+                <span class="card-icon">💡</span>
+                <h2>Интересные факты</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="feature-item">
+                        <h3>Одна из длиннейших в мире</h3>
+                        <p>Протяжённость 4 572 метра выводит канатную дорогу на третье место в мире по длине пролёта.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>Круглогодичная работа</h3>
+                        <p>Работает 365 дней в году — зимой для лыжников, летом для туристов.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>Киносъёмки</h3>
+                        <p>Канатная дорога и окрестности использовались для съёмок советских фильмов, включая «Игла» с Виктором Цоем.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>Спортивные события</h3>
+                        <p>Принимала участников и гостей зимних Азиатских игр 2011 года.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>Панорамный вид</h3>
+                        <p>С верхней станции открывается вид на город Алма-Ату и пики Заилийского Алатау высотой более 4000 метров.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>Популярность</h3>
+                        <p>Ежегодно канатной дорогой пользуются сотни тысяч туристов и местных жителей.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Фотогалерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #9B59B6 0%, #8E44AD 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/alma_kanatka1.jpg" alt="Канатная дорога Алма-Аты" onerror="this.src='https://via.placeholder.com/600x400?text=Канатная+дорога+вид'">
+                        <div class="gallery-caption">Вид на канатную дорогу и горы Заилийского Алатау</div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="img/alma_kanatka4.jpg" alt="Шымбулак зимой" onerror="this.src='https://via.placeholder.com/600x400?text=Шымбулак+зимой'">
+                        <div class="gallery-caption">Горнолыжный курорт «Шымбулак» зимой</div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">📸 Фото взяты из интернета</p>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Как добраться -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%);">
+                <span class="card-icon">🚌</span>
+                <h2>Как добраться</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>Общественный транспорт</h3>
+                        <ul style="margin: 1rem 0 0 1.2rem;">
+                            <li><strong>Автобус №12</strong> — от центра города до остановки «Медео»</li>
+                            <li><strong>Автобус №28</strong> — от станции метро «Абая» до «Медео»</li>
+                            <li><strong>Такси</strong> — от центра города около 2000–3000 тенге</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>Режим работы</h3>
+                        <ul style="margin: 1rem 0 0 1.2rem;">
+                            <li><strong>Ежедневно:</strong> 10:00 — 20:00</li>
+                            <li><strong>Выходные:</strong> 09:00 — 21:00</li>
+                            <li><strong>Зимой (лыжный сезон):</strong> 09:00 — 22:00</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Стоимость билета (ориентировочно, 2022):</strong></p>
+                    <p>• Взрослый — 3 500 тенге</p>
+                    <p>• Молодёжный (до 23 лет) — 2 500 тенге</p>
+                    <p>• Детский (до 10 лет) — 1 500 тенге</p>
+                    <p>• Дети до 5 лет, пенсионеры, инвалиды — бесплатно</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Канатная дорога в Алма-Ате — это уникальное сочетание инженерной мысли и природной красоты. Поднимаясь над городом, ты словно попадаешь в другой мир — мир величественных гор и белоснежных вершин».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Уникальные транспортные системы»</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="tram.html">Наземный транспорт</a></li>
+                        <li><a href="Тбилиси_фуникулер.html">Тбилисский фуникулер</a></li>
+                        <li><a href="Ереван_метротрам.html">Ереванский метротрам</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Канатная дорога Алма-Аты — транспорт с видом на горы</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function animateCableCounters() {
+                const targets = {
+                    cableYear: 2011,
+                    cableLength: 4572,
+                    cableHeight: 3200
+                };
+
+                let current = {
+                    cableYear: 0,
+                    cableLength: 0,
+                    cableHeight: 0
+                };
+
+                const yearElement = document.getElementById('cableYear');
+                const lengthElement = document.getElementById('cableLength');
+                const heightElement = document.getElementById('cableHeight');
+
+                if (!yearElement || !lengthElement || !heightElement) return;
+
+                const interval = setInterval(function() {
+                    let allFinished = true;
+
+                    if (current.cableYear < targets.cableYear) {
+                        current.cableYear += Math.ceil(targets.cableYear / 50);
+                        if (current.cableYear > targets.cableYear) current.cableYear = targets.cableYear;
+                        yearElement.textContent = current.cableYear;
+                        allFinished = false;
+                    }
+
+                    if (current.cableLength < targets.cableLength) {
+                        current.cableLength += Math.ceil(targets.cableLength / 50);
+                        if (current.cableLength > targets.cableLength) current.cableLength = targets.cableLength;
+                        lengthElement.textContent = current.cableLength.toLocaleString();
+                        allFinished = false;
+                    }
+
+                    if (current.cableHeight < targets.cableHeight) {
+                        current.cableHeight += Math.ceil(targets.cableHeight / 50);
+                        if (current.cableHeight > targets.cableHeight) current.cableHeight = targets.cableHeight;
+                        heightElement.textContent = current.cableHeight;
+                        allFinished = false;
+                    }
+
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+
+            animateCableCounters();
+
+            const galleryModal = document.getElementById('galleryModal');
+            const galleryModalContent = document.getElementById('galleryModalContent');
+            const galleryCloseBtn = document.getElementById('galleryModalClose');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            if (galleryModal && galleryItems.length > 0) {
+                galleryItems.forEach(item => {
+                    item.addEventListener('click', function() {
+                        const img = this.querySelector('img');
+                        const caption = this.querySelector('.gallery-caption').textContent;
+
+                        if (galleryModalContent) {
+                            galleryModalContent.innerHTML = `
+                                <img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}">
+                                <p style="text-align:center; margin-top:1rem;">${caption}</p>
+                            `;
+                        }
+
+                        galleryModal.classList.add('active');
+                    });
+                });
+
+                if (galleryCloseBtn) {
+                    galleryCloseBtn.addEventListener('click', function() {
+                        galleryModal.classList.remove('active');
+                    });
+                }
+
+                window.addEventListener('click', function(e) {
+                    if (e.target === galleryModal) {
+                        galleryModal.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
