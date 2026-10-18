@@ -1844,6 +1844,44 @@ footer {
         padding: 0 !important;
         line-height: 1 !important;
     }
+
+        /* ============================================================
+       УМЕНЬШЕНИЕ ЗАГОЛОВКОВ КАРТОЧЕК НА ТЕЛЕФОНЕ
+       (Чтобы они не занимали пол-экрана)
+       ============================================================ */
+    
+    /* Убираем огромные отступы у шапки карточки */
+    .card-header {
+        padding: 0.8rem 1rem !important;
+        margin: -1rem -1rem 1rem -1rem !important; /* Подстраиваем под новые отступы карточек */
+        gap: 0.5rem !important;
+    }
+
+    /* Уменьшаем размер иконки в заголовке */
+    .card-header .card-icon {
+        font-size: 1.5rem !important;
+    }
+
+    /* Уменьшаем сам текст заголовка */
+    .card-header h2 {
+        font-size: 1.2rem !important;
+        line-height: 1.3 !important;
+        word-wrap: break-word;
+    }
+
+    /* Для темы «Матрица» делаем плашку не такой кислотной и огромной */
+    [data-theme="night"] .card-header {
+        padding: 0.6rem 1rem !important; /* Еще меньше отступы для матрицы */
+        box-shadow: none !important; /* Убираем свечение, если оно есть */
+    }
+    
+    /* Чиним блок поиска, чтобы он не растягивался */
+    .search-section .card-header {
+        padding: 0.8rem 1rem !important;
+    }
+    .search-section .search-btn {
+        width: 100% !important; /* Кнопка на всю ширину для удобства */
+    }
 }
 
 /* ============================================================
