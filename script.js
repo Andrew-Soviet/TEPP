@@ -995,3 +995,77 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// ============================================================
+// ЭФФЕКТ «ЦИФРОВОЙ ДОЖДЬ» ДЛЯ ТЕМЫ «МАТРИЦА»
+// ============================================================
+document.addEventListener('DOMContentLoaded', function() {
+    // Создаем контейнер для дождя
+    const rainContainer = document.createElement('div');
+    rainContainer.id = 'matrix-rain';
+    rainContainer.style.position = 'fixed';
+    rainContainer.style.top = '0';
+    rainContainer.style.left = '0';
+    rainContainer.style.width = '100%';
+    rainContainer.style.height = '100%';
+    rainContainer.style.pointerEvents = 'none'; // Чтобы не мешал кликать
+    rainContainer.style.zIndex = '-1'; // Позади всего
+    rainContainer.style.overflow = 'hidden';
+    rainContainer.style.display = 'none'; // По умолчанию скрыт
+    document.body.appendChild(rainContainer);
+
+    // Функция генерации капель
+    function createRain() {
+        if (document.documentElement.getAttribute('data-theme') !== 'night') {
+            rainContainer.style.display = 'none';
+            rainContainer.innerHTML = ''; // Очищаем, если тема не матрица
+            return;
+        }
+        
+        rainContainer.style.display = 'block';
+        rainContainer.innerHTML = ''; // Очищаем перед генерацией
+
+        const columns = Math.floor(window.innerWidth / 20); // Количество колонок
+        for (let i = 0; i < columns; i++) {
+            const drop = document.createElement('div');
+            drop.textContent = Math.random() > 0.5 ? '1' : '0'; // Случайно 1 или 0
+            drop.style.position = 'absolute';
+            drop.style.top = '-20px';
+            drop.style.left = (i * 20) + 'px';
+            drop.style.color = '#00ff00';
+            drop.style.fontFamily = 'monospace';
+            drop.style.fontSize = '18px';
+            drop.style.opacity = Math.random() * 0.5 + 0.2; // Случайная прозрачность
+            drop.style.textShadow = '0 0 5px #00ff00';
+            
+            // Анимация падения
+            const duration = Math.random() * 3 + 2; // От 2 до 5 секунд
+            const delay = Math.random() * 5; // Задержка старта
+            
+            drop.animate([
+                { transform: `translateY(0)`, opacity: drop.style.opacity },
+                { transform: `translateY(${window.innerHeight + 50}px)`, opacity: 0 }
+            ], {
+                duration: duration * 1000,
+                delay: delay * 1000,
+                iterations: Infinity,
+                easing: 'linear'
+            });
+
+            rainContainer.appendChild(drop);
+        }
+    }
+
+    // Запускаем дождь при смене темы и при загрузке
+    createRain();
+
+    // Следим за сменой темы (если пользователь переключит обратно на светлую)
+    const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.attributeName === 'data-theme') {
+                createRain();
+            }
+        });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+});

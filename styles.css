@@ -86,34 +86,58 @@
 }
 
 /* ============================================================
-   НОЧНОЙ ГОРОД (night)
+   ТЕМА: МАТРИЦА (night)
    ============================================================ */
 [data-theme="night"] {
-    --bg-gradient-start: #0a0e27;
-    --bg-gradient-end: #1a1f3a;
-    --text-primary: #e8eaf6;
-    --text-secondary: #a5aac8;
-    --text-muted: #6b7090;
-    --bg-card: rgba(26, 31, 58, 0.95);
-    --bg-card-solid: #1a1f3a;
-    --bg-header: rgba(26, 31, 58, 0.95);
-    --bg-input: #232847;
-    --border-color: #2d3454;
-    --shadow-color: rgba(0, 0, 0, 0.6);
-    --shadow-hover: rgba(255, 179, 71, 0.4);
-    --highlight-bg: rgba(255, 179, 71, 0.15);
-    --footer-border: rgba(255, 255, 255, 0.1);
-    --modal-bg: #1a1f3a;
-    --modal-text: #e8eaf6;
-    --btn-secondary-border: #ffb347;
-    --btn-secondary-text: #e8eaf6;
-    --settings-bg: rgba(26, 31, 58, 0.98);
-    --settings-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
-    --gradient-start: #ffb347;
-    --gradient-end: #ff6b6b;
-    --accent-color: #ffb347;
-    --accent-secondary: #ff6b6b;
-    --particles-bg: linear-gradient(135deg, #050816 0%, #0a0e27 100%);
+    --bg-gradient-start: #000000;
+    --bg-gradient-end: #000000;
+    --text-primary: #e0ffe0; /* Слегка зеленоватый текст */
+    --text-secondary: #a0ffa0;
+    --text-muted: #6b8f6b;
+    --bg-card: rgba(0, 15, 0, 0.85); /* Темно-зеленые полупрозрачные карточки */
+    --bg-card-solid: #001a00;
+    --bg-header: rgba(0, 10, 0, 0.9);
+    --bg-input: #002200;
+    --border-color: #004400;
+    --shadow-color: rgba(0, 0, 0, 0.8);
+    --shadow-hover: rgba(0, 255, 0, 0.4); /* Ярко-зеленое свечение */
+    --highlight-bg: rgba(0, 255, 0, 0.1);
+    --footer-border: rgba(0, 255, 0, 0.2);
+    --modal-bg: #001a00;
+    --modal-text: #e0ffe0;
+    --btn-secondary-border: #00ff00;
+    --btn-secondary-text: #e0ffe0;
+    --settings-bg: rgba(0, 20, 0, 0.98);
+    --settings-shadow: 0 8px 32px rgba(0, 255, 0, 0.2);
+    --gradient-start: #00ff00;
+    --gradient-end: #008800;
+    --accent-color: #00ff00;
+    --accent-secondary: #00cc00;
+    --particles-bg: transparent; /* Отключаем стандартные частицы */
+}
+
+[data-theme="night"] body {
+    background-image: url('img/matrix_grid.png');
+    background-size: cover;
+    background-position: center bottom;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Убираем стандартный анимированный градиент */
+[data-theme="night"] .animated-bg,
+[data-theme="night"] #particles-js {
+    display: none;
+}
+
+/* 🟢 ЗЕЛЕНОЕ СВЕЧЕНИЕ КАРТОЧЕК ПРИ НАВЕДЕНИИ */
+[data-theme="night"] .section-card:hover,
+[data-theme="night"] .feature-item:hover,
+[data-theme="night"] .train-card:hover,
+[data-theme="night"] .gallery-item:hover {
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5), inset 0 0 10px rgba(0, 255, 0, 0.1) !important;
+    border-color: #00ff00 !important;
+    transition: all 0.3s ease-in-out;
 }
 
 /* ============================================================
