@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЭД4МКУ — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>ЭД4МКУ</h1>
+            <p class="subtitle">Две уникальные электрички с салоном повышенной комфортности</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Железная_дорога.html">🚂 Железные дороги</a></li>
+                    <li><a href="#about">О поезде</a></li>
+                    <li><a href="#composition">Составы</a></li>
+                    <li><a href="#routes">Маршруты</a></li>
+                    <li><a href="#colors">Окраски</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>ЭД4МКУ</h2>
+                <p class="hero-text">ЭД4МКУ — это две уникальные электрички, построенные в 11-вагонной составности с салоном повышенного комфорта. Всего было построено <strong>2 состава</strong> с бортовыми номерами <strong>0151</strong> и <strong>0153</strong>.</p>
+                <p class="hero-text">На данный момент работают оба состава, которые следуют по маршруту экспресса с «Киевского вокзала» до «Нары».</p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="edYear">0</div>
+                        <div class="stat-label">год постройки</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="edTrains">0</div>
+                        <div class="stat-label">состава</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="edCars">0</div>
+                        <div class="stat-label">вагонов в составе</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Общая информация -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #922B21 0%, #C0392B 100%);">
+                <span class="card-icon">ℹ️</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Основные параметры ЭД4МКУ</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Дорога приписки</td><td>Россия, частные перевозчики</td></tr>
+                        <tr><td>Депо</td><td>АО «Центральная пригородная пассажирская компания»</td></tr>
+                        <tr><td>Серия</td><td>ЭД4 (М)</td></tr>
+                        <tr><td>Завод-изготовитель</td><td>Демиховский машиностроительный завод (Демихово) 🇷🇺</td></tr>
+                        <tr><td>Заводской тип</td><td>62-301</td></tr>
+                        <tr><td>Построен</td><td>10.2005 — 12.2005</td></tr>
+                        <tr><td>Категория</td><td>Электропоезда</td></tr>
+                        <tr><td>Текущее состояние</td><td>Эксплуатируется</td></tr>
+                        <tr><td>Составность</td><td>11 вагонов, салон повышенной комфортности</td></tr>
+                        <tr><td>Всего построено</td><td>2 состава (0151, 0153)</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <h3>Эксплуатация</h3>
+                    <ul>
+                        <li>С завода поступил в собственность ООО «Пассажирские перевозки»</li>
+                        <li>06.2016 — передан в собственность АО «Центральная ППК»</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Составы -->
+        <section id="composition" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Составы ЭД4МКУ</h2>
+            </div>
+            <div class="card-content">
+                <h3 style="margin-bottom: 1rem;">Состав ЭД4МКУ-0151</h3>
+                <table>
+                    <thead><tr><th>№</th><th>Секция</th><th>Сетевой код</th></tr></thead>
+                    <tbody>
+                        <tr><td>01</td><td>ЭД4МКУ-015101</td><td>13176367</td></tr>
+                        <tr><td>02</td><td>ЭД4МКУ-015102</td><td>13260682</td></tr>
+                        <tr><td>03</td><td>ЭД4МКУ-015103</td><td>13504006</td></tr>
+                        <tr><td>04</td><td>ЭД4МКУ-015104</td><td>13260690</td></tr>
+                        <tr><td>05</td><td>ЭД4МКУ-015105</td><td>13504014</td></tr>
+                        <tr><td>06</td><td>ЭД4МКУ-015106</td><td>13260708</td></tr>
+                        <tr><td>07</td><td>ЭД4МКУ-015107</td><td>13504022</td></tr>
+                        <tr><td>08</td><td>ЭД4МКУ-015108</td><td>13260716</td></tr>
+                        <tr><td>09</td><td>ЭД4МКУ-015109</td><td>13176375</td></tr>
+                        <tr><td>10</td><td>ЭД4МКУ-015110</td><td>13260724</td></tr>
+                        <tr><td>11</td><td>ЭД4МКУ-015111</td><td>13504030</td></tr>
+                    </tbody>
+                </table>
+
+                <h3 style="margin: 2rem 0 1rem;">Состав ЭД4МКУ-0153</h3>
+                <table>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Серия</td><td>ЭД4 (М)</td></tr>
+                        <tr><td>Заводской тип</td><td>62-301</td></tr>
+                        <tr><td>Построен</td><td>12.2005</td></tr>
+                        <tr><td>Составность</td><td>11 вагонов</td></tr>
+                        <tr><td>Секции</td><td>ЭД4МКУ-015301 — ЭД4МКУ-015311</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <h3>Ремонт состава 0153</h3>
+                    <ul>
+                        <li>10.2009 — КР-1 Октябрьский ЭВРЗ</li>
+                        <li>09.2012 — ТР-3 депо Данилов</li>
+                        <li>04.2014 — КР-2 Октябрьский ЭВРЗ</li>
+                        <li>02.2019 — КР-2 Московский ЛРЗ</li>
+                        <li>05.2024 — ТР-3 Московско-Тульское депо (Перерва)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Маршруты -->
+        <section id="routes" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+                <span class="card-icon">🗺️</span>
+                <h2>Маршруты работы</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Составы ходили на 4 маршрутах:</p>
+                
+                <div class="features-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="feature-item">
+                        <h3>🚆 Москва — Санкт-Петербург</h3>
+                        <p>Экспресс, 2 раза. Обслуживание: депо Санкт-Петербург-Московское (Металлострой).</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🚆 Москва — Ярославль</h3>
+                        <p>Экспресс, 01.04.2010 — 31.01.2013. Обслуживание: депо Данилов.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🚆 Москва — Усово</h3>
+                        <p>Экспресс, 2017 — 2018.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🚆 Москва — Нара</h3>
+                        <p>Экспресс с «Киевского вокзала» до «Нары». Текущий маршрут обоих составов.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Окраски -->
+        <section id="colors" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #B9770E 0%, #D4AC0D 100%);">
+                <span class="card-icon">🎨</span>
+                <h2>История окрасок</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2005 — 2016</div>
+                        <div class="timeline-content">
+                            <h3>Первая окраска</h3>
+                            <p>Оригинальная окраска ЭД4МКУ.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2016 — 2017</div>
+                        <div class="timeline-content">
+                            <h3>Вторая окраска</h3>
+                            <p>Обновлённая схема окраски.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2017 — н.в.</div>
+                        <div class="timeline-content">
+                            <h3>Третья окраска</h3>
+                            <p>Современная схема окраски, актуальная по настоящее время.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Фотогалерея (ВСЕ ФОТО ЗДЕСЬ) -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/эд4мку.jpg" alt="ЭД4МКУ, первая окраска" onerror="this.src='https://via.placeholder.com/600x400?text=ЭД4МКУ+2005'">
+                        <div class="gallery-caption">ЭД4МКУ, первая окраска (2005–2016). Фото: dymon.z</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/эд4мку_2017.jpg" alt="ЭД4МКУ, вторая окраска" onerror="this.src='https://via.placeholder.com/600x400?text=ЭД4МКУ+2017'">
+                        <div class="gallery-caption">ЭД4МКУ, вторая окраска (2016–2017). Фото: Григорий Клинов</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/эд4мку_2025.jpg" alt="ЭД4МКУ, третья окраска" onerror="this.src='https://via.placeholder.com/600x400?text=ЭД4МКУ+2025'">
+                        <div class="gallery-caption">ЭД4МКУ, третья окраска (2017–н.в.). Фото: phandrom</div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«ЭД4МКУ — это две уникальные электрички с салоном повышенной комфортности, которые остаются одними из самых узнаваемых экспрессов на российских железных дорогах».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Железные дороги»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Железная_дорога.html">Железные дороги</a></li>
+                        <li><a href="ПДМ_ЖД.html">Поезд Деда Мороза</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Информация собрана из открытых источников и может быть изменена.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
+            function animateCounters() {
+                const targets = { edYear: 2005, edTrains: 2, edCars: 11 };
+                let current = { edYear: 0, edTrains: 0, edCars: 0 };
+                const yearEl = document.getElementById('edYear');
+                const trainsEl = document.getElementById('edTrains');
+                const carsEl = document.getElementById('edCars');
+                if (!yearEl || !trainsEl || !carsEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.edYear < targets.edYear) {
+                        current.edYear += Math.ceil(targets.edYear / 50);
+                        if (current.edYear > targets.edYear) current.edYear = targets.edYear;
+                        yearEl.textContent = current.edYear;
+                        allFinished = false;
+                    }
+                    if (current.edTrains < targets.edTrains) {
+                        current.edTrains += 1;
+                        if (current.edTrains > targets.edTrains) current.edTrains = targets.edTrains;
+                        trainsEl.textContent = current.edTrains;
+                        allFinished = false;
+                    }
+                    if (current.edCars < targets.edCars) {
+                        current.edCars += 1;
+                        if (current.edCars > targets.edCars) current.edCars = targets.edCars;
+                        carsEl.textContent = current.edCars;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+
+            // Галерея
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
+                    if (content && img) {
+                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>

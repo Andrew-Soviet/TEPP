@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Электровозы — Транспортная энциклопедия</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Электровозы</h1>
+            <p class="subtitle">Локомотивы, работающие от контактной сети — постоянного, переменного тока и двухсистемные</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Железная_дорога.html">🚂 Железные дороги</a></li>
+                    <li><a href="Локомотивы.html">🔧 Локомотивы</a></li>
+                    <li><a href="#dc">Постоянный ток</a></li>
+                    <li><a href="#ac">Переменный ток</a></li>
+                    <li><a href="#dual">Двухсистемные</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Электровозы</h2>
+                <p class="hero-text">Электровоз — локомотив, работающий от контактной сети. На постсоветском пространстве используются две основные системы электрификации: постоянного тока (3 кВ) и однофазного переменного тока промышленной частоты (25 кВ).</p>
+                <p class="hero-text">В обоих случаях на подвижном составе применяются тяговые двигатели, а на электровозах переменного тока устанавливают оборудование для преобразования тока.</p>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="typesCount">0</div>
+                        <div class="stat-label">системы тока</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="seriesCount">0</div>
+                        <div class="stat-label">серий</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="yearsHistory">0</div>
+                        <div class="stat-label">лет истории</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Системы электрификации -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                <span class="card-icon">⚡</span>
+                <h2>Системы электрификации</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>Постоянный ток (3 кВ)</h3>
+                        <p>Тяговые подстанции преобразуют переменный ток в постоянный и подают его в контактную сеть. Расстояние между подстанциями — 10–20 км.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Переменный ток (25 кВ)</h3>
+                        <p>Тяговые подстанции только понижают напряжение. Расстояние между подстанциями — 40–60 км.</p>
+                        <p>Потери энергии в 11 раз ниже, чем при постоянном токе, но конструкция локомотивов сложнее.</p>
+                    </div>
+                </div>
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p>⚡ На участках стыкования постоянного и переменного тока применяют двухсистемные электровозы.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             ПОСТОЯННЫЙ ТОК
+             ============================================================ -->
+        <section id="dc" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E74C3C 0%, #C0392B 100%);">
+                <span class="card-icon">🔴</span>
+                <h2>Электровозы постоянного тока</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Электровозы, работающие от сети 3 кВ. Разделены по семействам и производителям.</p>
+
+                <!-- ──────── ВЛАДИМИР ЛЕНИН (ВЛ) ──────── -->
+                <h3 class="family-title">🚂 Владимир Ленин (ВЛ)</h3>
+                <p class="family-description">Советские грузовые и пассажирские электровозы, названные в честь Владимира Ильича Ленина.</p>
+
+                <div class="trains-grid">
+                    <div class="train-card">
+                        <h3>ВЛ8</h3>
+                        <p>Первый советский крупносерийный грузовой электровоз постоянного тока.</p>
+                        <ul>
+                            <li>Выпускался с 1953 по 1967 год</li>
+                            <li>Осевая формула: 2(2₀-2₀)</li>
+                            <li>Мощность: 3760 кВт</li>
+                        </ul>
+                    </div>
+                    <div class="train-card">
+                        <h3>ВЛ10 и ВЛ10У</h3>
+                        <p>Советский магистральный грузопассажирский электровоз. С середины 1960-х — основной грузовой локомотив на линиях постоянного тока.</p>
+                        <ul>
+                            <li>Выпускался с 1961 по 1977 год</li>
+                            <li>Мощность: 4480 кВт</li>
+                            <li>ВЛ10У — усиленная версия</li>
+                        </ul>
+                        <a href="ВЛ10У.html" class="btn btn-secondary">Подробнее →</a>
+                    </div>
+                    <div class="train-card">
+                        <h3>ВЛ11</h3>
+                        <p>Развитие серии ВЛ10, выпускался с 1975 года. Более мощный грузовой электровоз.</p>
+                        <ul>
+                            <li>Осевая формула: 2(2₀-2₀) / 3(2₀-2₀)</li>
+                            <li>Мощность: 4480 кВт</li>
+                        </ul>
+                        <a href="ВЛ11.html" class="btn btn-secondary">Подробнее →</a>
+                    </div>
+                    <div class="train-card">
+                        <h3>ВЛ15</h3>
+                        <p>Самый мощный советский грузовой электровоз постоянного тока.</p>
+                        <ul>
+                            <li>Выпускался с 1984 по 1991 год</li>
+                            <li>Осевая формула: 2(3₀-3₀)</li>
+                            <li>Мощность: 7500 кВт</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ──────── ЧЕХОСЛОВАЦКИЕ (ŠKODA) ──────── -->
+                <h3 class="family-title">🇨🇿 Чехословацкие (Škoda)</h3>
+                <p class="family-description">Пассажирские электровозы производства завода Škoda (Пльзень).</p>
+
+                <div class="trains-grid">
+                    <div class="train-card">
+                        <h3>ЧС2Т</h3>
+                        <p>Чехословацкий пассажирский электровоз постоянного тока, предшественник ЧС7.</p>
+                        <ul>
+                            <li>Выпускался с 1972 по 1976 год</li>
+                            <li>Заменён ЭП2К</li>
+                        </ul>
+                        <a href="ЧС2Т.html" class="btn btn-secondary">Подробнее →</a>
+                    </div>
+                    <div class="train-card">
+                        <h3>ЧС6</h3>
+                        <p>Скоростной пассажирский электровоз для линий с высокими скоростями.</p>
+                        <ul>
+                            <li>Выпускался с 1979 по 1981 год</li>
+                            <li>Конструкционная скорость: 160 км/ч</li>
+                        </ul>
+                        <a href="ЧС6.html" class="btn btn-primary">Подробнее →</a>
+                    </div>
+                <div class="trains-grid">
+                    <div class="train-card">
+                        <h3>ЧС200</h3>
+                        <p>Скоростной пассажирский электровоз, разработанный для линии Москва — Санкт-Петербург.</p>
+                        <ul>
+                            <li>Конструкционная скорость: 200 км/ч</li>
+                            <li>Выпускался с 1975 по 1979 год</li>
+                        </ul>
+                        <a href="CHs200.html" class="btn btn-primary">Подробнее →</a>
+                    </div>
+                </div>
+                    <div class="train-card" style="border-left: 4px solid #53c02b;">
+                        <h3>ЧС7</h3>
+                        <p>Самый массовый чехословацкий пассажирский электровоз постоянного тока.</p>
+                        <ul>
+                            <li>Выпускался с 1983 по 2000 год</li>
+                            <li>Конструкционная скорость: 180 км/ч</li>
+                        </ul>
+                        <a href="ЧС7.html" class="btn btn-primary">Подробнее →</a>
+                    </div>
+                </div>
+
+                <!-- ──────── РОССИЙСКИЕ (ЭП, ЭС) ──────── -->
+                <h3 class="family-title">🚂 Российские (ЭП, ЭС)</h3>
+                <p class="family-description">Современные локомотивы, созданные после распада СССР.</p>
+
+                <div class="trains-grid">
+                    <div class="train-card">
+                        <h3>ЭП2К</h3>
+                        <p>Первый серийный пассажирский электровоз постоянного тока российского производства.</p>
+                        <ul>
+                            <li>Выпускается с 2006 года</li>
+                            <li>Мощность: 4320 кВт</li>
+                            <li>Конструкционная скорость: 160 км/ч</li>
+                        </ul>
+                        <a href="ЭП2К.html" class="btn btn-primary">Подробнее →</a>
+                    </div>
+                    <div class="train-card">
+                        <h3>2ЭС4К «Дончак»</h3>
+                        <p>Современный грузовой электровоз постоянного тока, созданный для работы на юге России.</p>
+                        <ul>
+                            <li>Выпускается с 2006 года</li>
+                            <li>Мощность: 5920 кВт</li>
+                        </ul>
+                    </div>
+                    <div class="train-card">
+                        <h3>2ЭС5К</h3>
+                        <p>Грузовой электровоз постоянного тока с асинхронными двигателями.</p>
+                        <ul>
+                            <li>Осевая формула: 2(2₀-2₀)</li>
+                            <li>Мощность: 6400 кВт</li>
+                            <li>Высокая надежность</li>
+                        </ul>
+                    </div>
+                    <div class="train-card">
+                        <h3>2ЭС6 «Синара»</h3>
+                        <p>Современный грузовой электровоз постоянного тока, выпускается на Уральских локомотивах.</p>
+                        <ul>
+                            <li>Выпускается с 2006 года</li>
+                            <li>Мощность: 6000 кВт</li>
+                        </ul>
+                    </div>
+                    <div class="train-card">
+                        <h3>2ЭС10</h3>
+                        <p>Грузовой электровоз повышенной мощности для тяжеловесных поездов.</p>
+                        <ul>
+                            <li>Выпускается с 2011 года</li>
+                            <li>Мощность: 8400 кВт</li>
+                            <li>Совместная разработка с Siemens</li>
+                        </ul>
+                    </div>
+                    <div class="train-card">
+                        <h3>3ЭС4К</h3>
+                        <p>Трехсекционная версия 2ЭС4К для вождения сверхтяжелых поездов.</p>
+                        <ul>
+                            <li>Осевая формула: 3(2₀-2₀)</li>
+                            <li>Мощность: 8880 кВт</li>
+                        </ul>
+                    </div>
+                    <div class="train-card">
+                        <h3>3ЭС8 «Малахит»</h3>
+                        <p>Перспективный грузовой электровоз постоянного тока с асинхронным приводом.</p>
+                        <ul>
+                            <li>Мощность: 8400 кВт</li>
+                            <li>Платформа для будущих локомотивов</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             ПЕРЕМЕННЫЙ ТОК
+             ============================================================ -->
+        <section id="ac" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+                <span class="card-icon">🔵</span>
+                <h2>Электровозы переменного тока</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Электровозы, работающие от сети 25 кВ. Требуют преобразования переменного тока в постоянный на борту.</p>
+
+                <!-- ──────── ВЛАДИМИР ЛЕНИН (ВЛ) ──────── -->
+                <h3 class="family-title">🚂 Владимир Ленин (ВЛ)</h3>
+                <p class="family-description">Электровозы переменного тока, названные в честь Владимира Ильича Ленина.</p>
+
+                <div class="trains-grid">
+                    <div class="train-card">
+                        <h3>ВЛ80С</h3>
+                        <p>Восьмиосный грузовой электровоз переменного тока с полупроводниковыми выпрямителями. Основной грузовой локомотив на линиях переменного тока.</p>
+                        <ul>
+                            <li>Выпускался с 1980 по 1995 год</li>
+                            <li>Мощность: 6520 кВт</li>
+                            <li>Массовая серия</li>
+                        </ul>
+                        <a href="ВЛ80С.html" class="btn btn-primary">Подробнее →</a>
+                    </div>
+                </div>
+
+                <!-- ──────── ЧЕХОСЛОВАЦКИЕ (ŠKODA) ──────── -->
+                <h3 class="family-title">🇨🇿 Чехословацкие (Škoda)</h3>
+                <p class="family-description">Пассажирские электровозы переменного тока.</p>
+
+                <div class="trains-grid">
+                    <div class="train-card">
+                        <h3>ЧС4</h3>
+                        <p>Пассажирский электровоз переменного тока. Первая серия чехословацких машин этого типа.</p>
+                        <ul>
+                            <li>Выпускался с 1963 по 1972 год</li>
+                            <li>Мощность: 5100 кВт</li>
+                        </ul>
+                    </div>
+                    <div class="train-card">
+                        <h3>ЧС4Т</h3>
+                        <p>Чехословацкий пассажирский электровоз переменного тока.</p>
+                        <ul>
+                            <li>Выпускался с 1971 по 1986 год</li>
+                            <li>Всего 510 единиц</li>
+                        </ul>
+                        <a href="ЧС4Т.html" class="btn btn-secondary">Подробнее →</a>
+                    </div>
+                </div>
+
+                <!-- ──────── РОССИЙСКИЕ (ЭП, ЭС, ТЭП) ──────── -->
+                <h3 class="family-title">🚂 Российские (ЭП, ЭС)</h3>
+                <p class="family-description">Современные локомотивы переменного тока.</p>
+
+                <div class="trains-grid">
+                    <div class="train-card">
+                        <h3>ЭП1</h3>
+                        <p>Российский пассажирский электровоз переменного тока.</p>
+                        <ul>
+                            <li>Выпускается с 1998 года</li>
+                            <li>Мощность: 4700 кВт</li>
+                        </ul>
+                    </div>
+                    <div class="train-card">
+                        <h3>ЭП1М</h3>
+                        <p>Модернизированная версия ЭП1 с улучшенными характеристиками и новым дизайном.</p>
+                        <ul>
+                            <li>Выпускается с 2007 года</li>
+                            <li>Мощность: 4700 кВт</li>
+                        </ul>
+                    </div>
+                    <div class="train-card">
+                        <h3>2ЭС5 «Скиф»</h3>
+                        <p>Современный грузовой электровоз переменного тока с асинхронным тяговым приводом.</p>
+                        <ul>
+                            <li>Мощность: 6600 кВт</li>
+                            <li>Осевая формула: 2(2₀-2₀)</li>
+                        </ul>
+                    </div>
+                    <div class="train-card">
+                        <h3>2ЭС7 «Чёрный гранит»</h3>
+                        <p>Грузовой электровоз переменного тока, отличающийся высокой мощностью и асинхронным приводом.</p>
+                        <ul>
+                            <li>Выпускается с 2014 года</li>
+                            <li>Мощность: 6600 кВт</li>
+                        </ul>
+                    </div>
+                    <div class="train-card">
+                        <h3>2ЭС11 «Орлец»</h3>
+                        <p>Новейший российский грузовой электровоз переменного тока.</p>
+                        <ul>
+                            <li>Завершены приёмочные испытания</li>
+                            <li>Грузоподъёмность увеличена на 42%</li>
+                        </ul>
+                    </div>
+                    <div class="train-card">
+                        <h3>2ТЭ25КМ</h3>
+                        <p>Хотя в названии есть «ТЭ» (тепловоз), этот локомотив относится к магистральным грузовым машинам. Уточнение: в данном разделе он упоминается как представитель современной тяги.</p>
+                        <ul>
+                            <li>Дизель-поезд</li>
+                            <li>Грузовой</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             ДВУХСИСТЕМНЫЕ
+             ============================================================ -->
+        <section id="dual" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">🟣</span>
+                <h2>Двухсистемные электровозы</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Электровозы, способные работать на обеих системах тока — постоянном (3 кВ) и переменном (25 кВ).</p>
+
+                <!-- ──────── ВЛАДИМИР ЛЕНИН (ВЛ) ──────── -->
+                <h3 class="family-title">🚂 Владимир Ленин (ВЛ)</h3>
+                <p class="family-description">Советский двухсистемный грузовой электровоз.</p>
+
+                <div class="trains-grid">
+                    <div class="train-card">
+                        <h3>ВЛ82 и ВЛ82М</h3>
+                        <p>Единственный серийный двухсистемный грузовой электровоз в СССР.</p>
+                        <ul>
+                            <li>Выпускался с 1966 по 1979 год</li>
+                            <li>Работает от 3 кВ и 25 кВ</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ──────── РОССИЙСКИЕ (ЭП) ──────── -->
+                <h3 class="family-title">🚂 Российские (ЭП)</h3>
+                <p class="family-description">Современные двухсистемные пассажирские локомотивы.</p>
+
+                <div class="trains-grid">
+                    <div class="train-card">
+                        <h3>ЭП10</h3>
+                        <p>Двухсистемный пассажирский электровоз, созданный для вождения поездов на участках стыкования.</p>
+                        <ul>
+                            <li>Выпускался с 1998 по 2006 год</li>
+                            <li>Мощность: 6600 кВт</li>
+                        </ul>
+                    </div>
+                    <div class="train-card">
+                        <h3>ЭП20</h3>
+                        <p>Двухсистемный пассажирский электровоз, способный развивать скорость до 200 км/ч.</p>
+                        <ul>
+                            <li>Мощность: 6600 кВт</li>
+                            <li>Заменяет ЧС200 на линии Москва — Санкт-Петербург</li>
+                        </ul>
+                        <a href="ЭП20.html" class="btn btn-primary">Подробнее →</a>
+                    </div>
+                    <div class="train-card">
+                        <h3>ЭП20 «Олимп»</h3>
+                        <p>Модификация ЭП20, созданная для обслуживания южных направлений и олимпийских объектов в Сочи.</p>
+                        <ul>
+                            <li>Высокий уровень комфорта</li>
+                            <li>Специальное исполнение</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- ──────── СЕРИЯ ЭС ──────── -->
+                <h3 class="family-title">⚡ Серия ЭС (перспективные)</h3>
+                <p class="family-description">Перспективный российский двухсистемный грузовой электровоз.</p>
+
+                <div class="trains-grid">
+                    <div class="train-card">
+                        <h3>2ЭС12 «Аметист»</h3>
+                        <p>Перспективный российский двухсистемный грузовой электровоз.</p>
+                        <ul>
+                            <li>Платформа ЭС8</li>
+                            <li>Мощность: не менее 8000 кВт</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Электровозы — это основа современного железнодорожного транспорта. От массовых ВЛ10 до скоростных ЭП20 — каждый из них внёс свой вклад в развитие железных дорог».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Электровозы»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Локомотивы.html">Локомотивы</a></li>
+                        <li><a href="Железная_дорога.html">Железные дороги</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram-канал</a></p>
+                    <p>✉️ <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Предложка</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Электровозы — от ВЛ8 до ЭП20</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function animateCounters() {
+                const targets = { typesCount: 3, seriesCount: 32, yearsHistory: 70 };
+                let current = { typesCount: 0, seriesCount: 0, yearsHistory: 0 };
+                const typesEl = document.getElementById('typesCount');
+                const seriesEl = document.getElementById('seriesCount');
+                const yearsEl = document.getElementById('yearsHistory');
+                if (!typesEl || !seriesEl || !yearsEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.typesCount < targets.typesCount) {
+                        current.typesCount += 1;
+                        if (current.typesCount > targets.typesCount) current.typesCount = targets.typesCount;
+                        typesEl.textContent = current.typesCount;
+                        allFinished = false;
+                    }
+                    if (current.seriesCount < targets.seriesCount) {
+                        current.seriesCount += 1;
+                        if (current.seriesCount > targets.seriesCount) current.seriesCount = targets.seriesCount;
+                        seriesEl.textContent = current.seriesCount;
+                        allFinished = false;
+                    }
+                    if (current.yearsHistory < targets.yearsHistory) {
+                        current.yearsHistory += Math.ceil(targets.yearsHistory / 50);
+                        if (current.yearsHistory > targets.yearsHistory) current.yearsHistory = targets.yearsHistory;
+                        yearsEl.textContent = current.yearsHistory;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+        });
+    </script>
+</body>
+</html>

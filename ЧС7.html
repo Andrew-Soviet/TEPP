@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЧС7 — пассажирский электровоз постоянного тока — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>ЧС7</h1>
+            <p class="subtitle">Чехословацкий пассажирский электровоз постоянного тока — легенда советских железных дорог</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Железная_дорога.html">🚂 Железные дороги</a></li>
+                    <li><a href="Локомотивы.html">🔧 Локомотивы</a></li>
+                    <li><a href="Электровозы.html">⚡ Электровозы</a></li>
+                    <li><a href="#about">О локомотиве</a></li>
+                    <li><a href="#specs">Характеристики</a></li>
+                    <li><a href="#colors">Окраски</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>ЧС7</h2>
+                <p class="hero-text">ЧС7 (заводское обозначение — Škoda 82E) — восьмиосный пассажирский электровоз постоянного тока, выпускавшийся на заводе Škoda в Пльзене (Чехословакия, позже Чехия) с 1983 по 1997 год.</p>
+                <p class="hero-text">Двухсекционный локомотив, ставший основой пассажирского движения на линиях постоянного тока в СССР и постсоветских странах. Всего выпущено <strong>321 единица</strong>.</p>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="totalBuilt">0</div>
+                        <div class="stat-label">построено</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="maxSpeed">0</div>
+                        <div class="stat-label">км/ч макс.</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="power">0</div>
+                        <div class="stat-label">кВт мощность</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>🏭 Производство</h3>
+                        <p><strong>Завод:</strong> Škoda, Пльзень (Чехословакия / Чехия)</p>
+                        <p><strong>Заводское обозначение:</strong> 82E (модификации 82E1–82E9)</p>
+                        <p><strong>Годы выпуска:</strong> 1983–2000</p>
+                        <p><strong>Всего построено:</strong> 321 локомотив</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>📍 Эксплуатация</h3>
+                        <p><strong>Операторы:</strong> РЖД, Украинские железные дороги</p>
+                        <p><strong>Страны:</strong> СССР, Россия, Украина</p>
+                        <p><strong>Депо (Россия):</strong> Москва-Пассажирская-Курская (ТЧЭ-1), Ожерелье-Сортировочное (ТЧЭ-33), Имени Ильича (ТЧЭ-18), Вязьма-Сортировочная (ТЧЭ-41)</p>
+                        <p><strong>Депо (Украина):</strong> Днепр (ТЧ-8), Мелитополь (ТЧ-3), Харьков-Главное</p>
+                    </div>
+                </div>
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p>⭐ <strong>Особенность:</strong> ЧС7 — самый мощный пассажирский электровоз постоянного тока в СССР. На момент выпуска его мощность (6160 кВт) была рекордной для пассажирских локомотивов.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="specs" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">⚙️</span>
+                <h2>Технические характеристики</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="feature-item">
+                        <h3>Род тока</h3>
+                        <p>Постоянный, 3 кВ</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Осевая формула</h3>
+                        <p>2(2₀-2₀) — двухсекционный, восьмиосный</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Конструкционная скорость</h3>
+                        <p>180 км/ч (максимальная допустимая — 140 км/ч)</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Мощность (длительная)</h3>
+                        <p>7200 кВт</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Скорость длительного режима</h3>
+                        <p>87,8 км/ч</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Длина локомотива</h3>
+                        <p>34 м</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Ширина колеи</h3>
+                        <p>1520 мм</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Тип ТЭД</h3>
+                        <p>Коллекторный</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Передача</h3>
+                        <p>Прямая (непосредственная)</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Система регулирования</h3>
+                        <p>Реостатно-контакторная (ПБК — промежуточный барабан контроллера)</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Торможение</h3>
+                        <p>Электрическое (реостатное) и пневматическое</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Подвеска</h3>
+                        <p>Пружинная с гидравлическими гасителями колебаний</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="colors" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+                <span class="card-icon">🎨</span>
+                <h2>Варианты окраски</h2>
+            </div>
+            <div class="card-content">
+                <h3 style="margin-bottom: 1rem;">Стандартные окраски</h3>
+                <div class="features-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="feature-item">
+                        <h3>🚂 Заводской окрас</h3>
+                        <p>Классическая окраска Škoda — зеленый с желтой полосой</p>
+                        <p>Оригинальная заводская расцветка</p>
+                        <a href="CHs7-zavod.html" class="btn btn-secondary" style="margin-top: 1rem; width: 100%;">Подробнее →</a>
+                    </div>
+                    <div class="feature-item">
+                        <h3>⭐ Заводской со звездой</h3>
+                        <p><strong>Номер:</strong> 199</p>
+                        <p>Заводская окраска с изображением звезды. Уникальный экземпляр.</p>
+                        <a href="ЧС7_199.html" class="btn btn-secondary" style="margin-top: 1rem; width: 100%;">Подробнее →</a>
+                    </div>
+                </div>
+
+                <h3 style="margin: 1.5rem 0 1rem;">Современные окраски</h3>
+                <div class="features-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="feature-item">
+                        <h3>🆕 Новопид</h3>
+                        <p>Обновлённая окраска посвященная новой корперотивной окраски РЖД.</p>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>Современная цветовая схема</li>
+                            <li>Применяется при капитальных ремонтах</li>
+                        </ul>
+                        <a href="CHs7-novopid.html" class="btn btn-secondary" style="margin-top: 1rem; width: 100%;">Подробнее →</a>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🏭 «ТЧ-18 имени Ильича»</h3>
+                        <p>Фирменная окраска локомотивов депо ТЧ-18 имени Ильича (Москва).</p>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>Депо: Москва-Пассажирская-Курская (ТЧЭ-18)</li>
+                            <li>Красивая голубо-синяя расцветка с белой полосой</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h3>⚡ «Молния»</h3>
+                        <p>Уникальная окраска с изображением молнии. Выделяется среди других локомотивов.</p>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>Символ скорости и мощности</li>
+                            <li>Редкий вариант окраски</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🆕 Старый пид</h3>
+                        <p>Обновлённая окраска посвященная новой корперотивной окраски РЖД.</p>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>Обычная расцветка</li>
+                            <li>Расцветка компании РЖД</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/ЧС7_227.jpg" alt="ЧС7-227" onerror="this.src='https://via.placeholder.com/800x500?text=ЧС7-227'">
+                        <div class="gallery-caption">ЧС7-227, депо Вязьма-Сортировочная. Фото: RailGallery</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/ЧС7_303.jpg" alt="ЧС7-303" onerror="this.src='https://via.placeholder.com/800x500?text=ЧС7-303'">
+                        <div class="gallery-caption">ЧС7-303, депо Днепр (Украина). Фото: RailGallery</div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«ЧС7 — это эпоха в пассажирском движении. Чехословацкий локомотив, ставший своим на бескрайних просторах советских железных дорог. Даже сегодня, спустя десятилетия, он продолжает возить пассажиров».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Электровозы»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Локомотивы.html">Локомотивы</a></li>
+                        <li><a href="Электровозы.html">Электровозы</a></li>
+                        <li><a href="ЭП2К.html">ЭП2К</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">ЧС7 — чехословацкий пассажирский электровоз постоянного тока</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function animateCounters() {
+                const targets = { totalBuilt: 321, maxSpeed: 180, power: 6160 };
+                let current = { totalBuilt: 0, maxSpeed: 0, power: 0 };
+                const builtEl = document.getElementById('totalBuilt');
+                const speedEl = document.getElementById('maxSpeed');
+                const powerEl = document.getElementById('power');
+                if (!builtEl || !speedEl || !powerEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.totalBuilt < targets.totalBuilt) {
+                        current.totalBuilt += Math.ceil(targets.totalBuilt / 50);
+                        if (current.totalBuilt > targets.totalBuilt) current.totalBuilt = targets.totalBuilt;
+                        builtEl.textContent = current.totalBuilt;
+                        allFinished = false;
+                    }
+                    if (current.maxSpeed < targets.maxSpeed) {
+                        current.maxSpeed += Math.ceil(targets.maxSpeed / 50);
+                        if (current.maxSpeed > targets.maxSpeed) current.maxSpeed = targets.maxSpeed;
+                        speedEl.textContent = current.maxSpeed;
+                        allFinished = false;
+                    }
+                    if (current.power < targets.power) {
+                        current.power += Math.ceil(targets.power / 50);
+                        if (current.power > targets.power) current.power = targets.power;
+                        powerEl.textContent = current.power;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
+                    if (content && img) {
+                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>

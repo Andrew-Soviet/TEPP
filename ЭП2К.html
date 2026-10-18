@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЭП2К — пассажирский электровоз постоянного тока — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>ЭП2К</h1>
+            <p class="subtitle">Первый серийный пассажирский электровоз постоянного тока российского производства</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="Железная_дорога.html">🚂 Железные дороги</a></li>
+                    <li><a href="Локомотивы.html">🔧 Локомотивы</a></li>
+                    <li><a href="Электровозы.html">⚡ Электровозы</a></li>
+                    <li><a href="#about">О локомотиве</a></li>
+                    <li><a href="#specs">Характеристики</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#colors">Окраски</a></li>
+                    <li><a href="#depots">Депо</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>ЭП2К</h2>
+                <p class="hero-text">ЭП2К (Электровоз Пассажирский, тип 2, Коллекторный тяговый привод) — российский пассажирский шестиосный электровоз постоянного тока, выпускаемый Коломенским заводом. Первый серийный пассажирский электровоз постоянного тока в истории российского электровозостроения.</p>
+                <p class="hero-text">Создан для замены устаревших чехословацких локомотивов ЧС2 и ЧС2Т. Механическая часть выполнена на базе тепловоза ТЭП70БС. Электрическую часть выпускают НЭВЗ и Калужский научно-производственный электромеханический завод.</p>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="totalBuilt">0</div>
+                        <div class="stat-label">построено</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="maxSpeed">0</div>
+                        <div class="stat-label">км/ч макс.</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="power">0</div>
+                        <div class="stat-label">кВт мощность</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Производство -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);">
+                <span class="card-icon">🏭</span>
+                <h2>Производство</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Основные данные о производстве электровозов ЭП2К</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Страна постройки</td><td>Россия 🇷🇺</td></tr>
+                        <tr><td>Заводы</td><td>Коломенский (мех. часть и сборка), НЭВЗ (электрооборудование)</td></tr>
+                        <tr><td>Производитель</td><td>Трансмашхолдинг</td></tr>
+                        <tr><td>Годы постройки</td><td>2006 (опытный образец), с 2008 (серийное производство)</td></tr>
+                        <tr><td>Всего построено</td><td>517 (на май 2026)</td></tr>
+                        <tr><td>Нумерация</td><td>001 — 517</td></tr>
+                        <tr><td>Главный конструктор</td><td>Анатолий Подопросветов</td></tr>
+                    </tbody>
+                </table>
+
+                <h3 style="margin: 1.5rem 0 1rem;">Выпуск по годам</h3>
+                <table>
+                    <thead><tr><th>Год выпуска</th><th>Количество</th><th>Номера</th></tr></thead>
+                    <tbody>
+                        <tr><td>2006</td><td>1</td><td>001</td></tr>
+                        <tr><td>2007</td><td>1</td><td>002</td></tr>
+                        <tr><td>2008</td><td>25</td><td>003—027</td></tr>
+                        <tr><td>2009</td><td>30</td><td>028—057</td></tr>
+                        <tr><td>2010</td><td>35</td><td>058—092</td></tr>
+                        <tr><td>2011</td><td>40</td><td>093—132</td></tr>
+                        <tr><td>2012</td><td>41</td><td>133—173</td></tr>
+                        <tr><td>2013</td><td>51</td><td>174—224</td></tr>
+                        <tr><td>2014</td><td>53</td><td>225—277</td></tr>
+                        <tr><td>2015</td><td>35</td><td>278—312</td></tr>
+                        <tr><td>2016</td><td>35</td><td>313—347</td></tr>
+                        <tr><td>2017</td><td>14</td><td>348—361</td></tr>
+                        <tr><td>2018</td><td>29</td><td>362—390</td></tr>
+                        <tr><td>2019</td><td>23</td><td>391—413</td></tr>
+                        <tr><td>2020</td><td>27</td><td>414—440</td></tr>
+                        <tr><td>2021</td><td>7</td><td>441—447</td></tr>
+                        <tr><td>2022</td><td>15</td><td>448—461</td></tr>
+                        <tr><td>2023</td><td>22</td><td>462—483</td></tr>
+                        <tr><td>2024</td><td>22</td><td>484—505</td></tr>
+                        <tr><td>2025</td><td>8</td><td>506—513</td></tr>
+                        <tr><td>2026</td><td>4</td><td>514—517</td></tr>
+                        <tr><td><strong>Всего</strong></td><td><strong>517</strong></td><td><strong>001—517</strong></td></tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Важно:</strong> В процессе выпуска в конструкцию локомотивов вносились небольшие изменения. Электровозы по номер 036, за исключением 029 и 031, выходили с завода в красно-бело-голубом окрасе; 029, 031, 037—100 и 102—108 — в красном; 109—499 и 505 — в корпоративной красно-серой окраске РЖД. С номера 500 начал применяться новый дизайн лобовой части в стиле «ДНК».</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Технические характеристики -->
+        <section id="specs" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">⚙️</span>
+                <h2>Технические характеристики</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Основные технические данные электровоза ЭП2К</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Род службы</td><td>Пассажирский</td></tr>
+                        <tr><td>Род тока и напряжение</td><td>Постоянный, 3 кВ</td></tr>
+                        <tr><td>Осевая формула</td><td>3₀-3₀</td></tr>
+                        <tr><td>Тип токосъёма</td><td>Верхний (полупантограф)</td></tr>
+                        <tr><td>Полный служебный вес</td><td>135 т</td></tr>
+                        <tr><td>Нагрузка от движущих осей на рельсы</td><td>221 кН (22,54 тс)</td></tr>
+                        <tr><td>Габарит</td><td>1-Т</td></tr>
+                        <tr><td>Длина локомотива</td><td>21 800 мм</td></tr>
+                        <tr><td>Ширина</td><td>3288 мм</td></tr>
+                        <tr><td>Максимальная высота</td><td>5100 мм (опущенный токоприёмник)</td></tr>
+                        <tr><td>Полная колёсная база</td><td>16 850 мм</td></tr>
+                        <tr><td>Колёсная база тележек</td><td>4600 мм</td></tr>
+                        <tr><td>Диаметр колёс</td><td>1250 мм</td></tr>
+                        <tr><td>Наименьший радиус проходимых кривых</td><td>125 м</td></tr>
+                        <tr><td>Ширина колеи</td><td>1520 мм</td></tr>
+                        <tr><td>Система регулирования</td><td>Реостатно-контакторная</td></tr>
+                        <tr><td>Тип ТЭД</td><td>ЭД153У1, ДТК-800К, ДТК-800КС, коллекторные</td></tr>
+                        <tr><td>Подвешивание ТЭД</td><td>Опорно-рамное 3 класса</td></tr>
+                        <tr><td>Передаточное отношение редуктора</td><td>93 : 38 = 2,45</td></tr>
+                        <tr><td>Сила тяги при трогании с места</td><td>302 кН (30,8 тс)</td></tr>
+                        <tr><td>Часовая мощность ТЭД</td><td>6 × 800 = 4800 кВт</td></tr>
+                        <tr><td>Сила тяги часового режима</td><td>192,8 кН (19,7 тс)</td></tr>
+                        <tr><td>Скорость часового режима</td><td>87,8 км/ч</td></tr>
+                        <tr><td>Длительная мощность ТЭД</td><td>6 × 720 = 4320 кВт</td></tr>
+                        <tr><td>Сила тяги длительного режима</td><td>167,4 кН (17,06 тс)</td></tr>
+                        <tr><td>Скорость длительного режима</td><td>91 км/ч</td></tr>
+                        <tr><td>Сила тяги при максимальной скорости</td><td>91,4 кН (9,3 тс)</td></tr>
+                        <tr><td>Конструкционная скорость</td><td>160 км/ч</td></tr>
+                        <tr><td>Электрическое торможение</td><td>Реостатное</td></tr>
+                        <tr><td>Мощность тормозных реостатов</td><td>4000 кВт</td></tr>
+                        <tr><td>Тормозное усилие</td><td>210 кН (21,41 тс)</td></tr>
+                        <tr><td>КПД</td><td>0,88</td></tr>
+                        <tr><td>Системы безопасности</td><td>КЛУБ-У, ТСКБМ, САУТ</td></tr>
+                        <tr><td>Мощность системы электроотопления</td><td>1200 кВт</td></tr>
+                    </tbody>
+                </table>
+
+                <h3 style="margin: 1.5rem 0 1rem;">Особенности конструкции</h3>
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="feature-item">
+                        <h3>🛞 Тележки</h3>
+                        <p>Две трёхосные тележки с двухступенчатым рессорным подвешиванием и подвешиванием двигателей III класса (подрессоривание и двигателя, и редуктора) системы французской фирмы Альстом. В целом тележки схожи с тележками ТЭП70.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🚪 Кузов</h3>
+                        <p>Несущий раскосной конструкции с приварной обшивкой, с двумя кабинами машиниста. Лобовая часть обеспечивает безопасность локомотивной бригады при столкновении с препятствиями со скоростью до 20 км/ч.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>⚡ Тяговый привод</h3>
+                        <p>Коллекторные двигатели ЭД153У1 или ДТК-800КСУ1 мощностью 800 кВт при частоте вращения 945 об/мин. Компенсированная шестиполюсная реверсивная электрическая машина последовательного возбуждения.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🎛️ Токоприёмник</h3>
+                        <p>Асимметричный полупантограф SBS 2T типа 8WL0 188—6YH47-2 с пневматическим приводом. В настоящее время устанавливаются российские токоприёмники ТАсС-16-02.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🔌 Ходовые позиции</h3>
+                        <p>21-я: последовательное соединение шести двигателей; 38-я: последовательно-параллельное; 51-я: параллельное. Пять ступеней ослабления возбуждения: 80, 66, 54, 46, 40 %.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>❄️ Охлаждение</h3>
+                        <p>Тяговые двигатели охлаждаются двумя установками ЦВС (централизованного воздухоснабжения), по одной на тележку. Вентиляторы охлаждения пуско-тормозного реостата приводятся коллекторными двигателями.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- История -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История создания и выпуска</h2>
+            </div>
+            <div class="card-content">
+                <p>К началу 2000-х годов на электрифицированных железных дорогах России основой парка пассажирских электровозов являлись локомотивы ЧС производства чехословацкого завода Škoda. Многие из них были выпущены в 1960-х и 1970-х годах и потому были в значительной степени изношены, а также морально устарели. Поэтому, наряду с глубокой модернизацией электровозов ЧС2 на Ярославском электровозоремонтном заводе, РЖД приняло решение о проектировании новых локомотивов российского производства.</p>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2003</div>
+                        <div class="timeline-content">
+                            <h3>Контракт с Коломенским заводом</h3>
+                            <p>ОАО «РЖД» заключило контракт с Коломенским заводом на создание нового шестиосного пассажирского электровоза, по техническим характеристикам схожего с электровозами ЧС2Т. Электровоз требовалось создать в сжатые сроки к концу 2005 года.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2005</div>
+                        <div class="timeline-content">
+                            <h3>Проектные работы завершены</h3>
+                            <p>Специалистами завода было предложено за основу конструкции механической части использовать конструкцию нового перспективного тепловоза ТЭП70БС. Главным конструктором локомотива стал Анатолий Подопросветов. Проектные работы завершены в 2005 году.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Декабрь 2005</div>
+                        <div class="timeline-content">
+                            <h3>Сборка первого опытного образца</h3>
+                            <p>Сборка электровоза ЭП2К-001 завершена. 3 февраля состоялась его презентация на заводе. Электровоз получил оригинальную красно-белую окраску с голубой полосой.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">14 июля 2006</div>
+                        <div class="timeline-content">
+                            <h3>Первая поездка своим ходом</h3>
+                            <p>На электрифицированном участке пути тепловозосборочного цеха электровоз впервые проехал своим ходом. В испытаниях принимал участие главный конструктор Анатолий Подопросветов.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Конец 2006</div>
+                        <div class="timeline-content">
+                            <h3>Второй электровоз</h3>
+                            <p>Выпущен второй электровоз, который также был направлен в опытную эксплуатацию. Он имел немного изменённую схему окраски с увеличением количества белого цвета и некоторые изменения в оборудовании — вместо электромашинного преобразователя собственных нужд был применён более экономичный статический преобразователь.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2008</div>
+                        <div class="timeline-content">
+                            <h3>Начало серийного выпуска</h3>
+                            <p>Завод начал серийный выпуск локомотивов этой серии, продолжающийся по настоящее время. Электровозы поступили в депо Барабинск.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Сентябрь 2024</div>
+                        <div class="timeline-content">
+                            <h3>Юбилейный электровоз № 500</h3>
+                            <p>Завод выпустил юбилейный электровоз под номером 500 с новым дизайном лобовой части в стиле «ДНК». Кабина получила новые диагональные угловые обводы, диагональные узкие светодиодные буферные фонари и утопленный в корпус прожектор трапециевидной формы. С завода электровоз получил эксклюзивную красно-чёрную окраску.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2025—2026</div>
+                        <div class="timeline-content">
+                            <h3>Продолжение выпуска</h3>
+                            <p>Выпущены электровозы 506—517. Всего на май 2026 года построено 517 единиц.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Расцветки -->
+        <section id="colors" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">🎨</span>
+                <h2>Варианты окраски</h2>
+            </div>
+            <div class="card-content">
+                <p>За всю историю выпуска электровозы ЭП2К получали различные варианты окраски — как заводские, так и фирменные, закреплённые за конкретными поездами или депо.</p>
+
+                <h3 style="margin: 1.5rem 0 1rem;">Заводские, деповские и именные окраски</h3>
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div class="feature-item">
+                        <h3>Опытный</h3>
+                        <p><strong>Номер:</strong> 001</p>
+                        <p>Первый опытный экземпляр. Оригинальная красно-белая окраска с голубой полосой.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Заводской</h3>
+                        <p><strong>Номера:</strong> 002; 030; 032</p>
+                        <p>Оригинальная заводская окраска.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>«ТЧЭ-3 Барабинск»</h3>
+                        <p>Фирменная окраска депо ТЧЭ-3 Барабинск.</p>
+                        <a href="EP2K_tche3_barabinsk.html" class="btn btn-secondary" style="margin-top: 1rem; width: 100%;">Подробнее →</a>
+                    </div>
+                    <div class="feature-item">
+                        <h3>«80 лет Победы»</h3>
+                        <p><strong>Номера:</strong> 249, 156, 127, 017, 078</p>
+                        <p>Тематическая окраска к юбилею Победы.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>«Имени Воина-интернационалиста Двухреченского А. В.»</h3>
+                        <p>Надпись на кузове.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>«Троценко Леонид Васильевич» & «ТЧЭ-3 Барабинск»</h3>
+                        <p>Именная окраска с надписью на кузове.</p>
+                        <a href="EP2K_tche3_barabinsk.html" class="btn btn-secondary" style="margin-top: 1rem; width: 100%;">Подробнее →</a>
+                    </div>
+                    <div class="feature-item">
+                        <h3>«ТЧ-8 Санкт-Петербург»</h3>
+                        <p>Окраска, характерная для ТЧ-8 (Санкт-Петербург-Пассажирский-Московский).</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>«ТЧЭ-6 Москва-Сортировочная-Рязанская»</h3>
+                        <p>Окраска, характерная для ТЧЭ-6.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>«130 лет депо Барабинск»</h3>
+                        <p>Юбилейная окраска депо Барабинск.</p>
+                        <a href="EP2K_tche3_barabinsk.html" class="btn btn-secondary" style="margin-top: 1rem; width: 100%;">Подробнее →</a>
+                    </div>
+                    <div class="feature-item">
+                        <h3>«Имени Валерия Ковалева»</h3>
+                        <p>Надпись на кузове.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>«Имени Бирюкова Виктора Ефимовича»</h3>
+                        <p>Надпись на кузове.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>«Коломенскому заводу 155 лет»</h3>
+                        <p>Юбилейная окраска к 155-летию Коломенского завода.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>«150 лет депо Самара»</h3>
+                        <p>Юбилейная окраска депо Самара.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>«ТЧЭ-10 Самара»</h3>
+                        <p>Окраска, характерная для ТЧЭ-10 Самара.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>«НАС 500!»</h3>
+                        <p><strong>Номер:</strong> 500</p>
+                        <p>Юбилейная красно-чёрная окраска с надписью «НАС 500!».</p>
+                        <a href="ЭП2К-500.html" class="btn btn-secondary" style="margin-top: 1rem; width: 100%;">Подробнее →</a>
+                    </div>
+                    <div class="feature-item">
+                        <h3>«Новый бренд»</h3>
+                        <p>Новая маска и расцветка. <strong>Номера:</strong> 512–517.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>«Коломенский завод»</h3>
+                        <p>Ушёл в историю, не был на линии.</p>
+                    </div>
+                </div>
+
+                <h3 style="margin: 1.5rem 0 1rem;">Расцветки, закреплённые за фирменными поездами</h3>
+                <p class="card-description">Эти окраски закреплены за конкретными фирменными поездами. Если локомотив едет с другим поездом — он выглядит уникально.</p>
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div class="feature-item">
+                        <h3>«Аврора»</h3>
+                        <p>Голубо-серо-белая окраска. <strong>Номера:</strong> 501—504, 506—509.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>«Невский экспресс»</h3>
+                        <p>Фирменная окраска.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>«Гранд-Экспресс»</h3>
+                        <p>Малиново-белая окраска. <strong>Номера:</strong> 238, 271.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>«Ночной Экспресс»</h3>
+                        <p>Чёрная с золотом. <strong>Номера:</strong> 273, 376.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>«Мегаполис»</h3>
+                        <p>Сине-оранжево-жёлтая окраска. <strong>Номера:</strong> 320, 359.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>«Красная Стрела»</h3>
+                        <p>Красная окраска с золотой полосой. <strong>Номера:</strong> 148, 168, 388, 392, 510—511.</p>
+                        <a href="ЭП2К-510.html" class="btn btn-secondary" style="margin-top: 1rem; width: 100%;">Подробнее →</a>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 2rem;">
+                    <p><strong>Интересный факт:</strong> Электровоз 500 с новым дизайном лобовой части получил эксклюзивную юбилейную красно-чёрную окраску. В центре боковых стен нанесена юбилейная надпись «НАС 500!». Электровозы 501—504 и 506—509 получили голубо-серо-белую окраску в стиле фирменного поезда «Аврора».</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Эксплуатация и депо -->
+        <section id="depots" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+                <span class="card-icon">🌍</span>
+                <h2>Эксплуатация и приписка</h2>
+            </div>
+            <div class="card-content">
+                <p>Подавляющее большинство электровозов ЭП2К (более 230) эксплуатируется в депо Барабинск Западно-Сибирской железной дороги, где они заменили старые изношенные электровозы серии ЧС2. Электровозы обслуживают большую часть сети железных дорог в приуральской и западно-сибирской части России и некоторую часть сети в среднем Поволжье.</p>
+
+                <h3 style="margin: 1.5rem 0 1rem;">Данные по приписке по номерам (на апрель 2025 года)</h3>
+                <table>
+                    <thead><tr><th>Дорога</th><th>Депо</th><th>Количество</th><th>Номера</th></tr></thead>
+                    <tbody>
+                        <tr><td>Западно-Сибирская</td><td>Барабинск</td><td>232</td><td>001—029, 031, 037—117, 119—137, 139—141, 143, 144, 160—165, 167, 169—173, 194—206, 208, 253—268, 274—309, 312, 315-317, 322—324, 328, 329, 334, 335, 339—341, 343—347</td></tr>
+                        <tr><td>Куйбышевская</td><td>Самара</td><td>54</td><td>138, 142, 416—456, 470—480</td></tr>
+                        <tr><td>Московская</td><td>Москва-Сортировочная-Рязанская</td><td>109</td><td>118, 166, 168, 207, 244—252, 310, 311, 313, 314, 318—321, 325—327, 330—333, 336—338, 342, 348—415, 467—469, 494—498, 505</td></tr>
+                        <tr><td>Октябрьская</td><td>Санкт-Петербург-Пассажирский-Московский</td><td>119</td><td>030, 032—036, 145—159, 174—193, 209—243, 269—273, 457—466, 481—493, 500—504, 506—515</td></tr>
+                    </tbody>
+                </table>
+
+                <h3 style="margin: 1.5rem 0 1rem;">Фирменные поезда и закреплённые электровозы</h3>
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div class="feature-item">
+                        <h3>«Гранд-Экспресс»</h3>
+                        <p><strong>Номера:</strong> 238 и 271</p>
+                        <p>Малиново-белая окраска.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>«Ночной экспресс»</h3>
+                        <p><strong>Номера:</strong> 273 и 376</p>
+                        <p>Чёрная с золотом.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>«Красная стрела»</h3>
+                        <p><strong>Номера:</strong> 148, 168, 388 и 392</p>
+                        <p>Красная окраска с золотой полосой.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>«Мегаполис»</h3>
+                        <p><strong>Номера:</strong> 320 и 359</p>
+                        <p>Сине-оранжево-жёлтая.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Интересный факт:</strong> За время эксплуатации электровозы ЭП2К, как и тепловозы ТЭП70БС, зарекомендовали себя с положительной стороны как одни из самых надёжных локомотивов. Несмотря на применяемые в них устаревшие технические решения, такие как коллекторные тяговые электродвигатели и реостатно-контакторная система регулирования, они отличались высокой отказоустойчивостью и хорошим уровнем комфорта для машинистов. В связи с этим их межремонтный пробег был увеличен в 2013 году с 600 до 800 тысяч километров.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Происшествия -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #C0392B 0%, #E74C3C 100%);">
+                <span class="card-icon">⚠️</span>
+                <h2>Происшествия</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">5 октября 2011</div>
+                        <div class="timeline-content">
+                            <h3>ЭП2К-033</h3>
+                            <p>Незакреплённый локомотив самопроизвольно пришёл в движение и упал в яму поворотного круга ТЧ-8 с повреждением ходовой части. К концу 2012 года электровоз был восстановлен.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">5 ноября 2014</div>
+                        <div class="timeline-content">
+                            <h3>ЭП2К-025</h3>
+                            <p>Незначительно пострадал при столкновении с электровозом ВЛ11-364 на станции Сабик Свердловской железной дороги. После короткого ремонта вернулся в строй.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">22 ноября 2014</div>
+                        <div class="timeline-content">
+                            <h3>ЭП2К-144</h3>
+                            <p>С пассажирским поездом № 57 сообщением Иркутск — Кисловодск на скорости порядка 80 км/ч протаранил грузовой автомобиль МАЗ на переезде без шлагбаума в Казахстане. Кабина ЭП2К была серьёзно вмята, повреждён каркас и пульт управления.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">28 ноября 2014</div>
+                        <div class="timeline-content">
+                            <h3>ЭП2К-107</h3>
+                            <p>С пассажирским поездом № 101 сообщением Нижневартовск — Пенза столкнулся с грузовиком на переезде без шлагбаума между станциями Пышминская и Богданович. В конце 2015 — начале 2016 года Новосибирский электровозоремонтный завод произвёл восстановительный ремонт с заменой кабины на новую.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">6 октября 2017</div>
+                        <div class="timeline-content">
+                            <h3>ЭП2К-192</h3>
+                            <p>С пассажирским поездом № 60 сообщением Санкт-Петербург — Нижний Новгород протаранил автобус Mercedes-Benz O303, заглохший на переезде. Электровоз получил серьёзные повреждения кабины.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">22 марта 2018</div>
+                        <div class="timeline-content">
+                            <h3>ЭП2К-333</h3>
+                            <p>С пассажирским поездом № 119 Санкт-Петербург — Белгород сошёл с рельс на перегоне между станциями Елизаровка и Осеченка Октябрьской железной дороги из-за наличия постороннего предмета на них.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">18 ноября 2023</div>
+                        <div class="timeline-content">
+                            <h3>ЭП2К-050</h3>
+                            <p>Кабина пострадала от возгорания на станции Тюмень Свердловской железной дороги.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1 апреля 2024</div>
+                        <div class="timeline-content">
+                            <h3>ЭП2К-412</h3>
+                            <p>С пассажирским поездом № 15 Архангельск — Москва столкнулся с автобусом на переезде между станциями Шушково и Берендеево Северной железной дороги. В результате 8 человек погибли, кабина электровоза получила сильные повреждения.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2 августа 2024</div>
+                        <div class="timeline-content">
+                            <h3>ЭП2К-003</h3>
+                            <p>С пассажирским поездом № 11 «Ямал» Новый Уренгой — Москва столкнулся с грузовым автомобилем ЗИЛ на переезде без шлагбаума между станциями Европейская и Усть-Тискос Свердловской железной дороги. Пострадал водитель грузовика, у электровоза повреждения кабины.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">11 августа 2024</div>
+                        <div class="timeline-content">
+                            <h3>ЭП2К-159</h3>
+                            <p>Кабина пострадала от возгорания на станции Бабаево Октябрьской железной дороги.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Галерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                    <div class="gallery-item">
+                        <img src="img/ЭП2К_500.jpg" alt="ЭП2К-500" onerror="this.src='https://via.placeholder.com/800x500?text=ЭП2К-500'">
+                        <div class="gallery-caption">ЭП2К-500 — юбилейный электровоз «НАС 500!»</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Kostyan_Piterski(railgallery.ru)</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/ЭП2К_156.jpg" alt="ЭП2К-156 с поездом Волгоград" onerror="this.src='https://via.placeholder.com/800x500?text=ЭП2К-156'">
+                        <div class="gallery-caption">ЭП2К-156 — "80 лет Победы"</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Maxim(railgallery.ru)</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/EP2K_376-030-388-238-320.jpg" alt="ЭП2К-020" onerror="this.src='https://via.placeholder.com/800x500?text=ЭП2К-020'">
+                        <div class="gallery-caption">Пять вариантов расцветки локомотивов ЭП2К</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Ulan3(railgallery.ru)</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/EP2K_001.jpg" alt="ЭП2К-001" onerror="this.src='https://via.placeholder.com/800x500?text=ЭП2К-500+новый+дизайн'">
+                        <div class="gallery-caption">ЭП2К-001 опытный</div>
+                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Моль(railgallery.ru)</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«ЭП2К — первый серийный пассажирский электровоз постоянного тока российского производства. Он пришёл на смену устаревшим ЧС и стал основой пассажирского движения на линиях постоянного тока».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Электровозы»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="Локомотивы.html">Локомотивы</a></li>
+                        <li><a href="Электровозы.html">Электровозы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📧 info@tepp.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">ЭП2К — первый серийный пассажирский электровоз постоянного тока России</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function animateCounters() {
+                const targets = { totalBuilt: 517, maxSpeed: 160, power: 4800 };
+                let current = { totalBuilt: 0, maxSpeed: 0, power: 0 };
+                const builtEl = document.getElementById('totalBuilt');
+                const speedEl = document.getElementById('maxSpeed');
+                const powerEl = document.getElementById('power');
+                if (!builtEl || !speedEl || !powerEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.totalBuilt < targets.totalBuilt) {
+                        current.totalBuilt += Math.ceil(targets.totalBuilt / 50);
+                        if (current.totalBuilt > targets.totalBuilt) current.totalBuilt = targets.totalBuilt;
+                        builtEl.textContent = current.totalBuilt;
+                        allFinished = false;
+                    }
+                    if (current.maxSpeed < targets.maxSpeed) {
+                        current.maxSpeed += Math.ceil(targets.maxSpeed / 50);
+                        if (current.maxSpeed > targets.maxSpeed) current.maxSpeed = targets.maxSpeed;
+                        speedEl.textContent = current.maxSpeed;
+                        allFinished = false;
+                    }
+                    if (current.power < targets.power) {
+                        current.power += Math.ceil(targets.power / 50);
+                        if (current.power > targets.power) current.power = targets.power;
+                        powerEl.textContent = current.power;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
+                    if (content && img) {
+                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>
