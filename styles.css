@@ -137,18 +137,11 @@
     --settings-shadow: 8px 8px 0px #2b1a18;
 }
 
-/* ============================================================
-   ИСПРАВЛЕНИЕ ФОНОВОГО ИЗОБРАЖЕНИЯ В ТЕМЕ «СОВЕТСКИЙ ПЛАКАТ»
-   ============================================================ */
 [data-theme="poster"] body {
-    background-color: #d33a2c; /* Оставляем красный цвет фона */
-    
-    /* Вместо растягивания (cover) делаем повторяющийся паттерн или центрируем */
+    background-color: #d33a2c;
     background-image: url('img/back_fon.png');
-    background-size: 400px auto; /* Уменьшаем размер картинки (можно поменять 400px на нужное) */
-    background-position: center top;
-    background-repeat: repeat; /* Повторяем картинку, если она маленькая, или убери, если нужна одна */
-    background-attachment: scroll; /* Отключаем фиксацию, чтобы фон не "прыгал" */
+    background-size: cover;
+    background-position: top center;
 }
 
 [data-theme="poster"] h1,
