@@ -2037,14 +2037,14 @@ header.header-hidden {
 }
 
 /* ============================================================
-   ИСПРАВЛЕНИЕ СЛУЧАЙНЫХ ФОТО (на главной странице)
+   СЕТКА СЛУЧАЙНЫХ ФОТО (РОВНО 3 В РЯД)
    ============================================================ */
 #randomPhoto {
     display: grid !important;
-    /* Делаем сетку: на ПК в 3-4 колонки, на телефоне — в 2 */
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important;
+    /* На ПК и планшетах ровно 3 колонки */
+    grid-template-columns: repeat(3, 1fr) !important; 
     gap: 1rem !important;
-    align-items: start !important; /* Чтобы карточки не растягивались по высоте */
+    align-items: start !important;
 }
 
 .random-photo-item {
@@ -2053,32 +2053,35 @@ header.header-hidden {
     background: var(--bg-card-solid) !important;
     border-radius: var(--radius-sm) !important;
     overflow: hidden !important;
+    box-shadow: 0 4px 12px var(--shadow-color) !important;
     height: 100% !important;
+    margin: 0 !important;
 }
 
 .random-photo-item img {
     width: 100% !important;
-    height: 180px !important; /* Фиксированная высота для картинок */
-    object-fit: cover !important; /* Картинка заполняет блок, не искажаясь */
+    height: 200px !important; /* Делаем фото чуть выше, раз они крупнее */
+    object-fit: cover !important; 
     display: block !important;
+    border-radius: 0 !important;
 }
 
 .random-photo-caption {
-    padding: 0.5rem !important;
-    font-size: 0.8rem !important;
-    line-height: 1.3 !important;
+    padding: 0.6rem !important;
+    font-size: 0.85rem !important;
     text-align: center !important;
-    flex-grow: 1 !important; /* Подпись занимает оставшееся место */
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
     border-top: 1px solid var(--border-color) !important;
+    flex-grow: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
 }
 
-/* И отдельно для мобилок (чтобы было ровно 2 колонки) */
+/* Для телефонов оставляем 2 колонки */
 @media (max-width: 768px) {
     #randomPhoto {
-        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-columns: repeat(2, 1fr) !important; 
         gap: 0.5rem !important;
     }
     
