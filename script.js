@@ -695,7 +695,7 @@ function setupRandomRecommendations() {
         { src: 'sud_Yauza_81-714.jpg', caption: 'Сиденья от Яузы в вагоне 1598', author: 'pfandrom' },
         { src: '0959.jpg', caption: '«Ковидные» сиденья в вагоне 0959', author: 'pfandrom' },
         { src: '0963.jpg', caption: '«Ковидные» сиденья в вагоне 0963', author: 'pfandrom' },
-        { src: '8535.jpg', caption: '81-717 (ЛВЗ) №8535', author: 'pfandrom' },
+        { src: '8535_museum.jpg', caption: '81-717 (ЛВЗ) №8535', author: 'pfandrom' },
         { src: '8535_imba.jpg', caption: 'Вагон №8535 с уровня платформы', author: 'pfandrom' },
         { src: '0379.jpg', caption: 'Вагон 0379 с трёхцветной маской', author: 'Gleb5564(transphoto)' },
         { src: 'Type_B_ploshad_sverlova.jpg', caption: 'Вагон Б на станции Площадь Свердлова', author: 'Трёхгранка' },
