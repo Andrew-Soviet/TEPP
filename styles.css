@@ -1695,12 +1695,94 @@ footer {
     letter-spacing: 0.03em;
 }
 
+/* ============================================================
+   МОБИЛЬНАЯ АДАПТАЦИЯ (для экранов телефонов до 768px)
+   ============================================================ */
 @media (max-width: 768px) {
-    .filter-select {
-        flex: 1 1 100%;
+    /* Убираем горизонтальную прокрутку */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
     }
-    .filter-row .search-input {
-        min-width: 100%;
+
+    .header-container {
+        padding: 1rem 1rem 0.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        word-wrap: break-word;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    main {
+        padding: 0 1rem;
+        margin-top: 1rem;
+    }
+
+    .section-card, .hero, .quote-section {
+        padding: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    /* ============================================================
+       ГЛАВНОЕ: СЕТКА ДЛЯ ГАЛЕРЕИ (как на TransPhoto)
+       ============================================================ */
+    .image-gallery {
+        /* Делаем 2 колонки на телефоне */
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 0.5rem !important; /* Маленький отступ между фото */
+    }
+
+    .gallery-item {
+        border-radius: 4px; /* Чуть скругляем углы */
+    }
+
+    /* Фотографии делаем квадратными или чуть вытянутыми, чтобы не было "прыжков" высоты */
+    .gallery-item img {
+        width: 100%;
+        height: 150px !important; /* Фиксированная высота для всех фото */
+        object-fit: cover; /* Обрезает края, но сохраняет пропорции */
+    }
+
+    /* Подписи к фото делаем маленькими, убираем огромные отступы */
+    .gallery-caption {
+        font-size: 0.7rem;
+        padding: 0.2rem;
+        position: static; /* Убираем выезжающий эффект */
+        background: none;
+        color: var(--text-primary);
+        text-align: center;
+    }
+
+    /* Прячем автора фото в галерее на телефоне, чтобы не было каши (если нужно — оставь) */
+    .gallery-item p {
+        font-size: 0.65rem !important;
+        margin-top: 0.1rem !important;
+    }
+
+    /* ============================================================
+       СЕТКИ КАРТОЧЕК (для текстовых блоков)
+       ============================================================ */
+    .features-grid, .trains-grid {
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 колонки */
+        gap: 0.8rem !important;
+    }
+
+    .feature-item, .train-card {
+        padding: 0.8rem !important;
+    }
+
+    .feature-item h3, .train-card h3 {
+        font-size: 0.9rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .feature-item p, .train-card p {
+        font-size: 0.8rem;
     }
 }
 
