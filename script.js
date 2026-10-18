@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setupRandomRecommendations();
     setupEscapeKey();
     setupGallery();
+    setupHideHeaderOnScroll();
 });
 
 // ============================================================
@@ -320,6 +321,25 @@ function setupScrollTop() {
         btn.classList.toggle('visible', window.pageYOffset > 300);
     });
     btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+}
+
+// ============================================================
+// СКРЫТИЕ ШАПКИ ПРИ ПРОКРУТКЕ (только на самом верху)
+// ============================================================
+function setupHideHeaderOnScroll() {
+    const header = document.querySelector('header');
+    if (!header) return;
+
+    window.addEventListener('scroll', function() {
+        // Если прокрутка больше 50 пикселей — прячем шапку
+        if (window.scrollY > 50) {
+            header.classList.add('header-hidden');
+        } 
+        // Если вернулись в самый верх (меньше 50 пикселей) — показываем
+        else {
+            header.classList.remove('header-hidden');
+        }
+    }, { passive: true }); 
 }
 
 function setupParallax() {

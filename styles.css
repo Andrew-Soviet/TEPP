@@ -1958,3 +1958,14 @@ footer {
 section[id] {
     scroll-margin-top: 90px; /* Подгони под высоту твоей шапки */
 }
+
+
+/* Плавное скрытие шапки */
+header {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Класс, который будет прятать шапку */
+header.header-hidden {
+    transform: translateY(-100%);
+}
