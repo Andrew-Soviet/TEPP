@@ -571,3 +571,84 @@ footer { background: var(--bg-card); backdrop-filter: blur(10px); margin-top: 3r
     .settings-dropdown { min-width: 240px; right: -10px; }
 }
 
+
+
+/* ============================================================
+   ВОЗВРАЩАЕМ КРАСИВЫЙ ТАЙМЛАЙН
+   ============================================================ */
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+    margin: 2rem 0;
+}
+
+/* Центральная линия */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
+    border-radius: 3px;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Выравниваем по верхнему краю */
+    margin-bottom: 2.5rem;
+    position: relative;
+    width: 100%;
+}
+
+/* Плашка с датой */
+.timeline-date {
+    width: 120px;
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 25px; /* Скругление как было */
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px var(--shadow-hover);
+    flex-shrink: 0; /* Чтобы дата не сжималась */
+}
+
+/* Контент таймлайна (текст справа) */
+.timeline-content {
+    width: calc(100% - 160px); /* Отнимаем ширину даты и отступ */
+    background: var(--bg-card-solid);
+    padding: 1.2rem;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 4px 12px var(--shadow-color);
+    color: var(--text-primary);
+}
+
+.timeline-content h3 {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Для мобильных телефонов (чтобы таймлайн был в одну колонку) */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px; /* Сдвигаем линию влево на мобилках */
+    }
+    .timeline-item {
+        flex-direction: column;
+        padding-left: 50px; /* Отступ для текста, чтобы не налезал на линию */
+    }
+    .timeline-date {
+        margin-bottom: 0.8rem;
+        width: 100px;
+    }
+    .timeline-content {
+        width: 100%;
+    }
+}
