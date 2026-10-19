@@ -395,11 +395,25 @@ function setupGallery() {
     document.querySelectorAll('.gallery-item, .random-photo-item').forEach(item => {
         item.addEventListener('click', () => {
             const img = item.querySelector('img');
+            
+            // Берем подпись
             const caption = item.querySelector('.gallery-caption, .random-photo-caption')?.textContent || '';
+            
+            // Берем автора из тега <p>
+            let author = item.querySelector('p')?.textContent || '';
+            
+            // Если автор не указан, автоматически ставим заглушку
+            if (!author.trim()) {
+                author = '📸 Автор не указан';
+            }
+            
             if (content && img) {
+                // Склеиваем подпись и автора
+                const fullText = `${caption} — ${author}`;
+                
                 content.innerHTML = `
                     <img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}">
-                    <p style="text-align:center; margin-top:1rem;">${caption}</p>
+                    <p style="text-align:center; margin-top:1rem; font-size: 1.1rem;">${fullText}</p>
                 `;
                 modal.classList.add('active');
             }
@@ -653,7 +667,7 @@ function setupRandomRecommendations() {
         { src: 'Type_A_1.jpeg', caption: 'Вагон типа А № 1', author: 'pfandrom' },
         { src: 'Type_A_1001.jpg', caption: 'Вагон типа А № 1001', author: 'andzis (transphoto)' },
         { src: 'Type_A_int.jpg', caption: 'Салон вагона типа А', author: 'Анатолий Тягун (transphoto)' },
-        { src: 'Type_A_film.jpg', caption: 'Вагон типа А в кино', author: 'Игорь Черных (transphoto)' },
+        { src: 'Type_A_film.jpg', caption: 'Вагон типа А в кино', author: 'кадр из фильма "Битва за Москву"' },
         { src: 'Type_A_1_yellow.jpeg', caption: 'Вагон типа А в 1995 году', author: 'Александр Шанин (transphoto)' },
         { src: 'Type_A_int2.jpg', caption: 'Салон вагона типа А (2006)', author: 'Климова Валентина Ивановна' },
         { src: 'Type_D_2037.jpg', caption: 'Вагон типа Д № 2037', author: 'Transport_moscow(transphoto)' },
