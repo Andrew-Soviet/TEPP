@@ -652,3 +652,164 @@ footer { background: var(--bg-card); backdrop-filter: blur(10px); margin-top: 3r
         width: 100%;
     }
 }
+
+
+/* ============================================================
+   КРАСИВЫЙ ПОИСК (ВОЗВРАЩАЕМ СТИЛЬ)
+   ============================================================ */
+.search-section .card-content {
+    padding: 1.5rem !important;
+}
+
+.search-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0 !important;
+}
+
+.filter-row {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    flex-wrap: nowrap; /* Запрещаем перенос на десктопе */
+}
+
+/* Поле ввода */
+.filter-row .search-input {
+    flex: 1 1 auto !important; /* Растягиваем на всю ширину */
+    min-width: 0 !important;
+    padding: 0.8rem 1.2rem !important;
+    border: 2px solid var(--border-color) !important;
+    border-radius: 30px !important;
+    background: var(--bg-input) !important;
+    color: var(--text-primary) !important;
+    font-size: 1rem !important;
+}
+
+/* Кнопка "Найти" */
+.filter-row .search-btn {
+    flex: 0 0 auto !important; /* Не растягиваем кнопку */
+    padding: 0.8rem 2rem !important;
+    border-radius: 30px !important;
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%) !important;
+    color: white !important;
+    font-weight: 500 !important;
+    border: none !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+.filter-row .search-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow-hover);
+}
+
+/* Выпадающие списки (Тип, Город, Страна) */
+.filter-row .filter-select {
+    flex: 1 1 0 !important; /* Равномерно распределяем ширину */
+    min-width: 0 !important;
+    padding: 0.7rem 1rem !important;
+    border: 2px solid var(--border-color) !important;
+    border-radius: 30px !important;
+    background: var(--bg-input) !important;
+    color: var(--text-primary) !important;
+    font-family: inherit !important;
+    font-size: 0.95rem !important;
+    cursor: pointer !important;
+}
+
+/* Убираем встроенную обводку браузера при фокусе */
+.filter-row .search-input:focus,
+.filter-row .filter-select:focus {
+    outline: none !important;
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 0 0 3px var(--highlight-bg) !important;
+}
+
+/* На мобильных телефонах разрешаем переносить элементы в колонку */
+@media (max-width: 768px) {
+    .filter-row {
+        flex-wrap: wrap !important;
+    }
+    .filter-row .search-input,
+    .filter-row .search-btn,
+    .filter-row .filter-select {
+        flex: 1 1 100% !important;
+        width: 100% !important;
+    }
+}
+
+/* ============================================================
+   ВОЗВРАЩАЕМ СЕТКУ ДЛЯ СЛУЧАЙНЫХ СТРАНИЦ
+   ============================================================ */
+.random-pages {
+    display: grid !important;
+    /* На ПК — 3-4 колонки, на планшетах — 2, на телефонах — 2 */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)) !important;
+    gap: 1rem !important;
+    margin-top: 1.5rem !important;
+}
+
+.random-page-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 1.2rem 1rem !important;
+    background: var(--bg-card-solid) !important;
+    border-radius: var(--radius-sm) !important;
+    box-shadow: 0 4px 12px var(--shadow-color) !important;
+    border: 1px solid transparent !important;
+    text-decoration: none !important;
+    color: var(--text-primary) !important;
+    transition: all 0.3s ease !important;
+}
+
+.random-page-card:hover {
+    transform: translateY(-4px) !important;
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 8px 20px var(--shadow-hover) !important;
+}
+
+.random-page-card .icon {
+    font-size: 2.5rem !important;
+    margin-bottom: 0.5rem !important;
+    line-height: 1 !important;
+}
+
+.random-page-card .title {
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    line-height: 1.3 !important;
+    word-wrap: break-word !important;
+}
+
+/* Специально для темы «Матрица», чтобы карточки не терялись на фоне */
+[data-theme="night"] .random-page-card {
+    background: rgba(0, 30, 0, 0.9) !important;
+    border: 1px solid rgba(0, 255, 0, 0.3) !important;
+}
+
+[data-theme="night"] .random-page-card:hover {
+    border-color: #00ff00 !important;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.4) !important;
+}
+
+/* На телефонах делаем ровно 2 колонки */
+@media (max-width: 768px) {
+    .random-pages {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.6rem !important;
+    }
+    .random-page-card {
+        padding: 0.8rem 0.5rem !important;
+    }
+    .random-page-card .icon {
+        font-size: 2rem !important;
+    }
+    .random-page-card .title {
+        font-size: 0.8rem !important;
+    }
+}

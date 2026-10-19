@@ -79,7 +79,7 @@ function initSettings() {
                         <button class="theme-btn" data-theme="light" onclick="setTheme('light')" title="Светлая">☀️</button>
                         <button class="theme-btn" data-theme="dark" onclick="setTheme('dark')" title="Тёмная">🌙</button>
                         <button class="theme-btn" data-theme="poster" onclick="setTheme('poster')" title="Советский плакат">☭</button>
-                        <button class="theme-btn" data-theme="night" onclick="setTheme('night')" title="Ночной поезд">🌃</button>
+                        <button class="theme-btn" data-theme="night" onclick="setTheme('night')" title="Ночной поезд">👨‍💻</button>
                     </div>
                 </div>
                 <div class="settings-section">
@@ -395,11 +395,25 @@ function setupGallery() {
     document.querySelectorAll('.gallery-item, .random-photo-item').forEach(item => {
         item.addEventListener('click', () => {
             const img = item.querySelector('img');
+            
+            // Берем подпись
             const caption = item.querySelector('.gallery-caption, .random-photo-caption')?.textContent || '';
+            
+            // Берем автора из тега <p>
+            let author = item.querySelector('p')?.textContent || '';
+            
+            // Если автор не указан, автоматически ставим заглушку
+            if (!author.trim()) {
+                author = '📸 Автор не указан';
+            }
+            
             if (content && img) {
+                // Склеиваем подпись и автора
+                const fullText = `${caption} — ${author}`;
+                
                 content.innerHTML = `
                     <img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}">
-                    <p style="text-align:center; margin-top:1rem;">${caption}</p>
+                    <p style="text-align:center; margin-top:1rem; font-size: 1.1rem;">${fullText}</p>
                 `;
                 modal.classList.add('active');
             }
@@ -650,11 +664,10 @@ function setupRandomRecommendations() {
     // ---------- Фото с авторством ----------
     const photos = [
         // Подвижной состав
-        { src: 'Скифарик.jpg', caption: 'Опытный Скиф', author: 'Lasselan' },
         { src: 'Type_A_1.jpeg', caption: 'Вагон типа А № 1', author: 'pfandrom' },
         { src: 'Type_A_1001.jpg', caption: 'Вагон типа А № 1001', author: 'andzis (transphoto)' },
         { src: 'Type_A_int.jpg', caption: 'Салон вагона типа А', author: 'Анатолий Тягун (transphoto)' },
-        { src: 'Type_A_film.jpg', caption: 'Вагон типа А в кино', author: 'Игорь Черных (transphoto)' },
+        { src: 'Type_A_film.jpg', caption: 'Вагон типа А в кино', author: 'кадр из фильма "Битва за Москву"' },
         { src: 'Type_A_1_yellow.jpeg', caption: 'Вагон типа А в 1995 году', author: 'Александр Шанин (transphoto)' },
         { src: 'Type_A_int2.jpg', caption: 'Салон вагона типа А (2006)', author: 'Климова Валентина Ивановна' },
         { src: 'Type_D_2037.jpg', caption: 'Вагон типа Д № 2037', author: 'Transport_moscow(transphoto)' },
@@ -665,7 +678,7 @@ function setupRandomRecommendations() {
         { src: 'Type_G_713_int.jpg', caption: 'Интерьер вагона типа Г № 713', author: 'WOM(transphoto)' },
         { src: 'M5_806.jpg', caption: 'УМ5 № 806', author: 'ER2-1017' },
         { src: 'M5_806_int.jpg', caption: 'Салон УМ5 № 806', author: 'Lasselan' },
-        { src: '760A_gagarin.jpg', caption: '81-760А на Гагаринской', author: 'Сергей Лапин' },
+        { src: '760A_gagarin.jpg', caption: '81-760А на Минской', author: 'Сергей Лапин' },
         { src: '760A_int.jpg', caption: 'Салон 81-760А', author: 'Solidolych' },
         { src: '75488.jpg', caption: '81-775.2 «Москва-2026»', author: 'Артём Алмазов (transphoto)' },
         { src: 'bespilotm24.jpg', caption: 'Беспилотная «Москва-2024»', author: 'Артём Алмазов' },
@@ -706,9 +719,7 @@ function setupRandomRecommendations() {
         { src: '11119.jpg', caption: 'Голубой пластик в вагоне 11119', author: 'pfandrom' },
         { src: '10142_int.jpg', caption: 'Бордовые диваны в вагоне 10142', author: 'tomatikwwr' },
         { src: 'sud_Yauza_81-714.jpg', caption: 'Сиденья от Яузы в вагоне 1598', author: 'pfandrom' },
-        { src: '0959.jpg', caption: '«Ковидные» сиденья в вагоне 0959', author: 'pfandrom' },
-        { src: '0963.jpg', caption: '«Ковидные» сиденья в вагоне 0963', author: 'pfandrom' },
-        { src: '8535.jpg', caption: '81-717 (ЛВЗ) №8535', author: 'pfandrom' },
+        { src: '8535_museum.jpg', caption: '81-717 (ЛВЗ) №8535', author: 'pfandrom' },
         { src: '8535_imba.jpg', caption: 'Вагон №8535 с уровня платформы', author: 'pfandrom' },
         { src: '0379.jpg', caption: 'Вагон 0379 с трёхцветной маской', author: 'Gleb5564(transphoto)' },
         { src: 'Type_B_ploshad_sverlova.jpg', caption: 'Вагон Б на станции Площадь Свердлова', author: 'Трёхгранка' },
@@ -716,7 +727,6 @@ function setupRandomRecommendations() {
         { src: 'Опыт номер.jpg', caption: 'Опытный 81-717', author: 'Виктор Будан(ТАСС)' },
         { src: '1709421.jpg', caption: 'Опытный поезд 81-717.6К', author: 'andzis' },
         { src: '0021_int.jpg', caption: 'Интерьер Яузы №0021', author: 'Transport_moscow' },
-        { src: '0021_fl.jpg', caption: 'Яуза №0021, вид с пола', author: 'pfandrom' },
         { src: 'Скиф0152.jpg', caption: '«Черноглазый» Русич 0152', author: 'Tosh Evs' },
         { src: 'Ока опыт 2.jpg', caption: 'Ока на выставке ЭкспоСитиТранс 2010', author: 'Шпекавыг' },
         { src: '37002_int.jpg', caption: 'Интерьер вагона 37002', author: 'Mr.Den' },
@@ -728,7 +738,7 @@ function setupRandomRecommendations() {
         { src: '8712.jpg', caption: 'Вагон 8712', author: 'Welder' },
         { src: '8712_int2022.jpg', caption: 'Вагон 8712, интерьер (2022)', author: 'Александр Л 2016' },
         { src: '8712_int2026.jpg', caption: 'Вагон 8712, интерьер (2026)', author: 'Транспортник Москвы / Вова' },
-        { src: '8712_приятность.jpg', caption: 'Вагон 8712, «приятность»', author: 'Транспортник Москвы / Вова' },
+        { src: '8712_приятность.jpg', caption: 'Вагон 8712', author: 'Транспортник Москвы / Вова' },
         { src: 'ЧС7_199.jpg', caption: 'ЧС7-199 с заводской окраской', author: 'pfandrom' },
         { src: 'ЧС7-199_звезда.jpg', caption: 'ЧС7-199 — звезда', author: 'pfandrom' },
         { src: 'эд4мку.jpg', caption: 'ЭД4МКУ, первая окраска', author: 'dymon.z' },
