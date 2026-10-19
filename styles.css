@@ -574,47 +574,7 @@ footer { background: var(--bg-card); backdrop-filter: blur(10px); margin-top: 3r
 
 
 /* ============================================================
-   1. ИСПРАВЛЕНИЕ РЕЗУЛЬТАТОВ ПОИСКА (ЧИТАЕМОСТЬ)
-   ============================================================ */
-.search-result-item {
-    background: var(--bg-card-solid) !important;
-    border: 1px solid var(--border-color) !important;
-    margin-bottom: 0.6rem !important;
-    padding: 0.8rem 1rem !important;
-    border-radius: var(--radius-sm) !important;
-}
-
-.search-result-item a {
-    color: var(--text-primary) !important;
-    text-decoration: none !important;
-}
-
-/* Делаем заголовок в результатах ярким (акцентным) */
-.search-result-item a strong {
-    color: var(--accent-color) !important;
-    font-size: 1.05rem !important;
-}
-
-/* Чтобы теги (город, тип) не сливались */
-.search-result-item .result-tag {
-    background: var(--highlight-bg) !important;
-    color: var(--text-secondary) !important;
-    border: 1px solid var(--border-color) !important;
-    margin-left: 0.5rem;
-}
-
-/* Специально для тёмной темы и матрицы, чтобы ссылки были яркими */
-[data-theme="dark"] .search-result-item a strong,
-[data-theme="night"] .search-result-item a strong {
-    color: #34d399 !important; /* Зеленоватый акцент в тёмной */
-}
-[data-theme="night"] .search-result-item a strong {
-    color: #00ff00 !important; /* Ярко-зеленый в матрице */
-    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
-}
-
-/* ============================================================
-   2. ВОЗВРАЩАЕМ КРАСИВЫЙ ТАЙМЛАЙН
+   ВОЗВРАЩАЕМ КРАСИВЫЙ ТАЙМЛАЙН
    ============================================================ */
 .timeline {
     position: relative;
@@ -637,7 +597,7 @@ footer { background: var(--bg-card); backdrop-filter: blur(10px); margin-top: 3r
 .timeline-item {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-start; /* Выравниваем по верхнему краю */
     margin-bottom: 2.5rem;
     position: relative;
     width: 100%;
@@ -649,17 +609,17 @@ footer { background: var(--bg-card); backdrop-filter: blur(10px); margin-top: 3r
     background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
     color: white;
     padding: 0.6rem 1rem;
-    border-radius: 25px;
+    border-radius: 25px; /* Скругление как было */
     text-align: center;
     font-weight: bold;
     font-size: 1rem;
     box-shadow: 0 4px 12px var(--shadow-hover);
-    flex-shrink: 0;
+    flex-shrink: 0; /* Чтобы дата не сжималась */
 }
 
-/* Контент таймлайна */
+/* Контент таймлайна (текст справа) */
 .timeline-content {
-    width: calc(100% - 160px);
+    width: calc(100% - 160px); /* Отнимаем ширину даты и отступ */
     background: var(--bg-card-solid);
     padding: 1.2rem;
     border-radius: var(--radius-sm);
@@ -675,14 +635,14 @@ footer { background: var(--bg-card); backdrop-filter: blur(10px); margin-top: 3r
     font-size: 1.2rem;
 }
 
-/* Мобильная версия таймлайна */
+/* Для мобильных телефонов (чтобы таймлайн был в одну колонку) */
 @media (max-width: 768px) {
     .timeline::before {
-        left: 20px;
+        left: 20px; /* Сдвигаем линию влево на мобилках */
     }
     .timeline-item {
         flex-direction: column;
-        padding-left: 50px;
+        padding-left: 50px; /* Отступ для текста, чтобы не налезал на линию */
     }
     .timeline-date {
         margin-bottom: 0.8rem;
@@ -693,25 +653,89 @@ footer { background: var(--bg-card); backdrop-filter: blur(10px); margin-top: 3r
     }
 }
 
+
 /* ============================================================
-   3. КРАСИВЫЙ ПОИСК НА МОБИЛЬНЫХ
+   КРАСИВЫЙ ПОИСК (ВОЗВРАЩАЕМ СТИЛЬ)
    ============================================================ */
+.search-section .card-content {
+    padding: 1.5rem !important;
+}
+
+.search-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0 !important;
+}
+
+.filter-row {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    flex-wrap: nowrap; /* Запрещаем перенос на десктопе */
+}
+
+/* Поле ввода */
+.filter-row .search-input {
+    flex: 1 1 auto !important; /* Растягиваем на всю ширину */
+    min-width: 0 !important;
+    padding: 0.8rem 1.2rem !important;
+    border: 2px solid var(--border-color) !important;
+    border-radius: 30px !important;
+    background: var(--bg-input) !important;
+    color: var(--text-primary) !important;
+    font-size: 1rem !important;
+}
+
+/* Кнопка "Найти" */
+.filter-row .search-btn {
+    flex: 0 0 auto !important; /* Не растягиваем кнопку */
+    padding: 0.8rem 2rem !important;
+    border-radius: 30px !important;
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%) !important;
+    color: white !important;
+    font-weight: 500 !important;
+    border: none !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+.filter-row .search-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow-hover);
+}
+
+/* Выпадающие списки (Тип, Город, Страна) */
+.filter-row .filter-select {
+    flex: 1 1 0 !important; /* Равномерно распределяем ширину */
+    min-width: 0 !important;
+    padding: 0.7rem 1rem !important;
+    border: 2px solid var(--border-color) !important;
+    border-radius: 30px !important;
+    background: var(--bg-input) !important;
+    color: var(--text-primary) !important;
+    font-family: inherit !important;
+    font-size: 0.95rem !important;
+    cursor: pointer !important;
+}
+
+/* Убираем встроенную обводку браузера при фокусе */
+.filter-row .search-input:focus,
+.filter-row .filter-select:focus {
+    outline: none !important;
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 0 0 3px var(--highlight-bg) !important;
+}
+
+/* На мобильных телефонах разрешаем переносить элементы в колонку */
 @media (max-width: 768px) {
     .filter-row {
-        flex-direction: column;
-        gap: 0.5rem;
+        flex-wrap: wrap !important;
     }
     .filter-row .search-input,
-    .filter-row .filter-select,
-    .filter-row .search-btn {
+    .filter-row .search-btn,
+    .filter-row .filter-select {
+        flex: 1 1 100% !important;
         width: 100% !important;
-        min-width: 100% !important;
-        box-sizing: border-box;
-    }
-    .search-result-item a {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.3rem;
     }
 }
