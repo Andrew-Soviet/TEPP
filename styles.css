@@ -34,32 +34,85 @@
     --transition: 0.3s ease;
 }
 
+/* ============================================================
+   ТЕМА: КОСМОС (dark)
+   ============================================================ */
 [data-theme="dark"] {
-    --bg-gradient-start: #0a0f1a;
-    --bg-gradient-end: #111827;
-    --text-primary: #e0e0e0;
-    --text-secondary: #b0b0b0;
-    --text-muted: #777;
-    --bg-card: rgba(30, 41, 59, 0.95);
-    --bg-card-solid: #1e293b;
-    --bg-header: rgba(30, 41, 59, 0.95);
-    --bg-input: #2d3748;
-    --border-color: #334155;
-    --shadow-color: rgba(0, 0, 0, 0.5);
-    --shadow-hover: rgba(52, 211, 153, 0.4);
-    --highlight-bg: rgba(52, 211, 153, 0.15);
-    --footer-border: rgba(255, 255, 255, 0.1);
-    --modal-bg: #1e293b;
-    --modal-text: #e0e0e0;
-    --btn-secondary-border: #34d399;
-    --btn-secondary-text: #e0e0e0;
-    --settings-bg: rgba(30, 41, 59, 0.98);
+    --bg-gradient-start: #050a14;
+    --bg-gradient-end: #0a1423;
+    --text-primary: #e0f0ff; /* Светло-голубой текст */
+    --text-secondary: #90b0d0;
+    --text-muted: #5a7a9a;
+    
+    /* Полупрозрачные темно-синие карточки */
+    --bg-card: rgba(10, 20, 35, 0.85); 
+    --bg-card-solid: #0a1423;
+    --bg-header: rgba(5, 10, 20, 0.9);
+    --bg-input: #0f1a2a;
+    
+    --border-color: #1a3a5a;
+    --shadow-color: rgba(0, 0, 0, 0.8);
+    --shadow-hover: rgba(77, 184, 255, 0.4); /* Голубое свечение */
+    --highlight-bg: rgba(77, 184, 255, 0.1);
+    --footer-border: rgba(77, 184, 255, 0.2);
+    
+    --modal-bg: #0a1423;
+    --modal-text: #e0f0ff;
+    --btn-secondary-border: #4db8ff;
+    --btn-secondary-text: #e0f0ff;
+    
+    --settings-bg: rgba(10, 20, 35, 0.98);
     --settings-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-    --gradient-start: #34d399;
-    --gradient-end: #38bdf8;
-    --accent-color: #34d399;
-    --accent-secondary: #38bdf8;
-    --particles-bg: linear-gradient(135deg, #0a0f1a 0%, #111827 100%);
+    
+    --gradient-start: #4db8ff; /* Ярко-голубой */
+    --gradient-end: #0055aa;   /* Глубокий синий */
+    --accent-color: #4db8ff;
+    --accent-secondary: #00d4ff;
+    
+    --particles-bg: transparent;
+}
+
+/* Фон с космонавтом */
+[data-theme="dark"] body {
+    background-image: linear-gradient(rgba(5, 10, 20, 0.4), rgba(5, 10, 20, 0.4)), url('img/space_bg.jpg') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Убираем старый градиент и частицы */
+[data-theme="dark"] .animated-bg,
+[data-theme="dark"] #particles-js {
+    display: none !important;
+}
+
+/* Свечение карточек при наведении (голубое) */
+[data-theme="dark"] .section-card:hover,
+[data-theme="dark"] .feature-item:hover,
+[data-theme="dark"] .train-card:hover,
+[data-theme="dark"] .gallery-item:hover,
+[data-theme="dark"] .random-page-card:hover {
+    box-shadow: 0 0 15px rgba(77, 184, 255, 0.5), inset 0 0 10px rgba(77, 184, 255, 0.1) !important;
+    border-color: #4db8ff !important;
+}
+
+/* Кнопки в космической теме */
+[data-theme="dark"] .btn-primary,
+[data-theme="dark"] .search-btn {
+    background: linear-gradient(135deg, #4db8ff 0%, #0055aa 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(77, 184, 255, 0.3) !important;
+}
+
+/* Результаты поиска */
+[data-theme="dark"] .search-result-item {
+    background: rgba(10, 20, 35, 0.9) !important;
+    border: 1px solid rgba(77, 184, 255, 0.3) !important;
+}
+[data-theme="dark"] .search-result-item a strong {
+    color: #4db8ff !important;
+    text-shadow: 0 0 5px rgba(77, 184, 255, 0.5) !important;
 }
 
 [data-theme="night"] {
@@ -812,4 +865,64 @@ footer { background: var(--bg-card); backdrop-filter: blur(10px); margin-top: 3r
     .random-page-card .title {
         font-size: 0.8rem !important;
     }
+}
+
+/* ============================================================
+   ЖЁСТКОЕ ИСПРАВЛЕНИЕ ПОИСКА (ДЛЯ ВСЕХ ТЕМ)
+   ============================================================ */
+.search-result-item {
+    background: var(--bg-card-solid) !important;
+    border: 1px solid var(--border-color) !important;
+    margin-bottom: 0.6rem !important;
+    padding: 0.8rem 1rem !important;
+    border-radius: var(--radius-sm) !important;
+    display: block !important;
+}
+
+.search-result-item a {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.3rem !important;
+    text-decoration: none !important;
+    color: var(--text-primary) !important;
+}
+
+/* Название страницы — делаем крупным и акцентным */
+.search-result-item a strong {
+    font-size: 1.05rem !important;
+    color: var(--accent-color) !important;
+    -webkit-text-fill-color: var(--accent-color) !important;
+}
+
+/* Теги (город, тип) */
+.search-result-item .result-tag {
+    display: inline-block !important;
+    background: var(--highlight-bg) !important;
+    color: var(--text-secondary) !important;
+    font-size: 0.75rem !important;
+    padding: 0.15rem 0.5rem !important;
+    border-radius: 10px !important;
+    margin-right: 0.3rem !important;
+    font-weight: 600 !important;
+}
+
+/* ============================================================
+   СПЕЦИАЛЬНО ДЛЯ ТЕМЫ «МАТРИЦА»
+   ============================================================ */
+[data-theme="night"] .search-result-item {
+    background: rgba(0, 30, 0, 0.95) !important; /* Темно-зеленый фон карточки */
+    border: 1px solid #00ff00 !important; /* Неоновая рамка */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2) !important;
+}
+
+[data-theme="night"] .search-result-item a strong {
+    color: #00ff00 !important; /* Ярко-зеленый текст */
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5) !important;
+}
+
+[data-theme="night"] .search-result-item .result-tag {
+    background: rgba(0, 255, 0, 0.1) !important;
+    color: #a0ffa0 !important;
+    border: 1px solid rgba(0, 255, 0, 0.3) !important;
 }

@@ -77,7 +77,7 @@ function initSettings() {
                     <span class="settings-label">🌈 Тема</span>
                     <div class="settings-options" id="themeOptions">
                         <button class="theme-btn" data-theme="light" onclick="setTheme('light')" title="Светлая">☀️</button>
-                        <button class="theme-btn" data-theme="dark" onclick="setTheme('dark')" title="Тёмная">🌙</button>
+                        <button class="theme-btn" data-theme="dark" onclick="setTheme('dark')" title="Тёмная">👨‍🚀</button>
                         <button class="theme-btn" data-theme="poster" onclick="setTheme('poster')" title="Советский плакат">☭</button>
                         <button class="theme-btn" data-theme="night" onclick="setTheme('night')" title="Ночной поезд">👨‍💻</button>
                     </div>
@@ -465,7 +465,7 @@ const SEARCH_PAGES = [
     { title: 'ЗИС-154', url: 'ЗИС-154.html', tags: ['автобус', 'зис', 'история'], types: ['автобус'], city: 'Москва', country: 'СССР' },
     { title: 'ЗИС-155', url: 'ЗИС-155.html', tags: ['автобус', 'зис', 'история'], types: ['автобус'], city: 'Москва', country: 'СССР' },
     { title: 'ЗИЛ-158', url: 'ЗИЛ-158.html', tags: ['автобус', 'зил', 'история'], types: ['автобус'], city: 'Москва', country: 'СССР' },
-    { title: 'Канатная дорога Алма-Аты', url: 'Алма-Ата_канатка.html', tags: ['канатная', 'алматы', 'казахстан'], types: ['монорельс'], city: 'Алма-Ата', country: 'Казахстан' },
+    { title: 'Канатная дорога Алма-Аты', url: 'Almata-kd.html', tags: ['канатная', 'алматы', 'казахстан'], types: ['монорельс'], city: 'Алма-Ата', country: 'Казахстан' },
     { title: 'Московский монорельс', url: 'Монорельс.html', tags: ['монорельс', 'москва'], types: ['монорельс'], city: 'Москва', country: 'Россия' },
     { title: 'Монорельс «Стрела»', url: 'Монорельс_Стрела.html', tags: ['монорельс', 'стрела', 'подмосковье'], types: ['монорельс'], city: 'Москва', country: 'Россия' },
     { title: 'Музеи транспорта', url: 'Музеи_транспорта.html', tags: ['музей', 'транспорт', 'экспозиция'], types: ['музей'], city: 'Москва', country: 'Россия' },
@@ -728,7 +728,6 @@ function setupRandomRecommendations() {
         { src: '1709421.jpg', caption: 'Опытный поезд 81-717.6К', author: 'andzis' },
         { src: '0021_int.jpg', caption: 'Интерьер Яузы №0021', author: 'Transport_moscow' },
         { src: 'Скиф0152.jpg', caption: '«Черноглазый» Русич 0152', author: 'Tosh Evs' },
-        { src: 'Ока опыт 2.jpg', caption: 'Ока на выставке ЭкспоСитиТранс 2010', author: 'Шпекавыг' },
         { src: '37002_int.jpg', caption: 'Интерьер вагона 37002', author: 'Mr.Den' },
         { src: '30007.jpg', caption: 'Состав на испытаниях', author: 'Дмитрий Белов' },
         { src: '0381.jpg', caption: 'Вагон 0381 состава «Олег Табаков»', author: 'Renzex87' },
@@ -1057,7 +1056,7 @@ document.addEventListener('DOMContentLoaded', function() {
             drop.style.left = (i * 20) + 'px';
             drop.style.color = '#00ff00';
             drop.style.fontFamily = 'monospace';
-            drop.style.fontSize = '18px';
+            drop.style.fontSize = '22px';
             drop.style.opacity = Math.random() * 0.5 + 0.2; // Случайная прозрачность
             drop.style.textShadow = '0 0 5px #00ff00';
             
