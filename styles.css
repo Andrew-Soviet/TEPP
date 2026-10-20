@@ -1,65 +1,66 @@
 /* ============================================================
-   1. ПЕРЕМЕННЫЕ И ТЕМЫ
+   1. ПЕРЕМЕННЫЕ И БАЗОВАЯ ТЕМА (LIGHT — ОСЕННЯЯ)
    ============================================================ */
 :root {
     font-size: 15px;
     
-    --text-primary: #1e293b; 
-    --text-secondary: #475569;
-    --text-muted: #94a3b8;
+    /* Осенняя палитра (Терракота, Медь, Топленое молоко) */
+    --text-primary: #3E2723;      /* Темный шоколад для текста */
+    --text-secondary: #5D4037;    /* Коричневый для подписей */
+    --text-muted: #8D6E63;        
     
-    /* ПЛОТНЫЙ БЕЛЫЙ ФОН ДЛЯ КАРТОЧЕК (чтобы текст читался) */
-    --bg-card: #ffffff; 
-    --bg-card-solid: #ffffff;
-    --bg-header: rgba(255, 255, 255, 0.95);
-    --bg-input: #f8fafc;
+    /* Карточки: Светлая охра (топленое молоко) с легкой прозрачностью */
+    --bg-card: rgba(245, 235, 224, 0.85); 
+    --bg-card-solid: #F5EBE0;
+    --bg-header: rgba(245, 235, 224, 0.95);
+    --bg-input: #FDFBF7;
     
-    --border-color: #e2e8f0;
-    --shadow-color: rgba(0, 0, 0, 0.08);
-    --shadow-hover: rgba(59, 130, 246, 0.3); 
-    --highlight-bg: rgba(59, 130, 246, 0.1);
-    --footer-border: rgba(0, 0, 0, 0.05);
+    --border-color: #D7CCC8;
+    --shadow-color: rgba(62, 39, 35, 0.15);
+    --shadow-hover: rgba(139, 69, 19, 0.3); 
+    --highlight-bg: rgba(139, 69, 19, 0.1);
+    --footer-border: #D7CCC8;
     
-    --modal-bg: #ffffff;
-    --modal-text: #1e293b;
-    --btn-secondary-border: #3b82f6;
-    --btn-secondary-text: #3b82f6;
+    --modal-bg: #F5EBE0;
+    --modal-text: #3E2723;
     
-    --accent-color: #3b82f6; 
-    --accent-secondary: #8b5cf6;
-    --gradient-start: #3b82f6;
-    --gradient-end: #8b5cf6;
+    /* Акценты: Вместо сине-фиолетового — глубокий винный (марсала) и сливовый */
+    --accent-color: #6D213C; 
+    --accent-secondary: #4A1525;
+    --gradient-start: #6D213C; /* Винный */
+    --gradient-end: #9E2A2B;   /* Терракотовый */
     
-    --settings-bg: #ffffff;
-    --settings-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    --btn-secondary-border: #6D213C;
+    --btn-secondary-text: #6D213C;
+    
+    --settings-bg: #F5EBE0;
+    --settings-shadow: 0 8px 32px rgba(62, 39, 35, 0.2);
     
     --radius: 20px;
     --radius-sm: 10px;
     --radius-xs: 8px;
     --transition: 0.3s ease;
+    --backdrop-blur: blur(8px);
 }
 
-/* ============================================================
-   2. ФОН ДЛЯ СВЕТЛОЙ ТЕМЫ (ГДЕ КАРТИНКА)
-   ============================================================ */
+/* Фон для светлой (осенней) темы */
 [data-theme="light"] body {
-    /* ЗДЕСЬ ВАША КАРТИНКА. Проверьте, что путь правильный! */
-    background-image: url('img/moscow_transport_bg.jpg'); 
+    background-image: url('img/autumn_bg.jpg'); /* Убедитесь, что картинка есть */
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-color: #e2e8f0; /* Запасной цвет, если картинка не загрузится */
+    background-color: #C05A3A; /* Запасной терракотовый цвет */
 }
 
 /* ============================================================
-   ТЕМА: КОСМОС (dark)
+   2. ТЕМА: КОСМОС (dark)
    ============================================================ */
 [data-theme="dark"] {
-    --bg-card: #0a1423; 
+    --bg-card: rgba(10, 20, 35, 0.7); 
     --bg-card-solid: #0a1423;
     --bg-header: rgba(5, 10, 20, 0.95);
-    --bg-input: #0f1a2a;
+    --bg-input: rgba(15, 26, 42, 0.8);
     --text-primary: #e0f0ff;
     --text-secondary: #90b0d0;
     --text-muted: #5a7a9a;
@@ -78,21 +79,22 @@
     --gradient-end: #0055aa;
     --accent-color: #4db8ff;
     --accent-secondary: #00d4ff;
+    --backdrop-blur: blur(8px);
 }
 
 [data-theme="dark"] body {
-    background-image: linear-gradient(rgba(5, 10, 20, 0.6), rgba(5, 10, 20, 0.6)), url('img/space_bg.jpg') !important;
-    background-size: cover !important;
-    background-position: center center !important;
-    background-attachment: fixed !important;
-    background-repeat: no-repeat !important;
+    background-image: url('img/space_bg.jpg'); 
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 /* ============================================================
-   ТЕМА: МАТРИЦА (night)
+   3. ТЕМА: МАТРИЦА (night)
    ============================================================ */
 [data-theme="night"] {
-    --bg-card: #001a00;
+    --bg-card: rgba(0, 20, 0, 0.7);
     --bg-card-solid: #001a00;
     --bg-header: rgba(0, 10, 0, 0.95);
     --bg-input: #002200;
@@ -114,6 +116,7 @@
     --gradient-end: #008800;
     --accent-color: #00ff00;
     --accent-secondary: #00cc00;
+    --backdrop-blur: blur(8px);
 }
 
 [data-theme="night"] body {
@@ -124,7 +127,7 @@
 }
 
 /* ============================================================
-   ТЕМА: СОВЕТСКИЙ ПЛАКАТ (poster)
+   4. ТЕМА: СОВЕТСКИЙ ПЛАКАТ (poster)
    ============================================================ */
 [data-theme="poster"] {
     --bg-card: #f4e8d3;
@@ -161,7 +164,7 @@
 }
 
 /* ============================================================
-   3. БАЗОВЫЕ СТИЛИ
+   5. БАЗОВЫЕ СТИЛИ
    ============================================================ */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
@@ -173,14 +176,6 @@ body {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-#particles-js {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
-}
-
-.animated-bg {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; overflow: hidden;
-}
-
 [data-theme="light"] .animated-bg,
 [data-theme="light"] #particles-js,
 [data-theme="dark"] .animated-bg,
@@ -189,11 +184,11 @@ body {
 [data-theme="night"] #particles-js,
 [data-theme="poster"] .animated-bg,
 [data-theme="poster"] #particles-js {
-    display: none !important; /* Отключаем старые анимации, чтобы не мешали картинкам */
+    display: none !important;
 }
 
 /* ============================================================
-   4. ПАНЕЛЬ НАСТРОЕК
+   6. ПАНЕЛЬ НАСТРОЕК, ШАПКА
    ============================================================ */
 .settings-panel { position: fixed; top: 10px; right: 10px; z-index: 1001; }
 .settings-toggle {
@@ -227,9 +222,6 @@ body {
 .theme-btn.active { border-color: var(--accent-color); background: var(--accent-color); }
 .mode-hint { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem; font-style: italic; }
 
-/* ============================================================
-   5. ШАПКА И НАВИГАЦИЯ
-   ============================================================ */
 header {
     background: var(--bg-header); 
     box-shadow: 0 4px 20px var(--shadow-color);
@@ -254,27 +246,47 @@ h1 {
 [data-theme="poster"] .main-nav a:hover { color: #1a1a1a; }
 
 /* ============================================================
-   6. КОНТЕНТ И СЕКЦИИ
+   7. КОНТЕНТ, СЕКЦИИ И ШАПКИ КАРТОЧЕК
    ============================================================ */
 main { max-width: 1200px; margin: 2rem auto; padding: 0 2rem; position: relative; z-index: 1; }
 section {
-    background: var(--bg-card); 
-    border-radius: var(--radius); 
+    background: var(--bg-card) !important; 
+    border-radius: var(--radius) !important; 
     padding: 2rem; 
     margin-bottom: 2rem;
-    box-shadow: 0 10px 30px var(--shadow-color);
+    box-shadow: 0 10px 30px var(--shadow-color) !important;
+    backdrop-filter: var(--backdrop-blur) !important;
+    -webkit-backdrop-filter: var(--backdrop-blur) !important;
+    border: 1px solid var(--border-color) !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 section:hover { transform: translateY(-2px); }
+
+/* Возвращаем цветные шапки */
+.card-header {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%) !important;
+    border-radius: var(--radius) var(--radius) 0 0 !important;
+    margin: -2rem -2rem 1.5rem -2rem !important; 
+    padding: 1.5rem 2rem !important;
+    border-bottom: none !important;
+}
+.card-header h2 {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    border-bottom: none !important;
+    margin-bottom: 0 !important;
+    font-size: 1.6rem !important;
+}
 h2 {
     font-size: 2rem; margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    border-bottom: 3px solid var(--gradient-start); padding-bottom: 0.5rem;
+    background: none !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+    border-bottom: 2px solid var(--accent-color) !important; 
+    padding-bottom: 0.5rem;
 }
 
 /* ============================================================
-   СПЕЦИАЛЬНЫЕ СТИЛИ ДЛЯ ПЛАКАТА
+   8. СПЕЦИАЛЬНЫЕ СТИЛИ ДЛЯ ПЛАКАТА (Шрифты и т.д.)
    ============================================================ */
 [data-theme="poster"] h1,
 [data-theme="poster"] h2,
@@ -302,10 +314,11 @@ h2 {
 }
 [data-theme="poster"] section,
 [data-theme="poster"] .section-card {
-    background: var(--bg-card);
-    border: 4px solid #2b1a18;
-    box-shadow: 8px 8px 0px #2b1a18;
-    border-radius: 0;
+    background: #f4e8d3 !important;
+    border: 4px solid #2b1a18 !important;
+    box-shadow: 8px 8px 0px #2b1a18 !important;
+    border-radius: 0 !important;
+    backdrop-filter: none !important;
 }
 [data-theme="poster"] header {
     background: #d33a2c;
@@ -328,7 +341,7 @@ h2 {
 [data-theme="poster"] .settings-toggle { background: #f4e8d3; border: 3px solid #2b1a18; color: #2b1a18; }
 
 /* ============================================================
-   7. ТАБЛИЦЫ И СЕТКИ
+   9. ТАБЛИЦЫ, СЕТКИ, КАРТОЧКИ
    ============================================================ */
 table { width: 100%; border-collapse: collapse; margin: 1rem 0; border-radius: var(--radius-sm); overflow: hidden; }
 th { background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%); color: white; padding: 0.8rem 1rem; }
@@ -340,13 +353,13 @@ tr:hover td { background: var(--highlight-bg); }
 .features-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 .trains-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 
-/* ============================================================
-   8. КАРТОЧКИ
-   ============================================================ */
 .counter-container { display: flex; justify-content: center; gap: 3rem; margin: 2rem 0; flex-wrap: wrap; }
 .counter-number { font-size: 3rem; font-weight: 700; background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; }
 .counter-label { color: var(--text-secondary); font-size: 0.95rem; text-transform: uppercase; }
 
+/* ============================================================
+   10. ТАЙМЛАЙН
+   ============================================================ */
 .timeline { position: relative; padding: 2rem 0; margin: 2rem 0; }
 .timeline::before { content: ''; position: absolute; left: 50%; transform: translateX(-50%); width: 3px; height: 100%; background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end)); border-radius: 3px; }
 .timeline-item { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2.5rem; position: relative; width: 100%; }
@@ -355,7 +368,7 @@ tr:hover td { background: var(--highlight-bg); }
 .timeline-content h3 { background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem; font-size: 1.2rem; }
 
 /* ============================================================
-   9. ГАЛЕРЕЯ
+   11. ГАЛЕРЕЯ, СЛУЧАЙНЫЕ ФОТО
    ============================================================ */
 .image-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
 .gallery-item { position: relative; overflow: hidden; border-radius: var(--radius-sm); cursor: pointer; box-shadow: 0 8px 16px var(--shadow-color); }
@@ -370,7 +383,7 @@ tr:hover td { background: var(--highlight-bg); }
 #randomPhoto .random-photo-caption { padding: 0.6rem !important; font-size: 0.85rem !important; text-align: center !important; border-top: 1px solid var(--border-color) !important; flex-grow: 1 !important; display: flex !important; align-items: center !important; justify-content: center !important; }
 
 /* ============================================================
-   10. КНОПКИ И ПОИСК
+   12. КНОПКИ И ПОИСК
    ============================================================ */
 .btn { display: inline-block; padding: 0.7rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 500; transition: all 0.3s ease; border: none; cursor: pointer; }
 .btn-primary { background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%); color: white; }
@@ -399,7 +412,7 @@ tr:hover td { background: var(--highlight-bg); }
 .random-page-card .title { font-size: 0.9rem !important; font-weight: 500 !important; line-height: 1.3 !important; word-wrap: break-word !important; }
 
 /* ============================================================
-   11. МОДАЛКИ И ФУТЕР
+   13. МОДАЛКИ, ФУТЕР, СКРОЛЛ
    ============================================================ */
 .scroll-top { position: fixed; bottom: 30px; right: 30px; width: 46px; height: 46px; background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 22px; cursor: pointer; opacity: 0; visibility: hidden; border: 2px solid var(--accent-color); z-index: 999; transition: all 0.3s ease; }
 .scroll-top.visible { opacity: 1; visibility: visible; }
@@ -418,7 +431,46 @@ footer { background: var(--bg-header); margin-top: 3rem; padding: 2.5rem 0 1rem;
 .footer-bottom { text-align: center; padding-top: 1.5rem; border-top: 1px solid var(--footer-border); color: var(--text-secondary); }
 
 /* ============================================================
-   12. МОБИЛЬНАЯ АДАПТАЦИЯ
+   14. ПОДСВЕТКА ПРИ НАВЕДЕНИИ (HOVER)
+   ============================================================ */
+[data-theme="light"] section:hover,
+[data-theme="light"] .feature-item:hover,
+[data-theme="light"] .train-card:hover,
+[data-theme="light"] .random-page-card:hover {
+    box-shadow: 0 0 20px rgba(139, 69, 19, 0.4) !important; /* Медное свечение */
+    border: 2px solid #8B4513 !important; 
+    transform: translateY(-4px) !important;
+}
+
+[data-theme="dark"] section:hover,
+[data-theme="dark"] .feature-item:hover,
+[data-theme="dark"] .train-card:hover,
+[data-theme="dark"] .random-page-card:hover {
+    box-shadow: 0 0 20px rgba(77, 184, 255, 0.6), inset 0 0 10px rgba(77, 184, 255, 0.2) !important;
+    border: 2px solid #4db8ff !important; 
+    transform: translateY(-4px) !important;
+}
+
+[data-theme="night"] section:hover,
+[data-theme="night"] .feature-item:hover,
+[data-theme="night"] .train-card:hover,
+[data-theme="night"] .random-page-card:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5), inset 0 0 10px rgba(0, 255, 0, 0.2) !important;
+    border: 2px solid #00ff00 !important;
+    transform: translateY(-4px) !important;
+}
+
+[data-theme="poster"] section:hover,
+[data-theme="poster"] .feature-item:hover,
+[data-theme="poster"] .train-card:hover,
+[data-theme="poster"] .random-page-card:hover {
+    box-shadow: 8px 8px 0px #c32b1e !important; 
+    border-color: #c32b1e !important; 
+    transform: translate(-2px, -2px) !important; 
+}
+
+/* ============================================================
+   15. МОБИЛЬНАЯ АДАПТАЦИЯ
    ============================================================ */
 @media (max-width: 768px) {
     html, body { overflow-x: hidden; width: 100%; }
@@ -463,114 +515,170 @@ footer { background: var(--bg-header); margin-top: 3rem; padding: 2.5rem 0 1rem;
 }
 
 /* ============================================================
-   ПОДСВЕТКА БЛОКОВ ПРИ НАВЕДЕНИИ (ДЛЯ ВСЕХ ТЕМ)
+   16. ОСЕННЯЯ АТМОСФЕРА (ЛИСТЬЯ И ГРАДИЕНТ)
    ============================================================ */
 
-/* 1. БАЗОВАЯ ТЕМА (Светлая) - Голубая подсветка */
-[data-theme="light"] section,
-[data-theme="light"] .feature-item,
-[data-theme="light"] .train-card,
-[data-theme="light"] .random-page-card {
-    transition: all 0.3s ease !important;
-}
-[data-theme="light"] section:hover,
-[data-theme="light"] .feature-item:hover,
-[data-theme="light"] .train-card:hover,
-[data-theme="light"] .random-page-card:hover {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4) !important; /* Голубое свечение */
-    border: 2px solid #3b82f6 !important; /* Голубая рамка */
-    transform: translateY(-4px) !important; /* Легкий подъем */
+/* 1. Красивый осенний градиент поверх картинки для светлой темы */
+[data-theme="light"] body {
+    /* Накладываем легкий оранжево-желтый туман поверх вашей картинки */
+    background-image: 
+        linear-gradient(to bottom, rgba(230, 126, 34, 0.15), rgba(139, 69, 19, 0.4)),
+        url('img/autumn_bg.jpg') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
 }
 
-/* 2. ТЕМА: КОСМОС (dark) - Синяя подсветка */
-[data-theme="dark"] section,
-[data-theme="dark"] .feature-item,
-[data-theme="dark"] .train-card,
-[data-theme="dark"] .random-page-card {
-    transition: all 0.3s ease !important;
-}
-[data-theme="dark"] section:hover,
-[data-theme="dark"] .feature-item:hover,
-[data-theme="dark"] .train-card:hover,
-[data-theme="dark"] .random-page-card:hover {
-    box-shadow: 0 0 20px rgba(77, 184, 255, 0.6), inset 0 0 10px rgba(77, 184, 255, 0.2) !important; /* Ярко-синее свечение */
-    border: 2px solid #4db8ff !important; /* Синяя рамка */
-    transform: translateY(-4px) !important;
+/* Контейнер для листьев */
+#leaf-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Чтобы листья не мешали кликать по сайту */
+    z-index: -1; /* Листья на заднем плане, за карточками */
+    overflow: hidden;
+    display: none; /* Скрыто по умолчанию */
 }
 
-/* 3. ТЕМА: МАТРИЦА (night) - Зеленая подсветка */
-[data-theme="night"] section,
-[data-theme="night"] .feature-item,
-[data-theme="night"] .train-card,
-[data-theme="night"] .random-page-card {
-    transition: all 0.3s ease !important;
-}
-[data-theme="night"] section:hover,
-[data-theme="night"] .feature-item:hover,
-[data-theme="night"] .train-card:hover,
-[data-theme="night"] .random-page-card:hover {
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5), inset 0 0 10px rgba(0, 255, 0, 0.2) !important; /* Неоново-зеленое свечение */
-    border: 2px solid #00ff00 !important; /* Зеленая рамка */
-    transform: translateY(-4px) !important;
+/* Показываем листья ТОЛЬКО в светлой (осенней) теме */
+[data-theme="light"] #leaf-container {
+    display: block;
 }
 
-/* 4. ТЕМА: СОВЕТСКИЙ ПЛАКАТ (poster) - Красная подсветка */
-[data-theme="poster"] section,
-[data-theme="poster"] .feature-item,
-[data-theme="poster"] .train-card,
-[data-theme="poster"] .random-page-card {
-    transition: all 0.3s ease !important;
+/* Стиль самого листика (используем CSS-фигуру вместо картинки) */
+.leaf {
+    position: absolute;
+    top: -50px;
+    background-color: #d35400; /* Терракотовый */
+    border-radius: 0 50% 0 50%; /* Форма листа */
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+    opacity: 0.8;
+    animation: fall linear infinite;
 }
-[data-theme="poster"] section:hover,
-[data-theme="poster"] .feature-item:hover,
-[data-theme="poster"] .train-card:hover,
-[data-theme="poster"] .random-page-card:hover {
-    /* У плаката стиль жесткий, без размытия, просто плотная красная тень и сдвиг */
-    box-shadow: 8px 8px 0px #c32b1e !important; /* Красная жесткая тень */
-    border-color: #c32b1e !important; /* Меняем цвет рамки на красный */
-    transform: translate(-2px, -2px) !important; /* Сдвиг влево-вверх для эффекта объема */
+
+/* Разные цвета для листьев */
+.leaf:nth-child(2n) { background-color: #e67e22; } /* Оранжевый */
+.leaf:nth-child(3n) { background-color: #f1c40f; } /* Желтый */
+.leaf:nth-child(5n) { background-color: #a0522d; } /* Коричневый */
+
+/* Анимация падения и покачивания */
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg) translateX(0);
+    }
+    25% {
+        transform: translateY(25vh) rotate(90deg) translateX(30px);
+    }
+    50% {
+        transform: translateY(50vh) rotate(180deg) translateX(-30px);
+    }
+    75% {
+        transform: translateY(75vh) rotate(270deg) translateX(30px);
+    }
+    100% {
+        transform: translateY(105vh) rotate(360deg) translateX(0);
+    }
 }
 
 
 /* ============================================================
-   ПОЛУПРОЗРАЧНОСТЬ БЛОКОВ (ДЛЯ ВСЕХ ТЕМ)
+   СТИЛИ ДЛЯ КАРТОЧЕК "МЕТОДЫ СТРОИТЕЛЬСТВА" (.spec-card)
    ============================================================ */
 
-/* 1. Светлая тема - легкий белый туман */
-[data-theme="light"] section,
-[data-theme="light"] .section-card,
-[data-theme="light"] .feature-item,
-[data-theme="light"] .train-card,
-[data-theme="light"] .random-page-card {
-    background: rgba(255, 255, 255, 0.75) !important; /* 75% белого */
-    backdrop-filter: blur(5px) !important; /* Легкое размытие фона под блоком для читаемости */
+/* Настраиваем сетку, чтобы карточки стояли в ряд */
+.spec-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
 }
 
-/* 2. Космос - полупрозрачный темно-синий */
-[data-theme="dark"] section,
-[data-theme="dark"] .section-card,
-[data-theme="dark"] .feature-item,
-[data-theme="dark"] .train-card,
-[data-theme="dark"] .random-page-card {
-    background: rgba(10, 20, 35, 0.7) !important; /* 70% темного */
-    backdrop-filter: blur(5px) !important;
+/* Оформляем саму карточку (только для светлой темы) */
+[data-theme="light"] .spec-card {
+    background-color: #ffffff !important; /* Белый фон */
+    border: 1px solid #D7CCC8 !important; /* Легкая рамка */
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* 3. Матрица - полупрозрачный черно-зеленый */
-[data-theme="night"] section,
-[data-theme="night"] .section-card,
-[data-theme="night"] .feature-item,
-[data-theme="night"] .train-card,
-[data-theme="night"] .random-page-card {
-    background: rgba(0, 20, 0, 0.7) !important; /* Темно-зеленый */
-    backdrop-filter: blur(5px) !important;
+/* Оформляем заголовок внутри карточки */
+[data-theme="light"] .spec-card h4 {
+    color: #6D213C !important; /* Винный цвет (как у остальных заголовков) */
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase; /* Делаем заглавными (как было) */
+    letter-spacing: 0.5px;
 }
 
-/* 4. Плакат - плотный, но чуть-чуть пропускает фон */
-[data-theme="poster"] section,
-[data-theme="poster"] .section-card,
-[data-theme="poster"] .feature-item,
-[data-theme="poster"] .train-card,
-[data-theme="poster"] .random-page-card {
-    background: rgba(244, 232, 211, 0.9) !important; /* 90% бежевого, чтобы не ломать стиль */
+/* Оформляем текст внутри карточки */
+[data-theme="light"] .spec-card p {
+    color: #3E2723 !important; /* Темно-шоколадный текст */
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ============================================================
+   ВОЗВРАЩАЕМ КРАСИВЫЕ БЛОКИ "КАРТИНКА + ТЕКСТ" (.media-row)
+   ============================================================ */
+
+/* 1. Сама сетка: картинка слева, текст справа */
+.media-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+/* 2. Для блоков, где картинка должна быть справа (reverse) */
+.media-row.reverse {
+    direction: rtl;
+}
+.media-row.reverse > * {
+    direction: ltr;
+}
+
+/* 3. Ограничиваем размер картинок, чтобы они не были гигантскими */
+.media-row img {
+    width: 100%;
+    height: 350px; /* Фиксированная высота, чтобы все картинки были одинаковыми */
+    object-fit: cover; /* Картинка заполняет блок, не искажаясь */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Красивая тень */
+}
+
+/* 4. Оформляем текст рядом с картинкой */
+.media-row .text {
+    color: var(--text-primary); /* Темный текст */
+}
+
+.media-row .text h3 {
+    color: var(--accent-color); /* Винный заголовок */
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.media-row .text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+/* 5. Адаптация для телефонов: картинка сверху, текст снизу */
+@media (max-width: 768px) {
+    .media-row, .media-row.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+        gap: 1rem;
+    }
+    .media-row img {
+        height: 250px;
+    }
 }
