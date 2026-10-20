@@ -38,6 +38,14 @@ function isMainPage() {
 // ИНИЦИАЛИЗАЦИЯ
 // ============================================================
 document.addEventListener('DOMContentLoaded', function() {
+    // --- АВТОМАТИЧЕСКОЕ СОЗДАНИЕ КОНТЕЙНЕРА ДЛЯ ЛИСТЬЕВ ---
+    if (!document.getElementById('leaf-container')) {
+        const leafContainer = document.createElement('div');
+        leafContainer.id = 'leaf-container';
+        document.body.appendChild(leafContainer); // Вставляем в конец body
+    }
+    // -------------------------------------------------------
+
     initSettings();
     initTheme();
     initMode();
@@ -1091,3 +1099,104 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     observer.observe(document.documentElement, { attributes: true });
 });
+
+
+
+// ============================================================
+// ОСЕННИЕ ПАДАЮЩИЕ ЛИСТЬЯ (ТОЛЬКО ДЛЯ СВЕТЛОЙ ТЕМЫ)
+// ============================================================
+(function initAutumnLeaves() {
+    // Ждем загрузки DOM
+    document.addEventListener('DOMContentLoaded', function() {
+        const container = document.getElementById('leaf-container');
+        if (!container) return; // Если контейнера нет в HTML, выходим
+
+        let leafInterval = null;
+
+        // Функция создания одного листика
+        function createLeaf() {
+            // Проверяем, включена ли светлая тема. Если нет — не создаем листья
+            if (document.documentElement.getAttribute('data-theme') !== 'light') return;
+
+            const leaf = document.createElement('div');
+            leaf.classList.add('leaf');
+            
+            // Случайный размер (от 10 до 30 пикселей)
+            const size = Math.random() * 20 + 10;
+            leaf.style.width = `${size}px`;
+            leaf.style.height = `${size}px`;
+            
+            // Случайная позиция по горизонтали (от 0 до 100% ширины экрана)
+            leaf.style.left = `${Math.random() * 100}vw`;
+            
+            // Случайная длительность падения (от 6 до 15 секунд)
+            const duration = Math.random() * 9 + 6;
+            leaf.style.animationDuration = `${duration}s`;
+            
+            // Случайная задержка (чтобы листья не падали синхронно)
+            leaf.style.animationDelay = `${Math.random() * 5}s`;
+            
+            // Случайная прозрачность (от 0.4 до 0.9)
+            leaf.style.opacity = Math.random() * 0.5 + 0.4;
+
+            // Случайный цвет из осенней палитры
+            const colors = ['#d35400', '#e67e22', '#f1c40f', '#a0522d', '#c0392b'];
+            leaf.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+            container.appendChild(leaf);
+
+            // Удаляем листик из DOM после завершения анимации (чтобы не засорять память)
+            setTimeout(() => {
+                if (leaf.parentNode) {
+                    leaf.remove();
+                }
+            }, (duration + 5) * 1000); // duration + задержка
+        }
+
+        // Запуск генерации листьев
+        function startLeaves() {
+            // Очищаем контейнер на всякий случай
+            container.innerHTML = '';
+            
+            // Создаем первые листья сразу
+            for (let i = 0; i < 50; i++) {
+                setTimeout(createLeaf, i * 100); // Создаем с небольшой задержкой
+            }
+
+            // Затем создаем новые листья каждые 300 мс
+            if (leafInterval) clearInterval(leafInterval);
+            leafInterval = setInterval(createLeaf, 100);
+        }
+
+        // Остановка генерации (если тема сменилась)
+        function stopLeaves() {
+            if (leafInterval) {
+                clearInterval(leafInterval);
+                leafInterval = null;
+            }
+            container.innerHTML = ''; // Удаляем все листья
+        }
+
+        // Проверяем текущую тему при загрузке страницы
+        if (document.documentElement.getAttribute('data-theme') === 'light') {
+            startLeaves();
+        }
+
+        // Следим за сменой темы (MutationObserver)
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.attributeName === 'data-theme') {
+                    const currentTheme = document.documentElement.getAttribute('data-theme');
+                    if (currentTheme === 'light') {
+                        startLeaves(); // Включаем листья
+                    } else {
+                        stopLeaves(); // Выключаем листья
+                    }
+                }
+            });
+        });
+
+        // Наблюдаем за изменениями атрибута data-theme на теге <html>
+        observer.observe(document.documentElement, { attributes: true });
+    });
+})();
