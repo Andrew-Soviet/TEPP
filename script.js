@@ -85,7 +85,7 @@ function initSettings() {
                     <span class="settings-label">🌈 Тема</span>
                     <div class="settings-options" id="themeOptions">
                         <button class="theme-btn" data-theme="light" onclick="setTheme('light')" title="Светлая">☀️</button>
-                        <button class="theme-btn" data-theme="dark" onclick="setTheme('dark')" title="Тёмная">👨‍🚀</button>
+                        <button class="theme-btn" data-theme="dark" onclick="setTheme('dark')" title="Тёмная">❄️</button>
                         <button class="theme-btn" data-theme="poster" onclick="setTheme('poster')" title="Советский плакат">☭</button>
                         <button class="theme-btn" data-theme="night" onclick="setTheme('night')" title="Ночной поезд">👨‍💻</button>
                     </div>
@@ -1197,6 +1197,101 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Наблюдаем за изменениями атрибута data-theme на теге <html>
+        observer.observe(document.documentElement, { attributes: true });
+    });
+})();
+
+// ============================================================
+// ЗИМНИЙ СНЕГ (ТОЛЬКО ДЛЯ ТЁМНОЙ ТЕМЫ)
+// ============================================================
+(function initWinterSnow() {
+    document.addEventListener('DOMContentLoaded', function() {
+        // Создаем контейнер для снега, если его нет
+        let snowContainer = document.getElementById('snow-container');
+        if (!snowContainer) {
+            snowContainer = document.createElement('div');
+            snowContainer.id = 'snow-container';
+            document.body.appendChild(snowContainer);
+        }
+
+        let snowInterval = null;
+
+        // Функция создания одной снежинки
+        function createSnowflake() {
+            // Проверяем, включена ли темная тема
+            if (document.documentElement.getAttribute('data-theme') !== 'dark') return;
+
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            
+            // Случайный размер (от 2 до 6 пикселей)
+            const size = Math.random() * 4 + 2;
+            snowflake.style.width = `${size}px`;
+            snowflake.style.height = `${size}px`;
+            
+            // Случайная позиция по горизонтали
+            snowflake.style.left = `${Math.random() * 100}vw`;
+            
+            // Случайная длительность падения (от 5 до 12 секунд)
+            const duration = Math.random() * 7 + 5;
+            snowflake.style.animationDuration = `${duration}s`;
+            
+            // Случайная задержка старта
+            snowflake.style.animationDelay = `${Math.random() * 5}s`;
+            
+            // Случайная прозрачность
+            snowflake.style.opacity = Math.random() * 0.6 + 0.4;
+
+            snowContainer.appendChild(snowflake);
+
+            // Удаляем снежинку после падения
+            setTimeout(() => {
+                if (snowflake.parentNode) {
+                    snowflake.remove();
+                }
+            }, (duration + 5) * 1000);
+        }
+
+        // Запуск снега
+        function startSnow() {
+            snowContainer.innerHTML = '';
+            // Создаем первые снежинки сразу
+            for (let i = 0; i < 40; i++) {
+                setTimeout(createSnowflake, i * 10);
+            }
+            // И затем добавляем новые каждые 150 мс
+            if (snowInterval) clearInterval(snowInterval);
+            snowInterval = setInterval(createSnowflake, 150);
+        }
+
+        // Остановка снега
+        function stopSnow() {
+            if (snowInterval) {
+                clearInterval(snowInterval);
+                snowInterval = null;
+            }
+            snowContainer.innerHTML = '';
+        }
+
+        // Проверяем тему при загрузке
+        if (document.documentElement.getAttribute('data-theme') === 'dark') {
+            startSnow();
+        }
+
+        // Следим за сменой темы
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.attributeName === 'data-theme') {
+                    const currentTheme = document.documentElement.getAttribute('data-theme');
+                    if (currentTheme === 'dark') {
+                        startSnow();
+                    } else {
+                        stopSnow();
+                    }
+                }
+            });
+        });
+
         observer.observe(document.documentElement, { attributes: true });
     });
 })();

@@ -83,7 +83,7 @@
 }
 
 [data-theme="dark"] body {
-    background-image: url('img/space_bg.jpg'); 
+    background-image: url('img/winter_bg.jpg'); 
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -680,5 +680,56 @@ footer { background: var(--bg-header); margin-top: 3rem; padding: 2.5rem 0 1rem;
     }
     .media-row img {
         height: 250px;
+    }
+}
+
+
+/* ============================================================
+   ЗИМНИЙ СНЕГ (ТЁМНАЯ ТЕМА)
+   ============================================================ */
+
+#snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Снег не мешает кликать по сайту */
+    z-index: -1; /* Снег на заднем плане, за карточками */
+    overflow: hidden;
+    display: none; /* Скрыт по умолчанию */
+}
+
+/* Показываем снег ТОЛЬКО в темной теме */
+[data-theme="dark"] #snow-container {
+    display: block;
+}
+
+/* Стиль снежинки */
+.snowflake {
+    position: absolute;
+    top: -10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    animation: snowfall linear infinite;
+}
+
+/* Анимация падения снега с легким покачиванием */
+@keyframes snowfall {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    25% {
+        transform: translateY(25vh) translateX(15px);
+    }
+    50% {
+        transform: translateY(50vh) translateX(-15px);
+    }
+    75% {
+        transform: translateY(75vh) translateX(15px);
+    }
+    100% {
+        transform: translateY(105vh) translateX(0);
     }
 }
