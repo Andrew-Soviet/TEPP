@@ -3,31 +3,36 @@
    ============================================================ */
 :root {
     font-size: 15px;
-    --bg-gradient-start: #667eea;
-    --bg-gradient-end: #764ba2;
-    --text-primary: #333;
-    --text-secondary: #666;
-    --text-muted: #999;
-    --bg-card: rgba(255, 255, 255, 0.95);
+    
+    --text-primary: #1e293b; 
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    
+    /* ПЛОТНЫЙ БЕЛЫЙ ФОН ДЛЯ КАРТОЧЕК (чтобы текст читался) */
+    --bg-card: #ffffff; 
     --bg-card-solid: #ffffff;
     --bg-header: rgba(255, 255, 255, 0.95);
-    --bg-input: #f5f5f5;
-    --border-color: #e0e0e0;
-    --shadow-color: rgba(0, 0, 0, 0.1);
-    --shadow-hover: rgba(102, 126, 234, 0.3);
-    --highlight-bg: rgba(102, 126, 234, 0.1);
-    --footer-border: rgba(0, 0, 0, 0.1);
+    --bg-input: #f8fafc;
+    
+    --border-color: #e2e8f0;
+    --shadow-color: rgba(0, 0, 0, 0.08);
+    --shadow-hover: rgba(59, 130, 246, 0.3); 
+    --highlight-bg: rgba(59, 130, 246, 0.1);
+    --footer-border: rgba(0, 0, 0, 0.05);
+    
     --modal-bg: #ffffff;
-    --modal-text: #333;
-    --btn-secondary-border: #667eea;
-    --btn-secondary-text: #667eea;
-    --accent-color: #667eea;
-    --accent-secondary: #764ba2;
-    --gradient-start: #667eea;
-    --gradient-end: #764ba2;
-    --settings-bg: rgba(255, 255, 255, 0.98);
+    --modal-text: #1e293b;
+    --btn-secondary-border: #3b82f6;
+    --btn-secondary-text: #3b82f6;
+    
+    --accent-color: #3b82f6; 
+    --accent-secondary: #8b5cf6;
+    --gradient-start: #3b82f6;
+    --gradient-end: #8b5cf6;
+    
+    --settings-bg: #ffffff;
     --settings-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-    --particles-bg: transparent;
+    
     --radius: 20px;
     --radius-sm: 10px;
     --radius-xs: 8px;
@@ -35,96 +40,65 @@
 }
 
 /* ============================================================
+   2. ФОН ДЛЯ СВЕТЛОЙ ТЕМЫ (ГДЕ КАРТИНКА)
+   ============================================================ */
+[data-theme="light"] body {
+    /* ЗДЕСЬ ВАША КАРТИНКА. Проверьте, что путь правильный! */
+    background-image: url('img/moscow_transport_bg.jpg'); 
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #e2e8f0; /* Запасной цвет, если картинка не загрузится */
+}
+
+/* ============================================================
    ТЕМА: КОСМОС (dark)
    ============================================================ */
 [data-theme="dark"] {
-    --bg-gradient-start: #050a14;
-    --bg-gradient-end: #0a1423;
-    --text-primary: #e0f0ff; /* Светло-голубой текст */
+    --bg-card: #0a1423; 
+    --bg-card-solid: #0a1423;
+    --bg-header: rgba(5, 10, 20, 0.95);
+    --bg-input: #0f1a2a;
+    --text-primary: #e0f0ff;
     --text-secondary: #90b0d0;
     --text-muted: #5a7a9a;
-    
-    /* Полупрозрачные темно-синие карточки */
-    --bg-card: rgba(10, 20, 35, 0.85); 
-    --bg-card-solid: #0a1423;
-    --bg-header: rgba(5, 10, 20, 0.9);
-    --bg-input: #0f1a2a;
-    
     --border-color: #1a3a5a;
     --shadow-color: rgba(0, 0, 0, 0.8);
-    --shadow-hover: rgba(77, 184, 255, 0.4); /* Голубое свечение */
+    --shadow-hover: rgba(77, 184, 255, 0.4);
     --highlight-bg: rgba(77, 184, 255, 0.1);
     --footer-border: rgba(77, 184, 255, 0.2);
-    
     --modal-bg: #0a1423;
     --modal-text: #e0f0ff;
     --btn-secondary-border: #4db8ff;
     --btn-secondary-text: #e0f0ff;
-    
-    --settings-bg: rgba(10, 20, 35, 0.98);
+    --settings-bg: #0a1423;
     --settings-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-    
-    --gradient-start: #4db8ff; /* Ярко-голубой */
-    --gradient-end: #0055aa;   /* Глубокий синий */
+    --gradient-start: #4db8ff;
+    --gradient-end: #0055aa;
     --accent-color: #4db8ff;
     --accent-secondary: #00d4ff;
-    
-    --particles-bg: transparent;
 }
 
-/* Фон с космонавтом */
 [data-theme="dark"] body {
-    background-image: linear-gradient(rgba(5, 10, 20, 0.4), rgba(5, 10, 20, 0.4)), url('img/space_bg.jpg') !important;
+    background-image: linear-gradient(rgba(5, 10, 20, 0.6), rgba(5, 10, 20, 0.6)), url('img/space_bg.jpg') !important;
     background-size: cover !important;
     background-position: center center !important;
     background-attachment: fixed !important;
     background-repeat: no-repeat !important;
 }
 
-/* Убираем старый градиент и частицы */
-[data-theme="dark"] .animated-bg,
-[data-theme="dark"] #particles-js {
-    display: none !important;
-}
-
-/* Свечение карточек при наведении (голубое) */
-[data-theme="dark"] .section-card:hover,
-[data-theme="dark"] .feature-item:hover,
-[data-theme="dark"] .train-card:hover,
-[data-theme="dark"] .gallery-item:hover,
-[data-theme="dark"] .random-page-card:hover {
-    box-shadow: 0 0 15px rgba(77, 184, 255, 0.5), inset 0 0 10px rgba(77, 184, 255, 0.1) !important;
-    border-color: #4db8ff !important;
-}
-
-/* Кнопки в космической теме */
-[data-theme="dark"] .btn-primary,
-[data-theme="dark"] .search-btn {
-    background: linear-gradient(135deg, #4db8ff 0%, #0055aa 100%) !important;
-    color: #ffffff !important;
-    box-shadow: 0 4px 15px rgba(77, 184, 255, 0.3) !important;
-}
-
-/* Результаты поиска */
-[data-theme="dark"] .search-result-item {
-    background: rgba(10, 20, 35, 0.9) !important;
-    border: 1px solid rgba(77, 184, 255, 0.3) !important;
-}
-[data-theme="dark"] .search-result-item a strong {
-    color: #4db8ff !important;
-    text-shadow: 0 0 5px rgba(77, 184, 255, 0.5) !important;
-}
-
+/* ============================================================
+   ТЕМА: МАТРИЦА (night)
+   ============================================================ */
 [data-theme="night"] {
-    --bg-gradient-start: #000;
-    --bg-gradient-end: #000;
+    --bg-card: #001a00;
+    --bg-card-solid: #001a00;
+    --bg-header: rgba(0, 10, 0, 0.95);
+    --bg-input: #002200;
     --text-primary: #e0ffe0;
     --text-secondary: #a0ffa0;
     --text-muted: #6b8f6b;
-    --bg-card: rgba(0, 15, 0, 0.85);
-    --bg-card-solid: #001a00;
-    --bg-header: rgba(0, 10, 0, 0.9);
-    --bg-input: #002200;
     --border-color: #004400;
     --shadow-color: rgba(0, 0, 0, 0.8);
     --shadow-hover: rgba(0, 255, 0, 0.4);
@@ -134,13 +108,12 @@
     --modal-text: #e0ffe0;
     --btn-secondary-border: #00ff00;
     --btn-secondary-text: #e0ffe0;
-    --settings-bg: rgba(0, 20, 0, 0.98);
+    --settings-bg: #001a00;
     --settings-shadow: 0 8px 32px rgba(0, 255, 0, 0.2);
     --gradient-start: #00ff00;
     --gradient-end: #008800;
     --accent-color: #00ff00;
     --accent-secondary: #00cc00;
-    --particles-bg: transparent;
 }
 
 [data-theme="night"] body {
@@ -150,21 +123,9 @@
     background-attachment: fixed;
 }
 
-[data-theme="night"] .animated-bg,
-[data-theme="night"] #particles-js,
-[data-theme="poster"] .animated-bg,
-[data-theme="poster"] #particles-js {
-    display: none;
-}
-
-[data-theme="night"] .section-card:hover,
-[data-theme="night"] .feature-item:hover,
-[data-theme="night"] .train-card:hover,
-[data-theme="night"] .gallery-item:hover {
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5), inset 0 0 10px rgba(0, 255, 0, 0.1) !important;
-    border-color: #00ff00 !important;
-}
-
+/* ============================================================
+   ТЕМА: СОВЕТСКИЙ ПЛАКАТ (poster)
+   ============================================================ */
 [data-theme="poster"] {
     --bg-card: #f4e8d3;
     --bg-card-solid: #f4e8d3;
@@ -190,216 +151,49 @@
     --settings-shadow: 8px 8px 0px #2b1a18;
 }
 
-/* ============================================================
-   ИСПРАВЛЕНИЕ ФОНОВОГО ИЗОБРАЖЕНИЯ В ТЕМЕ «СОВЕТСКИЙ ПЛАКАТ»
-   ============================================================ */
 [data-theme="poster"] body {
     background-color: #d33a2c;
     background-image: url('img/back_fon.png');
-    background-size: cover; /* Возвращаем заполнение всего экрана */
+    background-size: cover;
     background-position: center center;
-    background-repeat: no-repeat; /* Убираем повторение плиткой */
-    background-attachment: fixed; /* Фон зафиксирован */
-}
-
-[data-theme="poster"] h1,
-[data-theme="poster"] h2,
-[data-theme="poster"] h3,
-[data-theme="poster"] .main-nav a,
-[data-theme="poster"] .btn,
-[data-theme="poster"] .card-header h2,
-[data-theme="poster"] .counter-number,
-[data-theme="poster"] .timeline-date,
-[data-theme="poster"] .route-number {
-    font-family: 'Russo One', 'Oswald', sans-serif !important;
-    text-transform: uppercase;
-}
-
-[data-theme="poster"] p,
-[data-theme="poster"] li,
-[data-theme="poster"] .card-description,
-[data-theme="poster"] .search-input,
-[data-theme="poster"] .filter-select,
-[data-theme="poster"] .random-photo-caption,
-[data-theme="poster"] .feature-item p,
-[data-theme="poster"] .stat-label,
-[data-theme="poster"] .timeline-content p {
-    font-family: 'Oswald', sans-serif !important;
-    letter-spacing: 0.02em;
-}
-
-[data-theme="poster"] section,
-[data-theme="poster"] .section-card {
-    background: var(--bg-card);
-    border: 4px solid #2b1a18;
-    box-shadow: 8px 8px 0px #2b1a18;
-    border-radius: 0;
-}
-
-[data-theme="poster"] header {
-    background: #d33a2c;
-    border-bottom: 4px solid #2b1a18;
-    box-shadow: none;
-}
-
-[data-theme="poster"] h1 {
-    color: #f4e8d3;
-    font-size: 3.5rem;
-    text-shadow: 3px 3px 0px #2b1a18;
-    background: none;
-    -webkit-text-fill-color: initial;
-}
-
-[data-theme="poster"] .subtitle {
-    color: #f4e8d3;
-    font-weight: 500;
-}
-
-[data-theme="poster"] .main-nav a {
-    color: #f4e8d3;
-    font-size: 1.1rem;
-    text-shadow: 2px 2px 0px #2b1a18;
-}
-
-[data-theme="poster"] .main-nav a:hover {
-    color: #2b1a18;
-    background: #f4e8d3;
-    text-shadow: none;
-}
-
-[data-theme="poster"] .card-header {
-    background: #2b1a18 !important;
-    border-radius: 0;
-    margin: -2rem -2rem 1.5rem -2rem;
-    padding: 1rem 2rem;
-}
-
-[data-theme="poster"] .card-header h2 {
-    color: #f4e8d3;
-    -webkit-text-fill-color: #f4e8d3;
-    font-size: 1.8rem;
-}
-
-[data-theme="poster"] h2 {
-    color: #d33a2c;
-    background: none;
-    -webkit-text-fill-color: initial;
-    border-bottom: 3px solid #d33a2c;
-}
-
-[data-theme="poster"] .hero h2 {
-    color: #c32b1e !important;
-    -webkit-text-fill-color: #c32b1e !important;
-    border-bottom: none;
-}
-
-[data-theme="poster"] .counter-number {
-    color: #c32b1e !important;
-    -webkit-text-fill-color: #c32b1e !important;
-}
-
-[data-theme="poster"] .btn-primary,
-[data-theme="poster"] .search-btn {
-    background: #c32b1e;
-    color: #f4e8d3;
-    border: 3px solid #2b1a18;
-    border-radius: 4px;
-    box-shadow: 4px 4px 0px #2b1a18;
-}
-
-[data-theme="poster"] .search-input,
-[data-theme="poster"] .filter-select {
-    background: #f4e8d3 !important;
-    border: 3px solid #2b1a18 !important;
-    color: #2b1a18 !important;
-    box-shadow: 4px 4px 0px #2b1a18;
-}
-
-[data-theme="poster"] .train-card,
-[data-theme="poster"] .feature-item {
-    background: #f4e8d3;
-    border: 3px solid #2b1a18;
-    border-radius: 0;
-    box-shadow: 4px 4px 0px #2b1a18;
-}
-
-[data-theme="poster"] .train-card h3,
-[data-theme="poster"] .feature-item h3 {
-    color: #c32b1e;
-    -webkit-text-fill-color: #c32b1e;
-}
-
-[data-theme="poster"] .quote-section {
-    background: #2b1a18;
-    border: none;
-}
-
-[data-theme="poster"] .quote-text {
-    color: #f4e8d3;
-}
-
-[data-theme="poster"] .quote-author {
-    color: #c32b1e;
-}
-
-[data-theme="poster"] footer {
-    background: #2b1a18;
-    border-top: 4px solid #c32b1e;
-}
-
-[data-theme="poster"] .footer-info h4,
-[data-theme="poster"] .footer-links h4,
-[data-theme="poster"] .footer-contact h4 {
-    color: #f4e8d3;
-    -webkit-text-fill-color: #f4e8d3;
-}
-
-[data-theme="poster"] .footer-links a,
-[data-theme="poster"] .footer-contact a {
-    color: #e83e2a;
-}
-
-[data-theme="poster"] .settings-toggle {
-    background: #f4e8d3;
-    border: 3px solid #2b1a18;
-    color: #2b1a18;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /* ============================================================
-   2. БАЗОВЫЕ СТИЛИ
+   3. БАЗОВЫЕ СТИЛИ
    ============================================================ */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: var(--text-primary);
-    background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
     min-height: 100vh;
     overflow-x: hidden;
     transition: background 0.3s ease, color 0.3s ease;
 }
+
 #particles-js {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
-    background: var(--particles-bg);
 }
+
 .animated-bg {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; overflow: hidden;
 }
-.gradient-bg {
-    position: absolute; width: 200%; height: 200%;
-    background: linear-gradient(45deg, var(--bg-gradient-start), var(--bg-gradient-end), var(--bg-gradient-start), var(--bg-gradient-end));
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    top: -50%; left: -50%;
-}
-@keyframes gradient {
-    0% { transform: rotate(0deg) scale(1); }
-    50% { transform: rotate(180deg) scale(1.1); }
-    100% { transform: rotate(360deg) scale(1); }
+
+[data-theme="light"] .animated-bg,
+[data-theme="light"] #particles-js,
+[data-theme="dark"] .animated-bg,
+[data-theme="dark"] #particles-js,
+[data-theme="night"] .animated-bg,
+[data-theme="night"] #particles-js,
+[data-theme="poster"] .animated-bg,
+[data-theme="poster"] #particles-js {
+    display: none !important; /* Отключаем старые анимации, чтобы не мешали картинкам */
 }
 
 /* ============================================================
-   3. ПАНЕЛЬ НАСТРОЕК
+   4. ПАНЕЛЬ НАСТРОЕК
    ============================================================ */
 .settings-panel { position: fixed; top: 10px; right: 10px; z-index: 1001; }
 .settings-toggle {
@@ -412,12 +206,11 @@ body {
 .settings-toggle:hover { transform: scale(1.05); }
 .settings-dropdown {
     position: absolute; top: 52px; right: 0; min-width: 280px;
-    background: var(--settings-bg); backdrop-filter: blur(12px);
+    background: var(--settings-bg); 
     border-radius: var(--radius); box-shadow: var(--settings-shadow);
     padding: 1.2rem; display: none; border: 1px solid var(--border-color);
 }
-.settings-dropdown.active { display: block; animation: slideDown 0.3s ease; }
-@keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+.settings-dropdown.active { display: block; }
 .settings-section { margin-bottom: 1.2rem; }
 .settings-section:last-child { margin-bottom: 0; }
 .settings-label { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.5rem; display: block; }
@@ -435,11 +228,11 @@ body {
 .mode-hint { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem; font-style: italic; }
 
 /* ============================================================
-   4. ШАПКА И НАВИГАЦИЯ
+   5. ШАПКА И НАВИГАЦИЯ
    ============================================================ */
 header {
-    background: var(--bg-header); backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px var(--shadow-color);
+    background: var(--bg-header); 
+    box-shadow: 0 4px 20px var(--shadow-color);
     position: sticky; top: 0; z-index: 1000;
     border-bottom: 3px solid var(--accent-color);
     transition: transform 0.3s ease-in-out, background 0.3s ease;
@@ -461,18 +254,18 @@ h1 {
 [data-theme="poster"] .main-nav a:hover { color: #1a1a1a; }
 
 /* ============================================================
-   5. КОНТЕНТ И СЕКЦИИ
+   6. КОНТЕНТ И СЕКЦИИ
    ============================================================ */
 main { max-width: 1200px; margin: 2rem auto; padding: 0 2rem; position: relative; z-index: 1; }
 section {
-    background: var(--bg-card); backdrop-filter: blur(10px);
-    border-radius: var(--radius); padding: 2rem; margin-bottom: 2rem;
-    box-shadow: 0 20px 40px var(--shadow-color);
+    background: var(--bg-card); 
+    border-radius: var(--radius); 
+    padding: 2rem; 
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px var(--shadow-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    opacity: 0; transform: translateY(20px); animation: fadeInUp 0.6s ease forwards;
 }
-section:hover { transform: translateY(-4px); }
-@keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+section:hover { transform: translateY(-2px); }
 h2 {
     font-size: 2rem; margin-bottom: 1.5rem;
     background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
@@ -481,34 +274,89 @@ h2 {
 }
 
 /* ============================================================
-   6. ТАБЛИЦЫ И СЕТКИ
+   СПЕЦИАЛЬНЫЕ СТИЛИ ДЛЯ ПЛАКАТА
+   ============================================================ */
+[data-theme="poster"] h1,
+[data-theme="poster"] h2,
+[data-theme="poster"] h3,
+[data-theme="poster"] .main-nav a,
+[data-theme="poster"] .btn,
+[data-theme="poster"] .card-header h2,
+[data-theme="poster"] .counter-number,
+[data-theme="poster"] .timeline-date,
+[data-theme="poster"] .route-number {
+    font-family: 'Russo One', 'Oswald', sans-serif !important;
+    text-transform: uppercase;
+}
+[data-theme="poster"] p,
+[data-theme="poster"] li,
+[data-theme="poster"] .card-description,
+[data-theme="poster"] .search-input,
+[data-theme="poster"] .filter-select,
+[data-theme="poster"] .random-photo-caption,
+[data-theme="poster"] .feature-item p,
+[data-theme="poster"] .stat-label,
+[data-theme="poster"] .timeline-content p {
+    font-family: 'Oswald', sans-serif !important;
+    letter-spacing: 0.02em;
+}
+[data-theme="poster"] section,
+[data-theme="poster"] .section-card {
+    background: var(--bg-card);
+    border: 4px solid #2b1a18;
+    box-shadow: 8px 8px 0px #2b1a18;
+    border-radius: 0;
+}
+[data-theme="poster"] header {
+    background: #d33a2c;
+    border-bottom: 4px solid #2b1a18;
+    box-shadow: none;
+}
+[data-theme="poster"] h1 { color: #f4e8d3; font-size: 3.5rem; text-shadow: 3px 3px 0px #2b1a18; background: none; -webkit-text-fill-color: initial; }
+[data-theme="poster"] .subtitle { color: #f4e8d3; font-weight: 500; }
+[data-theme="poster"] .main-nav a { color: #f4e8d3; font-size: 1.1rem; text-shadow: 2px 2px 0px #2b1a18; }
+[data-theme="poster"] .main-nav a:hover { color: #2b1a18; background: #f4e8d3; text-shadow: none; }
+[data-theme="poster"] h2 { color: #d33a2c; background: none; -webkit-text-fill-color: initial; border-bottom: 3px solid #d33a2c; }
+[data-theme="poster"] .counter-number { color: #c32b1e !important; -webkit-text-fill-color: #c32b1e !important; }
+[data-theme="poster"] .btn-primary, [data-theme="poster"] .search-btn { background: #c32b1e; color: #f4e8d3; border: 3px solid #2b1a18; border-radius: 4px; box-shadow: 4px 4px 0px #2b1a18; }
+[data-theme="poster"] .search-input, [data-theme="poster"] .filter-select { background: #f4e8d3 !important; border: 3px solid #2b1a18 !important; color: #2b1a18 !important; box-shadow: 4px 4px 0px #2b1a18; }
+[data-theme="poster"] .train-card, [data-theme="poster"] .feature-item { background: #f4e8d3; border: 3px solid #2b1a18; border-radius: 0; box-shadow: 4px 4px 0px #2b1a18; }
+[data-theme="poster"] .train-card h3, [data-theme="poster"] .feature-item h3 { color: #c32b1e; -webkit-text-fill-color: #c32b1e; }
+[data-theme="poster"] footer { background: #2b1a18; border-top: 4px solid #c32b1e; }
+[data-theme="poster"] .footer-info h4, [data-theme="poster"] .footer-links h4, [data-theme="poster"] .footer-contact h4 { color: #f4e8d3; -webkit-text-fill-color: #f4e8d3; }
+[data-theme="poster"] .footer-links a, [data-theme="poster"] .footer-contact a { color: #e83e2a; }
+[data-theme="poster"] .settings-toggle { background: #f4e8d3; border: 3px solid #2b1a18; color: #2b1a18; }
+
+/* ============================================================
+   7. ТАБЛИЦЫ И СЕТКИ
    ============================================================ */
 table { width: 100%; border-collapse: collapse; margin: 1rem 0; border-radius: var(--radius-sm); overflow: hidden; }
 th { background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%); color: white; padding: 0.8rem 1rem; }
 td { padding: 0.7rem 1rem; border-bottom: 1px solid var(--border-color); }
 tr:hover td { background: var(--highlight-bg); }
 
-.equipment-grid, .features-grid, .trains-grid {
-    display: grid; gap: 1.5rem; margin: 1.5rem 0;
-}
+.equipment-grid, .features-grid, .trains-grid { display: grid; gap: 1.5rem; margin: 1.5rem 0; }
 .equipment-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
 .features-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 .trains-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 
 /* ============================================================
-   7. КАРТОЧКИ (СЧЕТЧИКИ, ТАЙМЛАЙН, ГАЛЕРЕЯ)
+   8. КАРТОЧКИ
    ============================================================ */
 .counter-container { display: flex; justify-content: center; gap: 3rem; margin: 2rem 0; flex-wrap: wrap; }
 .counter-number { font-size: 3rem; font-weight: 700; background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; }
 .counter-label { color: var(--text-secondary); font-size: 0.95rem; text-transform: uppercase; }
 
-.timeline { position: relative; padding: 2rem 0; }
-.timeline::before { content: ''; position: absolute; left: 50%; transform: translateX(-50%); width: 2px; height: 100%; background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end)); }
-.timeline-item { display: flex; justify-content: space-between; margin-bottom: 2rem; }
-.timeline-date { width: 110px; background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%); color: white; padding: 0.4rem 0.8rem; border-radius: 25px; text-align: center; font-weight: bold; }
-.timeline-content { width: calc(100% - 140px); background: var(--bg-card-solid); padding: 1rem; border-radius: var(--radius-sm); }
+.timeline { position: relative; padding: 2rem 0; margin: 2rem 0; }
+.timeline::before { content: ''; position: absolute; left: 50%; transform: translateX(-50%); width: 3px; height: 100%; background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end)); border-radius: 3px; }
+.timeline-item { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2.5rem; position: relative; width: 100%; }
+.timeline-date { width: 120px; background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%); color: white; padding: 0.6rem 1rem; border-radius: 25px; text-align: center; font-weight: bold; font-size: 1rem; box-shadow: 0 4px 12px var(--shadow-hover); flex-shrink: 0; }
+.timeline-content { width: calc(100% - 160px); background: var(--bg-card-solid); padding: 1.2rem; border-radius: var(--radius-sm); box-shadow: 0 4px 12px var(--shadow-color); color: var(--text-primary); }
+.timeline-content h3 { background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem; font-size: 1.2rem; }
 
-/* Основная галерея (на страницах статей) */
+/* ============================================================
+   9. ГАЛЕРЕЯ
+   ============================================================ */
 .image-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
 .gallery-item { position: relative; overflow: hidden; border-radius: var(--radius-sm); cursor: pointer; box-shadow: 0 8px 16px var(--shadow-color); }
 .gallery-item img { width: 100%; height: auto; display: block; transition: transform 0.5s ease; }
@@ -516,34 +364,13 @@ tr:hover td { background: var(--highlight-bg); }
 .gallery-caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white; padding: 0.8rem; transform: translateY(100%); transition: transform 0.3s ease; font-size: 0.9rem; }
 .gallery-item:hover .gallery-caption { transform: translateY(0); }
 
-/* ============================================================
-   8. СЛУЧАЙНЫЕ ФОТО (СЕТКА 3 В РЯД НА ПК)
-   ============================================================ */
-#randomPhoto {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 1rem !important;
-}
-#randomPhoto .random-photo-item {
-    display: flex !important; flex-direction: column !important;
-    width: 100% !important; height: 100% !important;
-    background: var(--bg-card-solid) !important;
-    border-radius: var(--radius-sm) !important; overflow: hidden !important;
-    box-shadow: 0 4px 12px var(--shadow-color) !important;
-}
-#randomPhoto .random-photo-item img {
-    width: 100% !important; height: 200px !important;
-    object-fit: cover !important; display: block !important;
-}
-#randomPhoto .random-photo-caption {
-    padding: 0.6rem !important; font-size: 0.85rem !important;
-    text-align: center !important; border-top: 1px solid var(--border-color) !important;
-    flex-grow: 1 !important; display: flex !important;
-    align-items: center !important; justify-content: center !important;
-}
+#randomPhoto { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 1rem !important; }
+#randomPhoto .random-photo-item { display: flex !important; flex-direction: column !important; width: 100% !important; height: 100% !important; background: var(--bg-card-solid) !important; border-radius: var(--radius-sm) !important; overflow: hidden !important; box-shadow: 0 4px 12px var(--shadow-color) !important; }
+#randomPhoto .random-photo-item img { width: 100% !important; height: 200px !important; object-fit: cover !important; display: block !important; }
+#randomPhoto .random-photo-caption { padding: 0.6rem !important; font-size: 0.85rem !important; text-align: center !important; border-top: 1px solid var(--border-color) !important; flex-grow: 1 !important; display: flex !important; align-items: center !important; justify-content: center !important; }
 
 /* ============================================================
-   9. КНОПКИ, МОДАЛКИ, ФУТЕР
+   10. КНОПКИ И ПОИСК
    ============================================================ */
 .btn { display: inline-block; padding: 0.7rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 500; transition: all 0.3s ease; border: none; cursor: pointer; }
 .btn-primary { background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%); color: white; }
@@ -551,22 +378,38 @@ tr:hover td { background: var(--highlight-bg); }
 .btn-secondary { background: transparent; color: var(--btn-secondary-text); border: 2px solid var(--btn-secondary-border); }
 .btn-secondary:hover { background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%); color: white; border-color: transparent; }
 
-.scroll-top {
-    position: fixed; bottom: 30px; right: 30px; width: 46px; height: 46px;
-    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
-    border-radius: 50%; display: flex; align-items: center; justify-content: center;
-    color: white; font-size: 22px; cursor: pointer; opacity: 0; visibility: hidden;
-    border: 2px solid var(--accent-color); z-index: 999; transition: all 0.3s ease;
-}
+.search-section .card-content { padding: 1.5rem !important; }
+.search-filters { display: flex; flex-direction: column; gap: 1rem; margin: 0 !important; }
+.filter-row { display: flex; gap: 0.8rem; align-items: center; flex-wrap: nowrap; }
+.filter-row .search-input { flex: 1 1 auto !important; min-width: 0 !important; padding: 0.8rem 1.2rem !important; border: 2px solid var(--border-color) !important; border-radius: 30px !important; background: var(--bg-input) !important; color: var(--text-primary) !important; font-size: 1rem !important; }
+.filter-row .search-btn { flex: 0 0 auto !important; padding: 0.8rem 2rem !important; border-radius: 30px !important; background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%) !important; color: white !important; font-weight: 500 !important; border: none !important; cursor: pointer !important; transition: all 0.3s ease !important; }
+.filter-row .search-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px var(--shadow-hover); }
+.filter-row .filter-select { flex: 1 1 0 !important; min-width: 0 !important; padding: 0.7rem 1rem !important; border: 2px solid var(--border-color) !important; border-radius: 30px !important; background: var(--bg-input) !important; color: var(--text-primary) !important; font-family: inherit !important; font-size: 0.95rem !important; cursor: pointer !important; }
+.filter-row .search-input:focus, .filter-row .filter-select:focus { outline: none !important; border-color: var(--accent-color) !important; box-shadow: 0 0 0 3px var(--highlight-bg) !important; }
+
+.search-result-item { background: var(--bg-card-solid) !important; border: 1px solid var(--border-color) !important; margin-bottom: 0.6rem !important; padding: 0.8rem 1rem !important; border-radius: var(--radius-sm) !important; display: block !important; }
+.search-result-item a { display: flex !important; flex-direction: column !important; align-items: flex-start !important; gap: 0.3rem !important; text-decoration: none !important; color: var(--text-primary) !important; }
+.search-result-item a strong { font-size: 1.05rem !important; color: var(--accent-color) !important; -webkit-text-fill-color: var(--accent-color) !important; }
+.search-result-item .result-tag { display: inline-block !important; background: var(--highlight-bg) !important; color: var(--text-secondary) !important; font-size: 0.75rem !important; padding: 0.15rem 0.5rem !important; border-radius: 10px !important; margin-right: 0.3rem !important; font-weight: 600 !important; }
+
+.random-pages { display: grid !important; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)) !important; gap: 1rem !important; margin-top: 1.5rem !important; }
+.random-page-card { display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; text-align: center !important; padding: 1.2rem 1rem !important; background: var(--bg-card-solid) !important; border-radius: var(--radius-sm) !important; box-shadow: 0 4px 12px var(--shadow-color) !important; border: 1px solid transparent !important; text-decoration: none !important; color: var(--text-primary) !important; transition: all 0.3s ease !important; }
+.random-page-card:hover { transform: translateY(-4px) !important; border-color: var(--accent-color) !important; box-shadow: 0 8px 20px var(--shadow-hover) !important; }
+.random-page-card .icon { font-size: 2.5rem !important; margin-bottom: 0.5rem !important; line-height: 1 !important; }
+.random-page-card .title { font-size: 0.9rem !important; font-weight: 500 !important; line-height: 1.3 !important; word-wrap: break-word !important; }
+
+/* ============================================================
+   11. МОДАЛКИ И ФУТЕР
+   ============================================================ */
+.scroll-top { position: fixed; bottom: 30px; right: 30px; width: 46px; height: 46px; background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 22px; cursor: pointer; opacity: 0; visibility: hidden; border: 2px solid var(--accent-color); z-index: 999; transition: all 0.3s ease; }
 .scroll-top.visible { opacity: 1; visibility: visible; }
 
 .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 2000; justify-content: center; align-items: center; }
 .modal.active { display: flex; }
 .modal-content { background: var(--modal-bg); padding: 2rem; border-radius: var(--radius); max-width: 600px; width: 90%; max-height: 85vh; overflow-y: auto; animation: modalSlideIn 0.4s ease; }
-@keyframes modalSlideIn { from { transform: translateY(-60px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 .modal-close { position: absolute; top: 10px; right: 15px; font-size: 28px; cursor: pointer; color: var(--text-secondary); }
 
-footer { background: var(--bg-card); backdrop-filter: blur(10px); margin-top: 3rem; padding: 2.5rem 0 1rem; border-top: 3px solid var(--accent-color); z-index: 1; }
+footer { background: var(--bg-header); margin-top: 3rem; padding: 2.5rem 0 1rem; border-top: 3px solid var(--accent-color); z-index: 1; }
 .footer-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
 .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
 .footer-info h4, .footer-links h4, .footer-contact h4 { background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
@@ -575,7 +418,7 @@ footer { background: var(--bg-card); backdrop-filter: blur(10px); margin-top: 3r
 .footer-bottom { text-align: center; padding-top: 1.5rem; border-top: 1px solid var(--footer-border); color: var(--text-secondary); }
 
 /* ============================================================
-   10. МОБИЛЬНАЯ АДАПТАЦИЯ (ОПТИМИЗИРОВАННАЯ)
+   12. МОБИЛЬНАЯ АДАПТАЦИЯ
    ============================================================ */
 @media (max-width: 768px) {
     html, body { overflow-x: hidden; width: 100%; }
@@ -583,38 +426,23 @@ footer { background: var(--bg-card); backdrop-filter: blur(10px); margin-top: 3r
     h1 { font-size: 1.5rem; word-wrap: break-word; }
     h2 { font-size: 1.3rem; }
     main { padding: 0 1rem; margin-top: 1rem; }
-
     .section-card, .hero, .quote-section { padding: 1rem !important; margin-bottom: 1rem !important; }
-
-    /* Шапки карточек */
     .card-header { padding: 0.5rem 0.8rem !important; margin: -1rem -1rem 1rem -1rem !important; flex-direction: row !important; align-items: center !important; gap: 0.5rem !important; }
     .card-header h2 { font-size: 1rem !important; line-height: 1.2 !important; margin: 0 !important; }
     .card-header .card-icon { font-size: 1.2rem !important; margin: 0 !important; }
     .card-content { padding-top: 0 !important; }
-
-    /* Сетки (Карточки 2 колонки) */
-    .features-grid, .trains-grid, .equipment-grid,
-    [data-theme="poster"] .features-grid, [data-theme="poster"] .trains-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 0.6rem !important;
-    }
+    .features-grid, .trains-grid, .equipment-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 0.6rem !important; }
     .feature-item, .train-card { padding: 0.8rem !important; font-size: 0.85rem !important; min-width: 0; }
     .feature-item h3, .train-card h3 { font-size: 0.95rem !important; margin-bottom: 0.4rem; }
     .feature-item p, .train-card p { font-size: 0.8rem !important; }
-
-    /* Галерея на телефоне (2 колонки) */
     .image-gallery { grid-template-columns: repeat(2, 1fr) !important; gap: 0.5rem !important; }
     .gallery-item { display: flex !important; flex-direction: column !important; height: 100%; }
     .gallery-item img { height: 140px !important; width: 100% !important; object-fit: cover !important; }
     .gallery-caption { position: static !important; background: none !important; color: var(--text-primary) !important; font-size: 0.7rem !important; padding: 0.1rem 0 !important; text-align: center !important; }
     .gallery-item p { font-size: 0.65rem !important; margin-top: 0 !important; padding: 0 !important; }
-
-    /* Случайные фото на телефоне (2 колонки) */
     #randomPhoto { grid-template-columns: repeat(2, 1fr) !important; gap: 0.5rem !important; }
     #randomPhoto .random-photo-item img { height: 120px !important; }
     #randomPhoto .random-photo-caption { font-size: 0.7rem !important; padding: 0.3rem !important; }
-
-    /* Навигация и прочее */
     .main-nav { flex-direction: column; gap: 0.3rem; }
     .counter-container { gap: 1.5rem; }
     .counter-number { font-size: 2.2rem; }
@@ -622,307 +450,127 @@ footer { background: var(--bg-card); backdrop-filter: blur(10px); margin-top: 3r
     .hero-text { font-size: 1rem; }
     .search-section .search-btn { width: 100% !important; }
     .settings-dropdown { min-width: 240px; right: -10px; }
+    .filter-row { flex-wrap: wrap !important; }
+    .filter-row .search-input, .filter-row .search-btn, .filter-row .filter-select { flex: 1 1 100% !important; width: 100% !important; }
+    .timeline::before { left: 20px; }
+    .timeline-item { flex-direction: column; padding-left: 50px; }
+    .timeline-date { margin-bottom: 0.8rem; width: 100px; }
+    .timeline-content { width: 100%; }
+    .random-pages { grid-template-columns: repeat(2, 1fr) !important; gap: 0.6rem !important; }
+    .random-page-card { padding: 0.8rem 0.5rem !important; }
+    .random-page-card .icon { font-size: 2rem !important; }
+    .random-page-card .title { font-size: 0.8rem !important; }
 }
-
-
 
 /* ============================================================
-   ВОЗВРАЩАЕМ КРАСИВЫЙ ТАЙМЛАЙН
+   ПОДСВЕТКА БЛОКОВ ПРИ НАВЕДЕНИИ (ДЛЯ ВСЕХ ТЕМ)
    ============================================================ */
-.timeline {
-    position: relative;
-    padding: 2rem 0;
-    margin: 2rem 0;
-}
 
-/* Центральная линия */
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 3px;
-    height: 100%;
-    background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
-    border-radius: 3px;
-}
-
-.timeline-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start; /* Выравниваем по верхнему краю */
-    margin-bottom: 2.5rem;
-    position: relative;
-    width: 100%;
-}
-
-/* Плашка с датой */
-.timeline-date {
-    width: 120px;
-    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
-    color: white;
-    padding: 0.6rem 1rem;
-    border-radius: 25px; /* Скругление как было */
-    text-align: center;
-    font-weight: bold;
-    font-size: 1rem;
-    box-shadow: 0 4px 12px var(--shadow-hover);
-    flex-shrink: 0; /* Чтобы дата не сжималась */
-}
-
-/* Контент таймлайна (текст справа) */
-.timeline-content {
-    width: calc(100% - 160px); /* Отнимаем ширину даты и отступ */
-    background: var(--bg-card-solid);
-    padding: 1.2rem;
-    border-radius: var(--radius-sm);
-    box-shadow: 0 4px 12px var(--shadow-color);
-    color: var(--text-primary);
-}
-
-.timeline-content h3 {
-    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-}
-
-/* Для мобильных телефонов (чтобы таймлайн был в одну колонку) */
-@media (max-width: 768px) {
-    .timeline::before {
-        left: 20px; /* Сдвигаем линию влево на мобилках */
-    }
-    .timeline-item {
-        flex-direction: column;
-        padding-left: 50px; /* Отступ для текста, чтобы не налезал на линию */
-    }
-    .timeline-date {
-        margin-bottom: 0.8rem;
-        width: 100px;
-    }
-    .timeline-content {
-        width: 100%;
-    }
-}
-
-
-/* ============================================================
-   КРАСИВЫЙ ПОИСК (ВОЗВРАЩАЕМ СТИЛЬ)
-   ============================================================ */
-.search-section .card-content {
-    padding: 1.5rem !important;
-}
-
-.search-filters {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin: 0 !important;
-}
-
-.filter-row {
-    display: flex;
-    gap: 0.8rem;
-    align-items: center;
-    flex-wrap: nowrap; /* Запрещаем перенос на десктопе */
-}
-
-/* Поле ввода */
-.filter-row .search-input {
-    flex: 1 1 auto !important; /* Растягиваем на всю ширину */
-    min-width: 0 !important;
-    padding: 0.8rem 1.2rem !important;
-    border: 2px solid var(--border-color) !important;
-    border-radius: 30px !important;
-    background: var(--bg-input) !important;
-    color: var(--text-primary) !important;
-    font-size: 1rem !important;
-}
-
-/* Кнопка "Найти" */
-.filter-row .search-btn {
-    flex: 0 0 auto !important; /* Не растягиваем кнопку */
-    padding: 0.8rem 2rem !important;
-    border-radius: 30px !important;
-    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%) !important;
-    color: white !important;
-    font-weight: 500 !important;
-    border: none !important;
-    cursor: pointer !important;
+/* 1. БАЗОВАЯ ТЕМА (Светлая) - Голубая подсветка */
+[data-theme="light"] section,
+[data-theme="light"] .feature-item,
+[data-theme="light"] .train-card,
+[data-theme="light"] .random-page-card {
     transition: all 0.3s ease !important;
 }
-
-.filter-row .search-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px var(--shadow-hover);
+[data-theme="light"] section:hover,
+[data-theme="light"] .feature-item:hover,
+[data-theme="light"] .train-card:hover,
+[data-theme="light"] .random-page-card:hover {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4) !important; /* Голубое свечение */
+    border: 2px solid #3b82f6 !important; /* Голубая рамка */
+    transform: translateY(-4px) !important; /* Легкий подъем */
 }
 
-/* Выпадающие списки (Тип, Город, Страна) */
-.filter-row .filter-select {
-    flex: 1 1 0 !important; /* Равномерно распределяем ширину */
-    min-width: 0 !important;
-    padding: 0.7rem 1rem !important;
-    border: 2px solid var(--border-color) !important;
-    border-radius: 30px !important;
-    background: var(--bg-input) !important;
-    color: var(--text-primary) !important;
-    font-family: inherit !important;
-    font-size: 0.95rem !important;
-    cursor: pointer !important;
-}
-
-/* Убираем встроенную обводку браузера при фокусе */
-.filter-row .search-input:focus,
-.filter-row .filter-select:focus {
-    outline: none !important;
-    border-color: var(--accent-color) !important;
-    box-shadow: 0 0 0 3px var(--highlight-bg) !important;
-}
-
-/* На мобильных телефонах разрешаем переносить элементы в колонку */
-@media (max-width: 768px) {
-    .filter-row {
-        flex-wrap: wrap !important;
-    }
-    .filter-row .search-input,
-    .filter-row .search-btn,
-    .filter-row .filter-select {
-        flex: 1 1 100% !important;
-        width: 100% !important;
-    }
-}
-
-/* ============================================================
-   ВОЗВРАЩАЕМ СЕТКУ ДЛЯ СЛУЧАЙНЫХ СТРАНИЦ
-   ============================================================ */
-.random-pages {
-    display: grid !important;
-    /* На ПК — 3-4 колонки, на планшетах — 2, на телефонах — 2 */
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)) !important;
-    gap: 1rem !important;
-    margin-top: 1.5rem !important;
-}
-
-.random-page-card {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    padding: 1.2rem 1rem !important;
-    background: var(--bg-card-solid) !important;
-    border-radius: var(--radius-sm) !important;
-    box-shadow: 0 4px 12px var(--shadow-color) !important;
-    border: 1px solid transparent !important;
-    text-decoration: none !important;
-    color: var(--text-primary) !important;
+/* 2. ТЕМА: КОСМОС (dark) - Синяя подсветка */
+[data-theme="dark"] section,
+[data-theme="dark"] .feature-item,
+[data-theme="dark"] .train-card,
+[data-theme="dark"] .random-page-card {
     transition: all 0.3s ease !important;
 }
-
-.random-page-card:hover {
+[data-theme="dark"] section:hover,
+[data-theme="dark"] .feature-item:hover,
+[data-theme="dark"] .train-card:hover,
+[data-theme="dark"] .random-page-card:hover {
+    box-shadow: 0 0 20px rgba(77, 184, 255, 0.6), inset 0 0 10px rgba(77, 184, 255, 0.2) !important; /* Ярко-синее свечение */
+    border: 2px solid #4db8ff !important; /* Синяя рамка */
     transform: translateY(-4px) !important;
-    border-color: var(--accent-color) !important;
-    box-shadow: 0 8px 20px var(--shadow-hover) !important;
 }
 
-.random-page-card .icon {
-    font-size: 2.5rem !important;
-    margin-bottom: 0.5rem !important;
-    line-height: 1 !important;
-}
-
-.random-page-card .title {
-    font-size: 0.9rem !important;
-    font-weight: 500 !important;
-    line-height: 1.3 !important;
-    word-wrap: break-word !important;
-}
-
-/* Специально для темы «Матрица», чтобы карточки не терялись на фоне */
+/* 3. ТЕМА: МАТРИЦА (night) - Зеленая подсветка */
+[data-theme="night"] section,
+[data-theme="night"] .feature-item,
+[data-theme="night"] .train-card,
 [data-theme="night"] .random-page-card {
-    background: rgba(0, 30, 0, 0.9) !important;
-    border: 1px solid rgba(0, 255, 0, 0.3) !important;
+    transition: all 0.3s ease !important;
 }
-
+[data-theme="night"] section:hover,
+[data-theme="night"] .feature-item:hover,
+[data-theme="night"] .train-card:hover,
 [data-theme="night"] .random-page-card:hover {
-    border-color: #00ff00 !important;
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.4) !important;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5), inset 0 0 10px rgba(0, 255, 0, 0.2) !important; /* Неоново-зеленое свечение */
+    border: 2px solid #00ff00 !important; /* Зеленая рамка */
+    transform: translateY(-4px) !important;
 }
 
-/* На телефонах делаем ровно 2 колонки */
-@media (max-width: 768px) {
-    .random-pages {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 0.6rem !important;
-    }
-    .random-page-card {
-        padding: 0.8rem 0.5rem !important;
-    }
-    .random-page-card .icon {
-        font-size: 2rem !important;
-    }
-    .random-page-card .title {
-        font-size: 0.8rem !important;
-    }
+/* 4. ТЕМА: СОВЕТСКИЙ ПЛАКАТ (poster) - Красная подсветка */
+[data-theme="poster"] section,
+[data-theme="poster"] .feature-item,
+[data-theme="poster"] .train-card,
+[data-theme="poster"] .random-page-card {
+    transition: all 0.3s ease !important;
+}
+[data-theme="poster"] section:hover,
+[data-theme="poster"] .feature-item:hover,
+[data-theme="poster"] .train-card:hover,
+[data-theme="poster"] .random-page-card:hover {
+    /* У плаката стиль жесткий, без размытия, просто плотная красная тень и сдвиг */
+    box-shadow: 8px 8px 0px #c32b1e !important; /* Красная жесткая тень */
+    border-color: #c32b1e !important; /* Меняем цвет рамки на красный */
+    transform: translate(-2px, -2px) !important; /* Сдвиг влево-вверх для эффекта объема */
 }
 
-/* ============================================================
-   ЖЁСТКОЕ ИСПРАВЛЕНИЕ ПОИСКА (ДЛЯ ВСЕХ ТЕМ)
-   ============================================================ */
-.search-result-item {
-    background: var(--bg-card-solid) !important;
-    border: 1px solid var(--border-color) !important;
-    margin-bottom: 0.6rem !important;
-    padding: 0.8rem 1rem !important;
-    border-radius: var(--radius-sm) !important;
-    display: block !important;
-}
-
-.search-result-item a {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 0.3rem !important;
-    text-decoration: none !important;
-    color: var(--text-primary) !important;
-}
-
-/* Название страницы — делаем крупным и акцентным */
-.search-result-item a strong {
-    font-size: 1.05rem !important;
-    color: var(--accent-color) !important;
-    -webkit-text-fill-color: var(--accent-color) !important;
-}
-
-/* Теги (город, тип) */
-.search-result-item .result-tag {
-    display: inline-block !important;
-    background: var(--highlight-bg) !important;
-    color: var(--text-secondary) !important;
-    font-size: 0.75rem !important;
-    padding: 0.15rem 0.5rem !important;
-    border-radius: 10px !important;
-    margin-right: 0.3rem !important;
-    font-weight: 600 !important;
-}
 
 /* ============================================================
-   СПЕЦИАЛЬНО ДЛЯ ТЕМЫ «МАТРИЦА»
+   ПОЛУПРОЗРАЧНОСТЬ БЛОКОВ (ДЛЯ ВСЕХ ТЕМ)
    ============================================================ */
-[data-theme="night"] .search-result-item {
-    background: rgba(0, 30, 0, 0.95) !important; /* Темно-зеленый фон карточки */
-    border: 1px solid #00ff00 !important; /* Неоновая рамка */
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2) !important;
+
+/* 1. Светлая тема - легкий белый туман */
+[data-theme="light"] section,
+[data-theme="light"] .section-card,
+[data-theme="light"] .feature-item,
+[data-theme="light"] .train-card,
+[data-theme="light"] .random-page-card {
+    background: rgba(255, 255, 255, 0.75) !important; /* 75% белого */
+    backdrop-filter: blur(5px) !important; /* Легкое размытие фона под блоком для читаемости */
 }
 
-[data-theme="night"] .search-result-item a strong {
-    color: #00ff00 !important; /* Ярко-зеленый текст */
-    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5) !important;
+/* 2. Космос - полупрозрачный темно-синий */
+[data-theme="dark"] section,
+[data-theme="dark"] .section-card,
+[data-theme="dark"] .feature-item,
+[data-theme="dark"] .train-card,
+[data-theme="dark"] .random-page-card {
+    background: rgba(10, 20, 35, 0.7) !important; /* 70% темного */
+    backdrop-filter: blur(5px) !important;
 }
 
-[data-theme="night"] .search-result-item .result-tag {
-    background: rgba(0, 255, 0, 0.1) !important;
-    color: #a0ffa0 !important;
-    border: 1px solid rgba(0, 255, 0, 0.3) !important;
+/* 3. Матрица - полупрозрачный черно-зеленый */
+[data-theme="night"] section,
+[data-theme="night"] .section-card,
+[data-theme="night"] .feature-item,
+[data-theme="night"] .train-card,
+[data-theme="night"] .random-page-card {
+    background: rgba(0, 20, 0, 0.7) !important; /* Темно-зеленый */
+    backdrop-filter: blur(5px) !important;
+}
+
+/* 4. Плакат - плотный, но чуть-чуть пропускает фон */
+[data-theme="poster"] section,
+[data-theme="poster"] .section-card,
+[data-theme="poster"] .feature-item,
+[data-theme="poster"] .train-card,
+[data-theme="poster"] .random-page-card {
+    background: rgba(244, 232, 211, 0.9) !important; /* 90% бежевого, чтобы не ломать стиль */
 }
