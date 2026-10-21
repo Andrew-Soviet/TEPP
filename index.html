@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,6 +31,21 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <div class="top-nav-links">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        <!-- Кнопка настроек в верхней панели -->
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <!-- ================= ШАПКА ================= -->
     <header>
         <div class="header-container">
             <div class="logo">
@@ -49,10 +66,6 @@
     </header>
 
     <main>
-
-        <!-- ============================================================
-             РЕЖИМ «ПОЗНАВАТЕЛЬНЫЙ» (standard)
-             ============================================================ -->
 
         <!-- Герой-секция -->
         <section id="about" class="hero standard-block">
@@ -77,20 +90,18 @@
             </div>
         </section>
 
-        <!-- ============================================================
-             ПОИСК С ФИЛЬТРАМИ — ВСЕГДА ВИДЕН
-             ============================================================ -->
-        <section class="section-card search-section">
+        <!-- Поиск с фильтрами -->
+        <section class="section-card search-section" id="search-section">
             <div class="card-header">
                 <span class="card-icon">🔍</span>
                 <h2>Поиск по энциклопедии</h2>
             </div>
             <div class="card-content">
                 <div class="search-filters">
-<div class="filter-row">
-    <input type="text" class="search-input" id="searchInput" placeholder="🔍 Поиск по номеру, модели, названию..." autocomplete="off">
-    <button class="search-btn" id="searchBtn">Найти</button>
-</div>
+                    <div class="filter-row">
+                        <input type="text" class="search-input" id="searchInput" placeholder="🔍 Поиск по номеру, модели, названию..." autocomplete="off">
+                        <button class="search-btn" id="searchBtn">Найти</button>
+                    </div>
 
                     <div class="filter-row">
                         <select class="filter-select" id="filterType">
@@ -164,11 +175,11 @@
                     </div>
                 </div>
 
-                <a href="about_project.html " class="btn btn-primary">Подробнее о проекте →</a>
+                <a href="about_project.html" class="btn btn-primary">Подробнее о проекте →</a>
             </div>
         </section>
 
-        <!-- Раздел «Железные дороги» -->
+        <!-- Железные дороги -->
         <section id="railways" class="section-card standard-block">
             <div class="card-header">
                 <span class="card-icon">🚊</span>
@@ -198,7 +209,7 @@
             </div>
         </section>
 
-        <!-- Раздел «Метрополитены» -->
+        <!-- Метрополитены -->
         <section id="metro" class="section-card standard-block">
             <div class="card-header">
                 <span class="card-icon">🚇</span>
@@ -228,7 +239,7 @@
             </div>
         </section>
 
-        <!-- Раздел «Городской транспорт» -->
+        <!-- Городской транспорт -->
         <section id="city" class="section-card standard-block">
             <div class="card-header">
                 <span class="card-icon">🚍</span>
@@ -258,7 +269,7 @@
             </div>
         </section>
 
-        <!-- Раздел «Музеи» -->
+        <!-- Музеи -->
         <section id="museums" class="section-card standard-block">
             <div class="card-header">
                 <span class="card-icon">🏛️</span>
@@ -288,7 +299,7 @@
             </div>
         </section>
 
-        <!-- Раздел «Транспортные игры» -->
+        <!-- Игры -->
         <section id="games" class="section-card standard-block">
             <div class="card-header" style="position: relative;">
                 <span class="card-icon">🎮</span>
@@ -327,10 +338,7 @@
             </div>
         </section>
 
-        <!-- ============================================================
-             РЕЖИМ «СЛУЧАЙНЫЙ» (random)
-             ============================================================ -->
-
+        <!-- Случайный режим -->
         <div class="random-section random-block">
             <div id="randomPhoto"></div>
             <div class="random-header">
@@ -341,7 +349,7 @@
         </div>
 
         <div class="mode-hint-footer" id="modeHintFooter">
-            💡 Хотите больше рекомендаций? Зайдите в <span onclick="document.getElementById('settingsToggle')?.click()">⚙️ Настройки</span> и переключите режим на «Случайный».
+            💡 Хотите больше рекомендаций? Зайдите в <span onclick="document.querySelector('.top-settings-btn')?.click()">⚙️ Настройки</span> и переключите режим на «Случайный».
         </div>
     </main>
 
@@ -385,6 +393,8 @@
             <div id="galleryModalContent"></div>
         </div>
     </div>
+
+    <!-- ВАЖНО: Убран <div id="settingsPanel"></div>, чтобы скрипт создал меню сам -->
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
     <script src="script.js" defer></script>

@@ -1,5 +1,5 @@
 // ============================================================
-// ЧАСТИЦЫ
+// ИНИЦИАЛИЗАЦИЯ ЧАСТИЦ
 // ============================================================
 (function initParticles() {
     const isMobile = window.matchMedia('(max-width: 768px)').matches;
@@ -35,16 +35,19 @@ function isMainPage() {
 }
 
 // ============================================================
-// ИНИЦИАЛИЗАЦИЯ
+// ГЛАВНЫЙ ЗАПУСК
 // ============================================================
 document.addEventListener('DOMContentLoaded', function() {
-    // --- АВТОМАТИЧЕСКОЕ СОЗДАНИЕ КОНТЕЙНЕРА ДЛЯ ЛИСТЬЕВ ---
     if (!document.getElementById('leaf-container')) {
         const leafContainer = document.createElement('div');
         leafContainer.id = 'leaf-container';
-        document.body.appendChild(leafContainer); // Вставляем в конец body
+        document.body.appendChild(leafContainer);
     }
-    // -------------------------------------------------------
+    if (!document.getElementById('snow-container')) {
+        const snowContainer = document.createElement('div');
+        snowContainer.id = 'snow-container';
+        document.body.appendChild(snowContainer);
+    }
 
     initSettings();
     initTheme();
@@ -59,14 +62,19 @@ document.addEventListener('DOMContentLoaded', function() {
     setupEscapeKey();
     setupGallery();
     setupHideHeaderOnScroll();
+    setupTelegramModal();
+    setupAutumnLeaves();
+    setupWinterSnow();
 });
 
 // ============================================================
-// НАСТРОЙКИ
+// НАСТРОЙКИ (ИСПРАВЛЕНО: БЕЗ ДУБЛИРУЮЩЕЙ КНОПКИ)
 // ============================================================
 function initSettings() {
-    const isMain = isMainPage();
+    // Если меню уже есть — не создаем
+    if (document.getElementById('settingsDropdown')) return;
 
+    const isMain = isMainPage();
     const modeButtons = isMain
         ? `
             <button class="settings-btn mode-btn" data-mode="standard" onclick="setMode('standard')">📖 Познавательный</button>
@@ -77,40 +85,44 @@ function initSettings() {
             <button class="settings-btn mode-btn" data-mode="gallery" onclick="setMode('gallery')">🖼️ Фотогалерея</button>
         `;
 
-    const settingsHTML = `
-        <div class="settings-panel" id="settingsPanel">
-            <button class="settings-toggle" id="settingsToggle" onclick="toggleSettings()" aria-label="Настройки сайта">⚙️</button>
-            <div class="settings-dropdown" id="settingsDropdown">
-                <div class="settings-section">
-                    <span class="settings-label">🌈 Тема</span>
-                    <div class="settings-options" id="themeOptions">
-                        <button class="theme-btn" data-theme="light" onclick="setTheme('light')" title="Светлая">☀️</button>
-                        <button class="theme-btn" data-theme="dark" onclick="setTheme('dark')" title="Тёмная">❄️</button>
-                        <button class="theme-btn" data-theme="poster" onclick="setTheme('poster')" title="Советский плакат">☭</button>
-                        <button class="theme-btn" data-theme="night" onclick="setTheme('night')" title="Ночной поезд">👨‍💻</button>
-                    </div>
+    // Создаем ТОЛЬКО выпадающее меню, без кнопки
+    const dropdownHTML = `
+        <div class="settings-dropdown" id="settingsDropdown">
+            <div class="settings-section">
+                <span class="settings-label">🌈 Тема</span>
+                <div class="settings-options" id="themeOptions">
+                    <button class="theme-btn" data-theme="light" onclick="setTheme('light')" title="Светлая">☀️</button>
+                    <button class="theme-btn" data-theme="dark" onclick="setTheme('dark')" title="Тёмная">❄️</button>
+                    <button class="theme-btn" data-theme="poster" onclick="setTheme('poster')" title="Советский плакат">☭</button>
+                    <button class="theme-btn" data-theme="night" onclick="setTheme('night')" title="Ночной поезд">👨‍💻</button>
                 </div>
-                <div class="settings-section">
-                    <span class="settings-label">📋 Режим</span>
-                    <div class="settings-options" id="modeOptions">
-                        ${modeButtons}
-                    </div>
-                    <div class="mode-hint" id="modeHint">Текущий режим: Познавательный</div>
+            </div>
+            <div class="settings-section">
+                <span class="settings-label">📋 Режим</span>
+                <div class="settings-options" id="modeOptions">
+                    ${modeButtons}
                 </div>
+                <div class="mode-hint" id="modeHint">Текущий режим: Познавательный</div>
             </div>
         </div>
     `;
-
-    if (!document.getElementById('settingsPanel')) {
-        document.body.insertAdjacentHTML('beforeend', settingsHTML);
-    }
-
+    document.body.insertAdjacentHTML('beforeend', dropdownHTML);
     loadSettings();
 }
 
 function toggleSettings() {
     const dropdown = document.getElementById('settingsDropdown');
-    if (dropdown) dropdown.classList.toggle('active');
+    if (dropdown) {
+        dropdown.classList.toggle('active');
+        // Позиционируем меню под кнопкой в верхней панели
+        const btn = document.querySelector('.top-settings-btn');
+        if (btn && dropdown.classList.contains('active')) {
+            const rect = btn.getBoundingClientRect();
+            dropdown.style.position = 'fixed';
+            dropdown.style.top = (rect.bottom + 5) + 'px';
+            dropdown.style.right = (window.innerWidth - rect.right) + 'px';
+        }
+    }
 }
 
 function closeSettings() {
@@ -119,8 +131,11 @@ function closeSettings() {
 }
 
 document.addEventListener('click', function(e) {
-    const panel = document.getElementById('settingsPanel');
-    if (panel && !panel.contains(e.target)) closeSettings();
+    const dropdown = document.getElementById('settingsDropdown');
+    const btn = document.querySelector('.top-settings-btn');
+    if (dropdown && btn && !dropdown.contains(e.target) && !btn.contains(e.target)) {
+        closeSettings();
+    }
 });
 
 function setupEscapeKey() {
@@ -210,18 +225,15 @@ function applyMainMode(mode) {
     const footerHint = document.getElementById('modeHintFooter');
     if (footerHint) {
         footerHint.innerHTML = mode === 'standard'
-            ? '💡 Хотите больше рекомендаций? Зайдите в <span onclick="document.getElementById(\'settingsToggle\')?.click()">⚙️ Настройки</span> и переключите режим на «Случайный + Поиск»'
-            : '💡 Хотите вернуться к разделам? Зайдите в <span onclick="document.getElementById(\'settingsToggle\')?.click()">⚙️ Настройки</span> и переключите режим на «Познавательный»';
+            ? '💡 Хотите больше рекомендаций? Зайдите в <span onclick="document.querySelector(\'.top-settings-btn\')?.click()">⚙️ Настройки</span> и переключите режим на «Случайный + Поиск»'
+            : '💡 Хотите вернуться к разделам? Зайдите в <span onclick="document.querySelector(\'.top-settings-btn\')?.click()">⚙️ Настройки</span> и переключите режим на «Познавательный»';
     }
 }
 
 function applyPageMode(mode) {
     const gallery = document.getElementById('gallery');
-
     if (mode === 'gallery') {
-        document.querySelectorAll('.section-card:not(#gallery)').forEach(el => {
-            el.style.display = 'none';
-        });
+        document.querySelectorAll('.section-card:not(#gallery)').forEach(el => el.style.display = 'none');
         document.querySelectorAll('.hero, .quote-section, .mode-hint-footer').forEach(el => {
             if (el) el.style.display = 'none';
         });
@@ -243,12 +255,9 @@ function applyPageMode(mode) {
     }
 
     document.documentElement.setAttribute('data-page-mode', mode);
-
     const modeHint = document.getElementById('modeHint');
     if (modeHint) {
-        modeHint.textContent = mode === 'standard'
-            ? 'Текущий режим: Познавательный'
-            : 'Текущий режим: Фотогалерея';
+        modeHint.textContent = mode === 'standard' ? 'Текущий режим: Познавательный' : 'Текущий режим: Фотогалерея';
     }
 }
 
@@ -261,7 +270,6 @@ function updateModeButtons(activeMode) {
 function loadSettings() {
     const savedTheme = localStorage.getItem('tepp_theme') || 'light';
     updateThemeButtons(savedTheme);
-
     if (isMainPage()) {
         const savedMainMode = localStorage.getItem('tepp_main_mode') || 'standard';
         updateModeButtons(savedMainMode);
@@ -292,25 +300,11 @@ function animateCounters() {
                 }, 30);
             }
         }
-    }, 100); // Небольшая задержка
-}
-
-function animateCounter(element, target, duration) {
-    let current = 0;
-    const increment = target / (duration / 16);
-    const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-            element.textContent = target.toLocaleString();
-            clearInterval(timer);
-        } else {
-            element.textContent = Math.floor(current).toLocaleString();
-        }
-    }, 16);
+    }, 100);
 }
 
 // ============================================================
-// UI
+// UI И СКРОЛЛ
 // ============================================================
 function setupSmoothScroll() {
     document.querySelectorAll('.main-nav a, .footer-links a[href^="#"]').forEach(anchor => {
@@ -320,15 +314,10 @@ function setupSmoothScroll() {
                 e.preventDefault();
                 const target = document.querySelector(href);
                 if (target) {
-                    // Вычисляем позицию с учетом высоты шапки (примерно 80-90px)
                     const headerOffset = 90; 
                     const elementPosition = target.getBoundingClientRect().top;
                     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth' // Можно поменять на 'auto', если всё равно глючит
-                    });
+                    window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
                 }
             }
         });
@@ -344,20 +333,13 @@ function setupScrollTop() {
     btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 }
 
-// ============================================================
-// СКРЫТИЕ ШАПКИ ПРИ ПРОКРУТКЕ (только на самом верху)
-// ============================================================
 function setupHideHeaderOnScroll() {
     const header = document.querySelector('header');
     if (!header) return;
-
     window.addEventListener('scroll', function() {
-        // Если прокрутка больше 50 пикселей — прячем шапку
         if (window.scrollY > 50) {
             header.classList.add('header-hidden');
-        } 
-        // Если вернулись в самый верх (меньше 50 пикселей) — показываем
-        else {
+        } else {
             header.classList.remove('header-hidden');
         }
     }, { passive: true }); 
@@ -374,7 +356,6 @@ function setupParallax() {
 }
 
 function setupSectionAnimation() {
-    // Если пользователь только что кликнул по меню, отключаем анимацию на 1 секунду
     let isScrollingViaMenu = false;
     window.addEventListener('menuScrollStarted', () => {
         isScrollingViaMenu = true;
@@ -382,8 +363,7 @@ function setupSectionAnimation() {
     });
 
     const observer = new IntersectionObserver(entries => {
-        if (isScrollingViaMenu) return; // Не анимируем во время клика по меню
-
+        if (isScrollingViaMenu) return;
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
@@ -394,6 +374,9 @@ function setupSectionAnimation() {
     document.querySelectorAll('.section-card, .hero').forEach(s => observer.observe(s));
 }
 
+// ============================================================
+// ГАЛЕРЕЯ (МОДАЛЬНОЕ ОКНО)
+// ============================================================
 function setupGallery() {
     const modal = document.getElementById('galleryModal');
     if (!modal) return;
@@ -403,22 +386,12 @@ function setupGallery() {
     document.querySelectorAll('.gallery-item, .random-photo-item').forEach(item => {
         item.addEventListener('click', () => {
             const img = item.querySelector('img');
-            
-            // Берем подпись
             const caption = item.querySelector('.gallery-caption, .random-photo-caption')?.textContent || '';
-            
-            // Берем автора из тега <p>
             let author = item.querySelector('p')?.textContent || '';
-            
-            // Если автор не указан, автоматически ставим заглушку
-            if (!author.trim()) {
-                author = '📸 Автор не указан';
-            }
+            if (!author.trim()) author = '📸 Автор не указан';
             
             if (content && img) {
-                // Склеиваем подпись и автора
                 const fullText = `${caption} — ${author}`;
-                
                 content.innerHTML = `
                     <img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}">
                     <p style="text-align:center; margin-top:1rem; font-size: 1.1rem;">${fullText}</p>
@@ -433,7 +406,7 @@ function setupGallery() {
 }
 
 // ============================================================
-// ПОИСК
+// ПОИСК (БАЗА ДАННЫХ)
 // ============================================================
 const SEARCH_PAGES = [
     { title: 'Вагон типа А', url: 'Type_A.html', tags: ['метро', 'мосметро', 'вагон', 'тип а', 'первый'], types: ['метро'], city: 'Москва', country: 'СССР' },
@@ -490,9 +463,6 @@ const SEARCH_PAGES = [
     { title: 'Поезд Деда Мороза', url: 'ПДМ_ЖД.html', tags: ['поезд', 'ржд', 'новый год'], types: ['жд'], city: 'Москва', country: 'Россия' },
 ];
 
-// ============================================================
-// ПОИСК С ФИЛЬТРАМИ — результат по кнопке или Enter
-// ============================================================
 function setupSearch() {
     const input = document.getElementById('searchInput');
     const results = document.getElementById('searchResults');
@@ -510,7 +480,6 @@ function setupSearch() {
         const city = filterCity?.value || '';
         const country = filterCountry?.value || '';
 
-        // Если ничего не введено и фильтры пустые — не ищем
         if (!query && !type && !city && !country) {
             results.innerHTML = '';
             results.classList.remove('active');
@@ -518,58 +487,48 @@ function setupSearch() {
             return;
         }
 
-const matches = SEARCH_PAGES.filter(p => {
-    const matchesQuery = !query
-        || p.title.toLowerCase().includes(query)
-        || (p.tags || []).some(t => t.includes(query));
+        const matches = SEARCH_PAGES.filter(p => {
+            const matchesQuery = !query
+                || p.title.toLowerCase().includes(query)
+                || (p.tags || []).some(t => t.includes(query));
 
-    // Поддержка и type, и types
-    const pTypes = p.types || (p.type ? [p.type] : []);
-    const matchesType = !type || pTypes.includes(type);
+            const pTypes = p.types || (p.type ? [p.type] : []);
+            const matchesType = !type || pTypes.includes(type);
+            const matchesCity = !city || p.city === city;
+            const matchesCountry = !country || p.country === country;
 
-    const matchesCity = !city || p.city === city;
-    const matchesCountry = !country || p.country === country;
-
-    return matchesQuery && matchesType && matchesCity && matchesCountry;
-});
+            return matchesQuery && matchesType && matchesCity && matchesCountry;
+        });
 
         if (matches.length === 0) {
             results.innerHTML = '<p style="color:var(--text-secondary);padding:1rem;">Ничего не найдено. Попробуйте другой запрос.</p>';
         } else {
-results.innerHTML = matches.map(p =>
-    `<div class="search-result-item">
-        <a href="${p.url}">
-            <strong>${p.title}</strong>
-            ${p.type ? `<span class="result-tag">${p.type}</span>` : ''}
-            ${p.city ? `<span class="result-tag">${p.city}</span>` : ''}
-        </a>
-    </div>`
-).join('');
+            results.innerHTML = matches.map(p =>
+                `<div class="search-result-item">
+                    <a href="${p.url}">
+                        <strong>${p.title}</strong>
+                        ${p.type ? `<span class="result-tag">${p.type}</span>` : ''}
+                        ${p.city ? `<span class="result-tag">${p.city}</span>` : ''}
+                    </a>
+                </div>`
+            ).join('');
         }
 
-        if (filterInfo) {
-            filterInfo.innerHTML = `Найдено: <strong>${matches.length}</strong>`;
-        }
+        if (filterInfo) filterInfo.innerHTML = `Найдено: <strong>${matches.length}</strong>`;
         results.classList.add('active');
     }
 
-    // Кнопка «Найти»
     searchBtn?.addEventListener('click', applyFilters);
-
-    // Enter в поле ввода
     input.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {
             e.preventDefault();
             applyFilters();
         }
     });
-
-    // Фильтры — тоже по кнопке
     filterType?.addEventListener('change', applyFilters);
     filterCity?.addEventListener('change', applyFilters);
     filterCountry?.addEventListener('change', applyFilters);
 
-    // Скрыть результаты при клике вне блока
     document.addEventListener('click', e => {
         const container = document.querySelector('.search-filters');
         if (container && !container.contains(e.target) && !results.contains(e.target)) {
@@ -577,8 +536,9 @@ results.innerHTML = matches.map(p =>
         }
     });
 }
+
 // ============================================================
-// СЛУЧАЙНЫЕ РЕКОМЕНДАЦИИ (20 фото + 20 страниц)
+// СЛУЧАЙНЫЕ РЕКОМЕНДАЦИИ
 // ============================================================
 let updateRandomRecommendations = null;
 
@@ -587,7 +547,6 @@ function setupRandomRecommendations() {
     const photoContainer = document.getElementById('randomPhoto');
     if (!container || !photoContainer) return;
 
-    // ---------- Страницы для рекомендаций ----------
     const pages = [
         { title: 'Вагон типа А', url: 'Type_A.html', icon: '🚇' },
         { title: 'Вагон типа Б', url: 'Type_B.html', icon: '🚇' },
@@ -669,9 +628,7 @@ function setupRandomRecommendations() {
         { title: 'Грузовые вагоны метро', url: 'Грузовые_вагоны.html', icon: '📦' },
     ];
 
-    // ---------- Фото с авторством ----------
     const photos = [
-        // Подвижной состав
         { src: 'Type_A_1.jpeg', caption: 'Вагон типа А № 1', author: 'pfandrom' },
         { src: 'Type_A_1001.jpg', caption: 'Вагон типа А № 1001', author: 'andzis (transphoto)' },
         { src: 'Type_A_int.jpg', caption: 'Салон вагона типа А', author: 'Анатолий Тягун (transphoto)' },
@@ -719,8 +676,6 @@ function setupRandomRecommendations() {
         { src: 'Устройство_Станции.jpg', caption: 'Раздел «Устройство станции»', author: 'new.mtmuseum.ru' },
         { src: 'R1.jpg', caption: 'Трамвай R1', author: 'new.mtmuseum.ru' },
         { src: 'Еж3&81-717.jpg', caption: 'Еж3 и 81-717 в музее', author: 'Dmitry Zaharov' },
-
-        // Трамваи / автобусы
         { src: '0665.jpg', caption: 'Вагон 0665', author: 'LASTOR_F' },
         { src: '1887.jpg', caption: 'Рыжий пластик в вагоне 1887', author: 'pfandrom' },
         { src: '23591.jpg', caption: 'Голубой пластик в вагоне 23591', author: 'pfandrom' },
@@ -767,7 +722,6 @@ function setupRandomRecommendations() {
     const PAGE_COUNT = 20;
 
     updateRandomRecommendations = function() {
-        // ---- Случайные страницы ----
         const selected = shuffle(pages).slice(0, PAGE_COUNT);
         container.innerHTML = selected.map(p =>
             `<a href="${p.url}" class="random-page-card">
@@ -776,7 +730,6 @@ function setupRandomRecommendations() {
             </a>`
         ).join('');
 
-        // ---- 10 случайных фото (напрямую в #randomPhoto) ----
         const selectedPhotos = shuffle(photos).slice(0, PHOTO_COUNT);
         photoContainer.innerHTML = selectedPhotos.map(photo => {
             const authorPart = photo.author ? ` — 📸 ${photo.author}` : '';
@@ -796,73 +749,12 @@ function setupRandomRecommendations() {
     document.getElementById('refreshRandom')?.addEventListener('click', updateRandomRecommendations);
 }
 
-
-
 // ============================================================
-// МОДАЛЬНОЕ ОКНО ПЕРЕНАПРАВЛЕНИЯ В TELEGRAM
+// МОДАЛКА TELEGRAM
 // ============================================================
-(function initTelegramModal() {
-    const modal = document.getElementById('telegramModal');
-    if (!modal) return;
-
-    const goBtn = document.getElementById('telegramGoBtn');
-    const cancelBtn = document.getElementById('telegramCancelBtn');
-    const closeBtn = document.getElementById('telegramModalClose');
-    const TG_URL = 'https://t.me/andreimetro1289';
-
-    function openModal(e) {
-        if (e) e.preventDefault();
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // блокируем скролл
-    }
-
-    function closeModal() {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-
-    // Кнопка «Перейти в канал» — открывает Telegram
-    goBtn?.addEventListener('click', () => {
-        window.open(TG_URL, '_blank', 'noopener');
-        closeModal();
-    });
-
-    // Кнопки «Отмена» и «×»
-    cancelBtn?.addEventListener('click', closeModal);
-    closeBtn?.addEventListener('click', closeModal);
-
-    // Клик по фону — закрыть
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) closeModal();
-    });
-
-    // Escape — закрыть
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-            closeModal();
-        }
-    });
-
-    // Привязываем ко всем ссылкам на Telegram
-    // (ищем по href, содержащему t.me/andreimetro1289)
-    document.querySelectorAll('a[href*="t.me/andreimetro1289"], a[href*="andreimetro1289"]').forEach(link => {
-        link.addEventListener('click', openModal);
-    });
-
-    // На случай, если ссылка добавится позже — экспортируем функцию
-    window.openTelegramModal = openModal;
-})();
-
-
-// ============================================================
-// ГЛОБАЛЬНАЯ МОДАЛКА ПЕРЕНАПРАВЛЕНИЯ В TELEGRAM
-// Вставляется автоматически на каждой странице, где подключён script.js
-// ============================================================
-(function initTelegramModalGlobal() {
-    // Защита от повторной вставки
+function setupTelegramModal() {
     if (document.getElementById('telegramModal')) return;
 
-    // 1. Вставляем HTML модалки в конец <body>
     document.body.insertAdjacentHTML('beforeend', `
         <div class="modal" id="telegramModal" role="dialog" aria-modal="true" aria-labelledby="telegramModalTitle">
             <div class="modal-content tg-modal-content">
@@ -884,7 +776,6 @@ function setupRandomRecommendations() {
         </div>
     `);
 
-    // 2. Логика модалки
     const modal = document.getElementById('telegramModal');
     const goBtn = document.getElementById('telegramGoBtn');
     const cancelBtn = document.getElementById('telegramCancelBtn');
@@ -902,135 +793,164 @@ function setupRandomRecommendations() {
         document.body.style.overflow = '';
     }
 
-    // Кнопка «Перейти в канал» — открывает Telegram и закрывает окно
     goBtn.addEventListener('click', () => {
         window.open(TG_URL, '_blank', 'noopener');
         closeModal();
     });
 
-    // «Отмена» и «×»
     cancelBtn.addEventListener('click', closeModal);
     closeBtn.addEventListener('click', closeModal);
 
-    // Клик по фону
     modal.addEventListener('click', (e) => {
         if (e.target === modal) closeModal();
     });
 
-    // Escape
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
     });
 
-    // Привязка ко всем ссылкам, ведущим в канал
     document.querySelectorAll('a[href*="andreimetro1289"], .js-telegram-link').forEach(link => {
         link.addEventListener('click', openModal);
-    });
-
-    // Глобальный вызов, если нужно вручную
-    window.openTelegramModal = openModal;
-})();
-
-
-
-// Функция для точного скролла к секции
-function scrollToSection(id) {
-    let element = document.getElementById(id);
-    
-    // Если не нашли по ID, ищем по заголовку
-    if (!element) {
-        const headers = document.querySelectorAll('h2');
-        for (let h of headers) {
-            if (h.textContent.toLowerCase().includes(id)) {
-                element = h.closest('section');
-                break;
-            }
-        }
-    }
-
-    if (!element) return;
-    
-    const headerHeight = 80; 
-    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-    
-    // 'instant' или 'auto' полностью отключает плавную прокрутку
-    window.scrollTo({
-        top: elementPosition - headerHeight,
-        behavior: 'smooth' 
     });
 }
 
 // ============================================================
-// СКРЫТИЕ НЕРАБОЧЕГО EMAIL info@tepp.ru
+// ОСЕННИЕ ЛИСТЬЯ
 // ============================================================
-document.addEventListener('DOMContentLoaded', function() {
-    // Ищем все элементы, содержащие этот текст
-    const elements = document.querySelectorAll('p, div, span, a');
-    
-    elements.forEach(el => {
-        if (el.textContent.includes('info@tepp.ru')) {
-            // Если это ссылка <a> с этим email, скрываем её
-            if (el.tagName === 'A' || el.getAttribute('href')?.includes('info@tepp.ru')) {
-                el.style.display = 'none';
-            } 
-            // Если это параграф <p> (как в футере), скрываем его
-            else if (el.tagName === 'P' && el.textContent.trim() === '📧 info@tepp.ru') {
-                el.style.display = 'none';
-            }
-        }
-    });
-});
+function setupAutumnLeaves() {
+    const container = document.getElementById('leaf-container');
+    if (!container) return;
 
-document.querySelectorAll('.main-nav a').forEach(link => {
-    // Запрещаем перетаскивание ссылок (частая причина глюков)
-    link.setAttribute('draggable', 'false'); 
-    
-    link.addEventListener('mouseup', function(e) {
-        // Клик срабатывает только когда кнопка мыши отпущена
-        const href = this.getAttribute('href');
-        if (href && href.startsWith('#')) {
-            const id = href.substring(1);
-            scrollToSection(id);
-        } else if (href && href.includes('.html')) {
-            // Если это переход на другую страницу
-            window.location.href = href;
-        }
-    });
-});
+    let leafInterval = null;
 
+    function createLeaf() {
+        if (document.documentElement.getAttribute('data-theme') !== 'light') return;
 
+        const leaf = document.createElement('div');
+        leaf.classList.add('leaf');
+        
+        const size = Math.random() * 20 + 10;
+        leaf.style.width = `${size}px`;
+        leaf.style.height = `${size}px`;
+        leaf.style.left = `${Math.random() * 100}vw`;
+        
+        const duration = Math.random() * 9 + 6;
+        leaf.style.animationDuration = `${duration}s`;
+        leaf.style.animationDelay = `${Math.random() * 5}s`;
+        leaf.style.opacity = Math.random() * 0.5 + 0.4;
 
-document.addEventListener('copy', function(e) {
-    const selection = document.getSelection();
-    if (selection.toString().length > 50) { // Если копируют больше 50 символов
-        const link = '\n\nИсточник: Транспортная энциклопедия постсоветского пространства (ТЭПП) — ' + window.location.href;
-        e.clipboardData.setData('text/plain', selection.toString() + link);
-        e.preventDefault();
+        const colors = ['#d35400', '#e67e22', '#f1c40f', '#a0522d', '#c0392b'];
+        leaf.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+        container.appendChild(leaf);
+
+        setTimeout(() => {
+            if (leaf.parentNode) leaf.remove();
+        }, (duration + 5) * 1000);
     }
-});
 
-
-// ============================================================
-// УМНЫЙ ПЕРЕХОД: Если ссылка ведет на Главная_страница.html,
-// а файл переименован в index.html, мы это исправляем на лету.
-// ============================================================
-document.addEventListener('DOMContentLoaded', function() {
-    const allLinks = document.querySelectorAll('a');
-    allLinks.forEach(link => {
-        let href = link.getAttribute('href');
-        // Если ссылка ведет на Главная_страница.html
-        if (href === 'Главная_страница.html') {
-            // Меняем её на index.html
-            link.setAttribute('href', 'index.html');
+    function startLeaves() {
+        container.innerHTML = '';
+        for (let i = 0; i < 50; i++) {
+            setTimeout(createLeaf, i * 100);
         }
+        if (leafInterval) clearInterval(leafInterval);
+        leafInterval = setInterval(createLeaf, 100);
+    }
+
+    function stopLeaves() {
+        if (leafInterval) {
+            clearInterval(leafInterval);
+            leafInterval = null;
+        }
+        container.innerHTML = '';
+    }
+
+    if (document.documentElement.getAttribute('data-theme') === 'light') {
+        startLeaves();
+    }
+
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.attributeName === 'data-theme') {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                if (currentTheme === 'light') startLeaves();
+                else stopLeaves();
+            }
+        });
     });
-});
+    observer.observe(document.documentElement, { attributes: true });
+}
 
 // ============================================================
-// ЭФФЕКТ «ЦИФРОВОЙ ДОЖДЬ» ДЛЯ ТЕМЫ «МАТРИЦА»
+// ЗИМНИЙ СНЕГ
+// ============================================================
+function setupWinterSnow() {
+    const container = document.getElementById('snow-container');
+    if (!container) return;
+
+    let snowInterval = null;
+
+    function createSnowflake() {
+        if (document.documentElement.getAttribute('data-theme') !== 'dark') return;
+
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+        
+        const size = Math.random() * 4 + 2;
+        snowflake.style.width = `${size}px`;
+        snowflake.style.height = `${size}px`;
+        snowflake.style.left = `${Math.random() * 100}vw`;
+        
+        const duration = Math.random() * 7 + 5;
+        snowflake.style.animationDuration = `${duration}s`;
+        snowflake.style.animationDelay = `${Math.random() * 5}s`;
+        snowflake.style.opacity = Math.random() * 0.6 + 0.4;
+
+        container.appendChild(snowflake);
+
+        setTimeout(() => {
+            if (snowflake.parentNode) snowflake.remove();
+        }, (duration + 5) * 1000);
+    }
+
+    function startSnow() {
+        container.innerHTML = '';
+        for (let i = 0; i < 40; i++) {
+            setTimeout(createSnowflake, i * 100); // ИСПРАВЛЕНО: было 1ы
+        }
+        if (snowInterval) clearInterval(snowInterval);
+        snowInterval = setInterval(createSnowflake, 150);
+    }
+
+    function stopSnow() {
+        if (snowInterval) {
+            clearInterval(snowInterval);
+            snowInterval = null;
+        }
+        container.innerHTML = '';
+    }
+
+    if (document.documentElement.getAttribute('data-theme') === 'dark') {
+        startSnow();
+    }
+
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.attributeName === 'data-theme') {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                if (currentTheme === 'dark') startSnow();
+                else stopSnow();
+            }
+        });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+}
+
+// ============================================================
+// МАТРИЧНЫЙ ДОЖДЬ (для темы "night")
 // ============================================================
 document.addEventListener('DOMContentLoaded', function() {
-    // Создаем контейнер для дождя
     const rainContainer = document.createElement('div');
     rainContainer.id = 'matrix-rain';
     rainContainer.style.position = 'fixed';
@@ -1038,39 +958,37 @@ document.addEventListener('DOMContentLoaded', function() {
     rainContainer.style.left = '0';
     rainContainer.style.width = '100%';
     rainContainer.style.height = '100%';
-    rainContainer.style.pointerEvents = 'none'; // Чтобы не мешал кликать
-    rainContainer.style.zIndex = '-1'; // Позади всего
+    rainContainer.style.pointerEvents = 'none';
+    rainContainer.style.zIndex = '-1';
     rainContainer.style.overflow = 'hidden';
-    rainContainer.style.display = 'none'; // По умолчанию скрыт
+    rainContainer.style.display = 'none';
     document.body.appendChild(rainContainer);
 
-    // Функция генерации капель
     function createRain() {
         if (document.documentElement.getAttribute('data-theme') !== 'night') {
             rainContainer.style.display = 'none';
-            rainContainer.innerHTML = ''; // Очищаем, если тема не матрица
+            rainContainer.innerHTML = '';
             return;
         }
         
         rainContainer.style.display = 'block';
-        rainContainer.innerHTML = ''; // Очищаем перед генерацией
+        rainContainer.innerHTML = '';
 
-        const columns = Math.floor(window.innerWidth / 20); // Количество колонок
+        const columns = Math.floor(window.innerWidth / 20);
         for (let i = 0; i < columns; i++) {
             const drop = document.createElement('div');
-            drop.textContent = Math.random() > 0.5 ? '1' : '0'; // Случайно 1 или 0
+            drop.textContent = Math.random() > 0.5 ? '1' : '0';
             drop.style.position = 'absolute';
             drop.style.top = '-20px';
             drop.style.left = (i * 20) + 'px';
             drop.style.color = '#00ff00';
             drop.style.fontFamily = 'monospace';
             drop.style.fontSize = '22px';
-            drop.style.opacity = Math.random() * 0.5 + 0.2; // Случайная прозрачность
+            drop.style.opacity = Math.random() * 0.5 + 0.2;
             drop.style.textShadow = '0 0 5px #00ff00';
             
-            // Анимация падения
-            const duration = Math.random() * 3 + 2; // От 2 до 5 секунд
-            const delay = Math.random() * 5; // Задержка старта
+            const duration = Math.random() * 3 + 2;
+            const delay = Math.random() * 5;
             
             drop.animate([
                 { transform: `translateY(0)`, opacity: drop.style.opacity },
@@ -1086,10 +1004,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Запускаем дождь при смене темы и при загрузке
     createRain();
 
-    // Следим за сменой темы (если пользователь переключит обратно на светлую)
     const observer = new MutationObserver(function(mutations) {
         mutations.forEach(function(mutation) {
             if (mutation.attributeName === 'data-theme') {
@@ -1100,198 +1016,79 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(document.documentElement, { attributes: true });
 });
 
-
-
 // ============================================================
-// ОСЕННИЕ ПАДАЮЩИЕ ЛИСТЬЯ (ТОЛЬКО ДЛЯ СВЕТЛОЙ ТЕМЫ)
+// СКРЫТИЕ НЕРАБОЧЕГО EMAIL info@tepp.ru
 // ============================================================
-(function initAutumnLeaves() {
-    // Ждем загрузки DOM
-    document.addEventListener('DOMContentLoaded', function() {
-        const container = document.getElementById('leaf-container');
-        if (!container) return; // Если контейнера нет в HTML, выходим
-
-        let leafInterval = null;
-
-        // Функция создания одного листика
-        function createLeaf() {
-            // Проверяем, включена ли светлая тема. Если нет — не создаем листья
-            if (document.documentElement.getAttribute('data-theme') !== 'light') return;
-
-            const leaf = document.createElement('div');
-            leaf.classList.add('leaf');
-            
-            // Случайный размер (от 10 до 30 пикселей)
-            const size = Math.random() * 20 + 10;
-            leaf.style.width = `${size}px`;
-            leaf.style.height = `${size}px`;
-            
-            // Случайная позиция по горизонтали (от 0 до 100% ширины экрана)
-            leaf.style.left = `${Math.random() * 100}vw`;
-            
-            // Случайная длительность падения (от 6 до 15 секунд)
-            const duration = Math.random() * 9 + 6;
-            leaf.style.animationDuration = `${duration}s`;
-            
-            // Случайная задержка (чтобы листья не падали синхронно)
-            leaf.style.animationDelay = `${Math.random() * 5}s`;
-            
-            // Случайная прозрачность (от 0.4 до 0.9)
-            leaf.style.opacity = Math.random() * 0.5 + 0.4;
-
-            // Случайный цвет из осенней палитры
-            const colors = ['#d35400', '#e67e22', '#f1c40f', '#a0522d', '#c0392b'];
-            leaf.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-
-            container.appendChild(leaf);
-
-            // Удаляем листик из DOM после завершения анимации (чтобы не засорять память)
-            setTimeout(() => {
-                if (leaf.parentNode) {
-                    leaf.remove();
-                }
-            }, (duration + 5) * 1000); // duration + задержка
-        }
-
-        // Запуск генерации листьев
-        function startLeaves() {
-            // Очищаем контейнер на всякий случай
-            container.innerHTML = '';
-            
-            // Создаем первые листья сразу
-            for (let i = 0; i < 50; i++) {
-                setTimeout(createLeaf, i * 100); // Создаем с небольшой задержкой
+document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('p, div, span, a');
+    elements.forEach(el => {
+        if (el.textContent.includes('info@tepp.ru')) {
+            if (el.tagName === 'A' || el.getAttribute('href')?.includes('info@tepp.ru')) {
+                el.style.display = 'none';
+            } else if (el.tagName === 'P' && el.textContent.trim() === '📧 info@tepp.ru') {
+                el.style.display = 'none';
             }
-
-            // Затем создаем новые листья каждые 300 мс
-            if (leafInterval) clearInterval(leafInterval);
-            leafInterval = setInterval(createLeaf, 100);
         }
-
-        // Остановка генерации (если тема сменилась)
-        function stopLeaves() {
-            if (leafInterval) {
-                clearInterval(leafInterval);
-                leafInterval = null;
-            }
-            container.innerHTML = ''; // Удаляем все листья
-        }
-
-        // Проверяем текущую тему при загрузке страницы
-        if (document.documentElement.getAttribute('data-theme') === 'light') {
-            startLeaves();
-        }
-
-        // Следим за сменой темы (MutationObserver)
-        const observer = new MutationObserver((mutations) => {
-            mutations.forEach((mutation) => {
-                if (mutation.attributeName === 'data-theme') {
-                    const currentTheme = document.documentElement.getAttribute('data-theme');
-                    if (currentTheme === 'light') {
-                        startLeaves(); // Включаем листья
-                    } else {
-                        stopLeaves(); // Выключаем листья
-                    }
-                }
-            });
-        });
-
-        // Наблюдаем за изменениями атрибута data-theme на теге <html>
-        observer.observe(document.documentElement, { attributes: true });
     });
-})();
+});
 
 // ============================================================
-// ЗИМНИЙ СНЕГ (ТОЛЬКО ДЛЯ ТЁМНОЙ ТЕМЫ)
+// КОПИРОВАНИЕ С ИСТОЧНИКОМ
 // ============================================================
-(function initWinterSnow() {
-    document.addEventListener('DOMContentLoaded', function() {
-        // Создаем контейнер для снега, если его нет
-        let snowContainer = document.getElementById('snow-container');
-        if (!snowContainer) {
-            snowContainer = document.createElement('div');
-            snowContainer.id = 'snow-container';
-            document.body.appendChild(snowContainer);
+document.addEventListener('copy', function(e) {
+    const selection = document.getSelection();
+    if (selection.toString().length > 50) {
+        const link = '\n\nИсточник: Транспортная энциклопедия постсоветского пространства (ТЭПП) — ' + window.location.href;
+        e.clipboardData.setData('text/plain', selection.toString() + link);
+        e.preventDefault();
+    }
+});
+
+// ============================================================
+// УМНЫЙ ПЕРЕХОД НА ГЛАВНУЮ
+// ============================================================
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a').forEach(link => {
+        if (link.getAttribute('href') === 'Главная_страница.html') {
+            link.setAttribute('href', 'index.html');
         }
-
-        let snowInterval = null;
-
-        // Функция создания одной снежинки
-        function createSnowflake() {
-            // Проверяем, включена ли темная тема
-            if (document.documentElement.getAttribute('data-theme') !== 'dark') return;
-
-            const snowflake = document.createElement('div');
-            snowflake.classList.add('snowflake');
-            
-            // Случайный размер (от 2 до 6 пикселей)
-            const size = Math.random() * 4 + 2;
-            snowflake.style.width = `${size}px`;
-            snowflake.style.height = `${size}px`;
-            
-            // Случайная позиция по горизонтали
-            snowflake.style.left = `${Math.random() * 100}vw`;
-            
-            // Случайная длительность падения (от 5 до 12 секунд)
-            const duration = Math.random() * 7 + 5;
-            snowflake.style.animationDuration = `${duration}s`;
-            
-            // Случайная задержка старта
-            snowflake.style.animationDelay = `${Math.random() * 5}s`;
-            
-            // Случайная прозрачность
-            snowflake.style.opacity = Math.random() * 0.6 + 0.4;
-
-            snowContainer.appendChild(snowflake);
-
-            // Удаляем снежинку после падения
-            setTimeout(() => {
-                if (snowflake.parentNode) {
-                    snowflake.remove();
-                }
-            }, (duration + 5) * 1000);
-        }
-
-        // Запуск снега
-        function startSnow() {
-            snowContainer.innerHTML = '';
-            // Создаем первые снежинки сразу
-            for (let i = 0; i < 40; i++) {
-                setTimeout(createSnowflake, i * 10);
-            }
-            // И затем добавляем новые каждые 150 мс
-            if (snowInterval) clearInterval(snowInterval);
-            snowInterval = setInterval(createSnowflake, 150);
-        }
-
-        // Остановка снега
-        function stopSnow() {
-            if (snowInterval) {
-                clearInterval(snowInterval);
-                snowInterval = null;
-            }
-            snowContainer.innerHTML = '';
-        }
-
-        // Проверяем тему при загрузке
-        if (document.documentElement.getAttribute('data-theme') === 'dark') {
-            startSnow();
-        }
-
-        // Следим за сменой темы
-        const observer = new MutationObserver((mutations) => {
-            mutations.forEach((mutation) => {
-                if (mutation.attributeName === 'data-theme') {
-                    const currentTheme = document.documentElement.getAttribute('data-theme');
-                    if (currentTheme === 'dark') {
-                        startSnow();
-                    } else {
-                        stopSnow();
-                    }
-                }
-            });
-        });
-
-        observer.observe(document.documentElement, { attributes: true });
     });
-})();
+});
+
+// ============================================================
+// СКРОЛЛ К СЕКЦИИ (ВСПОМОГАТЕЛЬНАЯ)
+// ============================================================
+function scrollToSection(id) {
+    let element = document.getElementById(id);
+    if (!element) {
+        const headers = document.querySelectorAll('h2');
+        for (let h of headers) {
+            if (h.textContent.toLowerCase().includes(id)) {
+                element = h.closest('section');
+                break;
+            }
+        }
+    }
+    if (!element) return;
+    
+    const headerHeight = 80; 
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+    
+    window.scrollTo({
+        top: elementPosition - headerHeight,
+        behavior: 'smooth' 
+    });
+}
+
+document.querySelectorAll('.main-nav a').forEach(link => {
+    link.setAttribute('draggable', 'false'); 
+    link.addEventListener('mouseup', function(e) {
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('#')) {
+            const id = href.substring(1);
+            scrollToSection(id);
+        } else if (href && href.includes('.html')) {
+            window.location.href = href;
+        }
+    });
+});
