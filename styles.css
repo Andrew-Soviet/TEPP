@@ -830,6 +830,34 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+<<<<<<< HEAD
+        position: relative;
+        z-index: 99999 !important; /* Самый высокий приоритет */
+    }
+
+    /* СКРЫВАЕМ ГОРИЗОНТАЛЬНОЕ МЕНЮ, ЧТОБЫ НЕ ЛОМАЛОСЬ */
+    .main-nav {
+        display: none !important;
+    }
+
+    /* Выпадающее меню */
+    .top-nav-links {
+        display: none !important; /* Жестко скрыто по умолчанию */
+        position: fixed !important;
+        top: 50px !important; 
+        left: 0 !important;
+        width: 100% !important;
+        
+        /* ИСПОЛЬЗУЕМ ЦВЕТА ТЕМЫ */
+        background-color: var(--bg-header) !important; 
+        border-bottom: 2px solid var(--accent-color) !important; 
+        flex-direction: column !important;
+        gap: 0 !important;
+        z-index: 999999 !important; /* Поверх всего */
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3) !important;
+        padding: 0 !important;
+        margin: 0 !important;
+=======
         position: relative; /* Важно для z-index */
         z-index: 1001;
     }
@@ -855,23 +883,34 @@ header {
         visibility: hidden;
         transform: translateY(-10px);
         transition: all 0.3s ease;
+>>>>>>> c182e3fa054cc1fda596bcfb527563e0d02b6fe5
     }
 
     /* Показ меню при клике */
     .top-nav-links.active {
+<<<<<<< HEAD
+        display: flex !important;
+=======
         display: flex;
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
+>>>>>>> c182e3fa054cc1fda596bcfb527563e0d02b6fe5
     }
 
     /* Стилизация ссылок */
     .top-nav-links a {
-        padding: 15px 20px;
+        padding: 15px 20px !important;
         font-size: 1.1rem;
+<<<<<<< HEAD
+        color: var(--text-primary) !important; 
+        border-bottom: 1px solid var(--border-color) !important; 
+        width: 100% !important;
+=======
         color: var(--text-primary) !important; /* Цвет текста темы */
         border-bottom: 1px solid var(--border-color) !important; /* Цвет границы темы */
         width: 100%;
+>>>>>>> c182e3fa054cc1fda596bcfb527563e0d02b6fe5
         text-align: left;
         text-decoration: none;
         display: block;
@@ -884,7 +923,11 @@ header {
 
     .top-nav-links a:hover, 
     .top-nav-links a:active {
+<<<<<<< HEAD
+        background-color: var(--highlight-bg) !important; 
+=======
         background-color: var(--highlight-bg) !important; /* Подсветка из темы */
+>>>>>>> c182e3fa054cc1fda596bcfb527563e0d02b6fe5
         color: var(--accent-color) !important;
     }
 }
