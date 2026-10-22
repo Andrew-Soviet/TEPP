@@ -246,9 +246,9 @@ h1 {
 
 /* Зимний градиент для шапки в тёмной теме */
 [data-theme="dark"] header {
-    background: linear-gradient(135deg, #050a14 0%, #0a1423 100%) !important;
-    border-bottom: 3px solid #4db8ff !important; /* Голубая линия */
-    box-shadow: 0 4px 20px rgba(77, 184, 255, 0.2) !important;
+    background: linear-gradient(135deg, #1a0a05 0%, #2d1308 100%) !important;
+    border-bottom: 3px solid #ff8c00 !important;
+    box-shadow: 0 4px 20px rgba(255, 140, 0, 0.2) !important;
 }
 
 /* ============================================================
@@ -284,10 +284,10 @@ section:hover { transform: translateY(-2px); }
     font-size: 1.6rem !important;
 }
 
-/* Специально для тёмной темы (зимней) — градиент шапок */
+/* Специально для тёмной темы (осенней) — градиент шапок */
 [data-theme="dark"] .card-header {
-    background: linear-gradient(135deg, #0055aa 0%, #4db8ff 50%, #00d4ff 100%) !important;
-    box-shadow: 0 4px 15px rgba(77, 184, 255, 0.2) !important;
+    background: linear-gradient(135deg, #8b0000 0%, #ff4500 50%, #ff8c00 100%) !important;
+    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.2) !important;
 }
 
 h2 {
@@ -483,7 +483,7 @@ footer { background: var(--bg-header); margin-top: 3rem; padding: 2.5rem 0 1rem;
 }
 
 /* ============================================================
-   15. МОБИЛЬНАЯ АДАПТАЦИЯ
+   15. МОБИЛЬНАЯ АДАПТАЦИЯ (БАЗОВАЯ)
    ============================================================ */
 @media (max-width: 768px) {
     html, body { overflow-x: hidden; width: 100%; }
@@ -508,7 +508,6 @@ footer { background: var(--bg-header); margin-top: 3rem; padding: 2.5rem 0 1rem;
     #randomPhoto { grid-template-columns: repeat(2, 1fr) !important; gap: 0.5rem !important; }
     #randomPhoto .random-photo-item img { height: 120px !important; }
     #randomPhoto .random-photo-caption { font-size: 0.7rem !important; padding: 0.3rem !important; }
-    .main-nav { flex-direction: column; gap: 0.3rem; }
     .counter-container { gap: 1.5rem; }
     .counter-number { font-size: 2.2rem; }
     .hero h2 { font-size: 1.8rem; }
@@ -590,11 +589,10 @@ footer { background: var(--bg-header); margin-top: 3rem; padding: 2.5rem 0 1rem;
 .raindrop {
     position: absolute;
     top: -30px;
-    width: 1.5px; /* Чуть толще */
-    height: 40px; /* Длиннее */
-    /* Делаем цвет более теплым и заметным (осенний оттенок) */
+    width: 1.5px;
+    height: 40px;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 180, 100, 0.8));
-    box-shadow: 0 0 5px rgba(255, 140, 0, 0.3); /* Легкое свечение */
+    box-shadow: 0 0 5px rgba(255, 140, 0, 0.3);
     animation: rainfall linear infinite;
 }
 
@@ -666,6 +664,24 @@ footer { background: var(--bg-header); margin-top: 3rem; padding: 2.5rem 0 1rem;
 
 header {
     z-index: 100 !important;
+}
+
+/* 2. Шапка сайта — градиент */
+[data-theme="dark"] header {
+    background: linear-gradient(135deg, #1a0a05 0%, #2d1308 100%) !important;
+    border-bottom: 3px solid #ff8c00 !important;
+    box-shadow: 0 4px 20px rgba(255, 140, 0, 0.2) !important;
+}
+
+/* 3. Самая верхняя тонкая панель — в тон */
+[data-theme="dark"] .top-nav {
+    background: linear-gradient(90deg, #1a0a05 0%, #2d1308 100%) !important;
+    border-bottom: 1px solid rgba(255, 140, 0, 0.3) !important;
+}
+
+/* 4. Шапки карточек — градиент */
+[data-theme="dark"] .card-header {
+    background: linear-gradient(135deg, #8b0000 0%, #ff4500 50%, #ff8c00 100%) !important;
 }
 
 /* ============================================================
@@ -760,28 +776,8 @@ header {
     text-decoration: underline !important;
 }
 
-/* 2. Шапка сайта — градиент */
-[data-theme="dark"] header {
-    background: linear-gradient(135deg, #1a0a05 0%, #2d1308 100%) !important;
-    border-bottom: 3px solid #ff8c00 !important;
-    box-shadow: 0 4px 20px rgba(255, 140, 0, 0.2) !important;
-}
-
-/* 3. Самая верхняя тонкая панель — в тон */
-[data-theme="dark"] .top-nav {
-    background: linear-gradient(90deg, #1a0a05 0%, #2d1308 100%) !important;
-    border-bottom: 1px solid rgba(255, 140, 0, 0.3) !important;
-}
-
-/* 4. Шапки карточек — градиент */
-[data-theme="dark"] .card-header {
-    background: linear-gradient(135deg, #8b0000 0%, #ff4500 50%, #ff8c00 100%) !important;
-}
-
-
-
 /* ============================================================
-   МОБИЛЬНОЕ МЕНЮ (БУРГЕР)
+   20. МОБИЛЬНОЕ МЕНЮ (БУРГЕР)
    ============================================================ */
 
 /* Скрываем бургер на компьютерах */
@@ -867,8 +863,8 @@ header {
     .top-nav-links a {
         padding: 15px 20px !important;
         font-size: 1.1rem;
-        color: var(--text-primary) !important; 
-        border-bottom: 1px solid var(--border-color) !important; 
+        color: var(--text-primary) !important; /* Цвет текста темы */
+        border-bottom: 1px solid var(--border-color) !important; /* Цвет границы темы */
         width: 100% !important;
         text-align: left;
         text-decoration: none;
@@ -882,7 +878,7 @@ header {
 
     .top-nav-links a:hover, 
     .top-nav-links a:active {
-        background-color: var(--highlight-bg) !important; 
+        background-color: var(--highlight-bg) !important; /* Подсветка из темы */
         color: var(--accent-color) !important;
     }
 }
