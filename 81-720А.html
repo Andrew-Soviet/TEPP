@@ -1,29 +1,43 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>81-720А - Экспериментальная модификация Яузы</title>
+    <title>81-720А — Экспериментальная модификация Яузы — ТЭПП</title>
+    <meta name="description" content="История экспериментального поезда 81-720А с приводами Alstom, Hitachi и КЭАТП-1.">
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Анимированные частицы -->
     <div id="particles-js"></div>
-    
-    <!-- Анимированный градиентный фон -->
     <div class="animated-bg">
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <div class="top-nav-links">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <!-- ================= ШАПКА ================= -->
     <header>
         <div class="header-container">
-            <h1>81-720А</h1>
-            <p class="subtitle">Необычная экспериментальная модификация семейства "Яуза"</p>
+            <div class="logo">
+                <h1>81-720А</h1>
+                <p class="subtitle">Необычная экспериментальная модификация семейства "Яуза"</p>
+            </div>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
                     <li><a href="Главная_метро.html">🚇 Метро</a></li>
                     <li><a href="Опытные_составы.html">🔬 Опытные</a></li>
                     <li><a href="#about">О поезде</a></li>
@@ -59,32 +73,32 @@
         </section>
 
         <!-- Общая информация -->
-    <section class="section-card">
-        <div class="card-header" style="background: linear-gradient(135deg, #922B21 0%, #C0392B 100%);">
-            <span class="card-icon">ℹ️</span>
-            <h2>Общая информация</h2>
-        </div>
-        <div class="card-content">
-            <table>
-                <caption>Основные параметры поезда 81-720А</caption>
-                <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
-                <tbody>
-                    <tr><td>Город</td><td>Мытищи 🇷🇺</td></tr>
-                    <tr><td>Депо/Парк</td><td>АО «Метровагонмаш»</td></tr>
-                    <tr><td>Модель</td><td>81-720А «Яуза»</td></tr>
-                    <tr><td>Построен</td><td>01.2000</td></tr>
-                    <tr><td>Отставлен</td><td>09.2003</td></tr>
-                    <tr><td>Списан</td><td>2007</td></tr>
-                    <tr><td>Утилизирован</td><td>2010</td></tr>
-                    <tr><td>Текущее состояние</td><td>Списан</td></tr>
-                    <tr><td>Назначение</td><td>Служебный</td></tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
+        <section class="section-card">
+            <div class="card-header">
+                <span class="card-icon">ℹ️</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Город</td><td>Мытищи 🇷🇺</td></tr>
+                        <tr><td>Депо/Парк</td><td>АО «Метровагонмаш»</td></tr>
+                        <tr><td>Модель</td><td>81-720А «Яуза»</td></tr>
+                        <tr><td>Построен</td><td>01.2000</td></tr>
+                        <tr><td>Отставлен</td><td>09.2003</td></tr>
+                        <tr><td>Списан</td><td>2007</td></tr>
+                        <tr><td>Утилизирован</td><td>2010</td></tr>
+                        <tr><td>Текущее состояние</td><td>Списан</td></tr>
+                        <tr><td>Назначение</td><td>Служебный</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
         <!-- Состав -->
         <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+            <div class="card-header">
                 <span class="card-icon">🚆</span>
                 <h2>Состав поезда</h2>
             </div>
@@ -98,7 +112,7 @@
 
         <!-- История -->
         <section id="history" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+            <div class="card-header">
                 <span class="card-icon">📜</span>
                 <h2>История испытаний</h2>
             </div>
@@ -178,7 +192,7 @@
 
         <!-- Экспериментальные приводы -->
         <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+            <div class="card-header">
                 <span class="card-icon">⚡</span>
                 <h2>Экспериментальные приводы</h2>
             </div>
@@ -208,7 +222,7 @@
 
         <!-- Технические характеристики -->
         <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+            <div class="card-header">
                 <span class="card-icon">⚙️</span>
                 <h2>Технические характеристики</h2>
             </div>
@@ -247,28 +261,39 @@
             </div>
         </section>
 
-        <!-- Фотогалерея -->
+        <!-- ============================================================
+             НОВАЯ ГАЛЕРЕЯ (КАРТОЧКИ)
+             ============================================================ -->
         <section id="gallery" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+            <div class="card-header">
                 <span class="card-icon">📸</span>
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/81-720А.jpg" alt="81-720А на кольце ВНИИЖТ" onerror="this.src='https://via.placeholder.com/800x500?text=81-720А'">
-                        <div class="gallery-caption">81-720А на экспериментальном кольце ВНИИЖТ в Щербинке</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸: Василий Филиппов(transphoto)</p>
+                <div class="photo-gallery">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/81-720А.jpg" alt="81-720А на кольце ВНИИЖТ" onclick="openGalleryModal(this.src, '81-720А на экспериментальном кольце ВНИИЖТ в Щербинке')" onerror="this.src='https://via.placeholder.com/600x400?text=81-720А'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">81-720А</a>
+                            <p class="photo-desc">На экспериментальном кольце ВНИИЖТ в Щербинке.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2003</span>
+                                <span class="photo-author">📸 <a href="https://transphoto.org/photo/568270/" target="_blank" rel="noopener">Василий Филиппов</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
         <!-- Цитата -->
         <section class="quote-section">
             <div class="quote-container">
-                <p class="quote-text">"81-720А — уникальный поезд-испытатель. Всего 3 вагона, 10 лет жизни, 3 разных привода и множество километров испытаний. Он стал мостом между «Яузой» и будущими поколениями поездов, но, к сожалению, не был сохранён для истории."</p>
+                <p class="quote-text">«81-720А — уникальный поезд-испытатель. Всего 3 вагона, 10 лет жизни, 3 разных привода и множество километров испытаний. Он стал мостом между „Яузой“ и будущими поколениями поездов, но, к сожалению, не был сохранён для истории».</p>
                 <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
             </div>
         </section>
@@ -280,25 +305,21 @@
                 <div class="footer-info">
                     <h4>ТЭПП</h4>
                     <p>Транспортная Энциклопедия Постсоветского Пространства</p>
-                    <p class="footer-motto">Раздел "Опытные составы"</p>
+                    <p class="footer-motto">Раздел «Опытные составы»</p>
                 </div>
-                
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
                         <li><a href="Опытные_составы.html">Опытные составы</a></li>
                         <li><a href="Опытная_Яуза_001-005.html">Опытная Яуза</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
-                    <p>📧 info@tepp.ru</p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
-            
             <div class="footer-bottom">
                 <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
                 <p class="footer-note">81-720А — поезд-испытатель, опередивший своё время</p>
@@ -306,90 +327,64 @@
         </div>
     </footer>
 
-    <!-- Кнопка прокрутки вверх -->
     <div class="scroll-top">↑</div>
 
-    <!-- Модальное окно для галереи -->
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
         </div>
     </div>
 
-    <!-- Подключаем библиотеку частиц -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
             function animateCounters() {
-                const targets = {
-                    aYear: 2000,
-                    aCars: 3,
-                    aLife: 10
-                };
-                
-                let current = {
-                    aYear: 0,
-                    aCars: 0,
-                    aLife: 0
-                };
-                
+                const targets = { aYear: 2000, aCars: 3, aLife: 10 };
+                let current = { aYear: 0, aCars: 0, aLife: 0 };
                 const yearEl = document.getElementById('aYear');
                 const carsEl = document.getElementById('aCars');
                 const lifeEl = document.getElementById('aLife');
-                
                 if (!yearEl || !carsEl || !lifeEl) return;
-                
                 const interval = setInterval(function() {
                     let allFinished = true;
-                    
                     if (current.aYear < targets.aYear) {
                         current.aYear += Math.ceil(targets.aYear / 50);
                         if (current.aYear > targets.aYear) current.aYear = targets.aYear;
                         yearEl.textContent = current.aYear;
                         allFinished = false;
                     }
-                    
                     if (current.aCars < targets.aCars) {
                         current.aCars += 1;
                         if (current.aCars > targets.aCars) current.aCars = targets.aCars;
                         carsEl.textContent = current.aCars;
                         allFinished = false;
                     }
-                    
                     if (current.aLife < targets.aLife) {
                         current.aLife += Math.ceil(targets.aLife / 50);
                         if (current.aLife > targets.aLife) current.aLife = targets.aLife;
                         lifeEl.textContent = current.aLife;
                         allFinished = false;
                     }
-                    
                     if (allFinished) clearInterval(interval);
                 }, 30);
             }
-            
             animateCounters();
-            
-            // Галерея
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-            
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-            
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+
+            // Функция для открытия модалки из новой галереи
+            window.openGalleryModal = function(src, caption) {
+                const modal = document.getElementById('galleryModal');
+                const content = document.getElementById('galleryModalContent');
+                if (modal && content) {
+                    content.innerHTML = `
+                        <img src="${src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${caption}">
+                        <p style="text-align:center; margin-top:1rem; font-size:1.1rem;">${caption}</p>
+                    `;
+                    modal.classList.add('active');
+                }
+            };
         });
     </script>
 </body>

@@ -383,6 +383,39 @@ function setupGallery() {
     const content = document.getElementById('galleryModalContent');
     const close = document.getElementById('galleryModalClose');
 
+    // Обработчик для новой галереи (photo-card)
+    document.querySelectorAll('.photo-thumb img').forEach(img => {
+        img.addEventListener('click', function() {
+            const card = this.closest('.photo-card');
+            if (!card) return;
+
+            const src = this.src;
+            const alt = this.alt;
+            
+            // Вытаскиваем инфу из карточки
+            const object = card.querySelector('.photo-object')?.textContent || '';
+            const desc = card.querySelector('.photo-desc')?.textContent || '';
+            const date = card.querySelector('.photo-date')?.textContent || '';
+            const author = card.querySelector('.photo-author')?.textContent || '';
+
+            if (content) {
+                content.innerHTML = `
+                    <img src="${src}" style="max-width:100%; max-height:60vh; border-radius:10px; display:block; margin: 0 auto;" alt="${alt}">
+                    <div style="margin-top: 1.5rem; text-align: left; padding: 0 1rem;">
+                        <h3 style="color: var(--accent-color); margin-bottom: 0.5rem; font-size: 1.4rem;">${object}</h3>
+                        <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1rem;">${desc}</p>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-secondary); border-top: 1px solid var(--border-color); padding-top: 1rem;">
+                            <span>${date}</span>
+                            <span>${author}</span>
+                        </div>
+                    </div>
+                `;
+                modal.classList.add('active');
+            }
+        });
+    });
+
+    // Обработчик для старых галерей (на всякий случай)
     document.querySelectorAll('.gallery-item, .random-photo-item').forEach(item => {
         item.addEventListener('click', () => {
             const img = item.querySelector('img');
@@ -391,10 +424,9 @@ function setupGallery() {
             if (!author.trim()) author = '📸 Автор не указан';
             
             if (content && img) {
-                const fullText = `${caption} — ${author}`;
                 content.innerHTML = `
                     <img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}">
-                    <p style="text-align:center; margin-top:1rem; font-size: 1.1rem;">${fullText}</p>
+                    <p style="text-align:center; margin-top:1rem; font-size: 1.1rem;">${caption} — ${author}</p>
                 `;
                 modal.classList.add('active');
             }
@@ -1090,5 +1122,12 @@ document.querySelectorAll('.main-nav a').forEach(link => {
         } else if (href && href.includes('.html')) {
             window.location.href = href;
         }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.photo-author a').forEach(link => {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener');
     });
 });

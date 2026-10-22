@@ -1,29 +1,43 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>81-717(ММЗ) №0067 - Отец экспериментального состава 81-717.6К</title>
+    <title>81-717(ММЗ) №0067 — Отец экспериментального состава 81-717.6К — ТЭПП</title>
+    <meta name="description" content="История вагона 81-717(ММЗ) №0067, ставшего экспериментальной платформой для состава 81-717.6К.">
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Анимированные частицы -->
     <div id="particles-js"></div>
-    
-    <!-- Анимированный градиентный фон -->
     <div class="animated-bg">
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <div class="top-nav-links">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <!-- ================= ШАПКА ================= -->
     <header>
         <div class="header-container">
-            <h1>81-717(ММЗ) №0067</h1>
-            <p class="subtitle">Обычный номерной, ставший уникальным — отец состава 81-717.6К</p>
+            <div class="logo">
+                <h1>81-717(ММЗ) №0067</h1>
+                <p class="subtitle">Обычный номерной, ставший уникальным — отец состава 81-717.6К</p>
+            </div>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
                     <li><a href="Главная_метро.html">🚇 Метро</a></li>
                     <li><a href="Живая_история_Мск_метро.html">📚 Живая история</a></li>
                     <li><a href="Ушедшие_в_историю_метро.html">📜 Ушедшие в историю</a></li>
@@ -52,7 +66,7 @@
                         <div class="stat-label">лет эксплуатации</div>
                     </div>
                     <div class="stat-item">
-                        <div class="counter-number" id="carStatus">0</div>
+                        <div class="stat-label" style="font-size: 1.2rem; color: #C0392B; font-weight: bold; margin-top: 1rem;">Утилизирован</div>
                         <div class="stat-label">состояние</div>
                     </div>
                 </div>
@@ -61,7 +75,7 @@
 
         <!-- История -->
         <section id="history" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+            <div class="card-header">
                 <span class="card-icon">📜</span>
                 <h2>История вагона</h2>
             </div>
@@ -112,7 +126,7 @@
 
         <!-- Значение -->
         <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+            <div class="card-header">
                 <span class="card-icon">🔬</span>
                 <h2>Значение для истории</h2>
             </div>
@@ -137,7 +151,7 @@
 
         <!-- Связь с 81-717.6К -->
         <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+            <div class="card-header">
                 <span class="card-icon">🔗</span>
                 <h2>Связь с составом 81-717.6К</h2>
             </div>
@@ -170,7 +184,7 @@
 
         <!-- Технические характеристики -->
         <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+            <div class="card-header">
                 <span class="card-icon">⚙️</span>
                 <h2>Технические характеристики</h2>
             </div>
@@ -209,28 +223,39 @@
             </div>
         </section>
 
-        <!-- Фотогалерея -->
+        <!-- ============================================================
+             НОВАЯ ГАЛЕРЕЯ (КАРТОЧКИ)
+             ============================================================ -->
         <section id="gallery" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+            <div class="card-header">
                 <span class="card-icon">📸</span>
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/0067.jpg" alt="81-717(ММЗ) №0067" onerror="this.src='https://via.placeholder.com/800x500?text=0067'">
-                        <div class="gallery-caption">Вагон 81-717(ММЗ) №0067 с экспериментальной маской кузова</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸Фотография была взята с сайта: http://forumimage.ru/</p>
+                <div class="photo-gallery">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/0067.jpg" alt="81-717(ММЗ) №0067" onclick="openGalleryModal(this.src, 'Вагон 81-717(ММЗ) №0067')" onerror="this.src='https://via.placeholder.com/600x400?text=0067'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон № 0067</a>
+                            <p class="photo-desc">С экспериментальной маской кузова.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2000-е</span>
+                                <span class="photo-author">📸 <a href="http://forumimage.ru/uploads/20150319/14267596859217345.jpg">forumimage.ru</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
         <!-- Цитата -->
         <section class="quote-section">
             <div class="quote-container">
-                <p class="quote-text">"81-717(ММЗ) №0067 — обычный вагон, ставший легендой. После аварии он не отправился в утиль, а стал экспериментальной платформой, на которой родилась маска будущего состава 81-717.6К. Без него не было бы одного из самых узнаваемых опытных поездов Московского метро."</p>
+                <p class="quote-text">«81-717(ММЗ) №0067 — обычный вагон, ставший легендой. После аварии он не отправился в утиль, а стал экспериментальной платформой, на которой родилась маска будущего состава 81-717.6К. Без него не было бы одного из самых узнаваемых опытных поездов Московского метро».</p>
                 <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
             </div>
         </section>
@@ -242,25 +267,21 @@
                 <div class="footer-info">
                     <h4>ТЭПП</h4>
                     <p>Транспортная Энциклопедия Постсоветского Пространства</p>
-                    <p class="footer-motto">Раздел "Ушедшие в историю"</p>
+                    <p class="footer-motto">Раздел «Ушедшие в историю»</p>
                 </div>
-                
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
                         <li><a href="Главная_метро.html">Метрополитены</a></li>
                         <li><a href="Ушедшие_в_историю_метро.html">Ушедшие в историю</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
-                    <p>📧 info@tepp.ru</p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
-            
             <div class="footer-bottom">
                 <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
                 <p class="footer-note">81-717(ММЗ) №0067 — экспериментальная маска, изменившая историю</p>
@@ -268,90 +289,57 @@
         </div>
     </footer>
 
-    <!-- Кнопка прокрутки вверх -->
     <div class="scroll-top">↑</div>
 
-    <!-- Модальное окно для галереи -->
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
         </div>
     </div>
 
-    <!-- Подключаем библиотеку частиц -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
             function animateCounters() {
-                const targets = {
-                    carYear: 1986,
-                    carAge: 17,
-                    carStatus: 0
-                };
-                
-                let current = {
-                    carYear: 0,
-                    carAge: 0,
-                    carStatus: 0
-                };
-                
+                const targets = { carYear: 1986, carAge: 17 };
+                let current = { carYear: 0, carAge: 0 };
                 const yearEl = document.getElementById('carYear');
                 const ageEl = document.getElementById('carAge');
-                const statusEl = document.getElementById('carStatus');
-                
-                if (!yearEl || !ageEl || !statusEl) return;
-                
+                if (!yearEl || !ageEl) return;
                 const interval = setInterval(function() {
                     let allFinished = true;
-                    
                     if (current.carYear < targets.carYear) {
                         current.carYear += Math.ceil(targets.carYear / 50);
                         if (current.carYear > targets.carYear) current.carYear = targets.carYear;
                         yearEl.textContent = current.carYear;
                         allFinished = false;
                     }
-                    
                     if (current.carAge < targets.carAge) {
-                        current.carAge += Math.ceil(targets.carAge / 50);
+                        current.carAge += 1;
                         if (current.carAge > targets.carAge) current.carAge = targets.carAge;
                         ageEl.textContent = current.carAge;
                         allFinished = false;
                     }
-                    
-                    if (current.carStatus < targets.carStatus) {
-                        current.carStatus += 1;
-                        if (current.carStatus > targets.carStatus) current.carStatus = targets.carStatus;
-                        statusEl.textContent = current.carStatus;
-                        allFinished = false;
-                    }
-                    
                     if (allFinished) clearInterval(interval);
                 }, 30);
             }
-            
             animateCounters();
-            
-            // Галерея
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-            
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-            
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+
+            // Функция для открытия модалки из новой галереи
+            window.openGalleryModal = function(src, caption) {
+                const modal = document.getElementById('galleryModal');
+                const content = document.getElementById('galleryModalContent');
+                if (modal && content) {
+                    content.innerHTML = `
+                        <img src="${src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${caption}">
+                        <p style="text-align:center; margin-top:1rem; font-size:1.1rem;">${caption}</p>
+                    `;
+                    modal.classList.add('active');
+                }
+            };
         });
     </script>
 </body>

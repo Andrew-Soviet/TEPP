@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Электровоз ЧС6-025 — ТЭПП</title>
+    <meta name="description" content="История и характеристики электровоза ЧС6-025 «Имени Андреева Владимира Михайловича».">
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -14,13 +15,29 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <div class="top-nav-links">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <!-- ================= ШАПКА ================= -->
     <header>
         <div class="header-container">
-            <h1>Электровоз ЧС6-025</h1>
-            <p class="subtitle">Пассажирский двухсекционный электровоз постоянного тока</p>
+            <div class="logo">
+                <h1>Электровоз ЧС6-025</h1>
+                <p class="subtitle">Пассажирский двухсекционный электровоз постоянного тока</p>
+            </div>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
                     <li><a href="Железная_дорога.html">🚆 Железные дороги</a></li>
                     <li><a href="ЧС6.html">Электровоз ЧС6</a></li>
                     <li><a href="#about">О локомотиве</a></li>
@@ -58,7 +75,7 @@
 
         <!-- Основные данные -->
         <section id="specs" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+            <div class="card-header">
                 <span class="card-icon">📋</span>
                 <h2>Основные данные</h2>
             </div>
@@ -77,7 +94,7 @@
 
         <!-- История -->
         <section id="history" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+            <div class="card-header">
                 <span class="card-icon">📜</span>
                 <h2>История и статус</h2>
             </div>
@@ -110,7 +127,7 @@
 
         <!-- Технические характеристики семейства -->
         <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+            <div class="card-header">
                 <span class="card-icon">⚙️</span>
                 <h2>Характеристики серии ЧС6</h2>
             </div>
@@ -130,25 +147,48 @@
             </div>
         </section>
 
-        <!-- Галерея (если есть фото) -->
-        <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+        <!-- ============================================================
+             ГАЛЕРЕЯ (КАРТОЧКИ)
+             ============================================================ -->
+        <section id="gallery" class="section-card">
+            <div class="card-header">
                 <span class="card-icon">📸</span>
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/CHS6_025.jpg" alt="ЧС6-025" onerror="this.src='img/no-photo.png'">
-                        <div class="gallery-caption">ЧС6-025 «Имени Андреева Владимира Михайловича»</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                <div class="photo-gallery">
+                    <!-- Фото 1 (pfandrom) -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/CHS6_025.jpg" alt="ЧС6-025" onclick="openGalleryModal(this.src, 'ЧС6-025 «Имени Андреева Владимира Михайловича»')" onerror="this.src='img/no-photo.png'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">ЧС6-025</a>
+                            <p class="photo-desc">«Имени Андреева Владимира Михайловича».</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 7 июля 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/CHS6-025_pid.jpg" alt="ЧС6-025" onerror="this.src='img/no-photo.png'">
-                        <div class="gallery-caption">ЧС6-025 в расцветке обычной расцветке "РЖД"</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 ЛВС-86К 8181(Твой Транспорт)</p>
+
+                    <!-- Фото 2 (ЛВС-86К 8181 / Твой Транспорт) -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/CHS6-025_pid.jpg" alt="ЧС6-025 в расцветке РЖД" onclick="openGalleryModal(this.src, 'ЧС6-025 в обычной расцветке «РЖД»')" onerror="this.src='img/no-photo.png'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">ЧС6-025 (РЖД)</a>
+                            <p class="photo-desc">В обычной расцветке «РЖД».</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 15 сентября 2019 года</span>
+                                <!-- Ссылка на фото ЛВС-86К 8181 (Твой Транспорт) -->
+                                <span class="photo-author">📸 <a href="https://ttransport.ru/photo/128296.html" target="_blank" rel="noopener">ЛВС-86К 8181 (Твой Транспорт)</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
     </main>
@@ -163,7 +203,7 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
                         <li><a href="Железная_дорога.html">Железные дороги</a></li>
                         <li><a href="ЧС6.html">ЧС6 (серия)</a></li>
                     </ul>
@@ -181,23 +221,28 @@
 
     <div class="scroll-top">↑</div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
             function animateCounters() {
                 const targets = { builtYear: 1981, speed: 190, power: 8000 };
                 let current = { builtYear: 0, speed: 0, power: 0 };
-                
                 const yearEl = document.getElementById('builtYear');
                 const speedEl = document.getElementById('speed');
                 const powerEl = document.getElementById('power');
-                
                 if (!yearEl || !speedEl || !powerEl) return;
                 
                 const interval = setInterval(function() {
                     let allFinished = true;
-                    
                     if (current.builtYear < targets.builtYear) {
                         current.builtYear += Math.ceil(targets.builtYear / 50);
                         if (current.builtYear > targets.builtYear) current.builtYear = targets.builtYear;
@@ -220,6 +265,19 @@
                 }, 30);
             }
             animateCounters();
+
+            // Функция для открытия модалки из новой галереи
+            window.openGalleryModal = function(src, caption) {
+                const modal = document.getElementById('galleryModal');
+                const content = document.getElementById('galleryModalContent');
+                if (modal && content) {
+                    content.innerHTML = `
+                        <img src="${src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${caption}">
+                        <p style="text-align:center; margin-top:1rem; font-size:1.1rem;">${caption}</p>
+                    `;
+                    modal.classList.add('active');
+                }
+            };
         });
     </script>
 </body>
