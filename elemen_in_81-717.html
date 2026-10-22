@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Уникальные элементы в салоне 81-717/714 — ТЭПП</title>
+    <title>Вариации салона 81-717/714 — ТЭПП</title>
+    <meta name="description" content="Разнообразие интерьеров самого массового типа вагонов метро: пластик, сиденья, освещение и уникальные экземпляры.">
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -14,13 +15,29 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <div class="top-nav-links">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <!-- ================= ШАПКА ================= -->
     <header>
         <div class="header-container">
-            <h1>Уникальные элементы в салоне 81-717/714</h1>
-            <p class="subtitle">Разнообразие интерьеров самого массового типа вагонов метро</p>
+            <div class="logo">
+                <h1>Вариации салона 81-717/714</h1>
+                <p class="subtitle">Разнообразие интерьеров самого массового типа вагонов метро</p>
+            </div>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
                     <li><a href="Главная_метро.html">🚇 Метро</a></li>
                     <li><a href="Живая_история_Мск_метро.html">📚 Живая история</a></li>
                     <li><a href="#plastic">Пластик</a></li>
@@ -28,7 +45,6 @@
                     <li><a href="#lighting">Освещение</a></li>
                     <li><a href="#handrails">Поручни</a></li>
                     <li><a href="#unique">Уникальные вагоны</a></li>
-                    <li><a href="#gallery">Галерея</a></li>
                 </ul>
             </nav>
         </div>
@@ -61,7 +77,7 @@
 
         <!-- Пластик -->
         <section id="plastic" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #CD5C5C 0%, #B22222 100%);">
+            <div class="card-header">
                 <span class="card-icon">🎨</span>
                 <h2>Пластик в салонах</h2>
             </div>
@@ -73,32 +89,26 @@
                         <h3>🟤 Рыжий под дерево</h3>
                         <p>Классический тёмно-рыжий пластик «под дерево». Базовый вариант для большинства вагонов ММЗ до 2000-х годов.</p>
                     </div>
-                    
                     <div class="feature-item">
                         <h3>⚪ Ленинградский белый мрамор</h3>
                         <p>Уникальный белый пластик с текстурой «мрамор», характерный для вагонов ЛВЗ. Редкий вариант, встречается в сохранившихся вагонах.</p>
                     </div>
-                    
                     <div class="feature-item">
                         <h3>🔵 Голубой</h3>
                         <p>Ставился на ранние вагоны ММЗ. Также встречается в Нижнем Новгороде.</p>
                     </div>
-                    
                     <div class="feature-item">
                         <h3>🔷 Синий</h3>
                         <p>Ставился в некоторых вагонах ММЗ. Также встречается в Санкт-Петербурге.</p>
                     </div>
-                    
                     <div class="feature-item">
                         <h3>💠 Бирюзовый</h3>
                         <p>Встречался в вагонах ЛВЗ до капитального ремонта. После КР часто заменялся на белый пластик.</p>
                     </div>
-                    
                     <div class="feature-item">
                         <h3>🟡 Жёлтый под дерево</h3>
                         <p>Пластик под «жёлтое дерево» — вариант отделки, встречавшийся в отдельных вагонах.</p>
                     </div>
-                    
                     <div class="feature-item">
                         <h3>🟢 Салатовый</h3>
                         <p>Ставился на ранние вагоны ММЗ (начало 1980-х).</p>
@@ -113,7 +123,7 @@
 
         <!-- Сиденья и диваны -->
         <section id="seats" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+            <div class="card-header">
                 <span class="card-icon">🛋️</span>
                 <h2>Сиденья и диваны</h2>
             </div>
@@ -125,17 +135,14 @@
                         <h3>🟫 Бархатные диваны</h3>
                         <p>Редкий вариант обивки — бархатные диваны. Встречаются в Минске.</p>
                     </div>
-                    
                     <div class="feature-item">
                         <h3>🔵 Синие диваны</h3>
                         <p>Редкие вагоны с мягкими сиденьями синего цвета. Встречаются в Москве.</p>
                     </div>
-                    
                     <div class="feature-item">
                         <h3>🔴 Бордовые диваны</h3>
                         <p>Вагоны с диванами бордового оттенка.</p>
                     </div>
-
                     <div class="feature-item">
                         <h3>💺 Сиденья от Яузы</h3>
                         <p>В нескольких вагонах 81-714 можно встретить сиденья от экспериментальных поездов «Яуза».</p>
@@ -150,7 +157,7 @@
 
         <!-- Освещение -->
         <section id="lighting" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #F1C40F 0%, #F39C12 100%);">
+            <div class="card-header">
                 <span class="card-icon">💡</span>
                 <h2>Освещение</h2>
             </div>
@@ -160,12 +167,10 @@
                         <h3>🔆 Лампы ЛПВ-01</h3>
                         <p>Классическое люминесцентное освещение с плафонами ЛПВ-01. Встречается в вагонах до капитальных ремонтов.</p>
                     </div>
-                    
                     <div class="feature-item">
                         <h3>🔅 Лампы ЛПВ-02</h3>
                         <p>Более поздний вариант люминесцентного освещения с плафонами ЛПВ-02. Устанавливался на серийные номерные вагоны.</p>
                     </div>
-                    
                     <div class="feature-item">
                         <h3>💜 Светодиодная фиолетовая линия</h3>
                         <p>Уникальное освещение — светодиодная световая линия <strong>фиолетового цвета</strong>. Встречается в отдельных вагонах.</p>
@@ -176,7 +181,7 @@
 
         <!-- Поручни -->
         <section id="handrails" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+            <div class="card-header">
                 <span class="card-icon">🪢</span>
                 <h2>Поручни</h2>
             </div>
@@ -186,7 +191,6 @@
                         <h3>🪢 Вертикальные поручни</h3>
                         <p>Стандартные вертикальные поручни. Устанавливались на большинство вагонов. Появились с 81** серии.</p>
                     </div>
-                    
                     <div class="feature-item">
                         <h3>🪝 Поручни старого образца</h3>
                         <p>Поручни с иной формой и расположением. Встречаются в сохранившихся вагонах.</p>
@@ -197,42 +201,44 @@
 
         <!-- Уникальные вагоны -->
         <section id="unique" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #922B21 0%, #C0392B 100%);">
+            <div class="card-header">
                 <span class="card-icon">⭐</span>
                 <h2>Уникальные вагоны</h2>
             </div>
             <div class="card-content">
                 <p class="card-description">Полный список вагонов с уникальными элементами салона, которые сохранились до наших дней:</p>
                 
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Тип элемента</th>
-                            <th>Номера вагонов</th>
-                            <th>Город</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Пластик под «жёлтое дерево» + стойки «Ясень»</td><td>0231</td><td>Харьков</td></tr>
-                        <tr><td>Голубой пластик</td><td>11054</td><td>Нижний Новгород</td></tr>
-                        <tr><td>Голубой пластик</td><td>23586–23593, 11119</td><td>Москва</td></tr>
-                        <tr><td>Синий пластик</td><td>9050, 8085, 8199, 7862</td><td>Санкт-Петербург</td></tr>
-                        <tr><td>Бирюзовый пластик</td><td>11068, 11055</td><td>Санкт-Петербург</td></tr>
-                        <tr><td>Бирюзовый пластик</td><td>11052</td><td>Нижний Новгород</td></tr>
-                        <tr><td>Рыжий под дерево пластик</td><td>1887, 1266, 2553, 2782</td><td>Москва</td></tr>
-                        <tr><td>Рыжий под дерево пластик</td><td>11377</td><td>Санкт-Петербург</td></tr>
-                        <tr><td>Пластик под дерево + диваны</td><td>11424</td><td>Минск</td></tr>
-                        <tr><td>Синие диваны</td><td>11166, 0349, 0806, 0886</td><td>Москва</td></tr>
-                        <tr><td>Бордовые диваны</td><td>11205, 11206, 10102, 11274</td><td>Москва</td></tr>
-                        <tr><td>Бархатные диваны</td><td>11554</td><td>Минск</td></tr>
-                        <tr><td>Сиденья от Яузы</td><td>1595, 1568, 0935</td><td>Москва</td></tr>
-                        <tr><td>Светодиодная фиолетовая линия</td><td>11250</td><td>Москва</td></tr>
-                        <tr><td>Старое освещение (ЛПВ-01/02)</td><td>11265–11269, 0756</td><td>Москва</td></tr>
-                        <tr><td>Поручни старого образца</td><td>11265, 2523</td><td>Москва</td></tr>
-                        <tr><td>Оранжевые поручни</td><td>0146</td><td>Москва</td></tr>
-                        <tr><td>«Ковидные» сиденья</td><td>0963, 0959, 11139, 10093</td><td>Москва</td></tr>
-                    </tbody>
-                </table>
+                <div style="overflow-x: auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Тип элемента</th>
+                                <th>Номера вагонов</th>
+                                <th>Город</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Пластик под «жёлтое дерево» + стойки «Ясень»</td><td>0231</td><td>Харьков</td></tr>
+                            <tr><td>Голубой пластик</td><td>11054</td><td>Нижний Новгород</td></tr>
+                            <tr><td>Голубой пластик</td><td>23586–23593, 11119</td><td>Москва</td></tr>
+                            <tr><td>Синий пластик</td><td>9050, 8085, 8199, 7862</td><td>Санкт-Петербург</td></tr>
+                            <tr><td>Бирюзовый пластик</td><td>11068, 11055</td><td>Санкт-Петербург</td></tr>
+                            <tr><td>Бирюзовый пластик</td><td>11052</td><td>Нижний Новгород</td></tr>
+                            <tr><td>Рыжий под дерево пластик</td><td>1887, 1266, 2553, 2782</td><td>Москва</td></tr>
+                            <tr><td>Рыжий под дерево пластик</td><td>11377</td><td>Санкт-Петербург</td></tr>
+                            <tr><td>Пластик под дерево + диваны</td><td>11424</td><td>Минск</td></tr>
+                            <tr><td>Синие диваны</td><td>11166, 0349, 0806, 0886</td><td>Москва</td></tr>
+                            <tr><td>Бордовые диваны</td><td>11205, 11206, 10102, 11274</td><td>Москва</td></tr>
+                            <tr><td>Бархатные диваны</td><td>11554</td><td>Минск</td></tr>
+                            <tr><td>Сиденья от Яузы</td><td>1595, 1568, 0935</td><td>Москва</td></tr>
+                            <tr><td>Светодиодная фиолетовая линия</td><td>11250</td><td>Москва</td></tr>
+                            <tr><td>Старое освещение (ЛПВ-01/02)</td><td>11265–11269, 0756</td><td>Москва</td></tr>
+                            <tr><td>Поручни старого образца</td><td>11265, 2523</td><td>Москва</td></tr>
+                            <tr><td>Оранжевые поручни</td><td>0146</td><td>Санкт-Петербург</td></tr>
+                            <tr><td>«Ковидные» сиденья</td><td>0963, 0959, 11139, 10093</td><td>Москва</td></tr>
+                        </tbody>
+                    </table>
+                </div>
 
                 <div class="highlight-box" style="margin-top: 1.5rem;">
                     <h3>«Ковидные номерные»</h3>
@@ -241,56 +247,135 @@
             </div>
         </section>
 
-        <!-- Фотогалерея (ВСЕ ФОТО ЗДЕСЬ) -->
+        <!-- Фотогалерея -->
         <section id="gallery" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+            <div class="card-header">
                 <span class="card-icon">📸</span>
-                <h2>Фотогалерея</h2>
+                <h2>Фотогалерея уникальных салонов</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/1887.jpg" alt="Рыжий пластик в вагоне 1887" onerror="this.src='https://via.placeholder.com/600x400?text=1887'">
-                        <div class="gallery-caption">Рыжий пластик в вагоне № 1887.</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                <div class="photo-gallery">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/1887.jpg" alt="Рыжий пластик в вагоне 1887" onclick="openGalleryModal(this.src, 'Рыжий пластик в вагоне № 1887')" onerror="this.src='https://via.placeholder.com/600x400?text=1887'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон № 1887</a>
+                            <p class="photo-desc">Рыжий пластик под дерево.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/23591.jpg" alt="Голубой пластик в вагоне 23591" onerror="this.src='https://via.placeholder.com/600x400?text=23591'">
-                        <div class="gallery-caption">Голубой пластик в вагоне № 23591 (ЛВЗ).</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/23591.jpg" alt="Голубой пластик в вагоне 23591" onclick="openGalleryModal(this.src, 'Голубой пластик в вагоне № 23591 (ЛВЗ)')" onerror="this.src='https://via.placeholder.com/600x400?text=23591'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон № 23591</a>
+                            <p class="photo-desc">Голубой пластик (ЛВЗ).</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/11119.jpg" alt="Голубой пластик в вагоне 11119" onerror="this.src='https://via.placeholder.com/600x400?text=11119'">
-                        <div class="gallery-caption">Голубой пластик в вагоне № 11119.</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+
+                    <!-- Фото 3 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/11119.jpg" alt="Голубой пластик в вагоне 11119" onclick="openGalleryModal(this.src, 'Голубой пластик в вагоне № 11119')" onerror="this.src='https://via.placeholder.com/600x400?text=11119'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон № 11119</a>
+                            <p class="photo-desc">Голубой пластик.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/синие диваны.jpg" alt="Синие диваны" onerror="this.src='https://via.placeholder.com/600x400?text=Синие+диваны'">
-                        <div class="gallery-caption">Синие диваны в вагоне.</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 MTarabskieMakarony10</p>
+
+                    <!-- Фото 4 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/81-714.5-0806.jpg" alt="Синие диваны" onclick="openGalleryModal(this.src, 'Синие диваны в вагоне')" onerror="this.src='https://via.placeholder.com/600x400?text=Синие+диваны'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон №0806</a>
+                            <p class="photo-desc">Редкий вариант обивки.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2025</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/10142_int.jpg" alt="Бордовые диваны в вагоне 10142" onerror="this.src='https://via.placeholder.com/600x400?text=10142'">
-                        <div class="gallery-caption">Бордовые диваны в вагоне № 10102.</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 tomatikwwr</p>
+
+                    <!-- Фото 5 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/10142_int.jpg" alt="Бордовые диваны в вагоне 10142" onclick="openGalleryModal(this.src, 'Бордовые диваны в вагоне № 10102')" onerror="this.src='https://via.placeholder.com/600x400?text=10102'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон № 10102</a>
+                            <p class="photo-desc">Бордовые диваны.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://transphoto.org/photo/2156607/" target="_blank" rel="noopener">tomatikwwr</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/sud_Yauza_81-714.jpg" alt="Сиденья от Яузы в вагоне 1595" onerror="this.src='https://via.placeholder.com/600x400?text=1595'">
-                        <div class="gallery-caption">Сиденья от Яузы в вагоне № 1598.</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+
+                    <!-- Фото 6 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/sud_Yauza_81-714.jpg" alt="Сиденья от Яузы в вагоне 1595" onclick="openGalleryModal(this.src, 'Сиденья от Яузы в вагоне № 1598')" onerror="this.src='https://via.placeholder.com/600x400?text=1598'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон № 1598</a>
+                            <p class="photo-desc">Сиденья от Яузы.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/0665.jpg" alt="Старые поручни в вагоне 0665" onerror="this.src='https://via.placeholder.com/600x400?text=0665'">
-                        <div class="gallery-caption">Старые поручни в вагоне № 0665.</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 LASTOR_F</p>
+
+                    <!-- Фото 7 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/0665.jpg" alt="Старые поручни в вагоне 0665" onclick="openGalleryModal(this.src, 'Старые поручни в вагоне № 0665')" onerror="this.src='https://via.placeholder.com/600x400?text=0665'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон № 0665</a>
+                            <p class="photo-desc">Старые поручни.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2025</span>                                
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/0959.jpg" alt="Ковидные сиденья в вагоне 0959" onerror="this.src='https://via.placeholder.com/600x400?text=0959'">
-                        <div class="gallery-caption">«Ковидные» сиденья в вагоне № 0959.</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+
+                    <!-- Фото 8 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/0959.jpg" alt="Ковидные сиденья в вагоне 0959" onclick="openGalleryModal(this.src, '«Ковидные» сиденья в вагоне № 0959')" onerror="this.src='https://via.placeholder.com/600x400?text=0959'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон № 0959</a>
+                            <p class="photo-desc">«Ковидные» сиденья.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
@@ -309,12 +394,12 @@
                 <div class="footer-info">
                     <h4>ТЭПП</h4>
                     <p>Транспортная Энциклопедия Постсоветского Пространства</p>
-                    <p class="footer-motto">Раздел «Уникальные элементы 81-717/714»</p>
+                    <p class="footer-motto">Раздел «Вариации салона 81-717/714»</p>
                 </div>
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
                         <li><a href="Главная_метро.html">Метрополитены</a></li>
                         <li><a href="Живая_история_Мск_метро.html">Живая история</a></li>
                         <li><a href="2гофры_номеры.html">2 ребра жёсткости</a></li>
@@ -322,7 +407,7 @@
                 </div>
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -334,15 +419,15 @@
 
     <div class="scroll-top">↑</div>
 
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Счётчики
@@ -353,6 +438,7 @@
                 const carsEl = document.getElementById('numCars');
                 const uniqueEl = document.getElementById('numUnique');
                 if (!yearsEl || !carsEl || !uniqueEl) return;
+                
                 const interval = setInterval(function() {
                     let allFinished = true;
                     if (current.numYears < targets.numYears) {
@@ -377,23 +463,6 @@
                 }, 30);
             }
             animateCounters();
-
-            // Галерея
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
         });
     </script>
 </body>

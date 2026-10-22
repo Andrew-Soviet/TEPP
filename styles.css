@@ -51,43 +51,42 @@
 }
 
 /* ============================================================
-   2. ТЕМА: КОСМОС / ЗИМА (dark)
+   2. ТЕМА: ОСЕННИЙ ВЕЧЕР (dark)
    ============================================================ */
 [data-theme="dark"] {
-    --bg-card: rgba(10, 20, 35, 0.75); 
-    --bg-card-solid: #0a1423;
-    --bg-header: rgba(5, 10, 20, 0.95);
-    --bg-input: rgba(15, 26, 42, 0.8);
-    --text-primary: #e0f0ff;
-    --text-secondary: #90b0d0;
-    --text-muted: #5a7a9a;
-    --border-color: #1a3a5a;
+    --bg-card: rgba(30, 15, 10, 0.75); /* Тёмно-коричневый */
+    --bg-card-solid: #1e0f0a;
+    --bg-header: rgba(20, 10, 5, 0.95);
+    --bg-input: rgba(40, 20, 15, 0.8);
+    --text-primary: #ffe0b2; /* Светло-оранжевый */
+    --text-secondary: #d7a07a;
+    --text-muted: #9e6b4a;
+    --border-color: #4a2511;
     --shadow-color: rgba(0, 0, 0, 0.8);
-    --shadow-hover: rgba(77, 184, 255, 0.4);
-    --highlight-bg: rgba(77, 184, 255, 0.1);
-    --footer-border: rgba(77, 184, 255, 0.2);
-    --modal-bg: #0a1423;
-    --modal-text: #e0f0ff;
-    --btn-secondary-border: #4db8ff;
-    --btn-secondary-text: #e0f0ff;
-    --settings-bg: #0a1423;
+    --shadow-hover: rgba(255, 140, 0, 0.4); /* Оранжевое свечение */
+    --highlight-bg: rgba(255, 140, 0, 0.1);
+    --footer-border: rgba(255, 140, 0, 0.2);
+    --modal-bg: #1e0f0a;
+    --modal-text: #ffe0b2;
+    --btn-secondary-border: #ff8c00;
+    --btn-secondary-text: #ffe0b2;
+    --settings-bg: #1e0f0a;
     --settings-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-    --gradient-start: #4db8ff;
-    --gradient-end: #0055aa;
-    --accent-color: #4db8ff;
-    --accent-secondary: #00d4ff;
+    --gradient-start: #ff8c00; /* Оранжевый */
+    --gradient-end: #8b0000;   /* Тёмно-красный */
+    --accent-color: #ff8c00;
+    --accent-secondary: #ff4500;
     --backdrop-blur: blur(12px);
 }
 
-/* Зимний фон с затемнением */
+/* Осенний фон с затемнением */
 [data-theme="dark"] body {
-    /* Зимний градиент от тёмно-синего к глубокому космическому */
-    background-image: linear-gradient(135deg, #050a14 0%, #0a1423 50%, #0f1f33 100%) !important;
+    background-image: linear-gradient(135deg, #1a0a05 0%, #2d1308 50%, #4a1c0d 100%) !important;
     background-size: cover !important;
     background-position: center center !important;
     background-attachment: fixed !important;
     background-repeat: no-repeat !important;
-    background-color: #050a14 !important;
+    background-color: #1a0a05 !important;
 }
 
 /* ============================================================
@@ -460,8 +459,8 @@ footer { background: var(--bg-header); margin-top: 3rem; padding: 2.5rem 0 1rem;
 [data-theme="dark"] .feature-item:hover,
 [data-theme="dark"] .train-card:hover,
 [data-theme="dark"] .random-page-card:hover {
-    box-shadow: 0 0 20px rgba(77, 184, 255, 0.6), inset 0 0 10px rgba(77, 184, 255, 0.2) !important;
-    border: 2px solid #4db8ff !important; 
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.6), inset 0 0 10px rgba(255, 140, 0, 0.2) !important;
+    border: 2px solid #ff8c00 !important; 
     transform: translateY(-4px) !important;
 }
 
@@ -570,9 +569,9 @@ footer { background: var(--bg-header); margin-top: 3rem; padding: 2.5rem 0 1rem;
 }
 
 /* ============================================================
-   17. ЗИМНИЙ СНЕГ
+   17. ОСЕННИЙ ДОЖДЬ
    ============================================================ */
-#snow-container {
+#rain-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -584,25 +583,24 @@ footer { background: var(--bg-header); margin-top: 3rem; padding: 2.5rem 0 1rem;
     display: none;
 }
 
-[data-theme="dark"] #snow-container {
+[data-theme="dark"] #rain-container {
     display: block;
 }
 
-.snowflake {
+.raindrop {
     position: absolute;
-    top: -10px;
-    background-color: #ffffff;
-    border-radius: 50%;
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
-    animation: snowfall linear infinite;
+    top: -30px;
+    width: 1.5px; /* Чуть толще */
+    height: 40px; /* Длиннее */
+    /* Делаем цвет более теплым и заметным (осенний оттенок) */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 180, 100, 0.8));
+    box-shadow: 0 0 5px rgba(255, 140, 0, 0.3); /* Легкое свечение */
+    animation: rainfall linear infinite;
 }
 
-@keyframes snowfall {
+@keyframes rainfall {
     0% { transform: translateY(0) translateX(0); }
-    25% { transform: translateY(25vh) translateX(15px); }
-    50% { transform: translateY(50vh) translateX(-15px); }
-    75% { transform: translateY(75vh) translateX(15px); }
-    100% { transform: translateY(105vh) translateX(0); }
+    100% { transform: translateY(105vh) translateX(-10px); }
 }
 
 /* ============================================================
@@ -762,36 +760,116 @@ header {
     text-decoration: underline !important;
 }
 
+/* 2. Шапка сайта — градиент */
+[data-theme="dark"] header {
+    background: linear-gradient(135deg, #1a0a05 0%, #2d1308 100%) !important;
+    border-bottom: 3px solid #ff8c00 !important;
+    box-shadow: 0 4px 20px rgba(255, 140, 0, 0.2) !important;
+}
+
+/* 3. Самая верхняя тонкая панель — в тон */
+[data-theme="dark"] .top-nav {
+    background: linear-gradient(90deg, #1a0a05 0%, #2d1308 100%) !important;
+    border-bottom: 1px solid rgba(255, 140, 0, 0.3) !important;
+}
+
+/* 4. Шапки карточек — градиент */
+[data-theme="dark"] .card-header {
+    background: linear-gradient(135deg, #8b0000 0%, #ff4500 50%, #ff8c00 100%) !important;
+}
+
+
+
 /* ============================================================
-   ФИНАЛЬНАЯ ПРАВКА: ЗИМНИЙ ГРАДИЕНТ ДЛЯ ТЁМНОЙ ТЕМЫ
+   МОБИЛЬНОЕ МЕНЮ (БУРГЕР)
    ============================================================ */
 
-/* 1. Фон страницы (градиент от тёмно-синего к голубому) */
-[data-theme="dark"] body {
-    background-image: linear-gradient(135deg, #050a14 0%, #0a1423 50%, #0f1f33 100%) !important;
-    background-size: cover !important;
-    background-position: center center !important;
-    background-attachment: fixed !important;
-    background-repeat: no-repeat !important;
-    background-color: #050a14 !important;
+/* Скрываем бургер на компьютерах */
+.mobile-menu-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+    z-index: 1001;
 }
 
-/* 2. Шапка сайта (верхнее табло с заголовком) — тоже градиент */
-[data-theme="dark"] header {
-    background: linear-gradient(135deg, #050a14 0%, #0a1423 100%) !important;
-    border-bottom: 3px solid #4db8ff !important;
-    box-shadow: 0 4px 20px rgba(77, 184, 255, 0.2) !important;
+/* Полоски бургера */
+.mobile-menu-btn span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff; /* Цвет полосок */
+    border-radius: 3px;
+    transition: 0.3s;
 }
 
-/* 3. Самая верхняя тонкая панель (ссылки) — в тон */
-[data-theme="dark"] .top-nav {
-    background: linear-gradient(90deg, #050a14 0%, #0a1423 100%) !important;
-    border-bottom: 1px solid rgba(77, 184, 255, 0.3) !important;
+/* Анимация бургера в крестик при открытии */
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
-/* 4. Шапки карточек (Поиск, О проекте и т.д.) — градиент */
-[data-theme="dark"] .card-header {
-    background: linear-gradient(135deg, #0055aa 0%, #4db8ff 50%, #00d4ff 100%) !important;
+/* Мобильная адаптация (срабатывает на экранах меньше 768px) */
+@media (max-width: 768px) {
+    /* Показываем бургер */
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    /* Выравниваем верхнюю панель */
+    .top-nav {
+        padding: 0 1rem;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Превращаем горизонтальный список в вертикальное выпадающее меню */
+    .top-nav-links {
+        display: none; /* Скрыто по умолчанию */
+        position: fixed;
+        top: 50px; /* Высота верхней панели, чтобы меню было ровно под ней */
+        left: 0;
+        width: 100%;
+        background-color: #3573b3; /* Синий цвет как на TransPhoto */
+        flex-direction: column;
+        gap: 0;
+        z-index: 1000;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    /* Показ меню при клике (класс active добавляется через JS) */
+    .top-nav-links.active {
+        display: flex;
+    }
+
+    /* Стилизация ссылок в мобильном меню */
+    .top-nav-links a {
+        padding: 15px 20px;
+        font-size: 1.1rem;
+        color: white;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        width: 100%;
+        text-align: left;
+        text-decoration: none;
+    }
+
+    .top-nav-links a:last-child {
+        border-bottom: none;
+    }
+
+    .top-nav-links a:hover, 
+    .top-nav-links a:active {
+        background-color: rgba(255,255,255,0.15);
+        color: white;
+    }
 }
-
-

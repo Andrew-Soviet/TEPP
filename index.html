@@ -33,7 +33,14 @@
 
     <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
     <div class="top-nav">
-        <div class="top-nav-links">
+        <!-- Кнопка бургер для мобильных -->
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
             <a href="База_подвижного_состава.html">База подвижного состава</a>
             <a href="Дополнительно.html">Дополнительно</a>
             <a href="Комментарии.html">Комментарии</a>
@@ -41,7 +48,7 @@
             <a href="help.html">Помощь</a>
             <a href="Форум.html">Форум</a>
         </div>
-        <!-- Кнопка настроек в верхней панели -->
+        
         <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
     </div>
 

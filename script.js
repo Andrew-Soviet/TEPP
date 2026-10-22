@@ -43,10 +43,10 @@ document.addEventListener('DOMContentLoaded', function() {
         leafContainer.id = 'leaf-container';
         document.body.appendChild(leafContainer);
     }
-    if (!document.getElementById('snow-container')) {
-        const snowContainer = document.createElement('div');
-        snowContainer.id = 'snow-container';
-        document.body.appendChild(snowContainer);
+    if (!document.getElementById('rain-container')) {
+        const rainContainer = document.createElement('div');
+        rainContainer.id = 'rain-container';
+        document.body.appendChild(rainContainer);
     }
 
     initSettings();
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setupHideHeaderOnScroll();
     setupTelegramModal();
     setupAutumnLeaves();
-    setupWinterSnow();
+    setupAutumnRain();
 });
 
 // ============================================================
@@ -915,64 +915,63 @@ function setupAutumnLeaves() {
 }
 
 // ============================================================
-// ЗИМНИЙ СНЕГ
+// ОСЕННИЙ ДОЖДЬ
 // ============================================================
-function setupWinterSnow() {
-    const container = document.getElementById('snow-container');
+function setupAutumnRain() {
+    const container = document.getElementById('rain-container');
     if (!container) return;
 
-    let snowInterval = null;
+    let rainInterval = null;
 
-    function createSnowflake() {
+    function createDrop() {
         if (document.documentElement.getAttribute('data-theme') !== 'dark') return;
 
-        const snowflake = document.createElement('div');
-        snowflake.classList.add('snowflake');
+        const drop = document.createElement('div');
+        drop.classList.add('raindrop');
         
-        const size = Math.random() * 4 + 2;
-        snowflake.style.width = `${size}px`;
-        snowflake.style.height = `${size}px`;
-        snowflake.style.left = `${Math.random() * 100}vw`;
+        // Случайная длина капли
+        const height = Math.random() * 20 + 15;
+        drop.style.height = `${height}px`;
+        drop.style.left = `${Math.random() * 100}vw`;
         
-        const duration = Math.random() * 7 + 5;
-        snowflake.style.animationDuration = `${duration}s`;
-        snowflake.style.animationDelay = `${Math.random() * 5}s`;
-        snowflake.style.opacity = Math.random() * 0.6 + 0.4;
+        // Скорость падения
+        const duration = Math.random() * 0.6 + 0.4; // Быстрый дождь
+        drop.style.animationDuration = `${duration}s`;
+        drop.style.animationDelay = `${Math.random() * 1}s`;
+        drop.style.opacity = Math.random() * 0.4 + 0.2;
 
-        container.appendChild(snowflake);
+        container.appendChild(drop);
 
+        // Удаляем каплю после падения
         setTimeout(() => {
-            if (snowflake.parentNode) snowflake.remove();
-        }, (duration + 5) * 1000);
+            if (drop.parentNode) drop.remove();
+        }, (duration + 1) * 1000);
     }
 
-    function startSnow() {
+    function startRain() {
         container.innerHTML = '';
-        for (let i = 0; i < 40; i++) {
-            setTimeout(createSnowflake, i * 100); // ИСПРАВЛЕНО: было 1ы
-        }
-        if (snowInterval) clearInterval(snowInterval);
-        snowInterval = setInterval(createSnowflake, 150);
+        if (rainInterval) clearInterval(rainInterval);
+        rainInterval = setInterval(createDrop, 30); // Частота падения
     }
 
-    function stopSnow() {
-        if (snowInterval) {
-            clearInterval(snowInterval);
-            snowInterval = null;
+    function stopRain() {
+        if (rainInterval) {
+            clearInterval(rainInterval);
+            rainInterval = null;
         }
         container.innerHTML = '';
     }
 
     if (document.documentElement.getAttribute('data-theme') === 'dark') {
-        startSnow();
+        startRain();
     }
 
     const observer = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
             if (mutation.attributeName === 'data-theme') {
                 const currentTheme = document.documentElement.getAttribute('data-theme');
-                if (currentTheme === 'dark') startSnow();
-                else stopSnow();
+                if (currentTheme === 'dark') startRain();
+                else stopRain();
             }
         });
     });
@@ -1129,5 +1128,34 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.photo-author a').forEach(link => {
         link.setAttribute('target', '_blank');
         link.setAttribute('rel', 'noopener');
+    });
+});
+
+// ============================================================
+// МОБИЛЬНОЕ МЕНЮ (БУРГЕР)
+// ============================================================
+function toggleMobileMenu() {
+    const btn = document.querySelector('.mobile-menu-btn');
+    const links = document.getElementById('topNavLinks');
+    
+    if (btn && links) {
+        // Переключаем классы (добавляем/убираем)
+        btn.classList.toggle('active');
+        links.classList.toggle('active');
+    }
+}
+
+// Закрывать меню при клике на любую ссылку внутри него
+document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('.top-nav-links a');
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            const btn = document.querySelector('.mobile-menu-btn');
+            const menu = document.getElementById('topNavLinks');
+            if (btn && menu) {
+                btn.classList.remove('active');
+                menu.classList.remove('active');
+            }
+        });
     });
 });

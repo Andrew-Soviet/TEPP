@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daimler Omnibus 1 T — первый автобус Москвы</title>
+    <title>Daimler Omnibus 1 T — первый автобус Москвы — ТЭПП</title>
+    <meta name="description" content="История первого московского автобуса Daimler Omnibus 1 T, приобретённого графом Шереметевым в 1907 году.">
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -14,16 +15,31 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <div class="top-nav-links">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <!-- ================= ШАПКА ================= -->
     <header>
         <div class="header-container">
-            <h1>Daimler Omnibus 1 T</h1>
-            <p class="subtitle">Первый автобус Москвы — омнибус графа Шереметева, 1907 год</p>
+            <div class="logo">
+                <h1>Daimler Omnibus 1 T</h1>
+                <p class="subtitle">Первый автобус Москвы — омнибус графа Шереметева, 1907 год</p>
+            </div>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
-                    <li><a href="Железная_дорога.html">🚂 Железные дороги</a></li>
-                    <li><a href="Локомотивы.html">🔧 Локомотивы</a></li>
-                    <li><a href="Электровозы.html">⚡ Электровозы</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
+                    <li><a href="city_transport.html">🚌 Наземный транспорт</a></li>
+                    <li><a href="Автобусы.html">Автобусы</a></li>
                     <li><a href="#about">Об омнибусе</a></li>
                     <li><a href="#history">История</a></li>
                     <li><a href="#gallery">Фото</a></li>
@@ -33,11 +49,13 @@
     </header>
 
     <main>
+        <!-- Герой-секция -->
         <section id="about" class="hero">
             <div class="hero-content">
                 <h2>Daimler Omnibus 1 T</h2>
                 <p class="hero-text">Daimler Omnibus 1 T Typ 10 personen — первый московский автобус, вышедший на улицы 18 июля 1907 года. Приобретён частной конторой графа А. Д. Шереметева для движения по пригородному маршруту между Марьиной Рощей и Останкино.</p>
                 <p class="hero-text">Это был автомобиль длиной чуть более 5 метров, снабжённый 4-цилиндровым двигателем мощностью от 12 до 18 лошадиных сил, цепным приводом и грузошинами. Для пассажиров переоборудовали грузовую платформу, разместив две мягкие лавки на 10 человек.</p>
+                
                 <div class="stats-container">
                     <div class="stat-item">
                         <div class="counter-number" id="buildYear">0</div>
@@ -55,8 +73,9 @@
             </div>
         </section>
 
+        <!-- Общая информация -->
         <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+            <div class="card-header">
                 <span class="card-icon">🚌</span>
                 <h2>Общая информация</h2>
             </div>
@@ -83,8 +102,9 @@
             </div>
         </section>
 
+        <!-- Технические характеристики -->
         <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+            <div class="card-header">
                 <span class="card-icon">⚙️</span>
                 <h2>Технические характеристики</h2>
             </div>
@@ -110,8 +130,9 @@
             </div>
         </section>
 
+        <!-- История -->
         <section id="history" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+            <div class="card-header">
                 <span class="card-icon">📜</span>
                 <h2>История</h2>
             </div>
@@ -166,8 +187,9 @@
             </div>
         </section>
 
+        <!-- Особенности конструкции -->
         <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+            <div class="card-header">
                 <span class="card-icon">🎨</span>
                 <h2>Особенности конструкции</h2>
             </div>
@@ -196,28 +218,49 @@
             </div>
         </section>
 
+        <!-- Фотогалерея -->
         <section id="gallery" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+            <div class="card-header">
                 <span class="card-icon">📸</span>
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/daimler_omnibus_museum.jpg" alt="Daimler Omnibus в музее" onerror="this.src='https://via.placeholder.com/800x500?text=Daimler+в+музее'">
-                        <div class="gallery-caption">Макет Daimler Omnibus в Музее транспорта Москвы</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                <div class="photo-gallery">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/daimler_omnibus_museum.jpg" alt="Daimler Omnibus в музее" onclick="openGalleryModal(this.src, 'Макет Daimler Omnibus в Музее транспорта Москвы')" onerror="this.src='https://via.placeholder.com/600x400?text=Daimler+в+музее'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Макет Daimler Omnibus</a>
+                            <p class="photo-desc">В Музее транспорта Москвы.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 11 октября 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/daimler_omnibus_tabl.jpg" alt="Daimler Omnibus 1 T" onerror="this.src='https://via.placeholder.com/800x500?text=Daimler+Omnibus+1+T'">
-                        <div class="gallery-caption">Табличка об экспонате</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/daimler_omnibus_tabl.jpg" alt="Daimler Omnibus 1 T" onclick="openGalleryModal(this.src, 'Табличка об экспонате')" onerror="this.src='https://via.placeholder.com/600x400?text=Daimler+Omnibus+1+T'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Табличка об экспонате</a>
+                            <p class="photo-desc">Daimler Omnibus 1 T.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 11 октября 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
+        <!-- Цитата -->
         <section class="quote-section">
             <div class="quote-container">
                 <p class="quote-text">«На днях открывается автомобильное движение общественного пользования между Москвой и Останкиным. Первым предпринимателем, осуществившим это дело, является гр. А. Д. Шереметев. Оборудованные им автомобили построены в виде многоместных линеек. За проезд от Москвы до Останкина предполагается взимать 15 коп.».</p>
@@ -237,9 +280,9 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
-                        <li><a href="Локомотивы.html">Локомотивы</a></li>
-                        <li><a href="Электровозы.html">Электровозы</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
+                        <li><a href="city_transport.html">Наземный транспорт</a></li>
+                        <li><a href="Автобусы.html">Автобусы</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
@@ -256,17 +299,18 @@
 
     <div class="scroll-top">↑</div>
 
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
             function animateCounters() {
                 const targets = { buildYear: 1907, power: 18, seats: 10 };
                 let current = { buildYear: 0, power: 0, seats: 0 };
@@ -274,6 +318,7 @@
                 const powerEl = document.getElementById('power');
                 const seatsEl = document.getElementById('seats');
                 if (!yearEl || !powerEl || !seatsEl) return;
+                
                 const interval = setInterval(function() {
                     let allFinished = true;
                     if (current.buildYear < targets.buildYear) {
@@ -298,22 +343,6 @@
                 }, 30);
             }
             animateCounters();
-
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
         });
     </script>
 </body>
