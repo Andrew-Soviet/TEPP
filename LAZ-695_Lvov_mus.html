@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ЛАЗ-695 «Львов» — рекордсмен Книги Гиннесса</title>
+    <title>ЛАЗ-695 «Львов» (1957) — Музейный экспонат — ТЭПП</title>
+    <meta name="description" content="ЛАЗ-695 «Львов» 1957 года из Музея Транспорта Москвы. Дебютная «фестивальная» модель.">
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -14,77 +15,101 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <!-- ================= ШАПКА ================= -->
     <header>
         <div class="header-container">
-            <h1>ЛАЗ-695 «Львов»</h1>
-            <p class="subtitle">Автобус-рекордсмен: 47 лет на конвейере и более 300 000 выпущенных машин</p>
+            <div class="logo">
+                <h1>ЛАЗ-695 «Львов»</h1>
+                <p class="subtitle">Музейный экспонат (1957) — дебютная «фестивальная» модель</p>
+            </div>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
-                    <li><a href="Железная_дорога.html">🚂 Железные дороги</a></li>
-                    <li><a href="Локомотивы.html">🔧 Локомотивы</a></li>
-                    <li><a href="Электровозы.html">⚡ Электровозы</a></li>
-                    <li><a href="#about">Об автобусе</a></li>
-                    <li><a href="#history">История</a></li>
-                    <li><a href="#gallery">Фото</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
+                    <li><a href="city_transport.html">🚌 Городской транспорт</a></li>
+                    <li><a href="Автобусы.html">🚐 Автобусы</a></li>
+                    <li><a href="Модели_автобусов.html">📋 Модели</a></li>
+                    <li><a href="#about" class="active">🚌 ЛАЗ-695</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
+        <!-- Герой-секция -->
         <section id="about" class="hero">
             <div class="hero-content">
-                <h2>ЛАЗ-695 «Львов»</h2>
-                <p class="hero-text">ЛАЗ-695 «Львов» — советский и украинский городской высокопольный автобус среднего класса, выпускавшийся Львовским автобусным заводом с 1956 по 2003 год. Первый автобус завода и самая массовая модель в мире — более 300 000 экземпляров.</p>
-                <p class="hero-text">Стал первым советским серийным автобусом с задним расположением двигателя и несущим кузовом вагонной компоновки. За 47 лет производства попал в Книгу рекордов Гиннесса как автобус-долгожитель. В 1958 году отмечен медалью на международной выставке в Брюсселе.</p>
+                <h2>ЛАЗ-695 «Львов» (1957)</h2>
+                <p class="hero-text">Перед вами дебютная модель Львовского автобусного завода. Представленный экземпляр относится к <strong>самым массовым в СССР</strong> автобусам второго поколения. Это один из ограниченной партии, которая была направлена в Москву для обслуживания <strong>Всемирного фестиваля молодёжи и студентов 1957 года</strong>.</p>
+                <p class="hero-text">Эти ранние экземпляры называют <strong>«фестивальными»</strong>. Экспонат выделялся своим прогрессивным дизайном с обширным остеклением и особой мягкостью хода, которую обеспечивала новая рессорно-пружинная подвеска.</p>
                 <div class="stats-container">
                     <div class="stat-item">
                         <div class="counter-number" id="buildYear">0</div>
-                        <div class="stat-label">год начала выпуска</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="counter-number" id="totalMade">0</div>
-                        <div class="stat-label">всего выпущено</div>
+                        <div class="stat-label">год выпуска экспоната</div>
                     </div>
                     <div class="stat-item">
                         <div class="counter-number" id="capacity">0</div>
                         <div class="stat-label">мест сидячих</div>
                     </div>
+                    <div class="stat-item">
+                        <div class="stat-label" style="font-size: 1.2rem; color: var(--accent-color); font-weight: bold; margin-top: 1rem;">Музейный</div>
+                        <div class="stat-label">статус</div>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Общая информация -->
         <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+            <div class="card-header">
                 <span class="card-icon">🚌</span>
-                <h2>Общая информация</h2>
+                <h2>Общая информация об экспонате</h2>
             </div>
             <div class="card-content">
                 <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
                     <div class="feature-item">
                         <h3>🏭 Производство</h3>
                         <p><strong>Завод-изготовитель:</strong> Львовский автобусный завод (ЛАЗ)</p>
-                        <p><strong>Годы выпуска:</strong> 1956–2003</p>
-                        <p><strong>Всего выпущено:</strong> более 300 000 (всех модификаций)</p>
-                        <p><strong>Экспорт:</strong> в 49 стран мира</p>
+                        <p><strong>Модель:</strong> ЛАЗ-695 «Львов»</p>
+                        <p><strong>Год выпуска экспоната:</strong> 1957</p>
+                        <p><strong>Тип:</strong> Городской высокопольный автобус среднего класса</p>
                     </div>
                     <div class="feature-item">
-                        <h3>📍 Эксплуатация</h3>
-                        <p><strong>Основной регион:</strong> все города СССР (кроме Москвы)</p>
-                        <p><strong>В Москве:</strong> на городских маршрутах не работали</p>
-                        <p><strong>Самый массовый вариант:</strong> ЛАЗ-695Н (с 1976)</p>
-                        <p><strong>Рекорд:</strong> Книга Гиннесса — 47 лет производства</p>
+                        <h3>📍 Музейный статус</h3>
+                        <p><strong>Местонахождение:</strong> Музей Транспорта Москвы</p>
+                        <p><strong>Состояние:</strong> Не эксплуатируется (музейный экспонат)</p>
+                        <p><strong>Особенность:</strong> «Фестивальный» экземпляр</p>
+                        <p><strong>Назначение:</strong> Обслуживание Всемирного фестиваля молодёжи и студентов</p>
                     </div>
                 </div>
                 <div class="highlight-box" style="margin-top: 1.5rem;">
-                    <p>⭐ <strong>Рекордсмен:</strong> ЛАЗ-695 — самая массовая модель автобуса в мире, попавшая в Книгу рекордов Гиннесса. Ни один автобус не выпускался на протяжении 47 лет. Первые образцы изготовили в 1957 году специально к Международному фестивалю молодёжи и студентов в Москве. Конструкторы изучали немецкие автобусы Magirus-Deutz и Mercedes-Benz O 321, но о копировании речи не шло.</p>
+                    <p>⭐ <strong>Роль в истории:</strong> Это дебютная модель Львовского автобусного завода. Именно с этих машин началось триумфальное шествие ЛАЗ-695 по дорогам СССР. Ограниченная партия, выпущенная в 1957 году, возила гостей и участников Всемирного фестиваля молодёжи и студентов в Москве.</p>
                 </div>
             </div>
         </section>
 
+        <!-- Технические характеристики -->
         <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+            <div class="card-header">
                 <span class="card-icon">⚙️</span>
                 <h2>Технические характеристики</h2>
             </div>
@@ -97,145 +122,149 @@
                         <p><strong>Высота:</strong> 2,87 м</p>
                         <p><strong>Снаряжённая масса:</strong> 6750 кг</p>
                         <p><strong>Вместимость:</strong> 65 пассажиров (32 сидячих)</p>
-                        <p><strong>Максимальная скорость:</strong> 75–87 км/ч</p>
+                        <p><strong>Максимальная скорость:</strong> 75 км/ч (ранняя версия)</p>
                     </div>
                     <div class="feature-item">
                         <h3>Силовая установка</h3>
-                        <p><strong>Двигатель (ранний):</strong> ЗИЛ-158Л, 5,56 л, 109 л.с.</p>
-                        <p><strong>Двигатель (ЛАЗ-695Е):</strong> ЗИЛ-130, V8, 6,0 л</p>
-                        <p><strong>Мощность (ЛАЗ-695Е):</strong> 150 л.с.</p>
-                        <p><strong>Расход топлива:</strong> 35 л/100 км (паспортный)</p>
+                        <p><strong>Двигатель:</strong> ЗИЛ-158Л, 5,56 л, 109 л.с. (на ранних версиях)</p>
                         <p><strong>КПП:</strong> 5-ступенчатая механическая</p>
                         <p><strong>Расположение:</strong> заднее, продольное</p>
+                        <p><strong>Подвеска:</strong> Рессорно-пружинная</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- История -->
         <section id="history" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+            <div class="card-header">
                 <span class="card-icon">📜</span>
-                <h2>История</h2>
+                <h2>История экспоната</h2>
             </div>
             <div class="card-content">
                 <div class="timeline" style="padding: 1rem 0;">
                     <div class="timeline-item">
-                        <div class="timeline-date">1955–1956</div>
+                        <div class="timeline-date">1956</div>
                         <div class="timeline-content">
-                            <h3>Рождение легенды</h3>
-                            <p>Львовский завод не сразу перешёл к производству автобусов — сначала он выпускал фургоны и автокраны. Городской автобус ЛАЗ-695 начали разрабатывать в середине 50-х годов. Конструкторы изучали импортные модели вроде Magirus-Deutz O3500H, однако о копировании речь не шла. Первый прототип собрали 12 февраля 1956 года к XX съезду КПСС.</p>
+                            <h3>Разработка модели</h3>
+                            <p>Первый прототип ЛАЗ-695 собрали 12 февраля 1956 года. Конструкторы изучали импортные модели, но создали собственную прогрессивную конструкцию с несущим кузовом и задним расположением двигателя.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date">1957</div>
                         <div class="timeline-content">
                             <h3>Дебют на фестивале</h3>
-                            <p>Первые товарные машины выпустили в 1957 году к московскому Международному фестивалю молодёжи и студентов. Для производства кардинально реконструировали завод на западе Украины. Массовое производство стартовало в середине 1957 года.</p>
+                            <p>Первые товарные машины выпустили в 1957 году к московскому Международному фестивалю молодёжи и студентов. Ограниченная партия была направлена в Москву для обслуживания гостей фестиваля.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date">1958</div>
                         <div class="timeline-content">
                             <h3>Медаль в Брюсселе</h3>
-                            <p>В 1958 году автобус отметили медалью на международной выставке в Брюсселе. Тогда же начали производство модернизированной версии ЛАЗ-695Б с пневмоприводом дверей. Появился и туристический междугородний автобус ЛАЗ-697.</p>
+                            <p>В 1958 году автобус отметили медалью на международной выставке в Брюсселе. Модель получила признание на мировом уровне.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-date">1961–1963</div>
+                        <div class="timeline-date">Наши дни</div>
                         <div class="timeline-content">
-                            <h3>ЛАЗ-695Е — новый мотор</h3>
-                            <p>С 1961 года вместо рядной «шестёрки» ЗИЛ-158 (109 л.с.) начали устанавливать новый V-образный 8-цилиндровый двигатель ЗИЛ-130. Такие машины получили обозначение ЛАЗ-695Е. Максимальная скорость возросла с 65 до 87 км/ч. Серийно ЛАЗ-695Е выпускался с 1963 по 1969 год — всего 37 916 штук, из них 1346 на экспорт.</p>
+                            <h3>Сохранение для истории</h3>
+                            <p>Данный экземпляр 1957 года был отреставрирован и занял достойное место в экспозиции Музея Транспорта Москвы. Это один из немногих сохранившихся «фестивальных» автобусов.</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">1969</div>
-                        <div class="timeline-content">
-                            <h3>ЛАЗ-695М и ЛАЗ-695Ж</h3>
-                            <p>В 1969 году появился ЛАЗ-695М, а также ЛАЗ-695Ж — с 2-ступенчатой гидромеханической КПП.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">1976</div>
-                        <div class="timeline-content">
-                            <h3>ЛАЗ-695Н — самый массовый</h3>
-                            <p>С 1976 года выпускался обновлённый ЛАЗ-695Н с изменённой передней частью, который стал самым массовым вариантом. Скорость возросла до 80 км/ч. Его сейчас можно встретить на украинских дорогах.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">2003</div>
-                        <div class="timeline-content">
-                            <h3>Конец производства</h3>
-                            <p>Производство модели прекратили в 2003 году. ЛАЗ-695 попал в Книгу рекордов Гиннесса как долгожитель — ни один автобус не выпускался на протяжении 47 лет. Всего собрано более 300 000 ЛАЗ-695 и 697. Их экспортировали в 49 стран мира — даже космонавтов на Байконуре и участников Олимпийских игр обслуживали автобусы ЛАЗ.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="highlight-box" style="margin-top: 1.5rem;">
-                    <p><strong>Интересный факт:</strong> ЛАЗ-695 стал первым советским серийным автобусом с задним расположением двигателя и несущим кузовом вагонной компоновки. Для своего времени он имел довольно прогрессивную конструкцию с рессорно-пружинной подвеской — она обеспечивала комфорт независимо от загрузки. Он был более вместительным, чем предшественник ЗИС-155, и при этом весил на 90 кг меньше.</p>
                 </div>
             </div>
         </section>
 
+        <!-- Особенности конструкции -->
         <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+            <div class="card-header">
                 <span class="card-icon">🎨</span>
                 <h2>Особенности конструкции</h2>
             </div>
             <div class="card-content">
                 <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
                     <div class="feature-item">
-                        <h3>Заднемоторная компоновка</h3>
-                        <p>Впервые в СССР двигатель располагался продольно в заднем свесе вместе с коробкой передач и главной передачей. Это освободило место для пассажирского салона и снизило шум в салоне. Правда, система охлаждения страдала от недостатка воздуха — боковые воздухозаборники не решали проблему полностью.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>Несущий кузов</h3>
-                        <p>Пространственная конструкция с несущим основанием, интегрированным с каркасом кузова. Лёгкий каркас на мощном основании спроектировали по лекалам немецких автобусов Mercedes-Benz и Setra. Профили — из стали толщиной 1,5–2 мм.</p>
+                        <h3>Прогрессивный дизайн</h3>
+                        <p>Дебютная модель имела обширное остекление и обтекаемую форму, что выделяло её на фоне предшественников. Дизайн считался очень прогрессивным для своего времени.</p>
                     </div>
                     <div class="feature-item">
                         <h3>Рессорно-пружинная подвеска</h3>
-                        <p>Специальная подвеска, сконструированная с учётом требований комфорта совместно со специалистами НАМИ. Продольные рессоры работали вместе с корректирующими пружинами, которые увеличивали жёсткость в зависимости от нагрузки. Комфорт сохранялся независимо от загрузки.</p>
+                        <p>Особая мягкость хода обеспечивалась новой рессорно-пружинной подвеской. Это было важное преимущество для городских перевозок.</p>
                     </div>
                     <div class="feature-item">
-                        <h3>Эволюция модели</h3>
-                        <p>Меняли дизайн и усиливали кузов, совершенствовали тормоза и подвеску. Машина получила 150-сильный мотор V8 от ЗИЛ-130. Ставили и дизель Д245. Однако вплоть до последней версии ЛАЗ-695Н автобус так и не обрёл автоматическую коробку передач, необходимую городской машине.</p>
+                        <h3>Заднемоторная компоновка</h3>
+                        <p>Двигатель располагался продольно в заднем свесе. Это освободило место для пассажирского салона и снизило шум.</p>
                     </div>
-                </div>
-                <div class="highlight-box" style="margin-top: 1rem;">
-                    <p>🎉 <strong>Символ эпохи:</strong> ЛАЗ-695 — один из самых узнаваемых советских автобусов. Его можно было встретить во многих крупных городах СССР, хотя на столичных городских маршрутах ЛАЗ-695 не работали. Ранние ЛАЗы с эмблемой в виде буквы «Л» на передке стали символом целой эпохи в истории советского автобусостроения.</p>
+                    <div class="feature-item">
+                        <h3>Несущий кузов</h3>
+                        <p>Пространственная конструкция с несущим основанием, интегрированным с каркасом кузова. Лёгкий каркас был спроектирован по лекалам немецких автобусов Mercedes-Benz и Setra.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Фотогалерея -->
         <section id="gallery" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+            <div class="card-header">
                 <span class="card-icon">📸</span>
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/laz_695_museum.jpg" alt="ЛАЗ-695 в музее" onerror="this.src='https://via.placeholder.com/800x500?text=ЛАЗ-695+в+музее'">
-                        <div class="gallery-caption">ЛАЗ-695 из коллекции Музея транспорта Москвы</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                <div class="photo-gallery">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/laz_695_museum.jpg" alt="ЛАЗ-695 в музее" onclick="openGalleryModal(this.src, 'ЛАЗ-695 1957 года из коллекции Музея транспорта Москвы')" onerror="this.src='https://via.placeholder.com/600x400?text=ЛАЗ-695'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">ЛАЗ-695 в музее</a>
+                            <p class="photo-desc">Экспонат 1957 года («фестивальный»).</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/laz_695_museum_tabl.jpg" alt="ЛАЗ-695 в музее" onerror="this.src='https://via.placeholder.com/800x500?text=ЛАЗ-695+в+музее'">
-                        <div class="gallery-caption">Табличка об экспонате</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/laz_695_museum_tabl.jpg" alt="Табличка об экспонате" onclick="openGalleryModal(this.src, 'Табличка об экспонате')" onerror="this.src='https://via.placeholder.com/600x400?text=Табличка'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Табличка об экспонате</a>
+                            <p class="photo-desc">Музейная информация.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/laz_695_museum_int.jpg" alt="ЛАЗ-695 в музее" onerror="this.src='https://via.placeholder.com/800x500?text=ЛАЗ-695+в+музее'">
-                        <div class="gallery-caption">ЛАЗ-695 салон</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+
+                    <!-- Фото 3 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/laz_695_museum_int.jpg" alt="Салон ЛАЗ-695" onclick="openGalleryModal(this.src, 'Салон ЛАЗ-695')" onerror="this.src='https://via.placeholder.com/600x400?text=Салон'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Салон автобуса</a>
+                            <p class="photo-desc">Внутреннее убранство (можно войти).</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
+        <!-- Цитата -->
         <section class="quote-section">
             <div class="quote-container">
-                <p class="quote-text">«ЛАЗ-695 — самый первый и самый успешный автобус из Львова. Это самая массовая модель в мире, которая даже попала в Книгу рекордов Гиннеса».</p>
-                <p class="quote-author">— Auto-Consulting</p>
+                <p class="quote-text">«Ограниченная партия была направлена в Москву для обслуживания Всемирного фестиваля молодёжи и студентов — эти ранние экземпляры называют "фестивальными"».</p>
+                <p class="quote-author">— Музей транспорта Москвы</p>
             </div>
         </section>
     </main>
@@ -251,56 +280,50 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
-                        <li><a href="Локомотивы.html">Локомотивы</a></li>
-                        <li><a href="Электровозы.html">Электровозы</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
+                        <li><a href="city_transport.html">Городской транспорт</a></li>
+                        <li><a href="Автобусы.html">Автобусы</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/tepp01" target="_blank">Telegram</a></p>
-                    <p>📧 info@tepp.ru</p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
-                <p class="footer-note">ЛАЗ-695 — «Львов»</p>
+                <p class="footer-note">ЛАЗ-695 (1957) — «Фестивальный»</p>
             </div>
         </div>
     </footer>
 
     <div class="scroll-top">↑</div>
 
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
             function animateCounters() {
-                const targets = { buildYear: 1956, totalMade: 300000, capacity: 32 };
-                let current = { buildYear: 0, totalMade: 0, capacity: 0 };
+                const targets = { buildYear: 1957, capacity: 32 };
+                let current = { buildYear: 0, capacity: 0 };
                 const yearEl = document.getElementById('buildYear');
-                const madeEl = document.getElementById('totalMade');
                 const capEl = document.getElementById('capacity');
-                if (!yearEl || !madeEl || !capEl) return;
+                if (!yearEl || !capEl) return;
+                
                 const interval = setInterval(function() {
                     let allFinished = true;
                     if (current.buildYear < targets.buildYear) {
                         current.buildYear += Math.ceil(targets.buildYear / 50);
                         if (current.buildYear > targets.buildYear) current.buildYear = targets.buildYear;
                         yearEl.textContent = current.buildYear;
-                        allFinished = false;
-                    }
-                    if (current.totalMade < targets.totalMade) {
-                        current.totalMade += Math.ceil(targets.totalMade / 50);
-                        if (current.totalMade > targets.totalMade) current.totalMade = targets.totalMade;
-                        madeEl.textContent = current.totalMade;
                         allFinished = false;
                     }
                     if (current.capacity < targets.capacity) {
@@ -313,22 +336,6 @@
                 }, 30);
             }
             animateCounters();
-
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
         });
     </script>
 </body>

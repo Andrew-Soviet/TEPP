@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ЛиАЗ-677 — самый массовый автобус СССР</title>
+    <title>ЛиАЗ-677 (1973) — Музейный экспонат — ТЭПП</title>
+    <meta name="description" content="ЛиАЗ-677 1973 года из Музея Транспорта Москвы. Основной городской автобус СССР.">
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -14,77 +15,99 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <!-- ================= ШАПКА ================= -->
     <header>
         <div class="header-container">
-            <h1>ЛиАЗ-677</h1>
-            <p class="subtitle">Самый массовый автобус СССР и первый советский «автомат»</p>
+            <div class="logo">
+                <h1>ЛиАЗ-677</h1>
+                <p class="subtitle">Музейный экспонат (1973) — основной городской автобус СССР</p>
+            </div>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
-                    <li><a href="Железная_дорога.html">🚂 Железные дороги</a></li>
-                    <li><a href="Локомотивы.html">🔧 Локомотивы</a></li>
-                    <li><a href="Электровозы.html">⚡ Электровозы</a></li>
-                    <li><a href="#about">Об автобусе</a></li>
-                    <li><a href="#history">История</a></li>
-                    <li><a href="#gallery">Фото</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
+                    <li><a href="city_transport.html">🚌 Городской транспорт</a></li>
+                    <li><a href="Автобусы.html">🚐 Автобусы</a></li>
+                    <li><a href="Модели_автобусов.html">📋 Модели</a></li>
+                    <li><a href="#about" class="active">🚌 ЛиАЗ-677</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
+        <!-- Герой-секция -->
         <section id="about" class="hero">
             <div class="hero-content">
-                <h2>ЛиАЗ-677</h2>
-                <p class="hero-text">ЛиАЗ-677 — советский и российский городской высокопольный автобус большого класса, выпускавшийся Ликинским автобусным заводом с 1967 по 1994 год. Самый массовый автобус в истории СССР.</p>
-                <p class="hero-text">Стал первым советским серийным автобусом с гидромеханической автоматической коробкой передач и пневматической подвеской. За характерный внешний вид и мягкий ход получил в народе прозвище «Луноход».</p>
+                <h2>ЛиАЗ-677 (1973)</h2>
+                <p class="hero-text">Перед вами основной городской автобус СССР, проработавший на маршрутах почти 30 лет. Данный экземпляр был выпущен на Ликинском автобусном заводе в <strong>1973 году</strong> и сейчас находится в коллекции Музея Транспорта Москвы.</p>
+                <p class="hero-text">Это был самый вместительный на тот момент отечественный автобус. Он оснащался трёхрядной компоновкой сидений, автоматической коробкой передач и пневмоподвеской. Имел 25 сидячих мест, но мог перевозить до 110 пассажиров. <strong>Ходил по Москве до 2004 года.</strong></p>
                 <div class="stats-container">
                     <div class="stat-item">
                         <div class="counter-number" id="buildYear">0</div>
-                        <div class="stat-label">год начала выпуска</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="counter-number" id="totalMade">0</div>
-                        <div class="stat-label">всего выпущено</div>
+                        <div class="stat-label">год выпуска экспоната</div>
                     </div>
                     <div class="stat-item">
                         <div class="counter-number" id="capacity">0</div>
-                        <div class="stat-label">пассажиров (предельная вместимость)</div>
+                        <div class="stat-label">пассажиров (предельная)</div>
                     </div>
+                    <div class="stat-label" style="font-size: 1.2rem; color: var(--accent-color); font-weight: bold; margin-top: 1rem;">Музейный</div>
+                    <div class="stat-label">статус</div>
                 </div>
             </div>
         </section>
 
+        <!-- Общая информация -->
         <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+            <div class="card-header">
                 <span class="card-icon">🚌</span>
-                <h2>Общая информация</h2>
+                <h2>Общая информация об экспонате</h2>
             </div>
             <div class="card-content">
                 <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
                     <div class="feature-item">
                         <h3>🏭 Производство</h3>
                         <p><strong>Завод-изготовитель:</strong> Ликинский автобусный завод (ЛиАЗ), Ликино-Дулёво</p>
-                        <p><strong>Годы выпуска:</strong> 1967–1994 (на ЛиАЗе), до 2000-х на сторонних заводах</p>
-                        <p><strong>Всего выпущено:</strong> ~200 000 всех модификаций</p>
-                        <p><strong>Экспорт:</strong> 7 133 в 16 стран (3 308 — в ГДР)</p>
+                        <p><strong>Модель:</strong> ЛиАЗ-677</p>
+                        <p><strong>Год выпуска экспоната:</strong> 1973</p>
+                        <p><strong>Тип:</strong> Городской высокопольный автобус большого класса</p>
                     </div>
                     <div class="feature-item">
-                        <h3>📍 Эксплуатация</h3>
-                        <p><strong>Основной регион:</strong> все города СССР</p>
+                        <h3>📍 Музейный статус</h3>
+                        <p><strong>Местонахождение:</strong> Музей Транспорта Москвы</p>
+                        <p><strong>Состояние:</strong> Не эксплуатируется (музейный экспонат)</p>
+                        <p><strong>Работа в Москве:</strong> до 2004 года</p>
                         <p><strong>Прозвища:</strong> «Луноход», «Скотовоз»</p>
-                        <p><strong>Преемник:</strong> ЛиАЗ-5256</p>
-                        <p><strong>Последний рейс в Москве:</strong> 2009 год</p>
                     </div>
                 </div>
                 <div class="highlight-box" style="margin-top: 1.5rem;">
-                    <p>⭐ <strong>Революция на колёсах:</strong> ЛиАЗ-677 стал первым советским серийным автобусом с автоматической коробкой передач и пневмоподвеской. Водители впервые получили гидроусилитель руля и селектор автомата вместо тяжёлого сцепления и несинхронизированной КПП. В салоне — широкая накопительная площадка в задней части и 110 пассажиров общей вместимости.</p>
+                    <p>⭐ <strong>Роль в истории:</strong> ЛиАЗ-677 стал первым советским серийным автобусом с автоматической коробкой передач и пневмоподвеской. Водители впервые получили гидроусилитель руля и селектор автомата вместо тяжёлого сцепления. С 1967 по 1994 год было выпущено более 200 тысяч машин всех модификаций.</p>
                 </div>
             </div>
         </section>
 
+        <!-- Технические характеристики -->
         <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+            <div class="card-header">
                 <span class="card-icon">⚙️</span>
                 <h2>Технические характеристики</h2>
             </div>
@@ -112,71 +135,56 @@
             </div>
         </section>
 
+        <!-- История -->
         <section id="history" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+            <div class="card-header">
                 <span class="card-icon">📜</span>
-                <h2>История</h2>
+                <h2>История экспоната</h2>
             </div>
             <div class="card-content">
                 <div class="timeline" style="padding: 1rem 0;">
                     <div class="timeline-item">
-                        <div class="timeline-date">1960–1962</div>
+                        <div class="timeline-date">1967</div>
                         <div class="timeline-content">
-                            <h3>Разработка</h3>
-                            <p>Проектирование ЛиАЗ-677 началось в 1960 году. Конструкция собиралась из максимального количества сторонних разработок: пневматическую подвеску обкатали ещё в 1960 году на опытной модели ЗИЛ-158Д, а автоматическую коробку передач НАМИ-035 разработали по заказу Львовского автобусного завода. Первый прототип нового автобуса был готов 6 ноября 1962 года.</p>
+                            <h3>Начало производства модели</h3>
+                            <p>Выпуск ЛиАЗ-677 стартовал в 1967 году. Автобус стал прорывом благодаря автоматической коробке передач и пневмоподвеске.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-date">1965–1967</div>
+                        <div class="timeline-date">1973</div>
                         <div class="timeline-content">
-                            <h3>Первые партии</h3>
-                            <p>Первые товарные автобусы были переданы на реализацию только в 1965 году. В 1967 году начался выпуск опытных партий, а первая промышленная партия в количестве 11 штук была собрана в 1967-м. С весны 1968 года началось серийное производство.</p>
+                            <h3>Год выпуска экспоната</h3>
+                            <p>Именно эта машина сошла с конвейера Ликинского автобусного завода в 1973 году. Она застала эпоху, когда ЛиАЗ-677 стал основным городским автобусом СССР.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-date">1969–1970</div>
+                        <div class="timeline-date">1994</div>
                         <div class="timeline-content">
-                            <h3>Полное вытеснение ЗИЛ-158</h3>
-                            <p>Развернуть полноценный выпуск и начать массовые поставки в парки новых ЛиАЗов удалось только в 1969 году. В 1970 году производство полностью переключили с ЛиАЗ-158 на ЛиАЗ-677. С этого момента начались массовые поставки.</p>
+                            <h3>Конец выпуска</h3>
+                            <p>Последний ЛиАЗ-677М сошёл с конвейера Ликинского завода 7 августа 1994 года. Всего было выпущено более 200 000 машин.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-date">1972</div>
+                        <div class="timeline-date">2004</div>
                         <div class="timeline-content">
-                            <h3>Золотая медаль в Лейпциге</h3>
-                            <p>На Лейпцигской ярмарке 1972 года ЛиАЗ-677 получил золотую медаль. Это признание международного уровня подчёркивало передовой характер конструкции для своего времени.</p>
+                            <h3>Прощание в Москве</h3>
+                            <p>Этот конкретный автобус (или его собратья) ходил по Москве до 2004 года, после чего был передан в музей.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-date">1978</div>
+                        <div class="timeline-date">Наши дни</div>
                         <div class="timeline-content">
-                            <h3>Модернизация — ЛиАЗ-677М</h3>
-                            <p>Единственная крупная переработка за время производства произошла в 1978 году. Автобусы, выпускавшиеся с этого момента, получили обозначение ЛиАЗ-677М (М — модернизированный). Были улучшены многие узлы: новый тахометр, переработанная коробка передач, улучшенная тормозная система.</p>
+                            <h3>Сохранение для истории</h3>
+                            <p>Сейчас экспонат 1973 года занимает достойное место в экспозиции Музея Транспорта Москвы.</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">1980-е</div>
-                        <div class="timeline-content">
-                            <h3>Доработки и модификации</h3>
-                            <p>В 1980-х годах вносились дополнительные изменения. Изменили расположение фонарей спереди и сзади, добавили вентиляционные люки в крыше. В 1986 году переработали интерьер, установили более удобные сиденья. Выпускались модификации: ЛиАЗ-677Б (пригородный), ЛиАЗ-677МС (северный), ЛиАЗ-677Г (газобаллонный).</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">1994–2000-е</div>
-                        <div class="timeline-content">
-                            <h3>Закат производства</h3>
-                            <p>Последний ЛиАЗ-677М сошёл с конвейера Ликинского завода 7 августа 1994 года. После этого выпуск продолжили ремонтные предприятия в Яхроме, Орехово-Зуеве и Рыбинске — из машино-комплектов, вплоть до начала 2000-х. В Санкт-Петербурге последние ЛиАЗ-677 вывели из пассажирской эксплуатации в 2006 году, в Москве — в 2009-м.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="highlight-box" style="margin-top: 1.5rem;">
-                    <p><strong>Интересный факт:</strong> ЛиАЗ-677 — единственный советский автобус с автоматической коробкой передач, производившейся во Львове. Селектор на руле имел положения А (автомат), Н (нейтраль), ЗХ (задний ход) и ПП (принудительная первая передача) — её рекомендовали включать на затяжных подъёмах. За огромный расход топлива (до 50–55 л/100 км) и особенности планировки салона автобус получил в народе прозвище «Скотовоз», а за мягкий ход на пневмоподвеске — «Луноход».</p>
                 </div>
             </div>
         </section>
 
+        <!-- Особенности конструкции -->
         <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+            <div class="card-header">
                 <span class="card-icon">🎨</span>
                 <h2>Особенности конструкции</h2>
             </div>
@@ -184,55 +192,82 @@
                 <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
                     <div class="feature-item">
                         <h3>Автоматическая КПП</h3>
-                        <p>ЛиАЗ-677 стал первым советским серийным автобусом с гидромеханической автоматической коробкой передач (ГМП-2 «Львов»). Водители впервые избавились от необходимости выжимать тяжёлое сцепление и переключать несинхронизированную коробку. Селектор на руле — А, Н, ЗХ и ПП.</p>
+                        <p>Первый советский серийный автобус с гидромеханической автоматической коробкой передач. Водители избавились от тяжёлого сцепления.</p>
                     </div>
                     <div class="feature-item">
                         <h3>Пневмоподвеска</h3>
-                        <p>Пневматическая подвеска с регулятором высоты кузова — новинка для советских автобусов. Обеспечивала мягкий, комфортный ход независимо от загрузки. Водители ценили её, но при выходе из строя баллонов автобус раскачивался или кренился на сторону.</p>
+                        <p>Обеспечивала мягкий, комфортный ход независимо от загрузки. За это автобус и получил прозвище «Луноход».</p>
                     </div>
                     <div class="feature-item">
                         <h3>Планировка салона</h3>
-                        <p>Трёхрядная компоновка сидений слева (по одному) дала широкий проход по центру. Пониженная задняя часть автобуса была полностью лишена сидячих мест — там разместилась вместительная накопительная площадка. Это позволяло перевозить 110 человек.</p>
+                        <p>Трёхрядная компоновка сидений. В задней части была вместительная накопительная площадка, что позволяло перевозить до 110 человек.</p>
                     </div>
                     <div class="feature-item">
-                        <h3>Проблемы и недостатки</h3>
-                        <p>Двигатель ЗИЛ-375Я7 — гражданская версия мотора от армейского Урал-375 — был мощным и надёжным, но чудовищно прожорливым: даже по заводским нормам до 50 л/100 км. Двигатель располагался справа от водителя, создавая шум и загазованность в кабине. В горных и жарких регионах автобус не прижился.</p>
+                        <h3>Расход топлива</h3>
+                        <p>Двигатель ЗИЛ-375Я7 был мощным, но прожорливым — до 50 л/100 км. За это и особенности планировки салона автобус получил прозвище «Скотовоз».</p>
                     </div>
-                </div>
-                <div class="highlight-box" style="margin-top: 1rem;">
-                    <p>🎉 <strong>Символ эпохи:</strong> ЛиАЗ-677 — самый узнаваемый советский автобус 1970–1980-х годов. Он был основой автобусных парков практически всех городов СССР. В 2022 году Музей транспорта Москвы перезапустил проект «Привет, Москва!», героем которого стал ЛиАЗ-677М — ретроавтобус путешествует по районам города, становясь центром притяжения.</p>
                 </div>
             </div>
         </section>
 
+        <!-- Фотогалерея -->
         <section id="gallery" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+            <div class="card-header">
                 <span class="card-icon">📸</span>
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/liaz_677_museum.jpg" alt="ЛиАЗ-677 в музее" onerror="this.src='https://via.placeholder.com/800x500?text=ЛиАЗ-677+в+музее'">
-                        <div class="gallery-caption">ЛиАЗ-677 из коллекции Музея транспорта Москвы</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="img/liaz_677_museum_int.jpg" alt="ЛиАЗ-677 в музее" onerror="this.src='https://via.placeholder.com/800x500?text=ЛиАЗ-677+в+музее'">
-                        <div class="gallery-caption">ЛиАЗ-677 салон</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="img/liaz_677_museum_tabl.jpg" alt="ЛиАЗ-677 в музее" onerror="this.src='https://via.placeholder.com/800x500?text=ЛиАЗ-677+в+музее'">
-                        <div class="gallery-caption">ЛиАЗ-677 табличка об экспонате</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                <div class="photo-gallery">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/liaz_677_museum.jpg" alt="ЛиАЗ-677 в музее" onclick="openGalleryModal(this.src, 'ЛиАЗ-677 1973 года из коллекции Музея транспорта Москвы')" onerror="this.src='https://via.placeholder.com/600x400?text=ЛиАЗ-677'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">ЛиАЗ-677 в музее</a>
+                            <p class="photo-desc">Экспонат 1973 года.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
 
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/liaz_677_museum_int.jpg" alt="Салон ЛиАЗ-677" onclick="openGalleryModal(this.src, 'Салон ЛиАЗ-677')" onerror="this.src='https://via.placeholder.com/600x400?text=Салон'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Салон автобуса</a>
+                            <p class="photo-desc">Внутреннее убранство.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 3 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/liaz_677_museum_tabl.jpg" alt="Табличка об экспонате" onclick="openGalleryModal(this.src, 'Табличка об экспонате')" onerror="this.src='https://via.placeholder.com/600x400?text=Табличка'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Табличка об экспонате</a>
+                            <p class="photo-desc">Музейная информация.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
+        <!-- Цитата -->
         <section class="quote-section">
             <div class="quote-container">
                 <p class="quote-text">«Водителей в первую очередь радовал принципиально иной уровень комфорта на рабочем месте. Руль — с гидроусилителем! И, конечно, коробка-автомат. Больше не требовалось сотни раз за смену выжимать тяжёлое сцепление и переключать неподатливый рычаг в несинхронизированной коробке».</p>
@@ -252,56 +287,50 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
-                        <li><a href="Локомотивы.html">Локомотивы</a></li>
-                        <li><a href="Электровозы.html">Электровозы</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
+                        <li><a href="city_transport.html">Городской транспорт</a></li>
+                        <li><a href="Автобусы.html">Автобусы</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/tepp01" target="_blank">Telegram</a></p>
-                    <p>📧 info@tepp.ru</p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
-                <p class="footer-note">ЛиАЗ-677 — «Луноход»</p>
+                <p class="footer-note">ЛиАЗ-677 (1973) — «Луноход»</p>
             </div>
         </div>
     </footer>
 
     <div class="scroll-top">↑</div>
 
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
             function animateCounters() {
-                const targets = { buildYear: 1967, totalMade: 200000, capacity: 110 };
-                let current = { buildYear: 0, totalMade: 0, capacity: 0 };
+                const targets = { buildYear: 1973, capacity: 110 };
+                let current = { buildYear: 0, capacity: 0 };
                 const yearEl = document.getElementById('buildYear');
-                const madeEl = document.getElementById('totalMade');
                 const capEl = document.getElementById('capacity');
-                if (!yearEl || !madeEl || !capEl) return;
+                if (!yearEl || !capEl) return;
+                
                 const interval = setInterval(function() {
                     let allFinished = true;
                     if (current.buildYear < targets.buildYear) {
                         current.buildYear += Math.ceil(targets.buildYear / 50);
                         if (current.buildYear > targets.buildYear) current.buildYear = targets.buildYear;
                         yearEl.textContent = current.buildYear;
-                        allFinished = false;
-                    }
-                    if (current.totalMade < targets.totalMade) {
-                        current.totalMade += Math.ceil(targets.totalMade / 50);
-                        if (current.totalMade > targets.totalMade) current.totalMade = targets.totalMade;
-                        madeEl.textContent = current.totalMade;
                         allFinished = false;
                     }
                     if (current.capacity < targets.capacity) {
@@ -314,22 +343,6 @@
                 }, 30);
             }
             animateCounters();
-
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
         });
     </script>
 </body>

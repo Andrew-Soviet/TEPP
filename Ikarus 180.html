@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ikarus 180 — первая массовая «гармошка» СССР</title>
+    <title>Ikarus 180 (1969) — Музейный экспонат — ТЭПП</title>
+    <meta name="description" content="Ikarus 180 1969 года из коллекции Музея Транспорта Москвы. История, характеристики и особенности.">
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -14,17 +15,38 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <!-- ================= ШАПКА ================= -->
     <header>
         <div class="header-container">
-            <h1>Ikarus 180</h1>
-            <p class="subtitle">Первая массовая сочленённая «гармошка» Советского Союза</p>
+            <div class="logo">
+                <h1>Ikarus 180</h1>
+                <p class="subtitle">Музейный экспонат 1969 года — первая массовая «гармошка» СССР</p>
+            </div>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
-                    <li><a href="Железная_дорога.html">🚂 Железные дороги</a></li>
-                    <li><a href="Локомотивы.html">🔧 Локомотивы</a></li>
-                    <li><a href="Электровозы.html">⚡ Электровозы</a></li>
-                    <li><a href="#about">Об автобусе</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
+                    <li><a href="city_transport.html">🚌 Городской транспорт</a></li>
+                    <li><a href="#about">Об экспонате</a></li>
                     <li><a href="#history">История</a></li>
                     <li><a href="#gallery">Фото</a></li>
                 </ul>
@@ -33,58 +55,60 @@
     </header>
 
     <main>
+        <!-- Герой-секция -->
         <section id="about" class="hero">
             <div class="hero-content">
-                <h2>Ikarus 180</h2>
-                <p class="hero-text">Ikarus 180 — венгерский сочленённый городской автобус особо большой вместимости, выпускавшийся фирмой Ikarus с 1966 по 1973 год. Первый массовый сочленённый автобус («гармошка») в Советском Союзе.</p>
-                <p class="hero-text">Число 180 в названии, по легенде, обозначало проектную предельную вместимость машины. Особенность конструкции — кузов полунесущего типа с расположенным под полом дизельным двигателем горизонтальной компоновки. Именно положительный опыт эксплуатации 180-х доказал необходимость автобусов особо большой вместимости в городах СССР.</p>
+                <h2>Ikarus 180 (1969)</h2>
+                <p class="hero-text">Перед вами первый в СССР массовый сочленённый автобус особо большой вместимости. Данный экземпляр был выпущен в <strong>1969 году</strong> на заводе Ikarus в Венгрии и сейчас является частью коллекции Музея Транспорта Москвы.</p>
+                <p class="hero-text">В СССР эти машины работали на маршрутах с 1968 года до начала 1980-х годов. Экспонат оснащён дизельным двигателем и усовершенствованными комбинированными рессорами. Вмещал от 150 до 200 человек.</p>
                 <div class="stats-container">
                     <div class="stat-item">
                         <div class="counter-number" id="buildYear">0</div>
-                        <div class="stat-label">год начала выпуска</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="counter-number" id="totalMade">0</div>
-                        <div class="stat-label">всего выпущено</div>
+                        <div class="stat-label">год выпуска экспоната</div>
                     </div>
                     <div class="stat-item">
                         <div class="counter-number" id="capacity">0</div>
                         <div class="stat-label">человек вместимость</div>
                     </div>
+                    <div class="stat-item">
+                        <div class="stat-label" style="font-size: 1.2rem; color: var(--accent-color); font-weight: bold; margin-top: 1rem;">Музейный</div>
+                        <div class="stat-label">статус</div>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Общая информация -->
         <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+            <div class="card-header">
                 <span class="card-icon">🚌</span>
-                <h2>Общая информация</h2>
+                <h2>Общая информация об экспонате</h2>
             </div>
             <div class="card-content">
                 <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
                     <div class="feature-item">
                         <h3>🏭 Производство</h3>
-                        <p><strong>Завод-изготовитель:</strong> Национальное предприятие «Икарус», Будапешт (Венгрия)</p>
-                        <p><strong>Годы выпуска:</strong> 1966–1973</p>
-                        <p><strong>Всего выпущено:</strong> 7802 экземпляра</p>
-                        <p><strong>Преемник:</strong> Ikarus 280 (с 1974)</p>
+                        <p><strong>Завод-изготовитель:</strong> Завод кузовов и транспортных средств Ikarus (Венгрия)</p>
+                        <p><strong>Модель:</strong> Ikarus 180</p>
+                        <p><strong>Год выпуска:</strong> 1969</p>
+                        <p><strong>Тип:</strong> Сочленённый городской автобус особо большой вместимости</p>
                     </div>
                     <div class="feature-item">
-                        <h3>📍 Эксплуатация</h3>
-                        <p><strong>Основные покупатели:</strong> СССР и ГДР</p>
-                        <p><strong>В Москве:</strong> с осени 1968 года, 333 экземпляра</p>
-                        <p><strong>Первый дебют:</strong> 50 машин в 6-м и 7-м автобусных парках</p>
-                        <p><strong>Снят с эксплуатации:</strong> вплоть до Олимпиады-80</p>
+                        <h3>📍 Текущее состояние</h3>
+                        <p><strong>Местонахождение:</strong> Музей Транспорта Москвы</p>
+                        <p><strong>Состояние:</strong> Не эксплуатируется (музейный экспонат)</p>
+                        <p><strong>Период работы в СССР:</strong> с 1968 года до начала 1980-х</p>
                     </div>
                 </div>
                 <div class="highlight-box" style="margin-top: 1.5rem;">
-                    <p>⭐ <strong>Первая массовая «гармошка»:</strong> До Ikarus 180 сочленённые автобусы в СССР только испытывали и обкатывали. Именно 180-е, эксплуатировавшиеся вплоть до Олимпиады-80, доказали необходимость использования автобусов особо большой вместимости в городах. Москва за все годы импорта получила 333 экземпляра «Икаруса-180».</p>
+                    <p>⭐ <strong>Роль в истории:</strong> Это был первый массовый сочленённый автобус в Советском Союзе. До него такие машины только испытывали. Именно «Икарусы-180» доказали необходимость использования автобусов особо большой вместимости в городах. Экспонат сохранил исторический облик и является одним из немногих уцелевших экземпляров.</p>
                 </div>
             </div>
         </section>
 
+        <!-- Технические характеристики -->
         <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+            <div class="card-header">
                 <span class="card-icon">⚙️</span>
                 <h2>Технические характеристики</h2>
             </div>
@@ -96,7 +120,7 @@
                         <p><strong>Ширина:</strong> 2,5 м</p>
                         <p><strong>Высота:</strong> 3,5 м</p>
                         <p><strong>Сухая масса:</strong> 13 000 кг</p>
-                        <p><strong>Вместимость:</strong> до 180 человек</p>
+                        <p><strong>Вместимость:</strong> 150–200 человек</p>
                     </div>
                     <div class="feature-item">
                         <h3>Силовая установка</h3>
@@ -104,77 +128,62 @@
                         <p><strong>Производство:</strong> по лицензии MAN (комбинат Rába)</p>
                         <p><strong>Мощность:</strong> около 200 л.с.</p>
                         <p><strong>Расположение:</strong> под полом центральной части</p>
-                        <p><strong>Сочленение:</strong> шарнирное, с поворотной осью колёс</p>
+                        <p><strong>Подвеска:</strong> усовершенствованные комбинированные рессоры</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- История -->
         <section id="history" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+            <div class="card-header">
                 <span class="card-icon">📜</span>
-                <h2>История</h2>
+                <h2>История экспоната и модели</h2>
             </div>
             <div class="card-content">
                 <div class="timeline" style="padding: 1rem 0;">
                     <div class="timeline-item">
-                        <div class="timeline-date">Конец 1950-х</div>
+                        <div class="timeline-date">1966–1973</div>
                         <div class="timeline-content">
-                            <h3>Проблема вместимости</h3>
-                            <p>Города Венгрии и в первую очередь Будапешт к концу 1950-х достигли предела провозной способности городского транспорта. Требовались более вместительные автобусы, а максимум, что выдавала венгерская автопромышленность, — переднемоторные Ikarus 620 и Ikarus 630, а также Ikarus 66 с дизелем в корме. Дефицит был настолько велик, что транспортные компании сами стали переделывать существующие автобусы в сочленённые.</p>
+                            <h3>Серийное производство</h3>
+                            <p>Модель выпускалась в Венгрии с 1966 по 1973 год. За это время было произведено около 7 800 машин, большая часть которых отправилась в СССР и ГДР.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-date">1960-е</div>
-                        <div class="timeline-content">
-                            <h3>Разработка Ikarus 180</h3>
-                            <p>На заводе Ikarus в будапештском пригороде Матьяшфёльде разрабатывали новое семейство автобусов, центральное место в котором должна была занять сочленённая модель Ikarus 180. Ключевой особенностью стал кузов оригинальной полунесущей конструкции с вживлённым в его основу аналогом массивной рамы и расположенным под полом центральной части дизельным двигателем горизонтальной компоновки.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">1966–1967</div>
-                        <div class="timeline-content">
-                            <h3>Штучный выпуск</h3>
-                            <p>Вплоть до 1967 года Ikarus 180 выпускали едва ли не штучно, каждый раз согласовывая выбор двигателя с заказчиком. Самые крупные покупатели — СССР и ГДР — соглашались на покупку больших партий новинки только при наличии мощного, под 200 лошадиных сил, дизельного мотора венгерского производства. Проблему решили только приобретением лицензии на горизонтальные шестицилиндровые дизели западногерманской фирмы MAN. Производство моторов поручили комбинату Rába.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Осень 1968</div>
+                        <div class="timeline-date">1968</div>
                         <div class="timeline-content">
                             <h3>Дебют в Москве</h3>
-                            <p>Ввод Ikarus 180 в эксплуатацию в Москве произошёл заметно позже первых поставок — осенью 1968 года. Тогда в столицу прибыло 50 машин, поровну распределённых между 6-м и 7-м автобусными парками. Эти парки обслуживали районы Москвы, не охваченные в те годы сетью метрополитена, а маловместительные автобусы ЗИЛ-158 не справлялись с перевозками. Зачисление «Икарусов-180» заставило модернизировать инфраструктуру: закупать оборудование для обслуживания дизельных двигателей, расширять ремонтные зоны и разворотные кольца на окончаниях маршрутов.</p>
+                            <p>Осенью 1968 года первые 50 машин прибыли в столицу. Они были распределены между 6-м и 7-м автобусными парками и обслуживали районы, не охваченные метрополитеном.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-date">1968–1973</div>
+                        <div class="timeline-date">1969</div>
                         <div class="timeline-content">
-                            <h3>Эксплуатация и проблемы</h3>
-                            <p>Век Ikarus 180 оказался недолог, и у этого факта был внушительный список причин. При обслуживании требовалась совершенно иная культура ремонта и эксплуатации: множество различных горюче-смазочных материалов, не использовавшихся на отечественных автобусах (денатурат для пневмосистем, веретённое масло для гидроусилителя руля и вентилятора, два сорта дизельного масла, тормозная жидкость для сцепления, антифриз для охлаждения). Ремонтники жаловались на 120 точек смазки, быстрый износ деталей подвески и низкое качество шин. А вот советским водителям техника приглянулась: эргономика рабочего места, хорошая манёвренность, тормоза и экономичный дизель. Пассажиры ценили комфортный интерьер, но недовольны были повышенным шумом и загазованностью салона.</p>
+                            <h3>Год выпуска экспоната</h3>
+                            <p>Именно эта машина сошла с конвейера завода Ikarus в 1969 году. Она успела застать расцвет эпохи «гармошек» на улицах советских городов.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-date">1972–1973</div>
+                        <div class="timeline-date">До начала 1980-х</div>
                         <div class="timeline-content">
-                            <h3>Пик импорта</h3>
-                            <p>С каждым годом импорт 180-х нарастал, а пик пришёлся уже на конец выпуска модели — 1972 год. Тогда советскую границу пересёк 1151 автобус, а годом позже пришли последние 849 машин. В производстве 180-е продержались совсем недолго — около 10 лет, и уже в 1974 году передали эстафету следующей сочленённой модели — Ikarus 280.</p>
+                            <h3>Эксплуатация и списание</h3>
+                            <p>Советским водителям машина нравилась за отличную манёвренность и экономичный дизель. Но ремонтники жаловались на сложность обслуживания. Машины проработали до начала 1980-х годов, после чего были списаны.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-date">До Олимпиады-80</div>
+                        <div class="timeline-date">Наши дни</div>
                         <div class="timeline-content">
-                            <h3>Прощание с легендой</h3>
-                            <p>Положительный опыт эксплуатации 180-х, который продолжался вплоть до Олимпиады-80, доказал необходимость использования автобусов особо большой вместимости в городах. Общий выпуск Ikarus 180 вышел совсем небольшим — 7765 экземпляров, что очень немного в сравнении с наследником, растиражированным в количестве более чем 60 тысяч штук.</p>
+                            <h3>Сохранение для истории</h3>
+                            <p>Данный экземпляр был отреставрирован и занял достойное место в экспозиции Музея Транспорта Москвы. Это один из немногих сохранившихся представителей первой массовой серии «гармошек» в СССР.</p>
                         </div>
                     </div>
-                </div>
-                <div class="highlight-box" style="margin-top: 1.5rem;">
-                    <p><strong>Интересный факт:</strong> Унификация по расположению мотора с междугородней моделью Ikarus 557 только навредила — у автобуса под полом просто не осталось места для багажных отсеков. В итоге Ikarus 557 так и не получил распространения, в отличие от своих городских собратьев Ikarus 556 и Ikarus 180. А за характерную форму и шумный дизель советские водители прозвали «гармошку» по-разному, но любили её за манёвренность и экономичность.</p>
                 </div>
             </div>
         </section>
 
+        <!-- Особенности конструкции -->
         <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+            <div class="card-header">
                 <span class="card-icon">🎨</span>
                 <h2>Особенности конструкции</h2>
             </div>
@@ -182,57 +191,88 @@
                 <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
                     <div class="feature-item">
                         <h3>Полунесущий кузов</h3>
-                        <p>Оригинальная полунесущая конструкция с вживлённым в основу аналогом массивной рамы. Дизельный двигатель горизонтального расположения уложен под полом центральной части. Это обеспечило максимум простора в салоне и возможность создания особо вместительной модели с шарнирным сочленением.</p>
+                        <p>Оригинальная полунесущая конструкция. Дизельный двигатель расположен горизонтально под полом центральной части. Это обеспечило максимум простора в салоне.</p>
                     </div>
                     <div class="feature-item">
                         <h3>Сочленение</h3>
-                        <p>Шарнирный узел, связанный с поворотной осью колёс в прицепе. Благодаря этому автобус длиной более 16 метров обладал манёвренностью, сравнимой с одиночными машинами. Советские водители особенно отмечали это качество.</p>
+                        <p>Шарнирный узел, связанный с поворотной осью колёс в прицепе. Благодаря этому автобус длиной более 16 метров обладал манёвренностью, сравнимой с одиночными машинами.</p>
                     </div>
                     <div class="feature-item">
                         <h3>Двигатель по лицензии MAN</h3>
-                        <p>Горизонтальный шестицилиндровый дизель западногерманской фирмы MAN выпускался по лицензии на комбинате Rába. Мощность — около 200 л.с. Впоследствии эти дизели перешли и на семейство «двухсотых» «Икарусов».</p>
+                        <p>Горизонтальный шестицилиндровый дизель выпускался по лицензии западногерманской фирмы MAN на комбинате Rába. Мощность около 200 л.с.</p>
                     </div>
                     <div class="feature-item">
-                        <h3>Проблемы эксплуатации</h3>
-                        <p>120 точек смазки, быстрый износ деталей подвески, низкое качество шин. Для обслуживания требовалось множество горюче-смазочных материалов, не использовавшихся на отечественных автобусах. В салоне — повышенный шум и загазованность из-за дизельного отопителя в прицепе и плохой изоляции моторных люков в полу.</p>
+                        <h3>Особенности салона</h3>
+                        <p>В салоне были установлены мягкие диваны. В экспозиции музея автобус представлен с характерной бело-красной окраской, которая была стандартной для тех лет.</p>
                     </div>
                 </div>
                 <div class="highlight-box" style="margin-top: 1rem;">
-                    <p>🎉 <strong>Символ эпохи:</strong> Ikarus 180 — первый массовый сочленённый автобус в Советском Союзе. Именно он открыл эру «гармошек» на улицах советских городов и доказал, что автобусы особо большой вместимости необходимы мегаполисам. Его наследник Ikarus 280 стал самым массовым сочленённым автобусом в истории.</p>
+                    <p>🎉 <strong>Символ эпохи:</strong> Ikarus 180 открыл эру «гармошек» на улицах советских городов. Его наследник Ikarus 280 стал самым массовым сочленённым автобусом в истории, но именно 180-й проложил ему дорогу.</p>
                 </div>
             </div>
         </section>
 
+        <!-- Фотогалерея -->
         <section id="gallery" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+            <div class="card-header">
                 <span class="card-icon">📸</span>
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/ikarus_180_mus.jpg" alt="Ikarus 55" onerror="this.src='https://via.placeholder.com/800x500?text=Ikarus+55'">
-                        <div class="gallery-caption">Ikarus 180 в музее</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                <div class="photo-gallery">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/ikarus_180_mus.jpg" alt="Ikarus 180 в музее" onclick="openGalleryModal(this.src, 'Ikarus 180 из коллекции Музея Транспорта Москвы')" onerror="this.src='https://via.placeholder.com/600x400?text=Ikarus+180'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Ikarus 180 в музее</a>
+                            <p class="photo-desc">Экспонат 1969 года из Музея Транспорта Москвы.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/ikarus_180_tabl.jpg" alt="Ikarus 55" onerror="this.src='https://via.placeholder.com/800x500?text=Ikarus+55'">
-                        <div class="gallery-caption">Табличка об экспонате</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/ikarus_180_tabl.jpg" alt="Табличка об экспонате" onclick="openGalleryModal(this.src, 'Табличка об экспонате')" onerror="this.src='https://via.placeholder.com/600x400?text=Табличка'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Табличка об экспонате</a>
+                            <p class="photo-desc">Музейная информация (Завод Ikarus, 1972).</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/ikarus_180_int.jpg" alt="Ikarus 55" onerror="this.src='https://via.placeholder.com/800x500?text=Ikarus+55'">
-                        <div class="gallery-caption">Салон «Икаруса-180»</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+
+                    <!-- Фото 3 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/ikarus_180_int.jpg" alt="Салон «Икаруса-180»" onclick="openGalleryModal(this.src, 'Салон «Икаруса-180»')" onerror="this.src='https://via.placeholder.com/600x400?text=Салон'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Салон автобуса</a>
+                            <p class="photo-desc">Внутреннее убранство салона.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
+        <!-- Цитата -->
         <section class="quote-section">
             <div class="quote-container">
-                <p class="quote-text">«Именно положительный опыт эксплуатации 180-х, который продолжался вплоть до Олимпиады-80, доказал необходимость использования автобусов особо большой вместимости в городах».</p>
+                <p class="quote-text">«Именно положительный опыт эксплуатации 180-х, который продолжался вплоть до начала 1980-х, доказал необходимость использования автобусов особо большой вместимости в городах».</p>
                 <p class="quote-author">— Музей транспорта Москвы</p>
             </div>
         </section>
@@ -249,55 +289,49 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
-                        <li><a href="Локомотивы.html">Локомотивы</a></li>
-                        <li><a href="Электровозы.html">Электровозы</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
+                        <li><a href="city_transport.html">Городской транспорт</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
-                <p class="footer-note">Ikarus 180 — «Первая гармошка СССР»</p>
+                <p class="footer-note">Ikarus 180 (1969) — «Первая гармошка СССР»</p>
             </div>
         </div>
     </footer>
 
     <div class="scroll-top">↑</div>
 
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
             function animateCounters() {
-                const targets = { buildYear: 1966, totalMade: 7802, capacity: 180 };
-                let current = { buildYear: 0, totalMade: 0, capacity: 0 };
+                const targets = { buildYear: 1969, capacity: 200 };
+                let current = { buildYear: 0, capacity: 0 };
                 const yearEl = document.getElementById('buildYear');
-                const madeEl = document.getElementById('totalMade');
                 const capEl = document.getElementById('capacity');
-                if (!yearEl || !madeEl || !capEl) return;
+                if (!yearEl || !capEl) return;
+                
                 const interval = setInterval(function() {
                     let allFinished = true;
                     if (current.buildYear < targets.buildYear) {
                         current.buildYear += Math.ceil(targets.buildYear / 50);
                         if (current.buildYear > targets.buildYear) current.buildYear = targets.buildYear;
                         yearEl.textContent = current.buildYear;
-                        allFinished = false;
-                    }
-                    if (current.totalMade < targets.totalMade) {
-                        current.totalMade += Math.ceil(targets.totalMade / 50);
-                        if (current.totalMade > targets.totalMade) current.totalMade = targets.totalMade;
-                        madeEl.textContent = current.totalMade;
                         allFinished = false;
                     }
                     if (current.capacity < targets.capacity) {
@@ -310,22 +344,6 @@
                 }, 30);
             }
             animateCounters();
-
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
         });
     </script>
 </body>
