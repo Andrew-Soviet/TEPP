@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вагон конки № 35 — первый рельсовый транспорт Москвы</title>
+    <title>Вагон конки (1872) — Музейный экспонат — ТЭПП</title>
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -14,17 +14,36 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
     <header>
         <div class="header-container">
             <h1>Вагон конки № 35</h1>
-            <p class="subtitle">Единственный сохранившийся вагон московской конно-железной дороги</p>
+            <p class="subtitle">Первый рельсовый общественный транспорт Москвы</p>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
-                    <li><a href="Железная_дорога.html">🚂 Железные дороги</a></li>
-                    <li><a href="Локомотивы.html">🔧 Локомотивы</a></li>
-                    <li><a href="Электровозы.html">⚡ Электровозы</a></li>
-                    <li><a href="#about">О вагоне</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
+                    <li><a href="city_transport.html">🚌 Наземный транспорт</a></li>
+                    <li><a href="Трамваи.html">🚋 Трамваи</a></li>
+                    <li><a href="#about">О экспонате</a></li>
                     <li><a href="#history">История</a></li>
                     <li><a href="#gallery">Фото</a></li>
                 </ul>
@@ -35,9 +54,10 @@
     <main>
         <section id="about" class="hero">
             <div class="hero-content">
-                <h2>Вагон конки № 35</h2>
-                <p class="hero-text">Вагон конки — двухэтажный экипаж с открытым «империалом» (вторым этажом), который тянули лошади по рельсовым путям. Именно конка 25 июня (7 июля) 1872 года открыла эру рельсового общественного транспорта Москвы.</p>
-                <p class="hero-text">Сохранившийся вагон № 35 — единственный экземпляр московской конки. Он воссоздан в 1998–1999 годах на подлинной ходовой части, обнаруженной в депо имени Апакова.</p>
+                <h2>Вагон конки</h2>
+                <p class="hero-text">Перед вами музейный экспонат — вагон конки <strong>1872 года</strong>. Конно-железная дорога заработала в городе 25 июня 1872 года, став первым рельсовым общественным транспортом Москвы.</p>
+                <p class="hero-text">Представленный вагон — двухэтажный экипаж с открытым верхом (империалом), который тянули по рельсовым путям лошади. Сохранившийся вагон № 35 — единственный экземпляр московской конки, воссозданный в 1998–1999 годах на подлинной ходовой части.</p>
+                
                 <div class="stats-container">
                     <div class="stat-item">
                         <div class="counter-number" id="buildYear">0</div>
@@ -70,16 +90,12 @@
                         <p><strong>Тяга:</strong> лошади (пара или четвёрка)</p>
                     </div>
                     <div class="feature-item">
-                        <h3>📍 Эксплуатация</h3>
-                        <p><strong>Первая линия:</strong> центр — Смоленский (Белорусский) вокзал</p>
-                        <p><strong>Протяжённость линии:</strong> 4,5 км, 9 разъездов</p>
-                        <p><strong>Окончание движения:</strong> 1911–1912 годы</p>
-                        <p><strong>Депо/парк:</strong> Коллекция исторических трамваев (1999–2022) → Музей Транспорта Москвы (с 01.2022)</p>
-                        <p><strong>Текущее состояние:</strong> не эксплуатируется, музейный</p>
+                        <h3>📍 Музейный статус</h3>
+                        <p><strong>Местонахождение:</strong> Музей Транспорта Москвы</p>
+                        <p><strong>Состояние:</strong> Не эксплуатируется (музейный экспонат)</p>
+                        <p><strong>Особенность:</strong> Единственный сохранившийся вагон московской конки</p>
+                        <p><strong>Восстановление:</strong> 1998–1999 годы на Трамвайно-ремонтном заводе (ТРЗ)</p>
                     </div>
-                </div>
-                <div class="highlight-box" style="margin-top: 1.5rem;">
-                    <p>⭐ <strong>Уникальность:</strong> Это единственный сохранившийся вагон московской конки. Его ходовая часть до конца XX века использовалась в составе трамвайной вышки для ремонта контактной сети. В 1998–1999 годах на Трамвайно-ремонтном заводе (ТРЗ) воссоздали деревянный кузов с империалом по архивным чертежам и фотографиям.</p>
                 </div>
             </div>
         </section>
@@ -93,7 +109,7 @@
                 <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
                     <div class="feature-item">
                         <h3>Основные параметры</h3>
-                        <p><strong>Максимальная скорость:</strong> 8–10 км/ч</p>
+                        <p><strong>Максимальная скорость:</strong> Около 8 км/ч</p>
                         <p><strong>Вместимость:</strong> 40 пассажиров (20 внизу + 18–20 наверху)</p>
                         <p><strong>Длина:</strong> около 8 метров</p>
                         <p><strong>Ширина:</strong> около 2 метров</p>
@@ -114,130 +130,103 @@
         <section id="history" class="section-card">
             <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
                 <span class="card-icon">📜</span>
-                <h2>История</h2>
+                <h2>История экспоната</h2>
             </div>
             <div class="card-content">
                 <div class="timeline" style="padding: 1rem 0;">
                     <div class="timeline-item">
-                        <div class="timeline-date">1872</div>
+                        <div class="timeline-date">25 июня 1872</div>
                         <div class="timeline-content">
-                            <h3>Рождение московской конки</h3>
-                            <p>25 июня (7 июля) 1872 года открылась первая линия конно-железной дороги, связавшая центр Москвы с площадью Смоленского (Белорусского) вокзала. Линия была пробной и обслуживала посетителей Политехнической выставки. На линии работало 10 двухэтажных вагонов.</p>
+                            <h3>Запуск первого рельсового транспорта</h3>
+                            <p>Конно-железная дорога заработала в городе 25 июня 1872 года, став первым рельсовым общественным транспортом Москвы. На линии работало 10 двухэтажных вагонов.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date">1872–1912</div>
                         <div class="timeline-content">
                             <h3>Эпоха конки</h3>
-                            <p>Конка быстро завоевала популярность, но имела серьёзные недостатки: скорость не превышала 8 км/ч, на подъёмах приходилось пристегивать дополнительных лошадей-форейторов. К 1891 году протяжённость линий достигла 45 вёрст.</p>
+                            <p>Одноэтажный или двухэтажный вагон с открытым верхом (империалом) везла по рельсовым путям пара лошадей. На крутых подъёмах к ним добавляли ещё одну пару. Скорость движения была небольшой — около 8 км/ч.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-date">1899–1912</div>
+                        <div class="timeline-date">1912</div>
                         <div class="timeline-content">
-                            <h3>Закат конки</h3>
-                            <p>В 1899 году электрический трамвай провёз первых пассажиров от Савёловского вокзала до Петровского парка. Более десяти лет трамвай и конка существовали совместно. Последний маршрут конки закрылся в конце 1911 — начале 1912 года.</p>
+                            <h3>Вытеснение трамваем</h3>
+                            <p>К 1912 году конку окончательно вытеснил электрический трамвай.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-date">После 1912</div>
-                        <div class="timeline-content">
-                            <h3>Вторая жизнь шасси</h3>
-                            <p>После вывода из пассажирской эксплуатации вагон был перестроен в прицепной вагон-вышку для строительства и ремонта контактной сети электрического трамвая. В 1992 году такая несамоходная вышка ещё стояла в депо имени П.Л. Апакова — именно на этом шасси позже воссоздали музейный вагон.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">1999</div>
+                        <div class="timeline-date">1998–1999</div>
                         <div class="timeline-content">
                             <h3>Воссоздание вагона № 35</h3>
-                            <p>В 1998–1999 годах на Трамвайно-ремонтном заводе (ТРЗ) вагон воссоздали с использованием оригинальной ходовой части и кузова новой постройки. По архивным чертежам собрали деревянный кузов с империалом, окрасили в исторические цвета и присвоили номер 35. В апреле 1999 года вагон возглавил юбилейный трамвайный парад.</p>
+                            <p>Вагон воссоздан с использованием оригинальной ходовой части и кузова новой постройки. По архивным чертежам собрали деревянный кузов с империалом, окрасили в исторические цвета и присвоили номер 35.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-date">1999–2022</div>
+                        <div class="timeline-date">Наши дни</div>
                         <div class="timeline-content">
-                            <h3>Коллекция исторических трамваев</h3>
-                            <p>Вагон числился в Коллекции исторических трамваев. Регулярно участвовал в парадах трамваев в Москве: его буксировали Tatra T3SU № 481, 71-608КМ № 0125, № 0427, МТТЧ № 1410 и другие вагоны. Экспонировался в депо имени Н.Э. Баумана.</p>
+                            <h3>Музейный экспонат</h3>
+                            <p>Вагон передан в фонд Музея Транспорта Москвы и представлен в экспозиции.</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Январь 2022</div>
-                        <div class="timeline-content">
-                            <h3>Передача в Музей Транспорта Москвы</h3>
-                            <p>Вагон передан из Коллекции исторических трамваев в фонд Музея Транспорта Москвы. С этого момента числится в экспозиции музея.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">09.07.2026</div>
-                        <div class="timeline-content">
-                            <h3>Перевозка в экспозиционный комплекс</h3>
-                            <p>Вагон перевезён с Трамвайно-ремонтного завода (ТРЗ) в экспозиционный комплекс Музея транспорта Москвы на Новорязанской улице, 27.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="highlight-box" style="margin-top: 1.5rem;">
-                    <p><strong>Интересный факт:</strong> Дамам пользоваться империалом возбранялось — считалось, что женщина в пышной юбке не сможет подняться по узкой винтовой лестнице, не нарушив правила этикета.</p>
-                </div>
-                <div class="highlight-box" style="margin-top: 1rem;">
-                    <p>📌 <strong>Из TransPhoto:</strong> Вагон № 35 — единственный сохранившийся экземпляр московской конки. После вывода из пассажирской эксплуатации его шасси долго служило вышкой для ремонта контактной сети. На парадах разных лет конку буксировали трамваи Tatra T3SU № 481, 71-608КМ № 0125, № 0427, МТТЧ № 1410 и другие.</p>
                 </div>
             </div>
         </section>
 
-        <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
-                <span class="card-icon">🎨</span>
-                <h2>Особенности конструкции</h2>
-            </div>
-            <div class="card-content">
-                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
-                    <div class="feature-item">
-                        <h3>Двухэтажная компоновка</h3>
-                        <p>Вагон имел нижний закрытый салон и верхнюю открытую площадку — «империал». Наверх вела крутая винтообразная лестница. Империал не имел навеса, пассажиры не были защищены от дождя и снега.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>Конная тяга</h3>
-                        <p>Обычно вагон тянула пара лошадей. На крутых подъёмах (например, в районе Тверской) к ним добавляли ещё 1–2 пары лошадей-форейторов. Управлял упряжкой кучер, в вагоне работал кондуктор.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>Классовое разделение</h3>
-                        <p>Нижний салон считался «первым классом», империал — «вторым». Разница в цене (10 коп. внизу против 5 коп. наверху) делала конку доступной для разных слоёв населения.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>Реконструкция 1999 года</h3>
-                        <p>Подлинная ходовая часть сохранилась, но деревянный кузов пришлось воссоздавать заново. Использовались архивные чертежи, исторические фотографии и гравюры. Вагон окрасили в традиционные цвета XIX века.</p>
-                    </div>
-                </div>
-                <div class="highlight-box" style="margin-top: 1rem;">
-                    <p>🎉 <strong>Символ эпохи:</strong> Вагон конки № 35 — единственный сохранившийся экземпляр московской конки. Он находится в постоянной экспозиции Музея транспорта Москвы на Новорязанской улице, 27.</p>
-                </div>
-            </div>
-        </section>
-
+        <!-- ================= ФОТОГАЛЕРЕЯ ================= -->
         <section id="gallery" class="section-card">
             <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
                 <span class="card-icon">📸</span>
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/konka_35_mus.jpg" alt="" onerror="this.src='https://via.placeholder.com/800x500?text=Ikarus+55'">
-                        <div class="gallery-caption">Вагон конки № 35 — единственный сохранившийся экземпляр</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                <div class="photo-gallery">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/konka_35_mus.jpg" alt="Вагон конки № 35 в музее" onclick="openGalleryModal(this.src, 'Вагон конки № 35 — единственный сохранившийся экземпляр')" onerror="this.src='https://via.placeholder.com/600x400?text=Конка'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон конки в музее</a>
+                            <p class="photo-desc">Единственный сохранившийся экземпляр.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/konka_35_tabl.jpg" alt="" onerror="this.src='https://via.placeholder.com/800x500?text=Ikarus+55'">
-                        <div class="gallery-caption">Табличка об экспонате</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/konka_35_tabl.jpg" alt="Табличка об экспонате" onclick="openGalleryModal(this.src, 'Табличка об экспонате')" onerror="this.src='https://via.placeholder.com/600x400?text=Табличка'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Табличка об экспонате</a>
+                            <p class="photo-desc">Музейная информация.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/konka_35_int.jpg" alt="" onerror="this.src='https://via.placeholder.com/800x500?text=Ikarus+55'">
-                        <div class="gallery-caption">Салон конки</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+
+                    <!-- Фото 3 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/konka_35_int.jpg" alt="Салон конки" onclick="openGalleryModal(this.src, 'Салон конки')" onerror="this.src='https://via.placeholder.com/600x400?text=Салон'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Салон конки</a>
+                            <p class="photo-desc">Внутреннее убранство.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
@@ -260,9 +249,9 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
-                        <li><a href="Локомотивы.html">Локомотивы</a></li>
-                        <li><a href="Электровозы.html">Электровозы</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
+                        <li><a href="city_transport.html">Наземный транспорт</a></li>
+                        <li><a href="Трамваи.html">Трамваи</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
@@ -272,22 +261,22 @@
             </div>
             <div class="footer-bottom">
                 <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
-                <p class="footer-note">Вагон конки № 35 — «Первый транспорт Москвы»</p>
+                <p class="footer-note">Вагон конки — «Первый транспорт Москвы»</p>
             </div>
         </div>
     </footer>
 
     <div class="scroll-top">↑</div>
 
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             function animateCounters() {
@@ -322,21 +311,17 @@
             }
             animateCounters();
 
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+            window.openGalleryModal = function(src, caption) {
+                const modal = document.getElementById('galleryModal');
+                const content = document.getElementById('galleryModalContent');
+                if (modal && content) {
+                    content.innerHTML = `
+                        <img src="${src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${caption}">
+                        <p style="text-align:center; margin-top:1rem; font-size:1.1rem;">${caption}</p>
+                    `;
+                    modal.classList.add('active');
+                }
+            };
         });
     </script>
 </body>

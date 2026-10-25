@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>М5 — опытные электровагоны, прототипы типа Д — ТЭПП</title>
+    <meta name="description" content="История, характеристики и судьба опытных электровагонов М5/УМ5 — прототипов вагонов типа Д.">
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -12,6 +13,26 @@
     <div id="particles-js"></div>
     <div class="animated-bg">
         <div class="gradient-bg"></div>
+    </div>
+
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
     </div>
 
     <header>
@@ -322,32 +343,68 @@
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/M5_806.jpg" alt="УМ5 №Д-806" onerror="this.src='https://via.placeholder.com/750x500?text=УМ5+Д-806'">
-                        <div class="gallery-caption">Музейный вагон УМ5 №Д-806 на выставке ретро-вагонов</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 ER2-1017</p>
+                <div class="photo-gallery">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/M5_806.jpg" alt="УМ5 №Д-806" onclick="openGalleryModal(this.src, 'Музейный вагон УМ5 №Д-806 на выставке ретро-вагонов')" onerror="this.src='https://via.placeholder.com/600x400?text=УМ5+Д-806'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">УМ5 №Д-806</a>
+                            <p class="photo-desc">Музейный вагон на выставке ретро-вагонов.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 15 мая 2015 г.</span>
+                                <span class="photo-author">📸 <a href="https://transphoto.org/photo/809491/">ER2-1017</a></span>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="gallery-item">
-                        <img src="img/M5_806_int.jpg" alt="Интерьер УМ5 №Д-806" onerror="this.src='https://via.placeholder.com/750x500?text=Интерьер+УМ5'">
-                        <div class="gallery-caption">Салон вагона в музейном состоянии</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Lasselan</p>
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/M5_806_int.jpg" alt="Интерьер УМ5 №Д-806" onclick="openGalleryModal(this.src, 'Салон вагона УМ5 №Д-806 в музейном состоянии')" onerror="this.src='https://via.placeholder.com/600x400?text=Интерьер+УМ5'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Интерьер УМ5 №Д-806</a>
+                            <p class="photo-desc">Салон вагона в музейном состоянии.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://transphoto.org/photo/843473/">Lasselan</a></span>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="gallery-item">
-                        <img src="img/M5_805.jpg" alt="Интерьер УМ5 №Д-806" onerror="this.src='https://via.placeholder.com/750x500?text=Интерьер+УМ5'">
-                        <div class="gallery-caption">Вагон М5 №805 в единственном поезде из вагонов данной модели</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Кадр из х/ф "Опасный возраст", ТО "Экран"</p>
+                    <!-- Фото 3 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/M5_805.jpg" alt="Вагон М5 №805" onclick="openGalleryModal(this.src, 'Вагон М5 №805 в единственном поезде из вагонов данной модели')" onerror="this.src='https://via.placeholder.com/600x400?text=М5+805'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон М5 №805</a>
+                            <p class="photo-desc">В единственном поезде из вагонов данной модели.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 ~1980</span>
+                                <span class="photo-author">📸 Кадр из х/ф «Опасный возраст»</span>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="gallery-item">
-                        <img src="img/D_and_M5.jpg" alt="Интерьер УМ5 №Д-806" onerror="this.src='https://via.placeholder.com/750x500?text=Интерьер+УМ5'">
-                        <div class="gallery-caption">Предполагаемый вариант салона вагона М5, на фото салон вагона Д №807</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 old-lighting / subwaygammers</p>
+                    <!-- Фото 4 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/D_and_M5.jpg" alt="Предполагаемый салон М5" onclick="openGalleryModal(this.src, 'Предполагаемый вариант салона вагона М5 (на фото — салон вагона Д №807)')" onerror="this.src='https://via.placeholder.com/600x400?text=Салон+М5'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Предполагаемый салон М5</a>
+                            <p class="photo-desc">На фото — салон вагона Д №807.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 ~1950</span>
+                                <span class="photo-author">📸 subwaygammers</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
@@ -380,8 +437,7 @@
 
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
-                    <p>📧 info@tepp.ru</p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
 
@@ -394,15 +450,15 @@
 
     <div class="scroll-top">↑</div>
 
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -438,21 +494,18 @@
             }
             animateCounters();
 
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+            // Функция для открытия модалки из новой галереи
+            window.openGalleryModal = function(src, caption) {
+                const modal = document.getElementById('galleryModal');
+                const content = document.getElementById('galleryModalContent');
+                if (modal && content) {
+                    content.innerHTML = `
+                        <img src="${src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${caption}">
+                        <p style="text-align:center; margin-top:1rem; font-size:1.1rem;">${caption}</p>
+                    `;
+                    modal.classList.add('active');
+                }
+            };
         });
     </script>
 </body>

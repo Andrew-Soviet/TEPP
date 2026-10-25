@@ -14,13 +14,33 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
     <header>
         <div class="header-container">
             <h1>🎅 Поезд Деда Мороза 🚂</h1>
             <p class="subtitle">Новогодний специальный состав Российских железных дорог</p>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
                     <li><a href="Железная_дорога.html">🚂 Железные дороги</a></li>
                     <li><a href="#about">О проекте</a></li>
                     <li><a href="#history">История</a></li>
@@ -318,31 +338,68 @@
             </div>
         </section>
 
-        <!-- Фотогалерея (ВСЕ ФОТО ЗДЕСЬ) -->
+        <!-- Фотогалерея -->
         <section id="gallery" class="section-card">
             <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
                 <span class="card-icon">📸</span>
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/ПДМ_старый.jpg" alt="Поезд Деда Мороза, старый состав" onerror="this.src='https://via.placeholder.com/600x400?text=ПДМ+старый'">
-                        <div class="gallery-caption">Поезд Деда Мороза (старый состав). Фото из интернета</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 ???</p>
+                <div class="photo-gallery">
+
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/ПДМ_старый.jpg" alt="Поезд Деда Мороза, старый состав" 
+                                 onclick="openGalleryModal(this.src, 'Поезд Деда Мороза (старый состав)')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=ПДМ+старый'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Старый состав</a>
+                            <p class="photo-desc">Поезд Деда Мороза в старой ливрее.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2024 г.</span>
+                                <span class="photo-author">📸 ???</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/ПДМ_СР.jpg" alt="Поезд Деда Мороза, СР" onerror="this.src='https://via.placeholder.com/600x400?text=ПДМ+СР'">
-                        <div class="gallery-caption">Поезд Деда Мороза (СР). Фото из интернета</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 ???</p>
+
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/ПДМ_СР.jpg" alt="Поезд Деда Мороза, СР" 
+                                 onclick="openGalleryModal(this.src, 'Поезд Деда Мороза (СР)')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=ПДМ+СР'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="https://www.youtube.com/watch?v=6YxG5S6FCuM" target="_blank" rel="noopener" class="photo-object">Состав (СР)</a>
+                            <p class="photo-desc">Вагоны поезда на станции.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 29 нояб. 2024 г.</span>
+                                <span class="photo-author">📸 <a href="https://www.youtube.com/watch?v=6YxG5S6FCuM" target="_blank" rel="noopener">АЛЕКСАНДР М</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/ПДМ_Эп20.jpg" alt="Поезд Деда Мороза, ЭП20" onerror="this.src='https://via.placeholder.com/600x400?text=ПДМ+ЭП20'">
-                        <div class="gallery-caption">Поезд Деда Мороза (ЭП20). Фото из интернета</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 ???</p>
+
+                    <!-- Фото 3 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/ПДМ_Эп20.jpg" alt="Поезд Деда Мороза, ЭП20" 
+                                 onclick="openGalleryModal(this.src, 'Поезд Деда Мороза (ЭП20)')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=ПДМ+ЭП20'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="https://trainfoto.ru/" target="_blank" rel="noopener" class="photo-object">Локомотив ЭП20</a>
+                            <p class="photo-desc">Поезд Деда Мороза с локомотивом ЭП20.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2024 г.</span>
+                                <span class="photo-author">📸 <a href="https://trainfoto.ru/" target="_blank" rel="noopener">trainfoto.ru</a></span>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
@@ -366,15 +423,15 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
                         <li><a href="Железная_дорога.html">Железные дороги</a></li>
-                        <li><a href="https://rzd.ru" target="_blank">Сайт РЖД</a></li>
-                        <li><a href="https://www.dedmorozim.ru/" target="_blank">Официальный сайт Деда Мороза</a></li>
+                        <li><a href="https://rzd.ru" target="_blank" rel="noopener">Сайт РЖД</a></li>
+                        <li><a href="https://www.dedmorozim.ru/" target="_blank" rel="noopener">Официальный сайт Деда Мороза</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -393,8 +450,8 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Счётчики
@@ -434,16 +491,36 @@
             const modal = document.getElementById('galleryModal');
             const content = document.getElementById('galleryModalContent');
             const close = document.getElementById('galleryModalClose');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
+
+            document.querySelectorAll('.photo-thumb img').forEach(img => {
+                img.addEventListener('click', function() {
+                    const card = this.closest('.photo-card');
+                    if (!card) return;
+
+                    const src = this.src;
+                    const alt = this.alt;
+                    const object = card.querySelector('.photo-object')?.textContent || '';
+                    const desc = card.querySelector('.photo-desc')?.textContent || '';
+                    const date = card.querySelector('.photo-date')?.textContent || '';
+                    const author = card.querySelector('.photo-author')?.textContent || '';
+
+                    if (content) {
+                        content.innerHTML = `
+                            <img src="${src}" style="max-width:100%; max-height:60vh; border-radius:10px; display:block; margin: 0 auto;" alt="${alt}">
+                            <div style="margin-top: 1.5rem; text-align: left; padding: 0 1rem;">
+                                <h3 style="color: var(--accent-color); margin-bottom: 0.5rem; font-size: 1.4rem;">${object}</h3>
+                                <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1rem;">${desc}</p>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-secondary); border-top: 1px solid var(--border-color); padding-top: 1rem;">
+                                    <span>${date}</span>
+                                    <span>${author}</span>
+                                </div>
+                            </div>
+                        `;
                         modal.classList.add('active');
                     }
                 });
             });
+
             close?.addEventListener('click', () => modal.classList.remove('active'));
             window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
         });

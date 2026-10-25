@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,13 +15,36 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <!-- ================= ШАПКА ================= -->
     <header>
         <div class="header-container">
-            <h1>Вагон типа Г № 661</h1>
-            <p class="subtitle">Музейный экспонат (1954)</p>
+            <div class="logo">
+                <h1>Вагон типа Г № 661</h1>
+                <p class="subtitle">Музейный экспонат (1954)</p>
+            </div>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
                     <li><a href="Главная_метро.html">🚇 Метро</a></li>
                     <li><a href="Живая_история_Мск_метро.html">📚 Живая история</a></li>
                     <li><a href="#about">О вагоне</a></li>
@@ -55,7 +78,7 @@
 
         <!-- Основные данные -->
         <section id="specs" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+            <div class="card-header">
                 <span class="card-icon">📋</span>
                 <h2>Основные данные</h2>
             </div>
@@ -76,7 +99,7 @@
 
         <!-- История -->
         <section id="history" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+            <div class="card-header">
                 <span class="card-icon">📜</span>
                 <h2>История</h2>
             </div>
@@ -137,7 +160,7 @@
 
         <!-- Элементы экспозиции в салоне -->
         <section id="exhibition" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #D35400 0%, #E67E22 100%);">
+            <div class="card-header">
                 <span class="card-icon">🏛️</span>
                 <h2>Элементы экспозиции в салоне</h2>
             </div>
@@ -148,7 +171,7 @@
                     
                     <!-- Блок с макетами -->
                     <div class="feature-item">
-                        <img src="img/mini_model_A_and_M20_in_G_661.jpg" alt="Макеты поездов внутри вагона Г" style="width: 100%; border-radius: var(--radius-sm); margin-bottom: 1rem;" onerror="this.src='img/no-photo.png'">
+                        <img src="img/mini_model_A_and_M20_in_G_661.jpg" alt="Макеты поездов внутри вагона Г" style="width: 100%; border-radius: var(--radius-sm); margin-bottom: 1rem;" onerror="this.src='https://via.placeholder.com/600x400?text=Макеты'">
                         <h3>Макеты поездов</h3>
                         <p>В салоне установлены два макета подвижного состава  — вагон <strong>типа А №21</strong> и вагона <strong>«Москва-2020»</strong>.</p>
                         <p style="text-align:right; margin-top:0.5rem; color:var(--text-secondary); font-size: 0.85rem;">📸 pfandrom</p>
@@ -156,7 +179,7 @@
 
                     <!-- Блок со стендом -->
                     <div class="feature-item">
-                        <img src="img/Type_G_661_element_int.jpg" alt="Стенд Вагон на ощупь" style="width: 100%; border-radius: var(--radius-sm); margin-bottom: 1rem;" onerror="this.src='img/no-photo.png'">
+                        <img src="img/Type_G_661_element_int.jpg" alt="Стенд Вагон на ощупь" style="width: 100%; border-radius: var(--radius-sm); margin-bottom: 1rem;" onerror="this.src='https://via.placeholder.com/600x400?text=Стенд'">
                         <h3>Стенд «Вагон на ощупь»</h3>
                         <p>Интерактивный стенд с образцами материалов отделки, которые использовались в метровагонах.</p>
                         <p style="text-align:right; margin-top:0.5rem; color:var(--text-secondary); font-size: 0.85rem;">📸 Метро на даче</p>
@@ -164,7 +187,7 @@
 
                     <!-- Блок с крышкой буксы -->
                     <div class="feature-item">
-                        <img src="img/byks_E_mus.jpg" alt="Крышка буксы ММЗ" style="width: 100%; border-radius: var(--radius-sm); margin-bottom: 1rem;" onerror="this.src='img/no-photo.png'">
+                        <img src="img/byks_E_mus.jpg" alt="Крышка буксы ММЗ" style="width: 100%; border-radius: var(--radius-sm); margin-bottom: 1rem;" onerror="this.src='https://via.placeholder.com/600x400?text=Букса'">
                         <h3>Крышка буксы «ММЗ»</h3>
                         <p>Оригинальная чугунная крышка буксы с клеймом Мытищинского машиностроительного завода. Такие детали — важная часть материальной культуры и истории завода.</p>
                         <p style="text-align:right; margin-top:0.5rem; color:var(--text-secondary); font-size: 0.85rem;">📸 pfandrom</p>
@@ -176,57 +199,118 @@
 
         <!-- Галерея -->
         <section id="gallery" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+            <div class="card-header">
                 <span class="card-icon">📸</span>
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-                    
-                    <div class="gallery-item">
-                        <img src="img/Type_G_661.jpg" alt="Вагон Г № 661" onerror="this.src='img/no-photo.png'">
-                        <div class="gallery-caption">Общий вид вагона Г № 661 в музее</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary); font-size: 0.85rem;">📸 pfandrom</p>
+                <div class="photo-gallery">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Type_G_661.jpg" alt="Вагон Г № 661" onclick="openGalleryModal(this.src, 'Общий вид вагона Г № 661 в музее')" onerror="this.src='https://via.placeholder.com/600x400?text=Вагон+Г+661'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон Г № 661</a>
+                            <p class="photo-desc">Общий вид в музее.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 11 октября 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="gallery-item">
-                        <img src="img/Type_G_661_int.jpg" alt="Интерьер вагона Г № 661" onerror="this.src='img/no-photo.png'">
-                        <div class="gallery-caption">Салон вагона Г № 661</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary); font-size: 0.85rem;">📸 pfandrom</p>
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Type_G_661_int.jpg" alt="Интерьер вагона Г № 661" onclick="openGalleryModal(this.src, 'Салон вагона Г № 661')" onerror="this.src='https://via.placeholder.com/600x400?text=Салон+Г+661'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Салон вагона</a>
+                            <p class="photo-desc">Внутреннее убранство.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 11 октября 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="gallery-item">
-                        <img src="img/Type_G_661_tabl.jpg" alt="Табличка вагона Г № 661" onerror="this.src='img/no-photo.png'">
-                        <div class="gallery-caption">Заводская табличка вагона</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary); font-size: 0.85rem;">📸 pfandrom</p>
+                    <!-- Фото 3 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Type_G_661_tabl.jpg" alt="Табличка вагона Г № 661" onclick="openGalleryModal(this.src, 'Заводская табличка вагона')" onerror="this.src='https://via.placeholder.com/600x400?text=Табличка'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Заводская табличка</a>
+                            <p class="photo-desc">Музейная информация.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 11 октября 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="gallery-item">
-                        <img src="img/mini_model_A_and_M20_in_G_661.jpg" alt="Макеты в вагоне Г № 661" onerror="this.src='img/no-photo.png'">
-                        <div class="gallery-caption">Экспозиция с макетами внутри вагона</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary); font-size: 0.85rem;">📸 pfandrom</p>
+                    <!-- Фото 4 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/mini_model_A_and_M20_in_G_661.jpg" alt="Макеты в вагоне Г № 661" onclick="openGalleryModal(this.src, 'Экспозиция с макетами внутри вагона')" onerror="this.src='https://via.placeholder.com/600x400?text=Макеты'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Экспозиция с макетами</a>
+                            <p class="photo-desc">Макеты поездов в салоне.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 11 октября 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="gallery-item">
-                        <img src="img/Type_G_661_element_int.jpg" alt="Макеты в вагоне Г № 661" onerror="this.src='img/no-photo.png'">
-                        <div class="gallery-caption">Элементы в салоне</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary); font-size: 0.85rem;">📸 Метро на даче</p>
+                    <!-- Фото 5 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Type_G_661_element_int.jpg" alt="Элементы в салоне Г № 661" onclick="openGalleryModal(this.src, 'Элементы в салоне')" onerror="this.src='https://via.placeholder.com/600x400?text=Элементы'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Элементы в салоне</a>
+                            <p class="photo-desc">Интерактивная экспозиция.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 сентябрь 2026</span>
+                                <span class="photo-author">📸 Метро на даче</span>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="gallery-item">
-                        <img src="img/Type_G_661_fl.jpg" alt="Макеты в вагоне Г № 661" onerror="this.src='img/no-photo.png'">
-                        <div class="gallery-caption">Вид с пола на вагон Г №661</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary); font-size: 0.85rem;">📸 pfandrom</p>
+                    <!-- Фото 6 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Type_G_661_fl.jpg" alt="Вид с пола на вагон Г №661" onclick="openGalleryModal(this.src, 'Вид с пола на вагон Г №661')" onerror="this.src='https://via.placeholder.com/600x400?text=Вид+с+пола'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вид с пола</a>
+                            <p class="photo-desc">На вагон Г №661.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 11 октября 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="gallery-item">
-                        <img src="img/Type_G_661_bit.jpg" alt="Макеты в вагоне Г № 661" onerror="this.src='img/no-photo.png'">
-                        <div class="gallery-caption">Вагон-бытовка Г №661</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary); font-size: 0.85rem;">📸 Ezh(transphoto.org)</p>
+                    <!-- Фото 7 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Type_G_661_bit.jpg" alt="Вагон-бытовка Г №661" onclick="openGalleryModal(this.src, 'Вагон-бытовка Г №661')" onerror="this.src='https://via.placeholder.com/600x400?text=Бытовка'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон-бытовка</a>
+                            <p class="photo-desc">До реставрации.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 3 октября 2019 г</span>
+                                <span class="photo-author">📸 <a href="https://transphoto.org/photo/1548921/">Ezh</a></span>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
     </main>
@@ -242,7 +326,7 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
                         <li><a href="Главная_метро.html">Метрополитены</a></li>
                         <li><a href="Живая_история_Мск_метро.html">Живая история</a></li>
                         <li><a href="Type_G.html">Семейство Г</a></li>
@@ -251,7 +335,6 @@
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
                     <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram-канал</a></p>
-                    <p>✉️ <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Предложка</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -263,15 +346,15 @@
 
     <div class="scroll-top">↑</div>
 
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Счётчики
@@ -300,23 +383,6 @@
                 }, 30);
             }
             animateCounters();
-
-            // Галерея
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
         });
     </script>
 </body>

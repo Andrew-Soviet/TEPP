@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>РАФ-976 — первый вагонный автобус Риги</title>
+    <title>РАФ-976 (1963) — Музейный экспонат — ТЭПП</title>
+    <meta name="description" content="История и характеристики автобуса РАФ-976 1963 года выпуска, экспоната Музея Транспорта Москвы.">
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -14,34 +15,56 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <!-- ================= ШАПКА ================= -->
     <header>
         <div class="header-container">
-            <h1>РАФ-976</h1>
-            <p class="subtitle">Первый вагонный автобус Рижского завода и предшественник знаменитых «рафиков»</p>
+            <div class="logo">
+                <h1>РАФ-976 (1963)</h1>
+                <p class="subtitle">Первый вагонный автобус Рижского завода и предшественник знаменитых «рафиков»</p>
+            </div>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
-                    <li><a href="Железная_дорога.html">🚂 Железные дороги</a></li>
-                    <li><a href="Локомотивы.html">🔧 Локомотивы</a></li>
-                    <li><a href="Электровозы.html">⚡ Электровозы</a></li>
-                    <li><a href="#about">Об автобусе</a></li>
-                    <li><a href="#history">История</a></li>
-                    <li><a href="#gallery">Фото</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
+                    <li><a href="city_transport.html">🚌 Городской транспорт</a></li>
+                    <li><a href="Автобусы.html">🚐 Автобусы</a></li>
+                    <li><a href="Модели_автобусов.html">📋 Модели</a></li>
+                    <li><a href="#about" class="active">🚌 РАФ-976</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
+        <!-- Герой-секция -->
         <section id="about" class="hero">
             <div class="hero-content">
                 <h2>РАФ-976</h2>
-                <p class="hero-text">РАФ-976 — советский автобус малого класса вагонной компоновки, выпускавшийся с 1958 по 1980 год. Первый самостоятельный автобус Рижского завода РАФ, ставший предшественником знаменитых микроавтобусов «рафик».</p>
-                <p class="hero-text">Создан инженером Лаймонисом Клеге на удлинённом шасси грузовика ГАЗ-51. Получил деревянный каркас кузова, обшитый стальными листами, и вагонную компоновку без отдельного капота — уменьшенное подобие автобуса ЗИС-155. В 1959 году модель РАФ-251 получила новый индекс 976.</p>
+                <p class="hero-text">РАФ-976 — советский автобус малого класса вагонной компоновки, выпускавшийся с 1958 по 1980 год. Представленный экземпляр был выпущен в <strong>1963 году</strong> на Рижском авторемонтном заводе №1 и сейчас является частью коллекции Музея Транспорта Москвы.</p>
+                <p class="hero-text">Автобус имеет вагонную компоновку с деревянным каркасом и металлической обшивкой на шасси ГАЗ-51. Он оснащён двумя двухстворчатыми автоматическими дверями. Всего в Риге построили около полутора тысяч таких машин.</p>
                 <div class="stats-container">
                     <div class="stat-item">
                         <div class="counter-number" id="buildYear">0</div>
-                        <div class="stat-label">год начала выпуска</div>
+                        <div class="stat-label">год выпуска экспоната</div>
                     </div>
                     <div class="stat-item">
                         <div class="counter-number" id="maxSpeed">0</div>
@@ -55,36 +78,39 @@
             </div>
         </section>
 
+        <!-- Общая информация -->
         <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+            <div class="card-header">
                 <span class="card-icon">🚌</span>
-                <h2>Общая информация</h2>
+                <h2>Общая информация об экспонате</h2>
             </div>
             <div class="card-content">
                 <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
                     <div class="feature-item">
                         <h3>🏭 Производство</h3>
-                        <p><strong>Заводы-изготовители:</strong> РАФ (Рижский автобусный завод), Рижский опытно-механический завод (РОМЗ), Авторемонтный завод №1</p>
-                        <p><strong>Годы выпуска:</strong> 1958–1980 (фактически до конца 1980-х)</p>
-                        <p><strong>Всего выпущено:</strong> 1460 (РАФ-251/976, 1955–1960) [citation:3]</p>
-                        <p><strong>Преемник:</strong> РАФ-977 (микроавтобус)</p>
+                        <p><strong>Завод-изготовитель:</strong> Рижский авторемонтный завод №1</p>
+                        <p><strong>Модель:</strong> РАФ-976</p>
+                        <p><strong>Год выпуска:</strong> 1963</p>
+                        <p><strong>Всего выпущено:</strong> Около 1 500 машин</p>
                     </div>
                     <div class="feature-item">
-                        <h3>📍 Эксплуатация</h3>
-                        <p><strong>Основной регион:</strong> Прибалтика, Ленинград, Тула, Подмосковье, Москва</p>
-                        <p><strong>Назначение:</strong> служебный транспорт, сельские маршруты, экскурсии</p>
-                        <p><strong>Модификации:</strong> РАФ-251С (служебный), РАФ-251Т (грузопассажирский), РАФ-976М (цельнометаллический)</p>
-                        <p><strong>Сохранность:</strong> около 5 экземпляров [citation:6]</p>
+                        <h3>📍 Музейный статус</h3>
+                        <p><strong>Местонахождение:</strong> Музей Транспорта Москвы</p>
+                        <p><strong>Состояние:</strong> Не эксплуатируется (музейный экспонат)</p>
+                        <p><strong>Назначение:</strong> Историческая экспозиция</p>
+                        <p><strong>Применение:</strong> Служебный транспорт в Москве и Подмосковье</p>
                     </div>
                 </div>
+
                 <div class="highlight-box" style="margin-top: 1.5rem;">
-                    <p>⭐ <strong>Первый самостоятельный РАФ:</strong> РАФ-976 стал первой собственной моделью Рижского автобусного завода. Его создатель Лаймонис Клеге предложил взять панели автобуса ГЗА-651, удлинить лонжероны рамы, перенести вперёд рулевую колонку и педали и применить вагонную компоновку без отдельного капота. Так получилось уменьшенное подобие автобуса ЗИС-155.</p>
+                    <p>⭐ <strong>Первый самостоятельный РАФ:</strong> РАФ-976 стал первой собственной моделью Рижского автобусного завода. Его создатель Лаймонис Клеге предложил взять панели автобуса ГЗА-651, удлинить лонжероны рамы, перенести вперёд рулевую колонку и педали и применить вагонную компоновку без отдельного капота.</p>
                 </div>
             </div>
         </section>
 
+        <!-- Технические характеристики -->
         <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+            <div class="card-header">
                 <span class="card-icon">⚙️</span>
                 <h2>Технические характеристики</h2>
             </div>
@@ -96,26 +122,27 @@
                         <p><strong>Ширина:</strong> 2,45 м</p>
                         <p><strong>Высота:</strong> 2,7 м</p>
                         <p><strong>Сухая масса:</strong> 4040 кг</p>
-                        <p><strong>Максимальная скорость:</strong> 70 км/ч [citation:3]</p>
-                        <p><strong>Расход топлива:</strong> около 30 л/100 км [citation:3]</p>
+                        <p><strong>Максимальная скорость:</strong> 70 км/ч</p>
+                        <p><strong>Расход топлива:</strong> около 30 л/100 км</p>
                     </div>
                     <div class="feature-item">
                         <h3>Силовая установка</h3>
                         <p><strong>Двигатель:</strong> ГАЗ-51, бензиновый</p>
                         <p><strong>Цилиндры:</strong> 6, рядный</p>
-                        <p><strong>Мощность:</strong> 70 л.с. [citation:3]</p>
-                        <p><strong>Объём:</strong> 3485 см³ [citation:3]</p>
-                        <p><strong>КПП:</strong> 4-ступенчатая механическая [citation:3]</p>
+                        <p><strong>Мощность:</strong> 70 л.с.</p>
+                        <p><strong>Объём:</strong> 3485 см³</p>
+                        <p><strong>КПП:</strong> 4-ступенчатая механическая</p>
                         <p><strong>Расположение:</strong> переднее, в кабине рядом с водителем</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- История -->
         <section id="history" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+            <div class="card-header">
                 <span class="card-icon">📜</span>
-                <h2>История</h2>
+                <h2>История модели и экспоната</h2>
             </div>
             <div class="card-content">
                 <div class="timeline" style="padding: 1rem 0;">
@@ -123,115 +150,99 @@
                         <div class="timeline-date">1954</div>
                         <div class="timeline-content">
                             <h3>Рождение модели</h3>
-                            <p>В начале 1950-х мощностей основных автозаводов СССР не хватало, чтобы обеспечить страну автобусами. Решение нашли в постройке простейших капотных автобусов на шасси ГАЗ-51 силами местных предприятий. В Латвии первые такие автобусы сделали в 1954 году на Авторемонтном заводе №2 — это была собственная версия РАРЗ-651. Она считалась временной, так как коллектив уже работал над более рациональным автобусом вагонного типа. Заслуга в создании новой модели принадлежала инженеру Лаймонису Клеге.</p>
+                            <p>В начале 1950-х мощностей основных автозаводов СССР не хватало. Решение нашли в постройке простейших капотных автобусов на шасси ГАЗ-51. В Латвии первые такие автобусы сделали в 1954 году. Заслуга в создании новой модели принадлежала инженеру Лаймонису Клеге.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date">1955</div>
                         <div class="timeline-content">
                             <h3>РАФ-251 — первый «рафик»</h3>
-                            <p>Модель была рекомендована к производству с января 1955 года. Помощь с документацией взялся оказать ВНИИАТ, но слишком затянул работу, поэтому первые серийные РАФы появились в конце января ещё до завершения бумажных формальностей. За первый год изготовили всего 54 автобуса при плане в 206.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">1956–1958</div>
-                        <div class="timeline-content">
-                            <h3>Модернизации</h3>
-                            <p>Автобусы семейства РАФ-251 постоянно модернизировались. В 1956 году отказались от закрытых колёсных арок, началось производство модели РАФ-251С (служебный) с одной распашной дверью. В 1957 году освоили 22-местную версию для пригородных маршрутов и 20-местную междугороднюю с новым дизайном облицовки радиатора. Постепенно менялась вентиляция: от опускных деревянных рамок боковых окон к глухим стёклам с форточками, а потом к вентиляционным люкам в крыше. Внедрили грузопассажирский вариант РАФ-251Т.</p>
+                            <p>Модель была рекомендована к производству с января 1955 года. За первый год изготовили всего 54 автобуса при плане в 206.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date">1959</div>
                         <div class="timeline-content">
                             <h3>Новый индекс — 976</h3>
-                            <p>В 1959 году автобусу присвоили новый индекс — 976. Скачок в числе объяснялся тем, что РАФ как состоявшийся автопроизводитель получил собственный набор индексов в диапазоне от 975 до 999. Со сменой названия работы по модернизации не прекратились: РАФ-976 становился более простым и адаптированным к серийному производству. Облицовка радиатора свелась к набору вырубленных в металле отверстий.</p>
+                            <p>В 1959 году автобусу присвоили новый индекс — 976. РАФ как состоявшийся автопроизводитель получил собственный набор индексов.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-date">1960–1961</div>
+                        <div class="timeline-date">1963</div>
                         <div class="timeline-content">
-                            <h3>Передача производства</h3>
-                            <p>С начала 1960-х годов сам РАФ уже не имел отношения к выпуску этих автобусов. Его основной задачей стало производство микроавтобусов, а «большие» автобусы отдали на Авторемонтный завод №1, расположенный в Риге. Производство кузовов РАФ-976 продолжалось вплоть до конца 1980-х годов, но в последние годы это был по большей части капитальный ремонт старых машин с заменой кузова.</p>
+                            <h3>Год выпуска экспоната</h3>
+                            <p>Именно эта машина сошла с конвейера Рижского авторемонтного завода №1 в 1963 году. Она застала эпоху, когда РАФ-976 был основным служебным транспортом.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-date">1966–1967</div>
+                        <div class="timeline-date">Наши дни</div>
                         <div class="timeline-content">
-                            <h3>РАФ-976М</h3>
-                            <p>В 1966 году СКНИИБ разработало проект автобуса РАФ-976М на шасси ГАЗ-51А со сварным цельнометаллическим кузовом и большой площадью остекления, рассчитанным на 30 человек [citation:11]. Производство планировалось на мощностях Рижского АРЗ №1. В конце 1966 года построили первый экземпляр, принятый госкомиссией в начале 1967 года [citation:11]. После испытаний выпустили первую партию, но массовое производство налажено не было — автобусы изготавливались штучно до начала 1970-х [citation:11].</p>
+                            <h3>Сохранение для истории</h3>
+                            <p>Данный экземпляр был отреставрирован и занял достойное место в экспозиции Музея Транспорта Москвы.</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">1980-е</div>
-                        <div class="timeline-content">
-                            <h3>Закат</h3>
-                            <p>РАФ-251 и РАФ-976 выпускались не только в Риге. Документацию на рижские автобусы получили авторемонтные заводы в Каунасе, Киеве, Алма-Ате и других городах. Поэтому не всегда автобус, похожий на РАФ, был продукцией именно рижского завода. Ареал распространения был очень широк: Ленинград, Тула, Подмосковье, Москва. В основном их использовали как служебный транспорт. Основным местом обитания была Прибалтика, где они обслуживали сельские маршруты и перевозили отдыхающих на курорты взморья.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="highlight-box" style="margin-top: 1.5rem;">
-                    <p><strong>Интересный факт:</strong> На сегодняшний день сохранилось всего около 5 экземпляров РАФ-976. Один из них, выпущенный в 1963 году, был выкуплен в 2007 году в городе Старица Тверской области и восстановлен до ходового состояния к 2013 году [citation:6][citation:8]. Он регулярно участвует в Дне Московского Транспорта.</p>
                 </div>
             </div>
         </section>
 
-        <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
-                <span class="card-icon">🎨</span>
-                <h2>Особенности конструкции</h2>
-            </div>
-            <div class="card-content">
-                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
-                    <div class="feature-item">
-                        <h3>Вагонная компоновка</h3>
-                        <p>Вместо капота — вагонная компоновка, при которой салон протянут вперёд до переднего бампера, а водитель сидит слева от двигателя. При той же длине кузова это давало намного больше полезного пространства, чем у капотных «барбухаек».</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>Деревянный каркас</h3>
-                        <p>Кузов собирался на деревянном каркасе, обшитом стальными листами. Простая и технологичная конструкция позволяла наладить производство в условиях ограниченных мощностей. Лишь в 1967 году появился РАФ-976М с цельнометаллическим кузовом [citation:11].</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>Система вентиляции</h3>
-                        <p>Постепенно менялась система вентиляции салона. Вначале на замену архаичным опускным деревянным рамам боковых окон пришли глухие стёкла с форточками, а потом отказались и от форточек в пользу вентиляционных люков в крыше.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>Модификации</h3>
-                        <p>Выпускались служебная версия РАФ-251С с одной распашной дверью, 22-местная пригородная, 20-местная междугородняя и грузопассажирская РАФ-251Т. Из автобусов делали «пикапы» (срезав крышу), фургоны (убирая сиденья и закрывая окна) и «комбинированные» варианты сзади — грузовой кузов, впереди — 14 сидячих мест.</p>
-                    </div>
-                </div>
-                <div class="highlight-box" style="margin-top: 1rem;">
-                    <p>🎉 <strong>Символ эпохи:</strong> РАФ-976 — первый автобус широко известной марки РАФ и предшественник знаменитых микроавтобусов «рафик». Его можно было встретить на служебных стоянках Ленинграда, Тулы и Москвы. Основным местом обитания была родная Прибалтика, где они обслуживали многочисленные сельские маршруты и перевозили отдыхающих из Риги на пляжи и курорты взморья.</p>
-                </div>
-            </div>
-        </section>
-
+        <!-- Фотогалерея -->
         <section id="gallery" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+            <div class="card-header">
                 <span class="card-icon">📸</span>
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/raf_976_mus.jpg" alt="РАФ-976 в Москве" onerror="this.src='https://via.placeholder.com/800x500?text=РАФ-976+в+Москве'">
-                        <div class="gallery-caption">РАФ-976 в музее Московского Транспорта</div>
-                        <p style="text-align: center; margin-top: 0.3rem; color: var(--text-secondary);">📸 pfandrom</p>
+                <div class="photo-gallery">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/raf_976_mus.jpg" alt="РАФ-976 в Москве" onclick="openGalleryModal(this.src, 'РАФ-976 в музее Московского Транспорта')" onerror="this.src='https://via.placeholder.com/600x400?text=РАФ-976'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">РАФ-976 в музее</a>
+                            <p class="photo-desc">Экспонат Музея Транспорта Москвы.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/raf_976_tabl.jpg" alt="РАФ-976 в Москве" onerror="this.src='https://via.placeholder.com/800x500?text=РАФ-976+в+Москве'">
-                        <div class="gallery-caption">РАФ-976 в музее Московского Транспорта</div>
-                        <p style="text-align: center; margin-top: 0.3rem; color: var(--text-secondary);">📸 pfandrom</p>
+
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/raf_976_tabl.jpg" alt="Табличка об экспонате" onclick="openGalleryModal(this.src, 'Табличка об экспонате')" onerror="this.src='https://via.placeholder.com/600x400?text=Табличка'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Табличка об экспонате</a>
+                            <p class="photo-desc">Музейная информация.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/raf_976_int.jpg" alt="РАФ-976 в Москве" onerror="this.src='https://via.placeholder.com/800x500?text=РАФ-976+в+Москве'">
-                        <div class="gallery-caption">РАФ-976 в музее Московского Транспорта</div>
-                        <p style="text-align: center; margin-top: 0.3rem; color: var(--text-secondary);">📸 pfandrom</p>
+
+                    <!-- Фото 3 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/raf_976_int.jpg" alt="Салон РАФ-976" onclick="openGalleryModal(this.src, 'Салон РАФ-976')" onerror="this.src='https://via.placeholder.com/600x400?text=Салон'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Салон автобуса</a>
+                            <p class="photo-desc">Внутреннее убранство.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
+        <!-- Цитата -->
         <section class="quote-section">
             <div class="quote-container">
                 <p class="quote-text">«Заслуга в создании новой модели в большей степени принадлежала инженеру завода Лаймонису Клеге. Он предложил, взяв за основу панели автобуса ГЗА-651, удлинить спереди и сзади лонжероны рамы, перенести вперёд рулевую колонку и педали и, применив вагонную компоновку без отдельного капота, получить тем самым уменьшенное подобие автобуса ЗИС-155».</p>
@@ -251,43 +262,45 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
-                        <li><a href="Локомотивы.html">Локомотивы</a></li>
-                        <li><a href="Электровозы.html">Электровозы</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
+                        <li><a href="city_transport.html">Городской транспорт</a></li>
+                        <li><a href="Автобусы.html">Автобусы</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
-                <p class="footer-note">РАФ-976 — «Первый вагонный Рижский»</p>
+                <p class="footer-note">РАФ-976 (1963) — «Первый вагонный Рижский»</p>
             </div>
         </div>
     </footer>
 
     <div class="scroll-top">↑</div>
 
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
             function animateCounters() {
-                const targets = { buildYear: 1958, maxSpeed: 70, capacity: 29 };
+                const targets = { buildYear: 1963, maxSpeed: 70, capacity: 29 };
                 let current = { buildYear: 0, maxSpeed: 0, capacity: 0 };
                 const yearEl = document.getElementById('buildYear');
                 const speedEl = document.getElementById('maxSpeed');
                 const capEl = document.getElementById('capacity');
                 if (!yearEl || !speedEl || !capEl) return;
+                
                 const interval = setInterval(function() {
                     let allFinished = true;
                     if (current.buildYear < targets.buildYear) {
@@ -312,22 +325,6 @@
                 }, 30);
             }
             animateCounters();
-
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
         });
     </script>
 </body>

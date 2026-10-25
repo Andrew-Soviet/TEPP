@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Вагон типа Б — модернизированная версия первого метровагона — ТЭПП</title>
+    <meta name="description" content="История, характеристики и сохранившийся экземпляр вагона типа Б — модернизированной версии первого метровагона Московского метрополитена.">
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -14,13 +15,36 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <!-- ================= ШАПКА ================= -->
     <header>
         <div class="header-container">
-            <h1>Вагон типа Б</h1>
-            <p class="subtitle">Модернизированная версия первого метровагона (1937–1939)</p>
+            <div class="logo">
+                <h1>Вагон типа Б</h1>
+                <p class="subtitle">Модернизированная версия первого метровагона (1937–1939)</p>
+            </div>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
                     <li><a href="Главная_метро.html">🚇 Метро</a></li>
                     <li><a href="ps_mosmetro.html">🚆 Подвижной состав</a></li>
                     <li><a href="#about">О вагоне</a></li>
@@ -62,7 +86,7 @@
 
         <!-- Производство -->
         <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);">
+            <div class="card-header">
                 <span class="card-icon">🏭</span>
                 <h2>Производство</h2>
             </div>
@@ -97,42 +121,44 @@
 
         <!-- Технические характеристики -->
         <section id="specs" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+            <div class="card-header">
                 <span class="card-icon">⚙️</span>
                 <h2>Технические характеристики</h2>
             </div>
             <div class="card-content">
-                <table>
-                    <caption>Основные технические данные вагонов типа Б</caption>
-                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
-                    <tbody>
-                        <tr><td>Род тока и напряжение</td><td>750 В постоянного тока</td></tr>
-                        <tr><td>Типы вагонов</td><td>Мг / Пг (моторный головной / прицепной головной)</td></tr>
-                        <tr><td>Число вагонов в составе</td><td>6</td></tr>
-                        <tr><td>Полная вместимость</td><td>262 человека</td></tr>
-                        <tr><td>Сидячих мест</td><td>52</td></tr>
-                        <tr><td>Длина вагона</td><td>18 916 мм</td></tr>
-                        <tr><td>Ширина</td><td>2 700 мм</td></tr>
-                        <tr><td>Высота</td><td>3 700 мм</td></tr>
-                        <tr><td>Диаметр колёс</td><td>900 мм</td></tr>
-                        <tr><td>Ширина колеи</td><td>1 524 мм</td></tr>
-                        <tr><td>Масса тары</td><td>51,7 т (моторный) / 36 т (прицепной)</td></tr>
-                        <tr><td>Материал вагона</td><td>Сталь</td></tr>
-                        <tr><td>Выходная мощность</td><td>4 × 153 кВт (моторный) / — (прицепной)</td></tr>
-                        <tr><td>Тип ТЭД</td><td>ДМП-151</td></tr>
-                        <tr><td>Макс. скорость</td><td>65 км/ч</td></tr>
-                        <tr><td>Ускорение при пуске</td><td>0,65—0,7 м/с²</td></tr>
-                        <tr><td>Ускорение при торможении</td><td>0,65—0,7 м/с²</td></tr>
-                        <tr><td>Электрическое торможение</td><td>Реостатное (Бм)</td></tr>
-                        <tr><td>Тормозная система</td><td>Тормоз Вестингауза</td></tr>
-                    </tbody>
-                </table>
+                <div style="overflow-x: auto;">
+                    <table>
+                        <caption>Основные технические данные вагонов типа Б</caption>
+                        <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                        <tbody>
+                            <tr><td>Род тока и напряжение</td><td>750 В постоянного тока</td></tr>
+                            <tr><td>Типы вагонов</td><td>Мг / Пг (моторный головной / прицепной головной)</td></tr>
+                            <tr><td>Число вагонов в составе</td><td>6</td></tr>
+                            <tr><td>Полная вместимость</td><td>262 человека</td></tr>
+                            <tr><td>Сидячих мест</td><td>52</td></tr>
+                            <tr><td>Длина вагона</td><td>18 916 мм</td></tr>
+                            <tr><td>Ширина</td><td>2 700 мм</td></tr>
+                            <tr><td>Высота</td><td>3 700 мм</td></tr>
+                            <tr><td>Диаметр колёс</td><td>900 мм</td></tr>
+                            <tr><td>Ширина колеи</td><td>1 524 мм</td></tr>
+                            <tr><td>Масса тары</td><td>51,7 т (моторный) / 36 т (прицепной)</td></tr>
+                            <tr><td>Материал вагона</td><td>Сталь</td></tr>
+                            <tr><td>Выходная мощность</td><td>4 × 153 кВт (моторный) / — (прицепной)</td></tr>
+                            <tr><td>Тип ТЭД</td><td>ДМП-151</td></tr>
+                            <tr><td>Макс. скорость</td><td>65 км/ч</td></tr>
+                            <tr><td>Ускорение при пуске</td><td>0,65—0,7 м/с²</td></tr>
+                            <tr><td>Ускорение при торможении</td><td>0,65—0,7 м/с²</td></tr>
+                            <tr><td>Электрическое торможение</td><td>Реостатное (Бм)</td></tr>
+                            <tr><td>Тормозная система</td><td>Тормоз Вестингауза</td></tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
         <!-- Отличия от типа А -->
         <section id="differences" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+            <div class="card-header">
                 <span class="card-icon">🔧</span>
                 <h2>Отличия от вагонов типа А</h2>
             </div>
@@ -142,7 +168,7 @@
                 <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
                     <div class="feature-item">
                         <h3>🌬️ Вентиляция салона</h3>
-                        <p>Количество воздухозаборников с каждой стороны вагона увеличено с 8 до 10 штук. Воздухозаборники на каждой стороне крыши развернули только в одну сторону (позднее применялись воздухозаборники большего размера), что обеспечивало более равномерное распределение воздушных потоков в салоне.</p>
+                        <p>Количество воздухозаборников с каждой стороны вагона увеличено с 8 до 10 штук. Воздухозаборники на каждой стороне крыши развернули только в одну сторону, что обеспечивало более равномерное распределение воздушных потоков в салоне.</p>
                     </div>
 
                     <div class="feature-item">
@@ -157,12 +183,12 @@
 
                     <div class="feature-item">
                         <h3>💡 Аварийное освещение</h3>
-                        <p>Впервые для вагонов отечественного метрополитена применено аварийное освещение, питавшееся от аккумуляторных батарей и автоматически включавшееся при обесточивании основного. Каждый вагон имел 5 ламп аварийного освещения (1 в кабине машиниста и 4 в салоне).</p>
+                        <p>Впервые для вагонов отечественного метрополитена применено аварийное освещение, питавшееся от аккумуляторных батарей и автоматически включавшееся при обесточивании основного.</p>
                     </div>
 
                     <div class="feature-item">
                         <h3>🔋 Аккумуляторная батарея</h3>
-                        <p>Установлена аккумуляторная батарея для питания аварийного освещения. Батареи ёмкостью 40 А·ч не имели системы подзаряда от цепей 750 В и питали только лампы аварийного освещения и катушку дверного реле.</p>
+                        <p>Установлена аккумуляторная батарея для питания аварийного освещения. Батареи ёмкостью 40 А·ч не имели системы подзаряда от цепей 750 В.</p>
                     </div>
 
                     <div class="feature-item">
@@ -170,20 +196,12 @@
                         <p>Токоприёмники устанавливали только на моторных вагонах (на вагонах типа «А» токоприёмники были как на моторных, так и на прицепных вагонах).</p>
                     </div>
                 </div>
-
-                <div class="highlight-box" style="margin-top: 1.5rem;">
-                    <p><strong>Система освещения:</strong> Каждый вагон имел 27 ламп накаливания для основного освещения (26 в салоне и 1 в кабине машиниста). Лампы были рассчитаны на напряжение 130 В и включались последовательно, образуя 5 групп. Напряжение 750 В подавалось на лампы 2-й группы сразу после включения автомата вспомогательных цепей, на остальные группы — через контактор основного освещения.</p>
-                </div>
-
-                <div class="highlight-box" style="margin-top: 1rem;">
-                    <p><strong>Отопление кабины:</strong> Кабины машиниста вагонов типа «Б» имели электрическое отопление — в каждой кабине устанавливалась электрическая печь мощностью 500 Вт, питавшаяся напряжением 750 В через АВЦ и выключатель отопления.</p>
-                </div>
             </div>
         </section>
 
         <!-- Модификация Бм -->
         <section id="bm" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #6A0DAD 0%, #8E44AD 100%);">
+            <div class="card-header">
                 <span class="card-icon">🔄</span>
                 <h2>Модификация «Бм»</h2>
             </div>
@@ -191,15 +209,8 @@
                 <p>В середине 1950-х годов возникла необходимость ввода на метрополитене реостатного торможения (электродинамического торможения). В связи с этим была произведена соответствующая модернизация вагонов типа «Б», которые получили обозначение <strong>«Бм»</strong>.</p>
 
                 <div class="highlight-box">
-                    <p><strong>Разработчики:</strong> Проект по доработке электрооборудования разрабатывался командой специалистов Московского метро во главе с Г. Ф. Фёдоровым и конструкторским коллективом завода «Динамо» им. С. М. Кирова. В качестве базы был взят комплект электрооборудования вагонов типа «Д».</p>
+                    <p><strong>Разработчики:</strong> Проект по доработке электрооборудования разрабатывался командой специалистов Московского метро во главе с Г. Ф. Фёдоровым и конструкторским коллективом завода «Динамо» им. С. М. Кирова.</p>
                 </div>
-
-                <h3 style="margin: 1.5rem 0 1rem;">Ключевые изменения</h3>
-                <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
-                    <li>Для обеспечения цепей управления поездом энергией на прицепных вагонах секции устанавливали аккумуляторные батареи 56НКН-45, подзаряжавшиеся от контактного рельса.</li>
-                    <li>Тяговые электродвигатели ДМП-151 были мало приспособлены к электрическому торможению, поэтому применена система автоматического переключения с полного на ослабленное возбуждение.</li>
-                    <li>Моторные вагоны останавливались с помощью системы реостатного торможения, прицепные использовали электропневматическое торможение.</li>
-                </ul>
 
                 <h3 style="margin: 1.5rem 0 1rem;">Хронология модернизации</h3>
                 <div class="timeline">
@@ -230,7 +241,7 @@
 
         <!-- История эксплуатации -->
         <section id="history" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+            <div class="card-header">
                 <span class="card-icon">📜</span>
                 <h2>История эксплуатации</h2>
             </div>
@@ -272,13 +283,6 @@
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-date">1956—1959</div>
-                        <div class="timeline-content">
-                            <h3>Модернизация в «Бм»</h3>
-                            <p>Проведена модернизация вагонов с присвоением обозначения «Бм».</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
                         <div class="timeline-date">Конец января 1975</div>
                         <div class="timeline-content">
                             <h3>Конец пассажирской эксплуатации</h3>
@@ -295,7 +299,7 @@
 
         <!-- Сохранившийся вагон -->
         <section id="surviving" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+            <div class="card-header">
                 <span class="card-icon">🏛️</span>
                 <h2>Сохранившийся вагон № 1119</h2>
             </div>
@@ -303,7 +307,7 @@
                 <p class="card-description"><strong>Вагон № 1119</strong> — единственный сохранившийся экземпляр вагонов типа Б. Это прицепной вагон, построенный в сентябре 1938 года.</p>
 
                 <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                    <div class="train-card" style="border-left: 4px solid var(--accent-color);">
                         <h3>Вагон типа Б № 1119</h3>
                         <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
                             <li><strong>Тип:</strong> Прицепной</li>
@@ -328,28 +332,33 @@
                         <tr><td>20.01.2022</td><td>Передан Музею транспорта Москвы, перевезён в Москву</td></tr>
                     </tbody>
                 </table>
-
-                <div class="highlight-box" style="margin-top: 1.5rem;">
-                    <p><strong>Судьба остальных вагонов:</strong> Остальные вагоны типа Б в полноценном виде не сохранились — были порезаны или проданы. Точное местонахождение большинства из них неизвестно.</p>
-                </div>
             </div>
         </section>
 
         <!-- Галерея -->
         <section id="gallery" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+            <div class="card-header">
                 <span class="card-icon">📸</span>
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/Type_B_ploshad_sverlova.jpg" alt="Вагон Б на станции Красносельская, 1940 год" onerror="this.src='https://via.placeholder.com/800x500?text=Вагон+Б+1940'">
-                        <div class="gallery-caption">Вагон Б на станции Площадь Свердлова</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Трёхгранка</p>
+                <div class="photo-gallery">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="https://trehgranka.metro.ru/images/vagon/vagon_a_b/b_1094_pl-sverdlova.jpg" alt="Вагон Б на станции Площадь Свердлова" onclick="openGalleryModal(this.src, 'Вагон Б на станции Площадь Свердлова')" onerror="this.src='https://via.placeholder.com/600x400?text=Вагон+Б+1940'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон Б на станции Площадь Свердлова</a>
+                            <p class="photo-desc">Историческое фото 1940-х годов.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 1940-е</span>
+                                <span class="photo-author">📸 <a href="https://trehgranka.metro.ru/" target="_blank" rel="noopener">trehgranka.metro.ru</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
@@ -373,7 +382,7 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
                         <li><a href="ps_mosmetro.html">Подвижной состав</a></li>
                         <li><a href="Главная_метро.html">Метрополитены</a></li>
                         <li><a href="Живая_история_Мск_метро.html">Живая история</a></li>
@@ -381,8 +390,7 @@
                 </div>
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
-                    <p>📧 info@tepp.ru</p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -394,15 +402,15 @@
 
     <div class="scroll-top">↑</div>
 
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Счётчики
@@ -413,6 +421,7 @@
                 const yearsEl = document.getElementById('bYears');
                 const survivingEl = document.getElementById('bSurviving');
                 if (!builtEl || !yearsEl || !survivingEl) return;
+                
                 const interval = setInterval(function() {
                     let allFinished = true;
                     if (current.bBuilt < targets.bBuilt) {
@@ -437,23 +446,6 @@
                 }, 30);
             }
             animateCounters();
-
-            // Галерея
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
         });
     </script>
 </body>

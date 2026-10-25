@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ЕжТК — опытная модернизация вагонов Еж3/Еж6 — ТЭПП</title>
+    <meta name="description" content="История опытной модернизации вагонов Еж3/Еж6 — ЕжТК (1997–2010).">
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -14,13 +15,36 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <!-- ================= ШАПКА ================= -->
     <header>
         <div class="header-container">
-            <h1>ЕжТК</h1>
-            <p class="subtitle">Опытная модернизация вагонов Еж3 и Еж6 (1997–2010)</p>
+            <div class="logo">
+                <h1>ЕжТК</h1>
+                <p class="subtitle">Опытная модернизация вагонов Еж3 и Еж6 (1997–2010)</p>
+            </div>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
                     <li><a href="Главная_метро.html">🚇 Метро</a></li>
                     <li><a href="Опытные_составы.html">🔬 Опытные</a></li>
                     <li><a href="#about">О поезде</a></li>
@@ -61,7 +85,7 @@
 
         <!-- История -->
         <section id="history" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);">
+            <div class="card-header">
                 <span class="card-icon">🚆</span>
                 <h2>История ЕжТК</h2>
             </div>
@@ -126,44 +150,46 @@
 
         <!-- Технические характеристики -->
         <section id="specs" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #708090 0%, #778899 100%);">
+            <div class="card-header">
                 <span class="card-icon">⚙️</span>
                 <h2>Технические характеристики</h2>
             </div>
             <div class="card-content">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Параметр</th>
-                            <th>Значение</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Тип</td><td>ЕжТК (опытная модернизация)</td></tr>
-                        <tr><td>Базовые типы</td><td>Еж3 (5696, 5923) + Еж6 (5582)</td></tr>
-                        <tr><td>Год модернизации</td><td>1997 (январь)</td></tr>
-                        <tr><td>Завод</td><td>ЗРЭПС (Московский завод по ремонту электроподвижного состава)</td></tr>
-                        <tr><td>Количество вагонов</td><td>3</td></tr>
-                        <tr><td>Составность</td><td>5696 (Еж3) — 5582 (Еж6) — 5923 (Еж3)</td></tr>
-                        <tr><td>Напряжение внутренней сети</td><td>80 В (вместо 750 В)</td></tr>
-                        <tr><td>Пульты управления</td><td>ПМ-04 (на 5696, 5923)</td></tr>
-                        <tr><td>Пробег к 1999 году</td><td>60 000 км</td></tr>
-                        <tr><td>Испытания</td><td>ЗРЭПС + ВНИИЖТ (ходовые на линии)</td></tr>
-                        <tr><td>Депо приписки</td><td>ТЧ-11 «Выхино»</td></tr>
-                        <tr><td>Дальнейшая судьба</td><td>КВР/смена модели (июнь 2010)</td></tr>
-                    </tbody>
-                </table>
+                <div style="overflow-x: auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Параметр</th>
+                                <th>Значение</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Тип</td><td>ЕжТК (опытная модернизация)</td></tr>
+                            <tr><td>Базовые типы</td><td>Еж3 (5696, 5923) + Еж6 (5582)</td></tr>
+                            <tr><td>Год модернизации</td><td>1997 (январь)</td></tr>
+                            <tr><td>Завод</td><td>ЗРЭПС (Московский завод по ремонту электроподвижного состава)</td></tr>
+                            <tr><td>Количество вагонов</td><td>3</td></tr>
+                            <tr><td>Составность</td><td>5696 (Еж3) — 5582 (Еж6) — 5923 (Еж3)</td></tr>
+                            <tr><td>Напряжение внутренней сети</td><td>80 В (вместо 750 В)</td></tr>
+                            <tr><td>Пульты управления</td><td>ПМ-04 (на 5696, 5923)</td></tr>
+                            <tr><td>Пробег к 1999 году</td><td>60 000 км</td></tr>
+                            <tr><td>Испытания</td><td>ЗРЭПС + ВНИИЖТ (ходовые на линии)</td></tr>
+                            <tr><td>Депо приписки</td><td>ТЧ-11 «Выхино»</td></tr>
+                            <tr><td>Дальнейшая судьба</td><td>КВР/смена модели (июнь 2010)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
         <!-- Состав по вагонам -->
         <section id="composition" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #DAA520 0%, #B8860B 100%);">
+            <div class="card-header">
                 <span class="card-icon">🚃</span>
                 <h2>Состав по вагонам</h2>
             </div>
             <div class="card-content">
-                <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
                     <div class="feature-item">
                         <h3>Вагон 5696</h3>
                         <p><strong>Тип:</strong> Еж3</p>
@@ -186,7 +212,7 @@
                         <p><strong>Тип:</strong> Еж3</p>
                         <p><strong>Роль:</strong> Головной</p>
                         <p><strong>Особенность:</strong> Установлен новый пульт управления ПМ-04</p>
-                        <p><strong>Судьба:</strong> <span style="color: #FF8C00;">Ожидает утилизации</span> (депо Митино)</p>
+                        <p><strong>Судьба:</strong> <span style="color: var(--accent-color);">Ожидает утилизации</span> (депо Митино)</p>
                     </div>
                 </div>
             </div>
@@ -194,32 +220,32 @@
 
         <!-- Судьба вагонов -->
         <section id="fate" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #CD5C5C 0%, #B22222 100%);">
+            <div class="card-header">
                 <span class="card-icon">⚰️</span>
                 <h2>Судьба вагонов</h2>
             </div>
             <div class="card-content">
-                <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
                     <div class="feature-item">
                         <h3>Вагон 5696</h3>
-                        <p class="route-number" style="color: #C0392B;">Утилизирован</p>
+                        <p style="color: #C0392B; font-weight: bold;">Утилизирован</p>
                         <p>В сентябре 2020 года</p>
                     </div>
                     
                     <div class="feature-item">
                         <h3>Вагон 5582</h3>
-                        <p class="route-number" style="color: #C0392B;">Утилизирован</p>
+                        <p style="color: #C0392B; font-weight: bold;">Утилизирован</p>
                         <p>В сентябре 2020 года</p>
                     </div>
                     
                     <div class="feature-item">
                         <h3>Вагон 5923</h3>
-                        <p class="route-number" style="color: #FF8C00;">Ожидает утилизации</p>
+                        <p style="color: var(--accent-color); font-weight: bold;">Ожидает утилизации</p>
                         <p>Находится в депо Митино</p>
                     </div>
                 </div>
                 
-                <div class="highlight-box" style="margin-top: 2rem; background: rgba(205, 92, 92, 0.1); border-left-color: #CD5C5C;">
+                <div class="highlight-box" style="margin-top: 2rem;">
                     <p style="font-size: 1.2rem;">Исключением является вагон 5923, он ожидает утилизации в Митино.</p>
                     <p style="margin-top: 0.5rem;">Хотелось бы сохранить его, вернуть вид салона и выставить его в музей. Это единственный шанс сохранить память об уникальной модернизации.</p>
                 </div>
@@ -228,12 +254,12 @@
 
         <!-- Уникальный салон -->
         <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #DAA520 0%, #B8860B 100%);">
+            <div class="card-header">
                 <span class="card-icon">💺</span>
                 <h2>Уникальный салон ЕжТК</h2>
             </div>
             <div class="card-content">
-                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
                     <div class="feature-item">
                         <h3>Особенности интерьера</h3>
                         <ul style="margin: 1rem 0 0 1.2rem;">
@@ -253,22 +279,30 @@
             </div>
         </section>
 
-
-        <!-- Фотогалерея -->
+        <!-- Галерея -->
         <section id="gallery" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #9370DB 0%, #8A2BE2 100%);">
+            <div class="card-header">
                 <span class="card-icon">📸</span>
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/ЕжТК.jpg" alt="Салон вагона ЕжТК" onerror="this.src='https://via.placeholder.com/650x433?text=ЕжТК+салон'">
-                        <div class="gallery-caption">Салон вагона ЕжТК — один из самых красивых у Е-образных вагонов.</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Моё метро</p>
+                <div class="photo-gallery">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/ЕжТК.jpg" alt="Салон вагона ЕжТК" onclick="openGalleryModal(this.src, 'Салон вагона ЕжТК — один из самых красивых у Е-образных вагонов.')" onerror="this.src='https://via.placeholder.com/600x400?text=ЕжТК+салон'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="https://commons.wikimedia.org/wiki/File:%D0%95%D0%B6%D0%A2%D0%9A_%D1%81%D0%B0%D0%BB%D0%BE%D0%BD.jpg" target="_blank" rel="noopener" class="photo-object">Салон вагона ЕжТК</a>
+                            <p class="photo-desc">Один из самых красивых у Е-образных вагонов.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2015</span>
+                                <span class="photo-author">📸 <a href="https://commons.wikimedia.org/wiki/File:%D0%95%D0%B6%D0%A2%D0%9A_%D1%81%D0%B0%D0%BB%D0%BE%D0%BD.jpg" target="_blank" rel="noopener">Моё метро</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
@@ -292,7 +326,7 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
                         <li><a href="Главная_метро.html">Метрополитены</a></li>
                         <li><a href="Опытные_составы.html">Опытные составы</a></li>
                         <li><a href="Опытная_Ешка.html">Опытная Ешка</a></li>
@@ -301,8 +335,7 @@
                 </div>
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
-                    <p>📧 info@tepp.ru</p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -314,15 +347,15 @@
 
     <div class="scroll-top">↑</div>
 
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Счётчики
@@ -333,6 +366,7 @@
                 const carsEl = document.getElementById('ejtkCars');
                 const kmEl = document.getElementById('ejtkKm');
                 if (!yearEl || !carsEl || !kmEl) return;
+                
                 const interval = setInterval(function() {
                     let allFinished = true;
                     if (current.ejtkYear < targets.ejtkYear) {
@@ -357,23 +391,6 @@
                 }, 30);
             }
             animateCounters();
-
-            // Галерея
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
         });
     </script>
 </body>

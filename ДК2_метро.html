@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Диагностический комплекс «Синергия-2» (ДК-2) — Московский метрополитен</title>
+    <title>Диагностический комплекс «Синергия-2» (ДК-2) — Московский метрополитен — ТЭПП</title>
+    <meta name="description" content="История, задачи, состав и фотографии диагностического комплекса «Синергия-2».">
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -14,13 +15,33 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
     <header>
         <div class="header-container">
             <h1>Диагностический комплекс «Синергия-2»</h1>
             <p class="subtitle">Служебный поезд-лаборатория для диагностики инфраструктуры Московского метрополитена</p>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
                     <li><a href="Главная_метро.html">🚇 Метро</a></li>
                     <li><a href="Служебные_поезда_метро.html">🔧 Служебные поезда</a></li>
                     <li><a href="#about">О поезде</a></li>
@@ -36,8 +57,9 @@
         <section id="about" class="hero">
             <div class="hero-content">
                 <h2>Диагностический комплекс «Синергия-2»</h2>
-                <p class="hero-text">«Синергия-2» (ДК-2) — служебный поезд-лаборатория для диагностики инфраструктуры Московского метрополитена. Введён в эксплуатацию в июле 2015 года. Состоит из 5 вагонов, оснащённых современным диагностическим оборудованием.</p>
-                <p class="hero-text">Поезд получил своё название не случайно — он символизирует синергию современных технологий и опыта эксплуатации метрополитена.</p>
+                <p class="hero-text">«Синергия-2» (ДК-2) — служебный поезд-лаборатория для диагностики инфраструктуры Московского метрополитена. Введён в эксплуатацию в 2015 году. Состоит из 5 вагонов, оснащённых современным диагностическим оборудованием.</p>
+                <p class="hero-text">В отличие от предшественника («Синергия-1»), оснащён лазерно-оптическими датчиками, которые измеряют геометрию рельсовой колеи за считанные секунды. Это первый в России современный диагностический поезд, объединивший все системы измерения в одном составе.</p>
+                
                 <div class="stats-container">
                     <div class="stat-item">
                         <div class="counter-number" id="yearCount">0</div>
@@ -64,85 +86,84 @@
                 <div class="features-grid" style="grid-template-columns: repeat(2, 1fr);">
                     <div class="feature-item">
                         <h3>🛤️ Диагностика пути</h3>
-                        <p>Контроль геометрии рельсового пути, выявление дефектов, измерение износа рельсов.</p>
+                        <p>Контроль геометрии рельсового пути, выявление дефектов, измерение износа рельсов с помощью лазерно-оптических датчиков.</p>
                     </div>
                     <div class="feature-item">
                         <h3>🏗️ Контроль тоннелей</h3>
-                        <p>Обследование состояния обделки тоннелей, выявление трещин и деформаций.</p>
+                        <p>Обследование состояния обделки тоннелей, выявление трещин и деформаций с помощью камер и сканеров.</p>
                     </div>
                     <div class="feature-item">
                         <h3>⚡ Контактный рельс</h3>
-                        <p>Мониторинг состояния контактного рельса и токоприёмников.</p>
+                        <p>Мониторинг состояния контактного рельса, поиск дефектов ультразвуковым методом.</p>
                     </div>
                     <div class="feature-item">
                         <h3>🔧 Инженерные коммуникации</h3>
-                        <p>Обследование кабельных линий, трубопроводов и других коммуникаций.</p>
+                        <p>Тепловизионный контроль оборудования, обследование кабельных линий и трубопроводов.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-<!-- Состав поезда -->
-<section id="composition" class="section-card">
-    <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
-        <span class="card-icon">🚆</span>
-        <h2>Состав поезда</h2>
-    </div>
-    <div class="card-content">
-        <div class="highlight-box" style="margin-bottom: 1.5rem;">
-            <p style="font-size: 1.6rem; text-align: center; font-weight: bold;">0291 — 1058 — 1100 — 1112 — 0296</p>
-        </div>
+        <section id="composition" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Состав поезда</h2>
+            </div>
+            <div class="card-content">
+                <div class="highlight-box" style="margin-bottom: 1.5rem;">
+                    <p style="font-size: 1.6rem; text-align: center; font-weight: bold;">0291 — 1058 — 1100 — 1112 — 0296</p>
+                </div>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>№ вагона</th>
-                    <th>Модель</th>
-                    <th>Построен</th>
-                    <th>Депо</th>
-                    <th>Примечание</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>0291</strong></td>
-                    <td>81-717.5 (MM3/MBM)</td>
-                    <td>07.1992</td>
-                    <td>ТЧ-4 «Красная Пресня»</td>
-                    <td>Диагностический комплекс «Синергия-2»</td>
-                </tr>
-                <tr>
-                    <td><strong>1058</strong></td>
-                    <td>81-714.5M (MBM)</td>
-                    <td>10.1994</td>
-                    <td>ТЧ-4 «Красная Пресня»</td>
-                    <td>Диагностический комплекс «Синергия-2»; с пассажирами не работал</td>
-                </tr>
-                <tr>
-                    <td><strong>1100</strong></td>
-                    <td>81-714.5M (MBM)</td>
-                    <td>05.1995</td>
-                    <td>ТЧ-4 «Красная Пресня»</td>
-                    <td>Вагон сопровождения диагностического комплекса «Синергия-2»</td>
-                </tr>
-                <tr>
-                    <td><strong>1112</strong></td>
-                    <td>81-714.5M (MBM)</td>
-                    <td>05.1995</td>
-                    <td>ТЧ-4 «Красная Пресня»</td>
-                    <td>Вагон сопровождения диагностического комплекса «Синергия-2»</td>
-                </tr>
-                <tr>
-                    <td><strong>0296</strong></td>
-                    <td>81-717.5 (MM3/MBM)</td>
-                    <td>08.1992</td>
-                    <td>ТЧ-4 «Красная Пресня»</td>
-                    <td>Вагон сопровождения диагностического комплекса «Синергия-2»; с пассажирами не работал</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</section>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>№ вагона</th>
+                            <th>Модель</th>
+                            <th>Построен</th>
+                            <th>Депо</th>
+                            <th>Примечание</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>0291</strong></td>
+                            <td>81-717.5 (ММЗ/МВМ)</td>
+                            <td>07.1992</td>
+                            <td>ТЧ-4 «Красная Пресня»</td>
+                            <td>Диагностический комплекс «Синергия-2»</td>
+                        </tr>
+                        <tr>
+                            <td><strong>1058</strong></td>
+                            <td>81-714.5М (МВМ)</td>
+                            <td>10.1994</td>
+                            <td>ТЧ-4 «Красная Пресня»</td>
+                            <td>Диагностический комплекс «Синергия-2»; с пассажирами не работал</td>
+                        </tr>
+                        <tr>
+                            <td><strong>1100</strong></td>
+                            <td>81-714.5М (МВМ)</td>
+                            <td>05.1995</td>
+                            <td>ТЧ-4 «Красная Пресня»</td>
+                            <td>Вагон сопровождения диагностического комплекса «Синергия-2»</td>
+                        </tr>
+                        <tr>
+                            <td><strong>1112</strong></td>
+                            <td>81-714.5М (МВМ)</td>
+                            <td>05.1995</td>
+                            <td>ТЧ-4 «Красная Пресня»</td>
+                            <td>Вагон сопровождения диагностического комплекса «Синергия-2»</td>
+                        </tr>
+                        <tr>
+                            <td><strong>0296</strong></td>
+                            <td>81-717.5 (ММЗ/МВМ)</td>
+                            <td>08.1992</td>
+                            <td>ТЧ-4 «Красная Пресня»</td>
+                            <td>Вагон сопровождения диагностического комплекса «Синергия-2»; с пассажирами не работал</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
         <section id="gallery" class="section-card">
             <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
@@ -150,19 +171,68 @@
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/ДК-2сопр.jpg" alt="Диагностический комплекс Синергия-2 (ДК-2)" onerror="this.src='https://via.placeholder.com/800x500?text=Синергия-2'">
-                        <div class="gallery-caption">Диагностический комплекс «Синергия-2» (ДК-2)</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                <div class="photo-gallery">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/ДК-2сопр.jpg" alt="Салон вагона сопровождения «Синергия-2»" onclick="openGalleryModal(this.src, 'Салон вагона сопровождения комплекс «Синергия-2» (ДК-2)')" onerror="this.src='https://via.placeholder.com/600x400?text=Синергия-2'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Салон вагона сопровождения</a>
+                            <p class="photo-desc">Внутреннее убранство вагона.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/дк2.jpg" alt="ДК2 состав" onerror="this.src='https://via.placeholder.com/800x500?text=ДК-2'">
-                        <div class="gallery-caption">Вагоны диагностического комплекса «Синергия-2»</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/дк2.jpg" alt="Вагоны диагностического комплекса «Синергия-2»" onclick="openGalleryModal(this.src, 'Вагоны диагностического комплекса «Синергия-2»')" onerror="this.src='https://via.placeholder.com/600x400?text=ДК-2'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагоны комплекса</a>
+                            <p class="photo-desc">Общий вид состава.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 3 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="https://www.mos.ru/upload/newsfeed/newsfeed/026(1867).jpg" alt="Часть салона 0291" onclick="openGalleryModal(this.src, 'Часть салона вагона 0291')" onerror="this.src='https://via.placeholder.com/600x400?text=Салон+0291'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Салон вагона 0291</a>
+                            <p class="photo-desc">Вид в салон через одну из дверей</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://www.mos.ru/news/item/108698073/">М. Денисов</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 4 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="https://www.mos.ru/upload/newsfeed/newsfeed/gl(234339).jpg" alt="Синергия-2 на территории депо ТЧ-4" onclick="openGalleryModal(this.src, 'Синергия-2 на территории депо ТЧ-4')" onerror="this.src='https://via.placeholder.com/600x400?text=Депо+ТЧ-4'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Синергия-2 в ТЧ-4</a>
+                            <p class="photo-desc">На территории депо.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://www.mos.ru/news/item/108698073/">М. Денисов</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
@@ -185,7 +255,7 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
                         <li><a href="Служебные_поезда_метро.html">Служебные поезда</a></li>
                         <li><a href="ДК1_метро.html">Синергия-1</a></li>
                         <li><a href="Еж3-путеизмеритель.html">Еж3-путеизмеритель</a></li>
@@ -193,8 +263,7 @@
                 </div>
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
-                    <p>📧 info@tepp.ru</p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -206,19 +275,19 @@
 
     <div class="scroll-top">↑</div>
 
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             function animateCounters() {
-                const targets = { yearCount: 2015, carsCount: 5, speedCount: 60 };
+                const targets = { yearCount: 2015, carsCount: 5, speedCount: 50 };
                 let current = { yearCount: 0, carsCount: 0, speedCount: 0 };
                 const yearEl = document.getElementById('yearCount');
                 const carsEl = document.getElementById('carsCount');
@@ -249,21 +318,17 @@
             }
             animateCounters();
 
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+            window.openGalleryModal = function(src, caption) {
+                const modal = document.getElementById('galleryModal');
+                const content = document.getElementById('galleryModalContent');
+                if (modal && content) {
+                    content.innerHTML = `
+                        <img src="${src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${caption}">
+                        <p style="text-align:center; margin-top:1rem; font-size:1.1rem;">${caption}</p>
+                    `;
+                    modal.classList.add('active');
+                }
+            };
         });
     </script>
 </body>

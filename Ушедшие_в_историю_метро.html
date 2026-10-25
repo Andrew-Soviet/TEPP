@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ушедшие в историю - Потерянные вагоны Московского метро</title>
+    <title>Ушедшие в историю — Потерянные вагоны Московского метро — ТЭПП</title>
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -17,13 +17,33 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
     <header>
         <div class="header-container">
             <h1>Ушедшие в историю</h1>
             <p class="subtitle">Потерянные уникальные и исторические вагоны Московского метро</p>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
                     <li><a href="Главная_метро.html">🚇 Метро</a></li>
                     <li><a href="Главная_Страница_Мосметро.html">📍 Мосметро</a></li>
                     <li><a href="#about">О рубрике</a></li>
@@ -67,18 +87,74 @@
                 <p class="card-description">Список уникальных и исторических вагонов, которые больше нельзя встретить на линиях Московского метро:</p>
                 
                 <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    
+                    <!-- Опытный поезд И -->
+                    <div class="train-card">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem;">🚆</span>
+                            <h3 style="margin: 0;">Опытный поезд «И»</h3>
+                        </div>
+                        <p>Опытный поезд серии «И» (81-715/716) — поезд будущего из 1973 года, опередивший своё время.</p>
+                        <a href="Опытный_поезд_И.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <!-- Опытный 81-717 -->
+                    <div class="train-card">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem;">🚇</span>
+                            <h3 style="margin: 0;">Опытный 81-717</h3>
+                        </div>
+                        <p>Первый опытный состав семейства 81-717, открывший эпоху самых массовых вагонов.</p>
+                        <a href="Опытный_81-717.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <!-- Опытный 81-717.6К -->
+                    <div class="train-card">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem;">🔧</span>
+                            <h3 style="margin: 0;">81-717.6К</h3>
+                        </div>
+                        <p>Уникальная модернизация легендарного вагона с богатой историей.</p>
+                        <a href="Опытный_поезд_81-717.6К.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <!-- Опытная Ешка -->
+                    <div class="train-card">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem;">🚆</span>
+                            <h3 style="margin: 0;">Опытная Ешка</h3>
+                        </div>
+                        <p>Первый опытный поезд серии Е (3001-3007) 1959 года.</p>
+                        <a href="Опытная_Ешка.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <!-- Вагон 0665 -->
+                    <div class="train-card">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem;">🔷</span>
+                            <h3 style="margin: 0;">81-714.5 №0665</h3>
+                        </div>
+                        <p>Уникальный вагон с историей, который больше не встретить на просторах метро.</p>
+                        <a href="Type_81-714.5_0665.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <!-- НГ Фили Е 2004 -->
+                    <div class="train-card">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem;">🎄</span>
+                            <h3 style="margin: 0;">НГ Ежик 2004</h3>
+                        </div>
+                        <p>Первый новогодний поезд Московского метрополитена на базе модели «Е».</p>
+                        <a href="нг_Фили_е_2004.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
+                    </div>
+
                     <!-- Грузовые вагоны -->
                     <div class="train-card">
                         <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
                             <span style="font-size: 2rem;">📦</span>
                             <h3 style="margin: 0;">Грузовые вагоны</h3>
                         </div>
-                        <p>Специализированные вагоны для перевозки грузов в метрополитене. Уникальные экземпляры, которые выполняли важные хозяйственные функции.</p>
-                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
-                            <li>Использовались для перевозки материалов</li>
-                            <li>Служебные и хозяйственные нужды</li>
-                            <li>Утилизированы в 2010-х</li>
-                        </ul>
+                        <p>Специализированные вагоны для перевозки грузов в метрополитене.</p>
                         <a href="Грузовые_вагоны.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
                     </div>
                     
@@ -88,12 +164,7 @@
                             <span style="font-size: 2rem;">⚔️</span>
                             <h3 style="margin: 0;">Курская дуга</h3>
                         </div>
-                        <p>Именной состав, посвящённый героям Курской битвы. Особое оформление и историческая ценность.</p>
-                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
-                            <li>Тематическое оформление</li>
-                            <li>Памятные таблички</li>
-                            <li>Утрачен после списания</li>
-                        </ul>
+                        <p>Именной состав, посвящённый героям Курской битвы.</p>
                         <a href="Курская_дуга_метро.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
                     </div>
                     
@@ -103,12 +174,7 @@
                             <span style="font-size: 2rem;">🎖️</span>
                             <h3 style="margin: 0;">Народный ополченец</h3>
                         </div>
-                        <p>Именной состав, посвящённый московским ополченцам, защищавшим столицу в годы Великой Отечественной войны.</p>
-                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
-                            <li>Историческая ценность</li>
-                            <li>Памятное оформление</li>
-                            <li>Снят с эксплуатации</li>
-                        </ul>
+                        <p>Именной состав, посвящённый московским ополченцам.</p>
                         <a href="Народный_ополченец.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
                     </div>
                     
@@ -118,12 +184,7 @@
                             <span style="font-size: 2rem;">🔧</span>
                             <h3 style="margin: 0;">81-720А</h3>
                         </div>
-                        <p>Экспериментальная модификация вагонов 81-720/721. Уникальный опытный состав, не пошедший в серию.</p>
-                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
-                            <li>Опытный образец</li>
-                            <li>Уникальное оборудование</li>
-                            <li>Утилизирован</li>
-                        </ul>
+                        <p>Экспериментальная модификация вагонов 81-720/721.</p>
                         <a href="81-720А.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
                     </div>
                     
@@ -133,12 +194,7 @@
                             <span style="font-size: 2rem;">🔷</span>
                             <h3 style="margin: 0;">81-717 №9818</h3>
                         </div>
-                        <p>Уникальный вагон 81-717 с номером 9818, имевший особенности в конструкции и оформлении.</p>
-                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
-                            <li>Редкий экземпляр</li>
-                            <li>Особенности в экстерьере</li>
-                            <li>Утрачен</li>
-                        </ul>
+                        <p>Уникальный вагон 81-717 с номером 9818.</p>
                         <a href="9818.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
                     </div>
                     
@@ -148,12 +204,7 @@
                             <span style="font-size: 2rem;">🚆</span>
                             <h3 style="margin: 0;">81-717 0001-0002</h3>
                         </div>
-                        <p>Первый серийный состав семейства 81-717. Начало эпохи самых массовых вагонов метро в мире.</p>
-                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
-                            <li>Первый серийный</li>
-                            <li>Историческая ценность</li>
-                            <li>Утилизирован</li>
-                        </ul>
+                        <p>Первый серийный состав семейства 81-717.</p>
                         <a href="Первый_номер.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
                     </div>
                     
@@ -164,11 +215,6 @@
                             <h3 style="margin: 0;">81-717 №0067</h3>
                         </div>
                         <p>Редкий экземпляр вагона 81-717 с уникальными конструктивными особенностями.</p>
-                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
-                            <li>Ранняя модификация</li>
-                            <li>Уникальные детали</li>
-                            <li>Утрачен</li>
-                        </ul>
                         <a href="81-717(ММЗ)№0067.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
                     </div>
                     
@@ -178,12 +224,7 @@
                             <span style="font-size: 2rem;">🤖</span>
                             <h3 style="margin: 0;">75488 - Беспилотная М26</h3>
                         </div>
-                        <p>Экспериментальный беспилотный поезд на Кольцевой линии (М26). Уникальный проект автоматического управления.</p>
-                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
-                            <li>Беспилотное управление</li>
-                            <li>Испытания на Кольцевой</li>
-                            <li>Экспериментальный проект</li>
-                        </ul>
+                        <p>Экспериментальный беспилотный поезд на Кольцевой линии (М26).</p>
                         <a href="75488.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
                     </div>
 
@@ -193,70 +234,10 @@
                             <span style="font-size: 2rem;">🔷</span>
                             <h3 style="margin: 0;">81-717 №2550</h3>
                         </div>
-                        <p>Отличался от обычных необычной внешностью — окантовкой маски в цвет кузова и совпадению рисунка на двери в кабину с дверью в салон.</p>
-                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
-                            <li>Построен в 1996 году</li>
-                            <li>Единственная особенность сейчас — жёлтое освещение</li>
-                        </ul>
+                        <p>Отличался от обычных необычной внешностью — окантовкой маски в цвет кузова.</p>
                         <a href="2550.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
                     </div>
 
-                </div>
-                
-                <div class="highlight-box" style="margin-top: 2rem;">
-                    <p><strong>Всего ушедших вагонов в списке:</strong> 8 уникальных экземпляров. Каждый из них оставил свой след в истории Московского метрополитена.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Краткий список -->
-        <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
-                <span class="card-icon">📋</span>
-                <h2>Быстрый переход</h2>
-            </div>
-            <div class="card-content">
-                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
-                    <div class="feature-item">
-                        <a href="Грузовые_вагоны.html" style="text-decoration: none;">
-                            <h3>📦 Грузовые вагоны</h3>
-                        </a>
-                    </div>
-                    <div class="feature-item">
-                        <a href="Курская_дуга_метро.html" style="text-decoration: none;">
-                            <h3>⚔️ Курская дуга</h3>
-                        </a>
-                    </div>
-                    <div class="feature-item">
-                        <a href="Народный_ополченец.html" style="text-decoration: none;">
-                            <h3>🎖️ Народный ополченец</h3>
-                        </a>
-                    </div>
-                    <div class="feature-item">
-                        <a href="81-720А.html" style="text-decoration: none;">
-                            <h3>🔧 81-720А</h3>
-                        </a>
-                    </div>
-                    <div class="feature-item">
-                        <a href="9818.html" style="text-decoration: none;">
-                            <h3>🔷 81-717 №9818</h3>
-                        </a>
-                    </div>
-                    <div class="feature-item">
-                        <a href="Первый_номер.html" style="text-decoration: none;">
-                            <h3>🚆 81-717 0001-0002</h3>
-                        </a>
-                    </div>
-                    <div class="feature-item">
-                        <a href="81-717(ММЗ)№0067.html" style="text-decoration: none;">
-                            <h3>🔷 81-717 №0067</h3>
-                        </a>
-                    </div>
-                    <div class="feature-item">
-                        <a href="75488.html" style="text-decoration: none;">
-                            <h3>🤖 75488 (М26)</h3>
-                        </a>
-                    </div>
                 </div>
             </div>
         </section>
@@ -264,7 +245,7 @@
         <!-- Цитата -->
         <section class="quote-section">
             <div class="quote-container">
-                <p class="quote-text">"Каждый ушедший вагон — это потерянная страница истории. Мы не можем их вернуть, но можем помнить и рассказывать о них будущим поколениям."</p>
+                <p class="quote-text">«Каждый ушедший вагон — это потерянная страница истории. Мы не можем их вернуть, но можем помнить и рассказывать о них будущим поколениям».</p>
                 <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
             </div>
         </section>
@@ -276,13 +257,13 @@
                 <div class="footer-info">
                     <h4>ТЭПП</h4>
                     <p>Транспортная Энциклопедия Постсоветского Пространства</p>
-                    <p class="footer-motto">Раздел "Ушедшие в историю"</p>
+                    <p class="footer-motto">Раздел «Ушедшие в историю»</p>
                 </div>
                 
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
                         <li><a href="Главная_метро.html">Метрополитены</a></li>
                         <li><a href="Главная_Страница_Мосметро.html">Московское метро</a></li>
                         <li><a href="Живая_история_Мск_метро.html">Живая история</a></li>
@@ -291,8 +272,7 @@
                 
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
-                    <p>📧 info@tepp.ru</p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
             
@@ -307,18 +287,19 @@
     <div class="scroll-top">↑</div>
 
     <!-- Подключаем библиотеку частиц -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
     <!-- Подключаем общий JS файл -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     
     <!-- Дополнительный скрипт для счетчиков -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Анимация счетчиков
             function animateLostCounters() {
+                // Обновлённые счётчики (16 карточек)
                 const targets = {
-                    lostTotal: 8,
-                    lostTypes: 8,
+                    lostTotal: 16,
+                    lostTypes: 16,
                     lostYears: 30
                 };
                 

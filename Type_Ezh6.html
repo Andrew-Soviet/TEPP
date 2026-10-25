@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Вагоны типа Еж6 (81-712) — спецвагоны для системы Д6 — ТЭПП</title>
+    <meta name="description" content="История, характеристики и судьба специальных вагонов Еж6 (81-712) для системы Д6.">
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -14,13 +15,36 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <!-- ================= ШАПКА ================= -->
     <header>
         <div class="header-container">
-            <h1>Вагоны типа Еж6 (81-712)</h1>
-            <p class="subtitle">Спецвагоны для системы Д6 (1973, 1986)</p>
+            <div class="logo">
+                <h1>Вагоны типа Еж6 (81-712)</h1>
+                <p class="subtitle">Спецвагоны для системы Д6 (1973, 1986)</p>
+            </div>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
                     <li><a href="Главная_метро.html">🚇 Метро</a></li>
                     <li><a href="ps_mosmetro.html">🚆 Подвижной состав</a></li>
                     <li><a href="#about">О вагоне</a></li>
@@ -62,7 +86,7 @@
 
         <!-- Назначение -->
         <section id="purpose" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #4A148C 0%, #6A1B9A 100%);">
+            <div class="card-header">
                 <span class="card-icon">🛤️</span>
                 <h2>Назначение</h2>
             </div>
@@ -78,7 +102,7 @@
 
         <!-- Производство -->
         <section id="production" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);">
+            <div class="card-header">
                 <span class="card-icon">🏭</span>
                 <h2>Производство</h2>
             </div>
@@ -118,33 +142,35 @@
 
         <!-- Технические характеристики -->
         <section id="specs" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+            <div class="card-header">
                 <span class="card-icon">⚙️</span>
                 <h2>Технические характеристики</h2>
             </div>
             <div class="card-content">
-                <table>
-                    <caption>Основные технические данные вагонов Еж6</caption>
-                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
-                    <tbody>
-                        <tr><td>Род тока и напряжение</td><td>750 В постоянного тока</td></tr>
-                        <tr><td>Типы вагонов</td><td>Головной (Мг)</td></tr>
-                        <tr><td>Число вагонов в составе</td><td>Еж6 + 1..2×Л + Еж6</td></tr>
-                        <tr><td>Полная вместимость</td><td>служебная</td></tr>
-                        <tr><td>Длина вагона</td><td>19 210 мм</td></tr>
-                        <tr><td>Ширина</td><td>2 700 мм</td></tr>
-                        <tr><td>Высота</td><td>3 695 мм</td></tr>
-                        <tr><td>Диаметр колёс</td><td>780 мм</td></tr>
-                        <tr><td>Ширина колеи</td><td>1 520 мм</td></tr>
-                        <tr><td>Масса тары</td><td>31,7 т</td></tr>
-                        <tr><td>Материал вагона</td><td>Сталь</td></tr>
-                        <tr><td>Тип ТЭД</td><td>ДК-116А, коллекторные</td></tr>
-                        <tr><td>Мощность ТЭД</td><td>4 × 72 кВт</td></tr>
-                        <tr><td>Макс. скорость</td><td>90 км/ч (по контактному рельсу); 15 км/ч на аккумуляторном ходу</td></tr>
-                        <tr><td>Системы безопасности</td><td>АЛС-АРС</td></tr>
-                        <tr><td>Тормозная система</td><td>Электрическая, пневматическая</td></tr>
-                    </tbody>
-                </table>
+                <div style="overflow-x: auto;">
+                    <table>
+                        <caption>Основные технические данные вагонов Еж6</caption>
+                        <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                        <tbody>
+                            <tr><td>Род тока и напряжение</td><td>750 В постоянного тока</td></tr>
+                            <tr><td>Типы вагонов</td><td>Головной (Мг)</td></tr>
+                            <tr><td>Число вагонов в составе</td><td>Еж6 + 1..2×Л + Еж6</td></tr>
+                            <tr><td>Полная вместимость</td><td>служебная</td></tr>
+                            <tr><td>Длина вагона</td><td>19 210 мм</td></tr>
+                            <tr><td>Ширина</td><td>2 700 мм</td></tr>
+                            <tr><td>Высота</td><td>3 695 мм</td></tr>
+                            <tr><td>Диаметр колёс</td><td>780 мм</td></tr>
+                            <tr><td>Ширина колеи</td><td>1 520 мм</td></tr>
+                            <tr><td>Масса тары</td><td>31,7 т</td></tr>
+                            <tr><td>Материал вагона</td><td>Сталь</td></tr>
+                            <tr><td>Тип ТЭД</td><td>ДК-116А, коллекторные</td></tr>
+                            <tr><td>Мощность ТЭД</td><td>4 × 72 кВт</td></tr>
+                            <tr><td>Макс. скорость</td><td>90 км/ч (по контактному рельсу); 15 км/ч на аккумуляторном ходу</td></tr>
+                            <tr><td>Системы безопасности</td><td>АЛС-АРС</td></tr>
+                            <tr><td>Тормозная система</td><td>Электрическая, пневматическая</td></tr>
+                        </tbody>
+                    </table>
+                </div>
 
                 <h3 style="margin: 1.5rem 0 1rem;">Ключевые особенности</h3>
                 <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
@@ -170,7 +196,7 @@
 
         <!-- Конструкция -->
         <section id="design" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+            <div class="card-header">
                 <span class="card-icon">🔧</span>
                 <h2>Конструкция</h2>
             </div>
@@ -194,7 +220,7 @@
 
         <!-- Ремонт и обслуживание -->
         <section id="service" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #B9770E 0%, #D68910 100%);">
+            <div class="card-header">
                 <span class="card-icon">🛠️</span>
                 <h2>Ремонт и обслуживание</h2>
             </div>
@@ -214,7 +240,7 @@
 
         <!-- Судьба вагонов -->
         <section id="fate" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+            <div class="card-header">
                 <span class="card-icon">📜</span>
                 <h2>Судьба вагонов</h2>
             </div>
@@ -230,7 +256,7 @@
 
         <!-- Список подвижного состава -->
         <section id="fleet" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+            <div class="card-header">
                 <span class="card-icon">📋</span>
                 <h2>Список подвижного состава</h2>
             </div>
@@ -254,7 +280,7 @@
                         <tr><td>5584</td><td>12.1973</td><td>ТЧ-6 «Планерное»</td><td>Утилизирован 10.2020</td></tr>
                         <tr><td>5590</td><td>12.1973</td><td>в/ч 95006</td><td>Утилизирован 07.2010</td></tr>
                         <tr><td>0090</td><td>1986</td><td>в/ч 95006</td><td>Эксплуатируется</td></tr>
-                        <tr><td>0091</td><td>1986</td><td>в/ч 95006</td><td>Эксплуатируетсян</td></tr>
+                        <tr><td>0091</td><td>1986</td><td>в/ч 95006</td><td>Эксплуатируется</td></tr>
                         <tr><td>0092</td><td>1986</td><td>в/ч 95006</td><td>Списан 2009 г.</td></tr>
                         <tr><td>0093</td><td>1986</td><td>в/ч 95006</td><td>Списан 2009 г.</td></tr>
                     </tbody>
@@ -262,43 +288,92 @@
             </div>
         </section>
 
-<!-- Галерея -->
-<section id="gallery" class="section-card">
-    <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
-        <span class="card-icon">📸</span>
-        <h2>Фотогалерея</h2>
-    </div>
-    <div class="card-content">
-        <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-            <div class="gallery-item">
-                <img src="img/Type_Ezh6_and_L.jpg" alt="Вагон типа Еж6 № 0090" onerror="this.src='https://via.placeholder.com/800x500?text=Еж6+0090'">
-                <div class="gallery-caption">Вагоны типа Еж6 и Л.</div>
-                <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Автор фото неизвестен.</p>
+        <!-- Галерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
             </div>
-            <div class="gallery-item">
-                <img src="img/Type_Ezh6_5582_int_newnew.jpg" alt="Вагон типа Еж6 № 5580" onerror="this.src='https://via.placeholder.com/800x500?text=Еж6+5580'">
-                <div class="gallery-caption">Вагон типа Еж6 № 5582, cалон вагона после стандартной модернизации</div>
-                <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Andrey Atom</p>
+            <div class="card-content">
+                <div class="photo-gallery">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Type_Ezh6_and_L.jpg" alt="Вагон типа Еж6 № 0090" onclick="openGalleryModal(this.src, 'Вагоны типа Еж6 и Л')" onerror="this.src='https://via.placeholder.com/600x400?text=Еж6+0090'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагоны типа Еж6 и Л</a>
+                            <p class="photo-desc">Спецсостав в депо ТЧ-6</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 1990-е гг.</span>
+                                <span class="photo-author">📸 <a href="https://transphoto.org/photo/1637039/"> Автор фото неизвестен</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Type_Ezh6_5582_int_newnew.jpg" alt="Вагон типа Еж6 № 5582" onclick="openGalleryModal(this.src, 'Вагон типа Еж6 № 5582, cалон вагона после стандартной модернизации')" onerror="this.src='https://via.placeholder.com/600x400?text=Еж6+5582'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон № 5582</a>
+                            <p class="photo-desc">Салон после стандартной модернизации.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 Июль 2010 г.</span>
+                                <span class="photo-author">📸 <a href="https://transphoto.org/photo/1737961/"> Andrey Atom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 3 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Type_Ezh6_cab.jpg" alt="Пульт управления Еж6" onclick="openGalleryModal(this.src, 'Пульт управления Еж6')" onerror="this.src='https://via.placeholder.com/600x400?text=Кабина+Еж6'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Пульт управления</a>
+                            <p class="photo-desc">В кабине машиниста.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2000-е</span>
+                                <span class="photo-author">📸 deman_34_74_3</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 4 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Type_Ezh6_int.jpg" alt="Салон вагона Еж6" onclick="openGalleryModal(this.src, 'Салон вагона Еж6')" onerror="this.src='https://via.placeholder.com/600x400?text=Салон+Еж6'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Салон вагона</a>
+                            <p class="photo-desc">Внутреннее убранство.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2000-е</span>
+                                <span class="photo-author">📸 Автор фото неизвестен</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 5 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Type_Ezh6_tablichka.jpg" alt="Табличка внутри вагона Еж6 №0090" onclick="openGalleryModal(this.src, 'Табличка внутри вагона Еж6 №0090 в салоне над дверью в кабину')" onerror="this.src='https://via.placeholder.com/600x400?text=Табличка+Еж6'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Табличка</a>
+                            <p class="photo-desc">Внутри вагона Еж6 №0090, над дверью в кабину.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2000-е</span>
+                                <span class="photo-author">📸<a href="https://vagon.metro.ru/photos/ezh6-02b.jpg"> Фото из архива Юрия Зайцева</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
-            <div class="gallery-item">
-                <img src="img/Type_Ezh6_cab.jpg" alt="Пульт управления Еж6" onerror="this.src='https://via.placeholder.com/800x500?text=Кабина+Еж6'">
-                <div class="gallery-caption">Пульт управления Еж6</div>
-                <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 deman_34_74_3</p>
-            </div>
-            <div class="gallery-item">
-                <img src="img/Type_Ezh6_int.jpg" alt="Салон вагона Еж6" onerror="this.src='https://via.placeholder.com/800x500?text=Кабина+Еж6'">
-                <div class="gallery-caption">Салон вагона Еж6</div>
-                <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Автор фото не известен</p>
-            </div>
-            <div class="gallery-item">
-                <img src="img/Type_Ezh6_tablichka.jpg" alt="Кабина вагона Еж6" onerror="this.src='https://via.placeholder.com/800x500?text=Кабина+Еж6'">
-                <div class="gallery-caption">Табличка внутри вагона Еж6 №0090 в салоне над дверью в кабину.</div>
-                <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Фото из архива Юрия Зайцева.</p>
-            </div>
-        </div>
-        <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
-    </div>
-</section>
+        </section>
 
         <!-- Цитата -->
         <section class="quote-section">
@@ -320,7 +395,7 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
                         <li><a href="ps_mosmetro.html">Подвижной состав</a></li>
                         <li><a href="Главная_метро.html">Метрополитены</a></li>
                         <li><a href="Живая_история_Мск_метро.html">Живая история</a></li>
@@ -328,8 +403,7 @@
                 </div>
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
-                    <p>📧 info@tepp.ru</p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -341,8 +415,15 @@
 
     <div class="scroll-top">↑</div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Счётчики
@@ -353,6 +434,7 @@
                 const yearsEl = document.getElementById('ezh6Years');
                 const partiesEl = document.getElementById('ezh6Parties');
                 if (!builtEl || !yearsEl || !partiesEl) return;
+                
                 const interval = setInterval(function() {
                     let allFinished = true;
                     if (current.ezh6Built < targets.ezh6Built) {

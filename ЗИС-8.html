@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ЗИС-8 — первый советский автобусный проект</title>
+    <title>ЗИС-8 (1936) — Музейный экспонат — ТЭПП</title>
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -14,17 +14,36 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
     <header>
         <div class="header-container">
-            <h1>ЗИС-8</h1>
-            <p class="subtitle">Первый самостоятельный автобусный проект СССР</p>
+            <h1>ЗИС-8 (1936)</h1>
+            <p class="subtitle">Самый массовый довоенный автобус Москвы</p>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
-                    <li><a href="Железная_дорога.html">🚂 Железные дороги</a></li>
-                    <li><a href="Локомотивы.html">🔧 Локомотивы</a></li>
-                    <li><a href="Электровозы.html">⚡ Электровозы</a></li>
-                    <li><a href="#about">Об автобусе</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
+                    <li><a href="city_transport.html">🚌 Наземный транспорт</a></li>
+                    <li><a href="Автобусы.html">🚐 Автобусы</a></li>
+                    <li><a href="#about">О экспонате</a></li>
                     <li><a href="#history">История</a></li>
                     <li><a href="#gallery">Фото</a></li>
                 </ul>
@@ -36,12 +55,13 @@
         <section id="about" class="hero">
             <div class="hero-content">
                 <h2>ЗИС-8</h2>
-                <p class="hero-text">ЗИС-8 — советский городской автобус, выпускавшийся на Московском автомобильном заводе имени И.В. Сталина с 1934 по 1936 год. Первый самостоятельный автобусный проект страны, вытеснивший с московских улиц устаревшие «Лейланды» и Я-6.</p>
-                <p class="hero-text">Стал результатом эволюции автобуса АМО-4 (до 1931 года завод именовался АМО), отличаясь более совершенным и одновременно более простым шасси. Внешне АМО-4 и ЗИС-8 были практически близнецами.</p>
+                <p class="hero-text">Перед вами музейный экспонат — городской автобус <strong>ЗИС-8</strong>, выпущенный в 1936 году на 1-м Государственном автомобильном заводе имени Сталина. Это был <strong>самый массовый довоенный автобус Москвы</strong>.</p>
+                <p class="hero-text">В его основе лежит шасси среднетоннажного грузовика ЗИС-5, конструкцию которого удлинили и поставили на неё деревянный кузов. С 1933 по 1936 год на ЗИСе выпускали автобусы целиком, а затем (до 1941 года) — только шасси, которые отправляли на другие заводы для установки кузовов.</p>
+                
                 <div class="stats-container">
                     <div class="stat-item">
                         <div class="counter-number" id="buildYear">0</div>
-                        <div class="stat-label">год начала выпуска</div>
+                        <div class="stat-label">год выпуска экспоната</div>
                     </div>
                     <div class="stat-item">
                         <div class="counter-number" id="capacity">0</div>
@@ -49,7 +69,7 @@
                     </div>
                     <div class="stat-item">
                         <div class="counter-number" id="yearsMade">0</div>
-                        <div class="stat-label">лет выпуска</div>
+                        <div class="stat-label">лет выпуска шасси</div>
                     </div>
                 </div>
             </div>
@@ -64,21 +84,18 @@
                 <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
                     <div class="feature-item">
                         <h3>🏭 Производство</h3>
-                        <p><strong>Завод-изготовитель:</strong> ЗИС (Московский автомобильный завод им. Сталина)</p>
-                        <p><strong>Годы выпуска:</strong> 1934–1936</p>
-                        <p><strong>Предшественник:</strong> АМО-4</p>
-                        <p><strong>База:</strong> агрегаты грузовика ЗИС-5</p>
+                        <p><strong>Завод:</strong> 1-й Государственный автомобильный завод им. Сталина (ЗИС)</p>
+                        <p><strong>Год выпуска экспоната:</strong> 1936</p>
+                        <p><strong>База:</strong> шасси грузовика ЗИС-5</p>
+                        <p><strong>Период выпуска:</strong> 1933–1941 (сначала целиком, затем только шасси)</p>
                     </div>
                     <div class="feature-item">
-                        <h3>📍 Эксплуатация</h3>
-                        <p><strong>Основной регион:</strong> Москва и другие города СССР</p>
-                        <p><strong>Вытеснил:</strong> «Лейланд» и Я-6</p>
-                        <p><strong>Служба:</strong> до конца 1930-х и в годы войны</p>
-                        <p><strong>Списание:</strong> исчез с городских улиц в 1950-х</p>
+                        <h3>📍 Музейный статус</h3>
+                        <p><strong>Местонахождение:</strong> Музей Транспорта Москвы</p>
+                        <p><strong>Состояние:</strong> Не эксплуатируется (музейный экспонат)</p>
+                        <p><strong>Особенность:</strong> Окна в салоне опускаются, что было характерно только для машин, собранных на самом ЗИСе.</p>
+                        <p><strong>Назначение:</strong> Историческая экспозиция</p>
                     </div>
-                </div>
-                <div class="highlight-box" style="margin-top: 1.5rem;">
-                    <p>⭐ <strong>Первый самостоятельный:</strong> ЗИС-8 считается первым самостоятельным автобусным проектом страны. Он вывозил на своих плечах и шестицилиндровом моторе практически все пассажирские маршруты СССР. В 1938 году автобусы на шасси ЗИС-8 стали по сути единственным типом подвижного состава, окончательно вытеснив многократно отремонтированные «Лейланды» и Я-6.</p>
                 </div>
             </div>
         </section>
@@ -96,7 +113,6 @@
                         <p><strong>Компоновка:</strong> переднемоторная, заднеприводная</p>
                         <p><strong>Двигатель:</strong> ЗИС-5, бензиновый</p>
                         <p><strong>Цилиндры:</strong> 6, рядный</p>
-                        <p><strong>База:</strong> шасси грузовика ЗИС-5</p>
                     </div>
                     <div class="feature-item">
                         <h3>Конструкция</h3>
@@ -113,113 +129,96 @@
         <section id="history" class="section-card">
             <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
                 <span class="card-icon">📜</span>
-                <h2>История</h2>
+                <h2>История экспоната</h2>
             </div>
             <div class="card-content">
                 <div class="timeline" style="padding: 1rem 0;">
                     <div class="timeline-item">
-                        <div class="timeline-date">1931–1933</div>
+                        <div class="timeline-date">1933–1936</div>
                         <div class="timeline-content">
-                            <h3>От АМО к ЗИС</h3>
-                            <p>До 1931 года завод именовался АМО, а его автобус АМО-4 стал предшественником ЗИС-8. После переименования завода в ЗИС (в честь И.В. Сталина) потребовалась модернизация конструкции. ЗИС-8 отличался более совершенным, но при этом более простым шасси. Внешне АМО-4 и ЗИС-8 выглядели как близнецы.</p>
+                            <h3>Полное производство на ЗИСе</h3>
+                            <p>С 1933 по 1936 год на заводе ЗИС выпускали автобусы целиком, включая кузова. В основе лежало удлинённое шасси грузовика ЗИС-5.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-date">1934</div>
+                        <div class="timeline-date">1936</div>
                         <div class="timeline-content">
-                            <h3>Начало выпуска</h3>
-                            <p>С начала 1934 года ЗИС-8 пошёл в серию. Он стал первым самостоятельным автобусным проектом страны. Автобус был простым и неприхотливым: деревянный кузов на шасси грузовика ЗИС-5, шестицилиндровый бензиновый двигатель, отделённая от салона кабина водителя с кожаным креслом.</p>
+                            <h3>Выпуск экспоната</h3>
+                            <p>Именно этот экземпляр был собран на ЗИСе в 1936 году. На нём сохранилась уникальная деталь — окна в пассажирском салоне опускаются (в отличие от версий, собиравшихся на других заводах, например, на «Аремкузе»).</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-date">1934–1936</div>
+                        <div class="timeline-date">1936–1941</div>
                         <div class="timeline-content">
-                            <h3>Классический заводской вид</h3>
-                            <p>В своём классическом заводском виде ЗИС-8 выпускался менее трёх лет — с начала 1934 по середину 1936 года. За это время он стал основным типом московского автобуса, вытеснив устаревшие «Лейланды» и Я-6, которые к тому времени были многократно отремонтированы.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">1938</div>
-                        <div class="timeline-content">
-                            <h3>Единственный тип подвижного состава</h3>
-                            <p>К 1938 году автобусы на шасси ЗИС-8 стали по сути единственным типом подвижного состава, окончательно вытеснив иностранные и старые отечественные машины. Они прослужили верой и правдой до войны и продолжали работать в послевоенные годы.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">1950-е</div>
-                        <div class="timeline-content">
-                            <h3>Закат</h3>
-                            <p>К 1950-м годам ЗИС-8 окончательно исчезли с городских улиц. На смену им пришли более современные послевоенные модели — ЗИС-154, ЗИС-155 и их преемники.</p>
+                            <h3>Выпуск только шасси</h3>
+                            <p>После 1936 года на ЗИСе выпускали только шасси. Кузова изготавливали различные заводы по всей стране (включая московский «Аремкуз»), и каждый производитель делал свой вариант исполнения.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date">Наши дни</div>
                         <div class="timeline-content">
                             <h3>Музейный экспонат</h3>
-                            <p>ЗИС-8 представлен в коллекции Музея транспорта Москвы. Это один из первых московских автобусов, который можно увидеть в фондах музея. Экспонат приковывает внимание посетителей своим ретро-стилем: деревянный пол, неразделённые сиденья, отдельная кабина водителя.</p>
+                            <p>Автобус бережно сохранён и представлен в экспозиции Музея Транспорта Москвы. Внутри воссоздан исторический облик: деревянный пол, неразделённые сиденья, изолированная кабина водителя.</p>
                         </div>
                     </div>
                 </div>
-                <div class="highlight-box" style="margin-top: 1.5rem;">
-                    <p><strong>Интересный факт:</strong> В музейном экспонате ЗИС-8 водительское сидение полностью закрыто от общего салона. Внутри — кожаное кресло, руль, рычаг и педали. Дверь пассажирам можно открыть только с помощью ручки, которую нужно опустить вниз. Деревянный пол и неразделённые сиденья напоминают о простоте и неприхотливости первых советских автобусов.</p>
-                </div>
             </div>
         </section>
 
-        <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
-                <span class="card-icon">🎨</span>
-                <h2>Особенности конструкции</h2>
-            </div>
-            <div class="card-content">
-                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
-                    <div class="feature-item">
-                        <h3>Деревянный кузов</h3>
-                        <p>Кузов ЗИС-8 имел деревянный каркас с металлической обшивкой. Простая и технологичная конструкция позволяла быстро наладить массовое производство в условиях молодой советской автопромышленности.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>Отдельная кабина</h3>
-                        <p>Водительское место было полностью изолировано от пассажирского салона. В кабине — кожаное кресло, руль, рычаг переключения передач и педали. Такая компоновка была необычной для своего времени.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>Салон</h3>
-                        <p>Деревянный пол, неразделённые сиденья, простые двери с опускающейся ручкой. Вместимость — 29 мест. Салон был далёк от комфорта, но выполнял главную задачу — массовую перевозку пассажиров.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>Шасси от грузовика</h3>
-                        <p>ЗИС-8 использовал шасси грузовика ЗИС-5 с шестицилиндровым бензиновым двигателем. Унификация с грузовым автомобилем упрощала производство, ремонт и снабжение запчастями.</p>
-                    </div>
-                </div>
-                <div class="highlight-box" style="margin-top: 1rem;">
-                    <p>🎉 <strong>Символ эпохи:</strong> ЗИС-8 — свидетель становления советского автобусного сообщения. Несмотря на неказистый вид, он вывозил практически все пассажирские маршруты СССР и заложил основы для последующих моделей городских автобусов.</p>
-                </div>
-            </div>
-        </section>
-
+        <!-- ================= ФОТОГАЛЕРЕЯ ================= -->
         <section id="gallery" class="section-card">
             <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
                 <span class="card-icon">📸</span>
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/zis-8_mus.jpg" alt="Ikarus 55" onerror="this.src='https://via.placeholder.com/800x500?text=Ikarus+55'">
-                        <div class="gallery-caption">ЗИС-8 в музее</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+                <div class="photo-gallery">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/zis-8_mus.jpg" alt="ЗИС-8 в музее" onclick="openGalleryModal(this.src, 'ЗИС-8 1936 года в экспозиции Музея Транспорта Москвы')" onerror="this.src='https://via.placeholder.com/600x400?text=ЗИС-8'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">ЗИС-8 в музее</a>
+                            <p class="photo-desc">Общий вид экспоната.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/zis-8_tabl.jpg" alt="Ikarus 55" onerror="this.src='https://via.placeholder.com/800x500?text=Ikarus+55'">
-                        <div class="gallery-caption">Табличка об экспонате</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/zis-8_tabl.jpg" alt="Табличка об экспонате" onclick="openGalleryModal(this.src, 'Информационная табличка об экспонате ЗИС-8')" onerror="this.src='https://via.placeholder.com/600x400?text=Табличка'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Табличка об экспонате</a>
+                            <p class="photo-desc">Музейная информация.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/zis-8_int.jpg" alt="Ikarus 55" onerror="this.src='https://via.placeholder.com/800x500?text=Ikarus+55'">
-                        <div class="gallery-caption">Салон ЗИС-8</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+
+                    <!-- Фото 3 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/zis-8_int.jpg" alt="Салон ЗИС-8" onclick="openGalleryModal(this.src, 'Салон автобуса ЗИС-8')" onerror="this.src='https://via.placeholder.com/600x400?text=Салон'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Салон автобуса</a>
+                            <p class="photo-desc">Деревянный пол и сиденья.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
@@ -242,39 +241,39 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
-                        <li><a href="Локомотивы.html">Локомотивы</a></li>
-                        <li><a href="Электровозы.html">Электровозы</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
+                        <li><a href="city_transport.html">Городской транспорт</a></li>
+                        <li><a href="Автобусы.html">Автобусы</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
                     <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
-                    <p>📧 info@tepp.ru</p>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
-                <p class="footer-note">ЗИС-8 — «Первый самостоятельный»</p>
+                <p class="footer-note">ЗИС-8 (1936) — Музейный экспонат</p>
             </div>
         </div>
     </footer>
 
     <div class="scroll-top">↑</div>
 
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             function animateCounters() {
-                const targets = { buildYear: 1934, capacity: 29, yearsMade: 3 };
+                // 1936 - год экспоната. 8 лет - 1933-1941 (выпуск).
+                const targets = { buildYear: 1936, capacity: 29, yearsMade: 8 };
                 let current = { buildYear: 0, capacity: 0, yearsMade: 0 };
                 const yearEl = document.getElementById('buildYear');
                 const capEl = document.getElementById('capacity');
@@ -305,21 +304,17 @@
             }
             animateCounters();
 
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+            window.openGalleryModal = function(src, caption) {
+                const modal = document.getElementById('galleryModal');
+                const content = document.getElementById('galleryModalContent');
+                if (modal && content) {
+                    content.innerHTML = `
+                        <img src="${src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${caption}">
+                        <p style="text-align:center; margin-top:1rem; font-size:1.1rem;">${caption}</p>
+                    `;
+                    modal.classList.add('active');
+                }
+            };
         });
     </script>
 </body>

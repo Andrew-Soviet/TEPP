@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Еж3-путеизмеритель — служебный поезд Московского метрополитена</title>
+    <title>Еж3-путеизмеритель — служебный поезд Московского метрополитена — ТЭПП</title>
+    <meta name="description" content="История, составность и особенности служебного поезда Еж3-путеизмеритель Московского метрополитена.">
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -14,13 +15,33 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
     <header>
         <div class="header-container">
             <h1>Еж3-путеизмеритель</h1>
             <p class="subtitle">Служебный поезд Московского метрополитена для контроля пути и систем СЦБ</p>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
                     <li><a href="Главная_метро.html">🚇 Метро</a></li>
                     <li><a href="Служебные_поезда_метро.html">🔧 Служебные поезда</a></li>
                     <li><a href="#about">О поезде</a></li>
@@ -87,7 +108,7 @@
                 <h2>Составность поезда</h2>
             </div>
             <div class="card-content">
-                <p class="card-description">Бывшая составность составность (до 2019 года):</p>
+                <p class="card-description">Бывшая составность (до 2019 года):</p>
                 <div class="highlight-box" style="margin-bottom: 1.5rem;">
                     <p style="font-size: 1.8rem; text-align: center; font-weight: bold;">5564 — 5672 — 7374 — 5667 — 5824</p>
                 </div>
@@ -95,7 +116,7 @@
                 <div class="highlight-box" style="margin-bottom: 1.5rem;">
                     <p style="font-size: 1.8rem; text-align: center; font-weight: bold;">5564 — 6552 — 7374 — 6719 — 5824</p>
                 </div>
-                <p class="card-description">Текущая составность с резервными вагонами(с 2019 года):</p>
+                <p class="card-description">Текущая составность с резервными вагонами (с 2019 года):</p>
                 <div class="highlight-box" style="margin-bottom: 1.5rem;">
                     <p style="font-size: 1.8rem; text-align: center; font-weight: bold;">5564 — 6552 — 7374 — 6749 — 6406 — 6435 — 6719 — 5824</p>
                 </div>
@@ -236,14 +257,6 @@
                             <li>Жёлто-оранжевая окраска</li>
                         </ul>
                     </div>
-                    <div class="feature-item">
-                        <h3>Вагоны сопровождения (6552, 6719)</h3>
-                        <ul style="margin: 1rem 0 0 1.5rem;">
-                            <li>Модель: Ем-508Т</li>
-                            <li>КВР ЗРЭПС, демонтирована кабина</li>
-                            <li>Используются для надёжности и тяги</li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </section>
@@ -254,74 +267,159 @@
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/Ezh3_full.jpg" alt="Еж3-путеизмеритель общий вид" onerror="this.src='https://via.placeholder.com/800x500?text=Еж3+общий+вид'">
-                        <div class="gallery-caption">Еж3-путеизмеритель (общий вид)</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 mosnikita</p>
+                <div class="photo-gallery">
+
+                    <!-- Фото 3 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/5564_int.jpg" alt="Салон 5564" onclick="openGalleryModal(this.src, 'Салон вагона №5564 (лаборатория)')" onerror="this.src='https://via.placeholder.com/600x400?text=Салон+5564'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Салон вагона №5564</a>
+                            <p class="photo-desc">Внутри лаборатории.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 1 октября 2021 года</span>
+                                <span class="photo-author">📸 <a href="https://transphoto.org/photo/1924231/">Welder</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/5564.jpg" alt="Вагон 5564" onerror="this.src='https://via.placeholder.com/800x500?text=5564'">
-                        <div class="gallery-caption">Вагон №5564 — лаборатория СЦБ и связи</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Озермос</p>
+
+                    <!-- Фото 4 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/5824_int.jpg" alt="Салон 5824" onclick="openGalleryModal(this.src, 'Оригинальный салон вагона №5824')" onerror="this.src='https://via.placeholder.com/600x400?text=Салон+5824'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Салон вагона №5824</a>
+                            <p class="photo-desc">Оригинальный салон.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/5564_int.jpg" alt="Салон 5564" onerror="this.src='https://via.placeholder.com/800x500?text=Салон+5564'">
-                        <div class="gallery-caption">Салон вагона №5564 (лаборатория)</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Welder</p>
+
+                    <!-- Фото 5 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/5824ramenki1.jpg" alt="5824 на Раменках" onclick="openGalleryModal(this.src, 'Вагон №5824 на станции «Раменки»')" onerror="this.src='https://via.placeholder.com/600x400?text=5824+Раменки'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон №5824 на «Раменках»</a>
+                            <p class="photo-desc">На станции метро.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/5824_int.jpg" alt="Салон 5824" onerror="this.src='https://via.placeholder.com/800x500?text=Салон+5824'">
-                        <div class="gallery-caption">Оригинальный салон вагона №5824</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+
+                    <!-- Фото 6 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/5824ramenki8vagonov.jpg" alt="5824 на Раменках (8 вагонов)" onclick="openGalleryModal(this.src, 'Вагон №5824 на станции «Раменки» (8 вагонов)')" onerror="this.src='https://via.placeholder.com/600x400?text=5824+8+вагонов'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон №5824 (8 вагонов)</a>
+                            <p class="photo-desc">На станции «Раменки».</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/5824ramenki1.jpg" alt="5824 на Раменках" onerror="this.src='https://via.placeholder.com/800x500?text=5824+Раменки'">
-                        <div class="gallery-caption">Вагон №5824 на станции «Раменки»</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+
+                    <!-- Фото 8 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/5824ng_int.jpg" alt="Салон 5824 новогодний" onclick="openGalleryModal(this.src, 'Салон вагона №5824 (новогоднее оформление)')" onerror="this.src='https://via.placeholder.com/600x400?text=Салон+5824+НГ'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Салон вагона №5824 (НГ)</a>
+                            <p class="photo-desc">Новогоднее оформление.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/5824ramenki8vagonov.jpg" alt="5824 на Раменках (8 вагонов)" onerror="this.src='https://via.placeholder.com/800x500?text=5824+8+вагонов'">
-                        <div class="gallery-caption">Вагон №5824 на станции «Раменки» (8 вагонов)</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+
+                    <!-- Фото 9 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/6719_int.jpg" alt="Салон 6719" onclick="openGalleryModal(this.src, 'Салон вагона №6719')" onerror="this.src='https://via.placeholder.com/600x400?text=Салон+6719'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Салон вагона №6719</a>
+                            <p class="photo-desc">Внутреннее убранство.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/5824ng1.jpg" alt="5824 новогодний" onerror="this.src='https://via.placeholder.com/800x500?text=5824+НГ'">
-                        <div class="gallery-caption">Вагон №5824 (новогоднее оформление)</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+
+                    <!-- Фото 10 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/7374.jpg" alt="Вагон 7374" onclick="openGalleryModal(this.src, 'Вагон №7374 — путеизмеритель')" onerror="this.src='https://via.placeholder.com/600x400?text=7374'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон №7374</a>
+                            <p class="photo-desc">Путеизмеритель.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://transphoto.org/photo/2203909/">Nikita_Transportnik</a> </span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/5824ng_int.jpg" alt="Салон 5824 новогодний" onerror="this.src='https://via.placeholder.com/800x500?text=Салон+5824+НГ'">
-                        <div class="gallery-caption">Салон вагона №5824 (новогоднее оформление)</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+
+                    <!-- Фото 11 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="https://trehgranka.metro.ru/images/vagon/vagon_special/putemer_lb-ars/putemer_2003-12-19_01.jpg" alt="Еж3-путеизмеритель (2003)" onclick="openGalleryModal(this.src, 'Еж3-путеизмеритель')" onerror="this.src='https://via.placeholder.com/600x400?text=Еж3+2003'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Еж3-путеизмеритель</a>
+                            <p class="photo-desc">Фото состава.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2003 год</span>
+                                <span class="photo-author">📸 <a href="https://trehgranka.metro.ru/images/vagon/vagon_special/putemer_lb-ars/putemer_2003-12-19_01.jpg" target="_blank" rel="noopener">Quantum REX</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/6719_int.jpg" alt="Салон 6719" onerror="this.src='https://via.placeholder.com/800x500?text=Салон+6719'">
-                        <div class="gallery-caption">Салон вагона №6719</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+
+                    <!-- Фото 12 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="https://trehgranka.metro.ru/images/vagon/vagon_special/putemer_lb-ars/putemer_2003-12-05_03.jpg" alt="Еж3-путеизмеритель (2003)" onclick="openGalleryModal(this.src, 'Еж3-путеизмеритель')" onerror="this.src='https://via.placeholder.com/600x400?text=Еж3+2003'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Еж3-путеизмеритель</a>
+                            <p class="photo-desc">Фото состава.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2003 год</span>
+                                <span class="photo-author">📸 <a href="https://trehgranka.metro.ru/images/vagon/vagon_special/putemer_lb-ars/putemer_2003-12-05_03.jpg" target="_blank" rel="noopener">Крысуцкий</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/7374.jpg" alt="Вагон 7374" onerror="this.src='https://via.placeholder.com/800x500?text=7374'">
-                        <div class="gallery-caption">Вагон №7374 — путеизмеритель</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Nikita_Transportnik</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="img/ym5_ezh3.jpg" alt="УМ5 и Еж3" onerror="this.src='https://via.placeholder.com/800x500?text=УМ5+и+Еж3'">
-                        <div class="gallery-caption">УМ5 №806 и Еж3-путеизмеритель вместе</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 gam</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="img/Ezh3_full_ym5.jpg" alt="Еж3 и УМ5" onerror="this.src='https://via.placeholder.com/800x500?text=Еж3+и+УМ5'">
-                        <div class="gallery-caption">Еж3-путеизмеритель и УМ5 №806</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 gam</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="img/Ezh3_pervii.jpg" alt="Табличка ПЕРВЫЙ" onerror="this.src='https://via.placeholder.com/800x500?text=Табличка+ПЕРВЫЙ'">
-                        <div class="gallery-caption">27.08.2007 — табличка «ПЕРВЫЙ!» (первый и последний раз)</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 andzis</p>
+
+                    <!-- Фото 13 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Ezh3_pervii.jpg" alt="Табличка ПЕРВЫЙ" onclick="openGalleryModal(this.src, '27.08.2007 — табличка «ПЕРВЫЙ!» (первый и последний раз)')" onerror="this.src='https://via.placeholder.com/600x400?text=Табличка+ПЕРВЫЙ'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Табличка «ПЕРВЫЙ!»</a>
+                            <p class="photo-desc">27.08.2007 — первый и последний раз.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 27.08.2007</span>
+                                <span class="photo-author">📸<a href="https://transphoto.org/photo/812980/"> andzis</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
@@ -344,7 +442,7 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
                         <li><a href="Служебные_поезда_метро.html">Служебные поезда</a></li>
                         <li><a href="УМ5_Д-806.html">УМ5 №Д-806</a></li>
                         <li><a href="9818.html">Вагон 9818</a></li>
@@ -352,8 +450,7 @@
                 </div>
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
-                    <p>📧 info@tepp.ru</p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -365,17 +462,18 @@
 
     <div class="scroll-top">↑</div>
 
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
             function animateCounters() {
                 const targets = { carsCount: 5, yearsService: 26 };
                 let current = { carsCount: 0, yearsService: 0 };
@@ -401,21 +499,18 @@
             }
             animateCounters();
 
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+            // Функция для открытия модалки
+            window.openGalleryModal = function(src, caption) {
+                const modal = document.getElementById('galleryModal');
+                const content = document.getElementById('galleryModalContent');
+                if (modal && content) {
+                    content.innerHTML = `
+                        <img src="${src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${caption}">
+                        <p style="text-align:center; margin-top:1rem; font-size:1.1rem;">${caption}</p>
+                    `;
+                    modal.classList.add('active');
+                }
+            };
         });
     </script>
 </body>

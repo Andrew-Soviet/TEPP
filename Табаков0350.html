@@ -14,13 +14,33 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
     <header>
         <div class="header-container">
             <h1>«Олег Табаков»</h1>
             <p class="subtitle">Тематический поезд Московского метрополитена, посвящённый народному артисту</p>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
                     <li><a href="Главная_метро.html">🚇 Метро</a></li>
                     <li><a href="Главная_Страница_Мосметро.html">🏙️ Мосметро</a></li>
                     <li><a href="#about">О поезде</a></li>
@@ -39,7 +59,7 @@
             <div class="hero-content">
                 <h2>«Олег Табаков»</h2>
                 <p class="hero-text">Тематический поезд Московского метрополитена, посвящённый народному артисту СССР <strong>Олегу Павловичу Табакову</strong>. Брендирование — с 13 сентября 2019 года.</p>
-                <p class="hero-text">Состав базируется в ТЧ-15, эксплуатируется в пассажирском режиме. В 2024 году часть состава стала перегоночной.</p>
+                <p class="hero-text">Состав базируется в ТЧ-15 «Печатники». Вагон 0350 используется для манёвров и перегонок, имеет служебное назначение.</p>
                 
                 <div class="stats-container">
                     <div class="stat-item">
@@ -69,11 +89,12 @@
                     <caption>Основные параметры состава «Олег Табаков»</caption>
                     <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
                     <tbody>
-                        <tr><td>Депо</td><td>ТЧ-15</td></tr>
-                        <tr><td>Модель</td><td>81-717.5М / 714.5М (МВМ)</td></tr>
+                        <tr><td>Город</td><td>Москва 🇷🇺</td></tr>
+                        <tr><td>Депо/Парк</td><td>ТЧ-15 «Печатники»</td></tr>
+                        <tr><td>Модель</td><td>81-717.5М (МВМ)</td></tr>
                         <tr><td>Построен</td><td>07.1993</td></tr>
-                        <tr><td>Состояние</td><td>Эксплуатируется</td></tr>
-                        <tr><td>Назначение</td><td>Служебный / пассажирский</td></tr>
+                        <tr><td>Текущее состояние</td><td>Эксплуатируется</td></tr>
+                        <tr><td>Назначение</td><td>Служебный (вагон для манёвров и перегонок)</td></tr>
                         <tr><td>Брендирование</td><td>С 13.09.2019 — «Олег Табаков»</td></tr>
                     </tbody>
                 </table>
@@ -148,10 +169,43 @@
             </div>
         </section>
 
+        <!-- Экстерьер и Интерьер -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #D35400 0%, #E67E22 100%);">
+                <span class="card-icon">🎨</span>
+                <h2>Экстерьер и интерьер</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>Экстерьер</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>Окрас бирюзового цвета с белыми полосами по борту</li>
+                            <li>Три ребра жёсткости</li>
+                            <li>Расположение сигнальных ламп: вертикальное</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Интерьер</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>Вертикальные поручни</li>
+                            <li>Диваны, обшитые кожзаменителем коричневого цвета</li>
+                            <li>Пластик:
+                                <ul>
+                                    <li>07.1993 — 05.2011: жёлтого цвета</li>
+                                    <li>С 05.2011: бежевого цвета</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Тематическое брендирование -->
         <section id="branding" class="section-card">
             <div class="card-header" style="background: linear-gradient(135deg, #7D3C98 0%, #A569BD 100%);">
-                <span class="card-icon">🎨</span>
+                <span class="card-icon">🎭</span>
                 <h2>Тематическое брендирование</h2>
             </div>
             <div class="card-content">
@@ -196,26 +250,51 @@
             </div>
         </section>
 
-        <!-- Фотогалерея (ВСЕ ФОТО ЗДЕСЬ) -->
+        <!-- Фотогалерея -->
         <section id="gallery" class="section-card">
             <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
                 <span class="card-icon">📸</span>
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/0381.jpg" alt="Вагон 0381 состава Олег Табаков" onerror="this.src='https://via.placeholder.com/600x400?text=Вагон+0381'">
-                        <div class="gallery-caption">Вагон 0381. Фото: Renzex87</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Renzex87</p>
+                <div class="photo-gallery">
+
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="https://transphoto.org/photo/22/69/12/2269121.jpg" alt="Вагон 0350 перегонка" 
+                                 onclick="openGalleryModal(this.src, 'Перегонка из ТЧ-11 «Выхино» в ТЧ-15 «Печатники»')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=Вагон+0350'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="https://transphoto.org/photo/2269121/" class="photo-object" target="_blank" rel="noopener">Станция «Выхино»</a>
+                            <p class="photo-desc">Перегонка из ТЧ-11 «Выхино» в ТЧ-15 «Печатники».</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 12 апреля 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://transphoto.org/photo/2269121/" target="_blank" rel="noopener">Стальной Гвоздь</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/0350.jpg" alt="Вагон 0350 состава Олег Табаков" onerror="this.src='https://via.placeholder.com/600x400?text=Вагон+0350'">
-                        <div class="gallery-caption">Вагон 0350. Фото: Стальной Гвоздь</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Стальной Гвоздь</p>
+
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="https://transphoto.org/photo/15/81/55/1581559.jpg" alt="Салон вагона 0350" 
+                                 onclick="openGalleryModal(this.src, 'Салон, вид вперёд')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=Салон+0350'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="https://transphoto.org/photo/1581559/" class="photo-object" target="_blank" rel="noopener">Салон, вид вперёд</a>
+                            <p class="photo-desc">Салон вагона в составе именного поезда, посвящённого театру Олега Табакова.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 21 февраля 2022 г.</span>
+                                <span class="photo-author">📸 <a href="https://transphoto.org/photo/1581559/" target="_blank" rel="noopener">Стальной Гвоздь</a></span>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
@@ -239,7 +318,7 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
                         <li><a href="Главная_метро.html">Метрополитены</a></li>
                         <li><a href="Главная_Страница_Мосметро.html">Московский метрополитен</a></li>
                         <li><a href="Народный_ополченец.html">Народный ополченец</a></li>
@@ -247,7 +326,7 @@
                 </div>
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -266,8 +345,8 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Счётчики
@@ -307,16 +386,36 @@
             const modal = document.getElementById('galleryModal');
             const content = document.getElementById('galleryModalContent');
             const close = document.getElementById('galleryModalClose');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
+
+            document.querySelectorAll('.photo-thumb img').forEach(img => {
+                img.addEventListener('click', function() {
+                    const card = this.closest('.photo-card');
+                    if (!card) return;
+
+                    const src = this.src;
+                    const alt = this.alt;
+                    const object = card.querySelector('.photo-object')?.textContent || '';
+                    const desc = card.querySelector('.photo-desc')?.textContent || '';
+                    const date = card.querySelector('.photo-date')?.textContent || '';
+                    const author = card.querySelector('.photo-author')?.textContent || '';
+
+                    if (content) {
+                        content.innerHTML = `
+                            <img src="${src}" style="max-width:100%; max-height:60vh; border-radius:10px; display:block; margin: 0 auto;" alt="${alt}">
+                            <div style="margin-top: 1.5rem; text-align: left; padding: 0 1rem;">
+                                <h3 style="color: var(--accent-color); margin-bottom: 0.5rem; font-size: 1.4rem;">${object}</h3>
+                                <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1rem;">${desc}</p>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-secondary); border-top: 1px solid var(--border-color); padding-top: 1rem;">
+                                    <span>${date}</span>
+                                    <span>${author}</span>
+                                </div>
+                            </div>
+                        `;
                         modal.classList.add('active');
                     }
                 });
             });
+
             close?.addEventListener('click', () => modal.classList.remove('active'));
             window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
         });

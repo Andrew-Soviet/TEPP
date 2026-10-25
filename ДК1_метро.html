@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Диагностический комплекс «Синергия-1» — Московский метрополитен</title>
+    <title>Диагностический комплекс «Синергия-1» — Московский метрополитен — ТЭПП</title>
+    <meta name="description" content="История, задачи, состав и фотографии диагностического комплекса «Синергия-1».">
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -14,13 +15,33 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
     <header>
         <div class="header-container">
             <h1>Диагностический комплекс «Синергия-1»</h1>
             <p class="subtitle">Служебный поезд-лаборатория для диагностики инфраструктуры Московского метрополитена</p>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
                     <li><a href="Главная_метро.html">🚇 Метро</a></li>
                     <li><a href="Служебные_поезда_метро.html">🔧 Служебные поезда</a></li>
                     <li><a href="#about">О поезде</a></li>
@@ -37,6 +58,8 @@
             <div class="hero-content">
                 <h2>Диагностический комплекс «Синергия-1»</h2>
                 <p class="hero-text">«Синергия-1» — служебный поезд-лаборатория для диагностики инфраструктуры Московского метрополитена. Введён в эксплуатацию в 2017 году. Состоит из 5 вагонов, оснащённых современным диагностическим оборудованием.</p>
+                <p class="hero-text">Первый диагностический поезд измеряет параметры пути механически: на рельсы во время движения опускается тележка с небольшими колесами, которые прижимаются к рельсам и делают замеры. Его преемник — «Синергия-2» — уже использует лазерно-оптические датчики.</p>
+                
                 <div class="stats-container">
                     <div class="stat-item">
                         <div class="counter-number" id="yearCount">0</div>
@@ -81,19 +104,15 @@
             </div>
         </section>
 
-<!-- Состав поезда -->
-<!-- Состав поезда -->
-<section id="composition" class="section-card">
-    <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
-        <span class="card-icon">🚆</span>
-        <h2>Состав поезда</h2>
-    </div>
-    <div class="card-content">
-        <div class="highlight-box" style="margin-bottom: 1.5rem;">
-            <p style="font-size: 1.6rem; text-align: center; font-weight: bold;">10197 - 1027 - 7638 - 1352 - 10199</p>
-        </div>
-    </div>
-</section>
+        <section id="composition" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Состав поезда</h2>
+            </div>
+            <div class="card-content">
+                <div class="highlight-box" style="margin-bottom: 1.5rem;">
+                    <p style="font-size: 1.6rem; text-align: center; font-weight: bold;">10197 — 1027 — 7638 — 1352 — 10199</p>
+                </div>
             </div>
         </section>
 
@@ -103,14 +122,54 @@
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/ДК1.jpg" alt="Поезд Синергия-1" onerror="this.src='https://via.placeholder.com/800x500?text=Синергия-1'">
-                        <div class="gallery-caption">Диагностический комплекс «Синергия-1»</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Yaroslav_09</p>
+                <div class="photo-gallery">
+
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/ДК1_int.jpg" alt="Салон вагона 10199" onclick="openGalleryModal(this.src, 'Салон вагона № 10199')" onerror="this.src='https://via.placeholder.com/600x400?text=Салон+10199'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Салон вагона № 10199</a>
+                            <p class="photo-desc">Внутреннее убранство вагона.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 26 мая 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 3 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Синергия-1.jpg" alt="Прибытие состава на станцию" onclick="openGalleryModal(this.src, 'Прибытие состава «Синергия-1» на станцию')" onerror="this.src='https://via.placeholder.com/600x400?text=Синергия-1'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Прибытие на станцию</a>
+                            <p class="photo-desc">Состав на путях.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 26 мая 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 4 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Синергия-1_2.jpg" alt="Состав на станции Белорусская" onclick="openGalleryModal(this.src, 'Состав «Синергия-1» на станции Белорусская')" onerror="this.src='https://via.placeholder.com/600x400?text=Синергия-1+Белорусская'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">На станции «Белорусская»</a>
+                            <p class="photo-desc">Состав на станции.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 26 мая 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
@@ -133,15 +192,15 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
                         <li><a href="Служебные_поезда_метро.html">Служебные поезда</a></li>
+                        <li><a href="ДК2_метро.html">Синергия-2</a></li>
                         <li><a href="Еж3-путеизмеритель.html">Еж3-путеизмеритель</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
-                    <p>📧 info@tepp.ru</p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -153,19 +212,19 @@
 
     <div class="scroll-top">↑</div>
 
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             function animateCounters() {
-                const targets = { yearCount: 2017, carsCount: 5, speedCount: 60 };
+                const targets = { yearCount: 2017, carsCount: 5, speedCount: 50 };
                 let current = { yearCount: 0, carsCount: 0, speedCount: 0 };
                 const yearEl = document.getElementById('yearCount');
                 const carsEl = document.getElementById('carsCount');
@@ -196,21 +255,17 @@
             }
             animateCounters();
 
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+            window.openGalleryModal = function(src, caption) {
+                const modal = document.getElementById('galleryModal');
+                const content = document.getElementById('galleryModalContent');
+                if (modal && content) {
+                    content.innerHTML = `
+                        <img src="${src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${caption}">
+                        <p style="text-align:center; margin-top:1rem; font-size:1.1rem;">${caption}</p>
+                    `;
+                    modal.classList.add('active');
+                }
+            };
         });
     </script>
 </body>

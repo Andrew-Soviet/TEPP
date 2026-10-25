@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ПАЗ-652Б — первый вагонный автобус Павловского завода</title>
+    <title>ПАЗ-652Б — первый вагонный автобус Павловского завода — ТЭПП</title>
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -14,14 +14,36 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
     <header>
         <div class="header-container">
             <h1>ПАЗ-652Б</h1>
             <p class="subtitle">Первый вагонный автобус Павловского завода (1958–1968)</p>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
-                    <li><a href="#about">Об автобусе</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
+                    <li><a href="city_transport.html">🚌 Городской транспорт</a></li>
+                    <li><a href="Автобусы.html">🚐 Автобусы</a></li>
+                    <li><a href="Модели_автобусов.html">📋 Модели</a></li>
                     <li><a href="#history">История</a></li>
                     <li><a href="#gallery">Фото</a></li>
                 </ul>
@@ -61,18 +83,19 @@
                 <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
                     <div class="feature-item">
                         <h3>🏭 Производство</h3>
-                        <p><strong>Завод:</strong> Павловский автобусный завод (ПАЗ)</p>
+                        <p><strong>Завод:</strong> Павловский автомобильный завод имени Жданова (ПАЗ)</p>
                         <p><strong>Годы выпуска:</strong> 1958–1968 (652Б — с июня 1963)</p>
-                        <p><strong>Всего выпущено:</strong> 62 121 (всех модификаций)</p>
+                        <p><strong>Всего выпущено:</strong> более 62 000 (всех модификаций)</p>
                     </div>
                     <div class="feature-item">
                         <h3>📍 Эксплуатация</h3>
-                        <p><strong>Регион:</strong> СССР</p>
-                        <p><strong>Назначение:</strong> городские и пригородные маршруты</p>
+                        <p><strong>Регион:</strong> СССР и зарубежные страны</p>
+                        <p><strong>Назначение:</strong> районные, пригородные и городские маршруты</p>
+                        <p><strong>Применение:</strong> автолавки, мобильные госпитали, кинопередвижки, ритуальные автобусы.</p>
                     </div>
                 </div>
                 <div class="highlight-box" style="margin-top: 1.5rem;">
-                    <p>⭐ <strong>Первый вагонный ПАЗ:</strong> На момент освоения в 1958 году конструкция вполне соответствовала мировому уровню: сварной несущий кузов, панельная сборка, вакуумные механизмы дверей.</p>
+                    <p>⭐ <strong>Первый вагонный ПАЗ:</strong> Доработанный вариант первой модели самой знаменитой серии советских автобусов малого класса. На момент освоения в 1958 году конструкция вполне соответствовала мировому уровню: сварной несущий кузов, панельная сборка, вакуумные механизмы дверей.</p>
                 </div>
             </div>
         </section>
@@ -127,7 +150,7 @@
                         <div class="timeline-date">Июнь 1963</div>
                         <div class="timeline-content">
                             <h3>Выход модификации 652Б</h3>
-                            <p>Из-за проблем с прочностью основания у базовой модели, на конвейер пошла версия с усиленными лонжеронами, передним мостом и рулевым управлением.</p>
+                            <p>Из-за проблем с прочностью основания у базовой модели, на конвейер пошла версия с усиленными лонжеронами, передним мостом и рулевым управлением. Успешно продавался и за рубежом.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
@@ -139,7 +162,7 @@
                     </div>
                 </div>
                 <div class="highlight-box" style="margin-top: 1.5rem;">
-                    <p><strong>Интересный факт:</strong> На базе ПАЗ-652Б завод «Аремкуз» выпускал автокатафалк: вторую дверь зашивали, а сидения в задней части располагали параллельно бортам, чтобы через люк можно было закатить гроб.</p>
+                    <p><strong>Интересный факт:</strong> На базе ПАЗ-652Б завод «Аремкуз» выпускал автокатафалк: вторую дверь зашивали, а сидения в задней части располагали параллельно бортам, чтобы через люк можно было закатить гроб. Также на базе автобуса строили мобильные госпитали и кинопередвижки.</p>
                 </div>
             </div>
         </section>
@@ -163,30 +186,68 @@
             </div>
         </section>
 
+        <!-- Фотогалерея -->
         <section id="gallery" class="section-card">
             <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
                 <span class="card-icon">📸</span>
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/paz_652b_ext.jpg" alt="ПАЗ-652Б, внешний вид" onerror="this.src='img/no-photo.png'">
-                        <div class="gallery-caption">ПАЗ-652Б — общий вид</div>
-                        <p style="text-align: center; margin-top: 0.3rem; color: var(--text-secondary); font-size: 0.85rem;">📸 pfandrom</p>
+                <div class="photo-gallery">
+
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/paz_652b_ext.jpg" alt="ПАЗ-652Б, внешний вид" 
+                                 onclick="openGalleryModal(this.src, 'ПАЗ-652Б — общий вид')" 
+                                 onerror="this.src='img/no-photo.png'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">ПАЗ-652Б</a>
+                            <p class="photo-desc">Общий вид автобуса.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 11 октября 2026 года</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/paz_652b_int.jpg" alt="ПАЗ-652Б, салон" onerror="this.src='img/no-photo.png'">
-                        <div class="gallery-caption">ПАЗ-652Б — интерьер салона</div>
-                        <p style="text-align: center; margin-top: 0.3rem; color: var(--text-secondary); font-size: 0.85rem;">📸 pfandrom</p>
+
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/paz_652b_int.jpg" alt="ПАЗ-652Б, салон" 
+                                 onclick="openGalleryModal(this.src, 'ПАЗ-652Б — интерьер салона')" 
+                                 onerror="this.src='img/no-photo.png'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Салон автобуса</a>
+                            <p class="photo-desc">Интерьер салона ПАЗ-652Б.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 11 октября 2026 года</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/paz_652b_tabl.jpg" alt="Автокатафалк Аремкуз" onerror="this.src='img/no-photo.png'">
-                        <div class="gallery-caption">Табличка об экспонате</div>
-                        <p style="text-align: center; margin-top: 0.3rem; color: var(--text-secondary); font-size: 0.85rem;">📸 pfandrom</p>
+
+                    <!-- Фото 3 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/paz_652b_tabl.jpg" alt="Табличка об экспонате" 
+                                 onclick="openGalleryModal(this.src, 'Табличка об экспонате')" 
+                                 onerror="this.src='img/no-photo.png'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Музейная табличка</a>
+                            <p class="photo-desc">Информационная табличка об экспонате.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 11 октября 2026 года</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
@@ -209,14 +270,15 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="Главная_Страница_Мосметро.html">Московский метрополитен</a></li>
                         <li><a href="Городской_транспорт.html">Городской транспорт</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram-канал</a></p>
-                    <p>✉️ <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Предложка</a></p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -235,8 +297,8 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             function animateCounters() {
@@ -274,16 +336,36 @@
             const modal = document.getElementById('galleryModal');
             const content = document.getElementById('galleryModalContent');
             const close = document.getElementById('galleryModalClose');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
+
+            document.querySelectorAll('.photo-thumb img').forEach(img => {
+                img.addEventListener('click', function() {
+                    const card = this.closest('.photo-card');
+                    if (!card) return;
+
+                    const src = this.src;
+                    const alt = this.alt;
+                    const object = card.querySelector('.photo-object')?.textContent || '';
+                    const desc = card.querySelector('.photo-desc')?.textContent || '';
+                    const date = card.querySelector('.photo-date')?.textContent || '';
+                    const author = card.querySelector('.photo-author')?.textContent || '';
+
+                    if (content) {
+                        content.innerHTML = `
+                            <img src="${src}" style="max-width:100%; max-height:60vh; border-radius:10px; display:block; margin: 0 auto;" alt="${alt}">
+                            <div style="margin-top: 1.5rem; text-align: left; padding: 0 1rem;">
+                                <h3 style="color: var(--accent-color); margin-bottom: 0.5rem; font-size: 1.4rem;">${object}</h3>
+                                <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1rem;">${desc}</p>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-secondary); border-top: 1px solid var(--border-color); padding-top: 1rem;">
+                                    <span>${date}</span>
+                                    <span>${author}</span>
+                                </div>
+                            </div>
+                        `;
                         modal.classList.add('active');
                     }
                 });
             });
+
             close?.addEventListener('click', () => modal.classList.remove('active'));
             window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
         });

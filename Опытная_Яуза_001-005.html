@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Опытная Яуза 001-005 - История создания первого состава</title>
+    <title>Опытная Яуза 001-005 — ТЭПП</title>
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -17,13 +17,33 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
     <header>
         <div class="header-container">
             <h1>Опытная Яуза 001-005</h1>
             <p class="subtitle">Первый опытный состав семейства "Яуза" — начало новой эры</p>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
                     <li><a href="Главная_метро.html">🚇 Метро</a></li>
                     <li><a href="Опытные_составы.html">🔬 Опытные</a></li>
                     <li><a href="#about">О поезде</a></li>
@@ -86,6 +106,32 @@
             </div>
         </section>
 
+        <!-- Основная информация -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Первый опытный состав</h2>
+            </div>
+            <div class="card-content">
+                <div class="highlight-box" style="margin-bottom: 2rem;">
+                    <p style="font-size: 1.8rem; text-align: center; font-weight: bold;">001-002-003-004-005</p>
+                </div>
+                
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>Дата презентации</h3>
+                        <p style="font-size: 1.3rem; font-weight: bold;">18 января 1993 года</p>
+                        <p>Презентация состава нового поколения Президенту России Б.Н. Ельцину на 3 пути станции "Полежаевская"</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Важный этап</h3>
+                        <p>В 1992 году в составе была произведена замена коллекторного тягового привода на опытный асинхронный привод производства ОАО "АЭК «Динамо»".</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- История -->
         <section id="history" class="section-card">
             <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
@@ -95,42 +141,74 @@
             <div class="card-content">
                 <div class="timeline" style="padding: 1rem 0;">
                     <div class="timeline-item">
-                        <div class="timeline-date">Конец 1980-х</div>
-                        <div class="timeline-content">
-                            <h3>Начало разработки</h3>
-                            <p>После неудач с типом "И" приступили к разработке нового поезда — "Яуза". В начале сделали 81-717 как временный поезд.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item">
                         <div class="timeline-date">1991</div>
                         <div class="timeline-content">
-                            <h3>Распад СССР</h3>
-                            <p>Завершить разработку не успели — СССР распался, и финансирование было заморожено.</p>
+                            <h3>Постройка</h3>
+                            <p>Опытный состав (001-002-003-004-005) построен на АО "Метровагонмаш" (Мытищи).</p>
                         </div>
                     </div>
-                    
+
                     <div class="timeline-item">
                         <div class="timeline-date">1992</div>
                         <div class="timeline-content">
-                            <h3>Готов первый состав</h3>
-                            <p>Разработка продолжилась, и в 1992 году был готов первый опытный состав.</p>
+                            <h3>Замена привода</h3>
+                            <p>Коллекторный тяговый привод заменен на опытный асинхронный привод производства ОАО "АЭК «Динамо»".</p>
                         </div>
                     </div>
                     
                     <div class="timeline-item">
-                        <div class="timeline-date">1992-1993</div>
-                        <div class="timeline-content">
-                            <h3>Испытания</h3>
-                            <p>До января 1993 года длились испытания нового состава.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-date">18 января 1993</div>
+                        <div class="timeline-date">18.01.1993</div>
                         <div class="timeline-content">
                             <h3>Презентация президенту</h3>
-                            <p>Презентация состава нового поколения Президенту России Б.Н. Ельцину на 3 пути станции "Полежаевская".</p>
+                            <p>Презентация состава нового поколения Президенту России Б.Н. Ельцину на 3 пути станции «Полежаевская».</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2000</div>
+                        <div class="timeline-content">
+                            <h3>Вагон 002 становится тренажёром</h3>
+                            <p>Вагон 002 передан на баланс метрополитена и поступил в ТЧ-4 «Красная Пресня» в качестве тренажёра ПВС.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2005</div>
+                        <div class="timeline-content">
+                            <h3>Списание 005</h3>
+                            <p>Вагон 005 списан, весь салон разобрали.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2010</div>
+                        <div class="timeline-content">
+                            <h3>Утилизация 001, 005</h3>
+                            <p>Вагоны 001 и 005 утилизированы на территории ОАО "Метровагонмаш".</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">02.08.2019</div>
+                        <div class="timeline-content">
+                            <h3>Отставка 003, 004</h3>
+                            <p>Вагоны 003 и 004 отставлены от эксплуатации. До этого они работали в ТЧ-7 «Замоскворецкое» и ТЧ-15 «Печатники».</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">09.2020</div>
+                        <div class="timeline-content">
+                            <h3>Списание 003, 004</h3>
+                            <p>Вагоны официально списаны и отправлены в ТЧ-16 «Митино».</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">05.2024</div>
+                        <div class="timeline-content">
+                            <h3>Утилизация 003, 004</h3>
+                            <p>Вагоны утилизированы на территории ТЧ-16 «Митино».</p>
                         </div>
                     </div>
                 </div>
@@ -147,78 +225,82 @@
                 <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
                     <div class="train-card">
                         <h3>001 и 005</h3>
-                        <p>Головные вагоны</p>
-                        <p>Отправлены на территорию завода МетровагонМаш (ныне Трансмашхолдинг)</p>
+                        <p>Головной (001) и промежуточный (005)</p>
+                        <p>Отправлены на территорию завода "Метровагонмаш"</p>
                         <p class="route-number" style="color: #C0392B;">Утилизированы в 2010</p>
                     </div>
                     
                     <div class="train-card">
                         <h3>003 и 004</h3>
                         <p>Промежуточные вагоны</p>
-                        <p>Перенумерованы в 0003 и 0004, эксплуатировались до 2019 года</p>
-                        <p class="route-number" style="color: #C0392B;">Утилизированы в 2024</p>
+                        <p>Работали в ТЧ-7 и ТЧ-15, затем списаны в ТЧ-16 «Митино»</p>
+                        <p class="route-number" style="color: #C0392B;">Утилизированы в 05.2024</p>
                     </div>
                     
-                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                    <div class="train-card" style="border-left: 4px solid #E74C3C;">
                         <h3>002</h3>
                         <p>Промежуточный вагон</p>
-                        <p>Единственный сохранившийся вагон от опытного состава</p>
-                        <p class="route-number" style="color: #27AE60;">В ТЧ-4 "Красная Пресня"</p>
+                        <p>Передан в ТЧ-4 «Красная Пресня» в качестве тренажёра ПВС</p>
+                        <p class="route-number" style="color: #C0392B;">Выведен из эксплуатации / ожидание исключения</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Фотогалерея (обновленная с 3 изображениями) -->
+        <!-- Фотогалерея -->
         <section id="gallery" class="section-card">
             <div class="card-header" style="background: linear-gradient(135deg, #E74C3C 0%, #C0392B 100%);">
                 <span class="card-icon">📸</span>
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/яуза 001.jpg" alt="Опытная Яуза на испытательном кольце" onerror="this.src='https://via.placeholder.com/671x450?text=Яуза+001'">
-                        <div class="gallery-caption">Опытная Яуза 001 на экспериментальном кольце ВНИИЖТ</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Станислав Панов/ТАСС</p>
+                <div class="photo-gallery">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="https://www.m24.ru/b/d/nAgWUB67nUJkzJ7jP6aJ-pn2kIPt-dvtg32Qhv2YqzbZJC3PU2mchDZh84he-A6e_YaM932QJZ4qFfGnjn8xIymP6DgFv0iAijy_HVe4o25SIGFP=bpHwF_QUQBk5ahXfw0oSjw.jpg" alt="Опытная Яуза на испытательном кольце" onclick="openGalleryModal('https://www.m24.ru/b/d/nAgWUB67nUJkzJ7jP6aJ-pn2kIPt-dvtg32Qhv2YqzbZJC3PU2mchDZh84he-A6e_YaM932QJZ4qFfGnjn8xIymP6DgFv0iAijy_HVe4o25SIGFP=bpHwF_QUQBk5ahXfw0oSjw.jpg', 'Опытная Яуза 001 на экспериментальном кольце ВНИИЖТ')" onerror="this.src='https://via.placeholder.com/600x400?text=Яуза+001'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="https://www.m24.ru/articles/15052020/156691" target="_blank" rel="noopener" class="photo-object">Опытная Яуза 001</a>
+                            <p class="photo-desc">На экспериментальном кольце ВНИИЖТ.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 27 мая 1992 г.</span>
+                                <span class="photo-author">📸 <a href="https://www.m24.ru/articles/15052020/156691" target="_blank" rel="noopener">Станислав Панов/ТАСС</a></span>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div class="gallery-item">
-                        <img src="img/002_салон.jpg" alt="Салон вагона 002 Яузы" onerror="this.src='https://via.placeholder.com/600x400?text=Салон+002'">
-                        <div class="gallery-caption">Салон вагона 001 во время испытаний</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Станислав Панов/ТАСС</p>
-                    </div>
-                
-                <p style="text-align: center; margin-top: 1rem; color: #666;">Нажмите на фото для увеличения</p>
-            </div>
-        </section>
 
-        <!-- Технические характеристики -->
-        <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #7F8C8D 0%, #95A5A6 100%);">
-                <span class="card-icon">⚙️</span>
-                <h2>Технические характеристики</h2>
-            </div>
-            <div class="card-content">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Параметр</th>
-                            <th>Значение</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Год создания</td><td>1992</td></tr>
-                        <tr><td>Завод-изготовитель</td><td>Мытищинский машиностроительный завод (ММЗ)</td></tr>
-                        <tr><td>Модель</td><td>81-720/721 "Яуза" (опытная)</td></tr>
-                        <tr><td>Составность</td><td>001-002-003-004-005</td></tr>
-                        <tr><td>Количество вагонов</td><td>5</td></tr>
-                        <tr><td>Период испытаний</td><td>1992 — январь 1993</td></tr>
-                        <tr><td>Дата презентации</td><td>18 января 1993</td></tr>
-                        <tr><td>Утилизированы</td><td>001,005 — 2010; 003,004 — 2024</td></tr>
-                        <tr><td>Сохранился</td><td>002 (в ТЧ-4)</td></tr>
-                    </tbody>
-                </table>
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/002_салон.jpg" alt="Салон вагона 002 Яузы" onclick="openGalleryModal('img/002_салон.jpg', 'Салон вагона 001 во время испытаний')" onerror="this.src='https://via.placeholder.com/600x400?text=Салон+002'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="https://www.m24.ru/articles/14022014/37489" target="_blank" rel="noopener" class="photo-object">Салон вагона</a>
+                            <p class="photo-desc">Во время испытаний.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 27 мая 1992 г.</span>
+                                <span class="photo-author">📸 <a href="https://www.m24.ru/articles/14022014/37489" target="_blank" rel="noopener">Станислав Панов/ТАСС</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 3 (Новое) -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="https://transphoto.org/photo/04/28/40/428403.jpg" alt="Состав на презентации" onclick="openGalleryModal('https://transphoto.org/photo/04/28/40/428403.jpg', 'Состав на презентации')" onerror="this.src='https://via.placeholder.com/600x400?text=Презентация'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="https://transphoto.org/photo/428403/" target="_blank" rel="noopener" class="photo-object">Состав на презентации</a>
+                            <p class="photo-desc">18 января 1993 года.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 18 января 1993 г.</span>
+                                <span class="photo-author">📸 <a href="https://transphoto.org/photo/428403/" target="_blank" rel="noopener">Фото из книги "Московское метро"</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
@@ -243,7 +325,7 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
                         <li><a href="Опытные_составы.html">Опытные составы</a></li>
                         <li><a href="Опытный_поезд_И.html">Опытный И</a></li>
                         <li><a href="Опытный_81-717.html">Опытный 81-717</a></li>
@@ -252,8 +334,7 @@
                 
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
-                    <p>📧 info@tepp.ru</p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
             
@@ -268,7 +349,7 @@
     <div class="scroll-top">↑</div>
 
     <!-- Модальное окно для галереи -->
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
@@ -276,11 +357,11 @@
     </div>
 
     <!-- Подключаем библиотеку частиц -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
     <!-- Подключаем общий JS файл -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     
-    <!-- Дополнительный скрипт для счетчиков и галереи -->
+    <!-- Дополнительный скрипт для счетчиков -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Анимация счетчиков
@@ -340,48 +421,19 @@
             }
             
             animateYauzaCounters();
-            
-            // Настройка галереи
-            const galleryModal = document.getElementById('galleryModal');
-            const galleryModalContent = document.getElementById('galleryModalContent');
-            const galleryCloseBtn = document.getElementById('galleryModalClose');
-            const galleryItems = document.querySelectorAll('.gallery-item');
-            
-            if (galleryModal && galleryItems.length > 0) {
-                galleryItems.forEach(item => {
-                    item.addEventListener('click', function() {
-                        const img = this.querySelector('img');
-                        const caption = this.querySelector('.gallery-caption').textContent;
-                        
-                        if (galleryModalContent) {
-                            galleryModalContent.innerHTML = `
-                                <img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}">
-                                <p style="text-align:center; margin-top:1rem; color:#333;">${caption}</p>
-                            `;
-                        }
-                        
-                        galleryModal.classList.add('active');
-                    });
-                });
-                
-                if (galleryCloseBtn) {
-                    galleryCloseBtn.addEventListener('click', function() {
-                        galleryModal.classList.remove('active');
-                    });
+
+            // Стандартная функция для галереи
+            window.openGalleryModal = function(src, caption) {
+                const modal = document.getElementById('galleryModal');
+                const content = document.getElementById('galleryModalContent');
+                if (modal && content) {
+                    content.innerHTML = `
+                        <img src="${src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${caption}">
+                        <p style="text-align:center; margin-top:1rem; font-size:1.1rem;">${caption}</p>
+                    `;
+                    modal.classList.add('active');
                 }
-                
-                window.addEventListener('click', function(e) {
-                    if (e.target === galleryModal) {
-                        galleryModal.classList.remove('active');
-                    }
-                });
-                
-                document.addEventListener('keydown', function(e) {
-                    if (e.key === 'Escape' && galleryModal.classList.contains('active')) {
-                        galleryModal.classList.remove('active');
-                    }
-                });
-            }
+            };
         });
     </script>
 </body>

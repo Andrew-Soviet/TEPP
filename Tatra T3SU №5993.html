@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tatra T3SU — самый массовый трамвай СССР</title>
+    <title>Tatra T3SU (1987) — Музейный экспонат — ТЭПП</title>
+    <meta name="description" content="Tatra T3SU №5993 1987 года — самый массовый трамвай в истории, экспонат Музея Транспорта Москвы.">
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -14,34 +15,56 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <!-- ================= ШАПКА ================= -->
     <header>
         <div class="header-container">
-            <h1>Tatra T3SU № 5993</h1>
-            <p class="subtitle">Самый массовый трамвай в истории — 11 368 вагонов для СССР</p>
+            <div class="logo">
+                <h1>Tatra T3SU № 5993</h1>
+                <p class="subtitle">Самый массовый трамвай в истории — более 11 300 вагонов для СССР</p>
+            </div>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
-                    <li><a href="Железная_дорога.html">🚂 Железные дороги</a></li>
-                    <li><a href="Локомотивы.html">🔧 Локомотивы</a></li>
-                    <li><a href="Электровозы.html">⚡ Электровозы</a></li>
-                    <li><a href="#about">О трамвае</a></li>
-                    <li><a href="#history">История</a></li>
-                    <li><a href="#gallery">Фото</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
+                    <li><a href="city_transport.html">🚌 Городской транспорт</a></li>
+                    <li><a href="Трамваи.html">🚋 Трамваи</a></li>
+                    <li><a href="ps_tram.html">🚊 Подвижной состав</a></li>
+                    <li><a href="#about" class="active">🚋 Tatra T3SU</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
+        <!-- Герой-секция -->
         <section id="about" class="hero">
             <div class="hero-content">
                 <h2>Tatra T3SU</h2>
-                <p class="hero-text">Tatra T3SU — чехословацкий высокопольный четырёхосный моторный трамвайный вагон, специальная модификация для Советского Союза. Выпускался на заводе ČKD Tatra в Праге с 1963 по 1987 год.</p>
-                <p class="hero-text">Стал самым массовым трамваем в истории: в СССР было поставлено 11 368 вагонов — крупнейшая серия трамваев, проданная в одну страну. Вагоны T3SU работали в 34 городах Советского Союза.</p>
+                <p class="hero-text">Tatra T3SU — чехословацкий высокопольный четырёхосный моторный трамвайный вагон, специальная модификация для Советского Союза. Выпускался на заводе ČKD Tatra в Праге.</p>
+                <p class="hero-text">Данный экземпляр (№5993) был построен в <strong>июле 1987 года</strong>. Это самый узнаваемый трамвай Москвы чехословацкого производства, который имеет <strong>цельнометаллический кузов</strong> и <strong>три двери</strong> для входа и выхода пассажиров. Сейчас он является частью коллекции Музея Транспорта Москвы.</p>
                 <div class="stats-container">
                     <div class="stat-item">
                         <div class="counter-number" id="buildYear">0</div>
-                        <div class="stat-label">год начала выпуска</div>
+                        <div class="stat-label">год выпуска экспоната</div>
                     </div>
                     <div class="stat-item">
                         <div class="counter-number" id="maxSpeed">0</div>
@@ -55,35 +78,119 @@
             </div>
         </section>
 
+        <!-- Общая информация -->
         <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+            <div class="card-header">
                 <span class="card-icon">🚋</span>
-                <h2>Общая информация</h2>
+                <h2>Общая информация об экспонате</h2>
             </div>
             <div class="card-content">
                 <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
                     <div class="feature-item">
                         <h3>🏭 Производство</h3>
                         <p><strong>Завод-изготовитель:</strong> ČKD Tatra, Прага (Чехословакия)</p>
-                        <p><strong>Годы выпуска для СССР:</strong> 1963–1987</p>
-                        <p><strong>Всего поставлено в СССР:</strong> 11 368 вагонов</p>
-                        <p><strong>Города эксплуатации:</strong> 34 города СССР</p>
+                        <p><strong>Модель:</strong> Tatra T3SU</p>
+                        <p><strong>Построен:</strong> 07.1987</p>
+                        <p><strong>Заводской №:</strong> 176598</p>
                     </div>
                     <div class="feature-item">
-                        <h3>📍 Эксплуатация</h3>
-                        <p><strong>В Москве:</strong> с 1963 года, последний рейс — 2009 год</p>
-                        <p><strong>Другие города:</strong> Ленинград, Киев, Харьков, Минск, Рига, Волгоград и др.</p>
-                        <p><strong>Судьба:</strong> Многие вагоны модернизированы и работают до сих пор</p>
+                        <h3>📍 Музейный статус</h3>
+                        <p><strong>Местонахождение:</strong> Музей Транспорта Москвы</p>
+                        <p><strong>Состояние:</strong> Не эксплуатируется (музейный экспонат)</p>
+                        <p><strong>Назначение:</strong> Историческая экспозиция</p>
+                        <p><strong>Передан в музей:</strong> 15.04.2026</p>
                     </div>
                 </div>
+                
                 <div class="highlight-box" style="margin-top: 1.5rem;">
-                    <p>⭐ <strong>Рекордсмен:</strong> T3SU стал крупнейшей в мире серией трамвайных вагонов, проданных в одну страну. Модификация SU была специально адаптирована для работы в суровых климатических условиях СССР: полностью изолированная кабина водителя, усиленное отопление, двухдверная компоновка (позже — трёхдверная).</p>
+                    <h3>Интерьер</h3>
+                    <p>Первоначальная компоновка салона <strong>2+1</strong> (полумягкие сиденья ЧКД).</p>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1rem;">
+                    <p>⭐ <strong>Рекордсмен:</strong> T3SU стал крупнейшей в мире серией трамвайных вагонов, проданных в одну страну. Модификация SU была специально разработана для СССР с учётом эксплуатации при низких температурах.</p>
                 </div>
             </div>
         </section>
 
+        <!-- История работы -->
+        <section id="history" class="section-card">
+            <div class="card-header">
+                <span class="card-icon">📜</span>
+                <h2>История работы и реставрации</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline" style="padding: 1rem 0;">
+                    <div class="timeline-item">
+                        <div class="timeline-date">11.10.1987 — 09.1994</div>
+                        <div class="timeline-content">
+                            <h3>Эксплуатация в депо</h3>
+                            <p>Вагон поступил в Октябрьское трамвайное депо. Работал под номерами 4860, затем 4993.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">09.1994 — 01.2009</div>
+                        <div class="timeline-content">
+                            <h3>Депо имени Н.Э. Баумана</h3>
+                            <p>Был переведён в Трамвайное депо имени Н.Э. Баумана. С 2001 по 2009 год работал под номерами 2993, 0226, 2993 и, наконец, 0232.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">05.1993, 01.2007</div>
+                        <div class="timeline-content">
+                            <h3>Капитальные ремонты</h3>
+                            <p>Проходил капитальные ремонты на ТРЗ. В 2007 году при ремонте был оборудован стажёрской кабиной (место инструктора сзади).</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">01.2009 — 2019</div>
+                        <div class="timeline-content">
+                            <h3>Работа буксиром</h3>
+                            <p>Работал буксиром для музейных вагонов. Базировался на музейной площадке на ТРЗ.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">11.2018 — 04.2019</div>
+                        <div class="timeline-content">
+                            <h3>Реставрация</h3>
+                            <p>Отреставрирован на ТРЗ в качестве исторического вагона № 5993. Была возвращена компоновка салона 1+1 с пластиковыми сиденьями ЧКД, а стажёрская кабина демонтирована.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">13.07.2019</div>
+                        <div class="timeline-content">
+                            <h3>День Московского транспорта</h3>
+                            <p>Принимал участие в параде в честь Дня Московского транспорта.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">01.2022</div>
+                        <div class="timeline-content">
+                            <h3>Передача в коллекцию</h3>
+                            <p>Передан в Коллекцию исторических трамваев.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">16.04.2022</div>
+                        <div class="timeline-content">
+                            <h3>Парад к 123-летию трамвая</h3>
+                            <p>Участвовал в параде, посвящённом 123-летию московского трамвая.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">15.04.2026</div>
+                        <div class="timeline-content">
+                            <h3>Переезд в музей</h3>
+                            <p>Перевезён в экспозиционный комплекс Музея транспорта Москвы на Новорязанской улице, 27.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Технические характеристики -->
         <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+            <div class="card-header">
                 <span class="card-icon">⚙️</span>
                 <h2>Технические характеристики</h2>
             </div>
@@ -99,9 +206,9 @@
                     </div>
                     <div class="feature-item">
                         <h3>Конструкция</h3>
-                        <p><strong>Кузов:</strong> цельнометаллический, несущий</p>
-                        <p><strong>Двери:</strong> 2 (ранние) или 3 (поздние)</p>
-                        <p><strong>Мест для сидения:</strong> 36 (2-дверная) / 23 (3-дверная)</p>
+                        <p><strong>Кузов:</strong> Цельнометаллический, несущий</p>
+                        <p><strong>Двери:</strong> 3 (для входа и выхода пассажиров)</p>
+                        <p><strong>Мест для сидения:</strong> 23 (3-дверная версия)</p>
                         <p><strong>Вместимость:</strong> 95–110 человек</p>
                         <p><strong>Токосъём:</strong> пантограф, 600 В DC</p>
                     </div>
@@ -109,105 +216,64 @@
             </div>
         </section>
 
-        <section id="history" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
-                <span class="card-icon">📜</span>
-                <h2>История</h2>
-            </div>
-            <div class="card-content">
-                <div class="timeline" style="padding: 1rem 0;">
-                    <div class="timeline-item">
-                        <div class="timeline-date">1960–1962</div>
-                        <div class="timeline-content">
-                            <h3>Разработка</h3>
-                            <p>В конце 1950-х годов ČKD Tatra приступила к разработке новой модели T3 на замену тяжёлому T2. Первый прототип построен в 1960 году, серийное производство для Чехословакии началось в 1962 году.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">1963</div>
-                        <div class="timeline-content">
-                            <h3>Первые поставки в СССР</h3>
-                            <p>Первые вагоны T3SU прибыли в Москву в 1963 году. Модификация SU отличалась от базовой T3 закрытой кабиной водителя, адаптацией к холоду и двухдверной компоновкой (позже появились трёхдверные).</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">1963–1987</div>
-                        <div class="timeline-content">
-                            <h3>Массовые поставки</h3>
-                            <p>За 24 года в СССР было поставлено 11 368 вагонов T3SU — в Москву и ещё 33 города. С 1976 года поставлялись преимущественно трёхдверные версии.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">1990-е — 2000-е</div>
-                        <div class="timeline-content">
-                            <h3>Закат и модернизация</h3>
-                            <p>С распадом СССР поставки прекратились. Многие вагоны были модернизированы (T3M, T3R.P и др.) и продолжают работу. В Москве последний T3SU с пассажирами прошёл в 2009 году. Вагон № 5993 отреставрирован Музеем транспорта Москвы.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="highlight-box" style="margin-top: 1.5rem;">
-                    <p><strong>Интересный факт:</strong> Всего в мире было выпущено более 14 000 вагонов семейства Tatra T3, что делает его вторым по массовости трамваем в истории после советского КТМ-5.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
-                <span class="card-icon">🎨</span>
-                <h2>Особенности конструкции</h2>
-            </div>
-            <div class="card-content">
-                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
-                    <div class="feature-item">
-                        <h3>Футуристичный дизайн</h3>
-                        <p>Передняя и задняя маски кузова выполнены из стеклопластика — новомодного в 1950-х материала. Обтекаемая форма с закруглёнными углами обеспечивала свободное прохождение кривых двумя встречными вагонами.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>Адаптация для СССР</h3>
-                        <p>Модификация SU получила полностью изолированную отапливаемую кабину водителя, усиленную систему отопления (нагреватели под сиденьями) и изменённую планировку салона (2+1 вместо 1+1).</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>Технические решения</h3>
-                        <p>Четыре тяговых двигателя TE 022 общей мощностью 160 кВт, реостатно-контакторная система управления, пружинная подвеска с резинометаллическими элементами. Конструкционная скорость — 65 км/ч.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>Эволюция модели</h3>
-                        <p>Ранние T3SU (до 1976) — двухдверные, с 36 сиденьями. Позже появились трёхдверные версии. Менялись фары, указатели маршрута, форма сидений. Последние вагоны пришли в 1987 году.</p>
-                    </div>
-                </div>
-                <div class="highlight-box" style="margin-top: 1rem;">
-                    <p>🎉 <strong>Символ эпохи:</strong> Tatra T3SU — один из самых узнаваемых трамваев СССР. В 1970–1980-х годах он был неотъемлемой частью городского ландшафта Москвы и других городов. Вагон № 5993 стал музейным экспонатом.</p>
-                </div>
-            </div>
-        </section>
-
+        <!-- Фотогалерея -->
         <section id="gallery" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+            <div class="card-header">
                 <span class="card-icon">📸</span>
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/Tatra_T3SU_mus.jpg" alt="Tatra T3SU в музее" onerror="this.src='img/no-photo.png'">
-                        <div class="gallery-caption">Tatra T3SU № 5993 в Музее Транспорта Москвы</div>
-                        <p style="text-align: center; margin-top: 0.3rem; color: var(--text-secondary);">📸: pfandrom</p>
+                <div class="photo-gallery">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Tatra_T3SU_mus.jpg" alt="Tatra T3SU в музее" onclick="openGalleryModal(this.src, 'Tatra T3SU № 5993 в Музее Транспорта Москвы')" onerror="this.src='https://via.placeholder.com/600x400?text=Tatra+T3SU'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Tatra T3SU № 5993</a>
+                            <p class="photo-desc">Экспонат 1987 года.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 11 октября 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/Tatra_T3SU_int.jpg" alt="Интерьер Tatra T3SU" onerror="this.src='img/no-photo.png'">
-                        <div class="gallery-caption">Салон трамвая Tatra T3SU</div>
-                        <p style="text-align: center; margin-top: 0.3rem; color: var(--text-secondary);">📸: pfandrom</p>
+
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Tatra_T3SU_int.jpg" alt="Интерьер Tatra T3SU" onclick="openGalleryModal(this.src, 'Салон трамвая Tatra T3SU')" onerror="this.src='https://via.placeholder.com/600x400?text=Салон'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Салон трамвая</a>
+                            <p class="photo-desc">Внутреннее убранство.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 11 октября 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/Tatra_T3SU_tabl.jpg" alt="Табличка Tatra T3SU" onerror="this.src='img/no-photo.png'">
-                        <div class="gallery-caption">Табличка об экспонате</div>
-                        <p style="text-align: center; margin-top: 0.3rem; color: var(--text-secondary);">📸: pfandrom</p>
+
+                    <!-- Фото 3 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Tatra_T3SU_tabl.jpg" alt="Табличка Tatra T3SU" onclick="openGalleryModal(this.src, 'Табличка об экспонате')" onerror="this.src='https://via.placeholder.com/600x400?text=Табличка'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Табличка об экспонате</a>
+                            <p class="photo-desc">Музейная информация.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 11 октября 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
+        <!-- Цитата -->
         <section class="quote-section">
             <div class="quote-container">
                 <p class="quote-text">«Трамвай Tatra T3SU — символ целой эпохи в истории транспорта Москвы. В 1970–1980-х годах эти вагоны стали неотъемлемой частью городского ландшафта и добросовестно служили столице несколько десятков лет».</p>
@@ -227,45 +293,43 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
-                        <li><a href="Локомотивы.html">Локомотивы</a></li>
-                        <li><a href="Электровозы.html">Электровозы</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
+                        <li><a href="city_transport.html">Городской транспорт</a></li>
+                        <li><a href="Трамваи.html">Трамваи</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
-                    <p>✉️ <a href="https://t.me/andreimetro1289">Предложка</a></p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
-                <p class="footer-note">Tatra T3SU — «Легенда СССР»</p>
+                <p class="footer-note">Tatra T3SU (1987) — «Легенда СССР»</p>
             </div>
         </div>
     </footer>
 
     <div class="scroll-top">↑</div>
 
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
             function animateCounters() {
-                const targets = { buildYear: 1963, maxSpeed: 65, power: 160 };
+                const targets = { buildYear: 1987, maxSpeed: 65, power: 160 };
                 let current = { buildYear: 0, maxSpeed: 0, power: 0 };
                 const yearEl = document.getElementById('buildYear');
                 const speedEl = document.getElementById('maxSpeed');
                 const powerEl = document.getElementById('power');
-                
-                // ИСПРАВЛЕНИЕ: вернули операторы || в условие
                 if (!yearEl || !speedEl || !powerEl) return;
                 
                 const interval = setInterval(function() {
@@ -278,9 +342,9 @@
                     }
                     if (current.maxSpeed < targets.maxSpeed) {
                         current.maxSpeed += Math.ceil(targets.maxSpeed / 50);
-                         if (current.maxSpeed > targets.maxSpeed) current.maxSpeed = targets.maxSpeed;
+                        if (current.maxSpeed > targets.maxSpeed) current.maxSpeed = targets.maxSpeed;
                         speedEl.textContent = current.maxSpeed;
-                        allFinished = false; 
+                        allFinished = false;
                     }
                     if (current.power < targets.power) {
                         current.power += Math.ceil(targets.power / 50);
@@ -292,23 +356,6 @@
                 }, 30);
             }
             animateCounters();
-
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    if (content && img) {
-                        // ИСПРАВЛЕНИЕ: добавили обратные кавычки для шаблонной строки
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
         });
     </script>
 </body>

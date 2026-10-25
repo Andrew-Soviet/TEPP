@@ -15,13 +15,33 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
     <header>
         <div class="header-container">
             <h1>Музей Транспорта Москвы</h1>
             <p class="subtitle">Постоянная экспозиция в гараже Константина Мельникова</p>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
                     <li><a href="Музеи_транспорта.html">🏛️ Музеи</a></li>
                     <li><a href="#about">О музее</a></li>
                     <li><a href="#video">Видео</a></li>
@@ -88,6 +108,7 @@
                 <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">
                     🎬 Видеообзор постоянной экспозиции
                 </p>
+            </div>
         </section>
 
         <!-- 1 этаж -->
@@ -151,9 +172,8 @@
                     <thead><tr><th>№</th><th>Модель</th><th>Подробнее</th></tr></thead>
                     <tbody>
                         <tr><td>35</td><td>Конка 1872 года</td><td><a href="Конка_1872_года_35.html">Подробнее →</a></td></tr>
-                        <tr><td>932</td><td>БФ 1927 года</td><td>Единственный отреставрированный в мире</td></tr>
-                        <tr><td>—</td><td>R1 (Russia One) 2014</td><td>Опытный трёхсекционный низкопольный</td></tr>
-                        <tr><td>б/н</td><td>71-410</td><td>—</td></tr>
+                        <tr><td>932</td><td>БФ 1927 года</td><td><a href="«Бесфонарный»_№932.html">Подробнее →</a></td></tr>
+                        <tr><td>б/н</td><td>Russia One(R1)</td><td><a href="Type_R1_maket.html">Подробнее →</a></td></tr>
                         <tr><td>1075</td><td>МТВ-82</td><td><a href="МТВ-82 №1075.html">Подробнее →</a></td></tr>
                         <tr><td>3130</td><td>Двухосный моторный СВАРЗ</td><td><a href="Двухосный моторный СВАРЗ №3130.html">Подробнее →</a></td></tr>
                         <tr><td>5993</td><td>Tatra T3SU</td><td><a href="Tatra T3SU №5993.html">Подробнее →</a></td></tr>
@@ -367,32 +387,50 @@
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/Город_Для_Людей_Музей.jpg" alt="Раздел «Город для людей»" onerror="this.src='https://via.placeholder.com/800x500?text=Город+для+людей'">
-                        <div class="gallery-caption">Раздел «Город для людей. 1950–1960-е»</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary); font-size:0.85rem;">📸 new.mtmuseum.ru</p>
+                <div class="photo-gallery">
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Город_Для_Людей_Музей.jpg" alt="Раздел «Город для людей»" onclick="openGalleryModal(this.src, 'Раздел «Город для людей. 1950–1960-е»')" onerror="this.src='https://via.placeholder.com/600x400?text=Город+для+людей'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Город для людей</a>
+                            <p class="photo-desc">Раздел «Город для людей. 1950–1960-е».</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 new.mtmuseum.ru</span>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="gallery-item">
-                        <img src="img/Устройство_Станции.jpg" alt="Раздел «Устройство станции»" onerror="this.src='https://via.placeholder.com/800x500?text=Устройство+станции'">
-                        <div class="gallery-caption">Раздел «Устройство станции» — макет станции метро</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary); font-size:0.85rem;">📸 new.mtmuseum.ru</p>
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Устройство_Станции.jpg" alt="Раздел «Устройство станции»" onclick="openGalleryModal(this.src, 'Раздел «Устройство станции» — макет станции метро')" onerror="this.src='https://via.placeholder.com/600x400?text=Устройство+станции'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Устройство станции</a>
+                            <p class="photo-desc">Макет станции метро.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 new.mtmuseum.ru</span>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="gallery-item">
-                        <img src="img/R1.jpg" alt="Трамвай R1" onerror="this.src='https://via.placeholder.com/800x500?text=Трамвай+R1'">
-                        <div class="gallery-caption">Трамвай R1 (Russia One) — опытный образец 2014 года</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary); font-size:0.85rem;">📸 new.mtmuseum.ru</p>
-                    </div>
-
-                    <div class="gallery-item">
-                        <img src="img/Еж3&81-717.jpg" alt="Вагоны Еж3 и 81-717" onerror="this.src='https://via.placeholder.com/800x500?text=Еж3+и+81-717'">
-                        <div class="gallery-caption">Вагоны Еж3 и 81-717 в экспозиции музея</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary); font-size:0.85rem;">📸 Dmitry Zaharov</p>
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/8535_museum.jpg" alt="Вагон 81-717" onclick="openGalleryModal(this.src, 'Вагон 81-717 в экспозиции музея')" onerror="this.src='https://via.placeholder.com/600x400?text=Еж3+и+81-717'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">81-717 №8535</a>
+                            <p class="photo-desc">Вагон в экспозиции музея.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
@@ -455,14 +493,14 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
                         <li><a href="Музеи_транспорта.html">Музеи</a></li>
                         <li><a href="https://mtmuseum.ru/" target="_blank" rel="noopener">Официальный сайт</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -475,15 +513,15 @@
     <div class="scroll-top">↑</div>
 
     <!-- Модалка галереи -->
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Счётчики — запускаются при появлении в зоне видимости

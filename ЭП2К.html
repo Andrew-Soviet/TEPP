@@ -14,13 +14,33 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
     <header>
         <div class="header-container">
             <h1>ЭП2К</h1>
             <p class="subtitle">Первый серийный пассажирский электровоз постоянного тока российского производства</p>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
                     <li><a href="Железная_дорога.html">🚂 Железные дороги</a></li>
                     <li><a href="Локомотивы.html">🔧 Локомотивы</a></li>
                     <li><a href="Электровозы.html">⚡ Электровозы</a></li>
@@ -528,29 +548,78 @@
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/ЭП2К_500.jpg" alt="ЭП2К-500" onerror="this.src='https://via.placeholder.com/800x500?text=ЭП2К-500'">
-                        <div class="gallery-caption">ЭП2К-500 — юбилейный электровоз «НАС 500!»</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Kostyan_Piterski(railgallery.ru)</p>
+                <div class="photo-gallery">
+
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/ЭП2К_500.jpg" alt="ЭП2К-500" 
+                                 onclick="openGalleryModal(this.src, 'ЭП2К-500 — юбилейный электровоз «НАС 500!»')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=ЭП2К-500'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="https://railgallery.ru/photo/257185/?lang=ru" class="photo-object" target="_blank" rel="noopener">ЭП2К-500</a>
+                            <p class="photo-desc">Юбилейный электровоз «НАС 500!».</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2024 г.</span>
+                                <span class="photo-author">📸 <a href="https://railgallery.ru/photo/257185/?lang=ru" target="_blank" rel="noopener">Kostyan_Piterski</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/ЭП2К_156.jpg" alt="ЭП2К-156 с поездом Волгоград" onerror="this.src='https://via.placeholder.com/800x500?text=ЭП2К-156'">
-                        <div class="gallery-caption">ЭП2К-156 — "80 лет Победы"</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Maxim(railgallery.ru)</p>
+
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/ЭП2К_156.jpg" alt="ЭП2К-156 с поездом Волгоград" 
+                                 onclick="openGalleryModal(this.src, 'ЭП2К-156 — «80 лет Победы»')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=ЭП2К-156'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="https://railgallery.ru/photo/317557/" class="photo-object" target="_blank" rel="noopener">ЭП2К-156</a>
+                            <p class="photo-desc">Тематическая окраска «80 лет Победы».</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2025 г.</span>
+                                <span class="photo-author">📸 <a href="https://railgallery.ru/photo/317557/" target="_blank" rel="noopener">Maxim</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/EP2K_376-030-388-238-320.jpg" alt="ЭП2К-020" onerror="this.src='https://via.placeholder.com/800x500?text=ЭП2К-020'">
-                        <div class="gallery-caption">Пять вариантов расцветки локомотивов ЭП2К</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Ulan3(railgallery.ru)</p>
+
+                    <!-- Фото 3 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/EP2K-376%2C_030%2C_388%2C_238_and_320_in_different_liveries.jpg/1920px-EP2K-376%2C_030%2C_388%2C_238_and_320_in_different_liveries.jpg" alt="Различные окраски ЭП2К" 
+                                 onclick="openGalleryModal(this.src, 'Пять вариантов расцветки локомотивов ЭП2К')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=ЭП2К+расцветки'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="https://railgallery.ru/photo/255768/" class="photo-object" target="_blank" rel="noopener">Различные окраски</a>
+                            <p class="photo-desc">Пять вариантов расцветки локомотивов ЭП2К.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 7 сентября 2024 г.</span>
+                                <span class="photo-author">📸 <a href="https://railgallery.ru/photo/255768/" target="_blank" rel="noopener">Ulan3</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/EP2K_001.jpg" alt="ЭП2К-001" onerror="this.src='https://via.placeholder.com/800x500?text=ЭП2К-500+новый+дизайн'">
-                        <div class="gallery-caption">ЭП2К-001 опытный</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Моль(railgallery.ru)</p>
+
+                    <!-- Фото 4 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/EP2K_001.jpg" alt="ЭП2К-001" 
+                                 onclick="openGalleryModal(this.src, 'ЭП2К-001 опытный')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=ЭП2К-001'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="https://railgallery.ru/photo/113827/?vid=2998" class="photo-object" target="_blank" rel="noopener">ЭП2К-001</a>
+                            <p class="photo-desc">Первый опытный электровоз.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2006 г.</span>
+                                <span class="photo-author">📸 <a href="https://railgallery.ru/photo/113827/?vid=2998" target="_blank" rel="noopener">Моль</a></span>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
@@ -574,15 +643,14 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
                         <li><a href="Локомотивы.html">Локомотивы</a></li>
                         <li><a href="Электровозы.html">Электровозы</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
-                    <p>📧 info@tepp.ru</p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -601,8 +669,8 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             function animateCounters() {
@@ -640,16 +708,36 @@
             const modal = document.getElementById('galleryModal');
             const content = document.getElementById('galleryModalContent');
             const close = document.getElementById('galleryModalClose');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
+
+            document.querySelectorAll('.photo-thumb img').forEach(img => {
+                img.addEventListener('click', function() {
+                    const card = this.closest('.photo-card');
+                    if (!card) return;
+
+                    const src = this.src;
+                    const alt = this.alt;
+                    const object = card.querySelector('.photo-object')?.textContent || '';
+                    const desc = card.querySelector('.photo-desc')?.textContent || '';
+                    const date = card.querySelector('.photo-date')?.textContent || '';
+                    const author = card.querySelector('.photo-author')?.textContent || '';
+
+                    if (content) {
+                        content.innerHTML = `
+                            <img src="${src}" style="max-width:100%; max-height:60vh; border-radius:10px; display:block; margin: 0 auto;" alt="${alt}">
+                            <div style="margin-top: 1.5rem; text-align: left; padding: 0 1rem;">
+                                <h3 style="color: var(--accent-color); margin-bottom: 0.5rem; font-size: 1.4rem;">${object}</h3>
+                                <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1rem;">${desc}</p>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-secondary); border-top: 1px solid var(--border-color); padding-top: 1rem;">
+                                    <span>${date}</span>
+                                    <span>${author}</span>
+                                </div>
+                            </div>
+                        `;
                         modal.classList.add('active');
                     }
                 });
             });
+
             close?.addEventListener('click', () => modal.classList.remove('active'));
             window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
         });

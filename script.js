@@ -92,9 +92,9 @@ function initSettings() {
                 <span class="settings-label">🌈 Тема</span>
                 <div class="settings-options" id="themeOptions">
                     <button class="theme-btn" data-theme="light" onclick="setTheme('light')" title="Светлая">☀️</button>
-                    <button class="theme-btn" data-theme="dark" onclick="setTheme('dark')" title="Тёмная">❄️</button>
+                    <button class="theme-btn" data-theme="dark" onclick="setTheme('dark')" title="Тёмная">🌇</button>
                     <button class="theme-btn" data-theme="poster" onclick="setTheme('poster')" title="Советский плакат">☭</button>
-                    <button class="theme-btn" data-theme="night" onclick="setTheme('night')" title="Ночной поезд">👨‍💻</button>
+                    <button class="theme-btn" data-theme="night" onclick="setTheme('night')" title="Матрица">👨‍💻</button>
                 </div>
             </div>
             <div class="settings-section">

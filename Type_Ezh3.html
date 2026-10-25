@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Вагоны типа Еж3 (81-710) — последние «Ёжики» советского метро — ТЭПП</title>
+    <meta name="description" content="История, характеристики, эксплуатация и сохранившиеся экземпляры вагонов типа Еж3 (81-710).">
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -14,13 +15,36 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <!-- ================= ШАПКА ================= -->
     <header>
         <div class="header-container">
-            <h1>Вагоны типа Еж3 (81-710)</h1>
-            <p class="subtitle">Последние «Ёжики» советского метро (1973–1977)</p>
+            <div class="logo">
+                <h1>Вагоны типа Еж3 (81-710)</h1>
+                <p class="subtitle">Последние «Ёжики» советского метро (1973–1977)</p>
+            </div>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
                     <li><a href="Главная_метро.html">🚇 Метро</a></li>
                     <li><a href="ps_mosmetro.html">🚆 Подвижной состав</a></li>
                     <li><a href="#about">О вагоне</a></li>
@@ -63,7 +87,7 @@
 
         <!-- Производство -->
         <section id="production" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);">
+            <div class="card-header">
                 <span class="card-icon">🏭</span>
                 <h2>Производство</h2>
             </div>
@@ -121,43 +145,45 @@
 
         <!-- Технические характеристики -->
         <section id="specs" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+            <div class="card-header">
                 <span class="card-icon">⚙️</span>
                 <h2>Технические характеристики</h2>
             </div>
             <div class="card-content">
-                <table>
-                    <caption>Основные технические данные вагонов типа Еж3</caption>
-                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
-                    <tbody>
-                        <tr><td>Тип токосъёма</td><td>Нижний боковой контактный рельс</td></tr>
-                        <tr><td>Род тока и напряжение</td><td>750 В постоянного тока</td></tr>
-                        <tr><td>Типы вагонов</td><td>Мг (часть после КВР — Мп)</td></tr>
-                        <tr><td>Число вагонов в составе</td><td>2—8</td></tr>
-                        <tr><td>Композиция состава</td><td>2—8×Мг (Мг + 0..6×Мп + Мг после КВР)</td></tr>
-                        <tr><td>Количество дверей</td><td>2×4</td></tr>
-                        <tr><td>Полная вместимость</td><td>264 чел.</td></tr>
-                        <tr><td>Сидячих мест</td><td>42</td></tr>
-                        <tr><td>Длина вагона</td><td>19 166 мм</td></tr>
-                        <tr><td>Ширина</td><td>2 700 мм</td></tr>
-                        <tr><td>Высота</td><td>3 695 мм</td></tr>
-                        <tr><td>Диаметр колёс</td><td>780 мм</td></tr>
-                        <tr><td>Осевая формула</td><td>20—20</td></tr>
-                        <tr><td>Ширина колеи</td><td>1 520 мм</td></tr>
-                        <tr><td>Масса тары</td><td>31,7 т</td></tr>
-                        <tr><td>Материал вагона</td><td>Сталь</td></tr>
-                        <tr><td>Тип ТЭД</td><td>ДК-116А, коллекторные</td></tr>
-                        <tr><td>Мощность ТЭД</td><td>4 × 72 кВт</td></tr>
-                        <tr><td>Макс. скорость</td><td>90 км/ч</td></tr>
-                        <tr><td>Макс. служебная скорость</td><td>80 км/ч</td></tr>
-                        <tr><td>Ускорение при пуске</td><td>1,1 м/с²</td></tr>
-                        <tr><td>Ускорение при торможении</td><td>1,2 м/с²</td></tr>
-                        <tr><td>Электрическое торможение</td><td>Реостатное</td></tr>
-                        <tr><td>Система тяги</td><td>Реостатно-контакторная</td></tr>
-                        <tr><td>Тормозная система</td><td>Электрическая, пневматическая</td></tr>
-                        <tr><td>Системы безопасности</td><td>АЛС-АРС</td></tr>
-                    </tbody>
-                </table>
+                <div style="overflow-x: auto;">
+                    <table>
+                        <caption>Основные технические данные вагонов типа Еж3</caption>
+                        <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                        <tbody>
+                            <tr><td>Тип токосъёма</td><td>Нижний боковой контактный рельс</td></tr>
+                            <tr><td>Род тока и напряжение</td><td>750 В постоянного тока</td></tr>
+                            <tr><td>Типы вагонов</td><td>Мг (часть после КВР — Мп)</td></tr>
+                            <tr><td>Число вагонов в составе</td><td>2—8</td></tr>
+                            <tr><td>Композиция состава</td><td>2—8×Мг (Мг + 0..6×Мп + Мг после КВР)</td></tr>
+                            <tr><td>Количество дверей</td><td>2×4</td></tr>
+                            <tr><td>Полная вместимость</td><td>264 чел.</td></tr>
+                            <tr><td>Сидячих мест</td><td>42</td></tr>
+                            <tr><td>Длина вагона</td><td>19 166 мм</td></tr>
+                            <tr><td>Ширина</td><td>2 700 мм</td></tr>
+                            <tr><td>Высота</td><td>3 695 мм</td></tr>
+                            <tr><td>Диаметр колёс</td><td>780 мм</td></tr>
+                            <tr><td>Осевая формула</td><td>20—20</td></tr>
+                            <tr><td>Ширина колеи</td><td>1 520 мм</td></tr>
+                            <tr><td>Масса тары</td><td>31,7 т</td></tr>
+                            <tr><td>Материал вагона</td><td>Сталь</td></tr>
+                            <tr><td>Тип ТЭД</td><td>ДК-116А, коллекторные</td></tr>
+                            <tr><td>Мощность ТЭД</td><td>4 × 72 кВт</td></tr>
+                            <tr><td>Макс. скорость</td><td>90 км/ч</td></tr>
+                            <tr><td>Макс. служебная скорость</td><td>80 км/ч</td></tr>
+                            <tr><td>Ускорение при пуске</td><td>1,1 м/с²</td></tr>
+                            <tr><td>Ускорение при торможении</td><td>1,2 м/с²</td></tr>
+                            <tr><td>Электрическое торможение</td><td>Реостатное</td></tr>
+                            <tr><td>Система тяги</td><td>Реостатно-контакторная</td></tr>
+                            <tr><td>Тормозная система</td><td>Электрическая, пневматическая</td></tr>
+                            <tr><td>Системы безопасности</td><td>АЛС-АРС</td></tr>
+                        </tbody>
+                    </table>
+                </div>
 
                 <h3 style="margin: 1.5rem 0 1rem;">Ключевые отличия от Еж</h3>
                 <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
@@ -191,7 +217,7 @@
 
         <!-- Конструкция -->
         <section id="design" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+            <div class="card-header">
                 <span class="card-icon">🔧</span>
                 <h2>Конструкция</h2>
             </div>
@@ -224,7 +250,7 @@
 
         <!-- Интерьер -->
         <section id="interior" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #6A0DAD 0%, #8E44AD 100%);">
+            <div class="card-header">
                 <span class="card-icon">💺</span>
                 <h2>Интерьер</h2>
             </div>
@@ -244,7 +270,7 @@
 
         <!-- Эксплуатация -->
         <section id="operation" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+            <div class="card-header">
                 <span class="card-icon">🌍</span>
                 <h2>Эксплуатация</h2>
             </div>
@@ -253,18 +279,20 @@
                 <p>В 1978 году начата эксплуатация Еж3 и Ем-508Т на Горьковско-Замоскворецкой линии. Для формирования поездов в депо «Сокол» поступили головные Еж3 и промежуточные Ем-508Т, часть которых (из-за нехватки уже не выпускавшихся Еж3) была переоборудована в головные.</p>
                 <p>С августа 1980 по октябрь 1983 года все вагоны, по мере прихода новых 81-717/714, постепенно передавались в депо «Планерное». За счёт этого в конце сентября 1983 года Ждановско-Краснопресненская линия была переведена на 8-вагонные поезда.</p>
 
-                <table>
-                    <caption>География эксплуатации</caption>
-                    <thead><tr><th>Метрополитен</th><th>Годы</th><th>Примечание</th></tr></thead>
-                    <tbody>
-                        <tr><td>Московский</td><td>1973 — 11 июня 2020</td><td>Регулярная эксплуатация прекращена; «Новогодний поезд» сохранён в резерве</td></tr>
-                        <tr><td>Харьковский</td><td>с 1970-х — н. в.</td><td>Холодногорско-Заводская линия; есть модернизированные</td></tr>
-                        <tr><td>Тбилисский</td><td>1970-е — н. в.</td><td>Ахметели-Варкетилская линия; все вагоны модернизированы (Еж3М)</td></tr>
-                        <tr><td>Киевский</td><td>1973—1979</td><td>Электровоз 5823; затем передан в Харьков</td></tr>
-                        <tr><td>Ташкентский</td><td>1977—1985</td><td>Переданы в Тбилиси и Баку в 1986—87</td></tr>
-                        <tr><td>Бакинский</td><td>1973—2008</td><td>Полностью списаны к 2009; один вагон — в ретро-поезде</td></tr>
-                    </tbody>
-                </table>
+                <div style="overflow-x: auto;">
+                    <table>
+                        <caption>География эксплуатации</caption>
+                        <thead><tr><th>Метрополитен</th><th>Годы</th><th>Примечание</th></tr></thead>
+                        <tbody>
+                            <tr><td>Московский</td><td>1973 — 11 июня 2020</td><td>Регулярная эксплуатация прекращена; «Новогодний поезд» сохранён в резерве</td></tr>
+                            <tr><td>Харьковский</td><td>с 1970-х — н. в.</td><td>Холодногорско-Заводская линия; есть модернизированные</td></tr>
+                            <tr><td>Тбилисский</td><td>1970-е — н. в.</td><td>Ахметели-Варкетилская линия; все вагоны модернизированы (Еж3М)</td></tr>
+                            <tr><td>Киевский</td><td>1973—1979</td><td>Электровоз 5823; затем передан в Харьков</td></tr>
+                            <tr><td>Ташкентский</td><td>1977—1985</td><td>Переданы в Тбилиси и Баку в 1986—87</td></tr>
+                            <tr><td>Бакинский</td><td>1973—2008</td><td>Полностью списаны к 2009; один вагон — в ретро-поезде</td></tr>
+                        </tbody>
+                    </table>
+                </div>
 
                 <div class="highlight-box" style="margin-top: 1.5rem;">
                     <p><strong>К 2020 году</strong> в регулярной эксплуатации вагоны Еж3 остались только в метрополитенах <strong>Харькова</strong> и <strong>Тбилиси</strong>. В Тбилиси все вагоны прошли модернизацию (Еж3М) с установкой масок головных вагонов и окраской по типу пражских 81-71М.</p>
@@ -272,71 +300,100 @@
             </div>
         </section>
 
-<!-- Тематические поезда -->
-<section id="named" class="section-card">
-    <div class="card-header" style="background: linear-gradient(135deg, #E74C3C 0%, #C0392B 100%);">
-        <span class="card-icon">🎨</span>
-        <h2>Тематические поезда</h2>
-    </div>
-    <div class="card-content">
-        <p>Вагоны Еж3 и Ем-508Т становились основой для именных составов Московского метрополитена.</p>
-
-        <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-            <div class="feature-item">
-                <h3>🎄 Новогодний поезд</h3>
-                <p>Праздничный состав, курсировавший по разным линиям с 2016 года.</p>
-                <a href="ng_Ezh3.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Подробнее →</a>
+        <!-- Тематические поезда -->
+        <section id="named" class="section-card">
+            <div class="card-header">
+                <span class="card-icon">🎨</span>
+                <h2>Тематические поезда</h2>
             </div>
+            <div class="card-content">
+                <p>Вагоны Еж3 и Ем-508Т становились основой для именных составов Московского метрополитена.</p>
 
-            <div class="feature-item">
-                <h3>🩸 Спасибо, донор!</h3>
-                <p>Тематический поезд о донорстве крови, запущенный в июле 2019 года.</p>
-                <a href="404_file_dont_found.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Подробнее →</a>
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div class="feature-item">
+                        <h3>🎄 Новогодний поезд</h3>
+                        <p>Праздничный состав, курсировавший по разным линиям с 2016 года.</p>
+                        <a href="ng_Ezh3.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Подробнее →</a>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>🩸 Спасибо, донор!</h3>
+                        <p>Тематический поезд о донорстве крови, запущенный в июле 2019 года.</p>
+                        <a href="404_file_dont_found.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Подробнее →</a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <!-- Галерея -->
         <section id="gallery" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+            <div class="card-header">
                 <span class="card-icon">📸</span>
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/Type_Ezh3_5807.jpg" alt="Вагон типа Еж3" onerror="this.src='https://via.placeholder.com/800x500?text=Вагон+Еж3'">
-                        <div class="gallery-caption">Вагон типа Еж3, исторический вид</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Pokrishkin</p>
+                <div class="photo-gallery">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="https://trehgranka.metro.ru/images/vagon/vagon_ej3/ej3_5956_vykhino.jpg" alt="Вагон типа Еж3 № 5956" onclick="openGalleryModal(this.src, 'Вагон типа Еж3 № 5956 в депо Выхино')" onerror="this.src='https://via.placeholder.com/600x400?text=Вагон+Еж3+5956'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон № 5956</a>
+                            <p class="photo-desc">В депо Выхино.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2000-е</span>
+                                <span class="photo-author">📸 <a href="https://trehgranka.metro.ru/images/vagon/vagon_ej3/ej3_5956_vykhino.jpg" target="_blank" rel="noopener">Quantum REX</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/5824_int.jpg" alt="Салон 5824" onerror="this.src='https://via.placeholder.com/800x500?text=Салон+5824'">
-                        <div class="gallery-caption">Салон вагона №5824</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 pfandrom</p>
+
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="https://trehgranka.metro.ru/images/vagon/vagon_ej3/ej3_5569_salon.jpg" alt="Салон вагона Еж3 № 5569" onclick="openGalleryModal(this.src, 'Салон вагона Еж3 № 5569')" onerror="this.src='https://via.placeholder.com/600x400?text=Салон+Еж3+5569'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Салон вагона № 5569</a>
+                            <p class="photo-desc">Внутреннее убранство.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2000-е</span>
+                                <span class="photo-author">📸 <a href="https://trehgranka.metro.ru/images/vagon/vagon_ej3/ej3_5569_salon.jpg" target="_blank" rel="noopener">Крысуцкий</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/Type_Ezh3_5751_int.jpg" alt="Вагон типа Еж3" onerror="this.src='https://via.placeholder.com/800x500?text=Вагон+Еж3'">
-                        <div class="gallery-caption">Салон вагона Еж3 № 5751. Салон, вид назад</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Pokrishkin</p>
+
+                    <!-- Фото 3 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="https://trehgranka.metro.ru/images/vagon/vagon_ej3/ej3_5878_tab.jpg" alt="Табличка вагона Еж3 № 5878" onclick="openGalleryModal(this.src, 'Заводская табличка вагона Еж3 № 5878')" onerror="this.src='https://via.placeholder.com/600x400?text=Табличка+Еж3'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Табличка вагона № 5878</a>
+                            <p class="photo-desc">Заводская табличка.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2000-е</span>
+                                <span class="photo-author">📸 <a href="https://trehgranka.metro.ru/images/vagon/vagon_ej3/ej3_5878_tab.jpg" target="_blank" rel="noopener">Quantum REX</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/Type_Ezh3_tablichka.jpg" alt="хоть кто-нибудь это читает?" onerror="this.src='https://via.placeholder.com/800x500?text=Вагон+Еж3'">
-                        <div class="gallery-caption">Салон метровагона типа Еж3 №5985. Заводская табличка</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Михаил Ждунов</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="img/Type_Ezh3_int_new.jpg" alt="Салон 5824" onerror="this.src='https://via.placeholder.com/800x500?text=Салон+5824'">
-                        <div class="gallery-caption">Салон вагона №5828 после капитального ремонта</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Константин Юрьевич</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="img/Type_Ezh3_5879.jpg" alt="Вагон типа Еж3" onerror="this.src='https://via.placeholder.com/800x500?text=Вагон+Еж3'">
-                        <div class="gallery-caption">Перегон "Текстильщики" — "Волгоградский проспект" и Еж3 №5879</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 kosteg(transphoto.org)</p>
+
+                    <!-- Фото 4 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="https://trehgranka.metro.ru/images/vagon/vagon_ej3/ej3_5675_kab_01.jpg" alt="Кабина вагона Еж3 № 5675" onclick="openGalleryModal(this.src, 'Кабина машиниста вагона Еж3 № 5675')" onerror="this.src='https://via.placeholder.com/600x400?text=Кабина+Еж3'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Кабина вагона № 5675</a>
+                            <p class="photo-desc">Рабочее место машиниста.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2000-е</span>
+                                <span class="photo-author">📸 <a href="https://trehgranka.metro.ru/images/vagon/vagon_ej3/ej3_5675_kab_01.jpg" target="_blank" rel="noopener">Quantum REX</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
@@ -360,7 +417,7 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
                         <li><a href="ps_mosmetro.html">Подвижной состав</a></li>
                         <li><a href="Главная_метро.html">Метрополитены</a></li>
                         <li><a href="Живая_история_Мск_метро.html">Живая история</a></li>
@@ -368,8 +425,7 @@
                 </div>
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
-                    <p>📧 info@tepp.ru</p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -381,15 +437,15 @@
 
     <div class="scroll-top">↑</div>
 
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Счётчики
@@ -400,6 +456,7 @@
                 const yearsEl = document.getElementById('ezh3Years');
                 const citiesEl = document.getElementById('ezh3Cities');
                 if (!builtEl || !yearsEl || !citiesEl) return;
+                
                 const interval = setInterval(function() {
                     let allFinished = true;
                     if (current.ezh3Built < targets.ezh3Built) {
@@ -424,23 +481,6 @@
                 }, 30);
             }
             animateCounters();
-
-            // Галерея
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
         });
     </script>
 </body>

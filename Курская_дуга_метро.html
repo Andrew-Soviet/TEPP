@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Курская дуга (тематический поезд) — Московский метрополитен</title>
+    <title>Курская дуга (тематический поезд) — ТЭПП</title>
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -14,13 +14,33 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
     <header>
         <div class="header-container">
             <h1>Курская дуга</h1>
             <p class="subtitle">Тематический поезд Московского метрополитена, посвящённый 60-летию Курской битвы</p>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
                     <li><a href="Главная_метро.html">🚇 Метро</a></li>
                     <li><a href="Главная_Страница_Мосметро.html">🏙️ Мосметро</a></li>
                     <li><a href="#about">О поезде</a></li>
@@ -195,19 +215,38 @@
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/Курская дуга внешка.jpg" alt="Курская дуга на станции Охотный ряд" onerror="this.src='https://via.placeholder.com/1000x600?text=Курская+дуга'">
-                        <div class="gallery-caption">Поезд «Курская дуга» на станции «Охотный ряд».</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 LAZdriver</p>
+                <div class="photo-gallery">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Курская дуга внешка.jpg" alt="Курская дуга на станции Охотный ряд" onclick="openGalleryModal(this.src, 'Поезд «Курская дуга» на станции «Охотный ряд»')" onerror="this.src='https://via.placeholder.com/600x400?text=Курская+дуга'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">«Курская дуга» на станции</a>
+                            <p class="photo-desc">Поезд на станции «Охотный ряд».</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 29 марта 2019 года</span>
+                                <span class="photo-author">📸 <a href="https://transphoto.org/photo/1735113/">driver 0588</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/Курская Дуга_салон.jpg" alt="Салон вагона Курская дуга" onerror="this.src='https://via.placeholder.com/1000x600?text=Салон+Курская+дуга'">
-                        <div class="gallery-caption">Салон одного из вагонов «Курская дуга».</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 mos.ru</p>
+
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="https://www.mos.ru/upload/newsfeed/newsfeed/%D0%9A%D1%83%D1%80%D1%81%D0%BA%D0%B0%D1%8F%20%D0%94%D1%83%D0%B3%D0%B0_2.JPG" alt="Салон вагона Курская дуга" onclick="openGalleryModal(this.src, 'Салон одного из вагонов «Курская дуга»')" onerror="this.src='https://via.placeholder.com/600x400?text=Салон+Курская+дуга'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="https://www.mos.ru/news/item/108698073/" target="_blank" rel="noopener" class="photo-object">Салон вагона</a>
+                            <p class="photo-desc">Внутреннее убранство тематического поезда.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2003-2019</span>
+                                <span class="photo-author">📸 <a href="https://www.mos.ru/news/item/7911073/" target="_blank" rel="noopener">mos.ru</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
@@ -231,7 +270,7 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
                         <li><a href="Главная_метро.html">Метрополитены</a></li>
                         <li><a href="Главная_Страница_Мосметро.html">Московский метрополитен</a></li>
                         <li><a href="Красная_Стрела.html">Красная стрела</a></li>
@@ -239,7 +278,7 @@
                 </div>
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -251,15 +290,15 @@
 
     <div class="scroll-top">↑</div>
 
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Счётчики
@@ -295,22 +334,18 @@
             }
             animateCounters();
 
-            // Галерея
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+            // Стандартная функция для галереи
+            window.openGalleryModal = function(src, caption) {
+                const modal = document.getElementById('galleryModal');
+                const content = document.getElementById('galleryModalContent');
+                if (modal && content) {
+                    content.innerHTML = `
+                        <img src="${src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${caption}">
+                        <p style="text-align:center; margin-top:1rem; font-size:1.1rem;">${caption}</p>
+                    `;
+                    modal.classList.add('active');
+                }
+            };
         });
     </script>
 </body>

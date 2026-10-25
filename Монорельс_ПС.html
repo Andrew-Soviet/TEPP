@@ -14,13 +14,33 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
     <header>
         <div class="header-container">
             <h1>Подвижной состав Монорельса</h1>
             <p class="subtitle">От опытных макетов до серийных вагонов ЭПС</p>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
                     <li><a href="Главная_метро.html">🚇 Метро</a></li>
                     <li><a href="Монорельс_история.html">🚝 История монорельса</a></li>
                     <li><a href="#maket">Макет</a></li>
@@ -66,10 +86,19 @@
             <div class="card-content">
                 <p class="card-description">Первый макет вагона монорельса был создан в Московском институте теплотехники (МИТ) для отработки конструкции и компоновки.</p>
                 
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/макет монорельсика.jpg" alt="Макет вагона монорельса" onerror="this.src='https://via.placeholder.com/800x500?text=Макет+монорельса'">
-                        <div class="gallery-caption">Макет вагона на территории ТЧ-1. Фото: Назаров Сергей</div>
+                <div class="photo-gallery">
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/макет монорельсика.jpg" alt="Макет вагона монорельса" onclick="openGalleryModal(this.src, 'Макет вагона на территории ТЧ-1')" onerror="this.src='https://via.placeholder.com/600x400?text=Макет+монорельса'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Макет вагона</a>
+                            <p class="photo-desc">На территории ТЧ-1.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2000-е</span>
+                                <span class="photo-author">📸 Назаров Сергей</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -112,10 +141,19 @@
                     </div>
                 </div>
 
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); margin-top: 1.5rem;">
-                    <div class="gallery-item">
-                        <img src="img/Intamin P30.jpg" alt="Опытный состав Intamin P30" onerror="this.src='https://via.placeholder.com/800x500?text=Intamin+P30'">
-                        <div class="gallery-caption">Опытный состав Intamin P30. Фото: Михаил_123</div>
+                <div class="photo-gallery" style="margin-top: 1.5rem;">
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Intamin P30.jpg" alt="Опытный состав Intamin P30" onclick="openGalleryModal(this.src, 'Опытный состав Intamin P30')" onerror="this.src='https://via.placeholder.com/600x400?text=Intamin+P30'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Опытный состав Intamin P30</a>
+                            <p class="photo-desc">На тестовой линии.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2000-е</span>
+                                <span class="photo-author">📸 Михаил_123</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -166,10 +204,19 @@
                     </tbody>
                 </table>
 
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); margin-top: 1.5rem;">
-                    <div class="gallery-item">
-                        <img src="img/ЭПС 01.jpg" alt="Состав ЭПС на разворотном кольце" onerror="this.src='https://via.placeholder.com/800x500?text=ЭПС'">
-                        <div class="gallery-caption">Состав на разворотном кольце. Фото: ЭР200</div>
+                <div class="photo-gallery" style="margin-top: 1.5rem;">
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/ЭПС 01.jpg" alt="Состав ЭПС на разворотном кольце" onclick="openGalleryModal(this.src, 'Состав на разворотном кольце')" onerror="this.src='https://via.placeholder.com/600x400?text=ЭПС'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Состав ЭПС</a>
+                            <p class="photo-desc">На разворотном кольце.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2008+</span>
+                                <span class="photo-author">📸 ЭР200</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -236,24 +283,48 @@
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/макет монорельсика.jpg" alt="Макет вагона" onerror="this.src='https://via.placeholder.com/600x400?text=Макет'">
-                        <div class="gallery-caption">Макет вагона на территории ТЧ-1. Фото: Назаров Сергей</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Назаров Сергей(transphoto)</p>
+                <div class="photo-gallery">
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/макет монорельсика.jpg" alt="Макет вагона" onclick="openGalleryModal(this.src, 'Макет вагона на территории ТЧ-1')" onerror="this.src='https://via.placeholder.com/600x400?text=Макет'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Макет вагона</a>
+                            <p class="photo-desc">На территории ТЧ-1.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 12 июня 2012 года</span>
+                                <span class="photo-author">📸 <a href="https://transphoto.org/photo/507137/">xrds2009</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/Intamin P30.jpg" alt="Intamin P30" onerror="this.src='https://via.placeholder.com/600x400?text=Intamin+P30'">
-                        <div class="gallery-caption">Опытный состав Intamin P30. Фото: Михаил_123</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Михаил_123(transphoto)</p>
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Intamin P30.jpg" alt="Intamin P30" onclick="openGalleryModal(this.src, 'Опытный состав Intamin P30')" onerror="this.src='https://via.placeholder.com/600x400?text=Intamin+P30'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Intamin P30</a>
+                            <p class="photo-desc">Опытный состав.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2000 год</span>
+                                <span class="photo-author">📸 <a href="https://wiki.nashtransport.ru/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0_%D0%9C%D0%9C%D0%A2%D0%A1_%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BF%D0%BE%D0%BB%D0%B8%D0%B3%D0%BE%D0%BD_2.jpg">Intamin Transportation</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/ЭПС 01.jpg" alt="ЭПС на разворотном кольце" onerror="this.src='https://via.placeholder.com/600x400?text=ЭПС'">
-                        <div class="gallery-caption">Состав на разворотном кольце.</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 ЭР200(transphoto)</p>
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/ЭПС 01.jpg" alt="ЭПС на разворотном кольце" onclick="openGalleryModal(this.src, 'Состав на разворотном кольце')" onerror="this.src='https://via.placeholder.com/600x400?text=ЭПС'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">ЭПС</a>
+                            <p class="photo-desc">На разворотном кольце.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 8 мая 2012 года</span>
+                                <span class="photo-author">📸 <a href="https://transphoto.org/photo/498395/">ЭР200</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
@@ -277,7 +348,7 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
                         <li><a href="Монорельс_история.html">История монорельса</a></li>
                         <li><a href="Главная_метро.html">Метрополитены</a></li>
                         <li><a href="Главная_Страница_Мосметро.html">Московский метрополитен</a></li>
@@ -285,8 +356,7 @@
                 </div>
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
-                    <p>📧 info@tepp.ru</p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -298,15 +368,15 @@
 
     <div class="scroll-top">↑</div>
 
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Счётчики
@@ -342,22 +412,18 @@
             }
             animateCounters();
 
-            // Галерея
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+            // Стандартная функция для галереи
+            window.openGalleryModal = function(src, caption) {
+                const modal = document.getElementById('galleryModal');
+                const content = document.getElementById('galleryModalContent');
+                if (modal && content) {
+                    content.innerHTML = `
+                        <img src="${src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${caption}">
+                        <p style="text-align:center; margin-top:1rem; font-size:1.1rem;">${caption}</p>
+                    `;
+                    modal.classList.add('active');
+                }
+            };
         });
     </script>
 </body>

@@ -14,13 +14,33 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
     <header>
         <div class="header-container">
             <h1>Люблинско-Дмитровская линия (ЛДЛ)</h1>
             <p class="subtitle">Десятая линия Московского метрополитена — история и уникальные поезда</p>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
                     <li><a href="Главная_метро.html">🚇 Метро</a></li>
                     <li><a href="Главная_Страница_Мосметро.html">🏙️ Мосметро</a></li>
                     <li><a href="#about">О линии</a></li>
@@ -33,55 +53,56 @@
     </header>
 
     <main>
-<!-- Герой-секция -->
-<section id="about" class="hero">
-    <div class="hero-content">
-        <h2>Люблинско-Дмитровская линия</h2>
-        <p class="hero-text">Люблинско-Дмитровская линия (ЛДЛ) — десятая линия Московского метрополитена, открытая <strong>28 декабря 1995 года</strong>. Она соединила центр города с юго-восточными и северными районами Москвы. Сегодня это одна из самых протяжённых линий столичной подземки.</p>
-        <p class="hero-text">На линии можно встретить уникальные экземпляры подвижного состава: вагоны с необычными элементами салона, именные поезда и редкие модификации номерных.</p>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Люблинско-Дмитровская линия</h2>
+                <p class="hero-text">Люблинско-Дмитровская линия (ЛДЛ) — десятая линия Московского метрополитена, открытая <strong>28 декабря 1995 года</strong>. Она соединила центр города с юго-восточными и северными районами Москвы. Сегодня это одна из самых протяжённых линий столичной подземки.</p>
+                <p class="hero-text">На линии можно встретить уникальные экземпляры подвижного состава: вагоны с необычными элементами салона, именные поезда и редкие модификации номерных.</p>
 
-        <div class="stats-container">
-            <div class="stat-item">
-                <div class="counter-number" id="ldlYear">0</div>
-                <div class="stat-label">год открытия</div>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="ldlYear">0</div>
+                        <div class="stat-label">год открытия</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="ldlStations">0</div>
+                        <div class="stat-label">станций</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="ldlUnique">0</div>
+                        <div class="stat-label">уникальных составов</div>
+                    </div>
+                </div>
             </div>
-            <div class="stat-item">
-                <div class="counter-number" id="ldlStations">0</div>
-                <div class="stat-label">станций</div>
-            </div>
-            <div class="stat-item">
-                <div class="counter-number" id="ldlUnique">0</div>
-                <div class="stat-label">уникальных составов</div>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
+
         <!-- Общая информация -->
-<!-- Общая информация -->
-<section class="section-card">
-    <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
-        <span class="card-icon">🚇</span>
-        <h2>Общая информация</h2>
-    </div>
-    <div class="card-content">
-        <table>
-            <caption>Основные параметры Люблинско-Дмитровской линии</caption>
-            <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
-            <tbody>
-                <tr><td>Дата открытия</td><td>28 декабря 1995 года</td></tr>
-                <tr><td>Длина</td><td>43,9 км</td></tr>
-                <tr><td>Количество станций</td><td>26</td></tr>
-                <tr><td>Цвет на схеме</td><td>🟢 Салатовый</td></tr>
-                <tr><td>Первые станции</td><td>«Чкаловская» — «Волжская» (6 станций)</td></tr>
-                <tr><td>Название до 2007</td><td>Люблинская линия</td></tr>
-            </tbody>
-        </table>
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+                <span class="card-icon">🚇</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Основные параметры Люблинско-Дмитровской линии</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Дата открытия</td><td>28 декабря 1995 года</td></tr>
+                        <tr><td>Длина</td><td>43,9 км</td></tr>
+                        <tr><td>Количество станций</td><td>26</td></tr>
+                        <tr><td>Цвет на схеме</td><td>🟢 Салатовый</td></tr>
+                        <tr><td>Первые станции</td><td>«Чкаловская» — «Волжская» (6 станций)</td></tr>
+                        <tr><td>Название до 2007</td><td>Люблинская линия</td></tr>
+                    </tbody>
+                </table>
 
-        <div class="highlight-box" style="margin-top: 1.5rem;">
-            <p>⭐ <strong>Интересный факт:</strong> Люблинско-Дмитровская линия — первая линия, открытая в постсоветской России (28 декабря 1995 года). Она соединяет юго-восточные и северные районы Москвы.</p>
-        </div>
-    </div>
-</section>
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p>⭐ <strong>Интересный факт:</strong> Люблинско-Дмитровская линия — первая линия, открытая в постсоветской России (28 декабря 1995 года). Она соединяет юго-восточные и северные районы Москвы.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- История линии -->
         <section id="history" class="section-card">
             <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
@@ -297,28 +318,47 @@
             </div>
         </section>
 
-<!-- Фотогалерея -->
-<section id="gallery" class="section-card">
-    <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
-        <span class="card-icon">📸</span>
-        <h2>Фотогалерея</h2>
-    </div>
-    <div class="card-content">
-        <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-            <div class="gallery-item">
-                <img src="img/Yauza_LDL.jpg" alt="Яуза на Люблинско-Дмитровской линии" onerror="this.src='https://via.placeholder.com/800x500?text=Яуза+ЛДЛ'">
-                <div class="gallery-caption">Яуза на Люблинско-Дмитровской линии</div>
-                <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📷 Андрей Дем (TransPhoto)</p>
+        <!-- Фотогалерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
             </div>
-            <div class="gallery-item">
-                <img src="img/Oka_LDL.jpg" alt="Ока на Люблинско-Дмитровской линии" onerror="this.src='https://via.placeholder.com/800x500?text=Ока+ЛДЛ'">
-                <div class="gallery-caption">Ока на Люблинско-Дмитровской линии</div>
-                <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📷 Lasselan (TransPhoto)</p>
+            <div class="card-content">
+                <div class="photo-gallery">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Type_Yauza_0033_LDL.jpg" alt="Яуза на Люблинско-Дмитровской линии" onclick="openGalleryModal(this.src, 'Яуза на Люблинско-Дмитровской линии')" onerror="this.src='https://via.placeholder.com/600x400?text=Яуза+ЛДЛ'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Яуза на ЛДЛ</a>
+                            <p class="photo-desc">Поезд серии «Яуза» на линии.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2 декабря 2011 года</span>
+                                <span class="photo-author">📸 <a href="https://transphoto.org/photo/452926/">ER2-1017</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Oka_LDL.jpg" alt="Ока на Люблинско-Дмитровской линии" onclick="openGalleryModal(this.src, 'Ока на Люблинско-Дмитровской линии')" onerror="this.src='https://via.placeholder.com/600x400?text=Ока+ЛДЛ'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Ока на ЛДЛ</a>
+                            <p class="photo-desc">Поезд серии «Ока» на линии.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 16 сентября 2016 года</span>
+                                <span class="photo-author">📸 <a href="https://transphoto.org/photo/954921/">Lasselan</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
-        </div>
-        <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
-    </div>
-</section>
+        </section>
 
         <!-- Цитата -->
         <section class="quote-section">
@@ -340,7 +380,7 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
                         <li><a href="Главная_метро.html">Метрополитены</a></li>
                         <li><a href="Главная_Страница_Мосметро.html">Московский метрополитен</a></li>
                         <li><a href="Живая_история_Мск_метро.html">Живая история</a></li>
@@ -348,8 +388,7 @@
                 </div>
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
-                    <p>📧 info@tepp.ru</p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -361,7 +400,7 @@
 
     <div class="scroll-top">↑</div>
 
-    <div class="modal" id="comingSoonModal">
+    <div class="modal" id="comingSoonModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="modalClose">&times;</span>
             <div class="modal-body">
@@ -372,8 +411,8 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             function animateLdlCounters() {

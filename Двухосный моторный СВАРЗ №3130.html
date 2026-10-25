@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Двухосный моторный СВАРЗ № 3130 — грузовая крановая платформа</title>
+    <title>Двухосный моторный СВАРЗ № 3130 — грузовая крановая платформа — ТЭПП</title>
+    <meta name="description" content="История, характеристики и фотографии двухосной моторной грузовой платформы СВАРЗ № 3130.">
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -14,19 +15,38 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
     <header>
         <div class="header-container">
             <h1>СВАРЗ № 3130</h1>
             <p class="subtitle">Двухосный моторный — грузовая крановая платформа 1932 года</p>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
-                    <li><a href="Железная_дорога.html">🚂 Железные дороги</a></li>
-                    <li><a href="Локомотивы.html">🔧 Локомотивы</a></li>
-                    <li><a href="Электровозы.html">⚡ Электровозы</a></li>
-                    <li><a href="#about">О платформе</a></li>
-                    <li><a href="#history">История</a></li>
-                    <li><a href="#gallery">Фото</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
+                    <li><a href="city_transport.html">🚌 Наземный транспорт</a></li>
+                    <li><a href="Трамваи.html">🚋 Трамваи</a></li>
+                    <li><a href="ps_tram.html">🚊 Подвижной состав</a></li>
+                    <li><a href="СВАРЗ.html">🏭 СВАРЗ</a></li>
+                    <li><a href="#about" class="active">СВАРЗ № 3130</a></li>
                 </ul>
             </nav>
         </div>
@@ -36,8 +56,9 @@
         <section id="about" class="hero">
             <div class="hero-content">
                 <h2>Двухосный моторный СВАРЗ № 3130</h2>
-                <p class="hero-text">Моторная грузовая платформа с краном, построенная Сокольническим вагоноремонтным заводом (СВАРЗ) в 1932 году. Использовалась для перевозки тяжёлых и крупногабаритных трамвайных частей на ремонтные базы.</p>
-                <p class="hero-text">Оснащена ручной крановой установкой на 1,5 тонны и имеет грузоподъёмность 8 тонн. Ходовая часть — на свободных осях. В настоящее время — музейный экспонат Музея транспорта Москвы.</p>
+                <p class="hero-text">Моторная грузовая платформа с краном, построенная Сокольническим вагоноремонтным заводом (СВАРЗ) в 1932 году.</p>
+                <p class="hero-text">Грузоподъёмность — 8 тонн. Оснащена ручной крановой установкой на 1,5 тонны. Ходовая часть на свободных осях.</p>
+                
                 <div class="stats-container">
                     <div class="stat-item">
                         <div class="counter-number" id="buildYear">0</div>
@@ -55,173 +76,153 @@
             </div>
         </section>
 
-        <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
-                <span class="card-icon">🏗️</span>
-                <h2>Общая информация</h2>
-            </div>
-            <div class="card-content">
-                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
-                    <div class="feature-item">
-                        <h3>🏭 Производство</h3>
-                        <p><strong>Завод-изготовитель:</strong> Сокольнический вагоноремонтный завод (СВАРЗ)</p>
-                        <p><strong>Год постройки:</strong> 1932</p>
-                        <p><strong>Тип:</strong> двухосная моторная грузовая платформа</p>
-                        <p><strong>Назначение:</strong> перевозка тяжёлых трамвайных частей</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>📍 Эксплуатация</h3>
-                        <p><strong>Первый владелец:</strong> Трамвайное депо имени Н.Э. Баумана</p>
-                        <p><strong>Затем:</strong> Краснопресненское депо (1998–2000)</p>
-                        <p><strong>Коллекция:</strong> Исторические трамваи (2000–2022) → Музей Транспорта Москвы</p>
-                        <p><strong>Текущее состояние:</strong> не эксплуатируется, музейный</p>
-                    </div>
-                </div>
-                <div class="highlight-box" style="margin-top: 1.5rem;">
-                    <p>⭐ <strong>Уникальность:</strong> К концу 1920-х годов московскому трамвайному хозяйству отчаянно не хватало грузовых автомобилей для перевозки тяжёлых трамвайных частей. СВАРЗ разработал специальный двухосный грузовой трамвай с ручным краном. До 1932 года построили шесть таких платформ, которые поступили во все московские депо, кроме Краснопресненского.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
-                <span class="card-icon">⚙️</span>
-                <h2>Технические характеристики</h2>
-            </div>
-            <div class="card-content">
-                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
-                    <div class="feature-item">
-                        <h3>Основные параметры</h3>
-                        <p><strong>Грузоподъёмность:</strong> 8 тонн</p>
-                        <p><strong>Крановая установка:</strong> ручная, на 1,5 тонны</p>
-                        <p><strong>Осевая формула:</strong> двухосная</p>
-                        <p><strong>Ходовая часть:</strong> на свободных осях</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>Конструкция</h3>
-                        <p><strong>Тип:</strong> моторная грузовая платформа</p>
-                        <p><strong>Токоприёмник:</strong> складывающийся</p>
-                        <p><strong>Размеры (со сложенным токоприёмником):</strong> 8840 × 2144 × 3595 мм (Д × Ш × В)</p>
-                        <p><strong>Кран:</strong> ручной, поворотный</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section id="history" class="section-card">
             <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
                 <span class="card-icon">📜</span>
-                <h2>История</h2>
+                <h2>История и паспортные данные</h2>
             </div>
             <div class="card-content">
-                <div class="timeline" style="padding: 1rem 0;">
-                    <div class="timeline-item">
-                        <div class="timeline-date">1928–1932</div>
-                        <div class="timeline-content">
-                            <h3>Создание платформы</h3>
-                            <p>К концу 1920-х годов московское трамвайное хозяйство восстанавливалось после разрухи. Грузовых автомобилей для перевозки тяжёлых трамвайных частей не хватало. В 1928 году Сокольнический вагоноремонтный завод разработал специальный двухосный грузовой трамвай с ручной крановой установкой на 1,5 тонны. До 1932 года построили шесть таких платформ с грузоподъёмностью 8 тонн.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">1932</div>
-                        <div class="timeline-content">
-                            <h3>Постройка вагона № 3130</h3>
-                            <p>Грузовая крановая платформа выпущена Сокольническим вагоноремонтным заводом в 1932 году и сразу поступила в депо имени Баумана, которое тогда находилось на Новорязанской улице. Платформа имела более простую схему с жёсткими осями по сравнению с аналогом на поворотных тележках Беккера.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">1937–2000</div>
-                        <div class="timeline-content">
-                            <h3>Служба в депо имени Баумана</h3>
-                            <p>В 1937 году трамваи перебазировали в новое Ростокинское депо, которое сохранило имя Н.Э. Баумана. Там грузовая платформа и проработала вплоть до 2000 года, хотя последние несколько лет фактически не использовалась. Вагоны оказались очень удачными и на долгие годы сняли проблему внутренних грузовых перевозок. Только в 1980-х годах их стали заменять автомобилями.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">1998–2000</div>
-                        <div class="timeline-content">
-                            <h3>Краснопресненское депо</h3>
-                            <p>В 1998–2000 годах платформа находилась в Краснопресненском депо.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">2000</div>
-                        <div class="timeline-content">
-                            <h3>Передача в музей</h3>
-                            <p>В 2000 году платформу передали в коллекцию Музея транспорта Москвы. Тогда она числилась под номером 0220.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">09.2022 — 09.2025</div>
-                        <div class="timeline-content">
-                            <h3>Реставрация</h3>
-                            <p>С сентября 2022 по сентябрь 2025 года вагон проходил реставрацию в фирме «ДизЭТ» (город Иваново).</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">09.2025</div>
-                        <div class="timeline-content">
-                            <h3>Возврат исторического номера</h3>
-                            <p>В сентябре 2025 года платформе вернули исторический номер 3130. Тогда же она была передана в Музей Транспорта Москвы.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">14.05.2026</div>
-                        <div class="timeline-content">
-                            <h3>Перевозка в экспозиционный комплекс</h3>
-                            <p>Вагон перевезён с ТРЗ в экспозиционный комплекс Музея транспорта Москвы на Новорязанской улице, 27.</p>
-                        </div>
-                    </div>
+                
+                <!-- Таблица перемещений -->
+                <h3>Хронология службы</h3>
+                <div style="overflow-x: auto; margin-bottom: 1.5rem;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Город</th>
+                                <th>Депо/Парк</th>
+                                <th>№</th>
+                                <th>С...</th>
+                                <th>По...</th>
+                                <th>Примечание</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="4">🇷🇺 Москва</td>
+                                <td>Музей Транспорта Москвы</td>
+                                <td rowspan="2"><strong>3130</strong></td>
+                                <td>09.2025</td>
+                                <td></td>
+                                <td rowspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>01.2022</td>
+                                <td>09.2025</td>
+                            </tr>
+                            <tr>
+                                <td>Коллекция исторических трамваев</td>
+                                <td><strong>0220</strong></td>
+                                <td>2000</td>
+                                <td>01.2022</td>
+                                <td>Крановая платформа</td>
+                            </tr>
+                            <tr>
+                                <td>Трамвайное депо имени Н.Э. Баумана</td>
+                                <td rowspan="2"><strong>3130</strong></td>
+                                <td>09.1994</td>
+                                <td>2000</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>🇷🇺 Москва</td>
+                                <td>Трамваи до 1994 года — прочее</td>
+                                <td>1932</td>
+                                <td>09.1994</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="highlight-box" style="margin-top: 1.5rem;">
-                    <p><strong>Интересный факт:</strong> До настоящего времени сохранились только две крановые платформы СВАРЗ: одна в депо имени Апакова (инв. № 0120), а другая — в коллекции Музея транспорта Москвы (инв. № 3130 / бывший 0220).</p>
+
+                <!-- Таблица параметров -->
+                <h3>Паспортные данные</h3>
+                <table style="margin-bottom: 1.5rem;">
+                    <tbody>
+                        <tr>
+                            <td style="width: 180px;"><strong>Город:</strong></td>
+                            <td>Москва 🇷🇺 Россия</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Депо/Парк:</strong></td>
+                            <td>Музей Транспорта Москвы</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Модель:</strong></td>
+                            <td>Двухосный моторный СВАРЗ</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Построен:</strong></td>
+                            <td>1932</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Текущее состояние:</strong></td>
+                            <td style="background: #fff3cd; color: #856404; font-weight: bold;">Не эксплуатируется</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Назначение:</strong></td>
+                            <td>Музейный</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Примечание:</strong></td>
+                            <td>Крановая платформа</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Текстовая справка -->
+                <div class="highlight-box">
+                    <p><strong>Моторная грузовая платформа с краном.</strong></p>
+                    <p>Ходовая часть на свободных осях.</p>
+                    <p>Построен на заводе СВАРЗ.</p>
+                    <p>Эксплуатировался в депо имени Н.Э. Баумана.</p>
+                    <p>В 1998 — 2000 гг. находился в Краснопресненском депо.</p>
+                    <p>В 09.2022 — 09.2025 гг. проходил реставрацию в фирме "ДизЭТ" (г. Иваново).</p>
+                    <p>14.05.2026 перевезён с ТРЗ в экспозиционный комплекс Музея транспорта Москвы на Новорязанской улице, 27.</p>
                 </div>
             </div>
         </section>
 
-        <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
-                <span class="card-icon">🎨</span>
-                <h2>Особенности конструкции</h2>
-            </div>
-            <div class="card-content">
-                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
-                    <div class="feature-item">
-                        <h3>Крановая установка</h3>
-                        <p>Ручной поворотный кран грузоподъёмностью 1,5 тонны. Предназначен для погрузки и разгрузки тяжёлых трамвайных частей — колёсных пар, тяговых двигателей, тележек.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>Грузовая платформа</h3>
-                        <p>Открытая площадка для размещения грузов массой до 8 тонн. Жёсткие оси обеспечивали простоту конструкции и надёжность в эксплуатации.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>Моторная тяга</h3>
-                        <p>Платформа была самоходной — имела тяговые электродвигатели и складывающийся токоприёмник. Это позволяло ей самостоятельно передвигаться по трамвайным путям между депо и ремонтными базами.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>Эволюция</h3>
-                        <p>Платформы СВАРЗ оказались настолько удачными, что прослужили до 1980-х годов. Их заменили автомобилями только тогда, когда грузовой трамвайный транспорт окончательно уступил место автотранспорту.</p>
-                    </div>
-                </div>
-                <div class="highlight-box" style="margin-top: 1rem;">
-                    <p>🎉 <strong>Символ эпохи:</strong> Крановая моторная платформа СВАРЗ — свидетель эпохи индустриализации московского трамвая. Это не пассажирский вагон, а «рабочая лошадка» городского хозяйства, без которой было бы невозможно поддерживать трамвайную инфраструктуру в рабочем состоянии.</p>
-                </div>
-            </div>
-        </section>
-
+        <!-- Фотогалерея -->
         <section id="gallery" class="section-card">
             <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
                 <span class="card-icon">📸</span>
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/svarz_3130_museum.jpg" alt="СВАРЗ № 3130 в музее" onerror="this.src='https://via.placeholder.com/800x500?text=СВАРЗ+в+музее'">
-                        <div class="gallery-caption">СВАРЗ № 3130 в экспозиции Музея транспорта Москвы</div>
-                        <p style="text-align: center; margin-top: 0.3rem; color: var(--text-secondary);">📸: pfandrom</p>
+                <div class="photo-gallery">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/svarz_3130_museum.jpg" alt="СВАРЗ № 3130 в музее" onclick="openGalleryModal(this.src, 'СВАРЗ № 3130 в экспозиции Музея транспорта Москвы')" onerror="this.src='https://via.placeholder.com/600x400?text=СВАРЗ+в+музее'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">СВАРЗ № 3130 в музее</a>
+                            <p class="photo-desc">В экспозиции Музея транспорта Москвы.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 2 (Табличка) -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/svarz_3130_tabl.jpg" alt="Табличка об экспонате СВАРЗ № 3130" onclick="openGalleryModal(this.src, 'Музейная табличка с описанием экспоната СВАРЗ № 3130')" onerror="this.src='https://via.placeholder.com/600x400?text=Табличка'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Табличка об экспонате</a>
+                            <p class="photo-desc">Музейная информация о платформе.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
@@ -244,15 +245,14 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
-                        <li><a href="Локомотивы.html">Локомотивы</a></li>
-                        <li><a href="Электровозы.html">Электровозы</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
+                        <li><a href="city_transport.html">Наземный транспорт</a></li>
+                        <li><a href="Трамваи.html">Трамваи</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
-                    <p>📧 info@tepp.ru</p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -264,15 +264,15 @@
 
     <div class="scroll-top">↑</div>
 
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             function animateCounters() {
@@ -307,21 +307,17 @@
             }
             animateCounters();
 
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+            window.openGalleryModal = function(src, caption) {
+                const modal = document.getElementById('galleryModal');
+                const content = document.getElementById('galleryModalContent');
+                if (modal && content) {
+                    content.innerHTML = `
+                        <img src="${src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${caption}">
+                        <p style="text-align:center; margin-top:1rem; font-size:1.1rem;">${caption}</p>
+                    `;
+                    modal.classList.add('active');
+                }
+            };
         });
     </script>
 </body>

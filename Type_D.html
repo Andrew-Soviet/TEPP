@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Вагон типа Д — самый массовый довоенный метровагон — ТЭПП</title>
+    <meta name="description" content="История, характеристики и сохранившиеся экземпляры вагонов типа Д — самого массового метровагона СССР.">
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -14,13 +15,36 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <!-- ================= ШАПКА ================= -->
     <header>
         <div class="header-container">
-            <h1>Вагон типа Д</h1>
-            <p class="subtitle">Самый массовый метровагон СССР (1955–1963)</p>
+            <div class="logo">
+                <h1>Вагон типа Д</h1>
+                <p class="subtitle">Самый массовый метровагон СССР (1955–1963)</p>
+            </div>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
                     <li><a href="Главная_метро.html">🚇 Метро</a></li>
                     <li><a href="ps_mosmetro.html">🚆 Подвижной состав</a></li>
                     <li><a href="#about">О вагоне</a></li>
@@ -29,7 +53,7 @@
                     <li><a href="#interior">Интерьер</a></li>
                     <li><a href="#history">История</a></li>
                     <li><a href="#surviving">Сохранившиеся</a></li>
-                    <li><a href="#culture">В культуре</a></li>
+                    <li><a href="#unique">Уникальные</a></li>
                     <li><a href="#gallery">Фото</a></li>
                 </ul>
             </nav>
@@ -63,7 +87,7 @@
 
         <!-- Производство -->
         <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);">
+            <div class="card-header">
                 <span class="card-icon">🏭</span>
                 <h2>Производство</h2>
             </div>
@@ -89,49 +113,51 @@
 
         <!-- Технические характеристики -->
         <section id="specs" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+            <div class="card-header">
                 <span class="card-icon">⚙️</span>
                 <h2>Технические характеристики</h2>
             </div>
             <div class="card-content">
-                <table>
-                    <caption>Основные технические данные вагонов типа Д</caption>
-                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
-                    <tbody>
-                        <tr><td>Тип токосъёма</td><td>Нижний боковой контактный рельс</td></tr>
-                        <tr><td>Род тока и напряжение</td><td>750 В постоянного тока</td></tr>
-                        <tr><td>Типы вагонов</td><td>Мг (моторный головной)</td></tr>
-                        <tr><td>Число вагонов в составе</td><td>3—7</td></tr>
-                        <tr><td>Полная вместимость</td><td>264 человека</td></tr>
-                        <tr><td>Сидячих мест</td><td>44</td></tr>
-                        <tr><td>Длина вагона</td><td>19 166 мм</td></tr>
-                        <tr><td>Ширина</td><td>2 700 мм</td></tr>
-                        <tr><td>Высота</td><td>3 695 мм</td></tr>
-                        <tr><td>Диаметр колёс</td><td>900 мм</td></tr>
-                        <tr><td>Ширина колеи</td><td>1 524 мм</td></tr>
-                        <tr><td>Масса тары</td><td>36,2 т</td></tr>
-                        <tr><td>Выходная мощность</td><td>4 × 72 кВт</td></tr>
-                        <tr><td>Тип ТЭД</td><td>М5: ДК-104Б; УМ5, Д: ДК-104Г</td></tr>
-                        <tr><td>Макс. скорость</td><td>75 км/ч</td></tr>
-                        <tr><td>Макс. служебная скорость</td><td>70 км/ч</td></tr>
-                        <tr><td>Ускорение при пуске</td><td>1,0 м/с²</td></tr>
-                        <tr><td>Ускорение при торможении</td><td>1,0 м/с²</td></tr>
-                        <tr><td>Электрическое торможение</td><td>Реостатное</td></tr>
-                    </tbody>
-                </table>
+                <div style="overflow-x: auto;">
+                    <table>
+                        <caption>Основные технические данные вагонов типа Д</caption>
+                        <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                        <tbody>
+                            <tr><td>Тип токосъёма</td><td>Нижний боковой контактный рельс</td></tr>
+                            <tr><td>Род тока и напряжение</td><td>750 В постоянного тока</td></tr>
+                            <tr><td>Типы вагонов</td><td>Мг (моторный головной)</td></tr>
+                            <tr><td>Число вагонов в составе</td><td>3—7</td></tr>
+                            <tr><td>Полная вместимость</td><td>264 человека</td></tr>
+                            <tr><td>Сидячих мест</td><td>44</td></tr>
+                            <tr><td>Длина вагона</td><td>19 166 мм</td></tr>
+                            <tr><td>Ширина</td><td>2 700 мм</td></tr>
+                            <tr><td>Высота</td><td>3 695 мм</td></tr>
+                            <tr><td>Диаметр колёс</td><td>900 мм</td></tr>
+                            <tr><td>Ширина колеи</td><td>1 524 мм</td></tr>
+                            <tr><td>Масса тары</td><td>36,2 т</td></tr>
+                            <tr><td>Выходная мощность</td><td>4 × 72 кВт</td></tr>
+                            <tr><td>Тип ТЭД</td><td>М5: ДК-104Б; УМ5, Д: ДК-104Г</td></tr>
+                            <tr><td>Макс. скорость</td><td>75 км/ч</td></tr>
+                            <tr><td>Макс. служебная скорость</td><td>70 км/ч</td></tr>
+                            <tr><td>Ускорение при пуске</td><td>1,0 м/с²</td></tr>
+                            <tr><td>Ускорение при торможении</td><td>1,0 м/с²</td></tr>
+                            <tr><td>Электрическое торможение</td><td>Реостатное</td></tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
         <!-- Прототипы М5 -->
         <section id="m5" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+            <div class="card-header">
                 <span class="card-icon">🔬</span>
                 <h2>Прототипы М5 — пробная модель под тип «Д»</h2>
             </div>
             <div class="card-content">
                 <p class="card-description">В <strong>1949 году</strong> Мытищинским машиностроительным заводом были построены <strong>6 опытных вагонов типа М5</strong> с номерами 401—406. Они стали пробной моделью, на которой отрабатывались решения будущего серийного типа Д.</p>
 
-                <div class="highlight-box" style="border-left: 4px solid #8E44AD;">
+                <div class="highlight-box" style="border-left: 4px solid var(--accent-color);">
                     <p><strong>История перенумераций:</strong> За свою историю прототипы М5 неоднократно меняли номера:</p>
                     <ul style="margin: 0.5rem 0 0 1.5rem; color: var(--text-secondary);">
                         <li><strong>1949:</strong> № 401—406</li>
@@ -153,7 +179,7 @@
 
         <!-- Уникальный салон 807-812 -->
         <section id="interior" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+            <div class="card-header">
                 <span class="card-icon">🪑</span>
                 <h2>Уникальный салон вагонов 807—812</h2>
             </div>
@@ -163,21 +189,35 @@
             </div>
         </section>
 
-        <!-- Уникальный салон 807-812 -->
-        <section id="interior" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
-                <span class="card-icon">🪑</span>
-                <h2>Салон вагонов 807—812</h2>
+        <!-- Уникальные экземпляры -->
+        <section id="unique" class="section-card">
+            <div class="card-header">
+                <span class="card-icon">⭐</span>
+                <h2>Уникальные экземпляры</h2>
             </div>
             <div class="card-content">
-                <p class="card-description">Вагоны типа Д с номерами <strong>807—812</strong> — первая партия серийных вагонов 1955 года. Их салон, вероятнее всего, был <strong>идентичен салону прототипов УМ5</strong>, поскольку серийные вагоны типа Д имели лишь незначительные изменения по сравнению с прототипами.</p>
-                <a href="Type_D_807-812.html" class="btn btn-primary" style="margin-top: 1.5rem; display: inline-block; width: 100%; text-align: center;">Подробнее о вагонах 807—812 →</a>
+                <p class="card-description">Среди вагонов типа Д есть несколько экземпляров, которые выделяются своей историей или конструкцией.</p>
+                
+                <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="train-card" style="border-left: 4px solid var(--accent-color);">
+                        <h3>Вагон № 2018</h3>
+                        <p><strong>Первый с гофрами</strong></p>
+                        <p>Построен в 1958 году. Первый в СССР вагон метро с гофрированной обшивкой кузова. Стал прототипом для последующих серий.</p>
+                        <a href="Type_D_2018.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Подробнее →</a>
+                    </div>
+
+                    <div class="train-card" style="border-left: 4px solid var(--accent-color);">
+                        <h3>«Пионер Кунцева»</h3>
+                        <p><strong>Тематический вагон</strong></p>
+                        <p>Вагон, оформленный в честь пионерской организации и района Кунцево. Уникальное тематическое оформление.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- История эксплуатации -->
         <section id="history" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+            <div class="card-header">
                 <span class="card-icon">📜</span>
                 <h2>История эксплуатации</h2>
             </div>
@@ -287,7 +327,7 @@
 
         <!-- Сохранившиеся экземпляры -->
         <section id="surviving" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+            <div class="card-header">
                 <span class="card-icon">🏛️</span>
                 <h2>Сохранившиеся экземпляры</h2>
             </div>
@@ -296,7 +336,7 @@
 
                 <h3 style="margin: 1.5rem 0 1rem;">Москва — 3 вагона</h3>
                 <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                    <div class="train-card" style="border-left: 4px solid var(--accent-color);">
                         <h3>Д № 2037</h3>
                         <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
                             <li>Построен: 02.1959</li>
@@ -315,7 +355,7 @@
 
                 <h3 style="margin: 2rem 0 1rem;">Санкт-Петербург — 3 вагона</h3>
                 <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                    <div class="train-card" style="border-left: 4px solid var(--accent-color);">
                         <h3>Д № 001 (оригинальный № 2000)</h3>
                         <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
                             <li>Построен: 07.1958</li>
@@ -324,13 +364,13 @@
                             <li>До 08.2020 — ТЧ-1; до 2000 — № 2000</li>
                         </ul>
                     </div>
-                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                    <div class="train-card" style="border-left: 4px solid var(--accent-color);">
                         <h3>ЭД-06</h3>
                         <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
                             <li>Электровоз на базе вагона типа Д, музейный вагон</li>
                         </ul>
                     </div>
-                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                    <div class="train-card" style="border-left: 4px solid var(--accent-color);">
                         <h3>Д № 823</h3>
                         <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
                             <li>Построен: 12.1955</li>
@@ -343,7 +383,7 @@
 
                 <h3 style="margin: 2rem 0 1rem;">Киев</h3>
                 <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                    <div class="train-card" style="border-left: 4px solid var(--accent-color);">
                         <h3>Д № 818</h3>
                         <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
                             <li>Построен: 11.1955</li>
@@ -351,7 +391,7 @@
                             <li>Колієвимірювач. До ???? — Санкт-Петербург; до 12.1972 — ТЧ-1</li>
                         </ul>
                     </div>
-                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                    <div class="train-card" style="border-left: 4px solid var(--accent-color);">
                         <h3>Д № 828</h3>
                         <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
                             <li>Построен: 01.1956</li>
@@ -360,7 +400,7 @@
                             <li>До 09.1984 — Санкт-Петербург; до 12.1972 — ТЧ-1</li>
                         </ul>
                     </div>
-                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                    <div class="train-card" style="border-left: 4px solid var(--accent-color);">
                         <h3>Д № 2135</h3>
                         <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
                             <li>Построен: 04.1960</li>
@@ -388,7 +428,7 @@
 
                 <h3 style="margin: 2rem 0 1rem;">Музей «Метро на даче» (Наро-Фоминский округ)</h3>
                 <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                    <div class="train-card" style="border-left: 4px solid var(--accent-color);">
                         <h3>Д № 2368</h3>
                         <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
                             <li>Построен: 08.1962</li>
@@ -402,7 +442,7 @@
 
                 <h3 style="margin: 2rem 0 1rem;">Другие города</h3>
                 <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                    <div class="train-card" style="border-left: 4px solid var(--accent-color);">
                         <h3>Новосибирск — Д № 844</h3>
                         <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
                             <li>Построен: 04.1956</li>
@@ -410,7 +450,7 @@
                             <li>Музей, до 2006 — Ельцовское; до 1985 — Санкт-Петербург</li>
                         </ul>
                     </div>
-                    <div class="train-card" style="border-left: 4px solid #27AE60;">
+                    <div class="train-card" style="border-left: 4px solid var(--accent-color);">
                         <h3>Ташкент — Д № 857</h3>
                         <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
                             <li>Построен: 1956</li>
@@ -434,35 +474,43 @@
 
         <!-- Галерея -->
         <section id="gallery" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+            <div class="card-header">
                 <span class="card-icon">📸</span>
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/Type_D_844.jpg" alt="Вагон № 844" onerror="this.src='https://via.placeholder.com/800x500?text=Вагон+Д+844'">
-                        <div class="gallery-caption">Вагон № 844</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Dmitrii Korobkov(transphoto)</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="img/Type_D_857.jpg" alt="Вагон № 857" onerror="this.src='https://via.placeholder.com/800x500?text=Вагон+Д+844'">
-                        <div class="gallery-caption">Вагон № 857</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Кас(transphoto)</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="img/Type_D_2037.jpg" alt="Вагон № 2037 в Москве" onerror="this.src='https://via.placeholder.com/800x500?text=Вагон+Д+2037'">
-                        <div class="gallery-caption">Вагон № 2037 в Москве — музейный экземпляр</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Transport_moscow(transphoto)</p>
+                <div class="photo-gallery">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="https://trehgranka.metro.ru/images/vagon/vagon_d/d_izmaylovskaya_01.jpg" alt="Вагон Д на станции Измайловская" onclick="openGalleryModal(this.src, 'Вагон типа Д на станции Измайловская')" onerror="this.src='https://via.placeholder.com/600x400?text=Вагон+Д'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон типа Д</a>
+                            <p class="photo-desc">На станции Измайловская.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 1980-е</span>
+                                <span class="photo-author">📸 <a href="https://trehgranka.metro.ru/images/vagon/vagon_d/d_izmaylovskaya_01.jpg" target="_blank" rel="noopener">Трехгранка</a></span>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="gallery-item">
-                        <img src="img/Type_D_2037_int.jpg" alt="Вагон № 2037 в Москве" onerror="this.src='https://via.placeholder.com/800x500?text=Вагон+Д+2037'">
-                        <div class="gallery-caption">Салон вагона №2037</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Subkinov(transphoto)</p>
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="https://trehgranka.metro.ru/images/vagon/vagon_d/d_izmaylovo_salon_1987_01.jpg" alt="Салон вагона типа Д" onclick="openGalleryModal(this.src, 'Салон вагона типа Д (1987 год)')" onerror="this.src='https://via.placeholder.com/600x400?text=Салон+Д'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Салон вагона типа Д</a>
+                            <p class="photo-desc">Внутреннее убранство (1987).</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 1987</span>
+                                <span class="photo-author">📸 <a href="https://trehgranka.metro.ru/images/vagon/vagon_d/d_izmaylovo_salon_1987_01.jpg" target="_blank" rel="noopener">Павел Егереев</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
@@ -486,7 +534,7 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
                         <li><a href="ps_mosmetro.html">Подвижной состав</a></li>
                         <li><a href="Главная_метро.html">Метрополитены</a></li>
                         <li><a href="Живая_история_Мск_метро.html">Живая история</a></li>
@@ -494,8 +542,7 @@
                 </div>
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
-                    <p>📧 info@tepp.ru</p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -507,15 +554,15 @@
 
     <div class="scroll-top">↑</div>
 
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Счётчики
@@ -526,6 +573,7 @@
                 const yearsEl = document.getElementById('dYears');
                 const survivingEl = document.getElementById('dSurviving');
                 if (!builtEl || !yearsEl || !survivingEl) return;
+                
                 const interval = setInterval(function() {
                     let allFinished = true;
                     if (current.dBuilt < targets.dBuilt) {
@@ -550,23 +598,6 @@
                 }, 30);
             }
             animateCounters();
-
-            // Галерея
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
         });
     </script>
 </body>

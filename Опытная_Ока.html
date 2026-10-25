@@ -3,30 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Опытная Ока (81-760/761) — первый поезд семейства — ТЭПП</title>
+    <title>Опытный поезд 81-760/761 — ТЭПП</title>
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Анимированные частицы -->
     <div id="particles-js"></div>
+    
+    <!-- Анимированный градиентный фон -->
     <div class="animated-bg">
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
     <header>
         <div class="header-container">
-            <h1>Опытная Ока (81-760/761)</h1>
-            <p class="subtitle">Первый поезд семейства, открывший новую эру в Московском метро</p>
+            <h1>Опытный поезд 81-760/761</h1>
+            <p class="subtitle">Первый опытный состав «Оки» (2010)</p>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
                     <li><a href="Главная_метро.html">🚇 Метро</a></li>
                     <li><a href="Опытные_составы.html">🔬 Опытные</a></li>
                     <li><a href="#about">О поезде</a></li>
                     <li><a href="#history">История</a></li>
-                    <li><a href="#cars">Вагоны</a></li>
-                    <li><a href="#fate">Судьба</a></li>
+                    <li><a href="#composition">Состав</a></li>
                     <li><a href="#gallery">Фото</a></li>
                 </ul>
             </nav>
@@ -37,10 +59,9 @@
         <!-- Герой-секция -->
         <section id="about" class="hero">
             <div class="hero-content">
-                <h2>Опытная Ока — начало семейства</h2>
-                <p class="hero-text">Опытная Ока была построена в <strong>2010 году</strong>. Этот поезд стал родоначальником всего семейства вагонов 81-760/761 «Ока», которые впоследствии стали одними из самых массовых в Московском метро.</p>
-                <p class="hero-text"><strong>Внимание:</strong> Состав списан в <strong>октябре 2021 года</strong>. Часть вагонов утилизирована, часть ожидает утилизации, часть — доноры запчастей.</p>
-
+                <h2>Опытный поезд 81-760/761</h2>
+                <p class="hero-text">Этот опытный состав стал предшественником серии «Ока». Построен в 2010 году, проходил испытания на линиях Московского метрополитена.</p>
+                
                 <div class="stats-container">
                     <div class="stat-item">
                         <div class="counter-number" id="okaYear">0</div>
@@ -48,11 +69,11 @@
                     </div>
                     <div class="stat-item">
                         <div class="counter-number" id="okaCars">0</div>
-                        <div class="stat-label">вагонов</div>
+                        <div class="stat-label">вагонов в составе</div>
                     </div>
                     <div class="stat-item">
-                        <div class="counter-number" id="okaSurviving">0</div>
-                        <div class="stat-label">сохранилось</div>
+                        <div class="counter-number" id="okaStatus" style="font-size: 1.8rem;">—</div>
+                        <div class="stat-label">статус</div>
                     </div>
                 </div>
             </div>
@@ -61,79 +82,154 @@
         <!-- Общая информация -->
         <section class="section-card">
             <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
-                <span class="card-icon">🚆</span>
+                <span class="card-icon">ℹ️</span>
                 <h2>Общая информация</h2>
             </div>
             <div class="card-content">
                 <table>
-                    <caption>Основные параметры опытной «Оки»</caption>
+                    <caption>Основные параметры поезда</caption>
                     <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
                     <tbody>
-                        <tr><td>Город</td><td>Мытищи 🇷🇺</td></tr>
-                        <tr><td>Депо/Парк</td><td>АО «Метровагонмаш»</td></tr>
-                        <tr><td>Модель</td><td>81-760/761 «Ока» (опытная)</td></tr>
-                        <tr><td>Построен</td><td>04.2010 (головные), 11.2010 (промежуточные)</td></tr>
-                        <tr><td>Текущее состояние</td><td>Списан</td></tr>
-                        <tr><td>Назначение</td><td>Служебный</td></tr>
-                        <tr><td>Списан</td><td>10.2021</td></tr>
+                        <tr><td>Модель</td><td>81-760/761</td></tr>
+                        <tr><td>Год постройки</td><td>2010</td></tr>
+                        <tr><td>Составность</td><td>37001 + 6 × 30001-30006</td></tr>
+                        <tr><td>Текущее состояние</td><td>Вагоны списаны, часть утилизирована, часть ожидает утилизации</td></tr>
                     </tbody>
                 </table>
 
                 <div class="highlight-box" style="margin-top: 1.5rem;">
-                    <h3>Составность</h3>
-                    <p style="font-size: 1.3rem; text-align: center; font-weight: bold; margin-top: 0.5rem;">
-                        37001 — 30001 — 30002 — 37002 + 30003 — 30004 — 30005 — 30006
-                    </p>
-                    <p style="text-align: center; color: var(--text-secondary); margin-top: 0.3rem;">8 вагонов</p>
-                </div>
-
-                <div class="highlight-box" style="margin-top: 1rem; border-left-color: #8E44AD;">
-                    <h3>Особенности</h3>
-                    <ul style="margin: 1rem 0 0 1.5rem;">
-                        <li>Опытный 81-760/761: <strong>отсутствуют форточки</strong></li>
-                        <li>Окрас маски «75 лет Московскому метрополитену» (у 37001)</li>
-                        <li>С 03.2011: установлены светодиодные фары (у 37001)</li>
-                        <li>Двери: белый верх / синий низ</li>
-                        <li>Сварной шов: внешний</li>
-                    </ul>
+                    <h3>Жизненный путь головного вагона 37001</h3>
+                    <p>Этот вагон активно использовался для испытаний и презентаций, а также успел поработать тренажёром и донором запчастей.</p>
                 </div>
             </div>
         </section>
 
-        <!-- История и события -->
+        <!-- Состав по вагонам -->
+        <section id="composition" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+                <span class="card-icon">🚃</span>
+                <h2>Состав по вагонам</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">Детальная информация по каждому вагону опытного состава (построен в 2010 году):</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Вагон</th>
+                            <th>Модель</th>
+                            <th>Построен</th>
+                            <th>Списан</th>
+                            <th>Текущее состояние</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>37001</strong> (головной)</td>
+                            <td>81-760</td>
+                            <td>04.2010</td>
+                            <td>10.2021</td>
+                            <td>Хранение в ТЧ-16 «Митино», ожидает утилизации</td>
+                        </tr>
+                        <tr>
+                            <td><strong>37002</strong> (головной)</td>
+                            <td>81-760</td>
+                            <td>04.2010</td>
+                            <td>10.2021</td>
+                            <td>Утилизирован</td>
+                        </tr>
+                        <tr>
+                            <td><strong>30001</strong> (промежуточный)</td>
+                            <td>81-761</td>
+                            <td>04.2010</td>
+                            <td>10.2021</td>
+                            <td>ТЧ-8 «Варшавское» (донор запчастей)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>30002</strong> (промежуточный)</td>
+                            <td>81-761</td>
+                            <td>11.2010</td>
+                            <td>10.2021</td>
+                            <td>ТЧ-8 «Варшавское» (донор запчастей)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>30003</strong> (промежуточный)</td>
+                            <td>81-761</td>
+                            <td>11.2010</td>
+                            <td>10.2021</td>
+                            <td>Утилизирован (12.2021)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>30004</strong> (промежуточный)</td>
+                            <td>81-761</td>
+                            <td>11.2010</td>
+                            <td>10.2021</td>
+                            <td>Хранение в ТЧ-16 «Митино», ожидает утилизации</td>
+                        </tr>
+                        <tr>
+                            <td><strong>30005</strong> (промежуточный)</td>
+                            <td>81-761</td>
+                            <td>11.2010</td>
+                            <td>10.2021</td>
+                            <td>Утилизирован (05.2022)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>30006</strong> (промежуточный)</td>
+                            <td>81-761</td>
+                            <td>11.2010</td>
+                            <td>10.2021</td>
+                            <td>Хранение в ТЧ-16 «Митино», ожидает утилизации</td>
+                        </tr>
+                        <tr>
+                            <td><strong>37002</strong> (головной)</td>
+                            <td>81-760</td>
+                            <td>04.2010</td>
+                            <td>10.2021</td>
+                            <td>Утилизирован (12.2021)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>Особенности конструкции:</strong> Отсутствуют форточки (установлены кондиционеры); внешний сварной шов. У головных вагонов (37001, 37002): окрас «75 лет Мосметро», с 03.2011 — светодиодные фары.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- История головного вагона 37001 -->
         <section id="history" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
-                <span class="card-icon">📅</span>
-                <h2>История и события</h2>
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">📜</span>
+                <h2>Подробная история вагона 37001</h2>
             </div>
             <div class="card-content">
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-date">30.04.2010</div>
                         <div class="timeline-content">
-                            <h3>Поступил в метрополитен</h3>
-                            <p>Состав поступил в Московский метрополитен на испытания.</p>
+                            <h3>Поступление</h3>
+                            <p>Вагон поступил в Московский метрополитен на испытания.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date">25.05.2010</div>
                         <div class="timeline-content">
-                            <h3>Первая обкатка на линии</h3>
-                            <p>Обкатка по маршруту ТЧ-8 «Варшавское» — «Серпуховская» — ТЧ-8 «Варшавское».</p>
+                            <h3>Первая обкатка</h3>
+                            <p>Начались испытания на линии по маршруту ТЧ-8 «Варшавское» — «Серпуховская» — ТЧ-8 «Варшавское».</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date">09.06.2010</div>
                         <div class="timeline-content">
-                            <h3>Ночная обкатка на Бутовской линии</h3>
+                            <h3>Ночная обкатка</h3>
                             <p>Проведена ночная обкатка на Бутовской линии.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date">19.06.2010</div>
                         <div class="timeline-content">
-                            <h3>Открытие станций «Достоевская» и «Марьина Роща»</h3>
-                            <p>Участвовал в пуске станций на Люблинско-Дмитровской линии.</p>
+                            <h3>Пуск станций</h3>
+                            <p>Вагон участвовал в пуске станций «Достоевская» и «Марьина Роща».</p>
                         </div>
                     </div>
                     <div class="timeline-item">
@@ -144,162 +240,33 @@
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-date">06-08.09.2010</div>
-                        <div class="timeline-content">
-                            <h3>Выставка «ЭкспоСитиТранс — 2010»</h3>
-                            <p>Презентация состава на международной выставке транспортных технологий.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
                         <div class="timeline-date">23.03.2011</div>
                         <div class="timeline-content">
-                            <h3>Презентация для президента</h3>
-                            <p>Презентация состава для президента на заводе «Метровагонмаш».</p>
+                            <h3>Презентация президенту</h3>
+                            <p>Состав был презентован президенту на заводе «Метровагонмаш».</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date">03.2013 — 10.2021</div>
                         <div class="timeline-content">
-                            <h3>Работа в ТЧ-12 «Новогиреево»</h3>
-                            <p>Использовался как тренажёр в депо ТЧ-12 «Новогиреево».</p>
+                            <h3>Работа тренажёром</h3>
+                            <p>Вагон использовался в качестве тренажёра в депо ТЧ-12 «Новогиреево».</p>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Вагоны -->
-        <section id="cars" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
-                <span class="card-icon">🚃</span>
-                <h2>Состав по вагонам</h2>
-            </div>
-            <div class="card-content">
-                <p class="card-description">Детальная информация по каждому вагону опытного состава:</p>
-
-                <h3 style="margin: 1.5rem 0 1rem;">Головной вагон 37001</h3>
-                <table>
-                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
-                    <tbody>
-                        <tr><td>Модель</td><td>81-760</td></tr>
-                        <tr><td>Построен</td><td>04.2010</td></tr>
-                        <tr><td>Поступил в метрополитен</td><td>30.04.2010</td></tr>
-                        <tr><td>Списан</td><td>10.2021</td></tr>
-                        <tr><td>Текущее состояние</td><td>Хранение в ТЧ-16 «Митино», ожидает утилизации</td></tr>
-                        <tr><td>Особенности</td><td>Отсутствуют форточки; окрас «75 лет Мосметро»; с 03.2011 — светодиодные фары</td></tr>
-                    </tbody>
-                </table>
-
-                <h3 style="margin: 1.5rem 0 1rem;">Промежуточный вагон 30001</h3>
-                <table>
-                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
-                    <tbody>
-                        <tr><td>Модель</td><td>81-761</td></tr>
-                        <tr><td>Построен</td><td>04.2010</td></tr>
-                        <tr><td>Поступил в метрополитен</td><td>30.04.2010</td></tr>
-                        <tr><td>Списан</td><td>10.2021</td></tr>
-                        <tr><td>Текущее состояние</td><td>ТЧ-8 «Варшавское» — донор запчастей</td></tr>
-                        <tr><td>Особенности</td><td>Отсутствуют форточки; двери: белый верх / синий низ; сварной шов внешний</td></tr>
-                    </tbody>
-                </table>
-
-                <h3 style="margin: 1.5rem 0 1rem;">Промежуточный вагон 30002</h3>
-                <table>
-                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
-                    <tbody>
-                        <tr><td>Модель</td><td>81-761</td></tr>
-                        <tr><td>Построен</td><td>11.2010</td></tr>
-                        <tr><td>Поступил в метрополитен</td><td>06.12.2010</td></tr>
-                        <tr><td>Списан</td><td>10.2021</td></tr>
-                        <tr><td>Текущее состояние</td><td>ТЧ-8 «Варшавское» — донор запчастей</td></tr>
-                        <tr><td>Особенности</td><td>Отсутствуют форточки; двери: белый верх / синий низ; сварной шов внешний</td></tr>
-                    </tbody>
-                </table>
-
-                <h3 style="margin: 1.5rem 0 1rem;">Промежуточный вагон 30003</h3>
-                <table>
-                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
-                    <tbody>
-                        <tr><td>Модель</td><td>81-761</td></tr>
-                        <tr><td>Построен</td><td>11.2010</td></tr>
-                        <tr><td>Поступил в метрополитен</td><td>06.12.2010</td></tr>
-                        <tr><td>Списан</td><td>10.2021</td></tr>
-                        <tr><td>Утилизирован</td><td>12.2021 (в ТЧ-16 «Митино»)</td></tr>
-                        <tr><td>Особенности</td><td>Отсутствуют форточки; двери: белый верх / синий низ; сварной шов внешний</td></tr>
-                    </tbody>
-                </table>
-
-                <h3 style="margin: 1.5rem 0 1rem;">Промежуточный вагон 30004</h3>
-                <table>
-                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
-                    <tbody>
-                        <tr><td>Модель</td><td>81-761</td></tr>
-                        <tr><td>Построен</td><td>11.2010</td></tr>
-                        <tr><td>Поступил в метрополитен</td><td>06.12.2010</td></tr>
-                        <tr><td>Списан</td><td>10.2021</td></tr>
-                        <tr><td>Текущее состояние</td><td>Хранение в ТЧ-16 «Митино», ожидает утилизации</td></tr>
-                        <tr><td>Особенности</td><td>Отсутствуют форточки; двери: белый верх / синий низ; сварной шов внешний</td></tr>
-                    </tbody>
-                </table>
-
-                <h3 style="margin: 1.5rem 0 1rem;">Промежуточный вагон 30005</h3>
-                <table>
-                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
-                    <tbody>
-                        <tr><td>Модель</td><td>81-761</td></tr>
-                        <tr><td>Построен</td><td>11.2010</td></tr>
-                        <tr><td>Поступил в метрополитен</td><td>06.12.2010</td></tr>
-                        <tr><td>Списан</td><td>10.2021</td></tr>
-                        <tr><td>Утилизирован</td><td>05.2022 (в ТЧ-16 «Митино»)</td></tr>
-                        <tr><td>Особенности</td><td>Отсутствуют форточки; двери: белый верх / синий низ; сварной шов внешний</td></tr>
-                    </tbody>
-                </table>
-
-                <h3 style="margin: 1.5rem 0 1rem;">Промежуточный вагон 30006</h3>
-                <table>
-                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
-                    <tbody>
-                        <tr><td>Модель</td><td>81-761</td></tr>
-                        <tr><td>Построен</td><td>11.2010</td></tr>
-                        <tr><td>Поступил в метрополитен</td><td>06.12.2010</td></tr>
-                        <tr><td>Списан</td><td>10.2021</td></tr>
-                        <tr><td>Текущее состояние</td><td>Хранение в ТЧ-16 «Митино», ожидает утилизации</td></tr>
-                        <tr><td>Особенности</td><td>Отсутствуют форточки; двери: белый верх / синий низ; сварной шов внешний</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- Судьба вагонов -->
-        <section id="fate" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #C0392B 0%, #E74C3C 100%);">
-                <span class="card-icon">⚰️</span>
-                <h2>Судьба вагонов</h2>
-            </div>
-            <div class="card-content">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>№ вагона</th>
-                            <th>Модель</th>
-                            <th>Построен</th>
-                            <th>Списан</th>
-                            <th>Судьба</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td><strong>37001</strong></td><td>81-760</td><td>04.2010</td><td>10.2021</td><td style="color: #E67E22;">ТЧ-16 «Митино» — ожидает утилизации</td></tr>
-                        <tr><td><strong>30001</strong></td><td>81-761</td><td>04.2010</td><td>10.2021</td><td style="color: #3498DB;">ТЧ-8 «Варшавское» — донор запчастей</td></tr>
-                        <tr><td><strong>30002</strong></td><td>81-761</td><td>11.2010</td><td>10.2021</td><td style="color: #3498DB;">ТЧ-8 «Варшавское» — донор запчастей</td></tr>
-                        <tr><td><strong>30003</strong></td><td>81-761</td><td>11.2010</td><td>10.2021</td><td style="color: #C0392B;">Утилизирован (12.2021)</td></tr>
-                        <tr><td><strong>30004</strong></td><td>81-761</td><td>11.2010</td><td>10.2021</td><td style="color: #E67E22;">ТЧ-16 «Митино» — ожидает утилизации</td></tr>
-                        <tr><td><strong>30005</strong></td><td>81-761</td><td>11.2010</td><td>10.2021</td><td style="color: #C0392B;">Утилизирован (05.2022)</td></tr>
-                        <tr><td><strong>30006</strong></td><td>81-761</td><td>11.2010</td><td>10.2021</td><td style="color: #E67E22;">ТЧ-16 «Митино» — ожидает утилизации</td></tr>
-                    </tbody>
-                </table>
-
-                <div class="highlight-box" style="margin-top: 2rem; background: rgba(192, 57, 43, 0.1);">
-                    <p><strong>Текущее состояние:</strong> 37001, 30004, 30006 в ТЧ-16 «Митино» ожидают утилизации. 30001 и 30002 — доноры запчастей в ТЧ-8 «Варшавское». Остальные утилизированы в 2021–2022 годах.</p>
+                    <div class="timeline-item">
+                        <div class="timeline-date">30.10.2021 — 29.03.2022</div>
+                        <div class="timeline-content">
+                            <h3>Донор запчастей</h3>
+                            <p>Находился в ТЧ-3 «Измайлово», где использовался как донор запчастей.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">С 30.03.2022</div>
+                        <div class="timeline-content">
+                            <h3>Ожидание утилизации</h3>
+                            <p>Приблизительно с этой даты находится на хранении в ТЧ-16 «Митино» и ожидает утилизации.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -311,67 +278,60 @@
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/Ока опыт 1.jpg" alt="Опытная Ока во время обкаток" onerror="this.src='https://via.placeholder.com/750x500?text=Ока+обкатки'">
-                        <div class="gallery-caption">Опытная Ока во время в пуска станций "Достоевская" и "Марьина Роща"</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 неизвестен</p>
+                <div class="photo-gallery">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="https://wiki.nashtransport.ru/images/3/3e/81-760-761_%D0%9E%D0%B1%D1%89%D0%B8%D0%B9_%D0%B2%D0%B8%D0%B4.jpg" alt="81-760-761 Общий вид" onclick="openGalleryModal('https://wiki.nashtransport.ru/images/3/3e/81-760-761_%D0%9E%D0%B1%D1%89%D0%B8%D0%B9_%D0%B2%D0%B8%D0%B4.jpg', 'Опытный поезд 81-760/761')" onerror="this.src='https://via.placeholder.com/600x400?text=81-760-761'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="https://wiki.nashtransport.ru/images/3/3e/81-760-761_%D0%9E%D0%B1%D1%89%D0%B8%D0%B9_%D0%B2%D0%B8%D0%B4.jpg" target="_blank" rel="noopener" class="photo-object">Опытный поезд 81-760/761</a>
+                            <p class="photo-desc">Общий вид состава.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 28 апреля 2010 г.</span>
+                                <span class="photo-author">📸 <a href="https://wiki.nashtransport.ru/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:81-760-761_%D0%9E%D0%B1%D1%89%D0%B8%D0%B9_%D0%B2%D0%B8%D0%B4.jpg" target="_blank" rel="noopener">Anakin</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/Ока опыт 2.jpg" alt="Ока на выставке ЭкспоСитиТранс 2010" onerror="this.src='https://via.placeholder.com/750x500?text=Ока+выставка'">
-                        <div class="gallery-caption">Ока на выставке «ЭкспоСитиТранс — 2010»</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸  Шпекавыг</p>
+
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Type_81-760_37002_Expo.jpg" alt="81-760 на ЭкспоСитиТранс" onclick="openGalleryModal('img/81-760_Expo.jpg', 'Поезд на выставке ЭкспоСитиТранс-2010')" onerror="this.src='https://via.placeholder.com/600x400?text=ЭкспоСитиТранс'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="https://transphoto.org/photo/331552/" target="_blank" rel="noopener" class="photo-object">ЭкспоСитиТранс-2010</a>
+                            <p class="photo-desc">МВЦ «Крокус Экспо».</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 6 сентября 2010 г.</span>
+                                <span class="photo-author">📸 <a href="https://transphoto.org/photo/331552/" target="_blank" rel="noopener">Шпекавыг</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/37002_int.jpg" alt="Интерьер вагона 37002" onerror="this.src='https://via.placeholder.com/750x500?text=Интерьер+37002'">
-                        <div class="gallery-caption">Интерьер вагона 37002 опытной Оки</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Mr.Den</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="img/30007.jpg" alt="Интерьер вагона 37002" onerror="this.src='https://via.placeholder.com/750x500?text=Интерьер+37002'">
-                        <div class="gallery-caption">Состав на испытаниях</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Дмитрий Белов  </p>
+
+                    <!-- Фото 3 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/37002_int.jpg" alt="Салон 81-760" onclick="openGalleryModal('img/81-760_Expo_int.jpg', 'Салон опытного поезда')" onerror="this.src='https://via.placeholder.com/600x400?text=Салон'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="https://transphoto.org/photo/331559/" target="_blank" rel="noopener" class="photo-object">Салон состава</a>
+                            <p class="photo-desc">Вид назад.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 6 сентября 2010 г.</span>
+                                <span class="photo-author">📸 <a href="https://transphoto.org/photo/331559/" target="_blank" rel="noopener">Шпекавыг</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
-            </div>
-        </section>
-
-        <!-- Технические характеристики -->
-        <section class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #7F8C8D 0%, #95A5A6 100%);">
-                <span class="card-icon">⚙️</span>
-                <h2>Технические характеристики</h2>
-            </div>
-            <div class="card-content">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Параметр</th>
-                            <th>Значение</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Год постройки</td><td>2010 (04.2010 — головные, 11.2010 — промежуточные)</td></tr>
-                        <tr><td>Завод-изготовитель</td><td>Мытищинский машиностроительный завод (ММЗ)</td></tr>
-                        <tr><td>Модель</td><td>81-760/761 «Ока» (опытная)</td></tr>
-                        <tr><td>Составность</td><td>37001 — 30001 — 30002 — 37002 + 30003–30006</td></tr>
-                        <tr><td>Количество вагонов</td><td>8</td></tr>
-                        <tr><td>Участие в событиях</td><td>Открытие «Достоевской» и «Марьиной Рощи» (19.06.2010)</td></tr>
-                        <tr><td>Выставки</td><td>«ЭкспоСитиТранс — 2010» (06–08.09.2010)</td></tr>
-                        <tr><td>Презентация</td><td>23.03.2011 для президента на заводе «Метровагонмаш»</td></tr>
-                        <tr><td>Списан</td><td>10.2021</td></tr>
-                        <tr><td>Утилизация</td><td>30003 — 12.2021, 30005 — 05.2022</td></tr>
-                        <tr><td>Сохранились</td><td>37001, 30004, 30006 (ТЧ-16), 30001, 30002 (ТЧ-8, доноры)</td></tr>
-                    </tbody>
-                </table>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
         <!-- Цитата -->
         <section class="quote-section">
             <div class="quote-container">
-                <p class="quote-text">«Опытная Ока открыла эру вагонов нового поколения в Московском метро. Именно с неё началось массовое обновление подвижного состава, которое продолжается до сих пор. Сохранить хотя бы один головной вагон — наш долг перед историей».</p>
+                <p class="quote-text">«Это был один из последних опытных поездов. Красивый вагон, жаль, что его утилизировали...»</p>
                 <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
             </div>
         </section>
@@ -385,89 +345,111 @@
                     <p>Транспортная Энциклопедия Постсоветского Пространства</p>
                     <p class="footer-motto">Раздел «Опытные составы»</p>
                 </div>
+                
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
                         <li><a href="Опытные_составы.html">Опытные составы</a></li>
-                        <li><a href="Опытный_Скиф.html">Опытный Скиф</a></li>
-                        <li><a href="Опытная_Яуза_001-005.html">Опытная Яуза</a></li>
+                        <li><a href="Опытная_Ашка.html">Опытная Ашка</a></li>
+                        <li><a href="Опытная_Ешка.html">Опытная Ешка</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
-                    <p>📧 info@tepp.ru</p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
+            
             <div class="footer-bottom">
                 <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
-                <p class="footer-note">Сохраним 37001 и 30001 для истории! #СпастиОку</p>
+                <p class="footer-note">Опытный поезд 81-760/761 — предшественник «Оки»</p>
             </div>
         </div>
     </footer>
 
+    <!-- Кнопка прокрутки вверх -->
     <div class="scroll-top">↑</div>
 
-    <div class="modal" id="galleryModal">
+    <!-- Модальное окно для галереи -->
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <!-- Подключаем библиотеку частиц -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <!-- Подключаем общий JS файл -->
+    <script src="script.js" defer></script>
+    
+    <!-- Дополнительный скрипт для счетчиков -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            function animateCounters() {
-                const targets = { okaYear: 2010, okaCars: 8, okaSurviving: 5 };
-                let current = { okaYear: 0, okaCars: 0, okaSurviving: 0 };
-                const yearEl = document.getElementById('okaYear');
-                const carsEl = document.getElementById('okaCars');
-                const survivingEl = document.getElementById('okaSurviving');
-                if (!yearEl || !carsEl || !survivingEl) return;
+            // Анимация счетчиков
+            function animateOkaCounters() {
+                const targets = {
+                    okaYear: 2010,
+                    okaCars: 7,
+                    okaStatus: 1 // Просто для того, чтобы сработала анимация и текст заменился
+                };
+                
+                let current = {
+                    okaYear: 0,
+                    okaCars: 0,
+                    okaStatus: 0
+                };
+                
+                const yearElement = document.getElementById('okaYear');
+                const carsElement = document.getElementById('okaCars');
+                const statusElement = document.getElementById('okaStatus');
+                
+                if (!yearElement || !carsElement || !statusElement) return;
+                
                 const interval = setInterval(function() {
                     let allFinished = true;
+                    
                     if (current.okaYear < targets.okaYear) {
                         current.okaYear += Math.ceil(targets.okaYear / 50);
                         if (current.okaYear > targets.okaYear) current.okaYear = targets.okaYear;
-                        yearEl.textContent = current.okaYear;
+                        yearElement.textContent = current.okaYear;
                         allFinished = false;
                     }
+                    
                     if (current.okaCars < targets.okaCars) {
                         current.okaCars += 1;
                         if (current.okaCars > targets.okaCars) current.okaCars = targets.okaCars;
-                        carsEl.textContent = current.okaCars;
+                        carsElement.textContent = current.okaCars;
                         allFinished = false;
                     }
-                    if (current.okaSurviving < targets.okaSurviving) {
-                        current.okaSurviving += 1;
-                        if (current.okaSurviving > targets.okaSurviving) current.okaSurviving = targets.okaSurviving;
-                        survivingEl.textContent = current.okaSurviving;
+                    
+                    if (current.okaStatus < targets.okaStatus) {
+                        current.okaStatus += 1;
+                        if (current.okaStatus > targets.okaStatus) current.okaStatus = targets.okaStatus;
+                        statusElement.textContent = 'Списан';
                         allFinished = false;
                     }
+                    
                     if (allFinished) clearInterval(interval);
                 }, 30);
             }
-            animateCounters();
+            
+            animateOkaCounters();
 
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    const author = this.querySelector('p')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p><p style="text-align:center; color:#666;">${author}</p>`;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+            // Стандартная функция для галереи
+            window.openGalleryModal = function(src, caption) {
+                const modal = document.getElementById('galleryModal');
+                const content = document.getElementById('galleryModalContent');
+                if (modal && content) {
+                    content.innerHTML = `
+                        <img src="${src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${caption}">
+                        <p style="text-align:center; margin-top:1rem; font-size:1.1rem;">${caption}</p>
+                    `;
+                    modal.classList.add('active');
+                }
+            };
         });
     </script>
 </body>

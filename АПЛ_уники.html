@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Арбатско-Покровская линия — история и уникальные поезда — ТЭПП</title>
+    <meta name="description" content="История, особенности и уникальные поезда Арбатско-Покровской линии Московского метрополитена.">
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -14,13 +15,33 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
     <header>
         <div class="header-container">
             <h1>Арбатско-Покровская линия (АПЛ)</h1>
             <p class="subtitle">Третья линия Московского метрополитена — история и уникальные поезда</p>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
                     <li><a href="Главная_метро.html">🚇 Метро</a></li>
                     <li><a href="Главная_Страница_Мосметро.html">🏙️ Мосметро</a></li>
                     <li><a href="#about">О линии</a></li>
@@ -72,13 +93,20 @@
                         <tr><td>Количество станций</td><td>22</td></tr>
                         <tr><td>Цвет на схеме</td><td>🔵 Синий</td></tr>
                         <tr><td>Первые станции</td><td>«Киевская» — «Курская» (9 станций)</td></tr>
-                        <tr><td>Название до 1990</td><td>Арбатско-Покровская (не менялось)</td></tr>
-                        <tr><td>Самая длинная линия</td><td>Да, 45,1 км — первая по длине в Москве</td></tr>
+                        <tr><td>Конечные станции</td><td>«Щёлковская» и «Пятницкое шоссе»</td></tr>
+                        <tr><td>Время поездки</td><td>~65 минут</td></tr>
+                        <tr><td>Среднесуточный пассажиропоток</td><td>832,3 тыс. человек (2016)</td></tr>
                     </tbody>
                 </table>
 
                 <div class="highlight-box" style="margin-top: 1.5rem;">
-                    <p>⭐ <strong>Интересный факт:</strong> Арбатско-Покровская линия — самая длинная в Московском метрополитене. Она включает уникальный участок через Москву-реку по метромосту у «Смоленской» и наземный участок в Измайлово.</p>
+                    <p>⭐ <strong>Интересные факты:</strong></p>
+                    <ul style="margin: 0.5rem 0 0 1.5rem; color: var(--text-secondary);">
+                        <li>Долгое время АПЛ была <strong>самой длинной линией</strong> Московского метрополитена (45,1 км) .</li>
+                        <li>На линии находится <strong>самый длинный перегон</strong> в московском метро — «Крылатское» — «Строгино» .</li>
+                        <li>Станция «Мякинино» — первая в истории московского метро, расположенная <strong>на территории Московской области</strong> (Красногорск) .</li>
+                        <li>Здесь есть уникальные <strong>наземные участки</strong>: станции «Измайловская», «Кунцевская» и «Мякинино», а также Митинский метромост .</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -134,16 +162,16 @@
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-date">Современность</div>
+                        <div class="timeline-date">2024–2026</div>
                         <div class="timeline-content">
-                            <h3>Самая длинная линия</h3>
-                            <p>Сегодня АПЛ — самая длинная линия Московского метро (45,1 км). На линии работают современные поезда «Русич», «Ока», «Москва».</p>
+                            <h3>Тематические поезда и современность</h3>
+                            <p>На линии активно запускаются тематические составы. В 2024 году курсировал поезд, посвящённый истории России, а в 2025–2026 годах — «Путь к Победе» (обновлён в 2026) и поезд к 80-летию Никиты Михалкова .</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="highlight-box" style="margin-top: 1.5rem;">
-                    <p><strong>Итог:</strong> За 88 лет Арбатско-Покровская линия прошла путь от 9 станций до 22 станций и стала самой длинной в Московском метрополитене.</p>
+                    <p><strong>Итог:</strong> За 88 лет Арбатско-Покровская линия прошла путь от 9 станций до 22 станций и стала одной из самых протяжённых и значимых в Московском метрополитене.</p>
                 </div>
             </div>
         </section>
@@ -165,9 +193,9 @@
                         </div>
                         <p>Именной поезд-картинная галерея. Внутри вагонов размещены репродукции картин известных художников. Проект создан совместно с Московской школой акварели.</p>
                         <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
-                            <li>Курсирует по Арбатско-Покровской линии</li>
+                            <li>Курсировал по Арбатско-Покровской линии с 2007 по июль 2025 года </li>
                             <li>В каждом вагоне своя экспозиция</li>
-                            <li>Регулярно обновляется</li>
+                            <li>С августа 2025 года оформление заменено на «Состав будущего»</li>
                         </ul>
                         <a href="Акварель.html" class="btn btn-primary" style="width: 100%;">Подробнее →</a>
                     </div>
@@ -187,7 +215,7 @@
                 </div>
 
                 <div class="highlight-box" style="margin-top: 2rem;">
-                    <p>Пока что всё, больше уникальных составов на Арбатско-Покровской линии не обнаружено. Если вы знаете о других уникальных поездах, сообщите нам!</p>
+                    <p><strong>Тематические поезда:</strong> Линия также известна своими временными брендированными составами. В 2025–2026 годах здесь курсировал обновлённый поезд <strong>«Путь к Победе»</strong>, посвящённый событиям Великой Отечественной войны . В конце 2025 года запускался состав к <strong>80-летию Никиты Михалкова</strong> .</p>
                 </div>
             </div>
         </section>
@@ -261,7 +289,7 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
                         <li><a href="Главная_метро.html">Метрополитены</a></li>
                         <li><a href="Главная_Страница_Мосметро.html">Московский метрополитен</a></li>
                         <li><a href="Живая_история_Мск_метро.html">Живая история</a></li>
@@ -269,8 +297,7 @@
                 </div>
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
-                    <p>📧 info@tepp.ru</p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -282,8 +309,8 @@
 
     <div class="scroll-top">↑</div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             function animateAplCounters() {

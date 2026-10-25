@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Опытный поезд типа Е - История Московского метро</title>
+    <title>Опытный поезд типа Е — История Московского метро — ТЭПП</title>
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -17,13 +17,33 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
     <header>
         <div class="header-container">
             <h1>Опытный поезд типа "Е"</h1>
             <p class="subtitle">Первый опытный состав серии Е (3001-3007) 1959 года</p>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
                     <li><a href="Главная_метро.html">🚇 Метро</a></li>
                     <li><a href="Опытные_составы.html">🔬 Опытные</a></li>
                     <li><a href="#about">О поезде</a></li>
@@ -91,7 +111,7 @@
                         <div class="timeline-date">1960-1970</div>
                         <div class="timeline-content">
                             <h3>Первые вагоны (3001-3002)</h3>
-                            <p>Первые два вагона до 1970 года эксплуатировались в ТЧ-2 ("Сокол"). В 1970 переданы в ТЧ-9 ("Фили") в качестве служебных. Утилизированы в 2006 году.</p>
+                            <p>Первые два вагона до 1970 года эксплуатировались в ТЧ-2 («Сокол»). В 1970 переданы в ТЧ-9 («Фили») в качестве служебных. Утилизированы в 2006 году.</p>
                         </div>
                     </div>
                     
@@ -107,7 +127,7 @@
                         <div class="timeline-date">1975</div>
                         <div class="timeline-content">
                             <h3>Возвращение</h3>
-                            <p>В 1975 году вагон 3007 вернулся в Москву. Участвовал в испытаниях опытного поезда "И".</p>
+                            <p>В 1975 году вагон 3007 вернулся в Москву. Участвовал в испытаниях опытного поезда «И».</p>
                         </div>
                     </div>
                     
@@ -115,7 +135,7 @@
                         <div class="timeline-date">1997</div>
                         <div class="timeline-content">
                             <h3>Вагон-сарай</h3>
-                            <p>В 1997 году вагон стал использоваться как вагон-сарай (хозяйственный) в ТЧ-15 ("Печатники").</p>
+                            <p>В 1997 году вагон стал использоваться как вагон-сарай (хозяйственный) в ТЧ-15 («Печатники»).</p>
                         </div>
                     </div>
                     
@@ -123,7 +143,7 @@
                         <div class="timeline-date">2003</div>
                         <div class="timeline-content">
                             <h3>Передача в ТЧ-8</h3>
-                            <p>В 2003 году вагон был передан в ТЧ-8 ("Варшавское"), где находится до сих пор.</p>
+                            <p>В 2003 году вагон был передан в ТЧ-8 («Варшавское»), где находится до сих пор.</p>
                         </div>
                     </div>
                 </div>
@@ -145,12 +165,12 @@
                     <div class="feature-item">
                         <h3>📍 Текущее местонахождение</h3>
                         <p style="font-size: 1.2rem; font-weight: bold; color: #2E8B57;">ТЧ-8 "Варшавское"</p>
-                        <p>Вагон №3007 находится в депо с 2003 года. Используется как хозяйственный.</p>
+                        <p>Вагон №3007 находится в депо с 2003 года. Используется как хозяйственный (склад).</p>
                     </div>
                     
                     <div class="feature-item">
                         <h3>📅 Историческая ценность</h3>
-                        <p>Это единственный сохранившийся вагон из первого опытного поезда серии Е. Он также участвовал в испытаниях поезда "И".</p>
+                        <p>Это единственный сохранившийся вагон из первого опытного поезда серии Е. Он также участвовал в испытаниях поезда «И».</p>
                     </div>
                 </div>
                 
@@ -160,36 +180,60 @@
             </div>
         </section>
 
-        <!-- Фотогалерея с новым фото интерьера -->
+        <!-- Фотогалерея -->
         <section id="gallery" class="section-card">
             <div class="card-header" style="background: linear-gradient(135deg, #CD5C5C 0%, #B22222 100%);">
                 <span class="card-icon">📸</span>
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                <div class="photo-gallery">
                     <!-- Фото 1: Опытный поезд в депо Сокол -->
-                    <div class="gallery-item">
-                        <img src="img/Type_E_3001.jpg" alt="Опытный поезд в депо Сокол" onerror="this.src='https://via.placeholder.com/750x500?text=Опытный+поезд+Е'">
-                        <div class="gallery-caption">Опытный поезд в депо "Сокол" (ТЧ-2)</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸???</p>
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Type_E_3001.jpg" alt="Опытный поезд в депо Сокол" onclick="openGalleryModal('img/Type_E_3001.jpg', 'Опытный поезд в депо «Сокол» (ТЧ-2)')" onerror="this.src='https://via.placeholder.com/600x400?text=Опытный+поезд+Е'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Опытный поезд</a>
+                            <p class="photo-desc">В депо «Сокол» (ТЧ-2).</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 ~1959</span>
+                                <span class="photo-author">📸 Неизвестен</span>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <!-- Фото 3: Опытный вагон 3007 в наши дни -->
-                    <div class="gallery-item">
-                        <img src="img/ешка_опыт_капут.jpg" alt="Опытный вагон 3007 в наши дни" onerror="this.src='https://via.placeholder.com/750x500?text=Вагон+3007'">
-                        <div class="gallery-caption">Опытный вагон 3007 на данный момент</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Metroman_2</p>
+
+                    <!-- Фото 2: Вагон 3007 (локальное фото, автор со ссылкой на TransPhoto) -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/ешка_опыт_капут.jpg" alt="Опытный вагон 3007 в наши дни" onclick="openGalleryModal('img/ешка_опыт_капут.jpg', 'Опытный вагон 3007 на данный момент (ТЧ-8)')" onerror="this.src='https://via.placeholder.com/600x400?text=Вагон+3007'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Опытный вагон 3007</a>
+                            <p class="photo-desc">На данный момент (ТЧ-8).</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 7 ноября 2023 г.</span>
+                                <span class="photo-author">📸 <a href="https://transphoto.org/photo/1872940/" target="_blank" rel="noopener">Metroman_2</a></span>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <!-- Фото 4: Опытный вагон 3001 -->
-                    <div class="gallery-item">
-                        <img src="img/ешка_опыт_капут2.jpg" alt="Опытный вагон 3001" onerror="this.src='https://via.placeholder.com/750x500?text=Вагон+3001'">
-                        <div class="gallery-caption">Опытный вагон 3001 (утилизирован в 2006)</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Трехгранка</p>
+
+                    <!-- Фото 3: Вагон 3001 (прямая ссылка с Трехгранки) -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="https://trehgranka.metro.ru/images/vagon/vagon_e/depo/e_3001_depo_01.jpg" alt="Опытный вагон 3001" onclick="openGalleryModal('https://trehgranka.metro.ru/images/vagon/vagon_e/depo/e_3001_depo_01.jpg', 'Опытный вагон 3001 (утилизирован в 2006)')" onerror="this.src='https://via.placeholder.com/600x400?text=Вагон+3001'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="https://trehgranka.metro.ru/images/vagon/vagon_e/depo/e_3001_depo_01.jpg" target="_blank" rel="noopener" class="photo-object">Опытный вагон 3001</a>
+                            <p class="photo-desc">Утилизирован в 2006 г.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 25.12.2004</span>
+                                <span class="photo-author">📸 <a href="https://trehgranka.metro.ru/images/vagon/vagon_e/depo/e_3001_depo_01.jpg" target="_blank" rel="noopener">Quantum REX</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
@@ -214,7 +258,7 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
                         <li><a href="Опытные_составы.html">Опытные составы</a></li>
                         <li><a href="Опытная_Ашка.html">Опытная Ашка</a></li>
                         <li><a href="Опытный_поезд_И.html">Опытный И</a></li>
@@ -223,7 +267,7 @@
                 
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
             
@@ -238,7 +282,7 @@
     <div class="scroll-top">↑</div>
 
     <!-- Модальное окно для галереи -->
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
@@ -246,11 +290,11 @@
     </div>
 
     <!-- Подключаем библиотеку частиц -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
     <!-- Подключаем общий JS файл -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     
-    <!-- Дополнительный скрипт для счетчиков и галереи -->
+    <!-- Дополнительный скрипт для счетчиков -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Анимация счетчиков
@@ -310,42 +354,19 @@
             }
             
             animateECounters();
-            
-            // Настройка галереи
-            const galleryModal = document.getElementById('galleryModal');
-            const galleryModalContent = document.getElementById('galleryModalContent');
-            const galleryCloseBtn = document.getElementById('galleryModalClose');
-            const galleryItems = document.querySelectorAll('.gallery-item');
-            
-            if (galleryModal && galleryItems.length > 0) {
-                galleryItems.forEach(item => {
-                    item.addEventListener('click', function() {
-                        const img = this.querySelector('img');
-                        const caption = this.querySelector('.gallery-caption').textContent;
-                        
-                        if (galleryModalContent) {
-                            galleryModalContent.innerHTML = `
-                                <img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}">
-                                <p style="text-align:center; margin-top:1rem; color:#333;">${caption}</p>
-                            `;
-                        }
-                        
-                        galleryModal.classList.add('active');
-                    });
-                });
-                
-                if (galleryCloseBtn) {
-                    galleryCloseBtn.addEventListener('click', function() {
-                        galleryModal.classList.remove('active');
-                    });
+
+            // Стандартная функция для галереи
+            window.openGalleryModal = function(src, caption) {
+                const modal = document.getElementById('galleryModal');
+                const content = document.getElementById('galleryModalContent');
+                if (modal && content) {
+                    content.innerHTML = `
+                        <img src="${src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${caption}">
+                        <p style="text-align:center; margin-top:1rem; font-size:1.1rem;">${caption}</p>
+                    `;
+                    modal.classList.add('active');
                 }
-                
-                window.addEventListener('click', function(e) {
-                    if (e.target === galleryModal) {
-                        galleryModal.classList.remove('active');
-                    }
-                });
-            }
+            };
         });
     </script>
 </body>

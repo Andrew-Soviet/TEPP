@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Троллейбус ЯТБ-3 — Музейный экспонат — ТЭПП</title>
+    <title>Троллейбус ЯТБ-3 (макет) — Музейный экспонат — ТЭПП</title>
     <meta name="description" content="История двухэтажного троллейбуса ЯТБ-3: от эксплуатации в Москве до музейного макета в Музее Транспорта Москвы.">
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -15,35 +15,57 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <!-- Кнопка бургер для мобильных -->
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <!-- ================= ШАПКА ================= -->
     <header>
         <div class="header-container">
-            <h1>Троллейбус ЯТБ-3</h1>
-            <p class="subtitle">Музейный экспонат (макет, 1938)</p>
+            <div class="logo">
+                <h1>Троллейбус ЯТБ-3</h1>
+                <p class="subtitle">Музейный экспонат (макет, 1938)</p>
+            </div>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
-                    <li><a href="Главная_Страница_Мосметро.html">🚇 Мосметро</a></li>
-                    <li><a href="#about">О троллейбусе</a></li>
-                    <li><a href="#specs">Данные</a></li>
-                    <li><a href="#history">История</a></li>
-                    <li><a href="#gallery">Фото</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
+                    <li><a href="city_transport.html">🚌 Наземный транспорт</a></li>
+                    <li><a href="Троллейбусы.html">Троллейбусы</a></li>
+                    <li><a href="МузейТранспортаМосквы.html">Музей Транспорта</a></li>
+                    <li><a href="#about" class="active">ЯТБ-3</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <!-- Герой -->
+        <!-- Герой-секция -->
         <section id="about" class="hero">
             <div class="hero-content">
-                <h2>ЯТБ-3</h2>
+                <h2>ЯТБ-3 (макет)</h2>
                 <p class="hero-text"><strong>ЯТБ-3</strong> — первый советский двухэтажный троллейбус, разработанный Ярославским автомобильным заводом в 1938 году с использованием технических решений британского прототипа AEC EEC 664T.</p>
-                <p class="hero-text">Вместительная машина на 80 пассажиров должна была сократить траты на перевозки, однако низкие потолки и недостаточная устойчивость двухэтажного кузова поставили крест на этой идее. Для Москвы было построено всего 10 таких троллейбусов.</p>
-
+                <p class="hero-text">ЯТБ-3 вмещал до 100 пассажиров, но ехать стоя было неудобно из-за низких потолков. Вместительный салон позволял сократить траты на перевозки, тем не менее двухэтажная машина оказалась недостаточно устойчивой, и от неё решили отказаться. В итоге для Москвы построили всего 10 троллейбусов этой модели. <strong>До наших дней ни один оригинал не сохранился</strong> — в музее представлен полноразмерный макет.</p>
                 <div class="stats-container">
                     <div class="stat-item">
                         <div class="counter-number" id="builtYear">0</div>
-                        <div class="stat-label">год постройки</div>
+                        <div class="stat-label">год постройки модели</div>
                     </div>
                     <div class="stat-item">
                         <div class="counter-number" id="totalMade">0</div>
@@ -55,7 +77,7 @@
 
         <!-- Основные данные -->
         <section id="specs" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+            <div class="card-header">
                 <span class="card-icon">📋</span>
                 <h2>Основные данные</h2>
             </div>
@@ -64,11 +86,11 @@
                     <tbody>
                         <tr><td><strong>Модель</strong></td><td>ЯТБ-3</td></tr>
                         <tr><td><strong>Производитель</strong></td><td>Ярославский автомобильный завод</td></tr>
-                        <tr><td><strong>Год постройки</strong></td><td>1938</td></tr>
-                        <tr><td><strong>Вместимость</strong></td><td>до 80 пассажиров (32 сидячих на 1-м этаже, 40 на 2-м)</td></tr>
+                        <tr><td><strong>Год постройки модели</strong></td><td>1938</td></tr>
+                        <tr><td><strong>Вместимость</strong></td><td>до 100 пассажиров</td></tr>
                         <tr><td><strong>Двигатель</strong></td><td>Электрический, 74 кВт, привод на 4 задних колеса</td></tr>
                         <tr><td><strong>Автономный ход</strong></td><td>До 2,7 км на аккумуляторах</td></tr>
-                        <tr><td><strong>Текущее состояние</strong></td><td>Не эксплуатируется (макет)</td></tr>
+                        <tr><td><strong>Текущее состояние</strong></td><td style="background: #fff3cd; color: #856404; font-weight: bold;">Не эксплуатируется (макет)</td></tr>
                         <tr><td><strong>Назначение</strong></td><td>Музейный</td></tr>
                         <tr><td><strong>Депо/Парк</strong></td><td>Музей транспорта Москвы</td></tr>
                     </tbody>
@@ -78,71 +100,84 @@
 
         <!-- История -->
         <section id="history" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+            <div class="card-header">
                 <span class="card-icon">📜</span>
-                <h2>История</h2>
+                <h2>История и макет</h2>
             </div>
             <div class="card-content">
                 <div class="timeline">
                     <div class="timeline-item">
-                        <div class="timeline-date">1930-е</div>
-                        <div class="timeline-content">
-                            <h3>Предпосылки к созданию</h3>
-                            <p>В 1930-х годах в Москве остро стоял вопрос увеличения провозной способности городского транспорта. Город рос, и обычные троллейбусы переставали справляться с пассажиропотоком. Решением мог стать двухэтажный транспорт, популярный в то время в Европе.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">1937</div>
-                        <div class="timeline-content">
-                            <h3>Британский прототип</h3>
-                            <p>Специалисты Ярославского автомобильного завода изучили опыт создания двухэтажных машин, взяв за основу технические решения британского троллейбуса AEC EEC 664T (Лондон).</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
                         <div class="timeline-date">1938</div>
                         <div class="timeline-content">
                             <h3>Постройка первых машин</h3>
-                            <p>На Ярославском заводе был построен первый советский двухэтажный троллейбус ЯТБ-3. Кузов был деревянно-металлическим, с двумя пассажирскими салонами на первом и втором этажах. Изнутри кузов обшивали фанерой и оклеивали дерматином коричневого цвета. Всего для Москвы было изготовлено 10 таких машин.</p>
+                            <p>На Ярославском заводе был построен первый советский двухэтажный троллейбус ЯТБ-3. Кузов был деревянно-металлическим, с двумя пассажирскими салонами на первом и втором этажах. Всего для Москвы было изготовлено 10 таких машин.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date">Конец 1930-х — начало 1950-х</div>
                         <div class="timeline-content">
                             <h3>Неудачная эксплуатация</h3>
-                            <p>Троллейбус мог вместить до 80 человек (или до 100 при полной загрузке), но ехать стоя было неудобно из-за низких потолков. Кроме того, из-за высокого центра тяжести машина оказалась недостаточно устойчивой, а на крутых поворотах и подъёмах вела себя опасно. В итоге от модели решили отказаться.</p>
+                            <p>Троллейбус мог вместить до 100 человек, но ехать стоя было неудобно из-за низких потолков. Кроме того, из-за высокого центра тяжести машина оказалась недостаточно устойчивой, а на крутых поворотах и подъёмах вела себя опасно. В итоге от модели решили отказаться.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date">Наши дни</div>
                         <div class="timeline-content">
                             <h3>Воссоздание макета</h3>
-                            <p>Ни один оригинальный экземпляр ЯТБ-3 не сохранился. Для экспозиции Музея транспорта Москвы специалистами был создан полноразмерный макет троллейбуса, воссоздающий его исторический облик, включая характерные рекламные плакаты на бортах.</p>
+                            <p>Ни один оригинальный экземпляр ЯТБ-3 не сохранился. Для экспозиции Музея транспорта Москвы специалистами был создан <strong>полноразмерный макет</strong> троллейбуса, воссоздающий его исторический облик, включая характерные рекламные плакаты на бортах.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Галерея -->
+        <!-- ================= ФОТОГАЛЕРЕЯ ================= -->
         <section id="gallery" class="section-card">
-            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+            <div class="card-header">
                 <span class="card-icon">📸</span>
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/itb-3_mus.jpg" alt="ЯТБ-3 в музее" onerror="this.src='img/no-photo.png'">
-                        <div class="gallery-caption">Двухэтажный троллейбус ЯТБ-3 в экспозиции Музея Транспорта Москвы</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary); font-size: 0.85rem;">📸 pfandrom</p>
+                <div class="photo-gallery">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/itb-3_mus.jpg" alt="ЯТБ-3 в музее" onclick="openGalleryModal(this.src, 'Двухэтажный троллейбус ЯТБ-3 в экспозиции Музея Транспорта Москвы')" onerror="this.src='img/no-photo.png'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">ЯТБ-3 в музее</a>
+                            <p class="photo-desc">Двухэтажный троллейбус в экспозиции Музея Транспорта Москвы.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/itb-3_tabl.jpg" alt="Табличка об экспонате" onerror="this.src='img/no-photo.png'">
-                        <div class="gallery-caption">Информационная табличка об экспонате</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary); font-size: 0.85rem;">📸 pfandrom</p>
+
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/itb-3_tabl.jpg" alt="Табличка об экспонате" onclick="openGalleryModal(this.src, 'Информационная табличка об экспонате')" onerror="this.src='img/no-photo.png'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Табличка об экспонате</a>
+                            <p class="photo-desc">Информационная табличка об экспонате.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Двухэтажный троллейбус ЯТБ-3 — это смелый эксперимент 1930-х, который, несмотря на неудачу в эксплуатации, остался в истории как яркая страница развития московского транспорта».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
             </div>
         </section>
     </main>
@@ -153,13 +188,13 @@
                 <div class="footer-info">
                     <h4>ТЭПП</h4>
                     <p>Транспортная Энциклопедия Постсоветского Пространства</p>
-                    <p class="footer-motto">Раздел «Подвижной состав»</p>
+                    <p class="footer-motto">Раздел «Наземный транспорт»</p>
                 </div>
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
-                        <li><a href="Главная_Страница_Мосметро.html">Московский метрополитен</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
+                        <li><a href="city_transport.html">Наземный транспорт</a></li>
                         <li><a href="МузейТранспортаМосквы.html">Музей Транспорта Москвы</a></li>
                     </ul>
                 </div>
@@ -169,26 +204,27 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 ТЭПП</p>
-                <p class="footer-note">ЯТБ-3 — двухэтажный троллейбус</p>
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">ЯТБ-3 — двухэтажный троллейбус (макет)</p>
             </div>
         </div>
     </footer>
 
     <div class="scroll-top">↑</div>
-    
-    <div class="modal" id="galleryModal">
+
+    <!-- Модалка для фото -->
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
         </div>
     </div>
-    
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Счётчики
+            // Анимация счётчиков
             function animateCounters() {
                 const targets = { builtYear: 1938, totalMade: 10 };
                 let current = { builtYear: 0, totalMade: 0 };
@@ -215,22 +251,18 @@
             }
             animateCounters();
 
-            // Галерея
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p>`;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+            // Функция для открытия модалки из галереи
+            window.openGalleryModal = function(src, caption) {
+                const modal = document.getElementById('galleryModal');
+                const content = document.getElementById('galleryModalContent');
+                if (modal && content) {
+                    content.innerHTML = `
+                        <img src="${src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${caption}">
+                        <p style="text-align:center; margin-top:1rem; font-size:1.1rem;">${caption}</p>
+                    `;
+                    modal.classList.add('active');
+                }
+            };
         });
     </script>
 </body>

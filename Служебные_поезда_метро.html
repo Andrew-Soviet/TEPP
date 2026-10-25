@@ -17,13 +17,33 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
     <header>
         <div class="header-container">
             <h1>Служебные поезда метро</h1>
             <p class="subtitle">Специализированный подвижной состав для обслуживания инфраструктуры</p>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
                     <li><a href="Главная_метро.html">🚇 Метро</a></li>
                     <li><a href="Главная_Страница_Мосметро.html">📍 Мосметро</a></li>
                     <li><a href="#about">О служебных</a></li>
@@ -99,7 +119,7 @@
                 <div class="trains-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
                     <!-- Еж3-путеизмеритель -->
                     <div class="train-card">
-                        <img src="img/Ezh3_full.jpg" alt="Еж3-путеизмеритель" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;" onerror="this.src='https://via.placeholder.com/400x200?text=Еж3'">
+                        <img src="img/5824ramenki1.jpg" alt="Еж3-путеизмеритель" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;" onerror="this.src='https://via.placeholder.com/400x200?text=Еж3'">
                         <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
                             <span style="font-size: 2rem;">🚞</span>
                             <h3 style="margin: 0;">Еж3-путеизмеритель</h3>
@@ -115,7 +135,7 @@
                     
                     <!-- ДК1 -->
                     <div class="train-card">
-                        <img src="img/ДК1.jpg" alt="ДК1" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;" onerror="this.src='https://via.placeholder.com/400x200?text=ДК1'">
+                        <img src="img/Синергия-1.jpg" alt="ДК1" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;" onerror="this.src='https://via.placeholder.com/400x200?text=ДК1'">
                         <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
                             <span style="font-size: 2rem;">⚡</span>
                             <h3 style="margin: 0;">ДК1</h3>
@@ -221,7 +241,7 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
                         <li><a href="Главная_метро.html">Метрополитены</a></li>
                         <li><a href="Главная_Страница_Мосметро.html">Московское метро</a></li>
                     </ul>
