@@ -14,13 +14,33 @@
         <div class="gradient-bg"></div>
     </div>
 
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
     <header>
         <div class="header-container">
             <h1>Беспилотная «Москва-2024»</h1>
             <p class="subtitle">Первый беспилотный поезд Московского метрополитена (81-775.2)</p>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="Главная_страница.html">🏠 Главная</a></li>
+                    <li><a href="index.html">🏠 Главная</a></li>
                     <li><a href="Главная_метро.html">🚇 Метро</a></li>
                     <li><a href="Главная_Страница_Мосметро.html">🏙️ Мосметро</a></li>
                     <li><a href="#about">О поезде</a></li>
@@ -216,30 +236,61 @@
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));">
-                    <div class="gallery-item">
-                        <img src="img/bespilotm24_cab.jpg" alt="Кабина вагона 81-775.2 «Москва-2024» № 75371" onerror="this.src='https://via.placeholder.com/800x500?text=Кабина'">
-                        <div class="gallery-caption">Кабина вагона 81-775.2 «Москва-2024» № 75371</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Mixpokr_Hedgehog</p>
+                <div class="photo-gallery">
+
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="https://transphoto.org/photo/22/74/01/2274013.jpg" alt="Кабина вагона 81-775.2 «Москва-2024» № 75371" 
+                                 onclick="openGalleryModal(this.src, 'Кабина вагона 81-775.2 «Москва-2024» № 75371')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=Кабина'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="https://transphoto.org/photo/2274013/" class="photo-object" target="_blank" rel="noopener">Кабина вагона</a>
+                            <p class="photo-desc">Интерьер кабины головного вагона.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 25 апреля 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://transphoto.org/photo/2274013/" target="_blank" rel="noopener">Mixpokr_Hedgehog</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/bespilotm24.jpg" alt="Испытания поезда на станции Лефортово" onerror="this.src='https://via.placeholder.com/800x500?text=Лефортово'">
-                        <div class="gallery-caption">Испытания поезда на станции «Лефортово»</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 Артём Алмазов</p>
+
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="https://transphoto.org/photo/22/88/73/2288737.jpg" alt="Испытания поезда на станции Лефортово" 
+                                 onclick="openGalleryModal(this.src, 'Испытания поезда на станции «Лефортово»')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=Лефортово'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="https://transphoto.org/photo/2288737/" class="photo-object" target="_blank" rel="noopener">Станция «Лефортово»</a>
+                            <p class="photo-desc">Испытания поезда на станции.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2 июня 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://transphoto.org/photo/2288737/" target="_blank" rel="noopener">Артём Алмазов</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/bespilotm24_int.jpg" alt="Салон, вид вперёд" onerror="this.src='https://via.placeholder.com/800x500?text=Салон'">
-                        <div class="gallery-caption">Салон, вид вперёд (30 ноября 2024 г.)</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 mosnikita</p>
+
+                    <!-- Фото 3 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="https://transphoto.org/photo/20/41/23/2041233.jpg" alt="Салон, вид вперёд" 
+                                 onclick="openGalleryModal(this.src, 'Салон, вид вперёд')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=Салон'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="https://transphoto.org/photo/2041233/" class="photo-object" target="_blank" rel="noopener">Салон вагона</a>
+                            <p class="photo-desc">Вид вперёд.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 30 ноября 2024 г.</span>
+                                <span class="photo-author">📸 <a href="https://transphoto.org/photo/2041233/" target="_blank" rel="noopener">mosnikita</a></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/bespilotm24_2.jpg" alt="Обкатка поезда" onerror="this.src='https://via.placeholder.com/800x500?text=Обкатка'">
-                        <div class="gallery-caption">Обкатка поезда</div>
-                        <p style="text-align:center; margin-top:0.3rem; color:var(--text-secondary);">📸 ShetrPetr</p>
-                    </div>
+
                 </div>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">📸 Фото взяты с transphoto</p>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
         </section>
 
@@ -263,7 +314,7 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <ul>
-                        <li><a href="Главная_страница.html">Главная страница</a></li>
+                        <li><a href="index.html">Главная страница</a></li>
                         <li><a href="Главная_метро.html">Метрополитены</a></li>
                         <li><a href="Главная_Страница_Мосметро.html">Московский метрополитен</a></li>
                         <li><a href="Акварель.html">Акварель</a></li>
@@ -271,8 +322,7 @@
                 </div>
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
-                    <p>📱 <a href="https://t.me/andreimetro1289">Telegram</a></p>
-                    <p>📧 info@tepp.ru</p>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -291,8 +341,8 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Счётчики
@@ -332,17 +382,36 @@
             const modal = document.getElementById('galleryModal');
             const content = document.getElementById('galleryModalContent');
             const close = document.getElementById('galleryModalClose');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                    const author = this.querySelector('p')?.textContent || '';
-                    if (content && img) {
-                        content.innerHTML = `<img src="${img.src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${img.alt}"><p style="text-align:center; margin-top:1rem;">${caption}</p><p style="text-align:center; color:#666;">${author}</p>`;
+
+            document.querySelectorAll('.photo-thumb img').forEach(img => {
+                img.addEventListener('click', function() {
+                    const card = this.closest('.photo-card');
+                    if (!card) return;
+
+                    const src = this.src;
+                    const alt = this.alt;
+                    const object = card.querySelector('.photo-object')?.textContent || '';
+                    const desc = card.querySelector('.photo-desc')?.textContent || '';
+                    const date = card.querySelector('.photo-date')?.textContent || '';
+                    const author = card.querySelector('.photo-author')?.textContent || '';
+
+                    if (content) {
+                        content.innerHTML = `
+                            <img src="${src}" style="max-width:100%; max-height:60vh; border-radius:10px; display:block; margin: 0 auto;" alt="${alt}">
+                            <div style="margin-top: 1.5rem; text-align: left; padding: 0 1rem;">
+                                <h3 style="color: var(--accent-color); margin-bottom: 0.5rem; font-size: 1.4rem;">${object}</h3>
+                                <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1rem;">${desc}</p>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-secondary); border-top: 1px solid var(--border-color); padding-top: 1rem;">
+                                    <span>${date}</span>
+                                    <span>${author}</span>
+                                </div>
+                            </div>
+                        `;
                         modal.classList.add('active');
                     }
                 });
             });
+
             close?.addEventListener('click', () => modal.classList.remove('active'));
             window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
         });
