@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дополнительно — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Стили для аккуратного списка, как на скриншоте */
+        .nav-list {
+            background: var(--bg-card-solid);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            box-shadow: 0 4px 12px var(--shadow-color);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .nav-list a {
+            display: block;
+            padding: 1rem 1.5rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 1.1rem;
+            border-bottom: 1px solid var(--border-color);
+            transition: background 0.2s ease, padding-left 0.2s ease;
+        }
+        .nav-list a:last-child {
+            border-bottom: none;
+        }
+        .nav-list a:hover {
+            background: var(--highlight-bg);
+            color: var(--accent-color);
+            padding-left: 1.8rem; /* Легкий эффект сдвига при наведении */
+        }
+        .nav-list .icon {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html" style="color: #f39c12;">Дополнительно</a> <!-- Подсветка активной вкладки -->
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Дополнительно</h1>
+            <p class="subtitle">Полезные материалы, галереи и ресурсы проекта</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html">🏠 Главная</a></li>
+                    <li><a href="База_подвижного_состава.html">📋 База</a></li>
+                    <li><a href="Дополнительно.html" class="active">📚 Дополнительно</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                <span class="card-icon">📚</span>
+                <h2>Разделы и материалы</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description" style="text-align: center; margin-bottom: 2rem;">
+                    Выберите интересующий вас раздел для перехода к материалам.
+                </p>
+
+                <div class="nav-list">
+                    <a href="Карты_схемы.html"><span class="icon">🗺️</span> Карты и схемы</a>
+                    <a href="Неопознанные_фотографии.html"><span class="icon">❓</span> Неопознанные фотографии</a>
+                    <a href="Новости_сайта.html"><span class="icon">📢</span> Новости сайта</a>
+                    <a href="Ссылки.html"><span class="icon">🔗</span> Полезные ссылки</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Дополнительно»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная страница</a></li>
+                        <li><a href="База_подвижного_состава.html">База подвижного состава</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="Железная_дорога.html">Железные дороги</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Все материалы в одном месте</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
