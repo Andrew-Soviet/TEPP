@@ -126,43 +126,6 @@
 }
 
 /* ============================================================
-   4. ТЕМА: СОВЕТСКИЙ ПЛАКАТ (poster)
-   ============================================================ */
-[data-theme="poster"] {
-    --bg-card: #f4e8d3;
-    --bg-card-solid: #f4e8d3;
-    --bg-header: #d33a2c;
-    --bg-input: #f4e8d3;
-    --text-primary: #2b1a18;
-    --text-secondary: #4a302c;
-    --text-muted: #6b4b45;
-    --border-color: #2b1a18;
-    --accent-color: #c32b1e;
-    --accent-secondary: #e83e2a;
-    --gradient-start: #d33a2c;
-    --gradient-end: #a1261a;
-    --shadow-color: rgba(43, 26, 24, 0.2);
-    --shadow-hover: rgba(43, 26, 24, 0.4);
-    --highlight-bg: rgba(195, 43, 30, 0.1);
-    --footer-border: #2b1a18;
-    --modal-bg: #f4e8d3;
-    --modal-text: #2b1a18;
-    --btn-secondary-border: #2b1a18;
-    --btn-secondary-text: #2b1a18;
-    --settings-bg: #f4e8d3;
-    --settings-shadow: 8px 8px 0px #2b1a18;
-}
-
-[data-theme="poster"] body {
-    background-color: #d33a2c;
-    background-image: url('img/back_fon.png');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-/* ============================================================
    5. БАЗОВЫЕ СТИЛИ
    ============================================================ */
 * { margin: 0; padding: 0; box-sizing: border-box; }
