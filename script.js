@@ -876,7 +876,6 @@ function setupRandomRecommendations() {
         { src: '75488.jpg', caption: '81-775.2 «Москва-2026»', author: 'Артём Алмазов (transphoto)' },
         { src: '5824_int.jpg', caption: 'Интерьер Еж3 № 5824', author: 'pfandrom' },
         { src: '6719_int.jpg', caption: 'Интерьер вагона № 6719', author: 'pfandrom' },
-        { src: '7374.jpg', caption: 'Вагон № 7374', author: 'Nikita_Transportnik' },
         { src: '81-580.jpg', caption: '81-580 ВЭКА', author: 'Артём Алмазов' },
         { src: '81-580_int.jpg', caption: 'Салон 81-580', author: 'Kr1p' },
         { src: '720.1_3.jpg', caption: '81-720.1', author: 'metro.vpeterburge.ru' },
