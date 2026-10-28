@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setupParallax();
     setupSectionAnimation();
     setupSearch();
-    setupRandomRecommendations();
+    //setupRandomRecommendations();
     setupEscapeKey();
     setupGallery();
     setupHideHeaderOnScroll();
@@ -149,7 +149,7 @@ function setupEscapeKey() {
 // ============================================================
 // ТЕМЫ
 // ============================================================
-const THEMES = ['light', 'dark', 'poster', 'night'];
+const THEMES = ['light', 'dark', 'night'];
 
 function setTheme(theme) {
     if (!THEMES.includes(theme)) theme = 'light';
@@ -499,7 +499,8 @@ const SEARCH_PAGES = [
     { title: 'Красная стрела (ЖД)', url: 'Красная_стрела_жд.html', tags: ['поезд', 'ржд', 'москва', 'питер'], types: ['жд'], city: 'Москва', country: 'Россия' },
     { title: 'Полярная стрела', url: 'Полярная_стрела.html', tags: ['поезд', 'ржд', 'мурманск'], types: ['жд'], city: 'Мурманск', country: 'Россия' },
     { title: 'ЧС7', url: 'ЧС7.html', tags: ['электровоз', 'ржд', 'локомотив', 'чс7'], types: ['жд'], city: 'Москва', country: 'Россия' },
-    { title: 'ЧС7 в расцветке «Новопид»', url: 'ЧС7_новопид.html', tags: ['электровоз', 'ржд', 'чс7', 'новопид', 'окраска', 'красно-серый'], types: ['жд'], city: 'Москва', country: 'Россия' },
+    { title: 'ЧС7 в расцветке «Новопид»', url: 'CHs7-novopid.html', tags: ['электровоз', 'ржд', 'чс7', 'новопид', 'окраска', 'красно-серый'], types: ['жд'], city: 'Москва', country: 'Россия' },
+    { title: 'ЧС7 в расцветке «Заводской»', url: 'CHs7-zavod.html', tags: ['электровоз', 'ржд', 'чс7', 'зелёнка', 'окраска', 'зелёный'], types: ['жд'], city: 'Москва', country: 'Россия' },
     { title: 'ЧС7-199', url: 'ЧС7_199.html', tags: ['электровоз', 'ржд', 'ЧС7 №199', 'ЧС7', 'звезда'], types: ['жд'], city: 'Москва', country: 'Россия' },
     { title: 'ЭП2К', url: 'ЭП2К.html', tags: ['электровоз', 'ржд', 'эп2к'], types: ['жд'], city: 'Москва', country: 'Россия' },
     { title: 'ЧС6', url: 'ЧС6.html', tags: ['электровоз', 'ржд', 'ЧС', 'ЧС6'], types: ['жд'], city: 'Москва', country: 'Россия' },
@@ -559,7 +560,6 @@ const SEARCH_PAGES = [
     { title: 'Ушедшие в историю (метро)', url: 'Ушедшие_в_историю_метро.html', tags: ['метро', 'история'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: 'ЧС6', url: 'ЧС6.html', tags: ['жд', 'чс6'], types: ['жд'], city: 'Москва', country: 'Россия' },
     { title: 'ЧС7', url: 'ЧС7.html', tags: ['жд', 'чс7'], types: ['жд'], city: 'Москва', country: 'Россия' },
-    { title: 'ЧС7-199', url: 'ЧС7_199.html', tags: ['жд', 'чс7'], types: ['жд'], city: 'Москва', country: 'Россия' },
     { title: 'ЭД4 (М-МК)', url: 'ЭД4(М-МК).html', tags: ['жд', 'эд4'], types: ['жд'], city: 'Москва', country: 'Россия' },
     { title: 'ЭД4-0010', url: 'ЭД4-0010.html', tags: ['жд', 'эд4'], types: ['жд'], city: 'Москва', country: 'Россия' },
     { title: 'ЭД4МКУ', url: 'эд4мку.html', tags: ['жд', 'эд4мку'], types: ['жд'], city: 'Москва', country: 'Россия' },
@@ -585,8 +585,6 @@ const SEARCH_PAGES = [
     { title: 'Беспилотная Москва 2024', url: 'bespilotm24.html', tags: ['метро', 'беспилотная'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: 'Беспилотное такси', url: 'bespilot_auto_Yandex_toyata_prios.html', tags: ['такси', 'беспилотное'], types: ['автобус'], city: 'Москва', country: 'Россия' },
     { title: 'ЧС6-025', url: 'CHS6-025.html', tags: ['жд', 'чс6'], types: ['жд'], city: 'Москва', country: 'Россия' },
-    { title: 'ЧС7 Новопид', url: 'CHs7-novopid.html', tags: ['жд', 'чс7'], types: ['жд'], city: 'Москва', country: 'Россия' },
-    { title: 'ЧС7 Заводской', url: 'CHs7-zavod.html', tags: ['жд', 'чс7'], types: ['жд'], city: 'Москва', country: 'Россия' },
     { title: 'Городской транспорт', url: 'city_transport.html', tags: ['город', 'транспорт'], types: ['автобус'], city: 'Москва', country: 'Россия' },
     { title: 'Daimler Omnibus 1 T', url: 'Daimler Omnibus 1 T.html', tags: ['автобус', 'daimler'], types: ['автобус'], city: 'Москва', country: 'Россия' },
     { title: 'Electrotrainzhd', url: 'Electrotrainzhd.html', tags: ['жд', 'электричка'], types: ['жд'], city: 'Москва', country: 'Россия' },
@@ -871,7 +869,7 @@ function setupRandomRecommendations() {
         { src: 'M5_806.jpg', caption: 'УМ5 № 806', author: 'ER2-1017' },
         { src: 'M5_806_int.jpg', caption: 'Салон УМ5 № 806', author: 'Lasselan' },
         { src: '760A_gagarin.jpg', caption: '81-760А на Минской', author: 'Сергей Лапин' },
-        { src: '760A_int.jpg', caption: 'Салон 81-760А', author: 'Solidolych' },
+        { src: '760A_int.jpg', caption: 'Салон 81-760А', author: 'pfandrom' },
         { src: '75488.jpg', caption: '81-775.2 «Москва-2026»', author: 'Артём Алмазов (transphoto)' },
         { src: '5824_int.jpg', caption: 'Интерьер Еж3 № 5824', author: 'pfandrom' },
         { src: '6719_int.jpg', caption: 'Интерьер вагона № 6719', author: 'pfandrom' },
@@ -900,10 +898,10 @@ function setupRandomRecommendations() {
         { src: '8535_imba.jpg', caption: 'Вагон №8535 с уровня платформы', author: 'pfandrom' },
         { src: '0379.jpg', caption: 'Вагон 0379 с трёхцветной маской', author: 'pfandrom' },
         { src: 'Type_B_ploshad_sverlova.jpg', caption: 'Вагон Б на станции Площадь Свердлова', author: 'Трёхгранка' },
-        { src: '0021_int.jpg', caption: 'Интерьер Яузы №0021', author: 'Transport_moscow' },
+        { src: '0021_int.jpg', caption: 'Интерьер Яузы №0021', author: 'pfandrom' },
         { src: '37002_int.jpg', caption: 'Интерьер вагона 37002', author: 'Mr.Den' },
-        { src: '0065_внешка.jpg', caption: 'Вагон 0065, внешний вид', author: 'Транспортник Москвы / Вова' },
-        { src: '0065_int.jpg', caption: 'Вагон 0065, интерьер', author: 'Welder' },
+        { src: '0065_внешка.jpg', caption: 'Вагон 0065, внешний вид', author: 'Транспортник Москвы' },
+        { src: '0065_int.jpg', caption: 'Вагон 0065, интерьер', author: 'Транспортник Москвы' },
         { src: '8712_int2026.jpg', caption: 'Вагон 8712, интерьер (2026)', author: 'Транспортник Москвы / Вова' },
         { src: '8712_приятность.jpg', caption: 'Вагон 8712', author: 'Транспортник Москвы / Вова' },
         { src: 'ЧС7_199.jpg', caption: 'ЧС7-199 с заводской окраской', author: 'pfandrom' },
