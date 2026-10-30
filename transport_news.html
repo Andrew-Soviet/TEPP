@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Транспортные новости — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Стили для сетки новостей */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .news-card {
+            background: var(--bg-card-solid);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px var(--shadow-hover);
+            border-color: var(--accent-color);
+        }
+        /* Блок для картинки */
+        .news-thumb {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            background: #000;
+        }
+        .news-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .news-card:hover .news-thumb img {
+            transform: scale(1.05);
+        }
+        .news-card-body {
+            padding: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .news-date {
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+        .news-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+        }
+        .news-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        .news-link {
+            display: inline-block;
+            padding: 0.6rem 1rem;
+            background: var(--accent-color);
+            color: #fff;
+            text-decoration: none;
+            border-radius: var(--radius-xs);
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-align: center;
+            transition: background 0.2s;
+        }
+        .news-link:hover {
+            background: var(--accent-secondary);
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Новости транспорта</h1>
+            <p class="subtitle">Последние события, презентации и обновления из мира транспорта</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html">🏠 Главная</a></li>
+                    <li><a href="#news-list">📰 Все новости</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="news-list" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2980B9 0%, #3498DB 100%);">
+                <span class="card-icon">📰</span>
+                <h2>Лента новостей</h2>
+            </div>
+            <div class="card-content">
+                <div class="news-grid">
+
+                    <!-- Новость 1 -->
+                    <div class="news-card">
+                        <div class="news-thumb">
+                            <img src="img/MetroType_Moscow2017_65081.jpg" alt="Золотая черепаха" onerror="this.src='img/no-photo.png'">
+                        </div>
+                        <div class="news-card-body">
+                            <div class="news-date">📅 30 октября 2026 г.</div>
+                            <h3 class="news-title">Презентация состава «Золотая черепаха»</h3>
+                            <p class="news-desc">Был презентован новый тематический состав «Золотая черепаха» на базе поезда «Москва-2017». 📸 pfandrom</p>
+                            <a href="MetroType_Moscow2017_65081-82.html" class="news-link">Читать подробнее →</a>
+                        </div>
+                    </div>
+
+                    <!-- Новость 2 -->
+                    <div class="news-card">
+                        <div class="news-thumb">
+                            <img src="https://prodapp.mosmetro.ru/static/1_5402382677672926409.jpg" alt="Поезд к 150-летию СТД" onerror="this.src='img/no-photo.png'">
+                        </div>
+                        <div class="news-card-body">
+                            <div class="news-date">📅 26 октября 2026 г.</div>
+                            <h3 class="news-title">Поезд к 150-летию Союза театральных деятелей</h3>
+                            <p class="news-desc">Запущен тематический поезд, посвящённый 150-летию Союза театральных деятелей РФ. 📸 ГУП «Московский метрополитен»</p>
+                            <a href="https://mosmetro.ru/news/details/10847" target="_blank" rel="noopener" class="news-link">Источник (Мосметро) →</a>
+                        </div>
+                    </div>
+
+                    <!-- Новость 3 -->
+                    <div class="news-card">
+                        <div class="news-thumb">
+                            <img src="https://via.placeholder.com/600x400?text=Трафарет+Номерного" alt="Уникальные трафареты" onerror="this.src='img/no-photo.png'">
+                        </div>
+                        <div class="news-card-body">
+                            <div class="news-date">📅 24 октября 2026 г.</div>
+                            <h3 class="news-title">Уникальные трафареты в «Номерном»</h3>
+                            <p class="news-desc">Вышли в рейс вагоны с уникальными трафаретами: чёрный фон и жёлтые буквы. 📸 pfandrom</p>
+                            <a href="MetroType_81-717.5_trafaret_from_Ivan_24-10-2026.html" class="news-link">Читать подробнее →</a>
+                        </div>
+                    </div>
+
+                    <!-- Новость 4 -->
+                    <div class="news-card">
+                        <div class="news-thumb">
+                            <img src="https://prodapp.mosmetro.ru/static/1_sos1.jpg" alt="Состав Технополис" onerror="this.src='img/no-photo.png'">
+                        </div>
+                        <div class="news-card-body">
+                            <div class="news-date">📅 9 октября 2026 г.</div>
+                            <h3 class="news-title">Состав к 20-летию «Технополис Москва»</h3>
+                            <p class="news-desc">Запускаем новый тематический состав к 20-летию особой экономической зоны «Технополис Москва». 📸 ГУП «Московский метрополитен»</p>
+                            <a href="https://mosmetro.ru/news/details/10747" target="_blank" rel="noopener" class="news-link">Источник (Мосметро) →</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Следим за новостями транспорта</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная страница</a></li>
+                        <li><a href="transport_news.html">Новости</a></li>
+                        <li><a href="Обновления.html">Обновления сайта</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Все самое интересное из мира транспорта</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
