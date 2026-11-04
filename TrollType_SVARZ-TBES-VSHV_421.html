@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СВАРЗ ТБЭС №421 — Музейный троллейбус — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>СВАРЗ ТБЭС №421</h1>
+            <p class="subtitle">Музейный троллейбус, прошедший реставрацию спустя десятилетия</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html">🏠 Главная</a></li>
+                    <li><a href="city_transport.html">🚍 Городской транспорт</a></li>
+                    <li><a href="МузейТранспортаМосквы.html">🏛️ Музей Транспорта</a></li>
+                    <li><a href="#about">Об экспонате</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#events">События</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>СВАРЗ ТБЭС №421</h2>
+                <p class="hero-text"><strong>ТБЭС</strong> (троллейбус, бесшумный, экскурсионный, сочленённый) — уникальный пассажирский троллейбус, выпущенный на Сокольническом вагоноремонтном заводе (СВАРЗ) в 1957 году.</p>
+                <p class="hero-text">После списания машина долгое время использовалась в качестве бытовки, но в 1991–1999 годах была восстановлена на СВАРЗе и стала музейным экспонатом.</p>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="buildYear">0</div>
+                        <div class="stat-label">год постройки</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="factoryNum">0</div>
+                        <div class="stat-label">заводской №</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="statusCount" style="font-size: 1.4rem;">—</div>
+                        <div class="stat-label">состояние</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Общая информация -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                <span class="card-icon">📋</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Основные параметры экспоната</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Город</td><td>Москва 🇷🇺</td></tr>
+                        <tr><td>Депо/Парк</td><td>Музей транспорта Москвы</td></tr>
+                        <tr><td>Модель</td><td>СВАРЗ ТБЭС</td></tr>
+                        <tr><td>Построен</td><td>1957</td></tr>
+                        <tr><td>Заводской №</td><td>24</td></tr>
+                        <tr><td>Текущее состояние</td><td style="background: #fff3cd; color: #856404; font-weight: bold;">Не эксплуатируется</td></tr>
+                        <tr><td>Назначение</td><td>Музейный</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- История -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">1957</div>
+                        <div class="timeline-content">
+                            <h3>Постройка</h3>
+                            <p>Троллейбус построен на Сокольническом вагоноремонтном заводе (СВАРЗ).</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1958 — 1961</div>
+                        <div class="timeline-content">
+                            <h3>Эксплуатация</h3>
+                            <p>Работал в Москве. После списания использовался в качестве бытовки.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1991 — 1999</div>
+                        <div class="timeline-content">
+                            <h3>Восстановление</h3>
+                            <p>Восстановлен на СВАРЗе и передан в Музей городского пассажирского транспорта.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022</div>
+                        <div class="timeline-content">
+                            <h3>В составе Музея Транспорта Москвы</h3>
+                            <p>Экспонат передан в Музей Транспорта Москвы.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Хронология событий -->
+        <section id="events" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+                <span class="card-icon">📅</span>
+                <h2>Хронология участия в выставках и парадах</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">12.06.1998</div>
+                        <div class="timeline-content">
+                            <h3>В процессе реставрации</h3>
+                            <p>Троллейбус находился на Сокольническом вагоноремонтно-строительном заводе (СВАРЗ). Фото: И.В. Костюхин.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">02.09.2000</div>
+                        <div class="timeline-content">
+                            <h3>Трамвайно-ремонтный завод (ТРЗ)</h3>
+                            <p>На музейной площадке ТРЗ.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">02.07.2004</div>
+                        <div class="timeline-content">
+                            <h3>Парад к юбилею МТрЗ</h3>
+                            <p>Участие в параде на территории Трамвайного депо имени Н.Э. Баумана (музейная площадка).</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">29.07.2007</div>
+                        <div class="timeline-content">
+                            <h3>Сокольнический вагоноремонтно-строительный завод (СВАРЗ)</h3>
+                            <p>На территории завода.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">22.11.2008</div>
+                        <div class="timeline-content">
+                            <h3>Парад к 75-летию троллейбуса</h3>
+                            <p>Улица Неверовского. Едет в ФАТП после парада.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">12.06.2009</div>
+                        <div class="timeline-content">
+                            <h3>ВВЦ, площадь у Главного входа</h3>
+                            <p>Выставка ретротехники. Также в этот день был запечатлён салон (вид вперёд).</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">04.10.2012</div>
+                        <div class="timeline-content">
+                            <h3>ВДНХ</h3>
+                            <p>Участие в выставке ЭкспоСитиТранс — 2012.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">02.08.2013</div>
+                        <div class="timeline-content">
+                            <h3>Лужники</h3>
+                            <p>Выставка ретротехники к 55-летию ГУП «Мосгортранс».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">16.11.2013</div>
+                        <div class="timeline-content">
+                            <h3>Парад к 80-летию троллейбуса</h3>
+                            <p>Кремлёвская набережная — Боровицкая площадь.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">15.11.2014</div>
+                        <div class="timeline-content">
+                            <h3>Парад к 81-летию троллейбуса</h3>
+                            <p>Тверская улица — улица Охотный Ряд.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">24.10.2015</div>
+                        <div class="timeline-content">
+                            <h3>Парад к 82-летию троллейбуса</h3>
+                            <p>Лужнецкая набережная.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">27.04.2016</div>
+                        <div class="timeline-content">
+                            <h3>Музей «Московский Транспорт»</h3>
+                            <p>Улица Рогожский Вал, 9/2.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">01.10.2016</div>
+                        <div class="timeline-content">
+                            <h3>Парад к 83-летию троллейбуса</h3>
+                            <p>Большая Дорогомиловская улица.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">23.10.2016</div>
+                        <div class="timeline-content">
+                            <h3>Выставка в Санкт-Петербурге</h3>
+                            <p>Биржевая площадь. Выставка к 80-летию со дня открытия троллейбусного движения в Санкт-Петербурге.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">03.06.2017</div>
+                        <div class="timeline-content">
+                            <h3>8-й троллейбусный парк</h3>
+                            <p>Площадка «Нагатинская». XXXVIII конкурс профессионального мастерства водителей троллейбусов.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">22.11.2017</div>
+                        <div class="timeline-content">
+                            <h3>ВДНХ, павильон №75</h3>
+                            <p>Экспонат выставки «Урбан-транспорт — 2017».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">25.05.2019</div>
+                        <div class="timeline-content">
+                            <h3>V Петербургский парад ретротранспорта</h3>
+                            <p>Санкт-Петербург, Площадь Белинского.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Фотогалерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="photo-gallery">
+
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Trolltype_SVARZ-TBES-VSHV_421_MosTransMus.jpg" alt="СВАРЗ ТБЭС №421" 
+                                 onclick="openGalleryModal(this.src, 'СВАРЗ ТБЭС №421 в Музее Транспорта Москвы')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=Фото+отсутствует'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">СВАРЗ ТБЭС №421</a>
+                            <p class="photo-desc">Общий вид троллейбуса в экспозиции.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 11 октября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Trolltype_SVARZ-TBES-VSHV_421_int_MosTransMus.jpg" alt="Салон СВАРЗ ТБЭС №421" 
+                                 onclick="openGalleryModal(this.src, 'Салон троллейбуса СВАРЗ ТБЭС №421')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=Фото+отсутствует'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Салон троллейбуса</a>
+                            <p class="photo-desc">Внутреннее убранство экспоната.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 11 октября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 3 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Trolltype_SVARZ-TBES-VSHV_421_tabl_MosTransMus.jpg" alt="Табличка об экспонате" 
+                                 onclick="openGalleryModal(this.src, 'Информационная табличка об экспонате')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=Фото+отсутствует'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Табличка об экспонате</a>
+                            <p class="photo-desc">Музейная информация о модели.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 11 октября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«СВАРЗ ТБЭС — это уникальный пример того, как машина, казалось бы, навсегда утраченная для истории, была возвращена к жизни усилиями реставраторов и теперь радует посетителей музея».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Городской транспорт»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная страница</a></li>
+                        <li><a href="city_transport.html">Городской транспорт</a></li>
+                        <li><a href="МузейТранспортаМосквы.html">Музей Транспорта</a></li>
+                        <li><a href="transport_news.html">Новости</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram-канал</a></p>
+                    <p>💬 <a href="https://t.me/tepp_forum" target="_blank" rel="noopener">Форум</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">СВАРЗ ТБЭС №421 — музейный троллейбус</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
+            function animateCounters() {
+                const targets = { buildYear: 1957, factoryNum: 24, statusCount: 1 };
+                let current = { buildYear: 0, factoryNum: 0, statusCount: 0 };
+                const yearEl = document.getElementById('buildYear');
+                const factEl = document.getElementById('factoryNum');
+                const statusEl = document.getElementById('statusCount');
+                if (!yearEl || !factEl || !statusEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.buildYear < targets.buildYear) {
+                        current.buildYear += Math.ceil(targets.buildYear / 50);
+                        if (current.buildYear > targets.buildYear) current.buildYear = targets.buildYear;
+                        yearEl.textContent = current.buildYear;
+                        allFinished = false;
+                    }
+                    if (current.factoryNum < targets.factoryNum) {
+                        current.factoryNum += Math.ceil(targets.factoryNum / 50);
+                        if (current.factoryNum > targets.factoryNum) current.factoryNum = targets.factoryNum;
+                        factEl.textContent = current.factoryNum;
+                        allFinished = false;
+                    }
+                    if (current.statusCount < targets.statusCount) {
+                        current.statusCount += 1;
+                        if (current.statusCount > targets.statusCount) current.statusCount = targets.statusCount;
+                        statusEl.textContent = 'Муз.';
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+
+            // Галерея
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+
+            document.querySelectorAll('.photo-thumb img').forEach(img => {
+                img.addEventListener('click', function() {
+                    const card = this.closest('.photo-card');
+                    if (!card) return;
+
+                    const src = this.src;
+                    const alt = this.alt;
+                    const object = card.querySelector('.photo-object')?.textContent || '';
+                    const desc = card.querySelector('.photo-desc')?.textContent || '';
+                    const date = card.querySelector('.photo-date')?.textContent || '';
+                    const author = card.querySelector('.photo-author')?.textContent || '';
+
+                    if (content) {
+                        content.innerHTML = `
+                            <img src="${src}" style="max-width:100%; max-height:60vh; border-radius:10px; display:block; margin: 0 auto;" alt="${alt}">
+                            <div style="margin-top: 1.5rem; text-align: left; padding: 0 1rem;">
+                                <h3 style="color: var(--accent-color); margin-bottom: 0.5rem; font-size: 1.4rem;">${object}</h3>
+                                <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1rem;">${desc}</p>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-secondary); border-top: 1px solid var(--border-color); padding-top: 1rem;">
+                                    <span>${date}</span>
+                                    <span>${author}</span>
+                                </div>
+                            </div>
+                        `;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>
