@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>81-775.2 «Москва-2026» №75529-75530 — Прислонно-раздвижные двери — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>81-775.2 «Москва-2026» №75529-75530</h1>
+            <p class="subtitle">Первый состав с прислонно-раздвижными дверями</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="Главная_Страница_Мосметро.html">🏙️ Мосметро</a></li>
+                    <li><a href="#about">О поезде</a></li>
+                    <li><a href="#doors">Двери</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>81-775.2 «Москва-2026» №75529-75530</h2>
+                <p class="hero-text">Первый состав «Москва-2026» с прислонно-раздвижными дверями прибыл в Москву <strong>4 ноября 2026 года</strong>. Головной вагон <strong>№75529</strong> ранее проходил испытания нового дверного оборудования на АО «Метровагонмаш» в течение нескольких месяцев.</p>
+                <p class="hero-text">Данное событие знаменует новый виток эволюции московского метро — возвращение к прислонно-сдвижным дверям.</p>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="buildYear">0</div>
+                        <div class="stat-label">год постройки</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="carsCount">0</div>
+                        <div class="stat-label">вагонов в составе</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="statusCount" style="font-size: 1.4rem;">—</div>
+                        <div class="stat-label">состояние</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Общая информация -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Основные параметры состава</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Город</td><td>Москва 🇷🇺</td></tr>
+                        <tr><td>Депо/Парк</td><td>ТЧ-17 «Южное»</td></tr>
+                        <tr><td>Модель</td><td>81-775.2 / 81-776.2 / 81-777.2 «Москва-2026»</td></tr>
+                        <tr><td>Построен</td><td>05.2026</td></tr>
+                        <tr><td>Текущее состояние</td><td style="background: #00f339; color: #132217; font-weight: bold;">Не был в эксплуатации в этом городе</td></tr>
+                        <tr><td>Назначение</td><td>Пассажирский</td></tr>
+                        <tr><td>Дата прибытия</td><td>04.11.2026</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <h3>Составность</h3>
+                    <p style="font-size: 1.3rem; text-align: center; font-weight: bold; margin-top: 0.5rem;">
+                        75529 — 77529 — 06017 — 06018 — 06019 — 06020 — 77530 — 75530
+                    </p>
+                    <p style="text-align: center; color: var(--text-secondary); margin-top: 0.3rem;">8 вагонов</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Двери -->
+        <section id="doors" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">🚪</span>
+                <h2>Новые прислонно-раздвижные двери</h2>
+            </div>
+            <div class="card-content">
+                <p>Стремление Дептранса внедрить более широкие дверные створки в моделях 81-775 и подобных вынудило конструкторов сузить кузов, чтобы вписаться в габариты тоннеля. В итоге вагоны стали теснее, число сидений сократилось, а эргономика ухудшилась.</p>
+                <p style="margin-top: 1rem;">Широкие сдвижные створки — это по сути тяжёлые стеклопакеты на роликах, и их эксплуатация приводит к повышенному износу кронштейнов и дверных проёмов. Наглядное подтверждение случилось в октябре 2024 года на Большой кольцевой линии, где у «Москвы-2020» прямо на ходу оторвалась дверная панель.</p>
+
+                <div class="features-grid" style="margin-top: 1.5rem;">
+                    <div class="feature-item">
+                        <h3>⚙️ Конструкция</h3>
+                        <p>Площадь остекления значительно уменьшилась, появились кронштейны, которые держат двери.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🏭 Производитель</h3>
+                        <p>Двери произведены компанией «СТЕСА».</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- История -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">06.2026 — 03.11.2026</div>
+                        <div class="timeline-content">
+                            <h3>Испытания на заводе</h3>
+                            <p>Испытания нового дверного оборудования на АО «Метровагонмаш».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">04.11.2026</div>
+                        <div class="timeline-content">
+                            <h3>Прибытие в Москву</h3>
+                            <p>Состав поступил в метрополитен через гейт ТЧ-18 «Солнцево».</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Фотогалерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="photo-gallery">
+
+                    <!-- Фото 1 (Локальное) -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/MetroType_81-775.2_Moscow2026_75529.jpg" alt="Состав 81-775.2 Москва-2026 на Киевском вокзале" 
+                                 onclick="openGalleryModal(this.src, '81-775.2 «Москва-2026» № 75529 на Киевском вокзале')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=Фото+отсутствует'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">81-775.2 «Москва-2026» № 75529</a>
+                            <p class="photo-desc">
+                                <strong>📌 Москва, Киевский вокзал.</strong><br>
+                                Первый состав «Москва-2026» с прислонно-раздвижными дверями прибыл в Москву.
+                            </p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 4 ноября 2026 г.</span>
+                                <span class="photo-author">📸 PDMicail</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 2 (С сайта TransPhoto) -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="https://transphoto.org/photo/23/54/22/2354224.jpg" alt="Состав 81-775.2 Москва-2026 на перегоне" 
+                                 onclick="openGalleryModal(this.src, '81-775.2 «Москва-2026» № 75529 на перегоне')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=Фото+отсутствует'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="https://transphoto.org/photo/2354224/" target="_blank" rel="noopener" class="photo-object">81-775.2 «Москва-2026» № 75529</a>
+                            <p class="photo-desc"><strong>📌 Перегон Москва-Пассажирская-Киевская — Очаково-I.</strong></p>
+                            <p class="photo-desc">Новый состав «Москва-2026» с прислонно-раздвижными дверями.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 4 ноября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://transphoto.org/photo/2354224/" target="_blank" rel="noopener">quantmetro</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Первый состав "Москвы-2026" с прислонно-раздвижными дверями — это важный шаг в развитии подвижного состава. Мы будем следить за его испытаниями и надеяться, что новые двери оправдают возложенные на них ожидания».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Подвижной состав метро»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная страница</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="Главная_Страница_Мосметро.html">Московский метрополитен</a></li>
+                        <li><a href="transport_news.html">Новости</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram-канал</a></p>
+                    <p>💬 <a href="https://t.me/tepp_forum" target="_blank" rel="noopener">Форум</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">81-775.2 «Москва-2026» — испытания новых дверей</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
+            function animateCounters() {
+                const targets = { buildYear: 2026, carsCount: 8, statusCount: 1 };
+                let current = { buildYear: 0, carsCount: 0, statusCount: 0 };
+                const yearEl = document.getElementById('buildYear');
+                const carsEl = document.getElementById('carsCount');
+                const statusEl = document.getElementById('statusCount');
+                if (!yearEl || !carsEl || !statusEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.buildYear < targets.buildYear) {
+                        current.buildYear += Math.ceil(targets.buildYear / 50);
+                        if (current.buildYear > targets.buildYear) current.buildYear = targets.buildYear;
+                        yearEl.textContent = current.buildYear;
+                        allFinished = false;
+                    }
+                    if (current.carsCount < targets.carsCount) {
+                        current.carsCount += 1;
+                        if (current.carsCount > targets.carsCount) current.carsCount = targets.carsCount;
+                        carsEl.textContent = current.carsCount;
+                        allFinished = false;
+                    }
+                    if (current.statusCount < targets.statusCount) {
+                        current.statusCount += 1;
+                        if (current.statusCount > targets.statusCount) current.statusCount = targets.statusCount;
+                        statusEl.textContent = 'Испыт.';
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+
+            // Галерея
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+
+            document.querySelectorAll('.photo-thumb img').forEach(img => {
+                img.addEventListener('click', function() {
+                    const card = this.closest('.photo-card');
+                    if (!card) return;
+
+                    const src = this.src;
+                    const alt = this.alt;
+                    const object = card.querySelector('.photo-object')?.textContent || '';
+                    const desc = card.querySelector('.photo-desc')?.textContent || '';
+                    const date = card.querySelector('.photo-date')?.textContent || '';
+                    const author = card.querySelector('.photo-author')?.textContent || '';
+
+                    if (content) {
+                        content.innerHTML = `
+                            <img src="${src}" style="max-width:100%; max-height:60vh; border-radius:10px; display:block; margin: 0 auto;" alt="${alt}">
+                            <div style="margin-top: 1.5rem; text-align: left; padding: 0 1rem;">
+                                <h3 style="color: var(--accent-color); margin-bottom: 0.5rem; font-size: 1.4rem;">${object}</h3>
+                                <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1rem;">${desc}</p>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-secondary); border-top: 1px solid var(--border-color); padding-top: 1rem;">
+                                    <span>${date}</span>
+                                    <span>${author}</span>
+                                </div>
+                            </div>
+                        `;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>
