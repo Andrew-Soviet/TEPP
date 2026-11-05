@@ -60,54 +60,55 @@
             <div class="hero-content">
                 <h2>ЛиАЗ-677 (1973)</h2>
                 <p class="hero-text">Перед вами основной городской автобус СССР, проработавший на маршрутах почти 30 лет. Данный экземпляр был выпущен на Ликинском автобусном заводе в <strong>1973 году</strong> и сейчас находится в коллекции Музея Транспорта Москвы.</p>
-                <p class="hero-text">Это был самый вместительный на тот момент отечественный автобус. Он оснащался трёхрядной компоновкой сидений, автоматической коробкой передач и пневмоподвеской. Имел 25 сидячих мест, но мог перевозить до 110 пассажиров. <strong>Ходил по Москве до 2004 года.</strong></p>
+                <p class="hero-text">Это был самый вместительный на тот момент отечественный автобус. Он оснащался трёхрядной компоновкой сидений, автоматической коробкой передач и пневмоподвеской. Имел 25 сидячих мест, но мог перевозить до 110 пассажиров.</p>
                 <div class="stats-container">
                     <div class="stat-item">
                         <div class="counter-number" id="buildYear">0</div>
-                        <div class="stat-label">год выпуска экспоната</div>
+                        <div class="stat-label">год выпуска</div>
                     </div>
                     <div class="stat-item">
                         <div class="counter-number" id="capacity">0</div>
-                        <div class="stat-label">пассажиров (предельная)</div>
+                        <div class="stat-label">пассажиров</div>
                     </div>
-                    <div class="stat-label" style="font-size: 1.2rem; color: var(--accent-color); font-weight: bold; margin-top: 1rem;">Музейный</div>
-                    <div class="stat-label">статус</div>
+                    <div class="stat-item">
+                        <div class="stat-label" style="font-size: 1.2rem; color: var(--accent-color); font-weight: bold; margin-top: 1rem;">Музейный</div>
+                        <div class="stat-label">статус</div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Общая информация -->
+        <!-- Общая информация (Таблица) -->
         <section class="section-card">
-            <div class="card-header">
+            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
                 <span class="card-icon">🚌</span>
-                <h2>Общая информация об экспонате</h2>
+                <h2>Общая информация</h2>
             </div>
             <div class="card-content">
-                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
-                    <div class="feature-item">
-                        <h3>🏭 Производство</h3>
-                        <p><strong>Завод-изготовитель:</strong> Ликинский автобусный завод (ЛиАЗ), Ликино-Дулёво</p>
-                        <p><strong>Модель:</strong> ЛиАЗ-677</p>
-                        <p><strong>Год выпуска экспоната:</strong> 1973</p>
-                        <p><strong>Тип:</strong> Городской высокопольный автобус большого класса</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>📍 Музейный статус</h3>
-                        <p><strong>Местонахождение:</strong> Музей Транспорта Москвы</p>
-                        <p><strong>Состояние:</strong> Не эксплуатируется (музейный экспонат)</p>
-                        <p><strong>Работа в Москве:</strong> до 2004 года</p>
-                        <p><strong>Прозвища:</strong> «Луноход», «Скотовоз»</p>
-                    </div>
-                </div>
-                <div class="highlight-box" style="margin-top: 1.5rem;">
-                    <p>⭐ <strong>Роль в истории:</strong> ЛиАЗ-677 стал первым советским серийным автобусом с автоматической коробкой передач и пневмоподвеской. Водители впервые получили гидроусилитель руля и селектор автомата вместо тяжёлого сцепления. С 1967 по 1994 год было выпущено более 200 тысяч машин всех модификаций.</p>
-                </div>
+                <table>
+                    <caption>Основные параметры автобуса ЛиАЗ-677</caption>
+                    <thead>
+                        <tr>
+                            <th>Параметр</th>
+                            <th>Значение</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Город</td><td>Москва 🇷🇺</td></tr>
+                        <tr><td>Транспортная компания</td><td>Музей Транспорта Москвы</td></tr>
+                        <tr><td>Модель</td><td>ЛиАЗ-677</td></tr>
+                        <tr><td>Год выпуска экспоната</td><td>1973</td></tr>
+                        <tr><td>Текущее состояние</td><td style="background: #fff3cd; color: #856404; font-weight: bold;">Памятник / Музейный</td></tr>
+                        <tr><td>Тип</td><td>Городской высокопольный автобус большого класса</td></tr>
+                        <tr><td>Завод-изготовитель</td><td>Ликинский автобусный завод (ЛиАЗ), Ликино-Дулёво</td></tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
         <!-- Технические характеристики -->
         <section class="section-card">
-            <div class="card-header">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
                 <span class="card-icon">⚙️</span>
                 <h2>Технические характеристики</h2>
             </div>
@@ -137,45 +138,31 @@
 
         <!-- История -->
         <section id="history" class="section-card">
-            <div class="card-header">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
                 <span class="card-icon">📜</span>
                 <h2>История экспоната</h2>
             </div>
             <div class="card-content">
                 <div class="timeline" style="padding: 1rem 0;">
                     <div class="timeline-item">
-                        <div class="timeline-date">1967</div>
-                        <div class="timeline-content">
-                            <h3>Начало производства модели</h3>
-                            <p>Выпуск ЛиАЗ-677 стартовал в 1967 году. Автобус стал прорывом благодаря автоматической коробке передач и пневмоподвеске.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
                         <div class="timeline-date">1973</div>
                         <div class="timeline-content">
-                            <h3>Год выпуска экспоната</h3>
-                            <p>Именно эта машина сошла с конвейера Ликинского автобусного завода в 1973 году. Она застала эпоху, когда ЛиАЗ-677 стал основным городским автобусом СССР.</p>
+                            <h3>Выпуск</h3>
+                            <p>Автобус сошёл с конвейера Ликинского автобусного завода. В это время ЛиАЗ-677 был основным городским автобусом СССР.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-date">1994</div>
+                        <div class="timeline-date">1973 — 2004</div>
                         <div class="timeline-content">
-                            <h3>Конец выпуска</h3>
-                            <p>Последний ЛиАЗ-677М сошёл с конвейера Ликинского завода 7 августа 1994 года. Всего было выпущено более 200 000 машин.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">2004</div>
-                        <div class="timeline-content">
-                            <h3>Прощание в Москве</h3>
-                            <p>Этот конкретный автобус (или его собратья) ходил по Москве до 2004 года, после чего был передан в музей.</p>
+                            <h3>Работа на маршрутах</h3>
+                            <p>Машина работала в Москве вплоть до 2004 года, когда эти автобусы начали массово выводить из эксплуатации.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date">Наши дни</div>
                         <div class="timeline-content">
-                            <h3>Сохранение для истории</h3>
-                            <p>Сейчас экспонат 1973 года занимает достойное место в экспозиции Музея Транспорта Москвы.</p>
+                            <h3>Музейный экспонат</h3>
+                            <p>После списания автобус был отреставрирован и передан в коллекцию Музея Транспорта Москвы.</p>
                         </div>
                     </div>
                 </div>
@@ -184,7 +171,7 @@
 
         <!-- Особенности конструкции -->
         <section class="section-card">
-            <div class="card-header">
+            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
                 <span class="card-icon">🎨</span>
                 <h2>Особенности конструкции</h2>
             </div>
@@ -212,23 +199,29 @@
 
         <!-- Фотогалерея -->
         <section id="gallery" class="section-card">
-            <div class="card-header">
+            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
                 <span class="card-icon">📸</span>
                 <h2>Фотогалерея</h2>
             </div>
             <div class="card-content">
                 <div class="photo-gallery">
-                    <!-- Фото 1 -->
+
+                    <!-- Фото 1 (Новое) -->
                     <div class="photo-card">
                         <div class="photo-thumb">
-                            <img src="img/liaz_677_museum.jpg" alt="ЛиАЗ-677 в музее" onclick="openGalleryModal(this.src, 'ЛиАЗ-677 1973 года из коллекции Музея транспорта Москвы')" onerror="this.src='https://via.placeholder.com/600x400?text=ЛиАЗ-677'">
+                            <img src="img/AvtobusType_LiAZ-677_idontknownum.jpg" alt="ЛиАЗ-677 в музее" 
+                                 onclick="openGalleryModal(this.src, 'ЛиАЗ-677 1973 года в Музее Транспорта Москвы')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=ЛиАЗ-677'">
                         </div>
                         <div class="photo-info">
-                            <a href="#" class="photo-object">ЛиАЗ-677 в музее</a>
-                            <p class="photo-desc">Экспонат 1973 года.</p>
+                            <a href="#" class="photo-object">ЛиАЗ-677</a>
+                            <p class="photo-desc">
+                                <strong>📌 Музей Транспорта Москвы.</strong><br>
+                                Экспонат 1973 года.
+                            </p>
                             <div class="photo-meta">
-                                <span class="photo-date">📅 2026</span>
-                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                                <span class="photo-date">📅 18 сентября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://t.me/vbfgynd" target="_blank" rel="noopener">Транспортник Москвы</a></span>
                             </div>
                         </div>
                     </div>
@@ -236,13 +229,13 @@
                     <!-- Фото 2 -->
                     <div class="photo-card">
                         <div class="photo-thumb">
-                            <img src="img/liaz_677_museum_int.jpg" alt="Салон ЛиАЗ-677" onclick="openGalleryModal(this.src, 'Салон ЛиАЗ-677')" onerror="this.src='https://via.placeholder.com/600x400?text=Салон'">
+                            <img src="img/liaz_677_museum.jpg" alt="ЛиАЗ-677 в музее" onclick="openGalleryModal(this.src, 'ЛиАЗ-677 1973 года из коллекции Музея транспорта Москвы')" onerror="this.src='https://via.placeholder.com/600x400?text=ЛиАЗ-677'">
                         </div>
                         <div class="photo-info">
-                            <a href="#" class="photo-object">Салон автобуса</a>
-                            <p class="photo-desc">Внутреннее убранство.</p>
+                            <a href="#" class="photo-object">ЛиАЗ-677</a>
+                            <p class="photo-desc"><strong>📌 Музей Транспорта Москвы.</strong><br>Экспонат 1973 года.</p>
                             <div class="photo-meta">
-                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-date">📅 11 октября 2026 г.</span>
                                 <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
                             </div>
                         </div>
@@ -251,13 +244,28 @@
                     <!-- Фото 3 -->
                     <div class="photo-card">
                         <div class="photo-thumb">
+                            <img src="img/liaz_677_museum_int.jpg" alt="Салон ЛиАЗ-677" onclick="openGalleryModal(this.src, 'Салон ЛиАЗ-677')" onerror="this.src='https://via.placeholder.com/600x400?text=Салон'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Салон автобуса</a>
+                            <p class="photo-desc"><strong>📌 Музей Транспорта Москвы.</strong><br>Внутреннее убранство.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 11 октября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 4 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
                             <img src="img/liaz_677_museum_tabl.jpg" alt="Табличка об экспонате" onclick="openGalleryModal(this.src, 'Табличка об экспонате')" onerror="this.src='https://via.placeholder.com/600x400?text=Табличка'">
                         </div>
                         <div class="photo-info">
                             <a href="#" class="photo-object">Табличка об экспонате</a>
-                            <p class="photo-desc">Музейная информация.</p>
+                            <p class="photo-desc"><strong>📌 Музей Транспорта Москвы.</strong><br>Музейная информация.</p>
                             <div class="photo-meta">
-                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-date">📅 11 октября 2026 г.</span>
                                 <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
                             </div>
                         </div>
@@ -295,6 +303,7 @@
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
                     <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
+                    <p>💬 <a href="https://t.me/tepp_forum" target="_blank" rel="noopener">Форум</a></p>
                 </div>
             </div>
             <div class="footer-bottom">

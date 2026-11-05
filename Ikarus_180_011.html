@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikarus 180 № 011 (1969) — Музейный экспонат — ТЭПП</title>
+    <meta name="description" content="Ikarus 180 № 011 1969 года из коллекции Музея Транспорта Москвы. История, характеристики и особенности.">
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <!-- ================= ШАПКА ================= -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Ikarus 180 № 011</h1>
+                <p class="subtitle">Музейный экспонат (1969) — первая массовая «гармошка» СССР</p>
+            </div>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html">🏠 Главная</a></li>
+                    <li><a href="city_transport.html">🚌 Городской транспорт</a></li>
+                    <li><a href="Автобусы.html">🚐 Автобусы</a></li>
+                    <li><a href="#about" class="active">🚌 Ikarus 180</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Ikarus 180 № 011</h2>
+                <p class="hero-text">Перед вами первый в СССР массовый сочленённый автобус особо большой вместимости. Данный экземпляр (бортовой № 011) был выпущен в <strong>1969 году</strong> на заводе Ikarus в Венгрии и сейчас является частью коллекции Музея Транспорта Москвы.</p>
+                <p class="hero-text">Экспонат оснащён дизельным двигателем и усовершенствованными комбинированными рессорами. Вмещал от 150 до 200 человек.</p>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="buildYear">0</div>
+                        <div class="stat-label">год выпуска</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="capacity">0</div>
+                        <div class="stat-label">человек вместимость</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label" style="font-size: 1.2rem; color: var(--accent-color); font-weight: bold; margin-top: 1rem;">Музейный</div>
+                        <div class="stat-label">статус</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Общая информация (Таблица) -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                <span class="card-icon">🚌</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Основные параметры автобуса Ikarus 180 № 011</caption>
+                    <thead>
+                        <tr>
+                            <th>Параметр</th>
+                            <th>Значение</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Город</td><td>Москва 🇷🇺</td></tr>
+                        <tr><td>Транспортная компания</td><td>Музей Транспорта Москвы</td></tr>
+                        <tr><td>Модель</td><td>Ikarus 180</td></tr>
+                        <tr><td>Бортовой №</td><td><strong>011</strong></td></tr>
+                        <tr><td>Год выпуска</td><td>1969</td></tr>
+                        <tr><td>Текущее состояние</td><td style="background: #fff3cd; color: #856404; font-weight: bold;">Памятник / Музейный</td></tr>
+                        <tr><td>Тип</td><td>Сочленённый городской автобус особо большой вместимости</td></tr>
+                        <tr><td>Завод-изготовитель</td><td>Завод кузовов и транспортных средств Ikarus (Венгрия)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Технические характеристики -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">⚙️</span>
+                <h2>Технические характеристики</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>Основные параметры</h3>
+                        <p><strong>Длина:</strong> 16,5 м</p>
+                        <p><strong>Ширина:</strong> 2,5 м</p>
+                        <p><strong>Высота:</strong> 3,5 м</p>
+                        <p><strong>Сухая масса:</strong> 13 000 кг</p>
+                        <p><strong>Вместимость:</strong> 150–200 человек</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Силовая установка</h3>
+                        <p><strong>Двигатель:</strong> дизельный, горизонтальный</p>
+                        <p><strong>Производство:</strong> по лицензии MAN (комбинат Rába)</p>
+                        <p><strong>Мощность:</strong> около 200 л.с.</p>
+                        <p><strong>Расположение:</strong> под полом центральной части</p>
+                        <p><strong>Подвеска:</strong> усовершенствованные комбинированные рессоры</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Особенности конструкции -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+                <span class="card-icon">🎨</span>
+                <h2>Особенности конструкции</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>Полунесущий кузов</h3>
+                        <p>Оригинальная полунесущая конструкция. Дизельный двигатель расположен горизонтально под полом центральной части. Это обеспечило максимум простора в салоне.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Сочленение</h3>
+                        <p>Шарнирный узел, связанный с поворотной осью колёс в прицепе. Благодаря этому автобус длиной более 16 метров обладал манёвренностью, сравнимой с одиночными машинами.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Двигатель по лицензии MAN</h3>
+                        <p>Горизонтальный шестицилиндровый дизель выпускался по лицензии западногерманской фирмы MAN на комбинате Rába. Мощность около 200 л.с.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Особенности салона</h3>
+                        <p>В салоне были установлены мягкие диваны. В экспозиции музея автобус представлен с характерной бело-красной окраской, которая была стандартной для тех лет.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Фотогалерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="photo-gallery">
+
+                    <!-- Фото 1 (Новое) -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/ikarus_180_011_museum.jpg" alt="Ikarus 180 № 011 в музее" 
+                                 onclick="openGalleryModal(this.src, 'Ikarus 180 № 011 из коллекции Музея Транспорта Москвы')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=Ikarus+180'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Ikarus 180 №011</a>
+                            <p class="photo-desc">
+                                <strong>📌 Музей Транспорта Москвы.</strong><br>
+                                Экспонат в музее.
+                            </p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 18 сентября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://t.me/vbfgynd" target="_blank" rel="noopener">Транспортник Москвы</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/ikarus_180_mus.jpg" alt="Ikarus 180 в музее" onclick="openGalleryModal(this.src, 'Ikarus 180 № 011 в экспозиции Музея Транспорта Москвы')" onerror="this.src='https://via.placeholder.com/600x400?text=Ikarus+180'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Ikarus 180 №011</a>
+                            <p class="photo-desc"><strong>📌 Музей Транспорта Москвы.</strong><br>Экспонат 1969 года.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 11 октября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 3 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/ikarus_180_tabl.jpg" alt="Табличка об экспонате" onclick="openGalleryModal(this.src, 'Табличка об экспонате')" onerror="this.src='https://via.placeholder.com/600x400?text=Табличка'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Табличка об экспонате</a>
+                            <p class="photo-desc"><strong>📌 Музей Транспорта Москвы.</strong><br>Музейная информация.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 11 октября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 4 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/ikarus_180_int.jpg" alt="Салон «Икаруса-180»" onclick="openGalleryModal(this.src, 'Салон «Икаруса-180»')" onerror="this.src='https://via.placeholder.com/600x400?text=Салон'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Ikarus 180 №011</a>
+                            <p class="photo-desc"><strong>📌 Музей Транспорта Москвы.</strong><br>Салон, вид вперед.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 11 октября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Именно положительный опыт эксплуатации 180-х, который продолжался вплоть до начала 1980-х, доказал необходимость использования автобусов особо большой вместимости в городах».</p>
+                <p class="quote-author">— Музей транспорта Москвы</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Автобусы»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная страница</a></li>
+                        <li><a href="city_transport.html">Городской транспорт</a></li>
+                        <li><a href="Автобусы.html">Автобусы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
+                    <p>💬 <a href="https://t.me/tepp_forum" target="_blank" rel="noopener">Форум</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Ikarus 180 № 011 (1969) — «Первая гармошка СССР»</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
+            function animateCounters() {
+                const targets = { buildYear: 1969, capacity: 200 };
+                let current = { buildYear: 0, capacity: 0 };
+                const yearEl = document.getElementById('buildYear');
+                const capEl = document.getElementById('capacity');
+                if (!yearEl || !capEl) return;
+                
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.buildYear < targets.buildYear) {
+                        current.buildYear += Math.ceil(targets.buildYear / 50);
+                        if (current.buildYear > targets.buildYear) current.buildYear = targets.buildYear;
+                        yearEl.textContent = current.buildYear;
+                        allFinished = false;
+                    }
+                    if (current.capacity < targets.capacity) {
+                        current.capacity += Math.ceil(targets.capacity / 50);
+                        if (current.capacity > targets.capacity) current.capacity = targets.capacity;
+                        capEl.textContent = current.capacity;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+        });
+    </script>
+</body>
+</html>
