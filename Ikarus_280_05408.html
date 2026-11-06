@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikarus 280 №05408 (1985) — Музейный экспонат — ТЭПП</title>
+    <meta name="description" content="Ikarus 280 №05408 1985 года из Музея Транспорта Москвы. Один из немногих экспонатов, в который можно войти.">
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <!-- ================= ШАПКА ================= -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Ikarus 280 №05408</h1>
+                <p class="subtitle">Музейный экспонат (1985) — самая массовая «гармошка» в истории</p>
+            </div>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html">🏠 Главная</a></li>
+                    <li><a href="city_transport.html">🚌 Городской транспорт</a></li>
+                    <li><a href="Автобусы.html">🚐 Автобусы</a></li>
+                    <li><a href="Модели_автобусов.html">📋 Модели</a></li>
+                    <li><a href="#about" class="active">🚌 Ikarus 280</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Ikarus 280 №05408</h2>
+                <p class="hero-text">Перед вами городской сочленённый автобус, выпускавшийся с 1973 по 2003 год. Долгое время он оставался единственной в СССР моделью особо большой вместимости — <strong>180 пассажиров</strong>.</p>
+                <p class="hero-text">Данный экземпляр (бортовой № 05408) выпущен в <strong>1985 году</strong>. Это один из немногих экспонатов музея, <strong>в который можно войти</strong> и своими глазами увидеть салон легендарной «гармошки».</p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="buildYear">0</div>
+                        <div class="stat-label">год выпуска</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="boardNum" style="font-size: 2.5rem;">—</div>
+                        <div class="stat-label">бортовой №</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="statusCount" style="font-size: 1.4rem;">—</div>
+                        <div class="stat-label">состояние</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Общая информация -->
+        <section class="section-card">
+            <div class="card-header">
+                <span class="card-icon">📋</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Город</td><td>Москва 🇷🇺</td></tr>
+                        <tr><td>Транспортная компания</td><td>Музей Транспорта Москвы</td></tr>
+                        <tr><td>Модель</td><td>Ikarus 280.00</td></tr>
+                        <tr><td>Год выпуска</td><td>1985</td></tr>
+                        <tr><td>Заводской №</td><td>135</td></tr>
+                        <tr><td>VIN</td><td>280.00.135.85</td></tr>
+                        <tr><td>Госномер</td><td>ве855 77</td></tr>
+                        <tr><td>Бортовой №</td><td>05408</td></tr>
+                        <tr><td>Поступил</td><td>09.2007</td></tr>
+                        <tr><td>Текущее состояние</td><td style="background: #fff3cd; color: #856404; font-weight: bold;">Памятник / Музейный</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Технические характеристики -->
+        <section class="section-card">
+            <div class="card-header">
+                <span class="card-icon">⚙️</span>
+                <h2>Технические характеристики</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>Основные параметры</h3>
+                        <p><strong>Длина:</strong> 16,5 м</p>
+                        <p><strong>Ширина:</strong> 2,5 м</p>
+                        <p><strong>Высота:</strong> 3,16 м</p>
+                        <p><strong>Сухая масса:</strong> 12 580 кг</p>
+                        <p><strong>Вместимость:</strong> 180 пассажиров</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Силовая установка</h3>
+                        <p><strong>Двигатель:</strong> Rába-MAN (лицензионный)</p>
+                        <p><strong>Расположение:</strong> под полом салона, в базе</p>
+                        <p><strong>Высота пола:</strong> 920 мм</p>
+                        <p><strong>Расход топлива:</strong> 40 л / 100 км</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- История -->
+        <section id="history" class="section-card">
+            <div class="card-header">
+                <span class="card-icon">📜</span>
+                <h2>История экспоната</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline" style="padding: 1rem 0;">
+                    <div class="timeline-item">
+                        <div class="timeline-date">1973</div>
+                        <div class="timeline-content">
+                            <h3>Начало выпуска модели</h3>
+                            <p>В 1973 году началось серийное производство Ikarus 280. Модель стала частью нового 200-го семейства с единой агрегатной базой.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1985</div>
+                        <div class="timeline-content">
+                            <h3>Выпуск экспоната</h3>
+                            <p>Именно эта машина (заводской № 135) сошла с конвейера завода Ikarus в 1985 году. Она успела застать расцвет эпохи «гармошек» на улицах советских городов.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">09.2007</div>
+                        <div class="timeline-content">
+                            <h3>Поступление в музей</h3>
+                            <p>Автобус поступил в Музей Транспорта Москвы.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">09.10.2016</div>
+                        <div class="timeline-content">
+                            <h3>Ожидание восстановления</h3>
+                            <p>На Сокольническом вагоноремонтном заводе (СВАРЗ) автобус ожидал восстановления. Табличка на лобовом стекле подтверждала его музейный статус.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Наши дни</div>
+                        <div class="timeline-content">
+                            <h3>Сохранение для истории</h3>
+                            <p>Данный экземпляр занял достойное место в экспозиции Музея Транспорта Москвы. В него можно войти.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Особенности конструкции -->
+        <section class="section-card">
+            <div class="card-header">
+                <span class="card-icon">🎨</span>
+                <h2>Особенности конструкции</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>Сочленённая конструкция</h3>
+                        <p>Две секции кузова, соединённые шарнирным узлом. Двигатель расположен под полом салона.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Раздельные сиденья</h3>
+                        <p>Автобус оборудовался раздельными сиденьями, которые в отечественных автобусах появились только в 1990-е годы.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Широкие двери</h3>
+                        <p>Высота пола 920 мм увеличивала время посадки-высадки. Чтобы компенсировать эту проблему, все пассажирские двери сделали максимально широкими.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Доступ внутрь</h3>
+                        <p>Экспонат является одним из немногих, в который можно войти. Вы можете увидеть салон, посидеть на сиденьях и оценить планировку.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Фотогалерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="photo-gallery">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/ikarus_280_mus.jpg" alt="Ikarus 280 в музее" onclick="openGalleryModal(this.src, 'Ikarus 280 №05408 из коллекции Музея Транспорта Москвы')" onerror="this.src='https://via.placeholder.com/600x400?text=Ikarus+280'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Ikarus 280 №05408</a>
+                            <p class="photo-desc">
+                                <strong>📌 Музей Транспорта Москвы.</strong><br>
+                                Общий вид экспоната.
+                            </p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 11 октября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/ikarus_280_mus_2.jpg" alt="Ikarus 280 в музее, другой ракурс" onclick="openGalleryModal(this.src, 'Ikarus 280 №05408 из коллекции Музея Транспорта Москвы')" onerror="this.src='https://via.placeholder.com/600x400?text=Ikarus+280'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Ikarus 280 №05408</a>
+                            <p class="photo-desc">
+                                <strong>📌 Музей Транспорта Москвы.</strong><br>
+                                Другой ракурс.
+                            </p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 18 сентября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://t.me/vbfgynd" target="_blank" rel="noopener">Транспортник Москвы</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 3 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/ikarus_280_tabl.jpg" alt="Табличка об экспонате" onclick="openGalleryModal(this.src, 'Табличка об экспонате')" onerror="this.src='https://via.placeholder.com/600x400?text=Табличка'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Табличка об экспонате</a>
+                            <p class="photo-desc">
+                                <strong>📌 Музей Транспорта Москвы.</strong><br>
+                                Музейная информация.
+                            </p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 11 октября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 4 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/ikarus_280_int.jpg" alt="Салон «Икаруса-280»" onclick="openGalleryModal(this.src, 'Салон «Икаруса-280»')" onerror="this.src='https://via.placeholder.com/600x400?text=Салон'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Ikarus 280 №05408</a>
+                            <p class="photo-desc">
+                                <strong>📌 Музей Транспорта Москвы.</strong><br>
+                                Салон, вид назад.
+                            </p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 18 сентября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://t.me/vbfgynd" target="_blank" rel="noopener">Транспортник Москвы</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 5 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/ikarus_280_cab.jpg" alt="Кабина водителя Ikarus 280" onclick="openGalleryModal(this.src, 'Кабина водителя Ikarus 280')" onerror="this.src='https://via.placeholder.com/600x400?text=Кабина'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Ikarus 280 №05408</a>
+                            <p class="photo-desc">
+                                <strong>📌 Музей Транспорта Москвы.</strong><br>
+                                Кабина водителя.
+                            </p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 18 сентября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://t.me/vbfgynd" target="_blank" rel="noopener">Транспортник Москвы</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Долгое время Ikarus 280 оставался единственной в СССР моделью особо большой вместимости — 180 пассажиров. Последние венгерские "Икарусы 280" эксплуатировались в Москве до середины 2010-х годов».</p>
+                <p class="quote-author">— Музей транспорта Москвы</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Автобусы»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная страница</a></li>
+                        <li><a href="city_transport.html">Городской транспорт</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Ikarus 280 №05408 — Музейный экспонат</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
+            function animateCounters() {
+                const targets = { buildYear: 1985, statusCount: 1 };
+                let current = { buildYear: 0, statusCount: 0 };
+                const yearEl = document.getElementById('buildYear');
+                const boardEl = document.getElementById('boardNum');
+                const statusEl = document.getElementById('statusCount');
+                
+                if (boardEl) boardEl.textContent = '05408';
+                
+                if (!yearEl || !statusEl) return;
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.buildYear < targets.buildYear) {
+                        current.buildYear += Math.ceil(targets.buildYear / 50);
+                        if (current.buildYear > targets.buildYear) current.buildYear = targets.buildYear;
+                        yearEl.textContent = current.buildYear;
+                        allFinished = false;
+                    }
+                    if (current.statusCount < targets.statusCount) {
+                        current.statusCount += 1;
+                        if (current.statusCount > targets.statusCount) current.statusCount = targets.statusCount;
+                        statusEl.textContent = 'Муз.';
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+
+            window.openGalleryModal = function(src, caption) {
+                const modal = document.getElementById('galleryModal');
+                const content = document.getElementById('galleryModalContent');
+                if (modal && content) {
+                    content.innerHTML = `
+                        <img src="${src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${caption}">
+                        <p style="text-align:center; margin-top:1rem; font-size:1.1rem;">${caption}</p>
+                    `;
+                    modal.classList.add('active');
+                }
+            };
+        });
+    </script>
+</body>
+</html>

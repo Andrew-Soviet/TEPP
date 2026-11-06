@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>«Бесфонарный» — первый советский трамвай — ТЭПП</title>
-    <meta name="description" content="История, характеристики и фотографии трамвайного вагона БФ («Бесфонарный») — первого советского трамвая.">
+    <title>«Бесфонарный» №932 — Музейный экспонат — ТЭПП</title>
+    <meta name="description" content="История, характеристики и фотографии трамвайного вагона БФ («Бесфонарный») №932.">
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -17,7 +17,6 @@
 
     <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
     <div class="top-nav">
-        <!-- Кнопка бургер для мобильных -->
         <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
             <span></span>
             <span></span>
@@ -40,8 +39,8 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <h1>«Бесфонарный» (БФ)</h1>
-                <p class="subtitle">Первый советский трамвай — с него началась новая страница истории московского транспорта</p>
+                <h1>«Бесфонарный» №932</h1>
+                <p class="subtitle">Музейный трамвайный вагон, прошедший реставрацию</p>
             </div>
             <nav>
                 <ul class="main-nav">
@@ -49,7 +48,9 @@
                     <li><a href="city_transport.html">Наземный транспорт</a></li>
                     <li><a href="Трамваи.html">Трамваи</a></li>
                     <li><a href="Трамваи_Москвы.html">Москва</a></li>
-                    <li><a href="#about" class="active">Бесфонарный</a></li>
+                    <li><a href="#about" class="active">О вагоне</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#gallery">Фото</a></li>
                 </ul>
             </nav>
         </div>
@@ -59,133 +60,212 @@
         <!-- Герой-секция -->
         <section id="about" class="hero">
             <div class="hero-content">
-                <h2>«Бесфонарный» (БФ)</h2>
-                <p class="hero-text">БФ — «бесфонарный» трамвайный вагон, первый советский трамвай, выпускавшийся с 1925 по 1929 год. Название получил из-за отсутствия светового фонаря на крыше, характерного для более ранних вагонов типа Ф.</p>
-                <p class="hero-text">Это один из первых советских трамваев, с которого начиналась новая страница истории московского транспорта. Трамвай прослужил городу 60 лет. Из почти 400 выпущенных вагонов сохранились лишь два.</p>
+                <h2>«Бесфонарный» (БФ) № 932</h2>
+                <p class="hero-text">БФ — «бесфонарный» трамвайный вагон, выпускавшийся с 1925 по 1929 год. Название получил из-за отсутствия светового фонаря на крыше, характерного для более ранних вагонов типа Ф.</p>
+                <p class="hero-text">Данный вагон построен в 1927 году. Прошёл долгий путь от пассажирской эксплуатации и работы буксиром до реставрации и превращения в музейный экспонат.</p>
+                
                 <div class="stats-container">
                     <div class="stat-item">
                         <div class="counter-number" id="buildYear">0</div>
-                        <div class="stat-label">год начала выпуска</div>
+                        <div class="stat-label">год постройки</div>
                     </div>
                     <div class="stat-item">
-                        <div class="counter-number" id="totalMade">0</div>
-                        <div class="stat-label">всего выпущено</div>
+                        <div class="counter-number" id="boardNum" style="font-size: 2.5rem;">—</div>
+                        <div class="stat-label">бортовой №</div>
                     </div>
                     <div class="stat-item">
-                        <div class="counter-number" id="serviceLife">0</div>
-                        <div class="stat-label">лет службы</div>
+                        <div class="counter-number" id="statusCount" style="font-size: 1.4rem;">—</div>
+                        <div class="stat-label">состояние</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ================= ИСТОРИЯ ВАГОНА № 932 ================= -->
-        <section id="history" class="section-card">
-            <div class="card-header">
-                <span class="card-icon">📜</span>
-                <h2>История вагона № 932</h2>
+        <!-- Общая информация -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                <span class="card-icon">📋</span>
+                <h2>Общая информация</h2>
             </div>
             <div class="card-content">
-                
-                <!-- Таблица перемещений -->
-                <h3>Хронология службы</h3>
-                <div style="overflow-x: auto; margin-bottom: 1.5rem;">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Город</th>
-                                <th>Депо/Парк</th>
-                                <th>№</th>
-                                <th>С...</th>
-                                <th>По...</th>
-                                <th>Примечание</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td rowspan="4">🇷🇺 Москва</td>
-                                <td>Музей Транспорта Москвы</td>
-                                <td><strong>932</strong></td>
-                                <td>01.2022</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Коллекция исторических трамваев</td>
-                                <td><strong>932/934</strong></td>
-                                <td>2001</td>
-                                <td>01.2022</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Трамваи до 1994 года — прочее</td>
-                                <td><strong>934</strong></td>
-                                <td>1988</td>
-                                <td>2001</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Трамваи до 1994 года — межсоевые вагоны (1924-1941)</td>
-                                <td><strong>932</strong></td>
-                                <td>1927</td>
-                                <td>24.09.1965</td>
-                                <td>Буксир</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Таблица параметров -->
-                <h3>Паспортные данные</h3>
-                <table style="margin-bottom: 1.5rem;">
+                <table>
+                    <caption>Основные параметры экспоната</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
                     <tbody>
-                        <tr>
-                            <td style="width: 180px;"><strong>Город:</strong></td>
-                            <td>Москва 🇷🇺 Россия</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Депо/Парк:</strong></td>
-                            <td>Музей Транспорта Москвы</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Модель:</strong></td>
-                            <td>БФ</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Построен:</strong></td>
-                            <td>1927</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Текущее состояние:</strong></td>
-                            <td style="background: #fff3cd; color: #856404; font-weight: bold;">Не эксплуатируется</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Назначение:</strong></td>
-                            <td>Музейный</td>
-                        </tr>
+                        <tr><td>Город</td><td>Москва 🇷🇺</td></tr>
+                        <tr><td>Депо/Парк</td><td>Музей Транспорта Москвы</td></tr>
+                        <tr><td>Модель</td><td>БФ</td></tr>
+                        <tr><td>Построен</td><td>1927</td></tr>
+                        <tr><td>Завод-изготовитель</td><td>Коломенский завод</td></tr>
+                        <tr><td>Текущее состояние</td><td>Не эксплуатируется</td></tr>
+                        <tr><td>Назначение</td><td>Музейный</td></tr>
                     </tbody>
                 </table>
+            </div>
+        </section>
 
-                <!-- Текстовая справка -->
-                <div class="highlight-box">
-                    <p><strong>Двухосный моторный вагон на тележках типа «Беккер»</strong>, построен на Коломенском заводе.</p>
-                    <p>Первоначально эксплуатировался в депо имени Артамонова. Затем эксплуатировался в Краснопресненском депо до списания 24.09.1965.</p>
-                    <p>С 1965 года до начала 80-х годов работал буксиром № 3424, первоначально на СВАРЗе, затем на ТРЗ.</p>
-                    <p>В 1988 году восстановлен в депо имени П. Апакова как исторический экскурсионный вагон № 934.</p>
-                    <p>В 2001 году вагону возвращён исторический № 932.</p>
-                    <p>05.2023 — 07.2026: проходил реставрацию в фирме "ДИЗЭТ" (г. Иваново).</p>
-                    <p>03.07.2026: перевезён из города Иваново на ТРЗ для пусконаладочных работ.</p>
-                    <p>06.07.2026: перевезён в ТРЗ в экспозиционный комплекс Музея транспорта Москвы на Новорязанской улице, 27.</p>
+        <!-- Объединенная История -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История вагона</h2>
+            </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">1927</div>
+                        <div class="timeline-content">
+                            <h3>Постройка</h3>
+                            <p>Построен на Коломенском заводе. Начало эксплуатации в депо имени Артамонова.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">до 24.09.1965</div>
+                        <div class="timeline-content">
+                            <h3>Краснопресненское депо</h3>
+                            <p>Эксплуатация в Краснопресненском депо до списания.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1965 — начало 80-х</div>
+                        <div class="timeline-content">
+                            <h3>Работа буксиром</h3>
+                            <p>Работал буксиром № 3424, первоначально на СВАРЗе, затем на ТРЗ.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1988</div>
+                        <div class="timeline-content">
+                            <h3>Восстановление</h3>
+                            <p>Восстановлен в депо имени П.Л. Апакова как исторический экскурсионный вагон № 934.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2001</div>
+                        <div class="timeline-content">
+                            <h3>Возврат номера</h3>
+                            <p>Вагону возвращён исторический № 932.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2006</div>
+                        <div class="timeline-content">
+                            <h3>Выставка</h3>
+                            <p>Москва — Выставка у ВВЦ на День Города.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">19.10.2008</div>
+                        <div class="timeline-content">
+                            <h3>Конкурс водителей</h3>
+                            <p>Москва — 23-й конкурс водителей трамвая. Участники съёмки фильма «Московские дворики».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">11.2008</div>
+                        <div class="timeline-content">
+                            <h3>Съёмки кино</h3>
+                            <p>Москва — Съёмки кинофильма «Исаев» с участием вагона БФ № 932.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">13.06.2009</div>
+                        <div class="timeline-content">
+                            <h3>100-летие маршрута «А»</h3>
+                            <p>Москва — Парад и выставка трамваев к 100-летию маршрута «А».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">02.09.2012</div>
+                        <div class="timeline-content">
+                            <h3>День города</h3>
+                            <p>Москва — Выставка ретротехники в честь Дня города.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">12.04.2014</div>
+                        <div class="timeline-content">
+                            <h3>115-летие трамвая</h3>
+                            <p>Москва — Парад к 115-летию трамвая.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">11.04.2015</div>
+                        <div class="timeline-content">
+                            <h3>116-летие трамвая</h3>
+                            <p>Москва — Парад к 116-летию трамвая.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">16.04.2016</div>
+                        <div class="timeline-content">
+                            <h3>117-летие трамвая</h3>
+                            <p>Москва — Парад к 117-летию трамвая.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">15.04.2017</div>
+                        <div class="timeline-content">
+                            <h3>118-летие трамвая</h3>
+                            <p>Москва — Парад к 118-летию трамвая.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">21.04.2018</div>
+                        <div class="timeline-content">
+                            <h3>119-летие трамвая</h3>
+                            <p>Москва — Парад к 119-летию трамвая.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">20.04.2019</div>
+                        <div class="timeline-content">
+                            <h3>120-летие трамвая</h3>
+                            <p>Москва — Парад к 120-летию трамвая.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">16.04.2022</div>
+                        <div class="timeline-content">
+                            <h3>123-летие трамвая</h3>
+                            <p>Москва — Парад к 123-летию трамвая.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">04.06.2022</div>
+                        <div class="timeline-content">
+                            <h3>Парад ретротранспорта</h3>
+                            <p>Москва, улица Академика Королёва — Парад ретротранспорта.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">05.2023 — 07.2026</div>
+                        <div class="timeline-content">
+                            <h3>Реставрация</h3>
+                            <p>Проходил реставрацию в фирме «ДизЭТ» (г. Иваново).</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">03.07.2026</div>
+                        <div class="timeline-content">
+                            <h3>Пусконаладка</h3>
+                            <p>Перевезён из города Иваново на ТРЗ для пусконаладочных работ.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">06.07.2026</div>
+                        <div class="timeline-content">
+                            <h3>Передача в музей</h3>
+                            <p>Перевезён с ТРЗ в экспозиционный комплекс Музея транспорта Москвы на Новорязанской улице, 27.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- ============================================================
-             НОВАЯ ГАЛЕРЕЯ (КАК НА СКРИНШОТЕ)
-             ============================================================ -->
-        <!-- ================= ФОТОГАЛЕРЕЯ ================= -->
+        <!-- Фотогалерея -->
         <section id="gallery" class="section-card">
-            <div class="card-header">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
                 <span class="card-icon">📸</span>
                 <h2>Фотогалерея</h2>
             </div>
@@ -197,28 +277,72 @@
                             <img src="img/bf_tram_museum_932.jpg" alt="БФ в музее" onclick="openGalleryModal(this.src, 'Отреставрированный БФ 1927 года')" onerror="this.src='https://via.placeholder.com/600x400?text=БФ+в+музее'">
                         </div>
                         <div class="photo-info">
-                            <a href="#" class="photo-object">Музей Транспорта Москвы</a>
-                            <p class="photo-desc">Отреставрированный БФ 1927 года из коллекции музея.</p>
+                            <a href="#" class="photo-object">Вагон №932</a>
+                            <p class="photo-desc">
+                                <strong>📌 Музей Транспорта Москвы.</strong><br>
+                                Вагон в музее.
+                            </p>
                             <div class="photo-meta">
                                 <span class="photo-date">📅 11 октября 2026 г.</span>
-                                <span class="photo-author">📸 <a href="https://t.me/pfandrom">pfandrom</a></span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
                             </div>
                         </div>
                     </div>
+                    
                     <!-- Фото 2 -->
                     <div class="photo-card">
                         <div class="photo-thumb">
                             <img src="img/bf_tram_museum_932_tabl.jpg" alt="Табличка об экспонате" onclick="openGalleryModal(this.src, 'Табличка об экспонате')" onerror="this.src='https://via.placeholder.com/600x400?text=Табличка'">
                         </div>
                         <div class="photo-info">
-                            <a href="#" class="photo-object">Музей Транспорта Москвы</a>
-                            <p class="photo-desc">Табличка об экспонате. Вагон БФ № 932.</p>
+                            <a href="#" class="photo-object">Табличка об экспонате</a>
+                            <p class="photo-desc">
+                                <strong>📌 Музей Транспорта Москвы.</strong><br>
+                                Табличка об экспонате. Вагон БФ № 932.
+                            </p>
                             <div class="photo-meta">
                                 <span class="photo-date">📅 11 октября 2026 г.</span>
-                                <span class="photo-author">📸 <a href="https://t.me/pfandrom">pfandrom</a></span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Фото 3 (Кабина) -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/bf_tram_museum_932_cab.jpg" alt="Кабина вагона БФ № 932" onclick="openGalleryModal(this.src, 'Кабина вагона БФ № 932')" onerror="this.src='https://via.placeholder.com/600x400?text=Кабина'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон №932</a>
+                            <p class="photo-desc">
+                                <strong>📌 Музей Транспорта Москвы.</strong><br>
+                                Кабина управления.
+                            </p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 18 сентября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://t.me/vbfgynd" target="_blank" rel="noopener">Транспортник Москвы</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 4 (Салон) -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/bf_tram_museum_932_int.jpg" alt="Салон вагона БФ № 932" onclick="openGalleryModal(this.src, 'Салон вагона БФ № 932')" onerror="this.src='https://via.placeholder.com/600x400?text=Салон'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон №932</a>
+                            <p class="photo-desc">
+                                <strong>📌 Музей Транспорта Москвы.</strong><br>
+                                Салон, вид назад.
+                            </p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 18 сентября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://t.me/vbfgynd" target="_blank" rel="noopener">Транспортник Москвы</a></span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
             </div>
@@ -256,14 +380,13 @@
             </div>
             <div class="footer-bottom">
                 <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
-                <p class="footer-note">«Бесфонарный» — «Первый советский трамвай»</p>
+                <p class="footer-note">«Бесфонарный» №932 — музейный экспонат</p>
             </div>
         </div>
     </footer>
 
     <div class="scroll-top">↑</div>
 
-    <!-- Модалка для фото (уже есть в script.js) -->
     <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
@@ -275,14 +398,17 @@
     <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Анимация счётчиков
+            // Счётчики
             function animateCounters() {
-                const targets = { buildYear: 1925, totalMade: 400, serviceLife: 60 };
-                let current = { buildYear: 0, totalMade: 0, serviceLife: 0 };
+                const targets = { buildYear: 1927, statusCount: 1 };
+                let current = { buildYear: 0, statusCount: 0 };
                 const yearEl = document.getElementById('buildYear');
-                const madeEl = document.getElementById('totalMade');
-                const lifeEl = document.getElementById('serviceLife');
-                if (!yearEl || !madeEl || !lifeEl) return;
+                const boardEl = document.getElementById('boardNum');
+                const statusEl = document.getElementById('statusCount');
+                if (!yearEl || !boardEl || !statusEl) return;
+                
+                boardEl.textContent = '932';
+                
                 const interval = setInterval(function() {
                     let allFinished = true;
                     if (current.buildYear < targets.buildYear) {
@@ -291,16 +417,10 @@
                         yearEl.textContent = current.buildYear;
                         allFinished = false;
                     }
-                    if (current.totalMade < targets.totalMade) {
-                        current.totalMade += Math.ceil(targets.totalMade / 50);
-                        if (current.totalMade > targets.totalMade) current.totalMade = targets.totalMade;
-                        madeEl.textContent = current.totalMade;
-                        allFinished = false;
-                    }
-                    if (current.serviceLife < targets.serviceLife) {
-                        current.serviceLife += Math.ceil(targets.serviceLife / 50);
-                        if (current.serviceLife > targets.serviceLife) current.serviceLife = targets.serviceLife;
-                        lifeEl.textContent = current.serviceLife;
+                    if (current.statusCount < targets.statusCount) {
+                        current.statusCount += 1;
+                        if (current.statusCount > targets.statusCount) current.statusCount = targets.statusCount;
+                        statusEl.textContent = 'Муз.';
                         allFinished = false;
                     }
                     if (allFinished) clearInterval(interval);
@@ -308,18 +428,42 @@
             }
             animateCounters();
 
-            // Функция для открытия модалки из новой галереи
-            window.openGalleryModal = function(src, caption) {
-                const modal = document.getElementById('galleryModal');
-                const content = document.getElementById('galleryModalContent');
-                if (modal && content) {
-                    content.innerHTML = `
-                        <img src="${src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${caption}">
-                        <p style="text-align:center; margin-top:1rem; font-size:1.1rem;">${caption}</p>
-                    `;
-                    modal.classList.add('active');
-                }
-            };
+            // Галерея
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+
+            document.querySelectorAll('.photo-thumb img').forEach(img => {
+                img.addEventListener('click', function() {
+                    const card = this.closest('.photo-card');
+                    if (!card) return;
+
+                    const src = this.src;
+                    const alt = this.alt;
+                    const object = card.querySelector('.photo-object')?.textContent || '';
+                    const desc = card.querySelector('.photo-desc')?.textContent || '';
+                    const date = card.querySelector('.photo-date')?.textContent || '';
+                    const author = card.querySelector('.photo-author')?.textContent || '';
+
+                    if (content) {
+                        content.innerHTML = `
+                            <img src="${src}" style="max-width:100%; max-height:60vh; border-radius:10px; display:block; margin: 0 auto;" alt="${alt}">
+                            <div style="margin-top: 1.5rem; text-align: left; padding: 0 1rem;">
+                                <h3 style="color: var(--accent-color); margin-bottom: 0.5rem; font-size: 1.4rem;">${object}</h3>
+                                <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1rem;">${desc}</p>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-secondary); border-top: 1px solid var(--border-color); padding-top: 1rem;">
+                                    <span>${date}</span>
+                                    <span>${author}</span>
+                                </div>
+                            </div>
+                        `;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
         });
     </script>
 </body>
