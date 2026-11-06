@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>«Москва-2026» №75569-75570 — Тематический состав — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>«Москва-2026» "185 лет Сбербанку"</h1>
+            <p class="subtitle">Первый тематический состав на базе «Москва-2026»</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="Главная_Страница_Мосметро.html">🏙️ Мосметро</a></li>
+                    <li><a href="#about">О поезде</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>81-775.2 «Москва-2026» (185 лет Сбербанку)</h2>
+                <p class="hero-text">6 ноября 2026 года на Замоскворецкую линию вышел новый тематический поезд, посвящённый <strong>185-летию Сбербанка</strong>. Это <strong>второй тематический состав новейшей серии «Москва-2026»</strong> и второй в истории московского метро поезд, оформленный в честь банковской сферы.</p>
+                <p class="hero-text">Состав базируется в депо ТЧ-17 «Южное» и будет курсировать на линии в течение полугода.</p>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="year">0</div>
+                        <div class="stat-label">год постройки</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="cars">0</div>
+                        <div class="stat-label">вагонов в составе</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="status" style="font-size: 1.4rem;">—</div>
+                        <div class="stat-label">состояние</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Общая информация (Таблица) -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+                <span class="card-icon">🚆</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Основные параметры состава</caption>
+                    <thead>
+                        <tr>
+                            <th>Параметр</th>
+                            <th>Значение</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Город</td><td>Москва 🇷🇺</td></tr>
+                        <tr><td>Депо/Парк</td><td>ТЧ-17 «Южное»</td></tr>
+                        <tr><td>Модель</td><td>81-775.2 / 81-776.2 / 81-777.2 «Москва-2026»</td></tr>
+                        <tr><td>Построен</td><td>09.2026</td></tr>
+                        <tr><td>Начало работы</td><td>06.11.2026</td></tr>
+                        <tr><td>Текущее состояние</td><td>Эксплуатируется</td></tr>
+                        <tr><td>Назначение</td><td>Пассажирский</td></tr>
+                        <tr><td>Брендирование</td><td>«185 лет Сбербанку»</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <h3>Составность</h3>
+                    <p style="font-size: 1.3rem; text-align: center; font-weight: bold; margin-top: 0.5rem;">
+                        75569 — 77569 — 06097 — 06098 — 06099 — 06100 — 77570 — 75570
+                    </p>
+                    <p style="text-align: center; color: var(--text-secondary); margin-top: 0.3rem;">8 вагонов</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Дизайн и особенности -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">🎨</span>
+                <h2>Дизайн и особенности</h2>
+            </div>
+            <div class="card-content">
+                <p class="card-description">С внешней стороны и внутри вагоны оформлены в фирменном зелёном цвете Сбера. Основные элементы дизайна:</p>
+                
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>💚 Зелёный цвет</h3>
+                        <p>Кузов и внутренняя отделка выполнены в фирменном зелёном цвете Сбербанка.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🐱 Пушистые детали</h3>
+                        <p>Цифры «185», сердца и знакомый всем СберКот стали частью оформления состава.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>💬 Мотивационные фразы</h3>
+                        <p>На стены нанесены слоганы о постоянном движении вперёд и о том, что даже невозможное может стать возможным.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🎤 Замурчательные голоса</h3>
+                        <p>На пути в центр станции объявляет СберКот, а в обратном направлении — Куся.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🖼️ ИИ-искусство</h3>
+                        <p>В вагонах представлены работы участников фестиваля ИИ-искусства «Гига-Арт».</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🧠 Умные устройства</h3>
+                        <p>Пассажиры могут познакомиться с умными устройствами Сбера и отправить запросы в «ГигаЧат».</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p><strong>«ГигаЧат» в помощь:</strong> С его помощью пассажиры могут узнать больше об истории московского метро и столицы. Например, почему линии метро обозначены разными цветами или сколько рек протекает в Москве.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Фотогалерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="photo-gallery">
+
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="https://www.mos.ru/upload/newsfeed/articles/c8d75d95616084d77cfb66c049e4ca5f/IMG20261106.jpg" alt="Поезд 185 лет Сбербанку в депо" 
+                                 onclick="openGalleryModal(this.src, 'Вагон №75570 в депо ТЧ-22 «Аминьевское»')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=Фото+отсутствует'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="https://www.mos.ru/news/item/178171073/" target="_blank" rel="noopener" class="photo-object">81-775.2 №75570</a>
+                            <p class="photo-desc">
+                                <strong>📌 Депо ТЧ-22 «Аминьевское».</strong><br>
+                                На деповских путях после презентации.
+                            </p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 6 ноября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://www.mos.ru/news/item/178171073/" target="_blank" rel="noopener">Пресс-служба Московского метрополитена</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="https://www.mos.ru/upload/newsfeed/articles/e00ed809825017dc3d0cc73ac931c369/IMG_663705.jpg" alt="Салон вагона 75569" 
+                                 onclick="openGalleryModal(this.src, 'Вагон №75569, салон, вид вперед')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=Фото+отсутствует'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="https://www.mos.ru/news/item/178171073/" target="_blank" rel="noopener" class="photo-object">81-775.2 №75569</a>
+                            <p class="photo-desc">
+                                <strong>📌 Вагон №75569.</strong><br>
+                                Салон, вид вперед.
+                            </p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 6 ноября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://www.mos.ru/news/item/178171073/" target="_blank" rel="noopener">Пресс-служба Московского метрополитена</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«Мы отмечаем 185-летие Сбера движением вперед — в самом буквальном смысле. Зеленый для нас давно больше, чем фирменный цвет. Это символ энергии изменений, развития и новых возможностей. А юбилейный поезд делает эту идею частью обычного дня».</p>
+                <p class="quote-author">— Владислав Крейнин, старший вице-президент Сбербанка</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Подвижной состав метро»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная страница</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="Главная_Страница_Мосметро.html">Московский метрополитен</a></li>
+                        <li><a href="transport_news.html">Новости</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
+                    <p>💬 <a href="https://t.me/tepp_forum" target="_blank" rel="noopener">Форум</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">Поезд «185 лет Сбербанку» (2026)</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
+            function animateCounters() {
+                const targets = { year: 2026, cars: 8, status: 1 };
+                let current = { year: 0, cars: 0, status: 0 };
+                const yearEl = document.getElementById('year');
+                const carsEl = document.getElementById('cars');
+                const statusEl = document.getElementById('status');
+                if (!yearEl || !carsEl || !statusEl) return;
+                
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.year < targets.year) {
+                        current.year += Math.ceil(targets.year / 50);
+                        if (current.year > targets.year) current.year = targets.year;
+                        yearEl.textContent = current.year;
+                        allFinished = false;
+                    }
+                    if (current.cars < targets.cars) {
+                        current.cars += 1;
+                        if (current.cars > targets.cars) current.cars = targets.cars;
+                        carsEl.textContent = current.cars;
+                        allFinished = false;
+                    }
+                    if (current.status < targets.status) {
+                        current.status += 1;
+                        if (current.status > targets.status) current.status = targets.status;
+                        statusEl.textContent = 'Экспл.';
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+
+            // Галерея
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+
+            document.querySelectorAll('.photo-thumb img').forEach(img => {
+                img.addEventListener('click', function() {
+                    const card = this.closest('.photo-card');
+                    if (!card) return;
+
+                    const src = this.src;
+                    const alt = this.alt;
+                    const object = card.querySelector('.photo-object')?.textContent || '';
+                    const desc = card.querySelector('.photo-desc')?.textContent || '';
+                    const date = card.querySelector('.photo-date')?.textContent || '';
+                    const author = card.querySelector('.photo-author')?.textContent || '';
+
+                    if (content) {
+                        content.innerHTML = `
+                            <img src="${src}" style="max-width:100%; max-height:60vh; border-radius:10px; display:block; margin: 0 auto;" alt="${alt}">
+                            <div style="margin-top: 1.5rem; text-align: left; padding: 0 1rem;">
+                                <h3 style="color: var(--accent-color); margin-bottom: 0.5rem; font-size: 1.4rem;">${object}</h3>
+                                <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1rem;">${desc}</p>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-secondary); border-top: 1px solid var(--border-color); padding-top: 1rem;">
+                                    <span>${date}</span>
+                                    <span>${author}</span>
+                                </div>
+                            </div>
+                        `;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>
