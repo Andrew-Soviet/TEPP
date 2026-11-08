@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>81-765/766/767 «Москва» — Подвижной состав — ТЭПП</title>
+    <meta name="description" content="История, характеристики и конструкция базовой модели электровагонов 81-765/766/767 «Москва».">
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>81-765/766/767 «Москва»</h1>
+            <p class="subtitle">Базовый поезд нового поколения со сквозным проходом</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="ps_mosmetro.html">🚆 Подвижной состав</a></li>
+                    <li><a href="#about">О модели</a></li>
+                    <li><a href="#design">Конструкция</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>81-765/766/767 «Москва»</h2>
+                <p class="hero-text"><strong>«Москва»</strong> (81-765/766/767) — тип электровагонов метрополитена, разработанный по заказу Московского метрополитена и выпускаемый с 2016 года. Это первый поезд в истории московского метро, который изначально проектировался с учётом современных требований комфорта, доступности и сквозного прохода.</p>
+                <p class="hero-text">Название «Москва» было выбрано по итогам голосования в системе «Активный гражданин». Технически представляет собой дальнейшее развитие вагонов «Ока» (81-760А), но содержит более 200 конструктивных улучшений, которые позволили эволюционно считать его новой серией.</p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="buildYear">0</div>
+                        <div class="stat-label">год начала выпуска</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="maxSpeed">0</div>
+                        <div class="stat-label">км/ч макс.</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="capacity">0</div>
+                        <div class="stat-label">чел. вместимость</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Общая информация -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                <span class="card-icon">📋</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Технические данные модели</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Главный конструктор</td><td>Николай Полухов</td></tr>
+                        <tr><td>Годы постройки</td><td>с 2016</td></tr>
+                        <tr><td>Производитель</td><td>Трансмашхолдинг (Метровагонмаш, ОЭВРЗ)</td></tr>
+                        <tr><td>Типы вагонов</td><td>Мг (81-765) / Мп (81-766) / Пп (81-767)</td></tr>
+                        <tr><td>Длина вагона</td><td>20 120 / 19 140 мм</td></tr>
+                        <tr><td>Ширина</td><td>2686 мм</td></tr>
+                        <tr><td>Высота</td><td>3680 мм</td></tr>
+                        <tr><td>Ширина дверного проёма</td><td>1400 мм</td></tr>
+                        <tr><td>Мощность ТЭД</td><td>4×170 кВт</td></tr>
+                        <tr><td>Макс. скорость</td><td>90 км/ч</td></tr>
+                        <tr><td>Вместимость</td><td>315 / 329 чел.</td></tr>
+                        <tr><td>Система тяги</td><td>Асинхронный привод КАТП-3</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Конструкция -->
+        <section id="design" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+                <span class="card-icon">⚙️</span>
+                <h2>Конструкция и особенности</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>🔗 Сквозной проход</h3>
+                        <p>Герметичные межвагонные переходы типа «гармошка» производства Hübner. По наружной ширине и высоте переходы близки к габаритам вагонов и закрыты фальшпанелями, что предотвращает проезд снаружи.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🚪 Широкие двери</h3>
+                        <p>Ширина дверных проёмов увеличена до 1400 мм (у «Оки» было 1250 мм). Створки производства IFE с окнами увеличенной высоты. Снаружи установлены световые индикаторы (зелёный при открытии, красный при закрытии).</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🛡️ Крэш-система и безопасность</h3>
+                        <p>В лобовой части рамы появились ударопоглощающие элементы (крэш-система). Между вагонами вместо автосцепок Шарфенберга установлены беззазорные сцепные устройства, увеличивающие плавность хода.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>⚙️ Электрооборудование</h3>
+                        <p>Установлен асинхронный тяговый привод КАТП-3. Контейнер тягового инвертора стал меньше и легче (масса снижена на 15%, длина — на 30%), при этом мощность увеличена на 20%. Восьмивагонный состав стал на 22 тонны легче «номерных».</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>📱 Информирование и USB</h3>
+                        <p>На боковых стенах появились сенсорные дисплеи для построения маршрута. Под ними — USB-розетки для зарядки. Над дверями установлены табло «бегущая строка» и цифровые схемы линии с круглыми светодиодами.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>❄️ Климат и освещение</h3>
+                        <p>Система кондиционирования доработана, добавлены вытяжные вентиляторы. Воздух обеззараживается ультрафиолетовыми лампами. Светодиодные светильники по центру потолка позволяют менять цветовую температуру (от холодного до тёплого).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- История -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История базовой модели</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2013 — 2014</div>
+                        <div class="timeline-content">
+                            <h3>Конкурс и предыстория</h3>
+                            <p>Московский метрополитен организовал конкурс на производство новых поездов. В нём участвовали Трансмашхолдинг, Siemens, CAF, Bombardier, Škoda, Alstom и Hyundai. Победу одержал «Метровагонмаш», предложивший развитие модели «Ока».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">09.09.2016</div>
+                        <div class="timeline-content">
+                            <h3>Презентация на ВДНХ</h3>
+                            <p>Первые два вагона (головной 81-765 и промежуточный 81-766) были представлены на ВДНХ. Название «Москва» выбрано голосованием в «Активном гражданине».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">14.04.2017</div>
+                        <div class="timeline-content">
+                            <h3>Запуск пассажирской эксплуатации</h3>
+                            <p>Первые шесть восьмивагонных поездов «Москва» начали регулярные перевозки на Таганско-Краснопресненской линии.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">14.05.2018</div>
+                        <div class="timeline-content">
+                            <h3>Выход на Калужско-Рижскую линию</h3>
+                            <p>Поезд «Москва» (головные вагоны 65215–65216) начал регулярные перевозки на КРЛ.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">04.07.2020</div>
+                        <div class="timeline-content">
+                            <h3>Выход на Сокольническую линию</h3>
+                            <p>Базовая «Москва» начала заменять старые составы на Сокольнической линии.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">27.03.2020</div>
+                        <div class="timeline-content">
+                            <h3>Выход на Некрасовскую линию</h3>
+                            <p>Базовая модель стала основным типом подвижного состава на Некрасовской линии.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Фотогалерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="photo-gallery">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Type_81-765_65001.jpg" alt="81-765 Москва на линии" onclick="openGalleryModal(this.src, '81-765/766/767 «Москва» на линии')" onerror="this.src='https://via.placeholder.com/600x400?text=Москва'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">81-765 «Москва»</a>
+                            <p class="photo-desc">
+                                <strong>📌 Московский метрополитен.</strong><br>
+                                Базовая модель на линии.
+                            </p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Type_81-765_int.jpg" alt="Салон Москвы" onclick="openGalleryModal(this.src, 'Салон вагона «Москва»')" onerror="this.src='https://via.placeholder.com/600x400?text=Салон'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Салон вагона</a>
+                            <p class="photo-desc">
+                                <strong>📌 Московский метрополитен.</strong><br>
+                                Внутреннее убранство со сквозным проходом.
+                            </p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«"Москва" стала не просто новым поездом, а новой философией комфорта. Сквозной проход, широкие двери, зарядки и климат-контроль — всё это сделало поездки в метро принципиально другими. С этой модели началась эра современного подвижного состава столичной подземки».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Подвижной состав метро»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная страница</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="ps_mosmetro.html">Подвижной состав</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram-канал</a></p>
+                    <p>💬 <a href="https://t.me/tepp_forum" target="_blank" rel="noopener">Форум</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">81-765/766/767 «Москва» — поезд нового поколения</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
+            function animateCounters() {
+                const targets = { buildYear: 2016, maxSpeed: 90, capacity: 329 };
+                let current = { buildYear: 0, maxSpeed: 0, capacity: 0 };
+                const yearEl = document.getElementById('buildYear');
+                const speedEl = document.getElementById('maxSpeed');
+                const capEl = document.getElementById('capacity');
+                if (!yearEl || !speedEl || !capEl) return;
+                
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.buildYear < targets.buildYear) {
+                        current.buildYear += Math.ceil(targets.buildYear / 50);
+                        if (current.buildYear > targets.buildYear) current.buildYear = targets.buildYear;
+                        yearEl.textContent = current.buildYear;
+                        allFinished = false;
+                    }
+                    if (current.maxSpeed < targets.maxSpeed) {
+                        current.maxSpeed += 1;
+                        if (current.maxSpeed > targets.maxSpeed) current.maxSpeed = targets.maxSpeed;
+                        speedEl.textContent = current.maxSpeed;
+                        allFinished = false;
+                    }
+                    if (current.capacity < targets.capacity) {
+                        current.capacity += Math.ceil(targets.capacity / 50);
+                        if (current.capacity > targets.capacity) current.capacity = targets.capacity;
+                        capEl.textContent = current.capacity;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+
+            // Галерея
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+
+            document.querySelectorAll('.photo-thumb img').forEach(img => {
+                img.addEventListener('click', function() {
+                    const card = this.closest('.photo-card');
+                    if (!card) return;
+
+                    const src = this.src;
+                    const alt = this.alt;
+                    const object = card.querySelector('.photo-object')?.textContent || '';
+                    const desc = card.querySelector('.photo-desc')?.textContent || '';
+                    const date = card.querySelector('.photo-date')?.textContent || '';
+                    const author = card.querySelector('.photo-author')?.textContent || '';
+
+                    if (content) {
+                        content.innerHTML = `
+                            <img src="${src}" style="max-width:100%; max-height:60vh; border-radius:10px; display:block; margin: 0 auto;" alt="${alt}">
+                            <div style="margin-top: 1.5rem; text-align: left; padding: 0 1rem;">
+                                <h3 style="color: var(--accent-color); margin-bottom: 0.5rem; font-size: 1.4rem;">${object}</h3>
+                                <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1rem;">${desc}</p>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-secondary); border-top: 1px solid var(--border-color); padding-top: 1rem;">
+                                    <span>${date}</span>
+                                    <span>${author}</span>
+                                </div>
+                            </div>
+                        `;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>

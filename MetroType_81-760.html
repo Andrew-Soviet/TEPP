@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>81-760/761 «Ока» — Подвижной состав — ТЭПП</title>
+    <meta name="description" content="История, характеристики и модификации электровагонов 81-760/761 «Ока».">
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>81-760/761 «Ока»</h1>
+            <p class="subtitle">Серийная замена номерных вагонов и первый шаг к сквозному проходу</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="ps_mosmetro.html">🚆 Подвижной состав</a></li>
+                    <li><a href="#about">О модели</a></li>
+                    <li><a href="#design">Конструкция</a></li>
+                    <li><a href="#mods">Модификации</a></li>
+                    <li><a href="#unique">Уникальные</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>81-760/761 «Ока»</h2>
+                <p class="hero-text"><strong>81-760/761 «Ока»</strong> — модель электровагонов метрополитена, созданная как новая серийная замена модельного ряда 81-717/714. Выпускалась с 2010 по 2016 год на заводах «Метровагонмаш» и ТВЗ.</p>
+                <p class="hero-text">Внешне вагоны представляют собой гибрид: от номерных они унаследовали габариты кузова и планировку, а от «Русича» — гладкие стенки, прислонно-сдвижные двери и асинхронный тяговый привод. Именно на «Оке» впервые в России обкатали технологию сквозного прохода через весь состав (модификация «Баклажан»).</p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" id="buildYear">0</div>
+                        <div class="stat-label">год начала выпуска</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="maxSpeed">0</div>
+                        <div class="stat-label">км/ч макс.</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" id="capacity">0</div>
+                        <div class="stat-label">чел. вместимость</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Общая информация -->
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                <span class="card-icon">📋</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <caption>Технические данные модели</caption>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Годы постройки</td><td>2010–2016</td></tr>
+                        <tr><td>Производитель</td><td>Трансмашхолдинг (Метровагонмаш, ТВЗ)</td></tr>
+                        <tr><td>Тип токосъёма</td><td>Нижний боковой контактный рельс</td></tr>
+                        <tr><td>Напряжение</td><td>750 В постоянного тока</td></tr>
+                        <tr><td>Типы вагонов</td><td>Мг (81-760) / Мп (81-761)</td></tr>
+                        <tr><td>Длина вагона</td><td>20 120 / 19 140 мм</td></tr>
+                        <tr><td>Ширина</td><td>2686 мм</td></tr>
+                        <tr><td>Высота</td><td>3680 мм</td></tr>
+                        <tr><td>Масса тары</td><td>38 / 36 т</td></tr>
+                        <tr><td>Мощность ТЭД</td><td>4×170 = 680 кВт</td></tr>
+                        <tr><td>Макс. скорость</td><td>90 км/ч</td></tr>
+                        <tr><td>Система тяги</td><td>Асинхронный привод КАТП-2</td></tr>
+                        <tr><td>Вместимость</td><td>306 / 330 чел. (40 / 44 сидячих)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Конструкция -->
+        <section id="design" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
+                <span class="card-icon">⚙️</span>
+                <h2>Конструкция и особенности</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>🚪 Двери</h3>
+                        <p>Прислонно-сдвижные, с электропневматическим приводом. В базовой версии количество дверей — по 4 с каждой стороны (как у номерных), в модификации «Баклажан» — по 5 в головных и по 6 в промежуточных вагонах для ускорения посадки.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🪑 Салон</h3>
+                        <p>Впервые в Московском метро применены стеклопластиковые панели стен и потолка. В базовой версии установлены полумягкие диваны, в «Баклажане» — более современные антивандальные сиденья. В салоне установлены ЖК-мониторы и системы информирования.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🚅 Кабина</h3>
+                        <p>Кабина машиниста просторная, с улучшенной эргономикой. Установлен пульт управления с цветным монитором, выводящим показания систем безопасности «Витязь-М» и диагностику неисправностей. В кабине есть кондиционер и холодильник.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>⚙️ Электрооборудование</h3>
+                        <p>Установлен асинхронный тяговый привод КАТП-2 (производство Метровагонмаш). В отличие от номерных, здесь применено рекуперативно-реостатное торможение, что позволяет возвращать электроэнергию в сеть и экономить до 20% энергии.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Модификации -->
+        <section id="mods" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
+                <span class="card-icon">🔧</span>
+                <h2>Модификации</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>81-760/761 (Базовая)</h3>
+                        <p>Серийная версия без сквозного прохода. Двери между вагонами закрыты для пассажиров. Впервые поступила на Калининскую линию в 2012 году. Выпущено 162 состава. Позже эксплуатировались на Серпуховско-Тимирязевской, Солнцевской линиях и БКЛ.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>81-760А/761А/763А «Баклажан»</h3>
+                        <p>Модификация со <strong>сквозным проходом</strong> через весь состав. Изначально создавалась для Баку, но из-за смены техзадания осталась в Москве. Имеет характерную бело-фиолетовую окраску. Включает безмоторные промежуточные вагоны 81-763А.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>81-760Б/761Б/763Б</h3>
+                        <p>Экспортная версия для Бакинского метрополитена. Выпущено 3 состава (по 5 вагонов). Отличается четырёхзначной нумерацией вагонов и адаптацией под местные условия эксплуатации.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Уникальные составы -->
+        <section id="unique" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #F39C12 0%, #E67E22 100%);">
+                <span class="card-icon">⭐</span>
+                <h2>Уникальные составы и вагоны</h2>
+            </div>
+            <div class="card-content">
+                <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                    <li><strong>37003-37004</strong> — Первая серийная «Ока». Вышла на Калининскую линию 12 апреля 2012 года.</li>
+                    <li><strong>37001-37002</strong> — Опытная «Ока». Проходила обкатку и испытания перед запуском серии. Сейчас эксплуатируется в составе обычных поездов.</li>
+                    <li><strong>37165-37166</strong> — Бывшая Бакинская (бежево-оранжевая). Изначально имела уникальную окраску и предназначалась для Баку, но осталась в Москве. Ныне перекрашена в стандартную ливрею «Оки».</li>
+                    <li><strong>30628</strong> — Вагон с дополнительным блоком вентиляции в торце салона. Уникальное техническое решение, отличающее его от серийных машин.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- История -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">12.04.2012</div>
+                        <div class="timeline-content">
+                            <h3>Начало пассажирской эксплуатации</h3>
+                            <p>Первые составы «Ока» вышли на Калининскую линию Московского метрополитена. Они пришли на замену устаревшим вагонам типа Е и Еж.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">26.12.2012</div>
+                        <div class="timeline-content">
+                            <h3>Выход на Серпуховско-Тимирязевскую линию</h3>
+                            <p>Модель начала обслуживать одну из самых загруженных линий Москвы. Именно здесь «Ока» стала основным типом подвижного состава на несколько лет.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">15.01.2015</div>
+                        <div class="timeline-content">
+                            <h3>Первая поездка «Баклажана»</h3>
+                            <p>Состав модификации А (81-760А/761А/763А) совершил первую поездку с пассажирами. Он стал <strong>первым в России поездом со сквозным проходом</strong>.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">22.04.2015</div>
+                        <div class="timeline-content">
+                            <h3>Начало регулярной эксплуатации «Баклажана»</h3>
+                            <p>Модификация А официально начала работать с пассажирами. Поезда получили характерную бело-фиолетовую окраску.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2016</div>
+                        <div class="timeline-content">
+                            <h3>Завершение выпуска</h3>
+                            <p>Производство базовой модели и модификаций было завершено. На смену пришли поезда семейства «Москва» (81-765/766/767).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Фотогалерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="photo-gallery">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Type_81-760_37003.jpg" alt="81-760 Ока" onclick="openGalleryModal(this.src, '81-760/761 «Ока» на линии')" onerror="this.src='https://via.placeholder.com/600x400?text=81-760'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">81-760/761 «Ока»</a>
+                            <p class="photo-desc">
+                                <strong>📌 Московский метрополитен.</strong><br>
+                                Базовая модель.
+                            </p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/Type_81-760A-37282.jpg" alt="81-760А Баклажан" onclick="openGalleryModal(this.src, '81-760А/761А/763А «Ока» (Баклажан)')" onerror="this.src='https://via.placeholder.com/600x400?text=Баклажан'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">81-760А «Баклажан»</a>
+                            <p class="photo-desc">
+                                <strong>📌 Калининско-Солнцевская линия.</strong><br>
+                                Модификация со сквозным проходом.
+                            </p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 2026</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+
+        <!-- Цитата -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <p class="quote-text">«"Ока" стала переходным звеном между классическими номерными и современными составами "Москва". Именно на ней впервые в России обкатали сквозной проход, а её необычный "Баклажан" стал узнаваемым символом Солнцевской линии».</p>
+                <p class="quote-author">— Транспортная энциклопедия постсоветского пространства</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Подвижной состав метро»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная страница</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="ps_mosmetro.html">Подвижной состав</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram-канал</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">81-760/761 «Ока» — серийная замена номерных</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Счётчики
+            function animateCounters() {
+                const targets = { buildYear: 2010, maxSpeed: 90, capacity: 330 };
+                let current = { buildYear: 0, maxSpeed: 0, capacity: 0 };
+                const yearEl = document.getElementById('buildYear');
+                const speedEl = document.getElementById('maxSpeed');
+                const capEl = document.getElementById('capacity');
+                if (!yearEl || !speedEl || !capEl) return;
+                
+                const interval = setInterval(function() {
+                    let allFinished = true;
+                    if (current.buildYear < targets.buildYear) {
+                        current.buildYear += Math.ceil(targets.buildYear / 50);
+                        if (current.buildYear > targets.buildYear) current.buildYear = targets.buildYear;
+                        yearEl.textContent = current.buildYear;
+                        allFinished = false;
+                    }
+                    if (current.maxSpeed < targets.maxSpeed) {
+                        current.maxSpeed += 1;
+                        if (current.maxSpeed > targets.maxSpeed) current.maxSpeed = targets.maxSpeed;
+                        speedEl.textContent = current.maxSpeed;
+                        allFinished = false;
+                    }
+                    if (current.capacity < targets.capacity) {
+                        current.capacity += Math.ceil(targets.capacity / 50);
+                        if (current.capacity > targets.capacity) current.capacity = targets.capacity;
+                        capEl.textContent = current.capacity;
+                        allFinished = false;
+                    }
+                    if (allFinished) clearInterval(interval);
+                }, 30);
+            }
+            animateCounters();
+
+            // Галерея
+            const modal = document.getElementById('galleryModal');
+            const content = document.getElementById('galleryModalContent');
+            const close = document.getElementById('galleryModalClose');
+
+            document.querySelectorAll('.photo-thumb img').forEach(img => {
+                img.addEventListener('click', function() {
+                    const card = this.closest('.photo-card');
+                    if (!card) return;
+
+                    const src = this.src;
+                    const alt = this.alt;
+                    const object = card.querySelector('.photo-object')?.textContent || '';
+                    const desc = card.querySelector('.photo-desc')?.textContent || '';
+                    const date = card.querySelector('.photo-date')?.textContent || '';
+                    const author = card.querySelector('.photo-author')?.textContent || '';
+
+                    if (content) {
+                        content.innerHTML = `
+                            <img src="${src}" style="max-width:100%; max-height:60vh; border-radius:10px; display:block; margin: 0 auto;" alt="${alt}">
+                            <div style="margin-top: 1.5rem; text-align: left; padding: 0 1rem;">
+                                <h3 style="color: var(--accent-color); margin-bottom: 0.5rem; font-size: 1.4rem;">${object}</h3>
+                                <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1rem;">${desc}</p>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-secondary); border-top: 1px solid var(--border-color); padding-top: 1rem;">
+                                    <span>${date}</span>
+                                    <span>${author}</span>
+                                </div>
+                            </div>
+                        `;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>
