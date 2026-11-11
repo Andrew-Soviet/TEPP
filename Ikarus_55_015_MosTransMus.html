@@ -59,20 +59,21 @@
         <section id="about" class="hero">
             <div class="hero-content">
                 <h2>Ikarus 55 № 015</h2>
-                <p class="hero-text">Перед вами легендарный венгерский междугородный и туристический автобус с несущим кузовом вагонной компоновки. Данный экземпляр (бортовой № 015) был выпущен в <strong>1953 году</strong> на заводе Ikarus и сейчас является частью коллекции Музея Транспорта Москвы.</p>
-                <p class="hero-text">«Икарусы» превосходили аналогичные по вместимости львовские автобусы экономичностью дизельного двигателя и комфортабельностью. Более половины произведённых в Венгрии в 1953–1972 годах машин отправлялось в СССР.</p>
+                <p class="hero-text">Перед вами легендарный венгерский междугородный и туристический автобус с несущим кузовом вагонной компоновки. Данный экземпляр (бортовой № 015) был выпущен в <strong>1953 году</strong> и сейчас является частью коллекции Музея Транспорта Москвы.</p>
+                <p class="hero-text">Этот конкретный автобус примечателен тем, что в 1990-е годы он попал в Москву из Германии как гуманитарная помощь и использовался как транспорт для инвалидов, после чего был выкуплен и отреставрирован для музея.</p>
+                
                 <div class="stats-container">
                     <div class="stat-item">
                         <div class="counter-number" id="buildYear">0</div>
-                        <div class="stat-label">год постройки</div>
+                        <div class="stat-label">год выпуска</div>
                     </div>
                     <div class="stat-item">
-                        <div class="counter-number" id="totalMade">0</div>
-                        <div class="stat-label">всего выпущено</div>
+                        <div class="counter-number" id="boardNum" style="font-size: 2.5rem;">—</div>
+                        <div class="stat-label">бортовой №</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-label" style="font-size: 1.2rem; color: var(--accent-color); font-weight: bold; margin-top: 1rem;">Музейный</div>
-                        <div class="stat-label">статус</div>
+                        <div class="counter-number" id="statusCount" style="font-size: 1.4rem;">—</div>
+                        <div class="stat-label">состояние</div>
                     </div>
                 </div>
             </div>
@@ -80,25 +81,21 @@
 
         <!-- Общая информация -->
         <section class="section-card">
-            <div class="card-header">
-                <span class="card-icon">🚌</span>
-                <h2>Общая информация об экспонате</h2>
+            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                <span class="card-icon">📋</span>
+                <h2>Общая информация</h2>
             </div>
             <div class="card-content">
                 <table>
-                    <caption>Основные параметры автобуса Ikarus 55 № 015</caption>
-                    <thead>
-                        <tr>
-                            <th>Параметр</th>
-                            <th>Значение</th>
-                        </tr>
-                    </thead>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
                     <tbody>
+                        <tr><td>Город</td><td>Москва 🇷🇺</td></tr>
+                        <tr><td>Транспортная компания</td><td>Музей Транспорта Москвы</td></tr>
                         <tr><td>Модель</td><td>Ikarus 55</td></tr>
-                        <tr><td>Текущее состояние</td><td style="background: #fff3cd; color: #856404; font-weight: bold;">Не эксплуатируется</td></tr>
-                        <tr><td>Завод-изготовитель</td><td>Завод кузовов и транспортных средств Ikarus (Венгрия)</td></tr>
+                        <tr><td>Бортовой №</td><td><strong>015</strong></td></tr>
                         <tr><td>Год выпуска</td><td>1953</td></tr>
-                        <tr><td>Местонахождение</td><td>Музей Транспорта Москвы</td></tr>
+                        <tr><td>Текущее состояние</td><td style="background: #fff3cd; color: #856404; font-weight: bold;">Памятник / Музейный</td></tr>
+                        <tr><td>Завод-изготовитель</td><td>Завод кузовов и транспортных средств Ikarus (Венгрия)</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -106,7 +103,7 @@
 
         <!-- Технические характеристики -->
         <section class="section-card">
-            <div class="card-header">
+            <div class="card-header" style="background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);">
                 <span class="card-icon">⚙️</span>
                 <h2>Технические характеристики</h2>
             </div>
@@ -134,59 +131,70 @@
             </div>
         </section>
 
-        <!-- История -->
+        <!-- История экспоната -->
         <section id="history" class="section-card">
-            <div class="card-header">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
                 <span class="card-icon">📜</span>
-                <h2>История модели и экспоната</h2>
+                <h2>История экспоната</h2>
             </div>
             <div class="card-content">
                 <div class="timeline" style="padding: 1rem 0;">
                     <div class="timeline-item">
-                        <div class="timeline-date">1952–1953</div>
-                        <div class="timeline-content">
-                            <h3>Рождение «Сигары»</h3>
-                            <p>В начале 1950-х годов фирма Ikarus приступила к разработке принципиально нового междугородного автобуса. Главной проблемой был шумный дизель — чтобы изолировать его от пассажиров, конструкторы разместили двигатель в корме. Так родился Ikarus 55 — первый заднемоторный автобус фирмы с несущим кузовом вагонного типа.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
                         <div class="timeline-date">1953</div>
                         <div class="timeline-content">
-                            <h3>Выпуск экспоната</h3>
-                            <p>Именно эта машина (бортовой № 015) сошла с конвейера завода Ikarus в 1953 году.</p>
+                            <h3>Постройка</h3>
+                            <p>Именно эта машина (бортовой № 015) сошла с конвейера завода Ikarus в Венгрии.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-date">1955</div>
+                        <div class="timeline-date">1999</div>
                         <div class="timeline-content">
-                            <h3>Первые поставки в СССР</h3>
-                            <p>В 1955 году в Советский Союз пришли первые «Икарус-55». Они сразу завоевали популярность: в стране остро не хватало междугородных автобусов, а венгерская машина с экономичным дизелем, комфортной подвеской и удобным местом водителя оказалась именно тем, что нужно.</p>
+                            <h3>Съёмки в музее</h3>
+                            <p>Автобус зафиксирован на фотографиях в Музее наземного городского пассажирского транспорта (Трамвайное депо имени Н.Э. Баумана).</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-date">1972</div>
+                        <div class="timeline-date">06.08.2006</div>
                         <div class="timeline-content">
-                            <h3>Конец выпуска</h3>
-                            <p>В 1972 году выпуск «Икарус-55» был завершён. Всего в Венгрии с 1953 по 1972 год было произведено 7 466 машин. Последние «Икарус-55» ушли с междугородных трасс СССР только в начале 1980-х годов.</p>
+                            <h3>Съёмки фильма «Дом солнца»</h3>
+                            <p>Автобус участвовал в съёмках фильма на площади Васильевский Спуск.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-date">Наши дни</div>
+                        <div class="timeline-date">2007 — 2014</div>
                         <div class="timeline-content">
-                            <h3>Сохранение для истории</h3>
-                            <p>Данный экземпляр был отреставрирован и занял достойное место в экспозиции Музея Транспорта Москвы. Это один из немногих сохранившихся представителей легендарной серии.</p>
+                            <h3>Выставки и мероприятия</h3>
+                            <p>Машину регулярно выставляли у Главного входа ВДНХ (2007, 2009, 2012), на Чистопрудном бульваре (2014) и на Фрунзенской набережной (2016).</p>
                         </div>
                     </div>
-                </div>
-                <div class="highlight-box" style="margin-top: 1.5rem;">
-                    <p><strong>Интересный факт:</strong> Экземпляр из коллекции Музея транспорта Москвы приехал из Германии: в 1990-е годы он был передан в Москву как гуманитарная помощь и использовался как транспорт для инвалидов. Позже его выкупили и отреставрировали для музея.</p>
+                    <div class="timeline-item">
+                        <div class="timeline-date">08.07.2017</div>
+                        <div class="timeline-content">
+                            <h3>Парад Мосгортранса</h3>
+                            <p>Принял участие в Параде ко Дню открытых дверей ГУП «Мосгортранс» на Большой Дорогомиловской улице.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">20.05.2018</div>
+                        <div class="timeline-content">
+                            <h3>Музей «Московский транспорт»</h3>
+                            <p>Автобус сфотографирован на территории музея по адресу улица Рогожский Вал.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026</div>
+                        <div class="timeline-content">
+                            <h3>Музей Транспорта Москвы</h3>
+                            <p>Экспонат доставлен в новое здание Музея Транспорта Москвы (Гараж Мельникова).</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Особенности конструкции -->
         <section class="section-card">
-            <div class="card-header">
+            <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
                 <span class="card-icon">🎨</span>
                 <h2>Особенности конструкции</h2>
             </div>
@@ -194,30 +202,27 @@
                 <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
                     <div class="feature-item">
                         <h3>Заднемоторная компоновка</h3>
-                        <p>Главная особенность «Икарус-55» — двигатель в корме, изолированный от пассажирского салона. Это решение было принято из-за шумного дизеля. На ходу выхлопные газы не проникали в салон, а звук оставался позади.</p>
+                        <p>Главная особенность «Икарус-55» — двигатель в корме, изолированный от пассажирского салона. Это решение было принято из-за шумного дизеля.</p>
                     </div>
                     <div class="feature-item">
                         <h3>Несущий кузов</h3>
-                        <p>Вагонный тип кузова без отдельной рамы. Для своего времени это было нестандартное решение, хотя советские ЗИС-127 уже были такими. Вдохновением для венгерских конструкторов послужил советский ЗИС-154, запущенный в серию чуть раньше.</p>
+                        <p>Вагонный тип кузова без отдельной рамы. Вдохновением для венгерских конструкторов послужил советский ЗИС-154.</p>
                     </div>
                     <div class="feature-item">
                         <h3>Аэродинамичный дизайн</h3>
-                        <p>Вытянутая форма с обтекаемым профилем, за которую автобус получил прозвище «Сигара». Гребень на крыше — это воздухозаборник, а нагретый поток выводился через горизонтальные прорези в корме.</p>
+                        <p>Вытянутая форма с обтекаемым профилем, за которую автобус получил прозвище «Сигара». Гребень на крыше — это воздухозаборник.</p>
                     </div>
                     <div class="feature-item">
                         <h3>Комфорт для пассажиров</h3>
-                        <p>Версия «Люкс» для СССР оснащалась креслами с регулировкой наклона спинки, застеклёнными скатами крыши, хорошей вентиляцией (люки вместо кондиционеров), мягкой подвеской. В салоне — 31 сиденье плюс место для кондуктора или экскурсовода.</p>
+                        <p>Версия «Люкс» для СССР оснащалась креслами с регулировкой наклона спинки, застеклёнными скатами крыши, хорошей вентиляцией.</p>
                     </div>
-                </div>
-                <div class="highlight-box" style="margin-top: 1rem;">
-                    <p>🎉 <strong>Символ эпохи:</strong> Ikarus 55 — один из самых узнаваемых междугородных автобусов СССР. Его можно было встретить на автовокзалах Москвы, Ленинграда, Риги, Таллина и других крупных городов. За надёжность автобус проходил без капремонта более миллиона километров.</p>
                 </div>
             </div>
         </section>
 
         <!-- Фотогалерея -->
         <section id="gallery" class="section-card">
-            <div class="card-header">
+            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
                 <span class="card-icon">📸</span>
                 <h2>Фотогалерея</h2>
             </div>
@@ -226,11 +231,14 @@
                     <!-- Фото 1 -->
                     <div class="photo-card">
                         <div class="photo-thumb">
-                            <img src="img/ikarus_55_mus.jpg" alt="Ikarus 55" onclick="openGalleryModal(this.src, 'Ikarus 55 — легендарная венгерская «Сигара»')" onerror="this.src='https://via.placeholder.com/600x400?text=Ikarus+55'">
+                            <img src="img/ikarus_55_mus.jpg" alt="Ikarus 55" onclick="openGalleryModal(this.src, 'Ikarus 55 № 015 — легендарная венгерская «Сигара»')" onerror="this.src='https://via.placeholder.com/600x400?text=Ikarus+55'">
                         </div>
                         <div class="photo-info">
                             <a href="#" class="photo-object">Ikarus 55 № 015</a>
-                            <p class="photo-desc"><strong>📌 Музей Транспорта Москвы.</strong><br>Легендарная венгерская «Сигара».</p>
+                            <p class="photo-desc">
+                                <strong>📌 Музей Транспорта Москвы.</strong><br>
+                                Легендарная венгерская «Сигара».
+                            </p>
                             <div class="photo-meta">
                                 <span class="photo-date">📅 2026</span>
                                 <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
@@ -245,7 +253,10 @@
                         </div>
                         <div class="photo-info">
                             <a href="#" class="photo-object">Табличка об экспонате</a>
-                            <p class="photo-desc"><strong>📌 Музей Транспорта Москвы.</strong><br>Музейная информация об Ikarus 55.</p>
+                            <p class="photo-desc">
+                                <strong>📌 Музей Транспорта Москвы.</strong><br>
+                                Музейная информация об Ikarus 55.
+                            </p>
                             <div class="photo-meta">
                                 <span class="photo-date">📅 2026</span>
                                 <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
@@ -260,7 +271,10 @@
                         </div>
                         <div class="photo-info">
                             <a href="#" class="photo-object">Салон экспоната</a>
-                            <p class="photo-desc"><strong>📌 Музей Транспорта Москвы.</strong><br>Салон музейного экспоната Ikarus 55.</p>
+                            <p class="photo-desc">
+                                <strong>📌 Музей Транспорта Москвы.</strong><br>
+                                Салон музейного экспоната Ikarus 55.
+                            </p>
                             <div class="photo-meta">
                                 <span class="photo-date">📅 2026</span>
                                 <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
@@ -324,12 +338,15 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Счётчики
             function animateCounters() {
-                const targets = { buildYear: 1953, totalMade: 7466 };
-                let current = { buildYear: 0, totalMade: 0 };
+                const targets = { buildYear: 1953, statusCount: 1 };
+                let current = { buildYear: 0, statusCount: 0 };
                 const yearEl = document.getElementById('buildYear');
-                const madeEl = document.getElementById('totalMade');
-                if (!yearEl || !madeEl) return;
+                const boardEl = document.getElementById('boardNum');
+                const statusEl = document.getElementById('statusCount');
                 
+                if (boardEl) boardEl.textContent = '015';
+                
+                if (!yearEl || !statusEl) return;
                 const interval = setInterval(function() {
                     let allFinished = true;
                     if (current.buildYear < targets.buildYear) {
@@ -338,16 +355,28 @@
                         yearEl.textContent = current.buildYear;
                         allFinished = false;
                     }
-                    if (current.totalMade < targets.totalMade) {
-                        current.totalMade += Math.ceil(targets.totalMade / 50);
-                        if (current.totalMade > targets.totalMade) current.totalMade = targets.totalMade;
-                        madeEl.textContent = current.totalMade;
+                    if (current.statusCount < targets.statusCount) {
+                        current.statusCount += 1;
+                        if (current.statusCount > targets.statusCount) current.statusCount = targets.statusCount;
+                        statusEl.textContent = 'Муз.';
                         allFinished = false;
                     }
                     if (allFinished) clearInterval(interval);
                 }, 30);
             }
             animateCounters();
+
+            window.openGalleryModal = function(src, caption) {
+                const modal = document.getElementById('galleryModal');
+                const content = document.getElementById('galleryModalContent');
+                if (modal && content) {
+                    content.innerHTML = `
+                        <img src="${src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${caption}">
+                        <p style="text-align:center; margin-top:1rem; font-size:1.1rem;">${caption}</p>
+                    `;
+                    modal.classList.add('active');
+                }
+            };
         });
     </script>
 </body>

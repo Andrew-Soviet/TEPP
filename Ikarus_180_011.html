@@ -47,7 +47,9 @@
                     <li><a href="index.html">🏠 Главная</a></li>
                     <li><a href="city_transport.html">🚌 Городской транспорт</a></li>
                     <li><a href="Автобусы.html">🚐 Автобусы</a></li>
-                    <li><a href="#about" class="active">🚌 Ikarus 180</a></li>
+                    <li><a href="#about">О экспонате</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#gallery">Фото</a></li>
                 </ul>
             </nav>
         </div>
@@ -60,38 +62,33 @@
                 <h2>Ikarus 180 № 011</h2>
                 <p class="hero-text">Перед вами первый в СССР массовый сочленённый автобус особо большой вместимости. Данный экземпляр (бортовой № 011) был выпущен в <strong>1969 году</strong> на заводе Ikarus в Венгрии и сейчас является частью коллекции Музея Транспорта Москвы.</p>
                 <p class="hero-text">Экспонат оснащён дизельным двигателем и усовершенствованными комбинированными рессорами. Вмещал от 150 до 200 человек.</p>
+                
                 <div class="stats-container">
                     <div class="stat-item">
                         <div class="counter-number" id="buildYear">0</div>
                         <div class="stat-label">год выпуска</div>
                     </div>
                     <div class="stat-item">
-                        <div class="counter-number" id="capacity">0</div>
-                        <div class="stat-label">человек вместимость</div>
+                        <div class="counter-number" id="boardNum" style="font-size: 2.5rem;">—</div>
+                        <div class="stat-label">бортовой №</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-label" style="font-size: 1.2rem; color: var(--accent-color); font-weight: bold; margin-top: 1rem;">Музейный</div>
-                        <div class="stat-label">статус</div>
+                        <div class="counter-number" id="statusCount" style="font-size: 1.4rem;">—</div>
+                        <div class="stat-label">состояние</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Общая информация (Таблица) -->
+        <!-- Общая информация -->
         <section class="section-card">
             <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
-                <span class="card-icon">🚌</span>
+                <span class="card-icon">📋</span>
                 <h2>Общая информация</h2>
             </div>
             <div class="card-content">
                 <table>
-                    <caption>Основные параметры автобуса Ikarus 180 № 011</caption>
-                    <thead>
-                        <tr>
-                            <th>Параметр</th>
-                            <th>Значение</th>
-                        </tr>
-                    </thead>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
                     <tbody>
                         <tr><td>Город</td><td>Москва 🇷🇺</td></tr>
                         <tr><td>Транспортная компания</td><td>Музей Транспорта Москвы</td></tr>
@@ -134,6 +131,46 @@
             </div>
         </section>
 
+        <!-- История экспоната -->
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История экспоната</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">1969</div>
+                        <div class="timeline-content">
+                            <h3>Постройка</h3>
+                            <p>Автобус с бортовым номером 011 выпущен на заводе Ikarus в Венгрии.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">08.07.2017</div>
+                        <div class="timeline-content">
+                            <h3>Парад Мосгортранса</h3>
+                            <p>Автобус Ikarus 180 № 011 принял участие в Параде ко Дню открытых дверей ГУП «Мосгортранс». Место съёмки: Фрунзенская набережная.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">201* — 202*</div>
+                        <div class="timeline-content">
+                            <h3>Отстой в филиале</h3>
+                            <p>Автобус находился на отстое в Филиале «Восточный», на площадке по Новорязанской улице.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026</div>
+                        <div class="timeline-content">
+                            <h3>Музейный экспонат</h3>
+                            <p>Автобус отреставрирован и представлен в экспозиции Музея Транспорта Москвы.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Особенности конструкции -->
         <section class="section-card">
             <div class="card-header" style="background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);">
@@ -171,7 +208,7 @@
             <div class="card-content">
                 <div class="photo-gallery">
 
-                    <!-- Фото 1 (Новое) -->
+                    <!-- Фото 1 -->
                     <div class="photo-card">
                         <div class="photo-thumb">
                             <img src="img/ikarus_180_011_museum.jpg" alt="Ikarus 180 № 011 в музее" 
@@ -182,7 +219,7 @@
                             <a href="#" class="photo-object">Ikarus 180 №011</a>
                             <p class="photo-desc">
                                 <strong>📌 Музей Транспорта Москвы.</strong><br>
-                                Экспонат в музее.
+                                Общий вид экспоната.
                             </p>
                             <div class="photo-meta">
                                 <span class="photo-date">📅 18 сентября 2026 г.</span>
@@ -198,7 +235,10 @@
                         </div>
                         <div class="photo-info">
                             <a href="#" class="photo-object">Ikarus 180 №011</a>
-                            <p class="photo-desc"><strong>📌 Музей Транспорта Москвы.</strong><br>Экспонат 1969 года.</p>
+                            <p class="photo-desc">
+                                <strong>📌 Музей Транспорта Москвы.</strong><br>
+                                Экспонат 1969 года.
+                            </p>
                             <div class="photo-meta">
                                 <span class="photo-date">📅 11 октября 2026 г.</span>
                                 <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
@@ -213,7 +253,10 @@
                         </div>
                         <div class="photo-info">
                             <a href="#" class="photo-object">Табличка об экспонате</a>
-                            <p class="photo-desc"><strong>📌 Музей Транспорта Москвы.</strong><br>Музейная информация.</p>
+                            <p class="photo-desc">
+                                <strong>📌 Музей Транспорта Москвы.</strong><br>
+                                Музейная информация.
+                            </p>
                             <div class="photo-meta">
                                 <span class="photo-date">📅 11 октября 2026 г.</span>
                                 <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
@@ -228,7 +271,10 @@
                         </div>
                         <div class="photo-info">
                             <a href="#" class="photo-object">Ikarus 180 №011</a>
-                            <p class="photo-desc"><strong>📌 Музей Транспорта Москвы.</strong><br>Салон, вид вперед.</p>
+                            <p class="photo-desc">
+                                <strong>📌 Музей Транспорта Москвы.</strong><br>
+                                Салон, вид вперед.
+                            </p>
                             <div class="photo-meta">
                                 <span class="photo-date">📅 11 октября 2026 г.</span>
                                 <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
@@ -294,12 +340,15 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Счётчики
             function animateCounters() {
-                const targets = { buildYear: 1969, capacity: 200 };
-                let current = { buildYear: 0, capacity: 0 };
+                const targets = { buildYear: 1969, statusCount: 1 };
+                let current = { buildYear: 0, statusCount: 0 };
                 const yearEl = document.getElementById('buildYear');
-                const capEl = document.getElementById('capacity');
-                if (!yearEl || !capEl) return;
+                const boardEl = document.getElementById('boardNum');
+                const statusEl = document.getElementById('statusCount');
                 
+                if (boardEl) boardEl.textContent = '011';
+                
+                if (!yearEl || !statusEl) return;
                 const interval = setInterval(function() {
                     let allFinished = true;
                     if (current.buildYear < targets.buildYear) {
@@ -308,16 +357,28 @@
                         yearEl.textContent = current.buildYear;
                         allFinished = false;
                     }
-                    if (current.capacity < targets.capacity) {
-                        current.capacity += Math.ceil(targets.capacity / 50);
-                        if (current.capacity > targets.capacity) current.capacity = targets.capacity;
-                        capEl.textContent = current.capacity;
+                    if (current.statusCount < targets.statusCount) {
+                        current.statusCount += 1;
+                        if (current.statusCount > targets.statusCount) current.statusCount = targets.statusCount;
+                        statusEl.textContent = 'Муз.';
                         allFinished = false;
                     }
                     if (allFinished) clearInterval(interval);
                 }, 30);
             }
             animateCounters();
+
+            window.openGalleryModal = function(src, caption) {
+                const modal = document.getElementById('galleryModal');
+                const content = document.getElementById('galleryModalContent');
+                if (modal && content) {
+                    content.innerHTML = `
+                        <img src="${src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${caption}">
+                        <p style="text-align:center; margin-top:1rem; font-size:1.1rem;">${caption}</p>
+                    `;
+                    modal.classList.add('active');
+                }
+            };
         });
     </script>
 </body>
