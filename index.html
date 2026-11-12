@@ -6,24 +6,12 @@
     <title>Транспортная энциклопедия постсоветского пространства</title>
     <meta name="description" content="Железные дороги, метрополитены, трамваи, троллейбусы, автобусы, музеи и игры. История транспорта постсоветского пространства.">
     <meta property="og:title" content="Транспортная энциклопедия постсоветского пространства">
-    <meta property="og:description" content="120 статей · 288 фото · 5 разделов.">
+    <meta property="og:description" content="150 статей · 500 фото · 6 разделов.">
     <meta property="og:type" content="website">
     <link rel="icon" href="img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <meta name="google-site-verification" content="Roo8oO2FYqiO2y8995xcp96AS_gpzaXi3E-6Waixmn8" />
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Транспортная энциклопедия постсоветского пространства",
-      "alternateName": "ТЭПП",
-      "url": "https://andrew-soviet.github.io/TEPP/"
-    }
-    </script>
-    
-    <meta property="og:site_name" content="Транспортная энциклопедия постсоветского пространства" />
 </head>
 <body>
     <div id="particles-js"></div>
@@ -33,11 +21,8 @@
 
     <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
     <div class="top-nav">
-        <!-- Кнопка бургер для мобильных -->
         <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </button>
 
         <div class="top-nav-links" id="topNavLinks">
@@ -57,7 +42,7 @@
         <div class="header-container">
             <div class="logo">
                 <h1>Транспортная энциклопедия постсоветского пространства</h1>
-                <p class="subtitle">120 статей · 288 фото · 5 разделов</p>
+                <p class="subtitle">150 статей · 500 фото · 6 разделов</p>
             </div>
             <nav>
                 <ul class="main-nav">
@@ -67,7 +52,7 @@
                     <li><a href="#metro">Метрополитены</a></li>
                     <li><a href="#city">Городской транспорт</a></li>
                     <li><a href="#museums">Музеи</a></li>
-                    <li><a href="#games">🎮 Игры</a></li>
+                    <li><a href="#creativity">🎨 Творчество</a></li>
                 </ul>
             </nav>
         </div>
@@ -75,23 +60,23 @@
 
     <main>
 
-        <!-- Герой-секция -->
+        <!-- Герой-секция (Счетчики) -->
         <section id="about" class="hero standard-block">
             <div class="hero-content">
-                <h2>Транспорт, который связал полконтинента</h2>
-                <p class="hero-text">Железные дороги и метрополитены, трамваи и троллейбусы, автобусы и музеи. Мы собираем историю транспорта постсоветского пространства — от первых вагонов до новейших разработок.</p>
+                <h2>История транспорта — в деталях</h2>
+                <p class="hero-text">От первых трамвайных звонков до бесшумных беспилотных составов. Мы собрали тысячи статей, чертежей и уникальных фотографий, чтобы сохранить историю железных дорог, метрополитенов и городского транспорта для будущих поколений.</p>
 
                 <div class="stats-container">
                     <div class="stat-item">
-                        <div class="counter-number" id="pagesStat">0</div>
+                        <div class="counter-number" data-target="150">0</div>
                         <div class="stat-label">статей</div>
                     </div>
                     <div class="stat-item">
-                        <div class="counter-number" id="photosStat">0</div>
+                        <div class="counter-number" data-target="500">0</div>
                         <div class="stat-label">фото</div>
                     </div>
                     <div class="stat-item">
-                        <div class="counter-number" id="sectionsStat">0</div>
+                        <div class="counter-number" data-target="6">0</div>
                         <div class="stat-label">разделов</div>
                     </div>
                 </div>
@@ -110,7 +95,6 @@
                         <input type="text" class="search-input" id="searchInput" placeholder="🔍 Поиск по номеру, модели, названию..." autocomplete="off">
                         <button class="search-btn" id="searchBtn">Найти</button>
                     </div>
-
                     <div class="filter-row">
                         <select class="filter-select" id="filterType">
                             <option value="">Все типы</option>
@@ -119,38 +103,30 @@
                             <option value="метро">🚇 Метро</option>
                             <option value="монорельс">🚝 Монорельс</option>
                             <option value="автобус">🚌 Автобус</option>
-                            <option value="электробус">⚡ Электробус</option>
                             <option value="жд">🚆 Железная дорога</option>
                             <option value="музей">🏛️ Музей</option>
                         </select>
-
                         <select class="filter-select" id="filterCity">
                             <option value="">Все города</option>
                             <option value="Москва">Москва</option>
                             <option value="Санкт-Петербург">Санкт-Петербург</option>
-                            <option value="Киев">Киев</option>
                             <option value="Минск">Минск</option>
-                            <option value="Баку">Баку</option>
-                            <option value="Тбилиси">Тбилиси</option>
-                            <option value="Харьков">Харьков</option>
+                            <option value="Киев">Киев</option>
                             <option value="Ташкент">Ташкент</option>
+                            <option value="Алма-Ата">Алма-Ата</option>
                         </select>
-
                         <select class="filter-select" id="filterCountry">
                             <option value="">Все страны</option>
                             <option value="Россия">Россия</option>
-                            <option value="Украина">Украина</option>
                             <option value="Беларусь">Беларусь</option>
-                            <option value="Грузия">Грузия</option>
-                            <option value="Азербайджан">Азербайджан</option>
+                            <option value="Украина">Украина</option>
                             <option value="Узбекистан">Узбекистан</option>
+                            <option value="Казахстан">Казахстан</option>
                             <option value="СССР">СССР (до 1991)</option>
                         </select>
                     </div>
-
                     <div class="filter-results-info" id="filterResultsInfo"></div>
                 </div>
-
                 <div class="search-results" id="searchResults"></div>
             </div>
         </section>
@@ -161,50 +137,36 @@
                 <span class="card-icon">📖</span>
                 <h2>О проекте</h2>
             </div>
-            <div class="card-content">
-                <p class="card-description">ТЭПП — независимый проект, который собирает и сохраняет историю транспорта постсоветского пространства. От первых трамвайных вагонов до новейших беспилотных составов.</p>
-
-                <div class="features-grid">
-                    <div class="feature-item">
-                        <h3>📚 Что мы делаем</h3>
-                        <p>Собираем факты, фотографии, схемы и чертежи. Описываем подвижной состав, инфраструктуру, музеи и людей, которые всё это создавали.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>🎯 Зачем</h3>
-                        <p>Чтобы история транспорта не потерялась. Чтобы было куда зайти и найти информацию о конкретном вагоне, станции или депо.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>🤝 Как помочь</h3>
-                        <p>Присылайте фотографии, факты, исправления. Если у вас есть что-то, чего нет у нас — пишите, и мы опубликуем.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>⏳ Где мы сейчас</h3>
-                        <p>Проект активно пополняется. Часть разделов уже готова, часть — в разработке. Мы не обещаем готового результата сегодня, но обещаем движение вперёд.</p>
+            <div style="background: linear-gradient(to left, rgba(28, 155, 194, 0.4) 0%, rgba(102, 255, 184, 0.2) 40%, transparent 70%); border-radius: 0 0 var(--radius) var(--radius);">
+                <div class="card-content" style="padding: 2rem 1.5rem;">
+                    <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto 1.5rem auto; text-align: center;">
+                        ТЭПП — независимый некоммерческий проект. Мы собираем историю транспорта по крупицам и делимся ею бесплатно. Наша цель — сохранить память о каждой машине, от первых паровозов до новейших беспилотных составов.
+                    </p>
+                    <div>
+                        <a href="about_project.html" class="btn btn-primary">Подробнее о проекте →</a>
                     </div>
                 </div>
-
-                <a href="about_project.html" class="btn btn-primary">Подробнее о проекте →</a>
             </div>
         </section>
 
-        <!-- Новости (Короткий анонс) -->
+        <!-- Новости -->
         <section id="news" class="section-card standard-block">
             <div class="card-header">
                 <span class="card-icon">📰</span>
                 <h2>Новости транспорта</h2>
             </div>
-            <div class="card-content">
-                <div class="highlight-box" style="margin-top: 0;">
-                    <p style="font-size: 1.1rem; margin-bottom: 1rem;">
-                        Узнайте о последних событиях в мире транспорта: открытие новых станций, запуск уникальных составов, парады поездов и важные обновления проекта.
-                    </p>
-                    <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">
-                        Мы собираем самое интересное и полезное, чтобы вы всегда были в курсе.
-                    </p>
-                    <a href="transport_news.html" class="btn btn-primary">Перейти к новостям и обновлениям →</a>
+            <div class="card-content" style="background: radial-gradient(circle at 100% 100%, rgba(255, 215, 0, 0.4) 0%, transparent 60%); border-radius: var(--radius-sm); padding: 1.5rem;">
+                <p class="card-description" style="font-size: 1.05rem; text-align: center;">
+                    Самые свежие события из мира транспорта: запуск новых тематических составов, открытие станций и важные транспортные проекты.
+                </p>
+                
+                <div id="latestNewsContainer" style="display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-bottom: 1.5rem;">
+                    <p style="color: var(--text-secondary); text-align: center; grid-column: 1 / -1;">Загрузка новостей...</p>
                 </div>
+
+                <a href="transport_news.html" class="btn btn-primary">Все новости →</a>
             </div>
-        </section>  
+        </section>
 
         <!-- Железные дороги -->
         <section id="railways" class="section-card standard-block">
@@ -212,25 +174,13 @@
                 <span class="card-icon">🚊</span>
                 <h2>Железные дороги</h2>
             </div>
-            <div class="card-content">
+            <div class="card-content" style="background: radial-gradient(circle at 100% 100%, rgba(70, 130, 180, 0.4) 0%, transparent 60%); border-radius: var(--radius-sm); padding: 1.5rem;">
                 <p class="card-description">Магистрали, вокзалы, локомотивы и вагоны — от первых паровозов до «Сапсанов» и «Иволги».</p>
                 <div class="features-grid">
-                    <div class="feature-item">
-                        <h3>🚂 История подвижного состава</h3>
-                        <p>Паровозы, тепловозы, электровозы. От ЧС2 до ЭП2К и новейших ДП2Д.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>🛤️ Легендарные маршруты</h3>
-                        <p>«Красная стрела», «Невский экспресс», «Россия». История и современность.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>🏗️ Великие стройки</h3>
-                        <p>Транссиб, БАМ, новые коридоры. Как строили и что получилось.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>🏛️ Вокзалы-дворцы</h3>
-                        <p>Архитектура вокзалов Москвы, Петербурга, Киева, Ташкента.</p>
-                    </div>
+                    <div class="feature-item"><h3>🚂 История подвижного состава</h3><p>Паровозы, тепловозы, электровозы. От ЧС2 до ЭП2К и новейших ДП2Д.</p></div>
+                    <div class="feature-item"><h3>🛤️ Легендарные маршруты</h3><p>«Красная стрела», «Невский экспресс», «Россия». История и современность.</p></div>
+                    <div class="feature-item"><h3>🏗️ Великие стройки</h3><p>Транссиб, БАМ, новые коридоры. Как строили и что получилось.</p></div>
+                    <div class="feature-item"><h3>🏛️ Вокзалы-дворцы</h3><p>Архитектура вокзалов Москвы, Петербурга, Киева, Ташкента.</p></div>
                 </div>
                 <a href="Железная_дорога.html" class="btn btn-primary">Все статьи о железных дорогах →</a>
             </div>
@@ -242,25 +192,13 @@
                 <span class="card-icon">🚇</span>
                 <h2>Метрополитены</h2>
             </div>
-            <div class="card-content">
+            <div class="card-content" style="background: radial-gradient(circle at 100% 100%, rgba(229, 43, 43, 0.4) 0%, transparent 60%); border-radius: var(--radius-sm); padding: 1.5rem;">
                 <p class="card-description">Подземные дворцы и советский модерн — архитектура, инженерные решения и подвижной состав подземок.</p>
                 <div class="features-grid">
-                    <div class="feature-item">
-                        <h3>🚆 Подвижной состав</h3>
-                        <p>От вагонов типа А до «Москвы-2024» и «Минска-2024». История каждой серии.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>🏗️ Заброшенные проекты</h3>
-                        <p>Метро в Одессе, Ростове-на-Дону, Красноярске, Омске. Что построили и почему остановили.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>👻 Легенды и мифы</h3>
-                        <p>«Метро-2», секретные объекты, забытые станции и тайные линии.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>🎨 Архитектура станций</h3>
-                        <p>Мозаики, витражи, барельефы. Как станции становились памятниками.</p>
-                    </div>
+                    <div class="feature-item"><h3>🚆 Подвижной состав</h3><p>От вагонов типа А до «Москвы-2024» и «Минска-2024». История каждой серии.</p></div>
+                    <div class="feature-item"><h3>🏗️ Заброшенные проекты</h3><p>Метро в Одессе, Ростове-на-Дону, Красноярске, Омске. Что построили и почему остановили.</p></div>
+                    <div class="feature-item"><h3>👻 Легенды и мифы</h3><p>«Метро-2», секретные объекты, забытые станции и тайные линии.</p></div>
+                    <div class="feature-item"><h3>🎨 Архитектура станций</h3><p>Мозаики, витражи, барельефы. Как станции становились памятниками.</p></div>
                 </div>
                 <a href="Главная_метро.html" class="btn btn-primary">Все статьи о метро →</a>
             </div>
@@ -272,25 +210,13 @@
                 <span class="card-icon">🚍</span>
                 <h2>Городской транспорт</h2>
             </div>
-            <div class="card-content">
+            <div class="card-content" style="background: radial-gradient(circle at 100% 100%, rgba(0, 168, 232, 0.4) 0%, transparent 60%); border-radius: var(--radius-sm); padding: 1.5rem;">
                 <p class="card-description">Трамваи, троллейбусы, автобусы, монорельс и уникальные системы — то, что каждый день везёт нас по городу.</p>
                 <div class="features-grid">
-                    <div class="feature-item">
-                        <h3>🚋 Трамваи</h3>
-                        <p>От конки и первых моторных вагонов — до новейших беспилотных трамваев. История каждой модели.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>🚎 Троллейбусы</h3>
-                        <p>От первых машин 1930-х — до современных низкопольных моделей. Расцвет, закат и возвращение.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>🚌 Автобусы и маршрутки</h3>
-                        <p>От ЗИС-8 и ЛиАЗ-677 — до «ГАЗелей» и современных электробусов. Эволюция городских перевозок.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>🚝 Уникальные системы</h3>
-                        <p>Московский монорельс, Тбилисский фуникулёр, канатка в Алма-Ате. То, что не вписывается в общие рамки.</p>
-                    </div>
+                    <div class="feature-item"><h3>🚋 Трамваи</h3><p>От конки и первых моторных вагонов — до новейших беспилотных трамваев. История каждой модели.</p></div>
+                    <div class="feature-item"><h3>🚎 Троллейбусы</h3><p>От первых машин 1930-х — до современных низкопольных моделей. Расцвет, закат и возвращение.</p></div>
+                    <div class="feature-item"><h3>🚌 Автобусы и маршрутки</h3><p>От ЗИС-8 и ЛиАЗ-677 — до «ГАЗелей» и современных электробусов. Эволюция городских перевозок.</p></div>
+                    <div class="feature-item"><h3>🚝 Уникальные системы</h3><p>Московский монорельс, Тбилисский фуникулёр, канатка в Алма-Ате. То, что не вписывается в общие рамки.</p></div>
                 </div>
                 <a href="city_transport.html" class="btn btn-primary">Все статьи о городском транспорте →</a>
             </div>
@@ -302,25 +228,13 @@
                 <span class="card-icon">🏛️</span>
                 <h2>Транспортные музеи</h2>
             </div>
-            <div class="card-content">
+            <div class="card-content" style="background: radial-gradient(circle at 100% 100%, rgba(184, 115, 51, 0.4) 0%, transparent 60%); border-radius: var(--radius-sm); padding: 1.5rem;">
                 <p class="card-description">Музеи и экспозиции, где можно увидеть исторический транспорт вживую — от первых вагонов метро до легендарных локомотивов.</p>
                 <div class="features-grid">
-                    <div class="feature-item">
-                        <h3>🏛️ Музей Транспорта Москвы</h3>
-                        <p>Гараж Константина Мельникова — крупнейшая коллекция техники: тип В, Г, Еж3, 81-717.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>🚂 Музей РЖД</h3>
-                        <p>Санкт-Петербург — один из старейших железнодорожных музеев мира.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>🛤️ Музей ЖД техники имени Н. А. Акулинина</h3>
-                        <p>Новосибирск — крупнейший за Уралом музей железнодорожной техники под открытым небом.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>🚋 Музей трамваев</h3>
-                        <p>Коллекции трамвайной техники в Москве, Санкт-Петербурге, Нижнем Новгороде.</p>
-                    </div>
+                    <div class="feature-item"><h3>🏛️ Музей Транспорта Москвы</h3><p>Гараж Константина Мельникова — крупнейшая коллекция техники: тип В, Г, Еж3, 81-717.</p></div>
+                    <div class="feature-item"><h3>🚂 Музей РЖД</h3><p>Санкт-Петербург — один из старейших железнодорожных музеев мира.</p></div>
+                    <div class="feature-item"><h3>🛤️ Музей ЖД техники имени Н. А. Акулинина</h3><p>Новосибирск — крупнейший за Уралом музей железнодорожной техники под открытым небом.</p></div>
+                    <div class="feature-item"><h3>🚋 Музей трамваев</h3><p>Коллекции трамвайной техники в Москве, Санкт-Петербурге, Нижнем Новгороде.</p></div>
                 </div>
                 <a href="Музеи_транспорта.html" class="btn btn-primary">Все музеи транспорта →</a>
             </div>
@@ -333,28 +247,14 @@
                 <h2>Транспортное творчество</h2>
                 <span class="status-badge status-badge--dev">В разработке</span>
             </div>
-            <div class="card-content">
+            <div class="card-content" style="background: radial-gradient(circle at 100% 100%, rgba(76, 252, 85, 0.3) 0%, transparent 60%); border-radius: var(--radius-sm); padding: 1.5rem;">
                 <p class="card-description">Всё, что связано с играми, симуляторами, фотографией и творчеством наших читателей.</p>
-                
                 <div class="features-grid">
-                    <div class="feature-item">
-                        <h3>🏆 Викторина</h3>
-                        <p>Проверьте свои знания транспорта от истории депо до типов вагонов.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>🚇 Транспортные игры</h3>
-                        <p>Minecraft с модами, Metro Simulator 2D и 3D. Стройте, водите поезда и соблюдайте расписание.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>📸 Транспортные фотографии</h3>
-                        <p>Галерея лучших кадров от авторов проекта и участников сообщества.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>🖌️ Творчество пользователей</h3>
-                        <p>Рисунки, схемы и коллажи на тему транспорта от наших читателей.</p>
-                    </div>
+                    <div class="feature-item"><h3>🏆 Викторина</h3><p>Проверьте свои знания транспорта от истории депо до типов вагонов.</p></div>
+                    <div class="feature-item"><h3>🚇 Транспортные игры</h3><p>Minecraft с модами, Metro Simulator 2D и 3D. Стройте, водите поезда и соблюдайте расписание.</p></div>
+                    <div class="feature-item"><h3>📸 Транспортные фотографии</h3><p>Галерея лучших кадров от авторов проекта и участников сообщества.</p></div>
+                    <div class="feature-item"><h3>🖌️ Творчество пользователей</h3><p>Рисунки, схемы и коллажи на тему транспорта от наших читателей.</p></div>
                 </div>
-                
                 <button class="btn btn-secondary" onclick="alert('Раздел в разработке — скоро появятся первые материалы!')">🎨 Скоро →</button>
             </div>
         </section>
@@ -398,7 +298,7 @@
                         <li><a href="#metro">Метрополитены</a></li>
                         <li><a href="#city">Городской транспорт</a></li>
                         <li><a href="#museums">Транспортные музеи</a></li>
-                        <li><a href="#games">Транспортные игры</a></li>
+                        <li><a href="#creativity">Транспортное творчество</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
@@ -423,9 +323,52 @@
         </div>
     </div>
 
-    <!-- ВАЖНО: Убран <div id="settingsPanel"></div>, чтобы скрипт создал меню сам -->
-
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
     <script src="script.js" defer></script>
+    
+    <script>
+        // ================= АВТОМАТИЧЕСКАЯ ПОДГРУЗКА НОВОСТЕЙ =================
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('transport_news.html')
+                .then(response => response.text())
+                .then(data => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(data, 'text/html');
+                    const container = document.getElementById('latestNewsContainer');
+                    if (!container) return;
+
+                    const newsCards = doc.querySelectorAll('.news-card');
+                    
+                    if (newsCards.length > 0) {
+                        container.innerHTML = ''; 
+                        for (let i = 0; i < Math.min(3, newsCards.length); i++) {
+                            const clonedCard = newsCards[i].cloneNode(true);
+                            
+                            clonedCard.style.margin = '0';
+                            clonedCard.style.height = '100%';
+                            clonedCard.style.display = 'flex';
+                            clonedCard.style.flexDirection = 'column';
+                            
+                            const body = clonedCard.querySelector('.news-card-body');
+                            if (body) {
+                                body.style.display = 'flex';
+                                body.style.flexDirection = 'column';
+                                body.style.flexGrow = '1';
+                                const btn = body.querySelector('.news-link');
+                                if (btn) btn.style.marginTop = 'auto';
+                            }
+
+                            container.appendChild(clonedCard);
+                        }
+                    } else {
+                        container.innerHTML = '<p style="color: var(--text-secondary); text-align: center; grid-column: 1 / -1;">Новости временно недоступны.</p>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Ошибка загрузки новостей:', error);
+                    document.getElementById('latestNewsContainer').innerHTML = '<p style="color: var(--text-secondary); text-align: center; grid-column: 1 / -1;">Не удалось загрузить новости.</p>';
+                });
+        });
+    </script>
 </body>
 </html>

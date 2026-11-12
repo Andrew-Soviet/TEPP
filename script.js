@@ -277,28 +277,26 @@ function loadSettings() {
         updateModeButtons(savedPageMode);
     }
 }
-
 // ============================================================
-// СЧЁТЧИКИ
+// СЧЁТЧИКИ (АВТОМАТИЧЕСКИ БЕРУТ ЦИФРЫ ИЗ HTML)
 // ============================================================
 function animateCounters() {
     setTimeout(() => {
-        const counters = { pagesStat: 120, photosStat: 288, sectionsStat: 5 };
-        for (const [id, target] of Object.entries(counters)) {
-            const el = document.getElementById(id);
-            if (el) {
-                let current = 0;
-                const timer = setInterval(() => {
-                    current += Math.ceil(target / 50);
-                    if (current >= target) { 
-                        el.textContent = target.toLocaleString(); 
-                        clearInterval(timer); 
-                    } else { 
-                        el.textContent = current.toLocaleString(); 
-                    }
-                }, 30);
-            }
-        }
+        document.querySelectorAll('.counter-number').forEach(el => {
+            const target = parseInt(el.getAttribute('data-target'));
+            if (isNaN(target)) return;
+            
+            let current = 0;
+            const timer = setInterval(() => {
+                current += Math.ceil(target / 50);
+                if (current >= target) { 
+                    el.textContent = target.toLocaleString(); 
+                    clearInterval(timer); 
+                } else { 
+                    el.textContent = current.toLocaleString(); 
+                }
+            }, 30);
+        });
     }, 100);
 }
 
