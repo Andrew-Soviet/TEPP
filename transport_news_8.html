@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Первый состав «Москва-2026» с прислонно-раздвижными дверями — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>Первый состав «Москва-2026» с прислонно-раздвижными дверями</h1>
+            <p class="subtitle">Новый этап эволюции московского метрополитена</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html">🏠 Главная</a></li>
+                    <li><a href="transport_news.html">📰 Все новости</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-card" style="max-width: 800px; margin: 2rem auto;">
+            <div class="card-header" style="background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);">
+                <span class="card-icon">📰</span>
+                <h2>Новость</h2>
+            </div>
+            <div class="card-content">
+            
+                <h2 style="margin-bottom: 1.5rem; color: var(--text-primary);">Первый состав Москвы 2026 с прислонно-раздвижными дверями прибыл в Москву</h2>
+                
+                <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;">
+                    Сегодня утром он был замечен на <strong>Киевском вокзале</strong>.
+                </p>
+
+                <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;">
+                    Данное событие знаменует новый виток эволюции московского метро — Дептранс возвращается к прислонно-сдвижным дверям. Ожидается, что кузов вагонов вновь расширят до параметров серии 81-765 «Москва». Это позволит вернуть дополнительные сидячие места и увеличить ширину проходов.
+                </p>
+
+                <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;">
+                    На головном вагоне <strong>№75529</strong> данного состава уже проводили испытания новых дверей и оборудования в цехах завода «Метровагонмаш». Данный состав скорее всего будет эксплуатироваться с пассажирами в тестовом режиме, после чего заводом уже будет принято решение о дальнейшем вводе в эксплуатацию новых дверей. Сами двери претерпели изменения — площадь остекления значительно уменьшилась, появились кронштейны, которые держат двери.
+                </p>
+
+                <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;">
+                    Новые поезда стоит ожидать на <strong>Люблинско-Дмитровской линии</strong>, а ближе к 2030 году — и на <strong>Арбатско-Покровской</strong>, когда будет производиться масштабная замена «Русичей».
+                </p>
+
+                <div class="photo-gallery" style="margin-bottom: 1.5rem;">
+                    <!-- Фото 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/MetroType_81-775.2_Moscow2026_75529.jpg" alt="Состав 81-775.2 Москва-2026 на Киевском вокзале" 
+                                 onclick="openGalleryModal(this.src, '81-775.2 «Москва-2026» № 75529 на Киевском вокзале')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=Фото+отсутствует'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="MetroType_81-775.2_Moscow2026_75529.html" class="photo-object">81-775.2 «Москва-2026» № 75529</a>
+                            <p class="photo-desc">
+                                <strong>📌 Москва, Киевский вокзал.</strong><br>
+                                Первый состав «Москва-2026» с прислонно-раздвижными дверями прибыл в Москву.
+                            </p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 4 ноября 2026 г.</span>
+                                <span class="photo-author">📸 PDMicail</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="https://transphoto.org/photo/23/54/22/2354224.jpg" alt="Состав 81-775.2 Москва-2026 на перегоне" 
+                                 onclick="openGalleryModal(this.src, '81-775.2 «Москва-2026» № 75529 на перегоне')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=Фото+отсутствует'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="MetroType_81-775.2_Moscow2026_75529.html" class="photo-object">81-775.2 «Москва-2026» № 75529</a>
+                            <p class="photo-desc"><strong>📌 Перегон Москва-Пассажирская-Киевская — Очаково-I.</strong></p>
+                            <p class="photo-desc">Новый состав «Москва-2026» с прислонно-раздвижными дверями.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 4 ноября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://transphoto.org/photo/2354224/" target="_blank" rel="noopener">quantmetro</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 3 -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="https://transphoto.org/photo/23/55/12/2355123.jpg" alt="Вагон 75529 у электродепо Солнцево" 
+                                 onclick="openGalleryModal(this.src, '81-775.2 «Москва-2026» № 75529 у электродепо Солнцево')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=Фото+отсутствует'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="MetroType_81-775.2_Moscow2026_75529.html" class="photo-object">81-775.2 «Москва-2026» № 75529</a>
+                            <p class="photo-desc"><strong>📌 Станция Солнечная (МЖД) → электродепо «Солнцево» (ТЧ-18).</strong></p>
+                            <p class="photo-desc">Вагон на подходе к депо.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 4 ноября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://transphoto.org/photo/2355123/" target="_blank" rel="noopener">wrokesmoke</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="MetroType_81-775.2_Moscow2026_75529.html" class="btn btn-primary" style="display: inline-block; width: 100%; max-width: 300px; padding: 1rem 2rem; font-size: 1.1rem; text-decoration: none;">
+                        Перейти к составу →
+                    </a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная страница</a></li>
+                        <li><a href="transport_news.html">Новости</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
+                    <p>💬 <a href="https://t.me/tepp_forum" target="_blank" rel="noopener">Форум</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <!-- Модалка для галереи -->
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.openGalleryModal = function(src, caption) {
+                const modal = document.getElementById('galleryModal');
+                const content = document.getElementById('galleryModalContent');
+                if (modal && content) {
+                    content.innerHTML = `
+                        <img src="${src}" style="max-width:100%; max-height:70vh; border-radius:10px;" alt="${caption}">
+                        <p style="text-align:center; margin-top:1rem; font-size:1.1rem;">${caption}</p>
+                    `;
+                    modal.classList.add('active');
+                }
+            };
+
+            const modal = document.getElementById('galleryModal');
+            const close = document.getElementById('galleryModalClose');
+            
+            close?.addEventListener('click', () => modal.classList.remove('active'));
+            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>

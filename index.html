@@ -12,6 +12,105 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <meta name="google-site-verification" content="Roo8oO2FYqiO2y8995xcp96AS_gpzaXi3E-6Waixmn8" />
+    <style>
+        /* Стили для новостей на главной */
+        #latestNewsContainer {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            margin-bottom: 1.5rem;
+            align-items: stretch;
+        }
+
+        .news-card {
+            background: var(--bg-card-solid);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px var(--shadow-hover);
+            border-color: var(--accent-color);
+        }
+
+        .news-thumb {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .news-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .news-card:hover .news-thumb img {
+            transform: scale(1.05);
+        }
+
+        .news-card-body {
+            padding: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .news-date {
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .news-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .news-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .news-link {
+            display: inline-block;
+            padding: 0.6rem 1rem;
+            background: var(--accent-color);
+            color: #fff;
+            text-decoration: none;
+            border-radius: var(--radius-xs);
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-align: center;
+            transition: background 0.2s;
+            margin-top: auto;
+        }
+
+        .news-link:hover {
+            background: var(--accent-secondary);
+        }
+
+        @media (max-width: 768px) {
+            #latestNewsContainer {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <div id="particles-js"></div>
@@ -160,8 +259,48 @@
                     Самые свежие события из мира транспорта: запуск новых тематических составов, открытие станций и важные транспортные проекты.
                 </p>
                 
-                <div id="latestNewsContainer" style="display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-bottom: 1.5rem;">
-                    <p style="color: var(--text-secondary); text-align: center; grid-column: 1 / -1;">Загрузка новостей...</p>
+                <!-- РУЧНАЯ ВСТАВКА НОВОСТЕЙ -->
+                <div id="latestNewsContainer">
+                    
+                    <!-- Новость 11 -->
+                    <div class="news-card">
+                        <div class="news-thumb">
+                            <img src="img/MetroType_81-740.4_0204_морепродукты.jpg" alt="Москва - на волне" onerror="this.src='img/no-photo.png'">
+                        </div>
+                        <div class="news-card-body">
+                            <div class="news-date">📅 11 ноября 2026 г.</div>
+                            <h3 class="news-title">Море интересного — в одном поезде!</h3>
+                            <p class="news-desc">На Арбатско-Покровскую линию вышел новый тематический состав. Его посвятили проекту «Москва — на волне». 📸 Дептранс Москвы</p>
+                            <a href="transport_news_11.html" class="news-link">Читать подробнее →</a>
+                        </div>
+                    </div>
+
+                    <!-- Новость 10 -->
+                    <div class="news-card">
+                        <div class="news-thumb">
+                            <img src="img/MetroType_81-740-4_0305_исскуство.jpg" alt="Искусство в метро" onerror="this.src='img/no-photo.png'">
+                        </div>
+                        <div class="news-card-body">
+                            <div class="news-date">📅 10 ноября 2026 г.</div>
+                            <h3 class="news-title">Искусство в движении</h3>
+                            <p class="news-desc">Посвятили проекту «Искусство в метро» новый тематический поезд. Он будет курсировать на Арбатско-Покровской линии.📸 Дептранс Москвы</p>
+                            <a href="transport_news_10.html" class="news-link">Читать подробнее →</a>
+                        </div>
+                    </div>
+
+                    <!-- Новость 9 -->
+                    <div class="news-card">
+                        <div class="news-thumb">
+                            <img src="https://www.mos.ru/upload/newsfeed/articles/c8d75d95616084d77cfb66c049e4ca5f/IMG20261106.jpg" alt="Поезд 185 лет Сбербанку" onerror="this.src='img/no-photo.png'">
+                        </div>
+                        <div class="news-card-body">
+                            <div class="news-date">📅 6 ноября 2026 г.</div>
+                            <h3 class="news-title">На Замоскворецкой линии вышел поезд к 185-летию Сбербанка</h3>
+                            <p class="news-desc">Новый тематический состав на базе «Москва-2026». Это второй поезд в истории метро, посвящённый банковской сфере. 📸 Пресс-служба Московского метрополитена</p>
+                            <a href="transport_news_9.html" class="news-link">Читать подробнее →</a>
+                        </div>
+                    </div>
+
                 </div>
 
                 <a href="transport_news.html" class="btn btn-primary">Все новости →</a>
@@ -255,7 +394,7 @@
                     <div class="feature-item"><h3>📸 Транспортные фотографии</h3><p>Галерея лучших кадров от авторов проекта и участников сообщества.</p></div>
                     <div class="feature-item"><h3>🖌️ Творчество пользователей</h3><p>Рисунки, схемы и коллажи на тему транспорта от наших читателей.</p></div>
                 </div>
-                <button class="btn btn-secondary" onclick="alert('Раздел в разработке — скоро появятся первые материалы!')">🎨 Скоро →</button>
+                <a href="transport_Creativity.html" class="btn btn-primary">Перейти →</a>
             </div>
         </section>
 
@@ -325,50 +464,5 @@
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
     <script src="script.js" defer></script>
-    
-    <script>
-        // ================= АВТОМАТИЧЕСКАЯ ПОДГРУЗКА НОВОСТЕЙ =================
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('transport_news.html')
-                .then(response => response.text())
-                .then(data => {
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(data, 'text/html');
-                    const container = document.getElementById('latestNewsContainer');
-                    if (!container) return;
-
-                    const newsCards = doc.querySelectorAll('.news-card');
-                    
-                    if (newsCards.length > 0) {
-                        container.innerHTML = ''; 
-                        for (let i = 0; i < Math.min(3, newsCards.length); i++) {
-                            const clonedCard = newsCards[i].cloneNode(true);
-                            
-                            clonedCard.style.margin = '0';
-                            clonedCard.style.height = '100%';
-                            clonedCard.style.display = 'flex';
-                            clonedCard.style.flexDirection = 'column';
-                            
-                            const body = clonedCard.querySelector('.news-card-body');
-                            if (body) {
-                                body.style.display = 'flex';
-                                body.style.flexDirection = 'column';
-                                body.style.flexGrow = '1';
-                                const btn = body.querySelector('.news-link');
-                                if (btn) btn.style.marginTop = 'auto';
-                            }
-
-                            container.appendChild(clonedCard);
-                        }
-                    } else {
-                        container.innerHTML = '<p style="color: var(--text-secondary); text-align: center; grid-column: 1 / -1;">Новости временно недоступны.</p>';
-                    }
-                })
-                .catch(error => {
-                    console.error('Ошибка загрузки новостей:', error);
-                    document.getElementById('latestNewsContainer').innerHTML = '<p style="color: var(--text-secondary); text-align: center; grid-column: 1 / -1;">Не удалось загрузить новости.</p>';
-                });
-        });
-    </script>
 </body>
 </html>

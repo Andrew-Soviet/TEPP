@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,17 +59,19 @@
                 <h2>ЭП2К-500</h2>
                 <p class="hero-text">ЭП2К-500 — юбилейный, 500-й по счёту электровоз серии ЭП2К, переданный ОАО «РЖД» 30 сентября 2024 года. Он стал первым локомотивом этой серии, для которого использован новый дизайн, соответствующий визуальной концепции «Бренд ДНК» Трансмашхолдинга.</p>
                 <p class="hero-text">Электровоз оборудован системой энергоснабжения вагонов поезда. Конструкционная скорость — 160 км/ч.</p>
+                <p class="hero-text" style="color: var(--accent-color); font-weight: bold;">❤️ Этот локомотив — любимый у владельца сайта!</p>
+                
                 <div class="stats-container">
                     <div class="stat-item">
-                        <div class="counter-number" id="buildYear">0</div>
+                        <div class="counter-number" data-target="2024">0</div>
                         <div class="stat-label">год постройки</div>
                     </div>
                     <div class="stat-item">
-                        <div class="counter-number" id="maxSpeed">0</div>
+                        <div class="counter-number" data-target="160">0</div>
                         <div class="stat-label">км/ч макс.</div>
                     </div>
                     <div class="stat-item">
-                        <div class="counter-number" id="power">0</div>
+                        <div class="counter-number" data-target="4800">0</div>
                         <div class="stat-label">кВт мощность</div>
                     </div>
                 </div>
@@ -82,24 +84,20 @@
                 <h2>Общая информация</h2>
             </div>
             <div class="card-content">
-                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
-                    <div class="feature-item">
-                        <h3>🏭 Производство</h3>
-                        <p><strong>Завод-изготовитель:</strong> Коломенский завод</p>
-                        <p><strong>Заводской №:</strong> 3862</p>
-                        <p><strong>Сетевой №:</strong> 12043220</p>
-                        <p><strong>Построен:</strong> 12.11.2024</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>📍 Эксплуатация</h3>
-                        <p><strong>Дорога приписки:</strong> Октябрьская железная дорога</p>
-                        <p><strong>Депо:</strong> ТЧЭ-8 Санкт-Петербург-Пассажирский-Московский</p>
-                        <p><strong>Текущее состояние:</strong> Эксплуатируется</p>
-                    </div>
-                </div>
-                <div class="highlight-box" style="margin-top: 1.5rem;">
-                    <p>⭐ <strong>Юбилейная ливрея:</strong> Специально для локомотива № 500 создана особая ливрея с надписью «Нас 500!». Дизайн-проект графического оформления был предложен ОАО «РЖД».</p>
-                </div>
+                <table>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Завод-изготовитель</td><td>Коломенский завод</td></tr>
+                        <tr><td>Заводской №</td><td>3862</td></tr>
+                        <tr><td>Сетевой №</td><td>12043220</td></tr>
+                        <tr><td>Построен</td><td>12.11.2024</td></tr>
+                        <tr><td>Дорога приписки</td><td>Октябрьская железная дорога</td></tr>
+                        <tr><td>Депо</td><td>ТЧЭ-8 Санкт-Петербург-Пассажирский-Московский</td></tr>
+                        <tr><td>Текущее состояние</td><td>Эксплуатируется</td></tr>
+                        <tr><td>Категория</td><td>Электровозы</td></tr>
+                        <tr><td>Тематическое брендирование </td><td>🟥⬛🟦"НАС 500!"</td></tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
@@ -172,16 +170,19 @@
                     <!-- Фото 1 -->
                     <div class="photo-card">
                         <div class="photo-thumb">
-                            <img src="img/ЭП2К_500.jpg" alt="ЭП2К-500" 
+                            <img src="img/pfandrom_ptol_ki_vokzal_CHs7-144_CHs7-285_EP2K-500_14-11-2026.png" alt="ЭП2К-500" 
                                  onclick="openGalleryModal(this.src, 'ЭП2К-500 — юбилейный электровоз «Нас 500!»')" 
                                  onerror="this.src='https://via.placeholder.com/600x400?text=ЭП2К-500'">
                         </div>
                         <div class="photo-info">
-                            <a href="https://railgallery.ru/photo/257185/?lang=ru" class="photo-object" target="_blank" rel="noopener">ЭП2К-500</a>
-                            <p class="photo-desc">Юбилейный электровоз «Нас 500!».</p>
+                            <a href="#" class="photo-object">ЭП2К-500</a>
+                            <p class="photo-desc">
+                                <strong>📌 Москва, ПТОЛ Киевского вокзала.</strong><br>
+                                Юбилейный электровоз «Нас 500!» в компании ЧС7-144 и ЧС7-285.
+                            </p>
                             <div class="photo-meta">
-                                <span class="photo-date">📅 2024 г.</span>
-                                <span class="photo-author">📸 <a href="https://railgallery.ru/photo/257185/?lang=ru" target="_blank" rel="noopener">Kostyan_Piterski</a></span>
+                                <span class="photo-date">📅 14 ноября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
                             </div>
                         </div>
                     </div>
@@ -230,7 +231,7 @@
 
     <div class="scroll-top">↑</div>
 
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
@@ -239,76 +240,5 @@
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
     <script src="script.js" defer></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            function animateCounters() {
-                const targets = { buildYear: 2024, maxSpeed: 160, power: 4800 };
-                let current = { buildYear: 0, maxSpeed: 0, power: 0 };
-                const yearEl = document.getElementById('buildYear');
-                const speedEl = document.getElementById('maxSpeed');
-                const powerEl = document.getElementById('power');
-                if (!yearEl || !speedEl || !powerEl) return;
-                const interval = setInterval(function() {
-                    let allFinished = true;
-                    if (current.buildYear < targets.buildYear) {
-                        current.buildYear += Math.ceil(targets.buildYear / 50);
-                        if (current.buildYear > targets.buildYear) current.buildYear = targets.buildYear;
-                        yearEl.textContent = current.buildYear;
-                        allFinished = false;
-                    }
-                    if (current.maxSpeed < targets.maxSpeed) {
-                        current.maxSpeed += Math.ceil(targets.maxSpeed / 50);
-                        if (current.maxSpeed > targets.maxSpeed) current.maxSpeed = targets.maxSpeed;
-                        speedEl.textContent = current.maxSpeed;
-                        allFinished = false;
-                    }
-                    if (current.power < targets.power) {
-                        current.power += Math.ceil(targets.power / 50);
-                        if (current.power > targets.power) current.power = targets.power;
-                        powerEl.textContent = current.power;
-                        allFinished = false;
-                    }
-                    if (allFinished) clearInterval(interval);
-                }, 30);
-            }
-            animateCounters();
-
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-
-            document.querySelectorAll('.photo-thumb img').forEach(img => {
-                img.addEventListener('click', function() {
-                    const card = this.closest('.photo-card');
-                    if (!card) return;
-
-                    const src = this.src;
-                    const alt = this.alt;
-                    const object = card.querySelector('.photo-object')?.textContent || '';
-                    const desc = card.querySelector('.photo-desc')?.textContent || '';
-                    const date = card.querySelector('.photo-date')?.textContent || '';
-                    const author = card.querySelector('.photo-author')?.textContent || '';
-
-                    if (content) {
-                        content.innerHTML = `
-                            <img src="${src}" style="max-width:100%; max-height:60vh; border-radius:10px; display:block; margin: 0 auto;" alt="${alt}">
-                            <div style="margin-top: 1.5rem; text-align: left; padding: 0 1rem;">
-                                <h3 style="color: var(--accent-color); margin-bottom: 0.5rem; font-size: 1.4rem;">${object}</h3>
-                                <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1rem;">${desc}</p>
-                                <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-secondary); border-top: 1px solid var(--border-color); padding-top: 1rem;">
-                                    <span>${date}</span>
-                                    <span>${author}</span>
-                                </div>
-                            </div>
-                        `;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
-        });
-    </script>
 </body>
 </html>

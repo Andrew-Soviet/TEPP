@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,20 +57,20 @@
         <section id="about" class="hero">
             <div class="hero-content">
                 <h2>ЭД4МКУ</h2>
-                <p class="hero-text">ЭД4МКУ — это две уникальные электрички, построенные в 11-вагонной составности с салоном повышенного комфорта. Всего было построено <strong>2 состава</strong> с бортовыми номерами <strong>0151</strong> и <strong>0153</strong>.</p>
+                <p class="hero-text">ЭД4МКУ — это две уникальные электрички (<strong>ЭД4МКУ-0151</strong> и <strong>ЭД4МКУ-0153</strong>), построенные в 11-вагонной составности с салоном повышенного комфорта. Всего было построено <strong>2 состава</strong>.</p>
                 <p class="hero-text">На данный момент работают оба состава, которые следуют по маршруту экспресса с «Киевского вокзала» до «Нары».</p>
                 
                 <div class="stats-container">
                     <div class="stat-item">
-                        <div class="counter-number" id="edYear">0</div>
+                        <div class="counter-number" data-target="2005">0</div>
                         <div class="stat-label">год постройки</div>
                     </div>
                     <div class="stat-item">
-                        <div class="counter-number" id="edTrains">0</div>
+                        <div class="counter-number" data-target="2">0</div>
                         <div class="stat-label">состава</div>
                     </div>
                     <div class="stat-item">
-                        <div class="counter-number" id="edCars">0</div>
+                        <div class="counter-number" data-target="11">0</div>
                         <div class="stat-label">вагонов в составе</div>
                     </div>
                 </div>
@@ -97,7 +97,7 @@
                         <tr><td>Категория</td><td>Электропоезда</td></tr>
                         <tr><td>Текущее состояние</td><td>Эксплуатируется</td></tr>
                         <tr><td>Составность</td><td>11 вагонов, салон повышенной комфортности</td></tr>
-                        <tr><td>Всего построено</td><td>2 состава (0151, 0153)</td></tr>
+                        <tr><td>Всего построено</td><td>2 состава (ЭД4МКУ-0151, ЭД4МКУ-0153)</td></tr>
                     </tbody>
                 </table>
 
@@ -118,7 +118,9 @@
                 <h2>Составы ЭД4МКУ</h2>
             </div>
             <div class="card-content">
-                <h3 style="margin-bottom: 1rem;">Состав ЭД4МКУ-0151</h3>
+                <p class="card-description">В рамках проекта было выпущено два состава: ЭД4МКУ-0151 и ЭД4МКУ-0153.</p>
+                
+                <h3 style="margin: 1.5rem 0 1rem;">Состав ЭД4МКУ-0151</h3>
                 <table>
                     <thead><tr><th>№</th><th>Секция</th><th>Сетевой код</th></tr></thead>
                     <tbody>
@@ -233,7 +235,7 @@
             <div class="card-content">
                 <div class="photo-gallery">
 
-                    <!-- Фото 1 -->
+                    <!-- Фото 2 -->
                     <div class="photo-card">
                         <div class="photo-thumb">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/%D0%AD%D0%944%D0%9C%D0%9A%D1%83-0151%2C_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%2C_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C_%D1%81%D1%82%D0%B0%D0%BD%D1%86%D0%B8%D1%8F_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0-%D0%9F%D0%B0%D1%81%D1%81%D0%B0%D0%B6%D0%B8%D1%80%D1%81%D0%BA%D0%B0%D1%8F_%28Trainpix_110690%29.jpg" alt="ЭД4МКУ-0151, первая окраска" 
@@ -253,7 +255,7 @@
                         </div>
                     </div>
 
-                    <!-- Фото 2 -->
+                    <!-- Фото 3 -->
                     <div class="photo-card">
                         <div class="photo-thumb">
                             <img src="img/эд4мку_2017.jpg" alt="ЭД4МКУ, вторая окраска" 
@@ -273,7 +275,7 @@
                         </div>
                     </div>
 
-                    <!-- Фото 3 -->
+                    <!-- Фото 4 -->
                     <div class="photo-card">
                         <div class="photo-thumb">
                             <img src="img/RailwayType_ED4MKy-0153_24may2026.jpg" alt="ЭД4МКУ, третья окраска" 
@@ -288,6 +290,26 @@
                             </p>
                             <div class="photo-meta">
                                 <span class="photo-date">📅 24 мая 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 1 (Новое) -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/pfandrom_ED4MKy_0151_ki_vokz_14-11-2026.png" alt="ЭД4МКУ-0151 на Киевском вокзале" 
+                                 onclick="openGalleryModal(this.src, 'ЭД4МКУ-0151 на Киевском вокзале')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=ЭД4МКУ+2026'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">ЭД4МКУ-0151</a>
+                            <p class="photo-desc">
+                                <strong>📌 Киевский вокзал.</strong><br>
+                                В кадре так же можно заметить: ЭП2Д-0004, снегоочиститель, ЧС7-011 "ТЧЭ-18 имени Ильича", ЧС7-144 "Молния", ЧС7-285 "Новый бренд".
+                            </p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 14 ноября 2026 г.</span>
                                 <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
                             </div>
                         </div>
@@ -327,6 +349,7 @@
                 <div class="footer-contact">
                     <h4>Связь с нами</h4>
                     <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
+                    <p>💬 <a href="https://t.me/tepp_forum" target="_blank" rel="noopener">Форум</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -338,7 +361,7 @@
 
     <div class="scroll-top">↑</div>
 
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
@@ -347,78 +370,5 @@
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
     <script src="script.js" defer></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Счётчики
-            function animateCounters() {
-                const targets = { edYear: 2005, edTrains: 2, edCars: 11 };
-                let current = { edYear: 0, edTrains: 0, edCars: 0 };
-                const yearEl = document.getElementById('edYear');
-                const trainsEl = document.getElementById('edTrains');
-                const carsEl = document.getElementById('edCars');
-                if (!yearEl || !trainsEl || !carsEl) return;
-                const interval = setInterval(function() {
-                    let allFinished = true;
-                    if (current.edYear < targets.edYear) {
-                        current.edYear += Math.ceil(targets.edYear / 50);
-                        if (current.edYear > targets.edYear) current.edYear = targets.edYear;
-                        yearEl.textContent = current.edYear;
-                        allFinished = false;
-                    }
-                    if (current.edTrains < targets.edTrains) {
-                        current.edTrains += 1;
-                        if (current.edTrains > targets.edTrains) current.edTrains = targets.edTrains;
-                        trainsEl.textContent = current.edTrains;
-                        allFinished = false;
-                    }
-                    if (current.edCars < targets.edCars) {
-                        current.edCars += 1;
-                        if (current.edCars > targets.edCars) current.edCars = targets.edCars;
-                        carsEl.textContent = current.edCars;
-                        allFinished = false;
-                    }
-                    if (allFinished) clearInterval(interval);
-                }, 30);
-            }
-            animateCounters();
-
-            // Галерея
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-
-            document.querySelectorAll('.photo-thumb img').forEach(img => {
-                img.addEventListener('click', function() {
-                    const card = this.closest('.photo-card');
-                    if (!card) return;
-
-                    const src = this.src;
-                    const alt = this.alt;
-                    const object = card.querySelector('.photo-object')?.textContent || '';
-                    const desc = card.querySelector('.photo-desc')?.textContent || '';
-                    const date = card.querySelector('.photo-date')?.textContent || '';
-                    const author = card.querySelector('.photo-author')?.textContent || '';
-
-                    if (content) {
-                        content.innerHTML = `
-                            <img src="${src}" style="max-width:100%; max-height:60vh; border-radius:10px; display:block; margin: 0 auto;" alt="${alt}">
-                            <div style="margin-top: 1.5rem; text-align: left; padding: 0 1rem;">
-                                <h3 style="color: var(--accent-color); margin-bottom: 0.5rem; font-size: 1.4rem;">${object}</h3>
-                                <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1rem;">${desc}</p>
-                                <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-secondary); border-top: 1px solid var(--border-color); padding-top: 1rem;">
-                                    <span>${date}</span>
-                                    <span>${author}</span>
-                                </div>
-                            </div>
-                        `;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
-        });
-    </script>
 </body>
 </html>
