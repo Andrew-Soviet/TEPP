@@ -1,37 +1,38 @@
 /* ============================================================
-   1. ПЕРЕМЕННЫЕ И БАЗОВАЯ ТЕМА (LIGHT — ОСЕННЯЯ)
+   1. ПЕРЕМЕННЫЕ И БАЗОВАЯ ТЕМА (LIGHT — ЗИМНИЙ ДЕНЬ)
    ============================================================ */
 :root {
     font-size: 15px;
     
-    --text-primary: #3E2723;
-    --text-secondary: #5D4037;
-    --text-muted: #8D6E63;
+    /* Зимняя светлая палитра */
+    --text-primary: #1A2F4C; /* Тёмно-синий */
+    --text-secondary: #4A6583;
+    --text-muted: #7B96B3;
     
-    --bg-card: rgba(245, 235, 224, 0.85); 
-    --bg-card-solid: #F5EBE0;
-    --bg-header: rgba(245, 235, 224, 0.95);
-    --bg-input: #FDFBF7;
+    --bg-card: rgba(240, 248, 255, 0.85); /* Снежный */
+    --bg-card-solid: #F0F8FF;
+    --bg-header: rgba(240, 248, 255, 0.95);
+    --bg-input: #FFFFFF;
     
-    --border-color: #D7CCC8;
-    --shadow-color: rgba(62, 39, 35, 0.15);
-    --shadow-hover: rgba(139, 69, 19, 0.3); 
-    --highlight-bg: rgba(139, 69, 19, 0.1);
-    --footer-border: #D7CCC8;
+    --border-color: #C4D7E8;
+    --shadow-color: rgba(26, 47, 76, 0.15);
+    --shadow-hover: rgba(0, 119, 204, 0.3); 
+    --highlight-bg: rgba(0, 119, 204, 0.1);
+    --footer-border: #C4D7E8;
     
-    --modal-bg: #F5EBE0;
-    --modal-text: #3E2723;
+    --modal-bg: #F0F8FF;
+    --modal-text: #1A2F4C;
     
-    --accent-color: #6D213C; 
-    --accent-secondary: #4A1525;
-    --gradient-start: #6D213C;
-    --gradient-end: #9E2A2B;
+    --accent-color: #0077CC; /* Ледяной синий */
+    --accent-secondary: #005A9C;
+    --gradient-start: #0077CC;
+    --gradient-end: #4A90E2;
     
-    --btn-secondary-border: #6D213C;
-    --btn-secondary-text: #6D213C;
+    --btn-secondary-border: #0077CC;
+    --btn-secondary-text: #0077CC;
     
-    --settings-bg: #F5EBE0;
-    --settings-shadow: 0 8px 32px rgba(62, 39, 35, 0.2);
+    --settings-bg: #F0F8FF;
+    --settings-shadow: 0 8px 32px rgba(26, 47, 76, 0.2);
     
     --radius: 20px;
     --radius-sm: 10px;
@@ -40,89 +41,54 @@
     --backdrop-blur: blur(12px);
 }
 
-/* Фон для светлой (осенней) темы */
+/* Фон для светлой (зимней) темы */
 [data-theme="light"] body {
-    background-image: linear-gradient(135deg, #D4A017 0%, #C05A3A 50%, #8B0000 100%) !important;
+    background-image: linear-gradient(135deg, #E0F0FF 0%, #B3D4F0 50%, #7FB2D9 100%) !important;
     background-size: cover !important;
     background-position: center center !important;
     background-attachment: fixed !important;
     background-repeat: no-repeat !important;
-    background-color: #8B0000 !important;
+    background-color: #E0F0FF !important;
 }
 
 /* ============================================================
-   2. ТЕМА: ОСЕННИЙ ВЕЧЕР (dark)
+   2. ТЕМА: ЗИМНЯЯ НОЧЬ (dark)
    ============================================================ */
 [data-theme="dark"] {
-    --bg-card: rgba(30, 15, 10, 0.75); /* Тёмно-коричневый */
-    --bg-card-solid: #1e0f0a;
-    --bg-header: rgba(20, 10, 5, 0.95);
-    --bg-input: rgba(40, 20, 15, 0.8);
-    --text-primary: #ffe0b2; /* Светло-оранжевый */
-    --text-secondary: #d7a07a;
-    --text-muted: #9e6b4a;
-    --border-color: #4a2511;
+    /* Зимняя тёмная палитра */
+    --bg-card: rgba(15, 25, 40, 0.85); 
+    --bg-card-solid: #0F1928;
+    --bg-header: rgba(10, 15, 25, 0.95);
+    --bg-input: rgba(25, 40, 60, 0.8);
+    --text-primary: #E0F0FF;
+    --text-secondary: #A0C4E8;
+    --text-muted: #6B8FAF;
+    --border-color: #2A4055;
     --shadow-color: rgba(0, 0, 0, 0.8);
-    --shadow-hover: rgba(255, 140, 0, 0.4); /* Оранжевое свечение */
-    --highlight-bg: rgba(255, 140, 0, 0.1);
-    --footer-border: rgba(255, 140, 0, 0.2);
-    --modal-bg: #1e0f0a;
-    --modal-text: #ffe0b2;
-    --btn-secondary-border: #ff8c00;
-    --btn-secondary-text: #ffe0b2;
-    --settings-bg: #1e0f0a;
+    --shadow-hover: rgba(0, 150, 255, 0.4);
+    --highlight-bg: rgba(0, 150, 255, 0.1);
+    --footer-border: rgba(0, 150, 255, 0.2);
+    --modal-bg: #0F1928;
+    --modal-text: #E0F0FF;
+    --btn-secondary-border: #0096FF;
+    --btn-secondary-text: #E0F0FF;
+    --settings-bg: #0F1928;
     --settings-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-    --gradient-start: #ff8c00; /* Оранжевый */
-    --gradient-end: #8b0000;   /* Тёмно-красный */
-    --accent-color: #ff8c00;
-    --accent-secondary: #ff4500;
+    --gradient-start: #0096FF; 
+    --gradient-end: #003366;   
+    --accent-color: #0096FF;
+    --accent-secondary: #0077CC;
     --backdrop-blur: blur(12px);
 }
 
-/* Осенний фон с затемнением */
+/* Фон для тёмной (зимней ночи) */
 [data-theme="dark"] body {
-    background-image: linear-gradient(135deg, #1a0a05 0%, #2d1308 50%, #4a1c0d 100%) !important;
+    background-image: linear-gradient(135deg, #050A12 0%, #0A1424 50%, #11223D 100%) !important;
     background-size: cover !important;
     background-position: center center !important;
     background-attachment: fixed !important;
     background-repeat: no-repeat !important;
-    background-color: #1a0a05 !important;
-}
-
-/* ============================================================
-   3. ТЕМА: МАТРИЦА (night)
-   ============================================================ */
-[data-theme="night"] {
-    --bg-card: rgba(0, 20, 0, 0.75);
-    --bg-card-solid: #001a00;
-    --bg-header: rgba(0, 10, 0, 0.95);
-    --bg-input: #002200;
-    --text-primary: #e0ffe0;
-    --text-secondary: #a0ffa0;
-    --text-muted: #6b8f6b;
-    --border-color: #004400;
-    --shadow-color: rgba(0, 0, 0, 0.8);
-    --shadow-hover: rgba(0, 255, 0, 0.4);
-    --highlight-bg: rgba(0, 255, 0, 0.1);
-    --footer-border: rgba(0, 255, 0, 0.2);
-    --modal-bg: #001a00;
-    --modal-text: #e0ffe0;
-    --btn-secondary-border: #00ff00;
-    --btn-secondary-text: #e0ffe0;
-    --settings-bg: #001a00;
-    --settings-shadow: 0 8px 32px rgba(0, 255, 0, 0.2);
-    --gradient-start: #00ff00;
-    --gradient-end: #008800;
-    --accent-color: #00ff00;
-    --accent-secondary: #00cc00;
-    --backdrop-blur: blur(12px);
-}
-
-[data-theme="night"] body {
-    background-image: url('img/matrix_grid.png');
-    background-size: cover;
-    background-position: center bottom;
-    background-attachment: fixed;
+    background-color: #050A12 !important;
 }
 
 /* ============================================================
@@ -142,8 +108,6 @@ body {
 [data-theme="light"] #particles-js,
 [data-theme="dark"] .animated-bg,
 [data-theme="dark"] #particles-js,
-[data-theme="night"] .animated-bg,
-[data-theme="night"] #particles-js,
 [data-theme="poster"] .animated-bg,
 [data-theme="poster"] #particles-js {
     display: none !important;
@@ -209,9 +173,9 @@ h1 {
 
 /* Зимний градиент для шапки в тёмной теме */
 [data-theme="dark"] header {
-    background: linear-gradient(135deg, #1a0a05 0%, #2d1308 100%) !important;
-    border-bottom: 3px solid #ff8c00 !important;
-    box-shadow: 0 4px 20px rgba(255, 140, 0, 0.2) !important;
+    background: linear-gradient(135deg, #050A12 0%, #0A1424 100%) !important;
+    border-bottom: 3px solid #0096FF !important;
+    box-shadow: 0 4px 20px rgba(0, 150, 255, 0.2) !important;
 }
 
 /* ============================================================
@@ -247,10 +211,10 @@ section:hover { transform: translateY(-2px); }
     font-size: 1.6rem !important;
 }
 
-/* Специально для тёмной темы (осенней) — градиент шапок */
+/* Специально для тёмной (зимней) темы — градиент шапок */
 [data-theme="dark"] .card-header {
-    background: linear-gradient(135deg, #8b0000 0%, #ff4500 50%, #ff8c00 100%) !important;
-    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.2) !important;
+    background: linear-gradient(135deg, #003366 0%, #0096FF 100%) !important;
+    box-shadow: 0 4px 15px rgba(0, 150, 255, 0.2) !important;
 }
 
 h2 {
@@ -413,8 +377,8 @@ footer { background: var(--bg-header); margin-top: 3rem; padding: 2.5rem 0 1rem;
 [data-theme="light"] .feature-item:hover,
 [data-theme="light"] .train-card:hover,
 [data-theme="light"] .random-page-card:hover {
-    box-shadow: 0 0 20px rgba(139, 69, 19, 0.4) !important;
-    border: 2px solid #8B4513 !important; 
+    box-shadow: 0 0 20px rgba(0, 119, 204, 0.4) !important;
+    border: 2px solid #0077CC !important; 
     transform: translateY(-4px) !important;
 }
 
@@ -422,17 +386,8 @@ footer { background: var(--bg-header); margin-top: 3rem; padding: 2.5rem 0 1rem;
 [data-theme="dark"] .feature-item:hover,
 [data-theme="dark"] .train-card:hover,
 [data-theme="dark"] .random-page-card:hover {
-    box-shadow: 0 0 20px rgba(255, 140, 0, 0.6), inset 0 0 10px rgba(255, 140, 0, 0.2) !important;
-    border: 2px solid #ff8c00 !important; 
-    transform: translateY(-4px) !important;
-}
-
-[data-theme="night"] section:hover,
-[data-theme="night"] .feature-item:hover,
-[data-theme="night"] .train-card:hover,
-[data-theme="night"] .random-page-card:hover {
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5), inset 0 0 10px rgba(0, 255, 0, 0.2) !important;
-    border: 2px solid #00ff00 !important;
+    box-shadow: 0 0 20px rgba(0, 150, 255, 0.6), inset 0 0 10px rgba(0, 150, 255, 0.2) !important;
+    border: 2px solid #0096FF !important; 
     transform: translateY(-4px) !important;
 }
 
@@ -490,7 +445,7 @@ footer { background: var(--bg-header); margin-top: 3rem; padding: 2.5rem 0 1rem;
 }
 
 /* ============================================================
-   16. ОСЕННЯЯ АТМОСФЕРА (ЛИСТЬЯ)
+   16. ЗИМНЯЯ АТМОСФЕРА (СНЕЖИНКИ)
    ============================================================ */
 #leaf-container {
     position: fixed;
@@ -508,30 +463,30 @@ footer { background: var(--bg-header); margin-top: 3rem; padding: 2.5rem 0 1rem;
     display: block;
 }
 
-.leaf {
+/* Снежинка */
+.snowflake {
     position: absolute;
     top: -50px;
-    background-color: #d35400;
-    border-radius: 0 50% 0 50%;
-    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
     opacity: 0.8;
-    animation: fall linear infinite;
+    animation: fallSnow linear infinite;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
 }
 
-.leaf:nth-child(2n) { background-color: #e67e22; }
-.leaf:nth-child(3n) { background-color: #f1c40f; }
-.leaf:nth-child(5n) { background-color: #a0522d; }
-
-@keyframes fall {
+@keyframes fallSnow {
     0% { transform: translateY(0) rotate(0deg) translateX(0); }
-    25% { transform: translateY(25vh) rotate(90deg) translateX(30px); }
-    50% { transform: translateY(50vh) rotate(180deg) translateX(-30px); }
-    75% { transform: translateY(75vh) rotate(270deg) translateX(30px); }
+    25% { transform: translateY(25vh) rotate(90deg) translateX(15px); }
+    50% { transform: translateY(50vh) rotate(180deg) translateX(-15px); }
+    75% { transform: translateY(75vh) rotate(270deg) translateX(15px); }
     100% { transform: translateY(105vh) rotate(360deg) translateX(0); }
 }
 
 /* ============================================================
-   17. ОСЕННИЙ ДОЖДЬ
+   17. ЗИМНЯЯ МЕТЕЛЬ (вместо дождя)
    ============================================================ */
 #rain-container {
     position: fixed;
@@ -549,19 +504,22 @@ footer { background: var(--bg-header); margin-top: 3rem; padding: 2.5rem 0 1rem;
     display: block;
 }
 
-.raindrop {
+/* Летящий снег (метель) */
+.snowdrift {
     position: absolute;
     top: -30px;
-    width: 1.5px;
-    height: 40px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 180, 100, 0.8));
-    box-shadow: 0 0 5px rgba(255, 140, 0, 0.3);
-    animation: rainfall linear infinite;
+    width: 4px;
+    height: 4px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+    animation: snowdrift linear infinite;
+    opacity: 0.7;
 }
 
-@keyframes rainfall {
+@keyframes snowdrift {
     0% { transform: translateY(0) translateX(0); }
-    100% { transform: translateY(105vh) translateX(-10px); }
+    100% { transform: translateY(105vh) translateX(-30px); }
 }
 
 /* ============================================================
@@ -571,7 +529,7 @@ footer { background: var(--bg-header); margin-top: 3rem; padding: 2.5rem 0 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #4a0000;
+    background: #003366;
     padding: 0 2rem;
     height: 45px;
     font-family: 'Roboto', sans-serif;
@@ -629,22 +587,17 @@ header {
     z-index: 100 !important;
 }
 
-/* 2. Шапка сайта — градиент */
+/* Шапка сайта — зимний градиент */
 [data-theme="dark"] header {
-    background: linear-gradient(135deg, #1a0a05 0%, #2d1308 100%) !important;
-    border-bottom: 3px solid #ff8c00 !important;
-    box-shadow: 0 4px 20px rgba(255, 140, 0, 0.2) !important;
+    background: linear-gradient(135deg, #0a1220 0%, #112033 100%) !important;
+    border-bottom: 3px solid #0096ff !important;
+    box-shadow: 0 4px 20px rgba(0, 150, 255, 0.2) !important;
 }
 
-/* 3. Самая верхняя тонкая панель — в тон */
+/* Самая верхняя тонкая панель — в тон */
 [data-theme="dark"] .top-nav {
-    background: linear-gradient(90deg, #1a0a05 0%, #2d1308 100%) !important;
-    border-bottom: 1px solid rgba(255, 140, 0, 0.3) !important;
-}
-
-/* 4. Шапки карточек — градиент */
-[data-theme="dark"] .card-header {
-    background: linear-gradient(135deg, #8b0000 0%, #ff4500 50%, #ff8c00 100%) !important;
+    background: linear-gradient(90deg, #0a1220 0%, #112033 100%) !important;
+    border-bottom: 1px solid rgba(0, 150, 255, 0.3) !important;
 }
 
 /* ============================================================

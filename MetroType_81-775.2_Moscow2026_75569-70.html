@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,15 +57,15 @@
 
                 <div class="stats-container">
                     <div class="stat-item">
-                        <div class="counter-number" id="year">0</div>
+                        <div class="counter-number" data-target="2026">0</div>
                         <div class="stat-label">год постройки</div>
                     </div>
                     <div class="stat-item">
-                        <div class="counter-number" id="cars">0</div>
+                        <div class="counter-number" data-target="8">0</div>
                         <div class="stat-label">вагонов в составе</div>
                     </div>
                     <div class="stat-item">
-                        <div class="counter-number" id="status" style="font-size: 1.4rem;">—</div>
+                        <div class="counter-number" style="font-size: 1.4rem;">Экспл.</div>
                         <div class="stat-label">состояние</div>
                     </div>
                 </div>
@@ -109,11 +109,11 @@
             </div>
         </section>
 
-        <!-- Дизайн и особенности -->
+        <!-- Дизайн тематического поезда -->
         <section class="section-card">
             <div class="card-header" style="background: linear-gradient(135deg, #16A085 0%, #1ABC9C 100%);">
                 <span class="card-icon">🎨</span>
-                <h2>Дизайн и особенности</h2>
+                <h2>Дизайн тематического поезда</h2>
             </div>
             <div class="card-content">
                 <p class="card-description">С внешней стороны и внутри вагоны оформлены в фирменном зелёном цвете Сбера. Основные элементы дизайна:</p>
@@ -133,7 +133,11 @@
                     </div>
                     <div class="feature-item">
                         <h3>🎤 Замурчательные голоса</h3>
-                        <p>На пути в центр станции объявляет СберКот, а в обратном направлении — Куся.</p>
+                        <p>На пути в центр станции объявляет СберКот, а в обратном направлении — Куся. Ниже запись по пути в центр.</p>
+                        <audio controls style="width: 100%; margin-top: 10px; height: 35px;">
+                            <source src="sounds/Обьявление_закрытие_дверей_75570.mp3" type="audio/mpeg">
+                            Ваш браузер не поддерживает аудиоплеер.
+                        </audio>
                     </div>
                     <div class="feature-item">
                         <h3>🖼️ ИИ-искусство</h3>
@@ -159,8 +163,84 @@
             </div>
             <div class="card-content">
                 <div class="photo-gallery">
+                    <!-- Фото 1 (Новое) -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/MetroType_81-775-2_Moscow-2026_75570_temat_techno.png" alt="Вагон 75570 на станции Технопарк" 
+                                 onclick="openGalleryModal(this.src, 'Вагон 81-775.2 №75570 на станции Технопарк')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=Фото+отсутствует'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">81-775.2 №75570</a>
+                            <p class="photo-desc">
+                                <strong>📌 Станция Технопарк.</strong>
+                            </p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 15 ноября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
 
-                    <!-- Фото 1 -->
+                    <!-- Фото 2 (Новое) -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/MetroType_81-777-2_int_15-11-2026.jpg" alt="Салон вагона 77570" 
+                                 onclick="openGalleryModal(this.src, 'Вагон 81-777.2 №77570, салон')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=Фото+отсутствует'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон 81-777.2 №77570</a>
+                            <p class="photo-desc">
+                                <strong>📌 Салон вагона №77570.</strong>
+                            </p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 15 ноября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 3 (Новое) -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/MetroType_81-775.2_Moscow2026_75570_int_karta.jpg" alt="Салон вагона 75570 с картой" 
+                                 onclick="openGalleryModal(this.src, 'Вагон 81-775.2 №75570, салон с картой')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=Фото+отсутствует'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">81-775.2 №75570</a>
+                            <p class="photo-desc">
+                                <strong>📌 Салон вагона №75570.</strong>
+                            </p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 15 ноября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 4 (Новое) -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/MetroType_81-777-2_Moscow-2026_77570_int_forvart.png" alt="Салон вагона 77570, вид вперед" 
+                                 onclick="openGalleryModal(this.src, 'Вагон 81-777.2 №77570, салон, вид вперед')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=Фото+отсутствует'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон 81-777.2 №77570</a>
+                            <p class="photo-desc">
+                                <strong>📌 Салон вагона №77570.</strong><br>
+                                Салон, вид вперед.
+                            </p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 15 ноября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 5 (Старое) -->
                     <div class="photo-card">
                         <div class="photo-thumb">
                             <img src="https://www.mos.ru/upload/newsfeed/articles/c8d75d95616084d77cfb66c049e4ca5f/IMG20261106.jpg" alt="Поезд 185 лет Сбербанку в депо" 
@@ -180,7 +260,7 @@
                         </div>
                     </div>
 
-                    <!-- Фото 2 -->
+                    <!-- Фото 6 (Старое) -->
                     <div class="photo-card">
                         <div class="photo-thumb">
                             <img src="https://www.mos.ru/upload/newsfeed/articles/e00ed809825017dc3d0cc73ac931c369/IMG_663705.jpg" alt="Салон вагона 75569" 
@@ -255,79 +335,5 @@
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
     <script src="script.js" defer></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Счётчики
-            function animateCounters() {
-                const targets = { year: 2026, cars: 8, status: 1 };
-                let current = { year: 0, cars: 0, status: 0 };
-                const yearEl = document.getElementById('year');
-                const carsEl = document.getElementById('cars');
-                const statusEl = document.getElementById('status');
-                if (!yearEl || !carsEl || !statusEl) return;
-                
-                const interval = setInterval(function() {
-                    let allFinished = true;
-                    if (current.year < targets.year) {
-                        current.year += Math.ceil(targets.year / 50);
-                        if (current.year > targets.year) current.year = targets.year;
-                        yearEl.textContent = current.year;
-                        allFinished = false;
-                    }
-                    if (current.cars < targets.cars) {
-                        current.cars += 1;
-                        if (current.cars > targets.cars) current.cars = targets.cars;
-                        carsEl.textContent = current.cars;
-                        allFinished = false;
-                    }
-                    if (current.status < targets.status) {
-                        current.status += 1;
-                        if (current.status > targets.status) current.status = targets.status;
-                        statusEl.textContent = 'Экспл.';
-                        allFinished = false;
-                    }
-                    if (allFinished) clearInterval(interval);
-                }, 30);
-            }
-            animateCounters();
-
-            // Галерея
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-
-            document.querySelectorAll('.photo-thumb img').forEach(img => {
-                img.addEventListener('click', function() {
-                    const card = this.closest('.photo-card');
-                    if (!card) return;
-
-                    const src = this.src;
-                    const alt = this.alt;
-                    const object = card.querySelector('.photo-object')?.textContent || '';
-                    const desc = card.querySelector('.photo-desc')?.textContent || '';
-                    const date = card.querySelector('.photo-date')?.textContent || '';
-                    const author = card.querySelector('.photo-author')?.textContent || '';
-
-                    if (content) {
-                        content.innerHTML = `
-                            <img src="${src}" style="max-width:100%; max-height:60vh; border-radius:10px; display:block; margin: 0 auto;" alt="${alt}">
-                            <div style="margin-top: 1.5rem; text-align: left; padding: 0 1rem;">
-                                <h3 style="color: var(--accent-color); margin-bottom: 0.5rem; font-size: 1.4rem;">${object}</h3>
-                                <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1rem;">${desc}</p>
-                                <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-secondary); border-top: 1px solid var(--border-color); padding-top: 1rem;">
-                                    <span>${date}</span>
-                                    <span>${author}</span>
-                                </div>
-                            </div>
-                        `;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
-        });
-    </script>
 </body>
 </html>

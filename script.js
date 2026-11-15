@@ -63,12 +63,11 @@ document.addEventListener('DOMContentLoaded', function() {
     setupGallery();
     setupHideHeaderOnScroll();
     setupTelegramModal();
-    setupAutumnLeaves();
-    setupAutumnRain();
+    setupSnow(); // Запускаем снежинки
 });
 
 // ============================================================
-// НАСТРОЙКИ (ИСПРАВЛЕНО: БЕЗ ДУБЛИРУЮЩЕЙ КНОПКИ)
+// НАСТРОЙКИ (БЕЗ ДУБЛИРУЮЩЕЙ КНОПКИ)
 // ============================================================
 function initSettings() {
     // Если меню уже есть — не создаем
@@ -93,7 +92,6 @@ function initSettings() {
                 <div class="settings-options" id="themeOptions">
                     <button class="theme-btn" data-theme="light" onclick="setTheme('light')" title="Светлая">☀️</button>
                     <button class="theme-btn" data-theme="dark" onclick="setTheme('dark')" title="Тёмная">🌇</button>
-                    <button class="theme-btn" data-theme="night" onclick="setTheme('night')" title="Матрица">👨‍💻</button>
                 </div>
             </div>
             <div class="settings-section">
@@ -149,7 +147,7 @@ function setupEscapeKey() {
 // ============================================================
 // ТЕМЫ
 // ============================================================
-const THEMES = ['light', 'dark', 'night'];
+const THEMES = ['light', 'dark'];
 
 function setTheme(theme) {
     if (!THEMES.includes(theme)) theme = 'light';
@@ -277,8 +275,9 @@ function loadSettings() {
         updateModeButtons(savedPageMode);
     }
 }
+
 // ============================================================
-// СЧЁТЧИКИ (АВТОМАТИЧЕСКИ БЕРУТ ЦИФРЫ ИЗ HTML)
+// СЧЁТЧИКИ
 // ============================================================
 function animateCounters() {
     setTimeout(() => {
@@ -380,7 +379,6 @@ function setupGallery() {
     const content = document.getElementById('galleryModalContent');
     const close = document.getElementById('galleryModalClose');
 
-    // Обработчик для новой галереи (photo-card)
     document.querySelectorAll('.photo-thumb img').forEach(img => {
         img.addEventListener('click', function() {
             const card = this.closest('.photo-card');
@@ -389,7 +387,6 @@ function setupGallery() {
             const src = this.src;
             const alt = this.alt;
             
-            // Вытаскиваем инфу из карточки
             const object = card.querySelector('.photo-object')?.textContent || '';
             const desc = card.querySelector('.photo-desc')?.textContent || '';
             const date = card.querySelector('.photo-date')?.textContent || '';
@@ -412,7 +409,6 @@ function setupGallery() {
         });
     });
 
-    // Обработчик для старых галерей (на всякий случай)
     document.querySelectorAll('.gallery-item, .random-photo-item').forEach(item => {
         item.addEventListener('click', () => {
             const img = item.querySelector('img');
@@ -435,7 +431,7 @@ function setupGallery() {
 }
 
 // ============================================================
-// ПОИСК (ОБНОВЛЕННАЯ БАЗА ДАННЫХ)
+// ПОИСК
 // ============================================================
 const SEARCH_PAGES = [
     // --- МЕТРО (Базовые вагоны) ---
@@ -922,205 +918,76 @@ function setupTelegramModal() {
 }
 
 // ============================================================
-// ОСЕННИЕ ЛИСТЬЯ
+// СНЕЖИНКИ (В ОБЕИХ ТЕМАХ)
 // ============================================================
-function setupAutumnLeaves() {
+function setupSnow() {
     const container = document.getElementById('leaf-container');
-    if (!container) return;
+    const rainContainer = document.getElementById('rain-container');
+    if (!container || !rainContainer) return;
 
-    let leafInterval = null;
+    let snowInterval = null;
+    let rainInterval = null;
 
-    function createLeaf() {
-        if (document.documentElement.getAttribute('data-theme') !== 'light') return;
-
-        const leaf = document.createElement('div');
-        leaf.classList.add('leaf');
+    function createSnow() {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
         
-        const size = Math.random() * 20 + 10;
-        leaf.style.width = `${size}px`;
-        leaf.style.height = `${size}px`;
-        leaf.style.left = `${Math.random() * 100}vw`;
+        const size = Math.random() * 6 + 4; // Размер снежинки
+        snowflake.style.width = `${size}px`;
+        snowflake.style.height = `${size}px`;
+        snowflake.style.left = `${Math.random() * 100}vw`;
         
-        const duration = Math.random() * 9 + 6;
-        leaf.style.animationDuration = `${duration}s`;
-        leaf.style.animationDelay = `${Math.random() * 5}s`;
-        leaf.style.opacity = Math.random() * 0.5 + 0.4;
+        const duration = Math.random() * 10 + 8; // Скорость падения
+        snowflake.style.animationDuration = `${duration}s`;
+        snowflake.style.animationDelay = `${Math.random() * 5}s`;
+        snowflake.style.opacity = Math.random() * 0.6 + 0.3;
 
-        const colors = ['#d35400', '#e67e22', '#f1c40f', '#a0522d', '#c0392b'];
-        leaf.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-
-        container.appendChild(leaf);
+        container.appendChild(snowflake);
 
         setTimeout(() => {
-            if (leaf.parentNode) leaf.remove();
+            if (snowflake.parentNode) snowflake.remove();
         }, (duration + 5) * 1000);
     }
 
-    function startLeaves() {
-        container.innerHTML = '';
-        for (let i = 0; i < 50; i++) {
-            setTimeout(createLeaf, i * 100);
-        }
-        if (leafInterval) clearInterval(leafInterval);
-        leafInterval = setInterval(createLeaf, 100);
-    }
-
-    function stopLeaves() {
-        if (leafInterval) {
-            clearInterval(leafInterval);
-            leafInterval = null;
-        }
-        container.innerHTML = '';
-    }
-
-    if (document.documentElement.getAttribute('data-theme') === 'light') {
-        startLeaves();
-    }
-
-    const observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-            if (mutation.attributeName === 'data-theme') {
-                const currentTheme = document.documentElement.getAttribute('data-theme');
-                if (currentTheme === 'light') startLeaves();
-                else stopLeaves();
-            }
-        });
-    });
-    observer.observe(document.documentElement, { attributes: true });
-}
-
-// ============================================================
-// ОСЕННИЙ ДОЖДЬ
-// ============================================================
-function setupAutumnRain() {
-    const container = document.getElementById('rain-container');
-    if (!container) return;
-
-    let rainInterval = null;
-
-    function createDrop() {
-        if (document.documentElement.getAttribute('data-theme') !== 'dark') return;
-
-        const drop = document.createElement('div');
-        drop.classList.add('raindrop');
+    function createSnowdrift() {
+        const drift = document.createElement('div');
+        drift.classList.add('snowdrift');
         
-        // Случайная длина капли
-        const height = Math.random() * 20 + 15;
-        drop.style.height = `${height}px`;
-        drop.style.left = `${Math.random() * 100}vw`;
+        const size = Math.random() * 4 + 2; 
+        drift.style.width = `${size}px`;
+        drift.style.height = `${size}px`;
+        drift.style.left = `${Math.random() * 100}vw`;
         
-        // Скорость падения
-        const duration = Math.random() * 0.6 + 0.4; // Быстрый дождь
-        drop.style.animationDuration = `${duration}s`;
-        drop.style.animationDelay = `${Math.random() * 1}s`;
-        drop.style.opacity = Math.random() * 0.4 + 0.2;
+        const duration = Math.random() * 1.5 + 0.5; // Метель летит быстро
+        drift.style.animationDuration = `${duration}s`;
+        drift.style.animationDelay = `${Math.random() * 1}s`;
+        drift.style.opacity = Math.random() * 0.5 + 0.2;
 
-        container.appendChild(drop);
+        rainContainer.appendChild(drift);
 
-        // Удаляем каплю после падения
         setTimeout(() => {
-            if (drop.parentNode) drop.remove();
+            if (drift.parentNode) drift.remove();
         }, (duration + 1) * 1000);
     }
 
-    function startRain() {
+    function startSnow() {
         container.innerHTML = '';
-        if (rainInterval) clearInterval(rainInterval);
-        rainInterval = setInterval(createDrop, 30); // Частота падения
-    }
-
-    function stopRain() {
-        if (rainInterval) {
-            clearInterval(rainInterval);
-            rainInterval = null;
-        }
-        container.innerHTML = '';
-    }
-
-    if (document.documentElement.getAttribute('data-theme') === 'dark') {
-        startRain();
-    }
-
-    const observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-            if (mutation.attributeName === 'data-theme') {
-                const currentTheme = document.documentElement.getAttribute('data-theme');
-                if (currentTheme === 'dark') startRain();
-                else stopRain();
-            }
-        });
-    });
-    observer.observe(document.documentElement, { attributes: true });
-}
-
-// ============================================================
-// МАТРИЧНЫЙ ДОЖДЬ (для темы "night")
-// ============================================================
-document.addEventListener('DOMContentLoaded', function() {
-    const rainContainer = document.createElement('div');
-    rainContainer.id = 'matrix-rain';
-    rainContainer.style.position = 'fixed';
-    rainContainer.style.top = '0';
-    rainContainer.style.left = '0';
-    rainContainer.style.width = '100%';
-    rainContainer.style.height = '100%';
-    rainContainer.style.pointerEvents = 'none';
-    rainContainer.style.zIndex = '-1';
-    rainContainer.style.overflow = 'hidden';
-    rainContainer.style.display = 'none';
-    document.body.appendChild(rainContainer);
-
-    function createRain() {
-        if (document.documentElement.getAttribute('data-theme') !== 'night') {
-            rainContainer.style.display = 'none';
-            rainContainer.innerHTML = '';
-            return;
+        rainContainer.innerHTML = '';
+        
+        for (let i = 0; i < 50; i++) {
+            setTimeout(createSnow, i * 100);
+            setTimeout(createSnowdrift, i * 50);
         }
         
-        rainContainer.style.display = 'block';
-        rainContainer.innerHTML = '';
-
-        const columns = Math.floor(window.innerWidth / 20);
-        for (let i = 0; i < columns; i++) {
-            const drop = document.createElement('div');
-            drop.textContent = Math.random() > 0.5 ? '1' : '0';
-            drop.style.position = 'absolute';
-            drop.style.top = '-20px';
-            drop.style.left = (i * 20) + 'px';
-            drop.style.color = '#00ff00';
-            drop.style.fontFamily = 'monospace';
-            drop.style.fontSize = '22px';
-            drop.style.opacity = Math.random() * 0.5 + 0.2;
-            drop.style.textShadow = '0 0 5px #00ff00';
-            
-            const duration = Math.random() * 3 + 2;
-            const delay = Math.random() * 5;
-            
-            drop.animate([
-                { transform: `translateY(0)`, opacity: drop.style.opacity },
-                { transform: `translateY(${window.innerHeight + 50}px)`, opacity: 0 }
-            ], {
-                duration: duration * 1000,
-                delay: delay * 1000,
-                iterations: Infinity,
-                easing: 'linear'
-            });
-
-            rainContainer.appendChild(drop);
-        }
+        if (snowInterval) clearInterval(snowInterval);
+        if (rainInterval) clearInterval(rainInterval);
+        
+        snowInterval = setInterval(createSnow, 100);
+        rainInterval = setInterval(createSnowdrift, 50);
     }
 
-    createRain();
-
-    const observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
-            if (mutation.attributeName === 'data-theme') {
-                createRain();
-            }
-        });
-    });
-    observer.observe(document.documentElement, { attributes: true });
-});
+    startSnow();
+}
 
 // ============================================================
 // СКРЫТИЕ НЕРАБОЧЕГО EMAIL info@tepp.ru
@@ -1214,13 +1081,11 @@ function toggleMobileMenu() {
     const links = document.getElementById('topNavLinks');
     
     if (btn && links) {
-        // Переключаем классы (добавляем/убираем)
         btn.classList.toggle('active');
         links.classList.toggle('active');
     }
 }
 
-// Закрывать меню при клике на любую ссылку внутри него
 document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('.top-nav-links a');
     links.forEach(link => {

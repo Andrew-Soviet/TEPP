@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,18 +54,19 @@
                 <h2>81-765 «Москва» №65081-65082</h2>
                 <p class="hero-text">Восьмивагонный электропоезд модели <strong>81-765 «Москва»</strong> с головным вагоном <strong>65081</strong>. Относится к первому поколению поездов «Москва», которые пришли на смену устаревшим номерным составам.</p>
                 <p class="hero-text">С 30 октября 2026 года состав эксплуатируется в тематическом оформлении <strong>«Золотая черепаха»</strong>, посвящённом дикой природе.</p>
+                <p class="hero-text">Вагоны состава посвящены различным биомам: головной вагон <strong>65081</strong> оформлен в стиле <strong>«Арктика»</strong>, а хвостовой <strong>65082</strong> — <strong>«Пустыня»</strong>.</p>
 
                 <div class="stats-container">
                     <div class="stat-item">
-                        <div class="counter-number" id="buildYear">0</div>
+                        <div class="counter-number" data-target="2018">0</div>
                         <div class="stat-label">год постройки</div>
                     </div>
                     <div class="stat-item">
-                        <div class="counter-number" id="carsCount">0</div>
+                        <div class="counter-number" data-target="8">0</div>
                         <div class="stat-label">вагонов в составе</div>
                     </div>
                     <div class="stat-item">
-                        <div class="counter-number" id="statusCount" style="font-size: 1.4rem;">—</div>
+                        <div class="counter-number" style="font-size: 1.4rem;">Экспл.</div>
                         <div class="stat-label">состояние</div>
                     </div>
                 </div>
@@ -95,7 +96,7 @@
                 </table>
 
                 <div class="highlight-box" style="margin-top: 1.5rem;">
-                    <h3>Составность</h3>
+                    <h3>Составность и тематика</h3>
                     <p style="font-size: 1.3rem; text-align: center; font-weight: bold; margin-top: 0.5rem;">
                         65081 — 66161 — 67081 — 66162 — 66163 — 67082 — 66164 — 65082
                     </p>
@@ -166,7 +167,65 @@
             <div class="card-content">
                 <div class="photo-gallery">
 
-                    <!-- Фото 1 -->
+                    <!-- Фото 1 (Новое) -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/pfandrom_MetroType_Moscow-2017_65081_Kitai-gorod_15-11-2026.png" alt="Вагон 65081 на станции Китай-город" 
+                                 onclick="openGalleryModal(this.src, 'Вагон №65081, станция Китай-город')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=Фото+отсутствует'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон №65081</a>
+                            <p class="photo-desc">
+                                <strong>📌 Станция Китай-город.</strong>
+                            </p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 15 ноября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 2 (Новое) -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/pfandrom_MetroType_Moscow-2017_65081_kyzminki_15-11-2026.jpg" alt="Вагон 65081 на станции Кузьминки" 
+                                 onclick="openGalleryModal(this.src, 'Вагон №65081, станция Кузьминки')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=Фото+отсутствует'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон №65081</a>
+                            <p class="photo-desc">
+                                <strong>📌 Станция Кузьминки.</strong>
+                            </p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 15 ноября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 3 (Новое) -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/pfandrom_MetroType_Moscow-2017_65081_int_tablo-stantion_15-11-2026.jpg" alt="Наддверное информационное табло" 
+                                 onclick="openGalleryModal(this.src, 'Наддверное информационное табло')" 
+                                 onerror="this.src='https://via.placeholder.com/600x400?text=Фото+отсутствует'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон №65081</a>
+                            <p class="photo-desc">
+                                <strong>📌 Вагон №65081.</strong><br>
+                                Наддверное информационное табло.
+                            </p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 15 ноября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="https://t.me/pfandrom" target="_blank" rel="noopener">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 4 (Старое) -->
                     <div class="photo-card">
                         <div class="photo-thumb">
                             <img src="img/MetroType_Moscow2017_65081.jpg" alt="Состав после выхода из оборотного тупика" 
@@ -183,7 +242,7 @@
                         </div>
                     </div>
 
-                    <!-- Фото 2 -->
+                    <!-- Фото 5 (Старое) -->
                     <div class="photo-card">
                         <div class="photo-thumb">
                             <img src="img/MetroType_Moscow2017_66164.jpg" alt="Вагон 66164" 
@@ -200,7 +259,7 @@
                         </div>
                     </div>
 
-                    <!-- Фото 3 -->
+                    <!-- Фото 6 (Старое) -->
                     <div class="photo-card">
                         <div class="photo-thumb">
                             <img src="img/MetroType_Moscow2017_65082.jpg" alt="Вагон 65082 на станции Проспект Вернадского" 
@@ -217,7 +276,7 @@
                         </div>
                     </div>
 
-                    <!-- Фото 4 -->
+                    <!-- Фото 7 (Старое) -->
                     <div class="photo-card">
                         <div class="photo-thumb">
                             <img src="img/MetroType_Moscow2017_65082_Textili.png" alt="Вагон 65082 на станции Текстильщики" 
@@ -234,7 +293,7 @@
                         </div>
                     </div>
 
-                    <!-- Фото 5 -->
+                    <!-- Фото 8 (Старое) -->
                     <div class="photo-card">
                         <div class="photo-thumb">
                             <img src="img/MetroType_Moscow2017_65082_int_dveri.jpg" alt="Двери в салоне" 
@@ -251,7 +310,7 @@
                         </div>
                     </div>
 
-                    <!-- Фото 6 -->
+                    <!-- Фото 9 (Старое) -->
                     <div class="photo-card">
                         <div class="photo-thumb">
                             <img src="img/MetroType_Moscow2017_65082_int.jpg" alt="Салон, вид вперед" 
@@ -268,7 +327,7 @@
                         </div>
                     </div>
 
-                    <!-- Фото 7 -->
+                    <!-- Фото 10 (Старое) -->
                     <div class="photo-card">
                         <div class="photo-thumb">
                             <img src="img/MetroType_Moscow2017_65082_int_2.jpg" alt="Интерактивный экран" 
@@ -285,7 +344,7 @@
                         </div>
                     </div>
 
-                    <!-- Фото 8 -->
+                    <!-- Фото 11 (Старое) -->
                     <div class="photo-card">
                         <div class="photo-thumb">
                             <img src="img/MetroType_Moscow2017_65082_tabl.jpg" alt="Заводская табличка" 
@@ -302,7 +361,7 @@
                         </div>
                     </div>
 
-                    <!-- Фото 9 -->
+                    <!-- Фото 12 (Старое) -->
                     <div class="photo-card">
                         <div class="photo-thumb">
                             <img src="img/MetroType_Moscow2017_65082_int_zolo_cher.jpg" alt="Золотая черепаха" 
@@ -365,7 +424,7 @@
 
     <div class="scroll-top">↑</div>
 
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span class="modal-close" id="galleryModalClose">&times;</span>
             <div id="galleryModalContent"></div>
@@ -374,78 +433,5 @@
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
     <script src="script.js" defer></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Счётчики
-            function animateCounters() {
-                const targets = { buildYear: 2018, carsCount: 8, statusCount: 1 };
-                let current = { buildYear: 0, carsCount: 0, statusCount: 0 };
-                const yearEl = document.getElementById('buildYear');
-                const carsEl = document.getElementById('carsCount');
-                const statusEl = document.getElementById('statusCount');
-                if (!yearEl || !carsEl || !statusEl) return;
-                const interval = setInterval(function() {
-                    let allFinished = true;
-                    if (current.buildYear < targets.buildYear) {
-                        current.buildYear += Math.ceil(targets.buildYear / 50);
-                        if (current.buildYear > targets.buildYear) current.buildYear = targets.buildYear;
-                        yearEl.textContent = current.buildYear;
-                        allFinished = false;
-                    }
-                    if (current.carsCount < targets.carsCount) {
-                        current.carsCount += 1;
-                        if (current.carsCount > targets.carsCount) current.carsCount = targets.carsCount;
-                        carsEl.textContent = current.carsCount;
-                        allFinished = false;
-                    }
-                    if (current.statusCount < targets.statusCount) {
-                        current.statusCount += 1;
-                        if (current.statusCount > targets.statusCount) current.statusCount = targets.statusCount;
-                        statusEl.textContent = 'Экспл.';
-                        allFinished = false;
-                    }
-                    if (allFinished) clearInterval(interval);
-                }, 30);
-            }
-            animateCounters();
-
-            // Галерея
-            const modal = document.getElementById('galleryModal');
-            const content = document.getElementById('galleryModalContent');
-            const close = document.getElementById('galleryModalClose');
-
-            document.querySelectorAll('.photo-thumb img').forEach(img => {
-                img.addEventListener('click', function() {
-                    const card = this.closest('.photo-card');
-                    if (!card) return;
-
-                    const src = this.src;
-                    const alt = this.alt;
-                    const object = card.querySelector('.photo-object')?.textContent || '';
-                    const desc = card.querySelector('.photo-desc')?.textContent || '';
-                    const date = card.querySelector('.photo-date')?.textContent || '';
-                    const author = card.querySelector('.photo-author')?.textContent || '';
-
-                    if (content) {
-                        content.innerHTML = `
-                            <img src="${src}" style="max-width:100%; max-height:60vh; border-radius:10px; display:block; margin: 0 auto;" alt="${alt}">
-                            <div style="margin-top: 1.5rem; text-align: left; padding: 0 1rem;">
-                                <h3 style="color: var(--accent-color); margin-bottom: 0.5rem; font-size: 1.4rem;">${object}</h3>
-                                <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1rem;">${desc}</p>
-                                <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-secondary); border-top: 1px solid var(--border-color); padding-top: 1rem;">
-                                    <span>${date}</span>
-                                    <span>${author}</span>
-                                </div>
-                            </div>
-                        `;
-                        modal.classList.add('active');
-                    }
-                });
-            });
-
-            close?.addEventListener('click', () => modal.classList.remove('active'));
-            window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
-        });
-    </script>
 </body>
 </html>
