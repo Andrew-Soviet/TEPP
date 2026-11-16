@@ -1,28 +1,128 @@
 // ============================================================
-// ИНИЦИАЛИЗАЦИЯ ЧАСТИЦ
+// ИНТЕРАКТИВНЫЙ КАНВАС-ФОН (Снежинки / Частицы)
 // ============================================================
-(function initParticles() {
-    const isMobile = window.matchMedia('(max-width: 768px)').matches;
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (isMobile || prefersReduced) return;
-    if (typeof particlesJS === 'undefined') return;
+(function initCanvasBackground() {
+    const canvas = document.createElement('canvas');
+    canvas.id = 'interactive-canvas';
+    canvas.style.position = 'fixed';
+    canvas.style.top = '0';
+    canvas.style.left = '0';
+    canvas.style.width = '100%';
+    canvas.style.height = '100%';
+    canvas.style.pointerEvents = 'none';
+    canvas.style.zIndex = '-1';
+    canvas.style.opacity = '0.6';
+    document.body.prepend(canvas);
 
-    particlesJS('particles-js', {
-        particles: {
-            number: { value: 80, density: { enable: true, value_area: 800 } },
-            color: { value: '#ffffff' },
-            shape: { type: 'circle' },
-            opacity: { value: 0.5, random: false },
-            size: { value: 3, random: true },
-            line_linked: { enable: true, distance: 150, color: '#ffffff', opacity: 0.4, width: 1 },
-            move: { enable: true, speed: 2, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false }
-        },
-        interactivity: {
-            detect_on: 'canvas',
-            events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true }
-        },
-        retina_detect: true
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    let particles = [];
+    
+    const particleCount = 60; 
+    const connectionDistance = 120; 
+    const mouseRadius = 150; 
+
+    const mouse = { x: null, y: null };
+
+    window.addEventListener('mousemove', (e) => {
+        mouse.x = e.x;
+        mouse.y = e.y;
     });
+
+    window.addEventListener('mouseout', () => {
+        mouse.x = null;
+        mouse.y = null;
+    });
+
+    function resize() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+
+    class Particle {
+        constructor() {
+            this.x = Math.random() * width;
+            this.y = Math.random() * height;
+            this.vx = (Math.random() - 0.5) * 1;
+            this.vy = (Math.random() - 0.5) * 1;
+            this.radius = Math.random() * 2 + 1;
+        }
+
+        update() {
+            this.x += this.vx;
+            this.y += this.vy;
+
+            if (this.x < 0 || this.x > width) this.vx *= -1;
+            if (this.y < 0 || this.y > height) this.vy *= -1;
+
+            if (mouse.x != null && mouse.y != null) {
+                let dx = mouse.x - this.x;
+                let dy = mouse.y - this.y;
+                let distance = Math.sqrt(dx * dx + dy * dy);
+                
+                if (distance < mouseRadius) {
+                    const forceDirectionX = dx / distance;
+                    const forceDirectionY = dy / distance;
+                    const force = (mouseRadius - distance) / mouseRadius;
+                    const directionX = forceDirectionX * force * 3;
+                    const directionY = forceDirectionY * force * 3;
+
+                    this.x -= directionX;
+                    this.y -= directionY;
+                }
+            }
+        }
+
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            ctx.fillStyle = isDark ? 'rgba(255, 255, 255, 0.8)' : 'rgba(0, 119, 204, 0.6)';
+            
+            ctx.fill();
+        }
+    }
+
+    for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+    }
+
+    function animate() {
+        requestAnimationFrame(animate);
+        ctx.clearRect(0, 0, width, height);
+
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        const lineColor = isDark ? '255, 255, 255' : '0, 119, 204';
+
+        particles.forEach(p => {
+            p.update();
+            p.draw();
+        });
+
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i; j < particles.length; j++) {
+                let dx = particles[i].x - particles[j].x;
+                let dy = particles[i].y - particles[j].y;
+                let distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance < connectionDistance) {
+                    let opacity = 1 - (distance / connectionDistance);
+                    ctx.strokeStyle = `rgba(${lineColor}, ${opacity * 0.4})`;
+                    ctx.lineWidth = 1;
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.stroke();
+                }
+            }
+        }
+    }
+
+    animate();
 })();
 
 // ============================================================
@@ -38,17 +138,6 @@ function isMainPage() {
 // ГЛАВНЫЙ ЗАПУСК
 // ============================================================
 document.addEventListener('DOMContentLoaded', function() {
-    if (!document.getElementById('leaf-container')) {
-        const leafContainer = document.createElement('div');
-        leafContainer.id = 'leaf-container';
-        document.body.appendChild(leafContainer);
-    }
-    if (!document.getElementById('rain-container')) {
-        const rainContainer = document.createElement('div');
-        rainContainer.id = 'rain-container';
-        document.body.appendChild(rainContainer);
-    }
-
     initSettings();
     initTheme();
     initMode();
@@ -63,14 +152,12 @@ document.addEventListener('DOMContentLoaded', function() {
     setupGallery();
     setupHideHeaderOnScroll();
     setupTelegramModal();
-    setupSnow(); // Запускаем снежинки
 });
 
 // ============================================================
-// НАСТРОЙКИ (БЕЗ ДУБЛИРУЮЩЕЙ КНОПКИ)
+// НАСТРОЙКИ
 // ============================================================
 function initSettings() {
-    // Если меню уже есть — не создаем
     if (document.getElementById('settingsDropdown')) return;
 
     const isMain = isMainPage();
@@ -84,14 +171,13 @@ function initSettings() {
             <button class="settings-btn mode-btn" data-mode="gallery" onclick="setMode('gallery')">🖼️ Фотогалерея</button>
         `;
 
-    // Создаем ТОЛЬКО выпадающее меню, без кнопки
     const dropdownHTML = `
         <div class="settings-dropdown" id="settingsDropdown">
             <div class="settings-section">
                 <span class="settings-label">🌈 Тема</span>
                 <div class="settings-options" id="themeOptions">
-                    <button class="theme-btn" data-theme="light" onclick="setTheme('light')" title="Светлая">☀️</button>
-                    <button class="theme-btn" data-theme="dark" onclick="setTheme('dark')" title="Тёмная">🌇</button>
+                    <button class="theme-btn" data-theme="light" onclick="setTheme('light', event)" title="Светлая">☀️</button>
+                    <button class="theme-btn" data-theme="dark" onclick="setTheme('dark', event)" title="Тёмная">🌇</button>
                 </div>
             </div>
             <div class="settings-section">
@@ -111,7 +197,6 @@ function toggleSettings() {
     const dropdown = document.getElementById('settingsDropdown');
     if (dropdown) {
         dropdown.classList.toggle('active');
-        // Позиционируем меню под кнопкой в верхней панели
         const btn = document.querySelector('.top-settings-btn');
         if (btn && dropdown.classList.contains('active')) {
             const rect = btn.getBoundingClientRect();
@@ -145,20 +230,55 @@ function setupEscapeKey() {
 }
 
 // ============================================================
-// ТЕМЫ
+// ТЕМЫ С ЭФФЕКТОМ ШТОРКИ
 // ============================================================
 const THEMES = ['light', 'dark'];
 
-function setTheme(theme) {
+function setTheme(theme, event) {
     if (!THEMES.includes(theme)) theme = 'light';
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('tepp_theme', theme);
-    updateThemeButtons(theme);
+    
+    // Если браузер не поддерживает эффект или нет события (при загрузке)
+    if (!document.startViewTransition || !event) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('tepp_theme', theme);
+        updateThemeButtons(theme);
+        return;
+    }
+
+    // Координаты клика для шторки
+    const x = event.clientX;
+    const y = event.clientY;
+    const endRadius = Math.hypot(
+        Math.max(x, innerWidth - x),
+        Math.max(y, innerHeight - y)
+    );
+
+    const transition = document.startViewTransition(() => {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('tepp_theme', theme);
+        updateThemeButtons(theme);
+    });
+
+    transition.ready.then(() => {
+        document.documentElement.animate(
+            {
+                clipPath: [
+                    `circle(0px at ${x}px ${y}px)`,
+                    `circle(${endRadius}px at ${x}px ${y}px)`
+                ],
+            },
+            {
+                duration: 700,
+                easing: 'ease-in-out',
+                pseudoElement: '::view-transition-new(root)',
+            }
+        );
+    });
 }
 
 function initTheme() {
     const saved = localStorage.getItem('tepp_theme') || 'light';
-    setTheme(saved);
+    setTheme(saved); // Вызывается без event, сработает обычная смена
 }
 
 function updateThemeButtons(activeTheme) {
@@ -915,78 +1035,6 @@ function setupTelegramModal() {
     document.querySelectorAll('a[href*="andreimetro1289"], .js-telegram-link').forEach(link => {
         link.addEventListener('click', openModal);
     });
-}
-
-// ============================================================
-// СНЕЖИНКИ (В ОБЕИХ ТЕМАХ)
-// ============================================================
-function setupSnow() {
-    const container = document.getElementById('leaf-container');
-    const rainContainer = document.getElementById('rain-container');
-    if (!container || !rainContainer) return;
-
-    let snowInterval = null;
-    let rainInterval = null;
-
-    function createSnow() {
-        const snowflake = document.createElement('div');
-        snowflake.classList.add('snowflake');
-        
-        const size = Math.random() * 6 + 4; // Размер снежинки
-        snowflake.style.width = `${size}px`;
-        snowflake.style.height = `${size}px`;
-        snowflake.style.left = `${Math.random() * 100}vw`;
-        
-        const duration = Math.random() * 10 + 8; // Скорость падения
-        snowflake.style.animationDuration = `${duration}s`;
-        snowflake.style.animationDelay = `${Math.random() * 5}s`;
-        snowflake.style.opacity = Math.random() * 0.6 + 0.3;
-
-        container.appendChild(snowflake);
-
-        setTimeout(() => {
-            if (snowflake.parentNode) snowflake.remove();
-        }, (duration + 5) * 1000);
-    }
-
-    function createSnowdrift() {
-        const drift = document.createElement('div');
-        drift.classList.add('snowdrift');
-        
-        const size = Math.random() * 4 + 2; 
-        drift.style.width = `${size}px`;
-        drift.style.height = `${size}px`;
-        drift.style.left = `${Math.random() * 100}vw`;
-        
-        const duration = Math.random() * 1.5 + 0.5; // Метель летит быстро
-        drift.style.animationDuration = `${duration}s`;
-        drift.style.animationDelay = `${Math.random() * 1}s`;
-        drift.style.opacity = Math.random() * 0.5 + 0.2;
-
-        rainContainer.appendChild(drift);
-
-        setTimeout(() => {
-            if (drift.parentNode) drift.remove();
-        }, (duration + 1) * 1000);
-    }
-
-    function startSnow() {
-        container.innerHTML = '';
-        rainContainer.innerHTML = '';
-        
-        for (let i = 0; i < 50; i++) {
-            setTimeout(createSnow, i * 100);
-            setTimeout(createSnowdrift, i * 50);
-        }
-        
-        if (snowInterval) clearInterval(snowInterval);
-        if (rainInterval) clearInterval(rainInterval);
-        
-        snowInterval = setInterval(createSnow, 100);
-        rainInterval = setInterval(createSnowdrift, 50);
-    }
-
-    startSnow();
 }
 
 // ============================================================
