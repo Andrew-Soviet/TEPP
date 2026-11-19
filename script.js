@@ -1,9 +1,9 @@
 // ============================================================
-// ИНТЕРАКТИВНЫЙ КАНВАС-ФОН (Снежинки / Частицы)
+// ИНТЕРАКТИВНЫЙ ФОН (Снег и снежинки)
 // ============================================================
-(function initCanvasBackground() {
+(function initSnowBackground() {
     const canvas = document.createElement('canvas');
-    canvas.id = 'interactive-canvas';
+    canvas.id = 'snow-canvas';
     canvas.style.position = 'fixed';
     canvas.style.top = '0';
     canvas.style.left = '0';
@@ -11,28 +11,15 @@
     canvas.style.height = '100%';
     canvas.style.pointerEvents = 'none';
     canvas.style.zIndex = '-1';
-    canvas.style.opacity = '0.6';
     document.body.prepend(canvas);
 
     const ctx = canvas.getContext('2d');
     let width, height;
-    let particles = [];
-    
-    const particleCount = 60; 
-    const connectionDistance = 120; 
-    const mouseRadius = 150; 
+    let snowflakes = [];
 
-    const mouse = { x: null, y: null };
-
-    window.addEventListener('mousemove', (e) => {
-        mouse.x = e.x;
-        mouse.y = e.y;
-    });
-
-    window.addEventListener('mouseout', () => {
-        mouse.x = null;
-        mouse.y = null;
-    });
+    const particleCount = 120; // Общее количество объектов
+    const maxSize = 5;
+    const minSize = 1;
 
     function resize() {
         width = canvas.width = window.innerWidth;
@@ -42,84 +29,106 @@
     window.addEventListener('resize', resize);
     resize();
 
-    class Particle {
+    class Snowflake {
         constructor() {
+            this.reset(true);
+        }
+
+        reset(init = false) {
             this.x = Math.random() * width;
-            this.y = Math.random() * height;
-            this.vx = (Math.random() - 0.5) * 1;
-            this.vy = (Math.random() - 0.5) * 1;
-            this.radius = Math.random() * 2 + 1;
+            // Если это начальная инициализация, раскидываем по всему экрану, иначе спавним сверху
+            this.y = init ? Math.random() * height : -10 - Math.random() * 50; 
+            this.size = Math.random() * (maxSize - minSize) + minSize;
+            this.speed = this.size * 0.3 + 0.2;
+            this.opacity = Math.random() * 0.6 + 0.3;
+            this.angle = Math.random() * Math.PI * 2;
+            this.swaySpeed = Math.random() * 0.02 + 0.01;
+            
+            // 20% вероятности, что это будет красивая снежинка ❄️, иначе просто пушинка
+            this.isStar = Math.random() < 0.2; 
+            this.rotation = Math.random() * Math.PI * 2; // Угол поворота для снежинки
+            this.rotationSpeed = (Math.random() - 0.5) * 0.02; // Скорость вращения
         }
 
         update() {
-            this.x += this.vx;
-            this.y += this.vy;
-
-            if (this.x < 0 || this.x > width) this.vx *= -1;
-            if (this.y < 0 || this.y > height) this.vy *= -1;
-
-            if (mouse.x != null && mouse.y != null) {
-                let dx = mouse.x - this.x;
-                let dy = mouse.y - this.y;
-                let distance = Math.sqrt(dx * dx + dy * dy);
-                
-                if (distance < mouseRadius) {
-                    const forceDirectionX = dx / distance;
-                    const forceDirectionY = dy / distance;
-                    const force = (mouseRadius - distance) / mouseRadius;
-                    const directionX = forceDirectionX * force * 3;
-                    const directionY = forceDirectionY * force * 3;
-
-                    this.x -= directionX;
-                    this.y -= directionY;
-                }
+            this.y += this.speed;
+            // Плавное покачивание
+            this.x += Math.sin(this.angle) * 0.5;
+            this.angle += this.swaySpeed;
+            
+            // Вращение для снежинок-звездочек
+            if (this.isStar) {
+                this.rotation += this.rotationSpeed;
             }
+
+            // Респавн, если упала за экран
+            if (this.y > height + 20) {
+                this.reset();
+            }
+            // Телепорт по бокам
+            if (this.x > width) this.x = 0;
+            if (this.x < 0) this.x = width;
         }
 
         draw() {
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-            
             const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-            ctx.fillStyle = isDark ? 'rgba(255, 255, 255, 0.8)' : 'rgba(0, 119, 204, 0.6)';
+            // В темной теме снег белый, в светлой - голубоватый
+            ctx.fillStyle = isDark 
+                ? `rgba(255, 255, 255, ${this.opacity})` 
+                : `rgba(80, 130, 180, ${this.opacity * 0.7})`;
             
-            ctx.fill();
+            ctx.strokeStyle = ctx.fillStyle;
+            ctx.lineWidth = 1.5;
+
+            if (this.isStar) {
+                // Рисуем снежинку ❄️ (6 лучей)
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.rotate(this.rotation);
+                
+                const r = this.size * 1.5; // Радиус снежинки
+                ctx.beginPath();
+                for (let i = 0; i < 6; i++) {
+                    const angle = (Math.PI / 3) * i;
+                    // Основной луч
+                    ctx.moveTo(0, 0);
+                    ctx.lineTo(Math.cos(angle) * r, Math.sin(angle) * r);
+                    
+                    // Маленькие веточки на лучах
+                    const bx = Math.cos(angle) * r * 0.6;
+                    const by = Math.sin(angle) * r * 0.6;
+                    const branchAngle = angle + Math.PI / 4;
+                    const branchAngle2 = angle - Math.PI / 4;
+                    const branchLen = r * 0.3;
+                    
+                    ctx.moveTo(bx, by);
+                    ctx.lineTo(bx + Math.cos(branchAngle) * branchLen, by + Math.sin(branchAngle) * branchLen);
+                    ctx.moveTo(bx, by);
+                    ctx.lineTo(bx + Math.cos(branchAngle2) * branchLen, by + Math.sin(branchAngle2) * branchLen);
+                }
+                ctx.stroke();
+                ctx.restore();
+            } else {
+                // Рисуем обычную круглую пушинку
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
         }
     }
 
     for (let i = 0; i < particleCount; i++) {
-        particles.push(new Particle());
+        snowflakes.push(new Snowflake());
     }
 
     function animate() {
         requestAnimationFrame(animate);
         ctx.clearRect(0, 0, width, height);
 
-        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-        const lineColor = isDark ? '255, 255, 255' : '0, 119, 204';
-
-        particles.forEach(p => {
-            p.update();
-            p.draw();
+        snowflakes.forEach(flake => {
+            flake.update();
+            flake.draw();
         });
-
-        for (let i = 0; i < particles.length; i++) {
-            for (let j = i; j < particles.length; j++) {
-                let dx = particles[i].x - particles[j].x;
-                let dy = particles[i].y - particles[j].y;
-                let distance = Math.sqrt(dx * dx + dy * dy);
-
-                if (distance < connectionDistance) {
-                    let opacity = 1 - (distance / connectionDistance);
-                    ctx.strokeStyle = `rgba(${lineColor}, ${opacity * 0.4})`;
-                    ctx.lineWidth = 1;
-                    ctx.beginPath();
-                    ctx.moveTo(particles[i].x, particles[i].y);
-                    ctx.lineTo(particles[j].x, particles[j].y);
-                    ctx.stroke();
-                }
-            }
-        }
     }
 
     animate();
@@ -588,7 +597,7 @@ const SEARCH_PAGES = [
     // --- МЕТРО (Именные, музейные, спец) ---
     { title: 'Красная стрела (метро)', url: 'Красная_Стрела.html', tags: ['метро', 'красная стрела'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: 'Акварель', url: 'Акварель.html', tags: ['метро', 'акварель', 'просрочка', 'русич', 'АПЛ'], types: ['метро'], city: 'Москва', country: 'Россия' },
-    { title: 'Олег Табаков (0350)', url: 'Табаков0350.html', tags: ['метро', 'табаков', '0350'], types: ['метро'], city: 'Москва', country: 'Россия' },
+    { title: '81-717.5 "Олег Табаков" №0350-0381', url: 'MetroType_81-717.5_Oleg_Tabakov_0381-0350.html', tags: ['метро', 'табаков', '0350'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: 'Народный ополченец', url: 'Народный_ополченец.html', tags: ['метро', 'ополченец'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: 'Курская дуга', url: 'Курская_дуга_метро.html', tags: ['метро', 'курская дуга'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: 'Парадный 81-717', url: 'Парадный_81-717.html', tags: ['метро', 'парадный', '81-717'], types: ['метро'], city: 'Москва', country: 'Россия' },
