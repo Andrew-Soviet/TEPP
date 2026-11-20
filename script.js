@@ -17,7 +17,7 @@
     let width, height;
     let snowflakes = [];
 
-    const particleCount = 120; // Общее количество объектов
+    const particleCount = 120;
     const maxSize = 5;
     const minSize = 1;
 
@@ -36,43 +36,39 @@
 
         reset(init = false) {
             this.x = Math.random() * width;
-            // Если это начальная инициализация, раскидываем по всему экрану, иначе спавним сверху
             this.y = init ? Math.random() * height : -10 - Math.random() * 50; 
             this.size = Math.random() * (maxSize - minSize) + minSize;
-            this.speed = this.size * 0.3 + 0.2;
-            this.opacity = Math.random() * 0.6 + 0.3;
+            // Сделаем снежинки разной скорости: от медленных до быстрых
+            this.speed = Math.random() * 1.5 + 0.5; 
+            this.opacity = Math.random() * 0.8 + 0.2;
             this.angle = Math.random() * Math.PI * 2;
             this.swaySpeed = Math.random() * 0.02 + 0.01;
+            // Ветер (сдвиг по горизонтали)
+            this.wind = (Math.random() - 0.5) * 0.5;
             
-            // 20% вероятности, что это будет красивая снежинка ❄️, иначе просто пушинка
-            this.isStar = Math.random() < 0.2; 
-            this.rotation = Math.random() * Math.PI * 2; // Угол поворота для снежинки
-            this.rotationSpeed = (Math.random() - 0.5) * 0.02; // Скорость вращения
+            this.isStar = Math.random() < 0.25; // Чуть больше звездочек
+            this.rotation = Math.random() * Math.PI * 2;
+            this.rotationSpeed = (Math.random() - 0.5) * 0.03;
         }
 
         update() {
             this.y += this.speed;
-            // Плавное покачивание
-            this.x += Math.sin(this.angle) * 0.5;
+            this.x += Math.sin(this.angle) * 0.8 + this.wind; // Добавляем ветер
             this.angle += this.swaySpeed;
             
-            // Вращение для снежинок-звездочек
             if (this.isStar) {
                 this.rotation += this.rotationSpeed;
             }
 
-            // Респавн, если упала за экран
             if (this.y > height + 20) {
                 this.reset();
             }
-            // Телепорт по бокам
-            if (this.x > width) this.x = 0;
-            if (this.x < 0) this.x = width;
+            if (this.x > width + 20) this.x = -20;
+            if (this.x < -20) this.x = width + 20;
         }
 
         draw() {
             const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-            // В темной теме снег белый, в светлой - голубоватый
             ctx.fillStyle = isDark 
                 ? `rgba(255, 255, 255, ${this.opacity})` 
                 : `rgba(80, 130, 180, ${this.opacity * 0.7})`;
@@ -81,20 +77,17 @@
             ctx.lineWidth = 1.5;
 
             if (this.isStar) {
-                // Рисуем снежинку ❄️ (6 лучей)
                 ctx.save();
                 ctx.translate(this.x, this.y);
                 ctx.rotate(this.rotation);
                 
-                const r = this.size * 1.5; // Радиус снежинки
+                const r = this.size * 1.5;
                 ctx.beginPath();
                 for (let i = 0; i < 6; i++) {
                     const angle = (Math.PI / 3) * i;
-                    // Основной луч
                     ctx.moveTo(0, 0);
                     ctx.lineTo(Math.cos(angle) * r, Math.sin(angle) * r);
                     
-                    // Маленькие веточки на лучах
                     const bx = Math.cos(angle) * r * 0.6;
                     const by = Math.sin(angle) * r * 0.6;
                     const branchAngle = angle + Math.PI / 4;
@@ -109,7 +102,6 @@
                 ctx.stroke();
                 ctx.restore();
             } else {
-                // Рисуем обычную круглую пушинку
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                 ctx.fill();
@@ -287,7 +279,7 @@ function setTheme(theme, event) {
 
 function initTheme() {
     const saved = localStorage.getItem('tepp_theme') || 'light';
-    setTheme(saved); // Вызывается без event, сработает обычная смена
+    setTheme(saved);
 }
 
 function updateThemeButtons(activeTheme) {
@@ -1041,7 +1033,7 @@ function setupTelegramModal() {
         if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
     });
 
-    document.querySelectorAll('a[href*="andreimetro1289"], .js-telegram-link').forEach(link => {
+    document.querySelectorAll('a[href*="andreimetro1289"]:not([href*="pfandrom"]), .js-telegram-link').forEach(link => {
         link.addEventListener('click', openModal);
     });
 }
