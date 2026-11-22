@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>81-717.5М (МВМ) №0349 — ТЭПП</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+    </div>
+
+    <!-- ================= ВЕРХНЯЯ ПАНЕЛЬ ================= -->
+    <div class="top-nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Меню">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="top-nav-links" id="topNavLinks">
+            <a href="База_подвижного_состава.html">База подвижного состава</a>
+            <a href="Дополнительно.html">Дополнительно</a>
+            <a href="Комментарии.html">Комментарии</a>
+            <a href="Обновления.html">Обновления</a>
+            <a href="help.html">Помощь</a>
+            <a href="Форум.html">Форум</a>
+        </div>
+        <button class="top-settings-btn" onclick="toggleSettings()" title="Настройки">⚙️</button>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <h1>81-717.5М (МВМ) №0349</h1>
+            <p class="subtitle">Пассажирский вагон Московского метрополитена</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html">🏠 Главная</a></li>
+                    <li><a href="Главная_метро.html">🚇 Метро</a></li>
+                    <li><a href="Главная_Страница_Мосметро.html">🏙️ Мосметро</a></li>
+                    <li><a href="#about">О вагоне</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#gallery">Фото</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h2>Вагон №0349</h2>
+                <p class="hero-text">Пассажирский вагон модели <strong>81-717.5М (МВМ)</strong>, построенный в июле 1993 года. По состоянию на 2026 год работает в депо <strong>ТЧ-17 «Южное»</strong>.</p>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="counter-number" data-target="1993">0</div>
+                        <div class="stat-label">год постройки</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="counter-number" data-target="2023">0</div>
+                        <div class="stat-label">начало работы в ТЧ-17</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                <span class="card-icon">ℹ️</span>
+                <h2>Общая информация</h2>
+            </div>
+            <div class="card-content">
+                <table>
+                    <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+                    <tbody>
+                        <tr><td>Город</td><td>Москва 🇷🇺</td></tr>
+                        <tr><td>Депо/Парк</td><td>ТЧ-17 «Южное»</td></tr>
+                        <tr><td>Модель</td><td>81-717.5М (МВМ)</td></tr>
+                        <tr><td>Построен</td><td>07.1993</td></tr>
+                        <tr><td>Текущее состояние</td><td>Эксплуатируется</td></tr>
+                        <tr><td>Назначение</td><td>Пассажирский</td></tr>
+                        <tr><td>Начало работы</td><td>10.05.2023 (в ТЧ-17)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="history" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #1A5276 0%, #2874A6 100%);">
+                <span class="card-icon">📜</span>
+                <h2>История</h2>
+            </div>
+            <div class="card-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">10.1993</div>
+                        <div class="timeline-content">
+                            <h3>Поступление</h3>
+                            <p>Поступил в депо приписки ТЧ-10 «Свиблово».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">07.2010</div>
+                        <div class="timeline-content">
+                            <h3>Капитальный ремонт</h3>
+                            <p>Прошёл капитальный ремонт на заводе «Метровагонмаш».</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">10.05.2023</div>
+                        <div class="timeline-content">
+                            <h3>Перевод в ТЧ-17</h3>
+                            <p>Начало работы в депо ТЧ-17 «Южное».</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #D35400 0%, #E67E22 100%);">
+                <span class="card-icon">🎨</span>
+                <h2>Экстерьер и интерьер</h2>
+            </div>
+            <div class="card-content">
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="feature-item">
+                        <h3>Экстерьер</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li><strong>Окрас:</strong> 
+                                <br>• 07.1993 — 03.2018: бирюзового цвета с белыми полосами по борту
+                                <br>• С 03.2018: бренд-окрас «Московский транспорт»
+                            </li>
+                            <li>Три ребра жёсткости</li>
+                            <li>Расположение сигнальных ламп: вертикальное</li>
+                            <li><strong>Компоновка фар:</strong>
+                                <br>• 07.1993 — 07.2010: 2-2-2
+                                <br>• С 07.2010: 1-4-1
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Интерьер</h3>
+                        <ul style="margin: 1rem 0 0 1.5rem;">
+                            <li>Вертикальные поручни</li>
+                            <li><strong>Сиденья:</strong>
+                                <br>• 07.1993 — 2010-е: диваны, обшитые кожзаменителем
+                                <br>• С 2010-х: диваны, обшитые кожзаменителем синего цвета
+                            </li>
+                            <li><strong>Пластик:</strong>
+                                <br>• 07.1993 — 07.2010: жёлтого цвета под дерево
+                                <br>• С 07.2010: бежевого цвета
+                            </li>
+                            <li><strong>Освещение:</strong>
+                                <br>• 07.1993 — 07.2010: лампы типа ЛПВ-02
+                                <br>• С 07.2010: лампы «Электро-Петербург»
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Фотогалерея -->
+        <section id="gallery" class="section-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);">
+                <span class="card-icon">📸</span>
+                <h2>Фотогалерея</h2>
+            </div>
+            <div class="card-content">
+                <div class="photo-gallery">
+
+                    <!-- Фото 1 (Интерьер) -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/MetroType_81-717.5M_0349_int_pfandrom_22-11-2026.png" alt="Салон 0349" 
+                                 onclick="openGalleryModal(this.src, '81-717.5М №0349, салон')" 
+                                 onerror="this.src='img/no-photo.png'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон №0349</a>
+                            <p class="photo-desc"><strong>📌 Салон вагона №0349.</strong><br>Салон, вид вперед.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 22 ноября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="pfandrom.html">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 2 (Синие диваны) -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/MetroType_81-717.5M_0349_int_blue_divan_pfandrom_22-11-2026.png" alt="Синие диваны 0349" 
+                                 onclick="openGalleryModal(this.src, '81-717.5М №0349, синие диваны')" 
+                                 onerror="this.src='img/no-photo.png'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон №0349</a>
+                            <p class="photo-desc"><strong>📌 Салон вагона №0349.</strong><br>Диваны, обшитые кожзаменителем синего цвета.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 22 ноября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="pfandrom.html">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 3 (Внешка) -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/MetroType_81-717.5M_0349_pfandrom_22-11-2026.png" alt="81-717.5М 0349" 
+                                 onclick="openGalleryModal(this.src, '81-717.5М №0349')" 
+                                 onerror="this.src='img/no-photo.png'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон №0349</a>
+                            <p class="photo-desc"><strong>📌 Станция «Аэропорт».</strong><br>Вагон на станции.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 22 ноября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="pfandrom.html">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 3 (номер) -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/MetroType_81-717.5M_0349_num_pfandrom_22-11-2026.png" alt="81-717.5М 0349" 
+                                 onclick="openGalleryModal(this.src, '81-717.5М №0349')" 
+                                 onerror="this.src='img/no-photo.png'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон №0349</a>
+                            <p class="photo-desc"><strong>📌 Станция «Кантемировская».</strong><br>Бортовой номер.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 15 ноября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="pfandrom.html">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 4 (Табличка) -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/MetroType_81-717.5M_0349_tabl_pfandrom_22-11-2026.png" alt="Табличка 0349" 
+                                 onclick="openGalleryModal(this.src, '81-717.5М №0349, табличка')" 
+                                 onerror="this.src='img/no-photo.png'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон №0349</a>
+                            <p class="photo-desc"><strong>📌 Салон вагона №0349.</strong><br>Состояние таблички.</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 22 ноября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="pfandrom.html">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото 5 (Маска) -->
+                    <div class="photo-card">
+                        <div class="photo-thumb">
+                            <img src="img/MetroType_81-717.5M_0349_pass-mash_pfandrom_22-11-2026.png" alt="Маска 0349" 
+                                 onclick="openGalleryModal(this.src, '81-717.5М №0349, пассажирская маска')" 
+                                 onerror="this.src='img/no-photo.png'">
+                        </div>
+                        <div class="photo-info">
+                            <a href="#" class="photo-object">Вагон №0349</a>
+                            <p class="photo-desc"><strong>📌 Салон вагона №0349.</strong><br>Устройство связи "Пассажир-машинист"</p>
+                            <div class="photo-meta">
+                                <span class="photo-date">📅 22 ноября 2026 г.</span>
+                                <span class="photo-author">📸 <a href="pfandrom.html">pfandrom</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">Нажмите на фото для увеличения</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>ТЭПП</h4>
+                    <p>Транспортная Энциклопедия Постсоветского Пространства</p>
+                    <p class="footer-motto">Раздел «Метрополитены»</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная страница</a></li>
+                        <li><a href="Главная_метро.html">Метрополитены</a></li>
+                        <li><a href="Главная_Страница_Мосметро.html">Московский метрополитен</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Связь с нами</h4>
+                    <p>📱 <a href="https://t.me/andreimetro1289" target="_blank" rel="noopener">Telegram</a></p>
+                    <p>💬 <a href="https://t.me/tepp_forum" target="_blank" rel="noopener">Форум</a></p>
+                    <p>🇷🇺 <a href="https://max.ru/join/1mEWNSevujx1vLc3jdV528CuDYhrJSoQbUtnAgVW4AQ" target="_blank" rel="noopener">Макс</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Транспортная Энциклопедия Постсоветского Пространства (ТЭПП)</p>
+                <p class="footer-note">81-717.5М (МВМ) №0349</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">↑</div>
+
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <span class="modal-close" id="galleryModalClose">&times;</span>
+            <div id="galleryModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
