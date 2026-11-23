@@ -198,12 +198,12 @@ function toggleSettings() {
     const dropdown = document.getElementById('settingsDropdown');
     if (dropdown) {
         dropdown.classList.toggle('active');
-        const btn = document.querySelector('.top-settings-btn');
+        const btn = document.querySelector('.top-settings-btn'); 
         if (btn && dropdown.classList.contains('active')) {
             const rect = btn.getBoundingClientRect();
             dropdown.style.position = 'fixed';
             dropdown.style.top = (rect.bottom + 5) + 'px';
-            dropdown.style.right = (window.innerWidth - rect.right) + 'px';
+            dropdown.style.right = (window.innerWidth - rect.right) + 'px'; 
         }
     }
 }
@@ -559,29 +559,29 @@ const SEARCH_PAGES = [
     { title: 'Вагон типа А', url: 'Type_A.html', tags: ['метро', 'ашка', 'тип а', 'первый'], types: ['метро'], city: 'Москва', country: 'СССР' },
     { title: 'Вагон типа Б', url: 'Type_B.html', tags: ['метро', 'бэшка', 'тип б'], types: ['метро'], city: 'Москва', country: 'СССР' },
     { title: 'Вагон типа В (трофейный)', url: 'Type_V.html', tags: ['метро', 'вэшка', 'тип в'], types: ['метро'], city: 'Москва', country: 'СССР' },
-    { title: 'Вагон типа Г', url: 'Type_G.html', tags: ['метро', 'гэшник', 'тип г'], types: ['метро'], city: 'Москва', country: 'СССР' },
-    { title: 'Вагон типа Д', url: 'Type_D.html', tags: ['метро', 'дэшник', 'тип д'], types: ['метро'], city: 'Москва', country: 'СССР' },
-    { title: 'Вагон типа Е', url: 'Type_E.html', tags: ['метро', 'ешка', 'тип е'], types: ['метро'], city: 'Москва', country: 'СССР' },
-    { title: 'Вагон типа Еж', url: 'Type_Ezh.html', tags: ['метро', 'ежик', 'еж'], types: ['метро'], city: 'Москва', country: 'СССР' },
-    { title: 'Вагон типа Еж3', url: 'Type_Ezh3.html', tags: ['метро', 'ежик', 'еж3'], types: ['метро'], city: 'Москва', country: 'СССР' },
-    { title: 'Вагон типа Еж6', url: 'Type_Ezh6.html', tags: ['метро', 'еж6'], types: ['метро'], city: 'Москва', country: 'СССР' },
-    { title: 'Вагон типа ЕжТК', url: 'Type_EzhTK.html', tags: ['метро', 'ежтк'], types: ['метро'], city: 'Москва', country: 'СССР' },
-    { title: 'Вагон типа Л', url: 'Type_L.html', tags: ['метро', 'тип л'], types: ['метро'], city: 'Москва', country: 'СССР' },
+    { title: 'Вагон типа Г', url: 'Type_G.html', tags: ['метро', 'гэшник', 'тип г', '81-701'], types: ['метро'], city: 'Москва', country: 'СССР' },
+    { title: 'Вагон типа Д', url: 'Type_D.html', tags: ['метро', 'дэшник', 'тип д', '81-702'], types: ['метро'], city: 'Москва', country: 'СССР' },
+    { title: 'Вагон типа Е', url: 'Type_E.html', tags: ['метро', 'ешка', 'тип е', '81-703'], types: ['метро'], city: 'Москва', country: 'СССР' },
+    { title: 'Вагон типа Еж', url: 'Type_Ezh.html', tags: ['метро', 'ежик', 'еж', '81-707', '81-708'], types: ['метро'], city: 'Москва', country: 'СССР' },
+    { title: 'Вагон типа Еж3', url: 'Type_Ezh3.html', tags: ['метро', 'ежик', 'еж3', '81-710'], types: ['метро'], city: 'Москва', country: 'СССР' },
+    { title: 'Вагон типа Еж6', url: 'Type_Ezh6.html', tags: ['метро', 'еж6', '81-712'], types: ['метро'], city: 'Москва', country: 'СССР' },
+    { title: 'Вагон типа ЕжТК', url: 'Type_EzhTK.html', tags: ['метро', 'ежтк', '81-710'], types: ['метро'], city: 'Москва', country: 'СССР' },
+    { title: 'Вагон типа Л', url: 'Type_L.html', tags: ['метро', 'тип л', '81-707', '81-711'], types: ['метро'], city: 'Москва', country: 'СССР' },
     { title: 'М5 — прототипы типа Д', url: 'Type_M5.html', tags: ['метро', 'м5', 'ум5'], types: ['метро'], city: 'Москва', country: 'СССР' },
 
     // --- МЕТРО (Современные и опытные) ---
-        { title: '81-765.4 «Москва-2019» №65000', url: 'M19_65000.html', tags: ['метро', '81-765.4', 'москва-2019', '65000', 'музей'], types: ['метро', 'музей'], city: 'Москва', country: 'Россия' },
-    { title: '81-717.6/714.6', url: 'MetroType_81-717-6.html', tags: ['метро', '81-717.6', 'точка шесть'], types: ['метро'], city: 'Москва', country: 'Россия' },
-    { title: '81-740.4 «Русич» №0204-0205', url: 'MetroType_81-740.4_0204-0205.html', tags: ['метро', 'русич', '0204', 'москва на волне'], types: ['метро'], city: 'Москва', country: 'Россия' },
-    { title: '81-740 «Русич»', url: 'MetroType_81-740.html', tags: ['метро', 'русич'], types: ['метро'], city: 'Москва', country: 'Россия' },
+    { title: '81-765.4 «Москва-2019» №65000', url: 'M19_65000.html', tags: ['метро', '81-765.4', 'москва-2019', '65000', 'музей'], types: ['метро', 'музей'], city: 'Москва', country: 'Россия' },
+    { title: '81-717.6/714.6', url: 'MetroType_81-717-6.html', tags: ['метро', '81-717.6', 'точка шесть', 'шестерка', '27***', '20***'], types: ['метро'], city: 'Москва', country: 'Россия' },
+    { title: '81-740.4 «Русич» №0204-0205', url: 'MetroType_81-740.4_0204-0205.html', tags: ['метро', 'русич', '0204', '0205', 'москва на волне'], types: ['метро'], city: 'Москва', country: 'Россия' },
+    { title: '81-740 «Русич»', url: 'MetroType_81-740.html', tags: ['метро', 'русич', '81-740'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: '81-760 «Ока»', url: 'MetroType_81-760.html', tags: ['метро', '81-760', 'ока'], types: ['метро'], city: 'Москва', country: 'Россия' },
-    { title: '81-760 (Музей кино)', url: 'MetroType_81-760_37071-72.html', tags: ['метро', '81-760', '37071', 'музей кино'], types: ['метро'], city: 'Москва', country: 'Россия' },
+    { title: '81-760 №37071-072 "Музей кино"', url: 'MetroType_81-760_37071-72.html', tags: ['метро', '81-760', '37071', '37072', 'музей кино'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: '81-765 «Москва»', url: 'MetroType_81-765.html', tags: ['метро', '81-765', 'москва'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: '81-765.2 «Москва»', url: 'MetroType_81-765-2.html', tags: ['метро', '81-765.2', 'москва'], types: ['метро'], city: 'Москва', country: 'Россия' },
-    { title: '81-775.2 №75488', url: 'MetroType_81-775.2_Moscow2026_75487-75488.html', tags: ['метро', '81-775.2', '75488', 'москва 2026'], types: ['метро'], city: 'Москва', country: 'Россия' },
+    { title: '81-775.2 №75487-75488', url: 'MetroType_81-775.2_Moscow2026_75487-75488.html', tags: ['метро', '81-775.2', '75488', '75487', 'москва 2026'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: '81-775.2 №75529', url: 'MetroType_81-775.2_Moscow2026_75529.html', tags: ['метро', '81-775.2', '75529', 'москва 2026'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: '81-775.2 «Москва-2026» №75569-75570 "185 лет Сбербанку"', url: 'MetroType_81-775.2_Moscow2026_75569-70.html', tags: ['метро', '81-775.2', '75569', '75570', 'сбербанк', 'сбер', 'сберуша'], types: ['метро'], city: 'Москва', country: 'Россия' },
-    { title: '81-775 (Карта Москвича)', url: 'MetroType_81-775_75013-14.html', tags: ['метро', '81-775', '75013', 'карта москвича'], types: ['метро'], city: 'Москва', country: 'Россия' },
+    { title: '81-775 №75013-014 "Карта Москвича"', url: 'MetroType_81-775_75013-14.html', tags: ['метро', '81-775', '75013', '75014', 'карта москвича'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: '81-775.2 №75487-75488', url: 'MetroType_81-775.2_Moscow2026_75487-75488.html', tags: ['метро', '81-775.2', '75487', 'беспилотный'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: 'Москва №65081-65082 "Золотая черепаха"', url: 'MetroType_Moscow2017_65081-82.html', tags: ['метро', 'черепаха', '65081', '65082', 'Москва', '765'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: 'Баклан', url: 'Баклан.html', tags: ['метро', 'баклан', '81-760А'], types: ['метро'], city: 'Москва', country: 'Россия' },
@@ -589,15 +589,15 @@ const SEARCH_PAGES = [
     // --- МЕТРО (Именные, музейные, спец) ---
     { title: 'Красная стрела (метро)', url: 'Красная_Стрела.html', tags: ['метро', 'красная стрела'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: 'Акварель', url: 'Акварель.html', tags: ['метро', 'акварель', 'просрочка', 'русич', 'АПЛ'], types: ['метро'], city: 'Москва', country: 'Россия' },
-    { title: '81-717.5 "Олег Табаков" №0350-0381', url: 'MetroType_81-717.5_Oleg_Tabakov_0381-0350.html', tags: ['метро', 'табаков', '0350'], types: ['метро'], city: 'Москва', country: 'Россия' },
-    { title: 'Народный ополченец', url: 'Народный_ополченец.html', tags: ['метро', 'ополченец'], types: ['метро'], city: 'Москва', country: 'Россия' },
-    { title: 'Курская дуга', url: 'Курская_дуга_метро.html', tags: ['метро', 'курская дуга'], types: ['метро'], city: 'Москва', country: 'Россия' },
+    { title: '81-717.5 "Олег Табаков" №0350-0381', url: 'MetroType_81-717.5_Oleg_Tabakov_0381-0350.html', tags: ['метро', 'табаков', '0350', '81-717', '0381'], types: ['метро'], city: 'Москва', country: 'Россия' },
+    { title: 'Народный ополченец', url: 'Народный_ополченец.html', tags: ['метро', 'ополченец', '81-717'], types: ['метро'], city: 'Москва', country: 'Россия' },
+    { title: 'Курская дуга', url: 'Курская_дуга_метро.html', tags: ['метро', 'курская дуга', '81-717'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: 'Парадный 81-717', url: 'Парадный_81-717.html', tags: ['метро', 'парадный', '81-717'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: 'Первый номерной', url: 'Первый_номер.html', tags: ['метро', '81-717', 'первый', 'номер', 'номерной'], types: ['метро'], city: 'Москва', country: 'СССР' },
-    { title: 'Ретро поезд', url: 'Ретро поезд.html', tags: ['метро', 'ретро'], types: ['метро'], city: 'Москва', country: 'Россия' },
-    { title: 'Скиф 0152', url: 'Скиф_0152.html', tags: ['метро', 'скиф', '0152'], types: ['метро'], city: 'Москва', country: 'Россия' },
+    { title: 'Ретро поезд', url: 'Ретро поезд.html', tags: ['метро', 'ретро', '81-717.5А', '2837', '2838'], types: ['метро'], city: 'Москва', country: 'Россия' },
+    { title: 'Скиф 0152', url: 'Скиф_0152.html', tags: ['метро', 'скиф', 'русич', '81-740.1', '0152'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: 'Яуза №0021', url: 'Яуза0021.html', tags: ['метро', 'яуза', '0021'], types: ['метро'], city: 'Москва', country: 'Россия' },
-    { title: 'Еж3 №5946', url: 'Type_Ezh3_5946.html', tags: ['метро', 'еж3', '5946'], types: ['метро'], city: 'Москва', country: 'Россия' },
+    { title: 'Еж3 №5946', url: 'Type_Ezh3_5946.html', tags: ['метро', 'еж3', '5946', '81-710'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: '81-717 (ЛВЗ) №8535', url: '8535музей.html', tags: ['метро', '8535', '81-717', 'лвз'], types: ['метро', 'музей'], city: 'Москва', country: 'Россия' },
     { title: 'Элементы салона 81-717', url: 'elemen_in_81-717.html', tags: ['метро', '81-717', 'детали', 'салон', 'элементы'], types: ['метро'], city: 'Москва', country: 'Россия' },
     
@@ -605,13 +605,13 @@ const SEARCH_PAGES = [
     { title: 'Опытная Ашка', url: 'Опытная_Ашка.html', tags: ['метро', 'опытный', 'а'], types: ['метро'], city: 'Москва', country: 'СССР' },
     { title: 'Опытная Ешка', url: 'Опытная_Ешка.html', tags: ['метро', 'опытный', 'е'], types: ['метро'], city: 'Москва', country: 'СССР' },
     { title: 'Опытная Ока', url: 'Опытная_Ока.html', tags: ['метро', 'опытный', 'ока'], types: ['метро'], city: 'Москва', country: 'Россия' },
-    { title: 'Опытная Яуза 001-005', url: 'Опытная_Яуза_001-005.html', tags: ['метро', 'опытный', 'яуза'], types: ['метро'], city: 'Москва', country: 'Россия' },
-    { title: 'Опытные составы', url: 'Опытные_составы.html', tags: ['метро', 'опытный'], types: ['метро'], city: 'Москва', country: 'Россия' },
+    { title: 'Опытная Яуза 001-005', url: 'Опытная_Яуза_001-005.html', tags: ['метро', 'опытный', 'яуза', '81-720'], types: ['метро'], city: 'Москва', country: 'Россия' },
+    { title: 'Опытные составы', url: 'Опытные_составы.html', tags: ['метро', 'опытный', ], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: 'Опытный 81-717', url: 'Опытный_81-717.html', tags: ['метро', 'опытный', '81-717'], types: ['метро'], city: 'Москва', country: 'СССР' },
-    { title: 'Опытный поезд 81-717.6К', url: 'Опытный_поезд_81-717.6К.html', tags: ['метро', 'опытный'], types: ['метро'], city: 'Москва', country: 'Россия' },
-    { title: 'Опытный поезд И', url: 'Опытный_поезд_И.html', tags: ['метро', 'опытный', 'поезд и'], types: ['метро'], city: 'Москва', country: 'СССР' },
-    { title: 'Опытный Скиф', url: 'Опытный_Скиф.html', tags: ['метро', 'скиф', 'русич'], types: ['метро'], city: 'Москва', country: 'Россия' },
-    { title: 'Живая история Яуза 0028-0035', url: 'Живая_история_Яуза_0028-0035.html', tags: ['метро', 'яуза'], types: ['метро'], city: 'Москва', country: 'Россия' },
+    { title: 'Опытный поезд 81-717.6К', url: 'Опытный_поезд_81-717.6К.html', tags: ['метро', 'опытный', '81-717.6К', 'шестерка'], types: ['метро'], city: 'Москва', country: 'Россия' },
+    { title: 'Опытный поезд И', url: 'Опытный_поезд_И.html', tags: ['метро', 'опытный', 'поезд и', '81-715'], types: ['метро'], city: 'Москва', country: 'СССР' },
+    { title: 'Опытный Скиф', url: 'Опытный_Скиф.html', tags: ['метро', 'скиф', 'русич', '81-740'], types: ['метро'], city: 'Москва', country: 'Россия' },
+    { title: 'Живая история Яуза 0028-0035', url: 'Живая_история_Яуза_0028-0035.html', tags: ['метро', 'яуза', '81-720', '0028', '0035'], types: ['метро'], city: 'Москва', country: 'Россия' },
     
     // --- МЕТРО (Уникальные номера и вагоны) ---
     { title: '81-570/571', url: '81-570_571.html', tags: ['метро', '81-570', '81-571'], types: ['метро'], city: 'Москва', country: 'Россия' },
@@ -619,22 +619,22 @@ const SEARCH_PAGES = [
     { title: '81-717(ММЗ) №0067', url: '81-717(ММЗ)№0067.html', tags: ['метро', '81-717', '0067'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: '81-720.1 (ЛВЗ)', url: '81-720.1(ЛВЗ).html', tags: ['метро', '81-720', 'яуза'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: '81-720А', url: '81-720А.html', tags: ['метро', '81-720а'], types: ['метро'], city: 'Москва', country: 'Россия' },
-    { title: '0373-0379', url: '0373-0379.html', tags: ['метро', '0373', '0379'], types: ['метро'], city: 'Москва', country: 'Россия' },
-    { title: '2550', url: '2550.html', tags: ['метро', '2550', 'номерной'], types: ['метро'], city: 'Москва', country: 'Россия' },
+    { title: '0373-0379', url: '0373-0379.html', tags: ['метро', '0373', '0379', '81-717'], types: ['метро'], city: 'Москва', country: 'Россия' },
+    { title: '2550', url: '2550.html', tags: ['метро', '2550', 'номерной', '81-717.5'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: '81-717.5М №0349', url: 'MetroType_81-717.5M_0349.html', tags: ['метро', '0349', 'диваны', '81-717.5', 'номерной'], types: ['метро'], city: 'Москва', country: 'Россия' },
-    { title: '81-760 «Ока» №37301-02 с экспериментальным освещением', url: 'MetroType_81-717.5M_0349.html', tags: ['метро', '37301', '37302', 'эксперементальное', 'ТЧ-18', 'освещение', '81-760', 'Ока'], types: ['метро'], city: 'Москва', country: 'Россия' },
+    { title: '81-760 «Ока» №37301-02 с экспериментальным освещением', url: 'MetroType_81-760_37301-37302.html', tags: ['метро', '37301', '37302', 'эксперементальное', 'ТЧ-18', 'освещение', '81-760', 'Ока'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: '0373-0379', url: '0373-0379.html', tags: ['метро', '0373', '0379'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: '81-714.5 №0665', url: 'Type_81-714.5_0665.html', tags: ['метро', '81-714', '0665'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: '81-717 (базовый)', url: 'Type_81-717.html', tags: ['метро', '81-717', 'номерной'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: '81-717.5', url: 'Type_81-717-5.html', tags: ['метро', '81-717.5', 'номерной'], types: ['метро'], city: 'Москва', country: 'Россия' },
-    { title: 'ТЧ-5 8712-7919-0065', url: 'ТЧ-5_8712-7919-0065.html', tags: ['метро', '8712', '0065'], types: ['метро'], city: 'Москва', country: 'Россия' },
+    { title: 'ТЧ-5 8712-7919-0065', url: 'ТЧ-5_8712-7919-0065.html', tags: ['метро', '8712', '0065', '81-717'], types: ['метро'], city: 'Москва', country: 'Россия' },
     
     // --- МЕТРО (Спец и служебные) ---
-    { title: 'Еж3-путеизмеритель', url: 'Еж3-путеизмеритель.html', tags: ['метро', 'путеизмеритель', 'еж3'], types: ['метро'], city: 'Москва', country: 'Россия' },
+    { title: 'Еж3-путеизмеритель', url: 'Еж3-путеизмеритель.html', tags: ['метро', 'путеизмеритель', 'еж3', '81-710'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: 'Служебные поезда', url: 'Служебные_поезда_метро.html', tags: ['метро', 'служебные'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: 'Грузовые вагоны', url: 'Грузовые_вагоны.html', tags: ['метро', 'грузовые'], types: ['метро'], city: 'Москва', country: 'Россия' },
-    { title: 'ДК1 «Синергия-1»', url: 'ДК1_метро.html', tags: ['метро', 'дк1', 'диагностика'], types: ['метро'], city: 'Москва', country: 'Россия' },
-    { title: 'ДК2 «Синергия-2»', url: 'ДК2_метро.html', tags: ['метро', 'дк2', 'диагностика'], types: ['метро'], city: 'Москва', country: 'Россия' },
+    { title: 'ДК1 «Синергия-1»', url: 'ДК1_метро.html', tags: ['метро', 'дк1', 'диагностика', '81-717'], types: ['метро'], city: 'Москва', country: 'Россия' },
+    { title: 'ДК2 «Синергия-2»', url: 'ДК2_метро.html', tags: ['метро', 'дк2', 'диагностика', '81-717'], types: ['метро'], city: 'Москва', country: 'Россия' },
     { title: 'АГМу-13137 (автодрезина)', url: 'AGMy-13137.html', tags: ['метро', 'агму', 'дрезина'], types: ['метро'], city: 'Москва', country: 'Россия' },
 
     // --- МЕТРО (Разделы и статьи) ---
@@ -668,7 +668,7 @@ const SEARCH_PAGES = [
     { title: 'ЭП2К-500', url: 'ЭП2К-500.html', tags: ['жд', 'эп2к', '500'], types: ['жд'], city: 'Москва', country: 'Россия' },
     { title: 'ЭП2К-510', url: 'ЭП2К-510.html', tags: ['жд', 'эп2к', '510'], types: ['жд'], city: 'Москва', country: 'Россия' },
     { title: 'ЭД4 (М-МК)', url: 'ЭД4(М-МК).html', tags: ['жд', 'эд4'], types: ['жд'], city: 'Москва', country: 'Россия' },
-    { title: 'ЭД4-0010', url: 'ЭД4-0010.html', tags: ['жд', 'эд4'], types: ['жд'], city: 'Москва', country: 'Россия' },
+    { title: 'ЭД4-0010', url: 'ЭД4-0010.html', tags: ['жд', 'эд4', '0010', 'ЭД4-0010'], types: ['жд'], city: 'Москва', country: 'Россия' },
     { title: 'ЭД4МКУ', url: 'эд4мку.html', tags: ['жд', 'эд4мку'], types: ['жд'], city: 'Москва', country: 'Россия' },
     { title: 'Поезд Деда Мороза', url: 'RailwayType_Поезд_Деда_Мороза_rf.html.html', tags: ['жд', 'поезд', 'дед мороз'], types: ['жд'], city: 'Москва', country: 'Россия' },
     { title: 'Железная дорога (Раздел)', url: 'Железная_дорога.html', tags: ['жд'], types: ['жд'], city: 'Москва', country: 'Россия' },
@@ -1151,3 +1151,41 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// ============================================================
+// АККАУНТЫ
+// ============================================================
+function toggleAccounts() {
+    // Проверяем, существует ли уже модалка
+    let modal = document.getElementById('accountsModal');
+    
+    // Если нет — создаем её
+    if (!modal) {
+        document.body.insertAdjacentHTML('beforeend', `
+            <div class="modal" id="accountsModal" role="dialog" aria-modal="true">
+                <div class="modal-content" style="max-width: 500px;">
+                    <span class="modal-close" onclick="document.getElementById('accountsModal').classList.remove('active')">&times;</span>
+                    <h2 style="margin-bottom: 1.5rem; color: var(--accent-color);">Аккаунты проекта</h2>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <a href="pfandrom.html" class="btn btn-primary" style="text-decoration: none; display: flex; align-items: center; gap: 10px; padding: 1rem;">
+                            👑 <span>Андрей — pfandrom (Владелец)</span>
+                        </a>
+                        <a href="autobot.html" class="btn btn-secondary" style="text-decoration: none; display: flex; align-items: center; gap: 10px; padding: 1rem;">
+                            👨‍💻 <span>Андрей — AutobotZZ217 (Разработчик)</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        `);
+        modal = document.getElementById('accountsModal');
+        
+        // Закрытие по клику на фон
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) modal.classList.remove('active');
+        });
+    }
+    
+    // Открываем/закрываем
+    modal.classList.toggle('active');
+}
